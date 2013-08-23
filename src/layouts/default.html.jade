@@ -14,21 +14,26 @@ html(lang='en')
       title
         block title
           = document.title
-      != getBlock('styles').add(['vendors/css/knacss.css', 'assets/css/main.css']).toHTML()
+      != getBlock('styles').add(['/vendors/css/knacss.css', '/assets/css/main.css']).toHTML()
 
   body
     header#header.line.pam(role="header")
       .mod.wrapper
         .line
           .mod.left
-            img(src="assets/images/happycloud.png")
+            img(src="/assets/images/happycloud.png")
           h1.left.pam
             span.title Cozy&nbsp;
             | a personal cloud you can&nbsp;
-            span.menu-button host
-            |,&nbsp;
-            span.menu-button.selected hack
-            |&nbsp;and delete
+            - if (document.category === "host")
+              a(href="/host/").menu-button.selected host
+            - else
+              a(href="/host/").menu-button host
+            |&nbsp;and&nbsp;
+            - if (document.category === "hack")
+              a(href="/hack/").menu-button.selected hack
+            - else
+              a(href="/hack/").menu-button hack
 
     .wrapper
       aside.mod.left.w25.aside
@@ -62,7 +67,7 @@ html(lang='en')
             li
               a(href="https://github.com/mycozycloud/") Github
               |&nbsp;-&nbsp;
-              a(href="https://cozycloud.cc") Cozycloud
+              a(href="https://cozycloud.cc/") Cozycloud
             li irc.freenode.org on #cozycloud
 
       #main.mod.pam(role="main")
@@ -94,4 +99,4 @@ html(lang='en')
           li Cozycloud
           li Made with tool1, tool2 and tool3
 
-    != getBlock('scripts').add(['vendors/javascripts/jquery-2.0.3.min.js', 'assets/javascripts/main.js']).toHTML()
+    != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/assets/javascripts/main.js']).toHTML()
