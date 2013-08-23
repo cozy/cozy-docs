@@ -1,0 +1,177 @@
+@import 'nib'
+
+blue = #34a6ff
+lightblue = #cbe4fb
+greyblue = #34a6bb
+green = #5c5
+orange = #fe8800
+lightorange = #ffc47f
+darkgrey = #333
+lightgrey = #ccc
+grey = #aaa
+red = #dd3333
+
+
+@font-face
+  font-family main-light
+  src url("../fonts/maven-pro-light-200.otf")
+
+@font-face
+  font-family main
+  src url("../fonts/maven-pro-light-300.otf")
+
+@font-face
+  font-family cool
+  src url("../fonts/signika-regular.ttf")
+
+body
+  font-family main-light
+
+.wrapper
+  margin auto
+  width 75%
+
+// Header styles
+header
+  border-bottom 5px solid lightorange
+  padding 0
+  h1
+    font-size 30px
+    padding 0 !important
+    margin-left 15px
+    span
+      font-size 60px
+
+    .menu-button
+      font-size 30px
+      padding 10px
+      border 1px solid blue
+      border-radius 10px
+      -webkit-user-select none
+      -moz-user-select none
+      -ms-user-select none
+      user-select none
+
+
+      &:hover
+        color white
+        background orange
+        border-color orange
+      &:active
+        box-shadow inset 0 0 15px lightorange
+      &.selected
+        color white
+        background blue
+        &:hover
+          border-color blue
+        &:active
+          box-shadow none
+
+// Menu styles
+
+aside
+  border-right: 1px solid lightblue
+  margin-top 20px
+
+#navigation
+  margin 0 20px 20px 20px
+  ul
+    list-style-type none
+    padding 0
+    font-family cool
+
+    li
+      border-bottom 1px solid lightblue
+      color: blue
+      line-height 30px
+      cursor pointer
+
+      .label
+        width: 100%
+        padding 10px 0
+        display: inline-block
+        -webkit-user-select none
+        -moz-user-select none
+        -ms-user-select none
+        user-select none
+
+        &:hover
+          background orange
+          color #fff
+
+        &:active
+          box-shadow inset 0 0 15px lightorange
+
+      &:last-of-type
+        border-bottom 0
+
+      &.selected
+        background blue
+        color #fff
+        padding-bottom 0
+
+    &.first-level li
+      .label
+        font-family cool
+        padding-left 10px
+      &.selected > ul
+        border-top 1px solid lightblue
+
+
+    &.second-level
+      display none
+      li
+        color #fff
+        border-bottom 0
+        text-align center
+        line-height 20px
+
+        .label
+          padding 7px 0
+          font-family main
+
+        &:hover
+          background orange
+
+#social
+  margin 0 20px 20px 20px
+  font-family main
+
+  ul
+    list-style-type none
+    margin 0
+    padding 0
+
+    li a
+      color blue
+
+// Content styles
+#main
+
+  .breadcrumb
+    padding 8px 15px
+    background lightblue
+    color #666
+    border-radius 5px
+    list-style-type none
+
+    li
+      &:not(.selected):after
+        content " /"
+      &.selected
+        color greyblue
+  p
+    font-size 20px
+
+// Footer styles
+#footer
+  background orange
+  color white
+  font-family main
+  text-align center
+
+  ul
+    list-style-type none
+    padding 0
+    display inline-block
+

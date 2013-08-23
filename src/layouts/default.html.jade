@@ -1,0 +1,97 @@
+!!! 5
+<!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      title
+        block title
+          = document.title
+      != getBlock('styles').add(['vendors/css/knacss.css', 'assets/css/main.css']).toHTML()
+
+  body
+    header#header.line.pam(role="header")
+      .mod.wrapper
+        .line
+          .mod.left
+            img(src="assets/images/happycloud.png")
+          h1.left.pam
+            span.title Cozy&nbsp;
+            | a personal cloud you can&nbsp;
+            span.menu-button host
+            |,&nbsp;
+            span.menu-button.selected hack
+            |&nbsp;and delete
+
+    .wrapper
+      aside.mod.left.w25.aside
+        nav#navigation(role="navigation")
+          ul.first-level
+            li.big
+              span.label Getting started
+              ul.second-level
+                li.small
+                  span.label Development environment
+                li.small
+                  span.label Your first app in 30 minutes
+                li.small
+                  span.label Going further with Cozy
+            li.big
+              span.label Architecture overview
+            li.big
+              span.label Application skeletons
+              ul.second-level
+                li.small
+                  span.label Single page app
+                li.small
+                  span.label Static site
+                li.small
+                  span.label Multiple page app
+            li.big
+              span.label Troubleshooting
+
+        #social
+          ul
+            li
+              a(href="https://github.com/mycozycloud/") Github
+              |&nbsp;-&nbsp;
+              a(href="https://cozycloud.cc") Cozycloud
+            li irc.freenode.org on #cozycloud
+
+      #main.mod.pam(role="main")
+        p!= content
+        p Lorem Salu bissame ! Wie geht's les samis ? Hans apporte moi une Wurschtsalad avec un picon bitte, s'il te plaît.
+          | Voss ? Une Carola et du Melfor ? Yo dû, espèce de Knäckes, ch'ai dit un picon !
+        p Yoo ch'ai lu dans les DNA que le Racing a encore perdu contre Oberschaeffolsheim. Verdammi et moi ch'avais donc parié deux knacks et une flammekueche. Ah so ? T'inquiète, ch'ai ramené du schpeck, du chambon, un kuglopf et du schnaps dans mon rucksack. Allez, s'guelt ! Wotch a kofee avec ton bibalaekaess et ta wurscht ? Yeuh non che suis au réchime, je ne mange plus que des Grumbeere light et che fais de la chym avec Chulien. Tiens, un rottznoz sur le comptoir.
+        p Tu restes pour le lotto-owe ce soir, y'a baeckeoffe ? Yeuh non, merci vielmols mais che dois partir à la Coopé de Truchtersheim acheter des mänele et des rossbolla pour les gamins. Hopla tchao bissame ! Consectetur adipiscing elit
+
+    footer#footer.line.pam.row(role="contentinfo")
+      .col.w33
+        h4 Host
+        ul
+          li Installing your own Cozy
+          li Updating your cozy
+          li Geting rid of Cozy
+      .col.w33
+        h4 Hack
+        ul
+          li Getting started
+          li Architecture overview
+          li Application skeletons
+          li Troubleshooting
+      .col.w33
+        h4 Community
+        ul
+          li Github
+          li Blog
+          li Cozycloud
+          li Made with tool1, tool2 and tool3
+
+    != getBlock('scripts').add(['vendors/javascripts/jquery-2.0.3.min.js', 'assets/javascripts/main.js']).toHTML()
