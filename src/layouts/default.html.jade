@@ -17,7 +17,7 @@ html(lang='en')
       != getBlock('styles').add(['/vendors/css/knacss.css', '/assets/css/main.css']).toHTML()
 
   body
-    header#header.line.pam(role="header")
+    header#header.line(role="header")
       .mod.wrapper
         .line
           .mod.left
@@ -92,18 +92,17 @@ html(lang='en')
           li Updating your cozy
           li Geting rid of Cozy
       .col.w33
+        h4 Use
+        ul
+          li Getting started
+          li User Guides
+          li Troubleshooting
+      .col.w33
         h4 Hack
         ul
           li Getting started
-          li Architecture overview
+          li Going further
+          li Cookbooks
           li Application skeletons
-          li Troubleshooting
-      .col.w33
-        h4 Community
-        ul
-          li Github
-          li Blog
-          li Cozycloud
-          li Made with tool1, tool2 and tool3
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/assets/javascripts/main.js']).toHTML()

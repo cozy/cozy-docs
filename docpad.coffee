@@ -16,6 +16,8 @@ docpadConfig = {
     collections:
         hostPages: ->
             @getCollection('html').findAllLive({category: 'host', isCategoryMaster:$exists:false})
+        usePages: ->
+            @getCollection('html').findAllLive({category: 'use', isCategoryMaster:$exists:false})
         hackPages: ->
             @getCollection('html').findAllLive({category: 'hack', isCategoryMaster:$exists:false})
 }
