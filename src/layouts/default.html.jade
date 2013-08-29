@@ -29,6 +29,11 @@ html(lang='en')
               a(href="/host/").menu-button.selected host
             - else
               a(href="/host/").menu-button host
+            |&nbsp;
+            - if (document.category === "use")
+              a(href="/use/").menu-button.selected use
+            - else
+              a(href="/use/").menu-button use
             |&nbsp;and&nbsp;
             - if (document.category === "hack")
               a(href="/hack/").menu-button.selected hack
@@ -38,29 +43,31 @@ html(lang='en')
     .wrapper
       aside.mod.left.w25.aside
         nav#navigation(role="navigation")
-          ul.first-level
-            li.big
-              span.label Getting started
-              ul.second-level
-                li.small
-                  span.label Development environment
-                li.small
-                  span.label Your first app in 30 minutes
-                li.small
-                  span.label Going further with Cozy
-            li.big
-              span.label Architecture overview
-            li.big
-              span.label Application skeletons
-              ul.second-level
-                li.small
-                  span.label Single page app
-                li.small
-                  span.label Static site
-                li.small
-                  span.label Multiple page app
-            li.big
-              span.label Troubleshooting
+          - var collectionName = "documents"
+          - if (document.category != null)
+            - collectionName = document.category + "Pages"
+          - endif
+          - items = generateMenu(document.url, collectionName)
+            ul.first-level
+              - var firstLevelClass = null
+              - for item in items
+                - if (item.state == "current" || item.state == "parent")
+                  - firstLevelClass = "big selected"
+                - else
+                  - firstLevelClass = "big"
+                - endif
+                  li(class="#{firstLevelClass}")
+                    a.label(href="#{item.url}")= item.title
+
+                    - if (item.children != null)
+                      - if (item.state == "parent" || item.state == "current")
+                        ul.second-level
+                          - for child in item.children
+                            li.small
+                              a.label(href="#{child.url}")= child.title
+                          - endfor
+                      - endif
+              - endfor
 
         #social
           ul

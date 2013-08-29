@@ -12,7 +12,8 @@
     "docpad-plugin-jade": "~2.5.0",
     "docpad-plugin-marked": "~2.1.1",
     "docpad-plugin-livereload": "~2.5.2",
-    "docpad-plugin-coffeescript": "~2.2.2"
+    "docpad-plugin-coffeescript": "~2.2.2",
+    "docpad-plugin-menu": "~2.0.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

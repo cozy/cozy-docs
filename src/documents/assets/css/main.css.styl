@@ -49,6 +49,7 @@ header
       border-radius 10px
       text-decoration none
       user-select none
+      color #000
 
 
       &:hover
@@ -80,15 +81,20 @@ aside
 
     li
       border-bottom 1px solid lightblue
-      color: blue
       line-height 30px
       cursor pointer
+
+      a, a:active
+        color blue
+      &.selected a
+        color #fff
 
       .label
         width: 100%
         padding 10px 0
         display: inline-block
         user-select none
+        text-decoration none
 
         &:hover
           background orange
@@ -102,7 +108,6 @@ aside
 
       &.selected
         background blue
-        color #fff
         padding-bottom 0
 
     &.first-level li
@@ -112,9 +117,7 @@ aside
       &.selected > ul
         border-top 1px solid lightblue
 
-
     &.second-level
-      display none
       li
         color #fff
         border-bottom 0

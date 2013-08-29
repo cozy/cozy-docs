@@ -12,6 +12,12 @@ docpadConfig = {
             title: ""
             description: ""
             keywords: ""
+
+    collections:
+        hostPages: ->
+            @getCollection('html').findAllLive({category: 'host', isCategoryMaster:$exists:false})
+        hackPages: ->
+            @getCollection('html').findAllLive({category: 'hack', isCategoryMaster:$exists:false})
 }
 
 # Export the DocPad Configuration
