@@ -7,16 +7,17 @@
     "npm": "1.3"
   },
   "dependencies": {
-    "docpad": "~6.50.0",
+    "docpad": "~6.51.3",
     "docpad-plugin-stylus": "~2.4.0",
-    "docpad-plugin-jade": "~2.5.0",
+    "docpad-plugin-jade": "~2.6.0",
     "docpad-plugin-marked": "~2.1.1",
-    "docpad-plugin-livereload": "~2.5.2",
+    "docpad-plugin-livereload": "~2.5.3",
     "docpad-plugin-coffeescript": "~2.2.2",
     "docpad-plugin-menu": "~2.0.0"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
     "start": "node_modules/docpad/bin/docpad-server"
-  }
+  },
+  "devDependencies": {}
 }
