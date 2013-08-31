@@ -14,7 +14,7 @@ html(lang='en')
       title
         block title
           = document.title
-      != getBlock('styles').add(['/vendors/css/knacss.css', '/assets/css/main.css']).toHTML()
+      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css']).toHTML()
 
   body
     header#header.line(role="header")
