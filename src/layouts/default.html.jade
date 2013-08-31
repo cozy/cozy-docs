@@ -67,7 +67,11 @@ html(lang='en')
                         ul.second-level
                           - for child in item.children
                             li.small
-                              a.label(href="#{child.url}")= child.title
+                              - if (child.state == "current")
+                                a.label.selected(href="#{child.url}")= child.title
+                              - else
+                                a.label(href="#{child.url}")= child.title
+                              - endif
                           - endfor
                       - endif
               - endfor
