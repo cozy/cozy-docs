@@ -6,9 +6,11 @@ isCategoryMaster: "true"
 menuOrder: 2
 ---
 
-Let's be clear before going anywhere: **writing a web app for Cozy is like writing a web app.**
+Let's be clear before going anywhere: **writing a web app for Cozy is like writing a web app**.
 
-And you might know that making web applications can be a real pain:
+Because Cozy is a Platform As A Service, namely an execution environment for applications. Currently you can only use NodeJS to develop your backend but we plan on adding Python, Ruby and PHP support.
+
+As you might know, making web applications can be a real pain:
 
 * you need to chose a programing language for the server side
 * you need to chose a framework for it
