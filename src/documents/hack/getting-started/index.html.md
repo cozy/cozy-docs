@@ -13,6 +13,6 @@ Then, step by step, you will be able to discover Cozy's specificities while not 
 
 * setup the development environment (a virtual machine ready-to-use)
 * write you first application in 30 minutes
-* learn the power of single-page apps
+* learn the single-page app way
 * discover cozy's power: the data system
 * use Cozy at its best: realtime apps, notification system, easy translatable apps
