@@ -3,6 +3,7 @@ title: "Hack Cozy - Building your own application"
 layout: "default"
 category: "hack"
 isCategoryMaster: "true"
+menuOrder: 2
 ---
 
 Let's be clear before going anywhere: **writing a web app for Cozy is like writing a web app.**

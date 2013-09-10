@@ -1,7 +1,6 @@
 ---
 title: "Welcome!"
-layout: "default"
-isPage: true
+layout: "homepage"
 ---
 
 # Questions qui se posent

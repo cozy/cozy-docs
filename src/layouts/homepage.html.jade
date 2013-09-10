@@ -1,0 +1,108 @@
+!!! 5
+<!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      title
+        block title
+          = document.title
+      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css']).toHTML()
+
+  body
+    header#header.line(role="header")
+      .mod.wrapper
+        .line
+          .mod.left
+            a(href="/")
+              img(src="/assets/images/happycloud.png")
+          h1.left.pam
+            span.title Cozy&nbsp;
+            | a personal cloud you can&nbsp;
+            - if (document.category === "host")
+              a(href="/host/").menu-button.selected host
+            - else
+              a(href="/host/").menu-button host
+            |&nbsp;
+            - if (document.category === "use")
+              a(href="/use/").menu-button.selected use
+            - else
+              a(href="/use/").menu-button use
+            |&nbsp;and&nbsp;
+            - if (document.category === "hack")
+              a(href="/hack/").menu-button.selected hack
+            - else
+              a(href="/hack/").menu-button hack
+        .line
+          .subtitle Documentation
+
+    .wrapper
+      aside.mod.left.w25.aside
+        nav#navigation(role="navigation")
+          - items = generateMenu(document.url, "homePages")
+            ul.first-level
+              - var firstLevelClass = null
+              - for item in items
+                - if (item.state == "current" || item.state == "parent")
+                  - firstLevelClass = "big selected"
+                - else
+                  - firstLevelClass = "big"
+                - endif
+                  li(class="#{firstLevelClass}")
+                    a.label(href="#{item.url}")= item.title
+
+                    - if (item.children != null)
+                      - if (item.state == "parent" || item.state == "current")
+                        ul.second-level
+                          - for child in item.children
+                            li.small
+                              - if (child.state == "current")
+                                a.label.selected(href="#{child.url}")= child.title
+                              - else
+                                a.label(href="#{child.url}")= child.title
+                              - endif
+                          - endfor
+                      - endif
+              - endfor
+
+        #social
+          ul
+            li
+              a(href="/contribute.html") Contribute to Cozy !
+            li
+              a(href="https://github.com/mycozycloud/") Github
+              |&nbsp;-&nbsp;
+              a(href="https://cozycloud.cc/") Cozycloud
+            li irc.freenode.org on #cozycloud
+
+      #main.mod.pam(role="main")
+        != content
+    footer#footer.line.pam.row(role="contentinfo")
+      .col.w33
+        h4 Host
+        ul
+          li Installing your own Cozy
+          li Updating your cozy
+          li Geting rid of Cozy
+      .col.w33
+        h4 Use
+        ul
+          li Getting started
+          li User Guides
+          li Troubleshooting
+      .col.w33
+        h4 Hack
+        ul
+          li Getting started
+          li Going further
+          li Cookbooks
+          li Application skeletons
+
+    != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/assets/javascripts/main.js']).toHTML()

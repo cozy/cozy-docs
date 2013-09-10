@@ -20,6 +20,8 @@ docpadConfig = {
             @getCollection('html').findAllLive({category: 'use', isCategoryMaster:$exists:false})
         hackPages: ->
             @getCollection('html').findAllLive({category: 'hack', isCategoryMaster:$exists:false})
+        homePages: ->
+            @getCollection('html').findAllLive({isCategoryMaster:$exists:true})
 }
 
 # Export the DocPad Configuration
