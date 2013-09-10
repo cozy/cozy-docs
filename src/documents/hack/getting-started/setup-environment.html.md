@@ -34,7 +34,7 @@ You will also need our tool:
 npm install -g cozy
 ```
 
-The `cozy` will help you managing the virtual machine and application skeletons!
+The `cozy` tool will help you managing the virtual machine and application skeletons!
 
 
 ## Initializing and starting the virtual machine
