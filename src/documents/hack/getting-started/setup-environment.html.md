@@ -64,6 +64,8 @@ We advise you to update the VM the first time you start it (and regularly) becau
 cozy dev:light-update
 ```
 
-We explain in details how the Cozy Manager works in the Development workflow section.
+You can go to `http://localhost:9104/` see your Cozy running. You can also use it but beware! The Cozy running in your virtual machine is in development mode, meaning that most of the security measures are disabled. Only use it for testing purpose!
+
+We explain in details how the Cozy Manager works in another section.
 
 You are now ready to write your first application, We hope it wasn't too long!
