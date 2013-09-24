@@ -7,7 +7,7 @@ html(lang="en")
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos... there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/assets/css/home.css']).toHTML()
-        script(src='/jquery-2.0.0.min.js')
+        script(src='/vendors/javascripts/jquery-2.0.3.min.js')
         script(type='text/javascript')
           $(document).ready(function() {
              $(".diagbox").hover(function(event) {
@@ -76,7 +76,7 @@ html(lang="en")
                         | you can host, hack
                         | and delete
                     h4.left
-                        | Have your web apps and your data on any hardware
+                        | Your web apps and your data on your hardware
                 p.image-links
                     | assets/images:&nbsp; 
                     a(href="https://files.cozycloud.cc/raspberry-cozy.img")
@@ -95,7 +95,7 @@ html(lang="en")
                     a(href="https://demo.cozycloud.cc/")
                         | Demo
         section#social.line.social.center
-            img.mod.w33.left(src="/assets/images/twitter_01.png")
+            img.mod.w33.left(src="/assets/images/twitter_04.png")
             img.mod.w33.left(src="/assets/images/twitter_02.png")
             img.mod.w33.left(src="/assets/images/twitter_03.png")
 
@@ -103,7 +103,7 @@ html(lang="en")
             h2.icon-cloud &nbsp; Host it
             h3
                 strong Target your server with this script (sudoer required).
-            code curl http://cozy.io/install_cozy.sh | HOST=root@<strong>ip</strong> sh
+            code.code curl http://cozy.io/install_cozy.sh | HOST=root@<strong>ip</strong> sh
             .line
                 &nbsp;
             .line.read-more
@@ -148,18 +148,18 @@ html(lang="en")
             h3 
                 | install the development environment (node.js, vagrant and
                 | virtualbox are required)
-            code
-                | npm install cozy -g
-                | cozy dev:init
-                | cozy dev:start
+            code.code.
+                npm install cozy -g
+                cozy dev:init
+                cozy dev:start
             h3 initialize your application
             .line
-                code
+                code.code
                     | cozy new my-app  --github myaccount
                     | cd my-app
             h3 hack... then deploy!
             .line
-                code
+                code.code
                     | cozy deploy
             h3 
                 | Send an email at contact@cozycloud.cc and we'll help you to
@@ -189,7 +189,7 @@ html(lang="en")
             p 
                 | We believe you will keep using your Cozy because 
                 | you can get rid of it:
-            code.mt2 curl http://cozy.io/uninstall_cozy.sh | HOST=root@<strong>ip:port</strong> sh
+            code.code.mt2 curl http://cozy.io/uninstall_cozy.sh | HOST=root@<strong>ip:port</strong> sh
             .line.read-more.mt1
                 .black-text.read-more
                     img(src="assets/images/plus.png", alt="read more")
@@ -270,7 +270,7 @@ html(lang="en")
             .line.mt1
             .line.read-more.mt1
                 .txt-black.read-more
-                    img(src="assets/imagesplus.png", alt="read more")
+                    img(src="assets/images/plus.png", alt="read more")
 
             .additional-infos.mt2
                 p
