@@ -14,34 +14,15 @@ html(lang='en')
       title
         block title
           = document.title
-      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css']).toHTML()
+      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css', '/assets/css/home.css']).toHTML()
 
   body
-    header#header.line(role="header")
-      .mod.wrapper
-        .line
-          .mod.left
-            a(href="/")
-              img(src="/assets/images/happycloud.png")
-          h1.left.pam
-            span.title Cozy&nbsp;
-            | a personal cloud you can&nbsp;
-            - if (document.category === "host")
-              a(href="/host/").menu-button.selected host
-            - else
-              a(href="/host/").menu-button host
-            |&nbsp;
-            - if (document.category === "use")
-              a(href="/use/").menu-button.selected use
-            - else
-              a(href="/use/").menu-button use
-            |&nbsp;and&nbsp;
-            - if (document.category === "hack")
-              a(href="/hack/").menu-button.selected hack
-            - else
-              a(href="/hack/").menu-button hack
-        .line
-          .subtitle Documentation
+    .navbar.fixed
+        a(href="/")
+            img(src='/assets/images/happycloud.png', alt='Happy Cloud')
+        a.right(href="/hack") hack
+        a.right(href="/use") use
+        a.right(href="/host") host
 
     .wrapper
       aside.mod.left.w25.aside
