@@ -15,7 +15,7 @@ This first tutorial is an introduction to cozy webapp development. Therefore, as
 * introducing [Jade](http://jade-lang.com/) to write the templates that will be displayed by the browser
 * sharing with other Cozy users and deploying it into Cozy
 
-### What you need to know (or to be familiar with)
+### What you should know (or to be familiar with)
 * JavaScript / NodeJS
 * HTML
 * Git
@@ -288,3 +288,5 @@ You've developed your first Cozy app and you must understand now that it's nothi
 Now you must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its maximum.
 
 We'll introduce you the Cozy architecture before diving into more Cozy webapp development.
+
+Later on we'll come back to this tutorial to teach your the single-page app way and how we've changed express the make it more awesome.
