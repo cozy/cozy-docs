@@ -12,7 +12,7 @@ Welcome to the first step to get you started: the development environment setup 
 Since Cozy is built on many software bricks, we wrapped it into an easy to use virtual machine so you don't pollute your local system. That also means you can use the operation system you like!
 
 
-## Installaling dependencies
+## Installing dependencies
 
 Before doing anything, install the fowlling:
 
