@@ -99,6 +99,18 @@ html(lang="en")
             img.mod.w33.left(src="/assets/images/twitter_02.png")
             img.mod.w33.left(src="/assets/images/twitter_03.png")
 
+        section#why.why.center.highlight
+            .line
+                h4 
+                    | Why should I use Cozy? 
+                ul
+                    li 
+                        | To keep your privacy safe and contribute to the
+                        | Internet freedom
+                    li 
+                        | And to take the full potiental out of your data
+                    li Or to increase your productivity
+
         section#host.line.target
             h2.icon-cloud &nbsp; Host it
             h3
@@ -106,38 +118,26 @@ html(lang="en")
             code.code curl http://cozy.io/install_cozy.sh | HOST=root@<strong>ip</strong> sh
             .line
                 &nbsp;
-            .line.read-more
-                .txt-white
-                    img(src="assets/images/plus-white.png", alt="read more")
-            .additional-infos.mt2
+            .line.mt2
                 p
                     | This script installs several tools on your
                     | local computer: python, pip, fabric and fabtools.
                     | They are required to run the installation on 
                     | your remote server.
-                    | To know what will be setup on your 
-                    | server, check the 
-                    a(href='https://github.com/mycozycloud/cozy-setup#what-will-this-script-install-on-your-server') list
-                    | &nbsp;in the readme.
-                p
                     | The script works only with Debian/Ubuntu distros.
-                    | A fully packaged VM is on its way so that you can deploy
-                    | a Cozy on any OS (Linux, Mac, Win).
                 .line.txtcenter.mt2
-                    a(href="#hack").next 
-                        | hack it
-                        br
-                        i.icon-down
+                    a(href="/host")
+                        | full documentation
 
 
-        section#why.why.center
+        section#developers.highlight
             .line
                 h4 
-                    | Developers, Cozy is your personal PaaS
+                    | No pain web development
                 ul
                     li 
-                        | No-pain web development:
-                        | ready to-go template and easy deployment
+                        | Use our
+                        | ready to-go templates and deploy easily your web app
                     li 
                         | Write web apps that leverages user personal
                         | data
@@ -164,36 +164,24 @@ html(lang="en")
             h3 
                 | Send an email at contact@cozycloud.cc and we'll help you to
                 | promote your app!
-            .line.read-more.mt1
-                .txt-white.read-more
-                    img(src="assets/images/plus-white.png", alt="read more")
-            .additional-infos.mt2
-                p
-                    | We are not talking about fancy plugins, here you write 
-                    | your
-                    | additions like you would write any web app! The only
-                    | constraints are to use our storage system and to write
-                    | your code for Node.js.
-                    | (Python and Ruby are on the roadmap). 
+            .line.mt2
                 p
                     | For more details check our&nbsp;
-                    a(href="https://github.com/mycozycloud/cozy-setup/wiki#build-your-cozy-cloud-application") getting started guide
-                .line.txtcenter.mt2
-                    a(href="#delete").next 
-                        | delete it
-                        br
-                        i.icon-down
+                    a(href="/hack") tutorial
             
+        section#leave.highlight
+            .line
+                h4 
+                    | You will stay because you can leave.
+                ul
+                    li 
+                        | You can delete your Cozy and all your data at any
+                        | moment.
+         
         section#delete.line.target
             h2.icon-cross &nbsp; Delete it
-            p 
-                | We believe you will keep using your Cozy because 
-                | you can get rid of it:
             code.code.mt2 curl http://cozy.io/uninstall_cozy.sh | HOST=root@<strong>ip:port</strong> sh
-            .line.read-more.mt1
-                .black-text.read-more
-                    img(src="assets/images/plus.png", alt="read more")
-            .additional-infos.mt2
+            .line.mt2
                 p 
                     | What is annoying nowadays with online services is
                     | that you are locked with it. We don't want that for
@@ -201,11 +189,18 @@ html(lang="en")
                     | leave the platform. 
                     | NB: Be aware that the above action will erase your
                     | data permanently.
-                .line.txtcenter.mt2
-                    a(href="#architecture").next.txt-black 
-                        | see our architecture
-                        br
-                        i.icon-down
+
+        section#paas.highlight
+            .line
+                h4 
+                    | Cozy is a personal PaaS
+                ul
+                    li 
+                        | It manage web apps and offer a simple data store,
+                        | an indexer and a file system
+                    li
+                        | All of them are abstracted by the data system
+ 
         section#architecture.line.target
             h2.icon-nav &nbsp; Architecture
             .line
@@ -272,18 +267,21 @@ html(lang="en")
                 .txt-black.read-more
                     img(src="assets/images/plus.png", alt="read more")
 
-            .additional-infos.mt2
+            .line.mt2
                 p
                     | If you want to know more about our architecture
-                    | and technical choices
-                    | check the dedicated&nbsp;
-                    a(href="https://github.com/mycozycloud/cozy-setup/wiki/Cozy-architecture") wiki page
-                    !
-                .line.txtcenter.mt2
-                    a(href="#community").next 
-                        | join our community
-                        br
-                        i.icon-down
+                    | check the&nbsp;
+                    a(href="/hack") full documentation
+ 
+        section#community-cozy
+                h4 
+                    | Join our community
+                ul
+                    li 
+                        | It manage web apps and offer a simple data store,
+                        | an indexer and a file system
+                    li
+                        | All of them are abstracted by the data system
  
         section#community.line
             h2.icon-asteri &nbsp; Community
@@ -316,6 +314,12 @@ html(lang="en")
                 | If you want the benefits of Cozy without the constraints of self-hosting, visit
                 | <a href="https://cozycloud.cc">cozycloud.cc</a>
                 | and try our hosting solutions!
+            p
+                | We want to build partnerships with hosting
+                | companies, hardware manufacturers or ISP. If you are
+                | are one of these and interested in what we do,&nbsp;
+                a(href="mailto:contact@cozycloud.cc") contact us 
+                | .
 
         script(type='text/javascript')
           var _paq = _paq || [];

@@ -126,7 +126,17 @@ header
     img
         margin: 0
 
-.why
+#why
+    background: url(/assets/images/rasp-black.jpg) no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+    .line
+        background: #643
+
+#developers
     background: url(/assets/images/hardware.png) no-repeat center center fixed
     -webkit-background-size: cover
     -moz-background-size: cover
@@ -134,9 +144,33 @@ header
     background-size: cover
 
     .line
+        background: #334
+
+#leave
+    background: url(/assets/images/freedom.jpg) no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+    .line
+        background: lightblue - 60%
+
+#paas
+    background: url(/assets/images/architecture_pic.jpg) no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+    .line
+        background: #000
+
+
+.highlight
+    .line
         text: center
         padding: 20px
-        background: #334
         opacity: 0.8
 
     p
@@ -163,11 +197,13 @@ header
         text-align: center
         font-size: 30px
 
+
 .navbar
     position: fixed
     height: 60px
     width: 100%
     background: white
+    z-index: 40
 
     img 
         width: 50px
@@ -268,9 +304,6 @@ a:focus
     .code
         background: #CC5F00
 
-    p
-        font-weight: bold
-
 #hack
     h3
         font-weight: bold
@@ -279,14 +312,6 @@ a:focus
 
     .code
         background: blue - 30%
-        line-height: 40px
-
-#delete
-    background: lightblue
-    color: black
-
-    .code
-        background: lightblue - 30%
 
 #architecture
     background: white
@@ -314,12 +339,6 @@ a:focus
     background: orange
 
 
-#hack
-    background: blue
-
-    .code
-        background: blue - 30%
-
 #delete
     background: lightblue
     color: black
@@ -329,22 +348,6 @@ a:focus
         
     a.txt-black
         color: black
-
-#architecture
-    background: white
-    color: black
-
-    .diagbox
-        background: lightblue
-        rounded-border: 15px
-        text-align: center
-        margin-top: 10px
-        padding: 10px
-        font-weight: bold
-
-        p
-            display: none
-            font-size: 14px
 
 #about
     background: blue
