@@ -11,4 +11,6 @@ All the receipes!
 * notifications
 * sending emails
 * building translatable apps
-*
+* cozy-fixtures
+* cozy-manager
+* unit and functional testing
