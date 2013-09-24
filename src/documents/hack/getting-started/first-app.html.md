@@ -129,7 +129,7 @@ Again, this is not very useful because you can't modify the list. Let's fix it!
 First, add the following before the list in `index.jade`
 
 ```jade
-form(action="/add", method="post")
+form(action="add", method="post")
     label Title:
     input(type="text", name="title")
     label Url:
@@ -146,7 +146,7 @@ We also need a button to remove a bookmark, let's rewrite the way a bookmark is 
 li
     a(href=bookmarks[bookmark].url)= bookmarks[bookmark].title
     | &nbsp;- (
-    a(href="/delete/#{bookmark}") delete
+    a(href="delete/#{bookmark}") delete
     | )
 ```
 
@@ -176,12 +176,117 @@ app.use(express.bodyParser());
 Et voilà! You can now add and remove bookmarks. But it still sucks, right? Each time you start and stop the server you lose everything. Let's use a database!
 
 ## Step 4: using a real database, SQLite
+Even if Cozy main persistence layer is not SQLite, it is shipped with every Cozy.
+
+The first thing we need to do is getting a module to use SQLite:
+```bash
+npm install sqlite3 --save
+```
+
+Then we need to initialize the database, change the following to server.js:
+```javascript
+var http = require('http'),
+    express = require('express'),
+    app = express(),
+    sqlite3 = require('sqlite3').verbose(),
+    db = new sqlite3.Database('cozy');
+
+// Database initialization
+db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='bookmarks'", function(err, row) {
+    if(err !== null) {
+        console.log(err);
+    }
+    else if(row == null) {
+        db.run('CREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "title" VARCHAR(255), url VARCHAR(255))', function(err) {
+            if(err !== null) {
+                console.log(err);
+            }
+            else {
+                console.log("SQL Table 'bookmarks' initialized.");
+            }
+        });
+    }
+    else {
+        console.log("SQL Table 'bookmarks' already initialized.");
+    }
+});
+```
+
+Now we must change the list, add and delete routes:
+```javascript
+// We render the templates with the data
+app.get('/', function(req, res) {
+
+    db.all('SELECT * FROM bookmarks ORDER BY title', function(err, row) {
+        if(err !== null) {
+            res.send(500, "An error has occurred -- " + err);
+        }
+        else {
+            res.render('index.jade', {bookmarks: row}, function(err, html) {
+                res.send(200, html);
+            });
+        }
+    });
+});
+
+// We define a new route that will handle bookmark creation
+app.post('/add', function(req, res) {
+    title = req.body.title;
+    url = req.body.url;
+    sqlRequest = "INSERT INTO 'bookmarks' (title, url) VALUES('" + title + "', '" + url + "')"
+    db.run(sqlRequest, function(err) {
+        if(err !== null) {
+            res.send(500, "An error has occurred -- " + err);
+        }
+        else {
+            res.redirect('back');
+        }
+    });
+});
+
+// We define another route that will handle bookmark deletion
+app.get('/delete/:id', function(req, res) {
+    db.run("DELETE FROM bookmarks WHERE id='" + req.params.id + "'", function(err) {
+        if(err !== null) {
+            res.send(500, "An error has occurred -- " + err);
+        }
+        else {
+            res.redirect('back');
+        }
+    });
+});
+```
+
+Don't forget to change the template too, in client/index.jade:
+```jade
+li
+    a(href=bookmarks[bookmark].url)= bookmarks[bookmark].title
+    | &nbsp;- (
+    a(href="delete/#{bookmarks[bookmark].id}") delete
+    | )
+```
 
 ## Step 5 : deploying your app into Cozy
 If you want to deploy the app on a Cozy, your first need to put on a public git repository. We use [Github](https://github.com) because it's awesome but you can use any git provider.
 
 When you have published your code, go to http://localhost:9104/#applications and install your app through the dedicated interface.
+The application logs are available inside the virtual machine. To watch  them, do the following:
+```bash
+vagrant ssh
+tail -f /usr/local/cozy/apps/{yourapplication}/{yourapplication}/{yourapplication}/logs/production.log
+```
+
+You can also run your application directly inside the virtual machine:
+```bash
+vagrant ssh
+cd /vagrant/{yourapplication}/
+cozy-monitor dev-route:start {appSlug} {port}
+PORT={port} coffee server.coffee
+```
+Then go to http://localhost:9104/apps/{appSlug}/
 
 # What's next ?
 You've developed your first Cozy app and you must understand now that it's nothing more than a normal web application.
-Next we'll introduce you the Cozy architecture before diving in Cozy specifities.
+Now you must understand that if every application are done this way they will struggle collaborate around the user's data and you will not be able to use Cozy at its maximum.
+
+We'll introduce you the Cozy architecture before diving into Cozy specifities.
