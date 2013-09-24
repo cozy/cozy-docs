@@ -50,6 +50,18 @@ h3
 h4
     font-weight: normal
 
+[class*="grid"] > *
+    float: left
+
+[class*="grid"] > * + *
+    margin-left: 2%
+
+.grid5 > *
+    width: 18.4%
+
+.grid3 > *
+    width: 32%
+
 .external-links
     height: 60px
 
@@ -83,8 +95,7 @@ a:hover
 a:visited
     color: white
 
-
-code
+.code
     display: inline-block
     max-width: none
 
@@ -245,7 +256,6 @@ a:focus
     outline: 0
 
 .code
-code
     color: white
     font-size: 20px
     line-height: 60px
@@ -255,7 +265,7 @@ code
 #host
     background: orange
 
-    code
+    .code
         background: #CC5F00
 
     p
@@ -267,7 +277,7 @@ code
 
     background: blue
 
-    code
+    .code
         background: blue - 30%
         line-height: 40px
 
@@ -275,7 +285,7 @@ code
     background: lightblue
     color: black
 
-    code
+    .code
         background: lightblue - 30%
 
 #architecture
@@ -307,14 +317,14 @@ code
 #hack
     background: blue
 
-    code
+    .code
         background: blue - 30%
 
 #delete
     background: lightblue
     color: black
 
-    code
+    .code
         background: lightblue - 30%
         
     a.txt-black
@@ -360,14 +370,14 @@ code
     header
         h1
             font-size: 30px
-    code
+    .code
         font-size: 15px
 
 @media (max-width: 400px)
 
     button
         font-size: 16px
-    code
+    .code
         font-size: 13px
 
     .diagbox
