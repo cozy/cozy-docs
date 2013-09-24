@@ -137,9 +137,6 @@ form(action="add", method="post")
     input(type="submit", value="Add a new bookmark")
 ```
 
-Then we must define the corresponding route in the server with the appropriate
-
-
 We also need a button to remove a bookmark, let's rewrite the way a bookmark is displayed:
 
 ```jade
@@ -183,7 +180,7 @@ The first thing we need to do is getting a module to use SQLite:
 npm install sqlite3 --save
 ```
 
-Then we need to initialize the database, change the following to server.js:
+Then we need to initialize the database. To achieve that, change the following in server.js:
 ```javascript
 var http = require('http'),
     express = require('express'),
@@ -283,10 +280,11 @@ cd /vagrant/{yourapplication}/
 cozy-monitor dev-route:start {appSlug} {port}
 PORT={port} node server.js
 ```
-Then go to http://localhost:9104/apps/{appSlug}/
+Then go to http://localhost:9104/#apps/{appSlug}/ and watch your app inside Cozy!
 
-# What's next ?
+## What's next ?
 You've developed your first Cozy app and you must understand now that it's nothing more than a normal web application.
-Now you must understand that if every application are done this way they will struggle collaborate around the user's data and you will not be able to use Cozy at its maximum.
 
-We'll introduce you the Cozy architecture before diving into Cozy specifities.
+Now you must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its maximum.
+
+We'll introduce you the Cozy architecture before diving into more Cozy webapp development.
