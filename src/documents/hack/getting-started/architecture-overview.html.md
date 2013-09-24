@@ -53,3 +53,5 @@ As a developer, you are going to create an application that will be run by Cozy'
 Also, you won't have to bother about user authentification and authorization because it is all handled by the Proxy.
 
 Keep in mind you develop for a **personal** environment which is not something we are used to at first but it only changes the relation to data we had until now!
+
+Ready to go one step further with Cozy? Get dirty with the Data System.

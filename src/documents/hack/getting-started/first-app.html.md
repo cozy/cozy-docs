@@ -285,8 +285,6 @@ Then go to http://localhost:9104/#apps/{appSlug}/ and watch your app inside Cozy
 ## What's next ?
 You've developed your first Cozy app and you must understand now that it's nothing more than a normal web application.
 
-Now you must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its maximum.
+You must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its best.
 
-We'll introduce you the Cozy architecture before diving into more Cozy webapp development.
-
-Later on we'll come back to this tutorial to teach your the single-page app way and how we've changed express the make it more awesome.
+Now we'll introduce you the Cozy architecture before coming back to this tutorial and get into more Cozy webapp development.
