@@ -131,39 +131,6 @@ app.get('/', function(req, res) {
 ```
 We won't detail the request mecanism here but you can find a cookbook that will explain you how get the best from the map/reduce! **link**
 
-### Indexing the bookmarks
-Using the indexer is dead simple. Change the bookmark creation that way:
-```javascript
-// We define a new route that will handle bookmark creation
-app.post('/add', function(req, res) {
-    Bookmark.create(req.body, function(err, bookmark) {
-        if(err != null) {
-            res.send(500, "An error has occurred -- " + err);
-        }
-        else {
-            bookmark.index(["title", "url"], function(err) {
-                if(err != null) {
-                    res.send(500, "Error during indexation -- " + err);
-                }
-                else {
-                    res.redirect('back');
-                }
-            });
-        }
-    });
-});
-```
-Now let's build a quick search:
-```javascript
-// This route will allow you to search in the bookmarks
-app.get('/search/:keywords', function(req, res) {
-    Bookmark.search(req.params.keywords, function(err, bookmarks) {
-        res.send(200, bookmarks);
-    });
-});
-```
-Add some bookmarks with common words in the title and/or the url (e.g. "card game", "video game", "football game") and check the result on http://localhost:9250/search/game.
-
 ## Examples
 Links to numerous examples that can be found in the tests or the code itself.
 
