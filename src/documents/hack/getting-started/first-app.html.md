@@ -5,22 +5,28 @@ category: "hack"
 menuOrder: 2
 ---
 
-# Your first app in 30 minutes
-This first tutorial is an introduction to cozy webapp development. Therefore, as we've mentioned earlier, it is an introduction to webapp development in NodeJS.
+# Tutorial 1: your first app in 30 minutes
 
-## Before we start...
+This first tutorial is an introduction to cozy webapp development but as you
+will see, you can consider it as an introduction to webapp development with
+NodeJS.
 
 ### What you will achieve
-* writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/), the standard framework for NodeJS
-* introducing [Jade](http://jade-lang.com/) to write the templates that will be displayed by the browser
+
+* writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/), 
+  the standard framework for NodeJS
+* introducing [Jade](http://jade-lang.com/) to write the templates 
+  that will be displayed by the browser
 * sharing with other Cozy users and deploying it into Cozy
 
 ### What you should know (or to be familiar with)
+
 * JavaScript / NodeJS
 * HTML
 * Git
 
 ### Get ready
+
 Get the template:
 ```bash
 cd cozy-dev/ # where you start the VM
@@ -101,7 +107,7 @@ app.get('/', function(req, res) {
 ```
 
 We also need to change the HTML file for a Jade file:
-```jade
+```html
 doctype 5
 html(lang="fr")
   head
@@ -128,7 +134,7 @@ Again, this is not very useful because you can't modify the list. Let's fix it!
 
 First, add the following before the list in `index.jade`
 
-```jade
+```html
 form(action="add", method="post")
     label Title:
     input(type="text", name="title")
@@ -139,7 +145,7 @@ form(action="add", method="post")
 
 We also need a button to remove a bookmark, let's rewrite the way a bookmark is displayed:
 
-```jade
+```html
 li
     a(href=bookmarks[bookmark].url)= bookmarks[bookmark].title
     | &nbsp;- (
@@ -255,7 +261,7 @@ app.get('/delete/:id', function(req, res) {
 ```
 
 Don't forget to change the template too, in client/index.jade:
-```jade
+```html
 li
     a(href=bookmarks[bookmark].url)= bookmarks[bookmark].title
     | &nbsp;- (

@@ -22,6 +22,9 @@ docpadConfig = {
             @getCollection('html').findAllLive({category: 'hack', isCategoryMaster:$exists:false})
         homePages: ->
             @getCollection('html').findAllLive({isCategoryMaster:$exists:true})
+
+    enabledPlugins:
+        "live-reload": false
 }
 
 # Export the DocPad Configuration

@@ -6,25 +6,53 @@ isCategoryMaster: "true"
 menuOrder: 2
 ---
 
-Let's be clear before going anywhere: **writing a web app for Cozy is like writing a web app**.
+## Hacking Cozy
 
-Because Cozy is a Platform As A Service, namely an execution environment for applications. Currently you can only use NodeJS to develop your backend but we plan on adding Python, Ruby and PHP support.
+### What do we mean by hacking Cozy? 
 
-As you might know, making web applications can be a real pain:
+You might think that we talk about modifying
+directly the code of the platform or contributing in any way to the project. 
+This way is really fine but it's not the most efficient to give your
+contribution to the Cozy community. So, the easier way we propose for you to
+hack your Cozy is to build a new application. You can work on it without
+disturbing other developers and once your app is done it is very
+easy to share it with other Cozy users (we can help you to promote it).
 
-* you need to chose a programing language for the server side
-* you need to chose a framework for it
-* you need to chose languages to build the client side
-* you need frameworks and tools to help you with it
-* you need to make everything work together
-* then only you can start writing your application
+### A personal PaaS
 
-Cozy aims at making web application development more straightforward so you can focus on your application only.
+Before going further, let's be clear: **writing an app for Cozy is like
+writing a classical web app**.  Because Cozy is a Platform As A Service, namely
+an execution environment for applications, it allows you to deploy any kind of
+web app. The main constraint is to write it with NodeJS until we support other
+development environment such as Ruby and Python.
 
-We will guide you through the creation of an app. You will see that there are multiple ways to achieve it!
+### Painless web development
 
-Freedom of choice is not always a good thing when you don't know where to start so we'll introduce you our favorite tools already configured into a skeleton.
+Moreover Cozy comes with the painless web development principles: 
 
-Note you will still be able to create, use and share your own skeletons depending on your preferences.
+* application templates: no configuration headache
+* easy deployment: deploy your app to your cozy with one command line
+* access user data: no need to rebuild modules again and again, you can reuse
+  existing data from existing ones (contacts, calendar...)
+* access to user data: you can build new services that was not possible before
+  Cozy
 
-Get ready for **painless web development** with Cozy! (insert Frank's presentation here).
+As you can see web development with Cozy is more straightforward, so you can
+focus on your application features only. Now that you have enough good reasons
+to start with Cozy, let's hack!
+
+## Getting Started
+
+To begin we'll introduce you to the standard NodeJS
+tools. This way your application will work in any environment. Then 
+we'll introduce you to our favorite tools to make your Cozy development
+experience more delightful and efficient: get ready for **painless
+web development** with Cozy!
+
+* [Tutorial 1: Write your first web app in 30 minutes](/hack/getting-started/first-app.html)
+* Explainations about the Cozy Cloud architecture
+* Tutorial 2: Take advantage of the Data System
+* Introduction to front-end assemblers
+* Tutorial 3: Make your web app dynamic: write your first single
+  page-application
+

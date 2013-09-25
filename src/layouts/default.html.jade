@@ -21,7 +21,6 @@ html(lang='en')
         a(href="/")
             img(src='/assets/images/happycloud.png', alt='Happy Cloud')
         a.right(href="/hack") hack
-        a.right(href="/use") use
         a.right(href="/host") host
 
     .wrapper
@@ -67,25 +66,8 @@ html(lang='en')
 
       #main.mod.pam(role="main")
         != content
+
     footer#footer.line.pam.row(role="contentinfo")
-      .col.w33
-        h4 Host
-        ul
-          li Installing your own Cozy
-          li Updating your cozy
-          li Geting rid of Cozy
-      .col.w33
-        h4 Use
-        ul
-          li Getting started
-          li User Guides
-          li Troubleshooting
-      .col.w33
-        h4 Hack
-        ul
-          li Getting started
-          li Going further
-          li Cookbooks
-          li Application skeletons
+        a(href="mailto: contact@cozycloud.cc") contact
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/assets/javascripts/main.js']).toHTML()
