@@ -49,6 +49,16 @@ h3
 
 h4
     font-weight: normal
+p
+    font-size: 20px
+
+a
+a:hover
+a:visited
+    color: white
+
+a:focus
+    outline: 0
 
 [class*="grid"] > *
     float: left
@@ -87,17 +97,139 @@ h4
     transition:background-color 0.3s ease-in
     background: blue
 
-p
-    font-size: 20px
-
-a
-a:hover
-a:visited
-    color: white
-
 .code
     display: inline-block
     max-width: none
+
+.wrapper
+    margin-top 60px
+
+.txt-white
+    color: white
+
+.txt-black
+    color: black
+
+.black-text
+    color: black
+
+.additional-infos
+    display: none
+
+.title
+    font-size: 60px
+
+.image
+    margin-top: 20px
+    margin-left: 50px
+
+.main-text
+    padding-left: 40px
+
+.next
+    text-decoration: none
+    font-weight: bold
+    font-size: 18px
+    margin-top: 40px
+
+.highlight
+    .line
+        text: center
+        padding: 20px
+        opacity: 0.85
+
+    p
+        text-align: center
+        font-size: 18px
+        margin-top: 40px
+        margin-bottom: 0px
+
+    h4
+        margin-top: 40px
+        text-align: center
+        font-size: 40px
+
+    ul
+        padding: 20px
+        padding-top: 10px
+        margin-left: 0
+        padding-left: 0
+
+    li
+        margin-left: 0
+        margin-top: 0px
+        list-style-type: none
+        text-align: center
+        font-size: 30px
+
+.code
+    color: white
+    font-size: 20px
+    line-height: 60px
+    padding: 20px
+    rounded-border: 15px
+
+
+.navbar
+    z-index: 40
+    position: fixed
+    height: 60px
+    top: 0
+    width: 100%
+    background: white
+
+    img
+        width: 50px
+        margin: 10px
+
+    a
+        color: black
+        margin-right:  20px
+        margin-top: 10px
+        text-decoration: none
+        font-size: 30px
+        margin-top: 10px
+
+    a:hover
+        color: black
+        text-decoration: underline
+        
+.icon-plus:before
+.icon-plus > li:before
+.icon-plus.after:after
+.icon-plus.after > li:after
+    content: "\2B"
+    font-weight: bold
+    font-size: 60px
+    margin-left: 40px
+    cursor: pointer
+
+.read-more
+    cursor: pointer
+    text-decoration: underline
+
+    img
+        -webkit-transition:-webkit-transform 0.5s ease
+        -moz-transition:-moz-transform 0.5s ease
+        -o-transition:-o-transform 0.5s ease
+        transition:transform 0.5s ease
+
+.menu
+    padding 0
+    margin 0
+    position:fixed
+    height: 60px
+    background: white
+    width: 100%
+
+    p
+    h1
+        margin 0
+
+    button
+    .read-more
+    .happy-pic
+        display: none
 
 header
     padding: 140px 60px 40px 120px
@@ -194,140 +326,6 @@ header
     .line
         background: #000
 
-.highlight
-    .line
-        text: center
-        padding: 20px
-        opacity: 0.85
-
-    p
-        text-align: center
-        font-size: 18px
-        margin-top: 40px
-        margin-bottom: 0px
-
-    h4
-        margin-top: 40px
-        text-align: center
-        font-size: 40px
-
-    ul
-        padding: 20px
-        padding-top: 10px
-        margin-left: 0
-        padding-left: 0
-
-    li
-        margin-left: 0
-        margin-top: 0px
-        list-style-type: none
-        text-align: center
-        font-size: 30px
-
-
-.navbar
-    z-index: 40
-    position: fixed
-    height: 60px
-    top: 0
-    width: 100%
-    background: white
-
-    img
-        width: 50px
-        margin: 10px
-
-    a
-        color: black
-        margin-right:  20px
-        margin-top: 10px
-        text-decoration: none
-        font-size: 30px
-        margin-top: 10px
-
-    a:hover
-        color: black
-        text-decoration: underline
-
-.wrapper
-    margin-top 60px
-
-.txt-white
-    color: white
-
-.txt-black
-    color: black
-
-.icon-plus:before
-.icon-plus > li:before
-.icon-plus.after:after
-.icon-plus.after > li:after
-    content: "\2B"
-    font-weight: bold
-    font-size: 60px
-    margin-left: 40px
-    cursor: pointer
-
-.black-text
-    color: black
-
-.additional-infos
-    display: none
-
-.title
-    font-size: 60px
-
-.image
-    margin-top: 20px
-    margin-left: 50px
-
-.main-text
-    padding-left: 40px
-
-.read-more
-    cursor: pointer
-    text-decoration: underline
-
-    img
-        -webkit-transition:-webkit-transform 0.5s ease
-        -moz-transition:-moz-transform 0.5s ease
-        -o-transition:-o-transform 0.5s ease
-        transition:transform 0.5s ease
-
-
-.menu
-    padding 0
-    margin 0
-    position:fixed
-    height: 60px
-    background: white
-    width: 100%
-
-    p
-    h1
-        margin 0
-
-    button
-    .read-more
-    .happy-pic
-        display: none
-
-.next
-    text-decoration: none
-    font-weight: bold
-    font-size: 18px
-    margin-top: 40px
-
-a:focus
-    outline: 0
-
-.code
-    color: white
-    font-size: 20px
-    line-height: 60px
-    padding: 20px
-    rounded-border: 15px
-
 #host
     background: orange
 
@@ -360,10 +358,6 @@ a:focus
         p
             display: none
 
-    a
-    a:hover
-    a:visited
-        color: black
 
 
 #community
