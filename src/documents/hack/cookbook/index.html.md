@@ -14,3 +14,5 @@ All the receipes!
 * cozy-fixtures
 * cozy-manager
 * unit and functional testing
+* data system detailed API
+* jugglingdb cozy adapter detailed API
