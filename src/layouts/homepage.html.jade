@@ -11,51 +11,11 @@ html(lang="en")
         script(type='text/javascript')
           $(document).ready(function() {
              $(".diagbox").hover(function(event) {
-               $(event.target).find("p").slideDown();
+               if($(window).width() > 800) {
+                 $(event.target).find("p").slideDown();
+               };
              });
-             $(".read-more img").click(function(event) {
-               target = $(event.target);
-               target.css({ '-webkit-transform': "rotate(90deg)" });
-               target.css({ '-moz-transform': "rotate(90deg)" });
-               target.css({ 'transform': "rotate(90deg)" });
-               setTimeout(function() {
-                 target.fadeOut(function() {
-                   target.css('visibility', 'hidden');
-                   target.show();
-                   targetBox = target.parent().parent().parent()
-                   bottom = targetBox.position().top + targetBox.height() + 50
-                   bottomTop = $('body,html').scrollTop() + $(window).height();
-                   if(bottom > bottomTop) {
-                       $('body,html').animate({
-                         scrollTop: target.parent().position().top
-                       }, 800);
-                   };
-                 });
-               }, 500);
-               additionalInfos = 
-                 $(event.target)
-                   .parent().parent().parent().find(".additional-infos");
-               if(additionalInfos.length === 0) {
-                 additionalInfos = 
-                   $(event.target).parent()
-                     .parent().parent().parent().find(".additional-infos");
-               }
-               additionalInfos.slideDown();
-             });
-             $(".next").click(function(event) {
-               if($(event.target).get(0).tagName === "A") {
-                 link = $(event.target).attr('href');
-               } else  {
-                 link = $(event.target).parent().attr('href');
-               }
-               
-               $('body,html').animate({
-                 scrollTop: $(link).position().top
-               }, 800);
-               event.preventDefault();
-               return false;
-             });
-          })85
+          });
     body
         .navbar.fixed
             a(href="/")
@@ -68,36 +28,43 @@ html(lang="en")
             .left.mr2.biglogo
                 img(src='/assets/images/bighappycloud.png')
             .mod.main-text
-                .line 
-                    h1.left
+                .line.left 
+                    h1
                         span.title Cozy&nbsp;
                         | a personal Cloud
                         br
                         | you can host, hack
                         | and delete
-                    h4.left
+                    h4
                         | Your web apps and your data on your hardware
-                p.image-links
-                    | images:&nbsp; 
-                    a(href="https://files.cozycloud.cc/raspberry-cozy.img")
-                        | Raspberry
-                    |,&nbsp;
-                    a(href="https://files.cozycloud.cc/cozy.box")
-                        | Virtualbox
-                    |,&nbsp;
-                    a(href="https://files.cozycloud.cc/docker-cozy.dock")
-                        | Docker
-                p.external-links.mt3
-                    a(href="https://github.com/mycozycloud/cozy-setup")
-                        | Github
-                    a(href="https://cozycloud.cc/apps")
-                        | Apps
-                    a(href="https://demo.cozycloud.cc/")
-                        | Demo
+                    p.image-links
+                        | images:&nbsp; 
+                        a(href="https://files.cozycloud.cc/raspberry-cozy.img")
+                            | Raspberry
+                        |,&nbsp;
+                        a(href="https://files.cozycloud.cc/cozy.box")
+                            | Virtualbox
+                        |,&nbsp;
+                        a(href="https://files.cozycloud.cc/docker-cozy.dock")
+                            | Docker
+                    p.image-links
+                        | hosting services:&nbsp; 
+                        a(href="https://cozycloud.cc/")
+                            | Cozy Cloud
+                    p.external-links.mt3
+                        a(href="https://github.com/mycozycloud/cozy-setup")
+                            | Github
+                        a(href="https://cozycloud.cc/apps")
+                            | Apps
+                        a(href="https://demo.cozycloud.cc/")
+                            | Demo
         section#social.line.social.center
-            img.mod.w33.left(src="/assets/images/twitter_04.png")
-            img.mod.w33.left(src="/assets/images/twitter_02.png")
-            img.mod.w33.left(src="/assets/images/twitter_03.png")
+            .mod.w33.left
+                img(src="/assets/images/twitter_04.png")
+            .mod.w33.left
+                img(src="/assets/images/twitter_02.png")
+            .mod.w33.left
+                img(src="/assets/images/twitter_03.png")
 
         section#why.why.center.highlight
             .line
@@ -125,9 +92,10 @@ html(lang="en")
                     | They are required to run the installation on 
                     | your remote server.
                     | The script works only with Debian/Ubuntu distros.
-                .line.txtcenter.mt2
-                    a(href="/host")
-                        | full documentation
+            .line.mt2
+                p
+                    | Check our &nbsp;
+                    a(href="/host") full documentation
 
 
         section#developers.highlight
@@ -137,12 +105,13 @@ html(lang="en")
                 ul
                     li 
                         | Use our
-                        | ready to-go templates and deploy easily your web app
+                        | ready to-go templates and easy deployment for your web app
                     li 
-                        | Write web apps that leverages user personal
+                        | Write web apps that leverage user personal
                         | data
                     li Distribute them to the community
                    &nbsp; 
+
         section#hack.line.target
             h2.icon-up &nbsp; Hack it
             h3 
@@ -164,7 +133,7 @@ html(lang="en")
                 code.code
                     | cozy deploy
             h3 
-                | Send us&nbsp;
+                | When you're done send us&nbsp;
                 a(href="conact@cozycloud.cc") an email
                 | &nbsp;and we'll help you to
                 | promote your app!
@@ -173,14 +142,15 @@ html(lang="en")
                     | For more details check our&nbsp;
                     a(href="/hack") tutorial
             
+
         section#leave.highlight
             .line
                 h4 
                     | You will stay because you can leave.
                 ul
                     li 
-                        | You can delete your Cozy and all your data at any
-                        | moment.
+                        | You can delete your Cozy and all your data at when
+                        | you want
          
         section#delete.line.target
             h2.icon-cross &nbsp; Delete it
@@ -191,6 +161,7 @@ html(lang="en")
                     | that you are locked with it. We don't want that for
                     | Cozy Cloud. That's why we give you the possibility to 
                     | leave the platform. 
+                    br
                     | NB: Be aware that the above action will erase your
                     | data permanently.
 
@@ -200,10 +171,11 @@ html(lang="en")
                     | Cozy is a personal PaaS
                 ul
                     li 
-                        | It manage web apps and offer a simple data store,
+                        | It manage web apps and offer a JSON data store,
                         | an indexer and a file system
                     li
-                        | All of them are abstracted by the data system
+                        | All of them are abstracted by a module called 
+                        | the Data System
  
         section#architecture.line.target
             h2.icon-nav &nbsp; Architecture
@@ -280,23 +252,28 @@ html(lang="en")
                     li
                         | A software is nothing without a community. That's why we want
                     li
-                        | to make it easy for you to connect with us and other Cozy users:
+                        | to make it easy for you to connect with us and other Cozy users
 
         section#community.line
             h2.icon-asteri &nbsp; Community
             p 
+                | Here is a list of several collaborative tool that we use 
+                | to stay connected with the community:
             p 
                 a(href="http://webchat.freenode.net/?channels=cozycloud") 
-                    | IRC: <strong>#cozycloud</strong> on irc.freenode.net
+                    | IRC chat roomm: <strong>#cozycloud</strong> on irc.freenode.net
             p
                 a(href='https://groups.google.com/forum/#!forum/cozy-cloud') 
-                   | Mailing List 
+                   | Google Group (Mailing List)
             p
                 a(href='https://forum.cozycloud.cc/') 
                    | Forum
             p
+                a(href='https://blog.cozycloud.cc') 
+                   | Cozy Blog
+            p
                 a(href='https://twitter.com/mycozycloud') 
-                   | Twitter
+                   | Twitter Feed
  
         section#partners.highlight
             .line
@@ -329,6 +306,8 @@ html(lang="en")
                 | visit 
                 | <a href="https://cozycloud.cc">cozycloud.cc</a> 
                 | and try our hosting solutions!
+            p
+                | Photo Credits: Official Raspberry Photo, Bob Lash, 
 
             
         script(type='text/javascript')
