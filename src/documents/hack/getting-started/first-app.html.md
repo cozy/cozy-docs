@@ -11,11 +11,11 @@ This first tutorial is an introduction to cozy webapp development. Therefore, as
 ## Before we start...
 
 ### What you will achieve
-* writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/), a framework for NodeJS
+* writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/), the standard framework for NodeJS
 * introducing [Jade](http://jade-lang.com/) to write the templates that will be displayed by the browser
-* deploying it into Cozy
+* sharing with other Cozy users and deploying it into Cozy
 
-### What you need to know (or to be familiar with)
+### What you should know (or to be familiar with)
 * JavaScript / NodeJS
 * HTML
 * Git
@@ -137,9 +137,6 @@ form(action="add", method="post")
     input(type="submit", value="Add a new bookmark")
 ```
 
-Then we must define the corresponding route in the server with the appropriate
-
-
 We also need a button to remove a bookmark, let's rewrite the way a bookmark is displayed:
 
 ```jade
@@ -183,7 +180,7 @@ The first thing we need to do is getting a module to use SQLite:
 npm install sqlite3 --save
 ```
 
-Then we need to initialize the database, change the following to server.js:
+Then we need to initialize the database. To achieve that, change the following in server.js:
 ```javascript
 var http = require('http'),
     express = require('express'),
@@ -269,7 +266,7 @@ li
 ## Step 5 : deploying your app into Cozy
 If you want to deploy the app on a Cozy, your first need to put on a public git repository. We use [Github](https://github.com) because it's awesome but you can use any git provider.
 
-When you have published your code, go to http://localhost:9104/#applications and install your app through the dedicated interface.
+When you have published your code, go to your cozy if you have one or to http://localhost:9104/#applications and install your app through the dedicated interface.
 The application logs are available inside the virtual machine. To watch  them, do the following:
 ```bash
 vagrant ssh
@@ -281,12 +278,13 @@ You can also run your application directly inside the virtual machine:
 vagrant ssh
 cd /vagrant/{yourapplication}/
 cozy-monitor dev-route:start {appSlug} {port}
-PORT={port} coffee server.coffee
+PORT={port} node server.js
 ```
-Then go to http://localhost:9104/apps/{appSlug}/
+Then go to http://localhost:9104/#apps/{appSlug}/ and watch your app inside Cozy!
 
-# What's next ?
+## What's next ?
 You've developed your first Cozy app and you must understand now that it's nothing more than a normal web application.
-Now you must understand that if every application are done this way they will struggle collaborate around the user's data and you will not be able to use Cozy at its maximum.
 
-We'll introduce you the Cozy architecture before diving into Cozy specifities.
+You must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its best.
+
+Now we'll introduce you the Cozy architecture before coming back to this tutorial and get into more Cozy webapp development.
