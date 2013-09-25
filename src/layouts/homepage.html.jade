@@ -55,7 +55,7 @@ html(lang="en")
                event.preventDefault();
                return false;
              });
-          });
+          })85
     body
         .navbar.fixed
             a(href="/")
@@ -65,8 +65,8 @@ html(lang="en")
             a.right(href="/host") host
 
         header.line.clearfix#header
-            .right
-                img(src='/assets/images/rasp.jpg')
+            .left.mr2.biglogo
+                img(src='/assets/images/bighappycloud.png')
             .mod.main-text
                 .line 
                     h1.left
@@ -78,7 +78,7 @@ html(lang="en")
                     h4.left
                         | Your web apps and your data on your hardware
                 p.image-links
-                    | assets/images:&nbsp; 
+                    | images:&nbsp; 
                     a(href="https://files.cozycloud.cc/raspberry-cozy.img")
                         | Raspberry
                     |,&nbsp;
@@ -102,20 +102,20 @@ html(lang="en")
         section#why.why.center.highlight
             .line
                 h4 
-                    | Why should I use Cozy? 
+                    | Why should I host Cozy? 
                 ul
                     li 
                         | To keep your privacy safe and contribute to the
                         | Internet freedom
                     li 
-                        | And to take the full potiental out of your data
-                    li Or to increase your productivity
+                        | To take the full potiental out of your data
+                    li To increase your productivity
 
         section#host.line.target
             h2.icon-cloud &nbsp; Host it
             h3
                 strong Target your server with this script (sudoer required).
-            code.code curl http://cozy.io/install_cozy.sh | HOST=root@<strong>ip</strong> sh
+            p.code curl http://cozy.io/install_cozy.sh | HOST=root@<strong>ip</strong> sh
             .line
                 &nbsp;
             .line.mt2
@@ -133,7 +133,7 @@ html(lang="en")
         section#developers.highlight
             .line
                 h4 
-                    | No pain web development
+                    | Painless web development
                 ul
                     li 
                         | Use our
@@ -142,27 +142,31 @@ html(lang="en")
                         | Write web apps that leverages user personal
                         | data
                     li Distribute them to the community
-                    
+                   &nbsp; 
         section#hack.line.target
             h2.icon-up &nbsp; Hack it
             h3 
                 | install the development environment (node.js, vagrant and
                 | virtualbox are required)
-            code.code.
-                npm install cozy -g
-                cozy dev:init
-                cozy dev:start
+            p.code
+                | npm install cozy -g 
+                br
+                | cozy dev:init
+                br
+                | cozy dev:start
             h3 initialize your application
-            .line
-                code.code
-                    | cozy new my-app  --github myaccount
-                    | cd my-app
+            p.code
+                | cozy new my-app  --github myaccount
+                br
+                | cd my-app
             h3 hack... then deploy!
             .line
                 code.code
                     | cozy deploy
             h3 
-                | Send an email at contact@cozycloud.cc and we'll help you to
+                | Send us&nbsp;
+                a(href="conact@cozycloud.cc") an email
+                | &nbsp;and we'll help you to
                 | promote your app!
             .line.mt2
                 p
@@ -262,32 +266,25 @@ html(lang="en")
                             | A dedicated module
                             | handles content indexation through a REST API.
                             | It's your personal search engine.
-            .line.mt1
-            .line.read-more.mt1
-                .txt-black.read-more
-                    img(src="assets/images/plus.png", alt="read more")
-
             .line.mt2
                 p
                     | If you want to know more about our architecture
                     | check the&nbsp;
                     a(href="/hack") full documentation
  
-        section#community-cozy
+        section#community-cozy.highlight
+            .line
                 h4 
                     | Join our community
                 ul
-                    li 
-                        | It manage web apps and offer a simple data store,
-                        | an indexer and a file system
                     li
-                        | All of them are abstracted by the data system
- 
+                        | A software is nothing without a community. That's why we want
+                    li
+                        | to make it easy for you to connect with us and other Cozy users:
+
         section#community.line
             h2.icon-asteri &nbsp; Community
             p 
-                | A software is nothing without a community. That's why we want
-                | to make it easy for you to connect with us and other Cozy users:
             p 
                 a(href="http://webchat.freenode.net/?channels=cozycloud") 
                     | IRC: <strong>#cozycloud</strong> on irc.freenode.net
@@ -300,27 +297,40 @@ html(lang="en")
             p
                 a(href='https://twitter.com/mycozycloud') 
                    | Twitter
+ 
+        section#partners.highlight
+            .line
+                h4 
+                    | Cozy is a software built by  
+                    | <a href="https://cozycloud.cc/">Cozy Cloud</a>
+                ul
+                    li
+                        | We want to build partnerships with hosting
+                        | companies, hardware manufacturers and ISPs. 
+                    li 
+                        | If you are
+                        |  interested in what we do,&nbsp;
+                    li
+                        a.biggest(href="mailto:contact@cozycloud.cc")  contact us 
+                 
         section#about.line
             h2.icon-rate &nbsp; About
             p.right
                 img(src='/assets/images/cozy-logo.png', alt='Cozy Logo')
             p 
-                | Cozy is a software built by the 
-                | <a href="https://cozycloud.cc/">Cozy Cloud company</a>. We love
-                | the web and cloud computing, but the current situation doesn't
-                | satisfy us. By providing a platform for interconnected and
-                | privacy-friendly web apps we want to make the web a better place.
+                | Cozy Cloud is a young startup located in France. We are a
+                | team of eight and we are supported by 
+                a(href="http://webfwd.org") WebFWD
+                | , the Mozilla
+                | startup accelerator.
             p
-                | If you want the benefits of Cozy without the constraints of self-hosting, visit
-                | <a href="https://cozycloud.cc">cozycloud.cc</a>
+                | We provide convenient ways to start with Cozy. If you want
+                | the benefits of Cozy without the constraints of self-hosting,
+                | visit 
+                | <a href="https://cozycloud.cc">cozycloud.cc</a> 
                 | and try our hosting solutions!
-            p
-                | We want to build partnerships with hosting
-                | companies, hardware manufacturers or ISP. If you are
-                | are one of these and interested in what we do,&nbsp;
-                a(href="mailto:contact@cozycloud.cc") contact us 
-                | .
 
+            
         script(type='text/javascript')
           var _paq = _paq || [];
           _paq.push(["trackPageView"]);
