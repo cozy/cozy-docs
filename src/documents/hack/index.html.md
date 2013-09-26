@@ -11,7 +11,8 @@ menuOrder: 2
 ### What do we mean by hacking Cozy? 
 
 You might think that we talk about modifying
-directly the code of the platform or contributing in any way to the project. 
+directly the code of the platform or 
+[contributing in any way to the project](/contribute.html). 
 This way is really fine but it's not the most efficient to give your
 contribution to the Cozy community. So, the easier way we propose for you to
 hack your Cozy is to build a new application. You can work on it without
@@ -41,7 +42,7 @@ As you can see web development with Cozy is more straightforward, so you can
 focus on your application features only. Now that you have enough good reasons
 to start with Cozy, let's hack!
 
-## Getting Started
+### Write your first web app for Cozy
 
 To begin we'll introduce you to the standard NodeJS
 tools. This way your application will work in any environment. Then 
@@ -50,9 +51,7 @@ experience more delightful and efficient: get ready for **painless
 web development** with Cozy!
 
 * [Tutorial 1: Write your first web app in 30 minutes](/hack/getting-started/first-app.html)
-* Explainations about the Cozy Cloud architecture
-* Tutorial 2: Take advantage of the Data System
-* Introduction to front-end assemblers
-* Tutorial 3: Make your web app dynamic: write your first single
-  page-application
+* [Understand the Cozy Cloud architecture](/hack/getting-started/architecture-overview.html)
+* Take full advantage of Cozy, [use our development environment](/hack/getting-started/setup-environment.html)
+* [Tutorial 2: Take advantage of the Data System](/hack/getting-started/discover-data-system.html)
 

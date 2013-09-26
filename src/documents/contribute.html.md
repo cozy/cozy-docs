@@ -11,18 +11,12 @@ Everything is open-source and hosted on [Github](https://github.com/mycozycloud/
 
 
 ## Reporting a bug, submutting a feature request
+
 We use Github's issues to report the bugs or submit a feature request. On each page of the documentation you will find the link to the related Github page to achieve this.
 
 Try to be as descriptive as possible and add screenshots if you can, espescially for bug reports.
 
+
 ## The documentation
+
 You can improve the documentation you are currently reading by modifying and submitting us a pull request on the [dedicated Github repository](https://github.com/jsilvestre/cozy-docs/).
-
-## The code
-
-* Code guidelines (linter...)
-* Review process
-
-### Cozy "Core"
-
-### Cozy official applications

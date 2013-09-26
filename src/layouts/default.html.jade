@@ -64,10 +64,12 @@ html(lang='en')
               a(href="https://cozycloud.cc/") Cozycloud
             li irc.freenode.org on #cozycloud
 
-      #main.mod.pam(role="main")
+      #main.mod.pam(role="main").w100
         != content
 
     footer#footer.line.pam.row(role="contentinfo")
-        a(href="mailto: contact@cozycloud.cc") contact
+        a(href="mailto:contact@cozycloud.cc") contact
+        a(href="https://github.com/mycozycloud") github
+        a(href="https://cozycloud.cc") cozy cloud
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/assets/javascripts/main.js']).toHTML()

@@ -29,7 +29,8 @@ body
 
 .wrapper
   margin auto
-  width 75%
+  width 100%
+  max-width: 780px
 
 // Header styles
 header
@@ -192,28 +193,31 @@ aside
     p
         font-weight: normal
         font-size: 15px
-        font-family: cool
+        font-family: main
         margin-top: 2px
         color: #444
 
     ul
         li
             font-size: 15px
-            font-family: cool
+            font-family: main
             color: #444
 
     h3
         margin-bottom: 15px
         margin-top: 35px
-        font-family: main-light
+        font-family: cool
         font-weight: normal
 
     h2
         margin-bottom: 20px
         margin-top: 50px
-        font-family: main-light
+        font-family: cool
         font-weight: normal
         font-size: 30px
+
+    h1
+        font-family: cool
 
     a
     a:visited
@@ -225,3 +229,20 @@ aside
     pre.highlighted
         margin-top: 0
         margin-bottom: 15px
+
+    code
+        padding: 20px
+        border-radius: 10px
+        line-height: 20px
+
+#footer
+    margin-top: 30px
+    background: #333
+
+    a 
+        font-size: 18px
+        text-decoration: none
+        font-family: main
+
+    a:hover
+        color: orange
