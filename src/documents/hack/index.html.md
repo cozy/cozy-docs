@@ -6,13 +6,13 @@ isCategoryMaster: "true"
 menuOrder: 2
 ---
 
-## Hacking Cozy
+# Hacking Cozy
 
 ### What do we mean by hacking Cozy? 
 
 You might think that we talk about modifying
 directly the code of the platform or 
-[contributing in any way to the project](/contribute.html). 
+[contributing in any way to the project](/contribute). 
 This way is really fine but it's not the most efficient to give your
 contribution to the Cozy community. So, the easier way we propose for you to
 hack your Cozy is to build a new application. You can work on it without
