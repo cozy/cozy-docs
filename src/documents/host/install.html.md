@@ -5,9 +5,9 @@ category: "host"
 menuOrder: 0
 ---
 
-# Host Cozy
+# Install Cozy on your server
 
-## Install Cozy on your server
+### Use our script
 
 On your local machine install Fabric and fabtools:
 
