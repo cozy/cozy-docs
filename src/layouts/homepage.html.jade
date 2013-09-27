@@ -47,10 +47,24 @@ html(lang="en")
                         |,&nbsp;
                         //-a(href="https://files.cozycloud.cc/docker-cozy.dock")
                             //-| Docker
-                    p.image-links
+                    .image-links
                         | hosting services:&nbsp; 
                         a(href="https://cozycloud.cc/")
                             | Cozy Cloud
+                    .image-links
+                        | newsletter:
+                        form(action="http://mycozycloud.us4.list-manage1.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=1f9ebbfb31",
+                             method="post", 
+                             id="mc-embedded-subscribe-form", 
+                             name="mc-embedded-subscribe-form",
+                             class="validate")
+                            input(type="email", 
+                                  placeholder="email address", 
+                                  id="mce-EMAIL", 
+                                  class="search-query email", 
+                                  name="EMAIL", 
+                                  value="")
+                            button(class="btn btn-warning", id="mc-embedded-subscribe", name="subscribe", value="Subscribe", type="submit") subscribe
                     p.external-links.mt3
                         a(href="https://github.com/mycozycloud/cozy-setup")
                             | Github
@@ -250,9 +264,11 @@ html(lang="en")
                     | Join our community
                 ul
                     li
-                        | A software is nothing without a community. That's why we want
+                        | A software is nothing without a community. That's why
+                        | we want
                     li
-                        | to make it easy for you to connect with us and other Cozy users
+                        | to make it easy for you to connect with us and other
+                        | Cozy users
 
         section#community.line
             h2.icon-asteri &nbsp; Community
@@ -296,11 +312,12 @@ html(lang="en")
             p.right
                 img(src='/assets/images/cozy-logo.png', alt='Cozy Logo')
             p 
-                | Cozy Cloud is a young startup located in France. We are a
-                | team of eight and we are supported by 
+                | Cozy Cloud is a young startup located in France. We are
+                | a&nbsp;
+                a(href="https://www.cozycloud.cc/team/") team of eight
+                | &nbsp;and we are supported by 
                 a(href="http://webfwd.org") WebFWD
-                | , the Mozilla
-                | startup accelerator.
+                | , the Mozilla startup accelerator.
             p
                 | We provide convenient ways to start with Cozy. If you want
                 | the benefits of Cozy without the constraints of self-hosting,
@@ -308,7 +325,9 @@ html(lang="en")
                 | <a href="https://cozycloud.cc">cozycloud.cc</a> 
                 | and try our hosting solutions!
             p
-                | Photo Credits: Official Raspberry Photo, Bob Lash, 
+                | Photo Credits: Official Raspberry Photo, Bob Lash,
+                | PhotoG Jon (Flickr), Flowerwolf (Flickr), TechGenStaffer
+                | (Flickr)
 
             
         script(type='text/javascript')
