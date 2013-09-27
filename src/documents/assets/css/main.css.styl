@@ -26,11 +26,15 @@ red = #dd3333
 
 body
   font-family cool
+  background-color: darkgrey
 
 .wrapper
-  margin: auto auto
-  width: 100%
-  max-width: 960px
+    margin: auto auto
+    width: 100%
+    max-width: 960px
+    background-color: white
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
 
 // Header styles
 header
@@ -86,7 +90,7 @@ aside
   margin-top 20px
 
 #navigation
-  margin 0 20px 20px 20px
+  margin 0 0px 20px 20px
   ul
     list-style-type none
     padding 0
@@ -177,9 +181,9 @@ aside
 
 // Footer styles
 #footer
-  background orange
   color white
   text-align center
+  margin-bottom: 10px
 
   ul
     list-style-type none
@@ -193,6 +197,9 @@ aside
         font-family: main
         margin-top: 2px
         color: #444
+
+        code
+            padding: 8px
 
     ul
         li
@@ -234,12 +241,15 @@ aside
 
 #footer
     margin-top: 30px
-    background: #333
+    background: lightgrey + 10%
+    border-bottom-left-radius: 10px
+    border-bottom-right-radius: 10px
 
     a 
         font-size: 18px
         text-decoration: none
         font-family: main
+        color: black
 
     a:hover
-        color: orange
+        color: orange - 40%

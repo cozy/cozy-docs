@@ -20,6 +20,7 @@ html(lang='en')
     .navbar.fixed
         a(href="/")
             img(src='/assets/images/happycloud.png', alt='Happy Cloud')
+        span.biggest Cozy Documentation
         a.right(href="/hack") hack
         a.right(href="/host") host
 
@@ -56,20 +57,16 @@ html(lang='en')
                       - endif
               - endfor
 
-        #social
-          ul
-            li
-              a(href="https://github.com/mycozycloud/") Github
-              |&nbsp;-&nbsp;
-              a(href="https://cozycloud.cc/") Cozycloud
-            li irc.freenode.org on #cozycloud
-
       #main.mod.pam(role="main").w75
         != content
 
-    footer#footer.line.pam.row(role="contentinfo")
-        a(href="mailto:contact@cozycloud.cc") contact
+      footer#footer.line.pam.row(role="contentinfo")
         a(href="https://github.com/mycozycloud") github
+        a(href="irc://irc.freenode.net/cozycloud") IRC
+        a(href="mailto:contact@cozycloud.cc") contact
+        a(href="https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud")
+            | mailing-list
         a(href="https://cozycloud.cc") cozy cloud
+
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/assets/javascripts/main.js']).toHTML()

@@ -11,16 +11,19 @@ We've just introduced you how Cozy is built and you may want to know more about 
 Just a quick reminder, the Data System (DS) allows you to access the database, the indexer and the file system. Technically speaking, it is a RESTful web application meaning you can request it with a HTTP client.
 It handles authorization and authentification for applications, meaning that user has to give his explicit agreement (during installation) to the app so it can access the data.
 
-## Before we start...
-
 ### What you will achieve
-From the first app we've built together, you will add, remove and list data from the database.
+
+From the first app we've built together, you will add, remove and list data
+from the Cozy Data System. This is important because now, other applications
+will be able to use the data you store this way.
 
 ### Getting started
+
 Make sure you have "Setup your development environment" and that it runs because it is where the Data System is living.
 
 
 ## Playing with the data
+
 Accessing the data within the Data System can be achieved in two ways: by using an ODM we've developed a driver for or by requesting directly the Data System API.
 
 That being said, using the ODM has a big advantage: you can still use your app in another execution environment without relying on the DataSystem / CouchDB by switching the ODM's driver. At Cozycloud, we use the ODM in all our apps!
