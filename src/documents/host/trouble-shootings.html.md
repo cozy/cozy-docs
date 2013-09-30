@@ -7,6 +7,11 @@ menuOrder: 3
 
 # Trouble shootings
 
+In this section, you will find common errors that occurs during the
+installation process.
+Mention us the problems you encoutered that are not listed here, we will add
+them to the list as soon as possible.
+
 ### I can only install one application
 
 When you try to install an application it is marked as broken and it has the same behaviour for every additional applications. 
