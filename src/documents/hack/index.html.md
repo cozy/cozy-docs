@@ -25,7 +25,10 @@ Before going further, let's be clear: **writing an app for Cozy is like
 writing a classical web app**.  Because Cozy is a Platform As A Service, namely
 an execution environment for applications, it allows you to deploy any kind of
 web app. The main constraint is to write it with NodeJS until we support other
-development environment such as Ruby and Python.
+development environment such as Ruby and Python. You will be able to use your
+webapp outside of Cozy if you want. By the way, Cozy is a great platform for
+prototyping quickly.
+
 
 ### Painless web development
 
@@ -39,5 +42,3 @@ Moreover Cozy comes with the painless web development principles:
 As you can see web development with Cozy is more straightforward, so you can
 focus on your application features only. Now that you have enough good reasons
 to start with Cozy, [let's hack](/hack/getting-started.html)!
-
-

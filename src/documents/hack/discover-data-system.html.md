@@ -1,15 +1,22 @@
 ---
-title: "Discover the Data System"
+title: "Tut2: The Data System"
 layout: "default"
 category: "hack"
 menuOrder: 4
 ---
 
-# The Data System
-We've just introduced you how Cozy is built and you may want to know more about the Data System and to play with it. Don't forget that if you are stuck or have any question, you can visit us on IRC (irc.freenode.org, #cozycloud).
+# Tutorial 2: Discover the Data System
 
-Just a quick reminder, the Data System (DS) allows you to access the database, the indexer and the file system. Technically speaking, it is a RESTful web application meaning you can request it with a HTTP client.
-It handles authorization and authentification for applications, meaning that user has to give his explicit agreement (during installation) to the app so it can access the data.
+We've just introduced you how Cozy is built and you may want to know more about
+the Data System and to play with it. Don't forget that if you are stuck or have
+any question, you can visit us on IRC (irc.freenode.org, #cozycloud).
+
+Just a quick reminder, the Data System (DS) allows you to access the database,
+the indexer and the file system. Technically speaking, it is a RESTful web
+application meaning you can request it with a HTTP client.  It handles
+authorization and authentification for applications, meaning that user has to
+give his explicit agreement (during installation) to the app so it can access
+the data.
 
 ### What you will achieve
 
@@ -19,18 +26,26 @@ will be able to use the data you store this way.
 
 ### Getting started
 
-Make sure you have "Setup your development environment" and that it runs because it is where the Data System is living.
+Make sure you have "Setup your development environment" and that it runs
+because it is where the Data System is living.
 
 
 ## Playing with the data
 
-Accessing the data within the Data System can be achieved in two ways: by using an ODM we've developed a driver for or by requesting directly the Data System API.
+Accessing the data within the Data System can be achieved in two ways: by using
+an ODM we've developed a driver for or by requesting directly the Data System
+API.
 
-That being said, using the ODM has a big advantage: you can still use your app in another execution environment without relying on the DataSystem / CouchDB by switching the ODM's driver. At Cozycloud, we use the ODM in all our apps!
-We'll use the ODM for this tutorial but you can find the complete API and usage for the Data System in the cookbooks.
+That being said, using the ODM has a big advantage: you can still use your app
+in another execution environment without relying on the DataSystem / CouchDB by
+switching the ODM's driver. At Cozycloud, we use the ODM in all our apps!
 
 ### Starting with the ODM
-ODM stands for Object Document Mapper, it's like an ORM (Object Relational Mapper) but for NoSQL. An O(D|R)M abstracts the storage engine, as a result you can switch the storage engine (e.g. from CouchDB to PostgreSQL) without changing your code.
+
+ODM stands for Object Document Mapper, it's like an ORM (Object Relational
+Mapper) but for NoSQL. An O(D|R)M abstracts the storage engine, as a result you
+can switch the storage engine (e.g. from CouchDB to PostgreSQL) without
+changing your code.
 
 Enough talking, let's see how we can use it in our application.
 ```bash
@@ -55,8 +70,10 @@ Bookmark = db.define('bookmarks', {
     "url": { "type": String, "default": ""}
 });
 ```
-This defines a doctype in the data system. The doctype is a type of document (yup!) and is how data are structured inside Cozy. You can see them as SQL table. There are already plenty of doctypes you can reuse. They are self-documented in the applications code.
-Now let's play with the data.
+This defines a doctype in the data system. The doctype is a type of document
+(yup!) and is how data are structured inside Cozy. You can see them as SQL
+table. There are already plenty of doctypes you can reuse. They are
+self-documented in the applications code.  Now let's play with the data.
 
 ### Adding and removing a bookmark
 ```javascript
@@ -94,11 +111,14 @@ app.get('/delete/:id', function(req, res) {
     });
 });
 ```
-The code is pretty straightforward. However you must be aware that we don't do security checks and data validation in the tutorial because it is not the point. If you want to know how to do it, please ask us on IRC or by email (contact[at]cozycloud.cc).
+The code is pretty straightforward. However you must be aware that we don't do
+security checks and data validation in the tutorial because it is not the
+point. If you want to know how to do it, please ask us on IRC or by email
+(contact[at]cozycloud.cc).
 
-The full ODM API is available in the cookbooks. **link**
 
 ### Listing the bookmarks
+
 Now we can add and remove bookmarks, we should also see how we retrieve them. It's a bit trickier if you don't know map/reduce but you will figure out that the basics are easy.
 
 To retrieve data, you need to declare "requests" that will allow CouchDB to create views. If you have no idea of what I am talking about, it's not a big deal you don't need to understand all the details for now.
@@ -132,7 +152,6 @@ app.get('/', function(req, res) {
     });
 });
 ```
-We won't detail the request mecanism here but you can find a cookbook that will explain you how get the best from the map/reduce! **link**
 
 ## Examples
 Links to numerous examples that can be found in the tests or the code itself.

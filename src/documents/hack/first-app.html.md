@@ -1,5 +1,5 @@
 ---
-title: "Your first app in 30 minutes"
+title: "Tut1: first app in 30 minutes"
 layout: "default"
 category: "hack"
 menuOrder: 2
@@ -17,7 +17,7 @@ NodeJS.
   the standard framework for NodeJS
 * introducing [Jade](http://jade-lang.com/) to write the templates 
   that will be displayed by the browser
-* sharing with other Cozy users and deploying it into Cozy
+* sharing your app with other Cozy users and deploying it into Cozy
 
 ### What you should know (or to be familiar with)
 
@@ -28,11 +28,14 @@ NodeJS.
 ### Get ready
 
 Get the template:
+
 ```bash
 cd cozy-dev/ # where you start the VM
 git clone https://github.com/mycozycloud/cozy-tutorial.git && cd cozy-tutorial
 npm install
 ```
+
+Here is how the folders and files are organized:
 
 * public/ : this is where we will have our public assets (html pages, styles, images, javascripts)
 * package.json : holds your app information and dependencies.
@@ -270,6 +273,7 @@ li
 ```
 
 ## Step 5 : deploying your app into Cozy
+
 If you want to deploy the app on a Cozy, your first need to put on a public git repository. We use [Github](https://github.com) because it's awesome but you can use any git provider.
 
 When you have published your code, go to your cozy if you have one or to http://localhost:9104/#applications and install your app through the dedicated interface.
