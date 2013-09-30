@@ -47,7 +47,9 @@ We first need to create a HTTP server that will serve the content on requests:
 // server.js
 
 // Generate a new instance of express server.
-var express = require('express');
+var express = require('express')
+  , http = require('http');
+
 var app = express();
 
 // At the root of your website, we show the index.html page
