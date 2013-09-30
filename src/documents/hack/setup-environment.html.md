@@ -17,16 +17,25 @@ Since Cozy is built on many software bricks, we wrapped it into an easy to use v
 Before doing anything, install the fowlling:
 
 ### [Node.js (v0.8.20)](http://blog.nodejs.org/2013/02/15/node-v0-8-20-stable/)
-Node.js powers awesome tools that we use to develop apps. We also wrote a tool to manage the virtual machine more easily.
+Node.js powers awesome tools that we use to develop apps. We also wrote a tool
+to manage the virtual machine more easily.
 
 ### [VirtualBox (>= v4.2.16)](https://www.virtualbox.org/wiki/Downloads)
-Virtual Box allows you to run virtual machine on your computer. We use it indirectly with Vagrant to power our virtual machine.
+Virtual Box allows you to run virtual machine on your computer. We use it
+indirectly with Vagrant to power our virtual machine.
 
 ### [Vagrant (>= v1.2.7)](http://downloads.vagrantup.com/)
-Vagrant is a tool to "create and configure lightweight, reproducible and portable development environments." That's what we need here! We use it through a custom CLI tool so you will not manipulate it directly.
+Vagrant is a tool to "create and configure lightweight, reproducible and
+portable development environments." That's what we need here! We use it through
+a custom CLI tool so you will not manipulate it directly.
 
 ### [Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)
-Git is a control version tool that is now very common. We use it in combination with [Github](https://github.com) that allows you to store online your repository and much more!
+
+Git is a control version tool that is now very common. We use it in combination
+with [Github](https://github.com) that allows you to store online your
+repository and much more!
+
+### [Cozy for developers](https://github.com/mycozycloud/cozy-manager)
 
 You will also need our tool:
 
