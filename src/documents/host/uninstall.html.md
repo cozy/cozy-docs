@@ -25,5 +25,5 @@ rm -f /etc/supervisor/conf.d/cozy-controller.conf
 rm -f /etc/supervisor/conf.d/cozy-indexer.conf
 rm -rf /usr/local/cozy
 rm -rf /etc/cozy
-apt-get uninstall supervisord
+apt-get remove supervisord
 ```
