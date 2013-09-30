@@ -2,7 +2,7 @@
 title: "Uninstall"
 layout: "default"
 category: "host"
-menuOrder: 2
+menuOrder: 4
 ---
 
 # Uninstall your Cozy

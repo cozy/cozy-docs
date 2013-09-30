@@ -2,7 +2,7 @@
 title: "Update your cozy"
 layout: "default"
 category: "host"
-menuOrder: 1
+menuOrder: 3
 ---
 # Update your Cozy
 
