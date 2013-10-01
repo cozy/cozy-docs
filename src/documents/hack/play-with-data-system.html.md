@@ -1,5 +1,5 @@
 ---
-title: "Tut2: The Data System"
+title: "Play with the Data System"
 layout: "default"
 category: "hack"
 menuOrder: 4

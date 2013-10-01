@@ -1,5 +1,5 @@
 ---
-title: "Tut1: first app in 30 minutes"
+title: "Your first app in 30 minutes"
 layout: "default"
 category: "hack"
 menuOrder: 2
@@ -13,9 +13,9 @@ NodeJS.
 
 ### What you will achieve
 
-* writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/), 
+* writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/),
   the standard framework for NodeJS
-* introducing [Jade](http://jade-lang.com/) to write the templates 
+* introducing [Jade](http://jade-lang.com/) to write the templates
   that will be displayed by the browser
 * sharing your app with other Cozy users and deploying it into Cozy
 
