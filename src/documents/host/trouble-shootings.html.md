@@ -29,12 +29,26 @@ sudo cozy-monitor restart data-system
 
 ### Server error occured on login
 
+#### Problem with home
+
 Check that your home is installed. In your browser go to _https://yourcozyurl/status_
 Check that everything is set to true. If Home is marked as false, that means it is not running. To solve this problem type the following commands in a terminal of your remote server:
 
 ```bash
 cozy-monitor uninstall home
 cozy-monitor install home
+```
+
+#### Problem with data-system
+
+Check the log of your data-system in `/usr/local/cozy/apps/data-system/data-system/cozy-data-system/log/production.log`.
+If logs contain "Database cozy on localhost:5984 doesn't exist." and "The database could not be created, the file already exists.", that means data-system cannot connect to cozy database. To solve this problem type the following commands in a terminal of your remote server :
+
+```bash
+cozy-monitor uninstall data-system
+cozy-monitor install data-system
+cozy-monitor restart home
+cozy-monitor restart proxy
 ```
 
 ### Npm errors
