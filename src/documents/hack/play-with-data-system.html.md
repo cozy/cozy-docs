@@ -5,7 +5,7 @@ category: "hack"
 menuOrder: 4
 ---
 
-# Tutorial 2: Discover the Data System
+# Tutorial 2: Play with the Data System
 
 We've just introduced you how Cozy is built and you may want to know more about
 the Data System and to play with it. Don't forget that if you are stuck or have
