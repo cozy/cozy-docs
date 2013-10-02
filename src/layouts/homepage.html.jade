@@ -28,7 +28,7 @@ html(lang="en")
             .left.mr2.biglogo
                 img(src='/assets/images/bighappycloud.png')
             .mod.main-text
-                .line.left 
+                .line.left
                     h1
                         span.title Cozy&nbsp;
                         | a personal Cloud
@@ -38,7 +38,7 @@ html(lang="en")
                     h4
                         | Your web apps and your data on your hardware
                     p.image-links
-                        | images:&nbsp; 
+                        | images:&nbsp;
                         //-a(href="https://files.cozycloud.cc/raspberry-cozy.img")
                             //-| Raspberry
                         //-|,&nbsp;
@@ -48,21 +48,21 @@ html(lang="en")
                         //-a(href="https://files.cozycloud.cc/docker-cozy.dock")
                             //-| Docker
                     .image-links
-                        | hosting services:&nbsp; 
+                        | hosting services:&nbsp;
                         a(href="https://cozycloud.cc/")
                             | Cozy Cloud
                     .image-links
                         | newsletter:
                         form(action="http://mycozycloud.us4.list-manage1.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=1f9ebbfb31",
-                             method="post", 
-                             id="mc-embedded-subscribe-form", 
+                             method="post",
+                             id="mc-embedded-subscribe-form",
                              name="mc-embedded-subscribe-form",
                              class="validate")
-                            input(type="email", 
-                                  placeholder="email address", 
-                                  id="mce-EMAIL", 
-                                  class="search-query email", 
-                                  name="EMAIL", 
+                            input(type="email",
+                                  placeholder="email address",
+                                  id="mce-EMAIL",
+                                  class="search-query email",
+                                  name="EMAIL",
                                   value="")
                             button(class="btn btn-warning", id="mc-embedded-subscribe", name="subscribe", value="Subscribe", type="submit") subscribe
                     p.external-links.mt3
@@ -82,13 +82,13 @@ html(lang="en")
 
         section#why.why.center.highlight
             .line
-                h4 
-                    | Why should I host Cozy? 
+                h4
+                    | Why should I host Cozy?
                 ul
-                    li 
+                    li
                         | To keep your privacy safe and contribute to the
                         | Internet freedom
-                    li 
+                    li
                         | To take the full potiental out of your data
                     li To increase your productivity
 
@@ -103,7 +103,7 @@ html(lang="en")
                 p
                     | This script installs several tools on your
                     | local computer: python, pip, fabric and fabtools.
-                    | They are required to run the installation on 
+                    | They are required to run the installation on
                     | your remote server.
                     | The script works only with Debian/Ubuntu distros.
             .line.mt2
@@ -114,25 +114,25 @@ html(lang="en")
 
         section#developers.highlight
             .line
-                h4 
+                h4
                     | Painless web development
                 ul
-                    li 
+                    li
                         | Use our
                         | ready to-go templates and easy deployment for your web app
-                    li 
+                    li
                         | Write web apps that leverage user personal
                         | data
                     li Distribute them quickly to the community
-                   &nbsp; 
+                   &nbsp;
 
         section#hack.line.target
             h2.icon-up &nbsp; Hack it
-            h3 
+            h3
                 | install the development environment (node.js, vagrant and
                 | virtualbox are required)
             p.code
-                | npm install cozy -g 
+                | npm install cozy -g
                 br
                 | cozy dev:init
                 br
@@ -146,66 +146,66 @@ html(lang="en")
             .line
                 code.code
                     | cozy deploy
-            h3 
+            h3
                 | When you're done send us&nbsp;
-                a(href="conact@cozycloud.cc") an email
+                a(href="mailto:contact@cozycloud.cc") an email
                 | &nbsp;and we'll help you to
                 | promote your app!
             .line.mt2
                 p
                     | For more details check our&nbsp;
                     a(href="/hack") tutorial
-            
+
 
         section#leave.highlight
             .line
-                h4 
+                h4
                     | You will stay because you can leave.
                 ul
-                    li 
+                    li
                         | You can delete your Cozy and all your data when
                         | you want
-         
+
         section#delete.line.target
             h2.icon-cross &nbsp; Delete it
             code.code.mt2 curl http://cozy.io/uninstall_cozy.sh | HOST=root@<strong>ip:port</strong> sh
             .line.mt2
-                p 
+                p
                     | What is annoying nowadays with online services is
                     | that you are locked with it. We don't want that for
-                    | Cozy Cloud. That's why we give you the possibility to 
-                    | leave the platform. 
+                    | Cozy Cloud. That's why we give you the possibility to
+                    | leave the platform.
                     br
                     | NB: Be aware that the above action will erase your
                     | data permanently.
 
         section#paas.highlight
             .line
-                h4 
+                h4
                     | Cozy is a personal PaaS
                 ul
-                    li 
+                    li
                         | It manages web apps and offer a JSON data store,
                         | an indexer and a file system
                     li
-                        | All of them are abstracted by a module called 
+                        | All of them are abstracted by a module called
                         | the Data System
- 
+
         section#architecture.line.target
             h2.icon-nav &nbsp; Architecture
             .line
                 .line
-                    .mod.w100.diagbox  
+                    .mod.w100.diagbox
                         div proxy
                         p.w100
                             | The proxy handles all user requests. It manages
-                            | the authentication and routes requests to the 
+                            | the authentication and routes requests to the
                             | right application.
                 .line.grid5
                     .diagbox
                         div home / controller
                         p.w100
-                            | The home app is an UI for the 
+                            | The home app is an UI for the
                             | controller. It allows to install or remove
                             | applications and to set user parameters.
                     .diagbox
@@ -214,7 +214,7 @@ html(lang="en")
                             | This is an application provided by Cozy Cloud
                             | or the community. It is spawned by the home
                             | that finds the sources on a github repo.
-                    .diagbox 
+                    .diagbox
                         div app2
                         p.w100
                             | Your choice: notes, mails, budget, sport coach...
@@ -225,7 +225,7 @@ html(lang="en")
                             | This is an application you developed. You can spawn it like
                             | any other applications.
                 .line
-                    .mod.w100.diagbox  
+                    .mod.w100.diagbox
                         div data system
                         p.w100
                             | The data system is a layer between apps and data.
@@ -246,7 +246,7 @@ html(lang="en")
                             | Files are stored directly in the database as
                             | attachments of documents. A fuse implementation
                             | is on the roadmap to make things smoother.
-                    .diagbox  
+                    .diagbox
                         div indexer
                         p.w100
                             | A dedicated module
@@ -257,10 +257,10 @@ html(lang="en")
                     | If you want to know more about our architecture
                     | check the&nbsp;
                     a(href="/hack") full documentation
- 
+
         section#community-cozy.highlight
             .line
-                h4 
+                h4
                     | Join our community
                 ul
                     li
@@ -272,64 +272,64 @@ html(lang="en")
 
         section#community.line
             h2.icon-asteri &nbsp; Community
-            p 
-                | Here is a list of several communication tools that we use 
+            p
+                | Here is a list of several communication tools that we use
                 | to stay connected with the community:
-            p 
+            p
                 | IRC Chat Room:
-                a(href="http://webchat.freenode.net/?channels=cozycloud") 
+                a(href="http://webchat.freenode.net/?channels=cozycloud")
                     |  <strong>#cozycloud</strong> on irc.freenode.net
             p
-                a(href='https://groups.google.com/forum/#!forum/cozy-cloud') 
+                a(href='https://groups.google.com/forum/#!forum/cozy-cloud')
                    | Google Group (Mailing List)
             p
-                a(href='https://forum.cozycloud.cc/') 
+                a(href='https://forum.cozycloud.cc/')
                    | Forum
             p
-                a(href='https://blog.cozycloud.cc') 
+                a(href='https://blog.cozycloud.cc')
                    | Cozy Blog
             p
-                a(href='https://twitter.com/mycozycloud') 
+                a(href='https://twitter.com/mycozycloud')
                    | Twitter Feed
- 
+
         section#partners.highlight
             .line
-                h4 
-                    | Cozy is a software built by  
+                h4
+                    | Cozy is a software built by
                     | <a href="https://cozycloud.cc/">Cozy Cloud</a>
                 ul
                     li
                         | We want to build partnerships with hosting
-                        | companies, hardware manufacturers and ISPs. 
-                    li 
+                        | companies, hardware manufacturers and ISPs.
+                    li
                         | If you are
                         |  interested in what we do,&nbsp;
                     li
-                        a.biggest(href="mailto:contact@cozycloud.cc")  contact us 
-                 
+                        a.biggest(href="mailto:contact@cozycloud.cc")  contact us
+
         section#about.line
             h2.icon-rate &nbsp; About
             p.right
                 img(src='/assets/images/cozy-logo.png', alt='Cozy Logo')
-            p 
+            p
                 | Cozy Cloud is a young startup located in France. We are
                 | a&nbsp;
                 a(href="https://www.cozycloud.cc/team/") team of eight
-                | &nbsp;and we are supported by 
+                | &nbsp;and we are supported by
                 a(href="http://webfwd.org") WebFWD
                 | , the Mozilla startup accelerator.
             p
                 | We provide convenient ways to start with Cozy. If you want
                 | the benefits of Cozy without the constraints of self-hosting,
-                | visit 
-                | <a href="https://cozycloud.cc">cozycloud.cc</a> 
+                | visit
+                | <a href="https://cozycloud.cc">cozycloud.cc</a>
                 | and try our hosting solutions!
             p
                 | Photo Credits: Official Raspberry Photo, Bob Lash,
                 | PhotoG Jon (Flickr), Flowerwolf (Flickr), TechGenStaffer
                 | (Flickr)
 
-            
+
         script(type='text/javascript')
           var _paq = _paq || [];
           _paq.push(["trackPageView"]);
