@@ -45,7 +45,7 @@ Here is how the folders and files are organized:
 
 NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-1).
 
-We first need to create a HTTP server that will serve the content on requests:
+We first need to create an HTTP server that will serve the content on requests:
 ```javascript
 // server.js
 
@@ -55,11 +55,6 @@ var express = require('express')
 
 var app = express();
 
-// At the root of your website, we show the index.html page
-app.get('/', function(req, res) {
-    res.sendfile('./public/index.html')
-});
-
 /* This will allow Cozy to run your app smoothly but
  it won't break other execution environment */
 var port = process.env.PORT || 9250;
@@ -67,9 +62,15 @@ var host = process.env.HOST || "127.0.0.1";
 
 // Starts the server itself
 var server = http.createServer(app).listen(port, host, function() {
-    console.log("Server listening to %s:%d within %s environment",
-                host, port, app.get('env'));
+  console.log("Server listening to %s:%d within %s environment",
+              host, port, app.get('env'));
 });
+
+// At the root of your website, we show the index.html page
+app.get('/', function(req, res) {
+  res.sendfile('./public/index.html')
+});
+
 ```
 Now start the server by running:
 ```bash
@@ -100,8 +101,8 @@ Go back to `server.js` and change it that way:
 /* We add configure directive to tell express to use Jade to
    render templates */
 app.configure(function() {
-    app.set('views', __dirname + '/public');
-    app.engine('.html', require('jade').__express);
+  app.set('views', __dirname + '/public');
+  app.engine('.html', require('jade').__express);
 });
 
 // Let's define some bookmarks
@@ -112,17 +113,18 @@ bookmarks.push({title: "My Cozy", url: "http://localhost:9104/"});
 
 // We render the templates with the data
 app.get('/', function(req, res) {
-    params = {
-        "bookmarks": bookmarks
-    }
-    res.render('index.jade', params, function(err, html) {
-        res.send(200, html);
-    });
+  params = {
+    "bookmarks": bookmarks
+  }
+  res.render('index.jade', params, function(err, html) {
+    res.send(200, html);
+  });
 });
 ```
 
 We also need to change the HTML file for a Jade file:
 ```html
+# public/index.jade
 doctype 5
 html(lang="fr")
   head
@@ -141,7 +143,8 @@ html(lang="fr")
         - }
 ```
 
-Start the server and go to http://localhost:9250/ to make sure the app displays your bookmarks.
+Start the server and go to http://localhost:9250/ to make sure the app displays
+your bookmarks.
 
 Again, this is not very useful because you can't modify the list. Let's fix it!
 
@@ -160,7 +163,8 @@ form(action="add", method="post")
     input(type="submit", value="Add a new bookmark")
 ```
 
-We also need a button to remove a bookmark, let's rewrite the way a bookmark is displayed:
+We also need a button to remove a bookmark, let's rewrite the way a bookmark is
+displayed:
 
 ```html
 li
@@ -173,31 +177,42 @@ li
 Now we can create the corresponding routes in the server:
 
 ```javascript
+
+// add the body parser middleware to transform incoming data into a JS object.
+app.configure(function() {
+  app.set('views', __dirname + '/public');
+  app.engine('.html', require('jade').__express);
+  app.use(express.bodyParser());
+});
+
 // We define a new route that will handle bookmark creation
 app.post('/add', function(req, res) {
-    bookmarks.push(req.body);
-    res.redirect('/');
+  bookmarks.push(req.body);
+  res.redirect('/');
 });
 
 // We define another route that will handle bookmark deletion
 app.get('/delete/:id', function(req, res) {
-    bookmarks.splice(req.params.id, 1);
-    res.redirect('/');
+  bookmarks.splice(req.params.id, 1);
+  res.redirect('/');
 });
 ```
 
-To be able to get the data from the POST request, we need to tell express to process the parameters. Add the following inside the "app.configure" section:
+To be able to get the data from the POST request, we need to tell express to
+process the parameters. Add the following inside the "app.configure" section:
 
 ```javascript
 // Allows express to get data from POST requests
 app.use(express.bodyParser());
 ```
 
-Et voilà! You can now add and remove bookmarks. But it still sucks, right? Each time you start and stop the server you lose everything. Let's use a database!
+Et voilà! You can now add and remove bookmarks. But it still sucks, right? Each
+time you start and stop the server you lose everything. Let's use a database!
 
 ## Step 4: using a real database, SQLite
 
-NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-4).
+NB : the source code of this step can be found
+[here](https://github.com/mycozycloud/cozy-tutorial/tree/step-4).
 
 Even if Cozy main persistence layer is not SQLite, it is shipped with every Cozy.
 
@@ -212,26 +227,32 @@ var http = require('http'),
     express = require('express'),
     app = express(),
     sqlite3 = require('sqlite3').verbose(),
-    db = new sqlite3.Database('cozy');
+    db = new sqlite3.Database('cozy.db');
 
 // Database initialization
-db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='bookmarks'", function(err, row) {
-    if(err !== null) {
+
+// Database initialization
+db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='bookmarks'",
+       function(err, rows) {
+  if(err !== null) {
+    console.log(err);
+  }
+  else if(rows === undefined) {
+    db.run('CREATE TABLE "bookmarks" ' +
+           '("id" INTEGER PRIMARY KEY AUTOINCREMENT, ' +
+           '"title" VARCHAR(255), ' +
+           'url VARCHAR(255))', function(err) {
+      if(err !== null) {
         console.log(err);
-    }
-    else if(row == null) {
-        db.run('CREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT, "title" VARCHAR(255), url VARCHAR(255))', function(err) {
-            if(err !== null) {
-                console.log(err);
-            }
-            else {
-                console.log("SQL Table 'bookmarks' initialized.");
-            }
-        });
-    }
-    else {
-        console.log("SQL Table 'bookmarks' already initialized.");
-    }
+      }
+      else {
+        console.log("SQL Table 'bookmarks' initialized.");
+      }
+    });
+  }
+  else {
+    console.log("SQL Table 'bookmarks' already initialized.");
+  }
 });
 ```
 
@@ -240,43 +261,46 @@ Now we must change the list, add and delete routes:
 // We render the templates with the data
 app.get('/', function(req, res) {
 
-    db.all('SELECT * FROM bookmarks ORDER BY title', function(err, row) {
-        if(err !== null) {
-            res.send(500, "An error has occurred -- " + err);
-        }
-        else {
-            res.render('index.jade', {bookmarks: row}, function(err, html) {
-                res.send(200, html);
-            });
-        }
-    });
+  db.all('SELECT * FROM bookmarks ORDER BY title', function(err, row) {
+    if(err !== null) {
+      res.send(500, "An error has occurred -- " + err);
+    }
+    else {
+      console.log(row);
+      res.render('index.jade', {bookmarks: row}, function(err, html) {
+        res.send(200, html);
+      });
+    }
+  });
 });
 
 // We define a new route that will handle bookmark creation
 app.post('/add', function(req, res) {
-    title = req.body.title;
-    url = req.body.url;
-    sqlRequest = "INSERT INTO 'bookmarks' (title, url) VALUES('" + title + "', '" + url + "')"
-    db.run(sqlRequest, function(err) {
-        if(err !== null) {
-            res.send(500, "An error has occurred -- " + err);
-        }
-        else {
-            res.redirect('back');
-        }
-    });
+  title = req.body.title;
+  url = req.body.url;
+  sqlRequest = "INSERT INTO 'bookmarks' (title, url) " +
+               "VALUES('" + title + "', '" + url + "')"
+  db.run(sqlRequest, function(err) {
+    if(err !== null) {
+      res.send(500, "An error has occurred -- " + err);
+    }
+    else {
+      res.redirect('back');
+    }
+  });
 });
 
 // We define another route that will handle bookmark deletion
 app.get('/delete/:id', function(req, res) {
-    db.run("DELETE FROM bookmarks WHERE id='" + req.params.id + "'", function(err) {
-        if(err !== null) {
-            res.send(500, "An error has occurred -- " + err);
-        }
-        else {
-            res.redirect('back');
-        }
-    });
+  db.run("DELETE FROM bookmarks WHERE id='" + req.params.id + "'",
+         function(err) {
+    if(err !== null) {
+      res.send(500, "An error has occurred -- " + err);
+    }
+    else {
+      res.redirect('back');
+    }
+  });
 });
 ```
 
