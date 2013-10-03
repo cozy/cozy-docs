@@ -29,60 +29,30 @@ body
   background-color: darkgrey
 
 .wrapper
-    margin: auto auto
-    width: 100%
-    max-width: 960px
-    background-color: white
-    border-bottom-left-radius: 10px
-    border-bottom-right-radius: 10px
-    padding-top: 20px
+  margin: auto auto
+  width: 100%
+  max-width: 960px
+  background-color: white
+  border-bottom-left-radius: 10px
+  border-bottom-right-radius: 10px
+  padding-top: 20px
 
 // Header styles
-header
-  font-family main-light
-  border-bottom 5px solid lightorange
-  padding 20px 20px 5px 20px
+.navbar
+  box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.4)
 
-  h1
-    font-size 30px
-    padding 0 !important
-    margin-left 15px
-    .title
-      font-size 60px
-      position relative
-
-
-    .menu-button
-      font-size 30px
-      padding 10px
-      border 1px solid blue
-      border-radius 10px
-      text-decoration none
-      user-select none
-      color #000
-
-
-      &:hover
-        color white
-        background orange
-        border-color orange
-      &:active
-        box-shadow inset 0 0 15px lightorange
-      &.selected
-        color white
-        background blue
-        &:hover
-          border-color blue
-        &:active
-          box-shadow none
+  .nav-logo
+    margin-top: 0
+    margin-right: 10px
 
   .subtitle
-    display block
-    margin-top 5px
-    font-family main-light
-    font-size 15px
-    font-weight bold
-
+    display: inline-block
+    margin-right  20px
+    margin-top 10px
+    text-decoration none
+    font-size 25px
+    height 60px
+    line-height 45px
 
 // Menu styles
 
@@ -192,73 +162,66 @@ aside
     display inline-block
 
 #main
-    p
-        font-weight: normal
-        font-size: 15px
-        font-family: main
-        margin-top: 2px
-        color: #444
-
-        code
-            padding: 8px
-
-    ul
-        li
-            font-size: 15px
-            font-family: main
-            color: #444
-
-    h3
-        margin-bottom: 15px
-        margin-top: 35px
-        font-family: cool
-        font-weight: normal
-
-    h2
-        margin-bottom: 20px
-        margin-top: 50px
-        font-family: cool
-        font-weight: normal
-        font-size: 30px
-
-    h1
-        font-family: cool
-
-    a
-    a:visited
-        color: black
-
-    a:hover
-        color: orange - 40%
-
-    pre.highlighted
-        margin-top: 0
-        margin-bottom: 15px
+  p
+    font-weight: normal
+    font-size: 15px
+    font-family: main
+    margin-top: 2px
+    color: #444
 
     code
-        padding: 20px
-        border-radius: 10px
-        line-height: 20px
-        margin-top: 10px
+      padding: 8px
+
+  ul
+    li
+      font-size: 15px
+      font-family: main
+      color: #444
+
+  h3
+    margin-bottom: 15px
+    margin-top: 35px
+    font-family: cool
+    font-weight: normal
+
+  h2
+    margin-bottom: 20px
+    margin-top: 50px
+    font-family: cool
+    font-weight: normal
+    font-size: 30px
+
+  h1
+    font-family: cool
+
+  a
+  a:visited
+    color: black
+
+  a:hover
+    color: orange - 40%
+
+  pre.highlighted
+    margin-top: 0
+    margin-bottom: 15px
+
+  code
+  padding: 20px
+  border-radius: 10px
+  line-height: 20px
+  margin-top: 10px
 
 #footer
-    margin-top: 30px
-    background: lightgrey + 10%
-    border-bottom-left-radius: 10px
-    border-bottom-right-radius: 10px
+  margin-top: 30px
+  background: lightgrey + 10%
+  border-bottom-left-radius: 10px
+  border-bottom-right-radius: 10px
 
-    a
-        font-size: 18px
-        text-decoration: none
-        font-family: main
-        color: black
+  a
+    font-size: 18px
+    text-decoration: none
+    font-family: main
+    color: black
 
-    a:hover
-        color: orange - 40%
-
-.navbar
-    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.4)
-
-    .nav-logo
-        margin-top: 0
-        margin-right: 10px
+  a:hover
+    color: orange - 40%
