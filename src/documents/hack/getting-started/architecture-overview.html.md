@@ -54,4 +54,4 @@ Also, you won't have to bother about user authentification and authorization bec
 
 Keep in mind you develop for a **personal** environment which is not something we are used to at first but it only changes the relation to data we had until now!
 
-Ready to go one step further with Cozy? Get your hands dirty with the Data System.
+Ready to go one step further with Cozy? Get your hands dirty with [the Data System](/hack/getting-started/play-with-data-system.html).

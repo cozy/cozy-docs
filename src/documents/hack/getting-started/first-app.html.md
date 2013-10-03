@@ -314,4 +314,4 @@ You've developed your first Cozy app and you must understand now that it's nothi
 
 You must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its best.
 
-Now we'll introduce you the Cozy architecture before coming back to this tutorial and get into more Cozy webapp development.
+Now we'll introduce you [the Cozy architecture](/hack/getting-started/architecture-overview.html) before coming back to this tutorial and get into more Cozy webapp development.
