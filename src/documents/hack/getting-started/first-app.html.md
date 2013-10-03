@@ -71,6 +71,10 @@ app.get('/', function(req, res) {
   res.sendfile('./public/index.html')
 });
 
+
+Schema = require('jugglingdb').Schema,
+db = new Schema('cozy-adapter', { url: 'http://localhost:9101/' });
+
 ```
 Now start the server by running:
 ```bash
