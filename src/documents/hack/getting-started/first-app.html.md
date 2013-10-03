@@ -42,6 +42,9 @@ Here is how the folders and files are organized:
 * server.js : where you will write your code
 
 ## Step 1: displaying HTML pages
+
+NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-1).
+
 We first need to create a HTTP server that will serve the content on requests:
 ```javascript
 // server.js
@@ -80,6 +83,9 @@ Whoohoo, you've just made your first NodeJS app compatible with Cozy!
 You might think "well, it sucks, I actually can't do anything with that". You are absolutely right, let's move on to step 2.
 
 ## Step 2: listing the bookmarks from the server
+
+NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-2).
+
 For the step 2, we are going to use a list stored in memory on the server and render it within a template. We are going to use Jade as a template engine. If you don't know Jade, you will find it is not difficult to read and write it.
 
 First, install jade:
@@ -141,6 +147,8 @@ Again, this is not very useful because you can't modify the list. Let's fix it!
 
 ## Step 3: adding and removing bookmarks
 
+NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-3).
+
 First, add the following before the list in `index.jade`
 
 ```html
@@ -188,6 +196,9 @@ app.use(express.bodyParser());
 Et voilà! You can now add and remove bookmarks. But it still sucks, right? Each time you start and stop the server you lose everything. Let's use a database!
 
 ## Step 4: using a real database, SQLite
+
+NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-4).
+
 Even if Cozy main persistence layer is not SQLite, it is shipped with every Cozy.
 
 The first thing we need to do is getting a module to use SQLite:

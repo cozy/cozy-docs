@@ -24,6 +24,10 @@ From the first app we've built together, you will add, remove and list data
 from the Cozy Data System. This is important because now, other applications
 will be able to use the data you store this way.
 
+### Source code
+The source code of this tutorial can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/data-system-odm).
+
+
 ### Getting started
 
 Make sure you have "Setup your development environment" and that it runs

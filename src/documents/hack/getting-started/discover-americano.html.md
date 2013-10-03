@@ -18,6 +18,9 @@ Also, Americano is modular so you can extend it with plugins. That's what we did
 * Learning a new framework without losing the work you've made so far by making the bookmark app you've built an Americano app with no effort.
 * Learning how to painlessly structure your code and improve your capacity to maintain your code.
 
+### Source code
+The source code of this tutorial can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/americano).
+
 ### Getting stated
 In a brand new application folder, install americano:
 ```bash
@@ -57,7 +60,7 @@ You might recognize familiar concepts: Model, Controller and somehow the View. I
 Start by creating the architecture then we'll move on the models creation.
 
 ## Define the models
-The models folder allow you put the doctype definition in separate files. Let's take the code we previously had in server.js and move it to server/models/bookmark.js:
+The models folder allow you put the doctype definition in separate files. Let's take the code we previously had in server.js and move it to `server/models/bookmark.js`:
 
 ```javascript
 americano = require('americano');
@@ -94,6 +97,18 @@ module.exports =
     };
 ```
 
+You can now add a helper to your bookmark model (we'll use it in the next section):
+```javascript
+// server/models/bookmark.js
+
+Bookmark.all = function(callback) {
+    Bookmark.request("all", {}, function(err, bookmarks) {
+       callback(null, bookmarks);
+    });
+};
+
+```
+
 Now let's focus on the business logic of your application.
 
 ## Organize your code with Controllers
@@ -103,9 +118,9 @@ Create the bookmark controller: server/controllers/bookmarks.js
 Bookmark = require('../models/bookmark');
 
 module.exports.list = function(req, res) {
-    Bookmark.request("all", {}, function(err, bookmarks) {
+    Bookmark.all(function(err, bookmarks) {
         if(err != null) {
-            console.log("An error has occurred -- " + err);
+            res.send(500, "An error has occurred -- " + err);
         }
         else {
             data = {"bookmarks": bookmarks}
@@ -169,23 +184,24 @@ Americano **automatically** handles their loading when the server starts and mak
 var bookmarks = require('./bookmarks');
 
 module.exports = {
-  '/': {
+  '': {
     get: bookmarks.list
   },
-  '/add': {
+  'add': {
     post: bookmarks.add
   },
-  '/delete/:id': {
+  'delete/:id': {
     get: bookmarks.delete
   }
 };
 ```
+Please note that every "route" is **automatically** prefixed by a '/' so you don't need to put it yourself.
 
 You can also bind different HTTP verbs to the same route:
 ```javascript
 // this example will not work with the code you have, you must change the template for that
 module.exports = {
-  '/bookmarks': {
+  'bookmarks': {
     get: bookmarks.list
     post: bookmarks.add
   },
@@ -234,4 +250,4 @@ We splitted our application into logical pieces and it can now grow without us w
 You discovered Americano, our favorite framework but you can use the one you like, stick with ExpressJS or check out [Flatiron](http://flatironjs.org/), [Sails.js](http://sailsjs.org/) or [Compound.js](http://compoundjs.com/).
 As we repeat again and again, a Cozy app is nothing more than a web app.
 
-We are almost done with Cozy's basics, there is still one concept we'd like to introduce you. Are you ready to learn the single page app way?
+We are almost done with Cozy's basics, there is still one concept we'd like to introduce you. Are you ready to [learn the single page app way](/hack/getting-started/learn-single-page-app-way.html)?
