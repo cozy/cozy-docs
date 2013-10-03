@@ -232,12 +232,12 @@ module.exports = {
     americano.bodyParser(),
     americano.methodOverride(),
     americano.errorHandler({
-    dumpExceptions: true,
-    showStack: true
-  }),
-  americano.static(__dirname + '/../public', {
-    maxAge: 86400000
-  }),
+      dumpExceptions: true,
+      showStack: true
+    }),
+    americano.static(__dirname + '/../public', {
+      maxAge: 86400000
+    }),
     americano.set('views', __dirname + '/../client'),
     americano.engine('.html', require('jade').__express)
   ],
@@ -250,7 +250,8 @@ module.exports = {
 };
 ```
 
-The configuration works exactly like in Express (remember, Americano extends Express!) so be sure to change it the way you like.
+The configuration works exactly like in Express (remember, Americano extends
+Express!) so be sure to change it the way you like.
 
 
 ## What's next ?
