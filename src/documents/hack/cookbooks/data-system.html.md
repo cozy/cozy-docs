@@ -34,7 +34,7 @@ See [troubleshootings](#troubleshootings) to understand what those error mean.
 
 ### Todo for this cookbook
 * Checking all the request's parameters and responses status code and body.
-* Adding examples of usage with the request-json node module
+* Adding the "account" section
 * Adding documentation about authentificaiton and authorization process
 
 ## Data API
