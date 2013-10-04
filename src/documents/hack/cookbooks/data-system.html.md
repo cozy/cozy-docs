@@ -332,7 +332,7 @@ Response
     ?: ?
 ```
 
-# Examples of use
+# Example of use
 How to request the Data System from a NodeJS application ? You can use any HTTP client but we recommend (, use and maintain) request-json:
 
 ```bash
