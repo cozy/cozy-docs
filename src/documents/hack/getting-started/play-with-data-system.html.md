@@ -25,7 +25,8 @@ from the Cozy Data System. This is important because now, other applications
 will be able to use the data you store this way.
 
 ### Source code
-The source code of this tutorial can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/data-system-odm).
+The source code of this tutorial can be found
+[here](https://github.com/mycozycloud/cozy-tutorial/tree/data-system-odm).
 
 
 ### Getting started
@@ -69,9 +70,9 @@ var http = require('http'),
 
 // We define our data schema
 Bookmark = db.define('bookmarks', {
-    "id": String,
-    "title": String,
-    "url": { "type": String, "default": ""}
+  "id": String,
+  "title": String,
+  "url": { "type": String, "default": ""}
 });
 ```
 This defines a doctype in the data system. The doctype is a type of document
@@ -83,36 +84,36 @@ self-documented in the applications code.  Now let's play with the data.
 ```javascript
 // We define a new route that will handle bookmark creation
 app.post('/add', function(req, res) {
-    Bookmark.create(req.body, function(err, bookmark) {
-        if(err != null) {
-            res.send(500, "An error has occurred -- " + err);
-        }
-        else {
-            res.redirect('back');
-        }
-    });
+  Bookmark.create(req.body, function(err, bookmark) {
+    if(err != null) {
+      res.send(500, "An error has occurred -- " + err);
+    }
+    else {
+      res.redirect('back');
+    }
+  });
 });
 
 // We define another route that will handle bookmark deletion
 app.get('/delete/:id', function(req, res) {
-    Bookmark.find(req.params.id, function(err, bookmark) {
+  Bookmark.find(req.params.id, function(err, bookmark) {
+    if(err != null) {
+      res.send(500, "Bookmark couldn't be retrieved -- " + err);
+    }
+    else if(bookmark == null) {
+      res.send(404, "Bookmark not found");
+    }
+    else {
+      bookmark.destroy(function(err) {
         if(err != null) {
-            res.send(500, "Bookmark couldn't be retrieved -- " + err);
-        }
-        else if(bookmark == null) {
-            res.send(404, "Bookmark not found");
+          res.send(500, "An error has occurred -- " + err);
         }
         else {
-            bookmark.destroy(function(err) {
-                if(err != null) {
-                    res.send(500, "An error has occurred -- " + err);
-                }
-                else {
-                    res.redirect('back');
-                }
-            });
+          res.redirect('back');
         }
-    });
+      });
+    }
+  });
 });
 ```
 The code is pretty straightforward. However you must be aware that we don't do
@@ -123,19 +124,23 @@ point. If you want to know how to do it, please ask us on IRC or by email
 
 ### Listing the bookmarks
 
-Now we can add and remove bookmarks, we should also see how we retrieve them. It's a bit trickier if you don't know map/reduce but you will figure out that the basics are easy.
+Now we can add and remove bookmarks, we should also see how we retrieve them.
+It's a bit trickier if you don't know map/reduce but you will figure out that
+the basics are easy.
 
-To retrieve data, you need to declare "requests" that will allow CouchDB to create views. If you have no idea of what I am talking about, it's not a big deal you don't need to understand all the details for now.
+To retrieve data, you need to declare "requests" that will allow CouchDB to
+create views. If you have no idea of what I am talking about, it's not a big
+deal you don't need to understand all the details for now.
 
 ```javascript
 // Define the request. You need to do this only once.
 var request = function(doc) {
-      return emit(doc._id, doc);
+  return emit(doc._id, doc);
 };
 Bookmark.defineRequest("all", request, function(err) {
-    if(err != null) {
-        console.log("An error occurred while declaring the request -- " + err);
-    }
+  if(err !== null) {
+    console.log("An error occurred while declaring the request -- " + err);
+  }
 });
 ```
 
@@ -143,17 +148,17 @@ Then you can call the request to get the data:
 ```javascript
 // We render the templates with the data
 app.get('/', function(req, res) {
-    Bookmark.request("all", {}, function(err, bookmarks) {
-        if(err != null) {
-            console.log("An error has occurred -- " + err);
-        }
-        else {
-            data = {"bookmarks": bookmarks}
-            res.render('index.jade', data, function(err, html) {
-                res.send(200, html);
-            });
-        }
-    });
+  Bookmark.request("all", {}, function(err, bookmarks) {
+    if(err !== null) {
+      console.log("An error has occurred -- " + err);
+    }
+    else {
+      data = {"bookmarks": bookmarks}
+      res.render('index.jade', data, function(err, html) {
+        res.send(200, html);
+      });
+    }
+  });
 });
 ```
 
@@ -161,8 +166,15 @@ app.get('/', function(req, res) {
 Links to numerous examples that can be found in the tests or the code itself.
 
 ## What's next ?
-You've just met the Data System and got an insight of what it does and how you can play with it to leverage people's personal data. Congratulations, we know it wasn't easy!
+You've just met the Data System and got an insight of what it does and how you
+can play with it to leverage people's personal data. Congratulations, we know
+it wasn't easy!
 
-Now look a bit behind you: your application has grown a lot and the code itself is getting fat which could complicate the addition of new features and more generally your ability to maintain the application (or to get contributions from the community!)
+Now look a bit behind you: your application has grown a lot and the code itself
+is getting fat which could complicate the addition of new features and more
+generally your ability to maintain the application (or to get contributions
+from the community!)
 
-Let's see how we can organize the code better with a stronger Express(o). [Experience Americano, the NodeJS framework that makes Express more opinionated](/hack/getting-started/discover-americano.html).
+Let's see how we can organize the code better with a stronger Express(o). 
+[Experience Americano, the NodeJS framework that makes Express more 
+opinionated](/hack/getting-started/discover-americano.html).

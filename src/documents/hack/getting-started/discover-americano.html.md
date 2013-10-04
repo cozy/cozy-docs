@@ -67,9 +67,9 @@ americano = require('americano');
 
 // The americano plugin wraps the "db.define" JugglingDB function in a simpler "getModel" call
 module.exports = Bookmark = americano.getModel('bookmarks', {
-    "id": String,
-    "title": String,
-    "url": { "type": String, "default": ""}
+  "id": String,
+  "title": String,
+  "url": { "type": String, "default": ""}
 });
 
 // You can easily define here some helpers or method for bookmarks
@@ -79,11 +79,11 @@ Then move to server/models/requests.js so we can define the request we are going
 
 ```javascript
 module.exports =
-    bookmark: {
-        all: function(doc) {
-                emit(doc._id, doc);
-             }
-    };
+  bookmark: {
+    all: function(doc) {
+      emit(doc._id, doc);
+    }
+  };
 ```
 
 This will **automatically** do the old "Bookmark.defineRequest" when the server starts. Americano's Cozy plugin knows that the "all request" is often the same and offers this handy shortcut:
@@ -92,9 +92,9 @@ This will **automatically** do the old "Bookmark.defineRequest" when the server 
 americano = require('americano');
 
 module.exports =
-    bookmark: {
-        all: americano.defaultRequests.all
-    };
+  bookmark: {
+    all: americano.defaultRequests.all
+  };
 ```
 
 You can now add a helper to your bookmark model (we'll use it in the next section):
@@ -102,9 +102,9 @@ You can now add a helper to your bookmark model (we'll use it in the next sectio
 // server/models/bookmark.js
 
 Bookmark.all = function(callback) {
-    Bookmark.request("all", {}, function(err, bookmarks) {
-       callback(null, bookmarks);
-    });
+  Bookmark.request("all", {}, function(err, bookmarks) {
+    callback(null, bookmarks);
+  });
 };
 
 ```
@@ -118,66 +118,76 @@ Create the bookmark controller: server/controllers/bookmarks.js
 Bookmark = require('../models/bookmark');
 
 module.exports.list = function(req, res) {
-    Bookmark.all(function(err, bookmarks) {
-        if(err != null) {
-            res.send(500, "An error has occurred -- " + err);
-        }
-        else {
-            data = {"bookmarks": bookmarks}
-            res.render('index.jade', data, function(err, html) {
-                res.send(200, html);
-            });
-        }
-    });
+  Bookmark.all(function(err, bookmarks) {
+    if(err != null) {
+      res.send(500, "An error has occurred -- " + err);
+    }
+    else {
+      data = {"bookmarks": bookmarks}
+      res.render('index.jade', data, function(err, html) {
+        res.send(200, html);
+      });
+    }
+  });
 };
 
 // We define a new route that will handle bookmark creation
 module.exports.add = function(req, res) {
-    Bookmark.create(req.body, function(err, bookmark) {
-        if(err != null) {
-            res.send(500, "An error has occurred -- " + err);
-        }
-        else {
-            res.redirect('back');
-        }
-    });
+  Bookmark.create(req.body, function(err, bookmark) {
+    if(err != null) {
+      res.send(500, "An error has occurred -- " + err);
+    }
+    else {
+      res.redirect('back');
+    }
+  });
 };
 
 // We define another route that will handle bookmark deletion
 module.exports.delete = function(req, res) {
-    Bookmark.find(req.params.id, function(err, bookmark) {
+  Bookmark.find(req.params.id, function(err, bookmark) {
+    if(err != null) {
+      res.send(500, "Bookmark couldn't be retrieved -- " + err);
+    }
+    else if(bookmark == null) {
+      res.send(404, "Bookmark not found");
+    }
+    else {
+      bookmark.destroy(function(err) {
         if(err != null) {
-            res.send(500, "Bookmark couldn't be retrieved -- " + err);
-        }
-        else if(bookmark == null) {
-            res.send(404, "Bookmark not found");
+          res.send(500, "An error has occurred -- " + err);
         }
         else {
-            bookmark.destroy(function(err) {
-                if(err != null) {
-                    res.send(500, "An error has occurred -- " + err);
-                }
-                else {
-                    res.redirect('back');
-                }
-            });
+          res.redirect('back');
         }
-    });
+      });
+    }
+  });
 };
 ```
 
-We basically copied and pasted what was in the old server.js and removed the "which URL will trigger that action" part to focus on the code itself.
+We basically copied and pasted what was in the old server.js and removed the
+"which URL will trigger that action" part to focus on the code itself.
 
-You probably noticed the "require" instruction. It loads the bookmark model we defined earlier. More precisely, it loads what has been module.exports'ed (this is NodeJS stuff, abuse that to create small modules of code).
+You probably noticed the "require" instruction. It loads the bookmark model we
+defined earlier. More precisely, it loads what has been module.exports'ed (this
+is NodeJS stuff, abuse that to create small modules of code).
 
-Don't hesitate to split your code in multiple coherent controllers (one for bookmarks, one for tags, ...)!
+Don't hesitate to split your code in multiple coherent controllers (one for
+bookmarks, one for tags, ...)!
 
 ## Routing
-There is still one very important missing thing, the routes. The routes are the "which URL will trigger which action" information.
 
-We put them in a dedicated file so you don't have to look at every single controllers when you are looking for a specific piece of code. Just check the routes, they are the map of your application.
+There is still one very important missing thing, the routes. The routes are the
+"which URL will trigger which action" information.
 
-Americano **automatically** handles their loading when the server starts and makes their syntax handy:
+We put them in a dedicated file so you don't have to look at every single
+controllers when you are looking for a specific piece of code. Just check the
+routes, they are the map of your application.
+
+Americano **automatically** handles their loading when the server starts and
+makes their syntax handy:
+
 ```javascript
 // ./server/controllers/routes.js
 
@@ -218,36 +228,43 @@ Again, Americano will provides you a handy syntax and loads everything **automat
 var americano = require('americano');
 
 module.exports = {
-    common: [
-        americano.bodyParser(),
-        americano.methodOverride(),
-        americano.errorHandler({
-            dumpExceptions: true,
-            showStack: true
-        }),
-        americano.static(__dirname + '/../public', {
-            maxAge: 86400000
-        }),
-        americano.set('views', __dirname + '/../client'),
-        americano.engine('.html', require('jade').__express)
-    ],
-    development: [
-        americano.logger('dev')
-    ],
-    production: [
-        americano.logger('short')
-    ]
+  common: [
+    americano.bodyParser(),
+    americano.methodOverride(),
+    americano.errorHandler({
+      dumpExceptions: true,
+      showStack: true
+    }),
+    americano.static(__dirname + '/../public', {
+      maxAge: 86400000
+    }),
+    americano.set('views', __dirname + '/../client'),
+    americano.engine('.html', require('jade').__express)
+  ],
+  development: [
+    americano.logger('dev')
+  ],
+  production: [
+    americano.logger('short')
+  ]
 };
 ```
 
-The configuration works exactly like in Express (remember, Americano extends Express!) so be sure to change it the way you like.
+The configuration works exactly like in Express (remember, Americano extends
+Express!) so be sure to change it the way you like.
 
 
 ## What's next ?
 
-We splitted our application into logical pieces and it can now grow without us worrying about coming back later to make modification abd being completely lost.
+We splitted our application into logical pieces and it can now grow without us
+worrying about coming back later to make modification abd being completely
+lost.
 
-You discovered Americano, our favorite framework but you can use the one you like, stick with ExpressJS or check out [Flatiron](http://flatironjs.org/), [Sails.js](http://sailsjs.org/) or [Compound.js](http://compoundjs.com/).
-As we repeat again and again, a Cozy app is nothing more than a web app.
+You discovered Americano, our favorite framework but you can use the one you
+like, stick with ExpressJS or check out [Flatiron](http://flatironjs.org/),
+[Sails.js](http://sailsjs.org/) or [Compound.js](http://compoundjs.com/).  As
+we repeat again and again, a Cozy app is nothing more than a web app.
 
-We are almost done with Cozy's basics, there is still one concept we'd like to introduce you. Are you ready to [learn the single page app way](/hack/getting-started/learn-single-page-app-way.html)?
+We are almost done with Cozy's basics, there is still one concept 
+we'd like to introduce you. Are you ready to [learn the single page app 
+way](/hack/getting-started/learn-single-page-app-way.html)?
