@@ -1,5 +1,5 @@
 ---
-title: "Hack Cozy - Building your own application"
+title: "Hacking Cozy"
 layout: "default"
 category: "hack"
 isCategoryMaster: "true"
@@ -8,11 +8,11 @@ menuOrder: 2
 
 # Hacking Cozy
 
-### What do we mean by hacking Cozy? 
+### What do we mean by hacking Cozy?
 
 You might think that we talk about modifying
-directly the code of the platform or 
-[contributing in any way to the project](/contribute). 
+directly the code of the platform or
+[contributing in any way to the project](/contribute).
 This way is really fine but it's not the most efficient to give your
 contribution to the Cozy community. So, the easier way we propose for you to
 hack your Cozy is to build a new application. You can work on it without
@@ -32,7 +32,7 @@ prototyping quickly.
 
 ### Painless web development
 
-Moreover Cozy comes with the painless web development principles: 
+Moreover Cozy comes with the painless web development principles:
 
 * application templates: no configuration headache
 * easy deployment: deploy your app to your cozy with one command line
