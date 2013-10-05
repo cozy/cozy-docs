@@ -9,11 +9,12 @@ menuOrder: 7
 
 Cookbooks are parts of the documentation that can be consulted separately the ones from the others.
 
-It put together precise API documentation, conceptual tutorials, howtos and tips & tricks to ease the Cozy application development.
+It put together precise API documentations, conceptual tutorials, howtos and tips & tricks to ease the Cozy application development.
 
 
 ## API
 * [Data System API](/hack/cookbooks/data-system.html)
+* [ODM for Data System API](/hack/cookbooks/data-system-odm.html)
 
 ## Coming soon...
 
@@ -24,6 +25,9 @@ It put together precise API documentation, conceptual tutorials, howtos and tips
 * managing fixtures with cozy-fixtures
 * understanding the cozy-manager
 * how to make unit and functional tests
-* the Jugglingdb Cozy Adapter detailed API
 * everything about security in Cozy
 * resetting the cozy database
+
+Do you want to know more about one of this subject? Ask your question on IRC (#cozycloud on irc.freenode.net or by email (contact@cozycloud.cc).
+
+Do you want to see a cookbook in priority? Let us know (contact below), your opinion matters!
