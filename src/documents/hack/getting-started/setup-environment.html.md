@@ -21,11 +21,11 @@ Before doing anything, install the fowlling:
 
 ### For simple applications
 
-#### [Node.js (v0.8.20)](http://blog.nodejs.org/2013/02/15/node-v0-8-20-stable/)
+#### Node.js (v0.8.20) ([download](http://blog.nodejs.org/2013/02/15/node-v0-8-20-stable/))
 Node.js powers awesome tools that we use to develop apps. We also wrote a tool
 to manage the virtual machine more easily.
 
-#### [Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)
+#### Git ([download](http://git-scm.com/book/en/Getting-Started-Installing-Git))
 
 Git is a control version tool that is now very common. We use it in combination
 with [Github](https://github.com) that allows you to store online your
@@ -36,11 +36,11 @@ here and jump to our [first tutorial](hack/getting-started/first-app.html).
 
 ### For applications that take advantage of the Data System
 
-#### [VirtualBox (>= v4.2.16)](https://www.virtualbox.org/wiki/Downloads)
+#### VirtualBox (>= v4.2.16) ([download](https://www.virtualbox.org/wiki/Downloads))
 Virtual Box allows you to run virtual machine on your computer. We use it
 indirectly with Vagrant to power our virtual machine.
 
-#### [Vagrant (>= v1.2.7)](http://downloads.vagrantup.com/)
+#### Vagrant (>= v1.2.7) ([download](http://downloads.vagrantup.com/))
 Vagrant is a tool to "create and configure lightweight, reproducible and
 portable development environments." That's what we need here! We use it through
 a custom CLI tool so you will not manipulate it directly.
