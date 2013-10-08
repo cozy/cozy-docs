@@ -24,9 +24,11 @@ You will find HTTP status code for response, here is what they mean:
 * 200: success
 * 201: success (and something has been created)
 * 204: success (and something has been deleted)
+* 400:
 * 401: Unauthorized
 * 403: Not authentificated
 * 404: document not found
+* 409: document already exists
 * 500: internal server error
 
 All the requests that mentions "Requires authentification and authorization" are likely to send 401 and 403 if the conditions are not met.
@@ -63,6 +65,7 @@ Response:
   Status code: 200|404|500
   Body
     200: {the document}
+    404: {error: "not found"}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -75,7 +78,7 @@ Param:
 Response:
   Status code: 201|500
   Body
-    201: {_id:<generated ID>, ...}
+    201: {"_id": the document ID}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -87,9 +90,10 @@ Param:
   id: the document ID
   Body {the document to add}
 Response:
-  Status code: 201|500
+  Status code: 201|409|500
   Body
-    201: {the created document}
+    201: {"_id": the document ID}
+    409: {error: "The document exists"}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -101,9 +105,10 @@ Param:
   id: the document ID
   Body {the document to update}
 Response
-  Status code: 200|500
+  Status code: 200|404|500
   Body
-    200: ?
+    200: {success: true}
+    404: {error: "not found"}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -115,10 +120,10 @@ Param:
   id: the document ID
   Body {the document to add or update}
 Response
-  Status code: 201|200|500
+  Status code: 200|201|500
   Body
-    200: ?
-    201: ?
+    200: {success: true}
+    201: {"_id": the document ID}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -129,9 +134,10 @@ DELETE /data/:id/
 Param:
   id: the document ID
 Response
-  Status code: 204|500
+  Status code: 204|404|500
   Body
-    204: ?
+    204: {success: true}
+    404: {error: "not found"}
     500: {error: "the message"}
 ```
 Requires authentification and authorization.
@@ -144,7 +150,7 @@ Param:
 Response
   Status code: 200|500
   Body
-    200: ?
+    200: {success: true}
     500: {error: "the message"}
 ```
 Requires authentification and authorization.
@@ -169,9 +175,10 @@ Param:
   }
   The body is fully optional.
 Response
-  Status code: 200|500
+  Status code: 200|404|500
   Body
     200: [an array of documents]
+    404: {error: "not found"}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -187,10 +194,9 @@ Param:
     recuce: the reduce function (optional)
   }
 Response
-  Status code: 200|201|500
+  Status code: 200|500
   Body
-    200: ?
-    201: ?
+    200: {success: true}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -211,9 +217,10 @@ Param:
   }
   The body is fully optional.
 Response
-  Status code: ?|500
+  Status code: 204|404|500
   Body
-    ?: ?
+    204: {success: true}
+    404: {error: "not found"}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -227,7 +234,7 @@ Param:
 Response
   Status code: 204|500
   Body
-    204: ?
+    204: {syccess: true}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
@@ -246,9 +253,12 @@ Param:
     name: force the file name
   }
 Response
-  Status code: ?
+  Status code: 201|400|404|500
   Body
-    ?: ?
+    201: {success: true}
+    400: {error: "No file sent"}
+    404: {error: "not found"}
+    500: {error: "the error message"}
 ```
 Requires authentification and authorization.
 
@@ -259,9 +269,11 @@ Param:
   id: ID of the document the file is attached to
   name: the file name
 Response
-  Status code: ?
+  Status code: 404|500
   Body
-    ?: ?
+    200: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
 ```
 Requires authentification and authorization.
 
@@ -272,15 +284,17 @@ Param:
   id: ID of the document the file is attached to
   name: the file name
 Response
-  Status code: ?
+  Status code: 204|404|500
   Body
-    ?: ?
+    204: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
 ```
 Requires authentification and authorization.
 
 ## Indexer API
 
-Use Whoosh through the dedicate API.
+We use [Whoosh](https://pypi.python.org/pypi/Whoosh/) as an indexer but you can only access it through its API in the Data System.
 
 ### Indexing
 
@@ -292,9 +306,11 @@ Param:
     fields: [an array of text fields name that will be indexed]
   }
 Response
-  Status code: ?
+  Status code: 200|404|500
   Body
-    ?: ?
+    200: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
 ```
 
 ### Searching 10 documents that match the best the query
@@ -306,9 +322,10 @@ Param:
     query: "search query"
   }
 Response
-  Status code: ?
+  Status code: 200|500
   Body
-    ?: ?
+    200: {rows: [the documents]}
+    500: {error: "the error message"}
 ```
 
 ### Removing indexation for a given document
@@ -317,9 +334,11 @@ DELETE /data/index/:id
 Param:
   id: the ID of the document that will be unindex
 Response
-  Status code: ?
+  Status code: 200|404|500
   Body
-    ?: ?
+    200: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
 ```
 
 ### Clearing the indexer
@@ -327,9 +346,21 @@ Response
 ```http
 DELETE /data/index/clear-all/
 Response
-  Status code: ?
+  Status code: 200|500
   Body
-    ?: ?
+    200: {success: true}
+    500: {error: "the error message"}
+```
+
+## Miscellaneous
+
+### Getting the doctype list
+```http
+GET /doctypes
+Response
+  Status code: 200|500
+  Body
+    200: ['list', 'of', 'doctype', 'names']
 ```
 
 # Example of use
