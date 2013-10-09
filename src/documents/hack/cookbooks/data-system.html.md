@@ -24,9 +24,9 @@ You will find HTTP status code for response, here is what they mean:
 * 200: success
 * 201: success (and something has been created)
 * 204: success (and something has been deleted)
-* 400:
-* 401: Unauthorized
-* 403: Not authentificated
+* 400: bad request
+* 401: unauthorized
+* 403: not authentificated
 * 404: document not found
 * 409: document already exists
 * 500: internal server error
@@ -35,8 +35,6 @@ All the requests that mentions "Requires authentification and authorization" are
 See [troubleshootings](#troubleshootings) to understand what those error mean.
 
 ### Todo for this cookbook
-* Checking all the request's parameters and responses status code and body.
-* Adding the "account" section
 * Adding documentation about authentificaiton and authorization process
 
 ## Data API
