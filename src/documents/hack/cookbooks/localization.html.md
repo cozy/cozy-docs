@@ -12,6 +12,8 @@ To improve your application user experience you might want to translate it (by y
 We didn't invented anything new here, we just made helper to ease the developer's life.
 We'll use the final code of our tutorial to illustrate this cookbook. You can find it [here](https://github.com/mycozycloud/cozy-tutorial/tree/spa-final).
 
+NB: you can find the code of this tutorial [here](https://github.com/mycozycloud/cozy-tutorial/tree/localization)
+
 First you need to add Polyglot to your client's vendor. [Polyglot](http://airbnb.github.io/polyglot.js/) is a "tiny l18n helper library written in JavaScript". It supports interpolation and pluralization.
 
 * download it and put it inside the client/vendors/scripts/ folder
