@@ -2,7 +2,7 @@
 title: "Cookbooks"
 layout: "default"
 category: "hack"
-menuOrder: 7
+menuOrder: 2
 ---
 
 # Cookbooks
