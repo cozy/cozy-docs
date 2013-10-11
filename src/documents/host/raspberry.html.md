@@ -10,10 +10,13 @@ menuOrder: 1
 To run Cozy on your Raspberry Pi, the simplest way is to download our image and
 set it up on a SD card (>= 4GB).
 
-For that, get the archive:
+For that, get the image archive:
 
 ```bash
+# Download the image (~ 1.5GB)
 wget http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz
+
+# Uncompress it
 tar -xvzf cozy-raspberrypi.im.tar.gz
 ```
 
