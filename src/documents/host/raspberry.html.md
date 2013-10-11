@@ -13,6 +13,7 @@ set it up on a SD card (>= 4GB).
 For that, get the archive:
 
 ```bash
+wget http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz
 tar -xvzf cozy-raspberrypi.im.tar.gz
 ```
 
