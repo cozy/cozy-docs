@@ -7,8 +7,10 @@ menuOrder: 1
 
 # Setup Cozy on your Raspberry Pi
 
+*Minimum hardware: Raspberry Pi model B (RAM: 512MB) + 4GB SD card* 
+
 To run Cozy on your Raspberry Pi, the simplest way is to download our image and
-set it up on a SD card (>= 4GB).
+set it up on a SD card.
 
 For that, get the image archive:
 
