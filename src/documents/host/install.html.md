@@ -29,7 +29,7 @@ machine to launch the Cozy installation (run it in the same directory as the fab
 you downloaded before):
 
 ```bash
-fab -H user@ip install
+fab -H sudoer@ip install
 ```
 
 Enter your settings (such as domain name) when prompted by the installer.
@@ -43,6 +43,12 @@ To install Cozy locally, we recommend you to create a virtual machine,
 and then to run the fabfile script with your virtual machine as target.
 This allows you to experiment with Cozy without installing numerous packages
 into your environment.
+
+The way to install it locally without VM or container is to run this command:
+
+```bash
+fab -H sudoer@localhost install
+```
 
 #### *Try Cozy with Vagrant*
 
@@ -59,9 +65,9 @@ The CPU is not a limitation, Cozy can even run on RaspberryPi.
 
 ### Mininum
 
-RAM: 512Mo (it allows to have 4 apps running simultaneously)
+RAM: 512MB (it allows to have 4 apps running simultaneously)
 
-Disk space: 5Go
+Disk space: 2GB
 
 ### Recommended
 

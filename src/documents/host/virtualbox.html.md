@@ -7,6 +7,9 @@ menuOrder: 1
 
 # Run Cozy with Virtualbox
 
+*Warning: For a production usage you have to change the superuser credentials,
+renew the SSL certificate, the database credentials and the controller token.* 
+
 ### Step 1
 
 [Download](https://www.virtualbox.org/wiki/Downloads) and install VirtualBox.

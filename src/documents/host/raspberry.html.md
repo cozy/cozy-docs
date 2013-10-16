@@ -9,6 +9,11 @@ menuOrder: 1
 
 *Minimum hardware: Raspberry Pi model B (RAM: 512MB) + 4GB SD card* 
 
+*Warning: For a production usage you have to change the superuser credentials,
+renew the SSL certificate, the database credentials and the controller token.* 
+
+# Copy the image on a SD Card
+
 To run Cozy on your Raspberry Pi, the simplest way is to download our image and
 set it up on a SD card.
 

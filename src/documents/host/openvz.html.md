@@ -7,6 +7,9 @@ menuOrder: 2
 
 # Setup an OpenVZ image on your server.
 
+*Warning: For a production usage you have to change the superuser credentials,
+renew the SSL certificate, the database credentials and the controller token.* 
+
 Here we assume that you already install OpenVZ utilities.
 
 ### Download and start your OpenVZ container
@@ -19,6 +22,8 @@ wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid
 vzctl start ctid
 ```
+
+*Credentials are root/password*
 
 NB: Replace ctid by an available ctid (101, 102, etc.)
 
