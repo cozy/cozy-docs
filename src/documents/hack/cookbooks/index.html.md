@@ -15,6 +15,7 @@ It put together precise API documentations, conceptual tutorials, howtos and tip
 ## API
 * [Data System API](/hack/cookbooks/data-system.html)
 * [ODM for Data System API](/hack/cookbooks/data-system-odm.html)
+* [Localize your application](/hack/cookbooks/localization.html)
 
 ## Coming soon...
 
