@@ -162,8 +162,23 @@ app.get('/', function(req, res) {
 });
 ```
 
-## Examples
-Links to numerous examples that can be found in the tests or the code itself.
+## Permissions
+To retrieve the data from the Data System your application needs permissions.
+You can declare permissions you need in the package.json file:
+
+```json
+"cozy-permissions": {
+  "Contact": {
+    "description": "Creates and edits your contacts."
+  },
+  "CozyInstance": {
+    "description": "Read language setting"
+  }
+}
+```
+
+Those will be displayed before the users install the application so he gives his explicit agreement to the app to access the data, like the well-known marketplaces for smartphones.
+
 
 ## What's next ?
 You've just met the Data System and got an insight of what it does and how you
@@ -175,6 +190,6 @@ is getting fat which could complicate the addition of new features and more
 generally your ability to maintain the application (or to get contributions
 from the community!)
 
-Let's see how we can organize the code better with a stronger Express(o). 
-[Experience Americano, the NodeJS framework that makes Express more 
+Let's see how we can organize the code better with a stronger Express(o).
+[Experience Americano, the NodeJS framework that makes Express more
 opinionated](/hack/getting-started/discover-americano.html).
