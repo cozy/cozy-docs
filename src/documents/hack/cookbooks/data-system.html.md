@@ -230,9 +230,10 @@ Param:
   type: the doctype name
   req_name: the name of the request
 Response
-  Status code: 204|500
+  Status code: 204|404|500
   Body
-    204: {syccess: true}
+    204: {success: true}
+    404: {error: "not found"}
     500: {error: "the error message"}
 ```
 Requires authentification and authorization.
