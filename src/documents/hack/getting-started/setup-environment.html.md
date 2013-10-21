@@ -36,14 +36,16 @@ here and jump to our [first tutorial](hack/getting-started/first-app.html).
 
 ### For applications that take advantage of the Data System
 
-#### VirtualBox (>= v4.2.16) ([download](https://www.virtualbox.org/wiki/Downloads))
+#### VirtualBox (>= v4.3.0) (<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">download</a>)
 Virtual Box allows you to run virtual machine on your computer. We use it
 indirectly with Vagrant to power our virtual machine.
+(Latest tested version: 4.3.0)
 
-#### Vagrant (>= v1.2.7) ([download](http://downloads.vagrantup.com/))
+#### Vagrant (>= v1.3.5) (<a href="http://downloads.vagrantup.com/" target="_blank">download</a>)
 Vagrant is a tool to "create and configure lightweight, reproducible and
 portable development environments." That's what we need here! We use it through
 a custom CLI tool so you will not manipulate it directly.
+(Latest tested version: 1.3.5)
 
 #### [Cozy for developers](https://github.com/mycozycloud/cozy-manager)
 
