@@ -1,17 +1,17 @@
 ---
-title: "Architecture Overview"
+title: "Understand the Cozy Architecture"
 layout: "default"
 category: "hack"
 menuOrder: 3
 ---
 
-# Architecture Overview
+# Understand the Cozy Architecture
 
 It is important to understand how Cozy is built to understand how it works. Let's quickly see how it looks like.
 
 ![Architecture Overview](/assets/images/cozy-architecture.png)
 
-Too long, don't want to read ? Check out what you should remember! (*link to bottom of page*)
+Too long, don't want to read ? Check out [what you should remember](#what-you-should-remember)!
 
 Cozy is made of three different layers:
 
@@ -20,9 +20,9 @@ Cozy is made of three different layers:
 * the persistence layer
 
 ## The Proxy ([Github repository](https://github.com/mycozycloud/cozy-proxy/))
-The proxy main job is handling the authentification and authorization to the Cozy. This is the application that manage registration, login, logout and password reset.
+The proxy main job is handling the authentification and authorization to the Cozy. It is the application that manage registration, login, logout and password reset.
 
-It also handles all the routing of Cozy (to send a request to the right application).
+It also handles all the routing of Cozy (to send the right request to the right application).
 
 ## The pPaaS ([Github repository](https://github.com/mycozycloud/cozy-controller/))
 pPaaS stands for "personal Platform as a Service".
@@ -40,14 +40,15 @@ It's a unified API that allows applications to access:
 
 * the database (CouchDB)
 * the file system
-* the indexer (Woosh)
+* the indexer (Whoosh)
 
-The Data System is where Cozy's power is. It allows the user to chose which application accesses which type of data so he can **control** and **decide** wether he trusts or not an application.
+The Data System is Cozy's true power. It keeps the user data safe by restricting their access by applications.
+During an application installation, the user is prompted to allow or not the application to access various types of data ("doctypes") so he can **control** wether he trusts the application or not.
 It also opens the opportunity to use multiple data-source. Do you want to have contacts in your agenda application? Do it!
 
-A dedicated section will describe the Data System, its API and how to use it in details.
+You can find the complete API and details about the Data System on the dedicate [cookbook](/cookbooks/data-system.html).
 
-
+<a name="what-you-should-remember"></a>
 ## What you should remember
 As a developer, you are going to create an application that will be run by Cozy's pPaaS. That application will access the data through the Data System.
 Also, you won't have to bother about user authentification and authorization because it is all handled by the Proxy.
