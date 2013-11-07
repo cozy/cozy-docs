@@ -54,8 +54,7 @@ You will also need our tool:
 ``` bash
 npm install -g cozy
 ```
-
-The `cozy` tool will help you managing the virtual machine and application skeletons!
+The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also it can generate an application skeletons from templates.
 
 
 ### Initializing and starting the virtual machine

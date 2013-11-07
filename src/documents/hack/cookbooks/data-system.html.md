@@ -35,7 +35,7 @@ All the requests that mentions "Requires authentification and authorization" are
 See [troubleshootings](#troubleshootings) to understand what those error mean.
 
 ### Todo for this cookbook
-* Adding documentation about authentificaiton and authorization process
+* Adding documentation about authentification and authorization process
 
 ## Data API
 

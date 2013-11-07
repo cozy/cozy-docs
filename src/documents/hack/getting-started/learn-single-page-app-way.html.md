@@ -39,7 +39,7 @@ npm install -g brunch
 
 Then, get the source we prepared for you to bootstrap the tutorial.
 ```bash
-git clone https://github.com/mycozycloud/cozy-tutorial.git@spa spa-bookmarks
+git clone https://github.com/mycozycloud/cozy-tutorial.git --branch spa spa-bookmarks
 cd spa-bookmarks/
 npm install
 cd client/
