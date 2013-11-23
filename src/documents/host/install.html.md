@@ -53,7 +53,7 @@ fab -H sudoer@localhost install
 #### *Try Cozy with Vagrant*
 
 If you want to use Vagrant to run Cozy Cloud Setup in a virtual machine
-we recommend you use the Ubuntu 12.04 box. Be careful as the update will require that
+we recommend you to use the Ubuntu 12.04 box. Be careful as the update will require that
 you configure your boot sequence. Choose the first filesystem that is offered, then click ok.
 
 http://files.vagrantup.com/precise64.box
