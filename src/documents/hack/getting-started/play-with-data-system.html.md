@@ -7,14 +7,14 @@ menuOrder: 4
 
 # Tutorial 2: Play with the Data System
 
-We've just introduced you how Cozy is built and you may want to know more about
-the Data System and to play with it. Don't forget that if you are stuck or have
+We've just presented you how Cozy is built and you may want to know more about
+the Data System and play with it. Don't forget that if you are stuck or have
 any question, you can visit us on IRC (irc.freenode.org, #cozycloud).
 
 Just a quick reminder, the Data System (DS) allows you to access the database,
 the indexer and the file system. Technically speaking, it is a RESTful web
-application meaning you can request it with a HTTP client.  It handles
-authorization and authentification for applications, meaning that user has to
+application meaning you can request it with a HTTP client. It handles
+authorization and authentification for applications, meaning that a user has to
 give his explicit agreement (during installation) to the app so it can access
 the data.
 
@@ -77,7 +77,7 @@ Bookmark = db.define('bookmarks', {
 ```
 This defines a doctype in the data system. The doctype is a type of document
 (yup!) and is how data are structured inside Cozy. You can see them as SQL
-table. There are already plenty of doctypes you can reuse. They are
+tables. There are already plenty of doctypes you can re-use. They are
 self-documented in the applications code.  Now let's play with the data.
 
 ### Adding and removing a bookmark
@@ -163,7 +163,7 @@ app.get('/', function(req, res) {
 ```
 
 ## Permissions
-To retrieve the data from the Data System your application needs permissions.
+To retrieve the data from the Data System, your application needs permissions.
 You can declare permissions you need in the package.json file:
 
 ```json
@@ -186,7 +186,7 @@ can play with it to leverage people's personal data. Congratulations, we know
 it wasn't easy!
 
 Now look a bit behind you: your application has grown a lot and the code itself
-is getting fat which could complicate the addition of new features and more
+is getting fat, which could complicate the addition of new features and more
 generally your ability to maintain the application (or to get contributions
 from the community!)
 
