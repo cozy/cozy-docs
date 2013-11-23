@@ -10,7 +10,7 @@ menuOrder: 4
 You can contribute to Cozy in many ways, whether you are a NodeJS Ninja or a
 Net-Citizen willing to protect her/his privacy, all contributions are welcome!
 Report a bug, submit a feature request or improve the documentation to ease
-self-hosting, translations, developping new applications...
+self-hosting, translations, developing new applications...
 **There's something for everyone!**
 
 Everything is libre and open-source and hosted on
