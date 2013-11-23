@@ -11,7 +11,7 @@ Warning: this will delete all your data.
 ## Easy way 
 
 The easiest way to uninstall Cozy is to use the Fabric installation file used
-for the installation. But this you should not call the installation task but
+for the installation. But this time, you should not call the installation task but
 the uninstall task:
 
 ```bash
