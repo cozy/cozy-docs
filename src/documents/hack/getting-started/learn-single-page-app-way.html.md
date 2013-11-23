@@ -60,7 +60,7 @@ You already know about the server part of the file structure so let's focus on t
         * models/
         * templates/ - where your templates (Jade in our case) will be
         * views/
-        * application.js - bootstrap  the Backbone app
+        * application.js - bootstrap the Backbone app
         * initialize.js - start the whole application when ready
         * router.js - the Backbone router
     * public/ - where the "built" files are
@@ -69,7 +69,7 @@ You already know about the server part of the file structure so let's focus on t
     * config.js - Brunch configuration
     * package.json - Brunch modules to install
 
-There is two part in the file structure: the "app" where you will write your code and "public" where Brunch will output everything you write correctly into one nice JavaScript file.
+There are two parts in the file structure: the "app" where you will write your code and "public" where Brunch will output everything you write correctly into one nice JavaScript file.
 
 Another important thing is that the folder structure is not **constrained at all**. It is a design choice from us and you can change the way you like, but don't forget to adjust the Brunch configuration then.
 
@@ -83,7 +83,7 @@ You can use pretty much everything you want to for templates (Jade, Handlebars, 
 
 If you want to know everything about Brunch, please check out their [website](http://brunch.io/) (it is not mandatory for this tutorial though).
 
-Brunch is also awesome because it detects when a file change and recompile the code automatically so everything is smooth for you.
+Brunch is also awesome because it detects when a file changes and recompiles the code automatically so everything is smooth for you.
 
 To start brunch, open a terminal:
 ```bash
@@ -99,7 +99,7 @@ We set up a template with a working Backbone app through Brunch so you can start
 
 Backbone is a MVC framework for JavaScript that gives you evertyhing you might want to build a flexible and powerful single page application.
 
-As a result, your application will made of:
+As a result, your application will be made of:
 
 * a router that will allow you to handle multiple page in your single page app
 * collections and models to store and manipulate your data
@@ -109,7 +109,7 @@ As a result, your application will made of:
 The glue is Backbone's observer/observable pattern that allows a lower coupling between each part.
 <br /><br />
 
-How is our template working? In the app/assets/index.html we load the JavaScript we need and call the "initialize" script. This last make sure the DOM has been loaded and start the Backbone application by creating and initializing the router.
+How is our template working? In the app/assets/index.html we load the JavaScript we need and call the "initialize" script. Make sure the DOM has been loaded and start the Backbone application by creating and initializing the router.
 Then the router creates the main view and gives it the collection of bookmarks.
 Then the view is rendered. The render process is: load the template, put data in the template, add it to the DOM at the right place.
 
@@ -166,7 +166,7 @@ The new bookmark should now be displayed!
 
 ## Step 3: using a separate view for the bookmark
 If you want to fully take advantage of what Backbone offers you, you must think modular.
-We have a list of bookmarks and rendering them each time we add a new one could be a bottleneck one day. Also it could be better if we could manipulate each bookmark independently so we deletion would be dead easy to implement. Let's do this!
+We have a list of bookmarks and rendering them each time we add a new one could be a bottleneck one day. Also it could be better if we could manipulate each bookmark independently so a deletion would be dead easy to implement. Let's do this!
 
 Create a new view `app/views/bookmark.js`:
 ```javascript
@@ -342,7 +342,7 @@ module.exports.delete = function(req, res) {
 };
 ```
 
-You server is now a RESTful API that allow your single page app to request it easily thanks to Backbone.
+You server is now a RESTful API that allows your single page app to request it easily thanks to Backbone.
 
 ## What's next?
 This tutorial doesn't cover every aspects and good practices of Backbone but it should give you a good insight of how you can build awesome single page apps.
