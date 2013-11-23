@@ -7,7 +7,7 @@ menuOrder: 4
 
 # Contributing to Cozycloud
 
-You can contribute to Cozy in many ways, wether you are a NodeJS Ninja or a
+You can contribute to Cozy in many ways, whether you are a NodeJS Ninja or a
 Net-Citizen willing to protect her/his privacy, all contributions are welcome!
 Report a bug, submit a feature request or improve the documentation to ease
 self-hosting, translations, developping new applications...
