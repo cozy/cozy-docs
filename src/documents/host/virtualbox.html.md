@@ -2,7 +2,7 @@
 title: "Virtualbox VM"
 layout: "default"
 category: "host"
-menuOrder: 1
+menuOrder: 2
 ---
 
 # Run Cozy with Virtualbox

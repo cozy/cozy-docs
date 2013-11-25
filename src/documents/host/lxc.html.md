@@ -2,7 +2,7 @@
 title: " LXC"
 layout: "default"
 category: "host"
-menuOrder: 6
+menuOrder: 4
 ---
 
 # Setup a LXC image on your server.

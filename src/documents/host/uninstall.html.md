@@ -2,11 +2,17 @@
 title: "Uninstall"
 layout: "default"
 category: "host"
-menuOrder: 4
+menuOrder: 6
 ---
 
 # Uninstall your Cozy
 Warning: this will delete all your data.
+
+## Virtual machines and containers
+
+If you installed Cozy in a virtual machine or in a container, you just have
+to remove that virtual machine or container
+
 
 ## Easy way 
 
