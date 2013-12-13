@@ -256,8 +256,8 @@ Express!) so be sure to change it the way you like.
 
 ## What's next ?
 
-We splitted our application into logical pieces and it can now grow without us
-worrying about coming back later to make modification abd being completely
+We split our application into logical pieces and it can now grow without us
+worrying about coming back later to make modification and being completely
 lost.
 
 You discovered Americano, our favorite framework but you can use the one you
