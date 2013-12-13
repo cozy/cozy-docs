@@ -377,8 +377,8 @@ dataSystem = new Client('http://localhost:9101');
 
 // In production we must authentificate the application
 if(process.env.NODE_ENV === 'production') {
-  user = process.env.USER;
-  password = process.env.PASSWORD;
+  user = process.env.NAME;
+  password = process.env.TOKEN;
   dataSystem.setBasicAuth(user, password);
 }
 
