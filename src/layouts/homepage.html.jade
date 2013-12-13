@@ -37,6 +37,9 @@ html(lang="en")
                         | and delete
                     h4
                         | Your web apps and your data on your hardware
+                    h4.special
+                        a(href="http://cozy.io/v1-snowden-release/").
+                            Cozy 1.0 Snowden release is available!
                     p.image-links
                         | images:&nbsp;
                         a(href="http://files.cozycloud.cc/cozycloud-virtualimage.zip")
@@ -86,25 +89,25 @@ html(lang="en")
             .mod.w33.left
                 p Short term
                 p.smaller
-                    | Cozy provides first-class agenda and contact applications,
-                    a(href="http://www.mailpile.is/") Mailpile
-                    | &nbsp;is integrated.
-                    | 25 apps are available and the Github repo reaches 500
+                    | Cozy will provide first-class agenda and contact applications,
+                    a(href="http://www.mailpile.is/") &nbsp;Mailpile
+                    | &nbsp;will be integrated.
+                    | 25 apps will be available and the Github repo will reach 500
                     | stars.
             .mod.w33.left
                 p Mid term
                 p.smaller
-                    | Cozy is the perfect backend for&nbsp;
+                    | Cozy will be the perfect backend for&nbsp;
                     a(href="http://www.mozilla.org/fr/firefox/os/") Firefox OS
-                    | &nbsp;and the application deployer is based on
-                    a(href="http://www.docker.io/") Docker
+                    | &nbsp;and the application deployer will be based on
+                    a(href="http://www.docker.io/") &nbsp;Docker
                     |.
             .mod.w33.left
                 p Long term
                 p.smaller
-                    | Cozy is the gravity centre of your digital life. Through
-                    | it, all your
-                    | devices and sensors collaborate together for you and
+                    | Cozy will be the gravity center of your digital life.
+                    | Through it, all your
+                    | devices and sensors will collaborate together for you and
                     | your contacts.
         section#social.line.social.center.txt-black
             h1 what people says
@@ -131,7 +134,7 @@ html(lang="en")
             h2.icon-cloud &nbsp; Host it
             h3
                 strong Target your server with this script (sudoer required).
-            p.code curl http://cozy.io/install_cozy.sh | HOST=root@<strong>ip</strong> sh
+            p.code curl https://install-files.cozycloud.cc/install_cozy.sh | HOST=root@<strong>ip</strong> sh
             .line
                 &nbsp;
             .line.mt2
@@ -141,6 +144,11 @@ html(lang="en")
                     | They are required to run the installation on
                     | your remote server.
                     | The script works only with Debian/Ubuntu distros.
+                p
+                    | Because of the numerous packages and process installed,
+                    | we recommend you to install Cozy in a virtual machine or
+                    | in a 
+                    a(href="/host/lxc.html") container.
             .line.mt2
                 p
                     | Check our &nbsp;
@@ -203,7 +211,7 @@ html(lang="en")
 
         section#delete.line.target
             h2.icon-cross &nbsp; Delete it
-            code.code.mt2 curl http://cozy.io/uninstall_cozy.sh | HOST=root@<strong>ip:port</strong> sh
+            code.code.mt2 curl https://install-files.cozycloud.cc/uninstall_cozy.sh | HOST=root@<strong>ip:port</strong> sh
             .line.mt2
                 p
                     | What is annoying nowadays with online services is

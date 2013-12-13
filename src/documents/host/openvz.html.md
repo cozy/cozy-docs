@@ -2,7 +2,7 @@
 title: " OpenVZ"
 layout: "default"
 category: "host"
-menuOrder: 2
+menuOrder: 3
 ---
 
 # Setup an OpenVZ image on your server.

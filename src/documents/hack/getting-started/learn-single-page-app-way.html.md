@@ -18,7 +18,7 @@ Single page applications are made of one page and tons of JavaScript. While this
 
 If you want to know everything about single page app, we advise you to [check out this resource](http://singlepageappbook.com/) to learn more about Singe Page Apps.
 
-From now, we'll use the SPA acronym to talk about Single Page Apps or everyone is going to shoot himself.
+From now on we'll use the SPA acronym to talk about Single Page Apps or everyone is going to shoot themselves.
 
 Let's make your bookmark application with the single page app way!
 
@@ -83,7 +83,7 @@ You can use pretty much everything you want to for templates (Jade, Handlebars, 
 
 If you want to know everything about Brunch, please check out their [website](http://brunch.io/) (it is not mandatory for this tutorial though).
 
-Brunch is also awesome because it detects when a file change and recompile the code automatically so everything is smooth for you.
+Brunch is also awesome because it detects when a file changes and recompiles the code automatically so everything is smooth for you.
 
 To start brunch, open a terminal:
 ```bash
@@ -109,14 +109,14 @@ As a result, your application will made of:
 The glue is Backbone's observer/observable pattern that allows a lower coupling between each part.
 <br /><br />
 
-How is our template working? In the app/assets/index.html we load the JavaScript we need and call the "initialize" script. This last make sure the DOM has been loaded and start the Backbone application by creating and initializing the router.
+How does our template work? In the app/assets/index.html we load the JavaScript we need and call the "initialize" script. This last call makes sure that the DOM has been loaded and starts the Backbone application by creating and initializing the router.
 Then the router creates the main view and gives it the collection of bookmarks.
 Then the view is rendered. The render process is: load the template, put data in the template, add it to the DOM at the right place.
 
-Now we've seen what is Backbone and how this tutorial has been bootstrapped, let's write some code!
+Now we've seen what Backbone is and how this tutorial has been bootstrapped, let's write some code!
 
 ## Step 2: adding a new bookmark
-The provided code displays a collection of bookmark. Let's bind our "new bookmark" form to Backbone.
+The provided code displays a collection of bookmarks. Let's bind our "new bookmark" form to Backbone.
 
 Along the "el" and the "template" attribute, add the event binding:
 ```javascript
@@ -345,13 +345,13 @@ module.exports.delete = function(req, res) {
 You server is now a RESTful API that allow your single page app to request it easily thanks to Backbone.
 
 ## What's next?
-This tutorial doesn't cover every aspects and good practices of Backbone but it should give you a good insight of how you can build awesome single page apps.
+This tutorial doesn't cover every aspects and good practice of Backbone but it should give you a good insight into how you can build awesome single page apps.
 
-We haven't talked about Cozy for a while but everything you've done until know should help you creating an (awesome) application for Cozy. There are more cool stuff you can do with Cozy and you can ask us on IRC or by email what are the next steps or just to get help from us.
+We haven't talked about Cozy for a while but everything you've done until know should help you creating an (awesome) application for Cozy. There is more cool stuff you can do with Cozy and you can ask us on IRC or by email what the next steps are or just to get help from us.
 
 <br /><br />
 We are eager to see what application you will bring to the Cozy community, don't hesitate to show us your work!
 <br /><br />
 
 To go further in your study of Cozycloud, you can check out the [cookbooks](/hack/cookbooks/)!
-We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, chose the one you like or add yours.
+We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, choose the one you like or add your own.

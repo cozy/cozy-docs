@@ -27,13 +27,13 @@ wget http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz
 tar -xvzf cozy-raspberrypi.im.tar.gz
 ```
 
-Then find your where is mounted your SDCard, let's assume it is on */dev/sdc*,
+Then find where is mounted your SDCard, let's assume it is on */dev/sdc*,
 then make a low level copy of the image to your card.
 
 Warning: this operation will erase all previously data stored into the card.
 
 ```bash
-sudo dd bs=4M if=/home/frankrousseau/mycloud/images/cozy-raspberry.im of=/dev/sdc
+sudo dd bs=4M if=/my/path/cozy-raspberry.im of=/dev/sdc
 ```
 
 Now insert the SD Card in your Raspberry Pi SD Card reader. Reboot your

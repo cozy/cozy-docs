@@ -2,7 +2,7 @@
 title: "Trouble Shootings"
 layout: "default"
 category: "host"
-menuOrder: 5
+menuOrder: 7
 ---
 
 # Trouble shootings
