@@ -18,7 +18,7 @@ Single page applications are made of one page and tons of JavaScript. While this
 
 If you want to know everything about single page app, we advise you to [check out this resource](http://singlepageappbook.com/) to learn more about Singe Page Apps.
 
-From now, we'll use the SPA acronym to talk about Single Page Apps or everyone is going to shoot themselves.
+From now on we'll use the SPA acronym to talk about Single Page Apps or everyone is going to shoot themselves.
 
 Let's make your bookmark application with the single page app way!
 
@@ -354,4 +354,4 @@ We are eager to see what application you will bring to the Cozy community, don't
 <br /><br />
 
 To go further in your study of Cozycloud, you can check out the [cookbooks](/hack/cookbooks/)!
-We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, choose the one you like or add yours.
+We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, choose the one you like or add your own.
