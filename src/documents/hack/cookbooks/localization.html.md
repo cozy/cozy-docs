@@ -6,10 +6,10 @@ menuOrder: 3
 ---
 
 # Localize your applications
-To improve your application user experience you might want to translate it (by yourself or by getting external contribution). This cookbook will provide you the information you need and give you the guidelines we use in Cozy apps. You are free to use your own but if everyone follows the same rules contributions will be eased.
+To improve your application user experience you might want to translate it (by yourself or by getting external contributions). This cookbook will provide you with information you need and give you the guidelines we use in Cozy apps. You are free to use your own but if everyone follows the same rules contributions will be eased.
 
 ## Making your app translatable
-We didn't invented anything new here, we just made helper to ease the developer's life.
+We didn't invent anything new here, we just made helper to ease the developer's life.
 We'll use the final code of our tutorial to illustrate this cookbook. You can find it [here](https://github.com/mycozycloud/cozy-tutorial/tree/spa-final).
 
 NB: you can find the code of this tutorial [here](https://github.com/mycozycloud/cozy-tutorial/tree/localization)
@@ -97,7 +97,7 @@ Then add the following to the 'common' section of your configuration (if you are
 // server/config.js
 require('cozy-i18n-helper').middleware
 ```
-It automatically retrieves the locale data of the cozy's user and create the route that will allow the client the get it. Don't forget to add the "CozyInstance" doctype to your application's permission or you will get errors.
+It automatically retrieves the locale data of the cozy's user and create the route that will allow the client to get it. Don't forget to add the "CozyInstance" doctype to your application's permissions or you will get errors.
 
 Now you can change all the templates and view using the "t" function. Let's change `client/app/templates/home.hade` as an example:
 ```html
@@ -120,7 +120,7 @@ To learn all the great thing Polyglot can do (interpolation and pluralization), 
 If you want to test everything is working, go to http://localhost:9104/#account and change the language.
 
 ## Summary for translator contributors
-If you are not a developer but still want to help the community by adding tanslation, here what should know/do. Let's say you want to add the german language to an application.
+If you are not a developer but still want to help the community by adding translations, here is what should know/do. Let's say you want to add the german language to an application.
 
 * the only technical requirement is git. If you don't know it and still want to help, we'll find another way (contact[at]cozycloud.cc).
 * get the application you want to translate on [Github](https://github.com/mycozycloud/)

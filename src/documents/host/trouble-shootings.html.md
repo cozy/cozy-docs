@@ -9,7 +9,7 @@ menuOrder: 7
 
 In this section, you will find common errors that occurs during the
 installation process.
-Mention us the problems you encoutered that are not listed here, we will add
+Mention us the problems you encountered that are not listed here, we will add
 them to the list as soon as possible.
 
 ### I can only install one application
@@ -89,7 +89,7 @@ tcp     0     0 0.0.0.0:9002      0.0.0.0:*        LISTEN      997/node
 
 ### CouchDB password
 
-If you run several time the installation, the db password and the password used
+If you run several times the installation, the db password and the password used
 by the data-system could become different. To reset the password, comment the
 last line of `/usr/local/etc/couch/local.ini` in the admin section. Delete the
 file `/etc/cozy/couchdb.login` Then run installation again or run this command:

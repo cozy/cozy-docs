@@ -19,7 +19,7 @@ NodeJS.
   that will be displayed by the browser
 * sharing your app with other Cozy users and deploying it into Cozy
 
-### What you should know (or to be familiar with)
+### What you should know (or be familiar with)
 
 * JavaScript / NodeJS
 * HTML
@@ -76,7 +76,7 @@ Now start the server by running:
 node server.js
 ```
 
-And open your browser on http://localhost:9250/ and check the result.
+Then open your browser on http://localhost:9250/ and check the result.
 
 Whoohoo, you've just made your first NodeJS app compatible with Cozy!
 
@@ -228,7 +228,6 @@ var http = require('http'),
     sqlite3 = require('sqlite3').verbose(),
     db = new sqlite3.Database('cozy.db');
 
-// Database initialization
 
 // Database initialization
 db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='bookmarks'",
@@ -317,7 +316,7 @@ li
 If you want to deploy the app on a Cozy, your first need to put on a public git repository. We use [Github](https://github.com) because it's awesome but you can use any git provider.
 
 When you have published your code, go to your cozy if you have one or to http://localhost:9104/#applications and install your app through the dedicated interface.
-The application logs are available inside the virtual machine. To watch  them, do the following:
+The application logs are available inside the virtual machine. To watch them, do the following:
 ```bash
 vagrant ssh
 tail -f /usr/local/cozy/apps/{yourapplication}/{yourapplication}/{yourapplication}/logs/production.log
@@ -335,6 +334,6 @@ Then go to http://localhost:9104/#apps/{appSlug}/ and watch your app inside Cozy
 ## What's next ?
 You've developed your first Cozy app and you must understand now that it's nothing more than a normal web application.
 
-You must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its best.
+You must understand that if applications are built that way they will struggle collaborating around the user's data and you will not be able to use Cozy at its best.
 
 Now we'll introduce you [the Cozy architecture](/hack/getting-started/architecture-overview.html) before coming back to this tutorial and get into more Cozy webapp development.
