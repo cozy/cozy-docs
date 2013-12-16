@@ -20,7 +20,7 @@ fab -H user@ip update_all_apps
 
 ## Manual update
 
-If you want update your Cozy without Fabric you can run the following commands
+If you want to update your Cozy without Fabric you can run the following commands
 directly on your server.
 
 ```bash

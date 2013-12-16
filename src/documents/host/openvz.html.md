@@ -10,7 +10,7 @@ menuOrder: 3
 *Warning: For a production usage you have to change the superuser credentials,
 renew the SSL certificate, the database credentials and the controller token.* 
 
-Here we assume that you already install OpenVZ utilities.
+Here we assume that you've already installed OpenVZ utilities.
 
 ### Download and start your OpenVZ container
 

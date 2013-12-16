@@ -7,7 +7,7 @@ menuOrder: 5
 
 # Discover Americano
 
-The more your application grows the harder it is to maintain. [Express.js](http://expressjs.com/) is incredibely powerful but lacks at helping developer structuring their code.  To ease development without sacrifying maintainability, let's try [Americano](https://github.com/frankrousseau/americano) the framework that makes Express.js more opinionated about configuration and code organization without making it a magician hat ("magic" in code is never a good idea).
+The more your application grows the harder it is to maintain. [Express.js](http://expressjs.com/) is incredibely powerful but lacks at helping developer structuring their code.  To ease development without sacrificing maintainability, let's try [Americano](https://github.com/frankrousseau/americano) the framework that makes Express.js more opinionated about configuration and code organization without making it a magician trick ("magic" in code is never a good idea).
 
 Americano extends Express: everything that works with Express will work out of the box with Americano. It's really just a matter of convention!
 
@@ -15,7 +15,7 @@ Also, Americano is modular so you can extend it with plugins. That's what we did
 
 ### What you will achieve
 
-* Learning a new framework without losing the work you've made so far by making the bookmark app you've built an Americano app with no effort.
+* Learning a new framework without losing the work you've made so far, by making the bookmark app you've built an Americano app with no effort.
 * Learning how to painlessly structure your code and improve your capacity to maintain your code.
 
 ### Source code
@@ -55,12 +55,12 @@ Americano constrains the way your file structure should be, let's see how:
 
 Note that Americano makes mandatory the "server" structure but let you do whatever you want with the client/public folders.
 
-You might recognize familiar concepts: Model, Controller and somehow the View. It is important you understand that even if Americano doesn't actually put shiny MVC into Express, it brings spearation of concerns to application which is what really matters.
+You might recognize familiar concepts: Model, Controller and somehow the View. It is important you understand that even if Americano doesn't actually put shiny MVC into Express, it brings separation of concerns to application which is what really matters.
 
 Start by creating the architecture then we'll move on the models creation.
 
 ## Define the models
-The models folder allow you put the doctype definition in separate files. Let's take the code we previously had in server.js and move it to `server/models/bookmark.js`:
+The models folder allows you to put the doctype definition in separate files. Let's take the code we previously had in server.js and move it to `server/models/bookmark.js`:
 
 ```javascript
 americano = require('americano');
@@ -171,7 +171,7 @@ We basically copied and pasted what was in the old server.js and removed the
 
 You probably noticed the "require" instruction. It loads the bookmark model we
 defined earlier. More precisely, it loads what has been module.exports'ed (this
-is NodeJS stuff, abuse that to create small modules of code).
+is NodeJS stuff, abuse of that to create small modules of code).
 
 Don't hesitate to split your code in multiple coherent controllers (one for
 bookmarks, one for tags, ...)!
@@ -221,7 +221,7 @@ module.exports = {
 ## Configuration
 Now our application should already be working but there is one thing we left aside: configuration.
 
-Again, Americano will provides you a handy syntax and loads everything **automatically** at start:
+Again, Americano will provide you a handy syntax and loads everything **automatically** at start:
 ```javascript
 // ./server/config.js
 
@@ -256,7 +256,7 @@ Express!) so be sure to change it the way you like.
 
 ## What's next ?
 
-We split our application into logical pieces and it can now grow without us
+We splitted our application into logical pieces and it can now grow without us
 worrying about coming back later to make modification and being completely
 lost.
 
@@ -265,6 +265,6 @@ like, stick with ExpressJS or check out [Flatiron](http://flatironjs.org/),
 [Sails.js](http://sailsjs.org/) or [Compound.js](http://compoundjs.com/).  As
 we repeat again and again, a Cozy app is nothing more than a web app.
 
-We are almost done with Cozy's basics, there is still one concept 
-we'd like to introduce you. Are you ready to [learn the single page app 
+We are almost done with Cozy's basics, there is still one concept
+we'd like to introduce you to. Are you ready to [learn the single page app
 way](/hack/getting-started/learn-single-page-app-way.html)?
