@@ -3,6 +3,7 @@ title: "Learn the Single Page App Way"
 layout: "default"
 category: "hack"
 menuOrder: 6
+toc: true
 ---
 
 # Learn the single page app way
@@ -220,7 +221,7 @@ onBookmarkAdded: function(bookmark) {
 ```
 Everything should be working as before but each bookmark is rendered separately which also means they can be managed separately. Let's see how we can easily add the "delete" feature now.
 
-### Step 4: removing a bookmark
+## Step 4: removing a bookmark
 In the bookmark view, add the "delete" feature like we did earlier for the "create" one.
 
 ```javascript

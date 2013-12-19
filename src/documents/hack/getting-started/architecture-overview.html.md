@@ -3,6 +3,7 @@ title: "Understand the Cozy Architecture"
 layout: "default"
 category: "hack"
 menuOrder: 3
+toc: true
 ---
 
 # Understand the Cozy Architecture
@@ -11,7 +12,7 @@ It is important to understand how Cozy is built to understand how it works. Let'
 
 ![Architecture Overview](/assets/images/cozy-architecture.png)
 
-Too long, don't want to read ? Check out [what you should remember](#what-you-should-remember)!
+Too long, don't want to read ? Check out [what you should remember](#What-you-should-remember)!
 
 Cozy is made of three different layers:
 
@@ -19,12 +20,16 @@ Cozy is made of three different layers:
 * the pPaaS
 * the persistence layer
 
-## The Proxy ([Github repository](https://github.com/mycozycloud/cozy-proxy/))
+## The Proxy
+([Github repository](https://github.com/mycozycloud/cozy-proxy/))
+
 The proxy main job is handling the authentification and authorization to the Cozy. It is the application that manage registration, login, logout and password reset.
 
 It also handles all the routing of Cozy (to send the right request to the right application).
 
-## The pPaaS ([Github repository](https://github.com/mycozycloud/cozy-controller/))
+## The pPaaS
+([Github repository](https://github.com/mycozycloud/cozy-controller/))
+
 pPaaS stands for "personal Platform as a Service".
 You may already now what a PaaS is: an execution environment for applications.
 A personal PaaS is a personal execution environment for personal applications collaboring around personal data. You got it, a pPaaS is all about the user!
@@ -33,7 +38,9 @@ Technically, the "controller" and the "home application" play with each other to
 
 The [cozy-controller](https://github.com/mycozycloud/cozy-controller/) can also be used through a dedicated tool, the [cozy-monitor](https://github.com/mycozycloud/cozy-monitor/). You shouldn't worried too much about it since it is unlikely you will use it one day (except if you host your own Cozy or are willing to contribute to the core).
 
-## The persistence layer: the Data System ([Github Repository](https://github.com/mycozycloud/cozy-data-system/))
+## The persistence layer: the Data System
+([Github Repository](https://github.com/mycozycloud/cozy-data-system/))
+
 You've just built your first app using SQLite and you are wondering why we speak about another persistence mecanism? Well, let us introduce you the Data System.
 
 It's a unified API that allows applications to access:
@@ -48,7 +55,6 @@ It also opens the opportunity to use multiple data-source. Do you want to have c
 
 You can find the complete API and details about the Data System on the dedicate [cookbook](/cookbooks/data-system.html).
 
-<a name="what-you-should-remember"></a>
 ## What you should remember
 As a developer, you are going to create an application that will be run by Cozy's pPaaS. That application will access the data through the Data System.
 Also, you won't have to bother about user authentification and authorization because it is all handled by the Proxy.

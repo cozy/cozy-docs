@@ -3,6 +3,7 @@ title: "Uninstall"
 layout: "default"
 category: "host"
 menuOrder: 6
+toc: true
 ---
 
 # Uninstall your Cozy
@@ -14,7 +15,7 @@ If you installed Cozy in a virtual machine or in a container, you just have
 to remove that virtual machine or container
 
 
-## Easy way 
+## Easy way
 
 The easiest way to uninstall Cozy is to use the Fabric installation file used
 for the installation. But this you should not call the installation task but
@@ -23,7 +24,7 @@ the uninstall task:
 ```bash
 fab -H user@ip uninstall_all
 ```
-   
+
 ## Manual uninstall
 
 If you want to uninstall your Cozy without Fabric you can run the following

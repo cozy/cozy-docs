@@ -3,6 +3,7 @@ title: "Play with the Data System"
 layout: "default"
 category: "hack"
 menuOrder: 4
+toc: true
 ---
 
 # Tutorial 2: Play with the Data System

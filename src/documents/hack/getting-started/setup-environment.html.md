@@ -3,6 +3,7 @@ title: "Setup the environment"
 layout: "default"
 category: "hack"
 menuOrder: 1
+toc: true
 ---
 
 # Setup the environment

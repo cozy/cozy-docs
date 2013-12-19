@@ -3,6 +3,7 @@ title: "Getting started"
 layout: "default"
 category: "hack"
 menuOrder: 0
+toc: true
 ---
 
 
@@ -21,4 +22,3 @@ web development** with Cozy!
 * [Tutorial 2: Take advantage of the Data System](/hack/getting-started/play-with-data-system.html)
 * [Tutorial 3: Discover Americano](/hack/getting-started/discover-americano.html)
 * [Tutorial 4: Learn the Single Page App way ](/hack/getting-started/learn-single-page-app-way.html)
-

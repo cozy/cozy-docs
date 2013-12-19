@@ -3,23 +3,24 @@ title: "Virtualbox VM"
 layout: "default"
 category: "host"
 menuOrder: 2
+toc: true
 ---
 
 # Run Cozy with Virtualbox
 
 *Warning: For a production usage you have to change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.* 
+renew the SSL certificate, the database credentials and the controller token.*
 
-### Step 1
+## Step 1
 
 [Download](https://www.virtualbox.org/wiki/Downloads) and install VirtualBox.
 
-### Step 2
+## Step 2
 
-[Download](http://files.cozycloud.cc/cozycloud-virtualimage.zip) the Cozy 
+[Download](http://files.cozycloud.cc/cozycloud-virtualimage.zip) the Cozy
 Virtual Machine for VirtualBox and import it into Virtual box.
 
-### Step 3
+## Step 3
 
 Access to your Cozy through your browser by connecting to this URL:
 
@@ -27,7 +28,7 @@ Access to your Cozy through your browser by connecting to this URL:
 https://localhost:2223/
 ```
 
-### Additional informations
+## Additional informations
 
 To access to the box shell use root/password as login and password.
 

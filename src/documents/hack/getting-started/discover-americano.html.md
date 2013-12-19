@@ -3,6 +3,7 @@ title: "Discover Americano"
 layout: "default"
 category: "hack"
 menuOrder: 5
+toc: true
 ---
 
 # Discover Americano
@@ -265,6 +266,6 @@ like, stick with ExpressJS or check out [Flatiron](http://flatironjs.org/),
 [Sails.js](http://sailsjs.org/) or [Compound.js](http://compoundjs.com/).  As
 we repeat again and again, a Cozy app is nothing more than a web app.
 
-We are almost done with Cozy's basics, there is still one concept 
-we'd like to introduce you. Are you ready to [learn the single page app 
+We are almost done with Cozy's basics, there is still one concept
+we'd like to introduce you. Are you ready to [learn the single page app
 way](/hack/getting-started/learn-single-page-app-way.html)?

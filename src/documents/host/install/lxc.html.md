@@ -3,6 +3,7 @@ title: " LXC"
 layout: "default"
 category: "host"
 menuOrder: 4
+toc: true
 ---
 
 # Setup a LXC image on your server.
@@ -53,12 +54,12 @@ server {
     listen 80;
 
     server_name cloud.myhost.com;
- 
+
     access_log  /var/log/nginx/cozy_access.log;
     error_log  /var/log/nginx/cozy_error.log;
     root   /usr/share/nginx/html;
     index  index.html index.htm;
- 
+
         location / {
                 proxy_set_header X-Real-IP $remote_addr;
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;

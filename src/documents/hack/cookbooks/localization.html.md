@@ -3,6 +3,7 @@ title: "Localize your applications"
 layout: "default"
 category: "hack"
 menuOrder: 3
+toc: true
 ---
 
 # Localize your applications
@@ -116,7 +117,6 @@ ul
 
 To learn all the great thing Polyglot can do (interpolation and pluralization), please [read its documentation](http://airbnb.github.io/polyglot.js/).
 
-<a name="summary"></a>
 If you want to test everything is working, go to http://localhost:9104/#account and change the language.
 
 ## Summary for translator contributors
@@ -130,7 +130,6 @@ If you are not a developer but still want to help the community by adding tansla
 * commit your work
 * submit a pull request on github
 
-<a name="guidelines"></a>
 ## Localization guidelines
 This is how you should name the keys of your localization files:
 

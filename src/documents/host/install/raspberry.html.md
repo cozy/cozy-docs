@@ -3,14 +3,15 @@ title: "Raspberry Pi"
 layout: "default"
 category: "host"
 menuOrder: 1
+toc: true
 ---
 
 # Setup Cozy on your Raspberry Pi
 
-*Minimum hardware: Raspberry Pi model B (RAM: 512MB) + 4GB SD card* 
+*Minimum hardware: Raspberry Pi model B (RAM: 512MB) + 4GB SD card*
 
 *Warning: For a production usage you have to change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.* 
+renew the SSL certificate, the database credentials and the controller token.*
 
 # Copy the image on a SD Card
 

@@ -3,6 +3,7 @@ title: "Contributing"
 layout: "default"
 category: "hack"
 menuOrder: 4
+toc: true
 ---
 
 # Contributing to Cozycloud
@@ -37,7 +38,7 @@ submitting us a pull request on the
 If you have an idea and don't know where to start, check out [our tutorials](/hack/getting-started/). All you need to know is a bit of JavaScript!
 
 ## Translating Cozy and applications
-You can be very helpful by translating Cozy and applications. See the [translator guide](/hack/cookbooks/localization.html#summary) and make sure you follow the [localization guidelines](/hack/cookbooks/localization.html#guidelines).
+You can be very helpful by translating Cozy and applications. See the [translator guide](/hack/cookbooks/localization.html#Summary-for-translator-contributors) and make sure you follow the [localization guidelines](/hack/cookbooks/localization.html#Localization-guidelines).
 
 ## Documentation's roadmap
 
@@ -70,14 +71,14 @@ Data System, Home, Controller or Proxy.
     ```sh
     vagrant box add cozycloud-dev-latest http://files.cozycloud.cc/cozycloud-dev-latest.box
     ```
-   
+
 3. Run the development virtual machine
 
     ```sh
     vagrant init cozycloud-dev-latest
     vagrant up
     ```
-    
+
 4. Update it if needed
 
     ```sh
@@ -85,7 +86,7 @@ Data System, Home, Controller or Proxy.
 
     sudo supervisorctl stop cozy-controller
     sudo pkill -9 node # make sure no process is remaining.
-    sudo npm -g install cozy-controller 
+    sudo npm -g install cozy-controller
     sudo supervisorctl start cozy-controller
 
     sudo cozy-monitor install data-system
@@ -95,7 +96,7 @@ Data System, Home, Controller or Proxy.
     cozy-monitor stop home
     ```
 
-5. Clone the repository you want to work with (home in this example), install and run it. 
+5. Clone the repository you want to work with (home in this example), install and run it.
 The --no-bin-links is needed because you can't symlink in the shared folder.
 
     ```sh
@@ -106,7 +107,7 @@ The --no-bin-links is needed because you can't symlink in the shared folder.
     node server.js
     ```
 
-6. On the host, browse to http://127.0.0.1:9104, register a user, and then check http://127.0.0.1:9104/#home. 
+6. On the host, browse to http://127.0.0.1:9104, register a user, and then check http://127.0.0.1:9104/#home.
 You should see logs popping up in your console. IF you are asked to login instead of register, use this fix :
 
     ```sh
@@ -119,17 +120,17 @@ You should see logs popping up in your console. IF you are asked to login instea
     node server
     ```
 
-7. Hack ! You should see the repository on your host system in the same directory where you did vagrant up. 
+7. Hack ! You should see the repository on your host system in the same directory where you did vagrant up.
 Use your favorite editor to edit the .coffee files. You will need to compile before seeing your changes.
 
     For server changes :
-        
+
          Ctrl + C
          cake convert
          node server
-    
+
     For client changes, open a new vagrant ssh and :
-        
+
          cd /vagrant/cozy-home/client/
          npm install --no-bin-links
          brunch w

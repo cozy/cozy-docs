@@ -3,11 +3,12 @@ title: "Install Cozy on your server"
 layout: "default"
 category: "host"
 menuOrder: 0
+toc: true
 ---
 
 # Install Cozy on your server
 
-### Use our script
+## Use our script
 
 On your local machine install Fabric and fabtools:
 
@@ -34,12 +35,12 @@ fab -H sudoer@ip install
 
 Enter your settings (such as domain name) when prompted by the installer.
 
-Be patient; some commands or app deployments can take some time. It 
+Be patient; some commands or app deployments can take some time. It
 depends on your network and hardware capabilities.
 
-#### *About local installation*
+### About local installation
 
-To install Cozy locally, we recommend you to create a virtual machine, 
+To install Cozy locally, we recommend you to create a virtual machine,
 and then to run the fabfile script with your virtual machine as target.
 This allows you to experiment with Cozy without installing numerous packages
 into your environment.
@@ -50,7 +51,7 @@ The way to install it locally without VM or container is to run this command:
 fab -H sudoer@localhost install
 ```
 
-#### *Try Cozy with Vagrant*
+### Try Cozy with Vagrant
 
 If you want to use Vagrant to run Cozy Cloud Setup in a virtual machine
 we recommend you use the Ubuntu 12.04 box. Be careful as the update will require that
@@ -75,7 +76,7 @@ RAM: 1024 Mo (it allows to have 10 apps simultaneously).
 
 Disk space: a lot of space to store all your files.
 
-## Test 
+## Test
 
 Once the installation is done, you can access https://IP:443 to create your Cozy
 main account. Be sure that you used the HTTPS protocol if you just see the nginx
@@ -91,7 +92,7 @@ The Cozy install script installs the following tools:
 * Node tools: cozy-controller, cozy-monitor, coffee-script, compound, brunch
 * Cozy Controller Daemon
 * Cozy data indexer
-* Cozy data layer 
+* Cozy data layer
 * Cozy proxy
 * Cozy Home (web app)
 
