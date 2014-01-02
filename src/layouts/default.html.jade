@@ -22,66 +22,52 @@ html(lang='en')
       a.nav-logo.left(href="/")
           img(src='/assets/images/happycloud.png', alt='Happy Cloud')
       span.subtitle
-          - var collectionName = "documents"
-          - if (document.category != null)
-            - collectionName = document.category + "Pages"
-          - items = generateMenu(document.url, collectionName)
-          - for item in items
-            - if(item.state == "parent")
-              span.breadcrumb-item
-                a(href="#{item.url}")= item.title
-          | #{document.title}
+        - var collectionName = "documents"
+        - if (document.category != null)
+          - collectionName = document.category + "Pages"
+        - items = generateMenu(document.url, collectionName)
+        - for item in items
+          - var className = ""
+          - if (item.state == "parent" || item.state == "current")
+            - className = 'current'
+          .breadcrumb-item(class="#{className}")
+            a(href="#{item.url}")= item.title
+            - if (item.children != null)
+              ul.menu-item
+                - for child in item.children
+                  li
+                    a(href="#{child.url}")= child.title
 
       - var className = ""
       - if(document.category == 'hack')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
         a(href="/hack/getting-started/") Hack
-        ul.first-level
-          - items = generateMenu(document.url, "hackPages")
-          - for item in items
-            li
-              a(href="#{item.url}")= item.title
-              - if (item.children != null)
-                ul.second-level
-                  - for child in item.children
-                    li
-                      a(href="#{child.url}")= child.title
 
       - var className = ""
       - if(document.category == 'host')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
         a(href="/host/install/index.html") Host
-        ul.first-level
-          - items = generateMenu(document.url, "hostPages")
-          - for item in items
-            li
-              a(href="#{item.url}")= item.title
-              - if (item.children != null)
-                ul.second-level
-                  - for child in item.children
-                    li
-                      a(href="#{child.url}")= child.title
 
     .wrapper
       .wrap-menu.w25.mod.left
         &nbsp;
         aside
           nav#navigation(role="navigation")
-              ul.nav.first-level
-                - for item in document.tableOfContents
-                  - var className = "big"
-                  - if (document.tableOfContents.length == 1)
-                    - className = "big active"
-                  - if(item.text != "")
-                    li(class="#{className}")
-                      a.label(href="##{item.id}")= item.text
-                      - if (item.children != null)
-                        ul.second-level
-                          - for child in item.children
-                            li.small
-                              a.label(href="##{child.id}")= child.text
+            ul.nav.first-level
+              - for item in document.tableOfContents
+                - var className = "big"
+                - if (document.tableOfContents.length == 1)
+                  - className = "big active"
+                - if(item.text != "")
+                  li(class="#{className}")
+                    a.label(href="##{item.id}")= item.text
+                    - if (item.children != null)
+                      ul.second-level
+                        - for child in item.children
+                          li.small
+                            a.label(href="##{child.id}")= child.text
 
       - var className = "w75"
       - if (document.tableOfContents.length == 0)

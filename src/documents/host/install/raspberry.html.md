@@ -2,7 +2,7 @@
 title: "Raspberry Pi"
 layout: "default"
 category: "host"
-menuOrder: 1
+menuOrder: 2
 toc: true
 ---
 

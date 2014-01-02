@@ -1,5 +1,5 @@
 ---
-title: "Update your cozy"
+title: "Update"
 layout: "default"
 category: "host"
 menuOrder: 5
