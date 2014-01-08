@@ -8,8 +8,8 @@ toc: true
 
 # Tutorial 1: your first app in 30 minutes
 
-This first tutorial is an introduction to cozy webapp development but as you
-will see, you can consider it as an introduction to webapp development with
+This first tutorial is an introduction to cozy webapp development, but as you
+will see, you can also consider it as an introduction to webapp development with
 NodeJS.
 
 ### What you will achieve
@@ -17,10 +17,10 @@ NodeJS.
 * writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/),
   the standard framework for NodeJS
 * introducing [Jade](http://jade-lang.com/) to write the templates
-  that will be displayed by the browser
+  that the browser will display
 * sharing your app with other Cozy users and deploying it into Cozy
 
-### What you should know (or to be familiar with)
+### What you should master (or to be familiar with)
 
 * JavaScript / NodeJS
 * HTML
@@ -44,9 +44,9 @@ Here is how the folders and files are organized:
 
 ## Step 1: displaying HTML pages
 
-NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-1).
+NB: the source code for this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-1).
 
-We first need to create an HTTP server that will serve the content on requests:
+We first need to create an HTTP server that will serve the content for requests:
 ```javascript
 // server.js
 
@@ -79,22 +79,22 @@ node server.js
 
 And open your browser on http://localhost:9250/ and check the result.
 
-Whoohoo, you've just made your first NodeJS app compatible with Cozy!
+Woohoo, you've just made your first NodeJS app compatible with Cozy!
 
-You might think "well, it sucks, I actually can't do anything with that". You are absolutely right, let's move on to step 2.
+You might think "well, this sucks, I actually can't do anything with it". You are absolutely right, so let's move on to step 2.
 
 ## Step 2: listing the bookmarks from the server
 
-NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-2).
+NB: the source code for this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-2).
 
-For the step 2, we are going to use a list stored in memory on the server and render it within a template. We are going to use Jade as a template engine. If you don't know Jade, you will find it is not difficult to read and write it.
+For the step 2, we are going to use a list stored in memory on the server and render it within a template. We are going to use Jade as a template engine. If you don't master Jade, you will find it is not difficult to read and write it.
 
 First, install jade:
 ```bash
 npm install jade --save # save also adds jade to package.json
 ```
 
-Go back to `server.js` and change it that way:
+Go back to `server.js` and change it in the following way:
 ```javascript
 // server.js
 
@@ -122,7 +122,7 @@ app.get('/', function(req, res) {
 });
 ```
 
-We also need to change the HTML file for a Jade file:
+We also need to change the HTML file into a Jade file:
 ```html
 # public/index.jade
 doctype 5
@@ -150,7 +150,7 @@ Again, this is not very useful because you can't modify the list. Let's fix it!
 
 ## Step 3: adding and removing bookmarks
 
-NB : the source code of this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-3).
+NB: the source code for this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-3).
 
 First, add the following before the list in `index.jade`
 
@@ -207,16 +207,16 @@ app.use(express.bodyParser());
 ```
 
 Et voilà! You can now add and remove bookmarks. But it still sucks, right? Each
-time you start and stop the server you lose everything. Let's use a database!
+time you start and then stop the server you lose your data. Let's use a database!
 
 ## Step 4: using a real database, SQLite
 
-NB : the source code of this step can be found
+NB: the source code for this step can be found
 [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-4).
 
 Even if Cozy main persistence layer is not SQLite, it is shipped with every Cozy.
 
-The first thing we need to do is getting a module to use SQLite:
+The first thing we need to do is to get a module to use SQLite:
 ```bash
 npm install sqlite3 --save
 ```
@@ -315,10 +315,10 @@ li
 
 ## Step 5 : deploying your app into Cozy
 
-If you want to deploy the app on a Cozy, your first need to put on a public git repository. We use [Github](https://github.com) because it's awesome but you can use any git provider.
+If you want to deploy the app into a Cozy, your first need to put on a public git repository. We use [Github](https://github.com) because it's awesome, but you can use any git provider.
 
-When you have published your code, go to your cozy if you have one or to http://localhost:9104/#applications and install your app through the dedicated interface.
-The application logs are available inside the virtual machine. To watch  them, do the following:
+When you have published your code, go to your Cozy if you have one, or to http://localhost:9104/#applications and install your app through the dedicated interface.
+The application logs are available inside the virtual machine. In order to take a look at them, do the following:
 ```bash
 vagrant ssh
 tail -f /usr/local/cozy/apps/{yourapplication}/{yourapplication}/{yourapplication}/logs/production.log
@@ -331,11 +331,11 @@ cd /vagrant/{yourapplication}/
 cozy-monitor dev-route:start {appSlug} {port}
 PORT={port} node server.js
 ```
-Then go to http://localhost:9104/#apps/{appSlug}/ and watch your app inside Cozy!
+Then go to http://localhost:9104/#apps/{appSlug}/ and take a look at your app inside Cozy!
 
 ## What's next ?
-You've developed your first Cozy app and you must understand now that it's nothing more than a normal web application.
+You've developed your first Cozy app and you must now understand that it's nothing more than a normal web application.
 
-You must understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its best.
+You must also understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its best.
 
-Now we'll introduce you [the Cozy architecture](/hack/getting-started/architecture-overview.html) before coming back to this tutorial and get into more Cozy webapp development.
+Now we'll introduce you to [the Cozy architecture](/hack/getting-started/architecture-overview.html) before coming back to this tutorial and getting into more Cozy webapp development.

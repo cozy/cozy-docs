@@ -1,19 +1,19 @@
 ---
-title: "Setup the environment"
+title: "Setting up the environment"
 layout: "default"
 category: "hack"
 menuOrder: 1
 toc: true
 ---
 
-# Setup the environment
+# Setting up the environment
 
 Welcome to the first step to get you started: the development environment setup
 process.
 
-Since Cozy is built on many software bricks, we wrapped it into an easy to use
-virtual machine so you don't pollute your local system. That also means you can
-use the operation system you like!
+Since Cozy is built on many software bricks, we wrapped it into an easy-to-use
+virtual machine, so you don't pollute your local system. That also means you can
+use the operation system you like (well, there are obviously issues on Windows)!
 
 
 ## Installing dependencies
@@ -45,7 +45,7 @@ indirectly with Vagrant to power our virtual machine.
 #### Vagrant (>= v1.3.5) (<a href="http://downloads.vagrantup.com/" target="_blank">download</a>)
 Vagrant is a tool to "create and configure lightweight, reproducible and
 portable development environments." That's what we need here! We use it through
-a custom CLI tool so you will not manipulate it directly.
+a custom CLI tool, so you will not manipulate it directly.
 (Latest tested version: 1.3.5)
 
 #### [Cozy for developers](https://github.com/mycozycloud/cozy-manager)
@@ -55,17 +55,17 @@ You will also need our tool:
 ``` bash
 npm install -g cozy
 ```
-The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also it can generate an application skeletons from templates.
+The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also it can generate application skeletons from templates.
 
 
 ### Initializing and starting the virtual machine
 
-The next step is to get your virtual machine. Basically, we you are going to
+The next step is to get your virtual machine. Basically, you are going to
 have a linux running on your computer with all a Cozy needs to work on already
 installed and configured.
 
 To help you managing the VM, the Cozy Manager comes to the rescue.
-Create a folder that will contains all your source code:
+Create a folder that will contain all your source code:
 ``` bash
 mkdir cozy-dev && cd cozy-dev
 ```
@@ -86,17 +86,17 @@ cozy dev:start
 cozy dev:vm-status
 ```
 
-We advise you to update the VM the first time you start it (and regularly)
+We advise you to update the VM the first time you start it (and regularly),
 because we don't update the base box each time we improve or fix a bug in the
 "core" of Cozy: ``` bash
 cozy dev:light-update
 ```
 
-You can go to `http://localhost:9104/` see your Cozy running. You can also use
-it but beware! The Cozy running in your virtual machine is in development mode,
+You can go to `http://localhost:9104/` in order to see your Cozy running. You can also use
+it, but beware! The Cozy running in your virtual machine is in development mode,
 meaning that most of the security measures are disabled. Only use it for
-testing purpose!
+testing purposes!
 
-We explain in details how the Cozy Manager works in dedicate cookbook.
+We explain in detail how the Cozy Manager works in dedicated cookbook.
 
 You are now ready to [write your first application](/hack/getting-started/first-app.html), We hope it wasn't too long!

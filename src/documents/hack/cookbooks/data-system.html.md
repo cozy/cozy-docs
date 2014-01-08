@@ -10,16 +10,16 @@ toc: true
 
 The Data System API allows the access of the following:
 
-* the data themselves
+* the data itslef
 * the CouchDB views (through "requests")
 * the attachements (files)
 * the indexer
 
 ## Generic notes
 
-All the responses body are encoded in JSON and all the data you send along request should be encoded in JSON.
+All the responses' bodies are encoded in JSON and all the data you send along request should be encoded in JSON.
 
-You will find HTTP status code for response, here is what they mean:
+You will find HTTP status code for the response, here is what they mean:
 
 * 200: success
 * 201: success (and something has been created)
@@ -312,7 +312,7 @@ Response
     500: {error: "the error message"}
 ```
 
-### Searching 10 documents that match the best the query
+### Searching 10 documents that best match the query
 ```http
 POST /data/search/:type
 Param:

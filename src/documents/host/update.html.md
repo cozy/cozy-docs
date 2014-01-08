@@ -10,7 +10,7 @@ toc: true
 ## Easy way
 
 The easiest way to update Cozy is to use the Fabric installation file used for
-the installation. But this you should not call the installation task but the
+the installation. But in this case, you should not call the installation task but the
 udpate tasks:
 
 ```bash
@@ -21,7 +21,7 @@ fab -H user@ip update_all_apps
 
 ## Manual update
 
-If you want update your Cozy without Fabric you can run the following commands
+If you want update your Cozy without Fabric, you can run the following commands
 directly on your server.
 
 ```bash

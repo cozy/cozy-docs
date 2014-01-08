@@ -8,11 +8,11 @@ toc: true
 
 # Discover Americano
 
-The more your application grows the harder it is to maintain. [Express.js](http://expressjs.com/) is incredibely powerful but lacks at helping developer structuring their code.  To ease development without sacrifying maintainability, let's try [Americano](https://github.com/frankrousseau/americano) the framework that makes Express.js more opinionated about configuration and code organization without making it a magician hat ("magic" in code is never a good idea).
+The more your application grows, the harder it is to maintain. [Express.js](http://expressjs.com/) is incredibely powerful, but lacks at helping the developer structuring their code. In order to facilitate development without sacrifying maintainability, let's try [Americano](https://github.com/frankrousseau/americano) the framework that makes Express.js more opinionated about configuration and code organization without making it a magician hat ("magic" when it comes to coding is never a good idea).
 
 Americano extends Express: everything that works with Express will work out of the box with Americano. It's really just a matter of convention!
 
-Also, Americano is modular so you can extend it with plugins. That's what we did with the JugglingDB ODM that comes with the americano-cozy plugin that we are going to use here.
+Also, Americano is modular, so you can extend it with plugins. That's what we did with the JugglingDB ODM that comes with the americano-cozy plugin that we are going to use here.
 
 ### What you will achieve
 
@@ -38,7 +38,7 @@ var americano = require('americano');
 var port = process.env.PORT || 9250;
 americano.start({name: 'yourapp', port: port});
 ```
-We're done! We said no effort but still!
+We're done! We said no effort, but still!
 
 ## File structure
 Americano constrains the way your file structure should be, let's see how:
@@ -54,11 +54,11 @@ Americano constrains the way your file structure should be, let's see how:
 * package.json : holds your app information and dependencies
 * server.js : the application starter
 
-Note that Americano makes mandatory the "server" structure but let you do whatever you want with the client/public folders.
+Note that Americano makes the "server" structure mandatory but let you do whatever you want with the client/public folders.
 
-You might recognize familiar concepts: Model, Controller and somehow the View. It is important you understand that even if Americano doesn't actually put shiny MVC into Express, it brings spearation of concerns to application which is what really matters.
+You might recognize familiar concepts: Model, Controller and somehow the View. It is important you understand that even if Americano doesn't actually put shiny MVC into Express, it brings spearation of concerns to application, which is what really matters.
 
-Start by creating the architecture then we'll move on the models creation.
+Start by creating the architecture, then we'll move on the models' creation.
 
 ## Define the models
 The models folder allow you put the doctype definition in separate files. Let's take the code we previously had in server.js and move it to `server/models/bookmark.js`:
@@ -76,7 +76,7 @@ module.exports = Bookmark = americano.getModel('bookmarks', {
 // You can easily define here some helpers or method for bookmarks
 ```
 
-Then move to server/models/requests.js so we can define the request we are going to use. The nice part of the cozy plugin for americano is that it makes requests declaration very clear:
+Then move to server/models/requests.js so we can define the request we are going to use. The nice part of the Cozy plugin for americano is that it makes requests declaration very clear:
 
 ```javascript
 module.exports =
@@ -87,7 +87,7 @@ module.exports =
   };
 ```
 
-This will **automatically** do the old "Bookmark.defineRequest" when the server starts. Americano's Cozy plugin knows that the "all request" is often the same and offers this handy shortcut:
+This will **automatically** trigger the old "Bookmark.defineRequest" when the server starts. Americano's Cozy plugin knows that the "all request" is often the same and offers this handy shortcut:
 
 ```javascript
 americano = require('americano');
@@ -167,11 +167,11 @@ module.exports.delete = function(req, res) {
 };
 ```
 
-We basically copied and pasted what was in the old server.js and removed the
+We basically copied and pasted what was in the old server.js, and removed the
 "which URL will trigger that action" part to focus on the code itself.
 
 You probably noticed the "require" instruction. It loads the bookmark model we
-defined earlier. More precisely, it loads what has been module.exports'ed (this
+defined earlier. More precisely, it loads what has previously been module.exports'ed (this
 is NodeJS stuff, abuse that to create small modules of code).
 
 Don't hesitate to split your code in multiple coherent controllers (one for
@@ -182,7 +182,7 @@ bookmarks, one for tags, ...)!
 There is still one very important missing thing, the routes. The routes are the
 "which URL will trigger which action" information.
 
-We put them in a dedicated file so you don't have to look at every single
+We put them in a dedicated file, so you don't have to look at every single
 controllers when you are looking for a specific piece of code. Just check the
 routes, they are the map of your application.
 
@@ -222,7 +222,7 @@ module.exports = {
 ## Configuration
 Now our application should already be working but there is one thing we left aside: configuration.
 
-Again, Americano will provides you a handy syntax and loads everything **automatically** at start:
+Again, Americano will provide you a handy syntax and loads everything **automatically** at start:
 ```javascript
 // ./server/config.js
 
@@ -252,7 +252,7 @@ module.exports = {
 ```
 
 The configuration works exactly like in Express (remember, Americano extends
-Express!) so be sure to change it the way you like.
+Express!), so be sure to change it the way you like.
 
 
 ## What's next ?
@@ -261,11 +261,10 @@ We split our application into logical pieces and it can now grow without us
 worrying about coming back later to make modification and being completely
 lost.
 
-You discovered Americano, our favorite framework but you can use the one you
+You discovered Americano, our favorite framework, but you can use the one you
 like, stick with ExpressJS or check out [Flatiron](http://flatironjs.org/),
-[Sails.js](http://sailsjs.org/) or [Compound.js](http://compoundjs.com/).  As
-we repeat again and again, a Cozy app is nothing more than a web app.
+[Sails.js](http://sailsjs.org/) or [Compound.js](http://compoundjs.com/).  As we constantly like to say, a Cozy app is nothing more than a web app.
 
 We are almost done with Cozy's basics, there is still one concept
-we'd like to introduce you. Are you ready to [learn the single page app
+we'd like to introduce you to. Are you ready to [learn the single page app
 way](/hack/getting-started/learn-single-page-app-way.html)?

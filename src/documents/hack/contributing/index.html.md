@@ -9,12 +9,12 @@ toc: true
 # Contributing to Cozycloud
 
 You can contribute to Cozy in many ways, wether you are a NodeJS Ninja or a
-Net-Citizen willing to protect her/his privacy, all contributions are welcome!
+Net-Citizen willing to protect her/his privacy. All contributions are welcome!
 Report a bug, submit a feature request or improve the documentation to ease
-self-hosting, translations, develop new applications...
+self-hosting, translations, development of new applications...
 **There's something for everyone!**
 
-Everything is libre and open-source and hosted on
+Everything is free and open-source and hosted on
 [Github](https://github.com/mycozycloud/), this page will explain you how can
 help.
 
@@ -23,8 +23,7 @@ help.
 
 We use Github's issues to report the bugs or submit a feature request. Every
 application or module has its own Github page.
-Try to be as descriptive as possible and add screenshots if you can,
-espescially for bug reports.
+Try to be accurate in your descriptions and add, if possible, screenshots, especially for bug reports.
 
 
 ## The documentation
@@ -79,7 +78,7 @@ Data System, Home, Controller or Proxy.
     vagrant up
     ```
 
-4. Update it if needed
+4. Update it, if needed
 
     ```sh
     vagrant ssh

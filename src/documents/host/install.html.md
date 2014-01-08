@@ -20,6 +20,17 @@ The CPU is not a limitation, Cozy can even run on RaspberryPi.
 * RAM: 1024 Mo (it allows to have 10 apps simultaneously).
 * Disk space: a lot of space to store all your files.
 
+### About security in pre-installed images
+For a production usage, you MUST renew the SSL certificate, reset the database credentials and reset the controller token.
+
+For this purpose, use the following command:
+```bash
+wget https://raw.github.com/mycozycloud/cozy-setup/master/fabfile.py
+fab -H user@ip reset_security_tokens
+```
+
+You should also change the superuser credentials and by the way, you should not user a password but a SSH key to connect to your Cozy. Please see [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password) to help you.
+
 
 ## Manual installation
 
@@ -42,7 +53,7 @@ wget https://raw.github.com/mycozycloud/cozy-setup/master/fabfile.py
 
 Once your system is prepared, use the Fabric script from your local
 machine to launch the Cozy installation (run it in the same directory as the fabfile
-you downloaded before):
+you have previously downloaded):
 
 ```bash
 fab -H sudoer@ip install
@@ -77,7 +88,7 @@ http://files.vagrantup.com/precise64.box
 ### Test
 
 Once the installation is done, you can access https://IP:443 to create your Cozy
-main account. Be sure that you used the HTTPS protocol if you just see the nginx
+main account. Be sure that you used the HTTPS protocol, if you just see the nginx
 welcome page.
 
 ### What will this script install on your server?
@@ -95,7 +106,7 @@ The Cozy install script installs the following tools:
 * Cozy Home (web app)
 
 
-If you want to know more about how Cozy works you can check our [architecture
+If you want to know more about how Cozy works, you can check our [architecture
 page](https://github.com/mycozycloud/cozy-setup/wiki/Cozy-architecture).
 
 
@@ -109,7 +120,7 @@ stack in an isolated virtual machine or in a container (OpenVz or LXC).
 *Warning: For a production usage you have to change the superuser credentials,
 renew the SSL certificate, the database credentials and the controller token.*
 
-To run Cozy on your Raspberry Pi, the simplest way is to download our image and
+In order to run Cozy on your Raspberry Pi, the simplest way is to download our image and
 set it up on a SD card.
 
 For that, get the image archive:
@@ -122,17 +133,17 @@ wget http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz
 tar -xvzf cozy-raspberrypi.im.tar.gz
 ```
 
-Then find where is mounted your SDCard, let's assume it is on */dev/sdc*,
+Next, find where is mounted your SDCard; let's assume it is on */dev/sdc*,
 then make a low level copy of the image to your card.
 
-WARNING: this operation will erase all previously data stored into the card.
+WARNING: this operation will erase all previously stored data into the card.
 
 ```bash
 sudo dd bs=4M if=/my/path/cozy-raspberry.im of=/dev/sdc
 ```
 
 Now insert the SD Card in your Raspberry Pi SD Card reader. Reboot your
-raspberry then you will be able to access to your Cozy through the port 443
+Raspberry, then you will be able to access to your Cozy through the port 443
 (https protocol).
 
 ## Virtualbox image
@@ -169,10 +180,7 @@ ssh -p 2222 root@localhost
 
 ## OpenVZ image
 
-*Warning: For a production usage you have to change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.*
-
-Here we assume that you already install OpenVZ utilities.
+Here we assume that you have already installed OpenVZ utilities.
 
 ### Download and start
 
@@ -216,8 +224,8 @@ Of course you can change 8888 by the value you want.
 ## LXC image
 
 
-Use the LXC webpanel to add and configure containers, it's very easy to use.
-For Ubuntu this can be installed like so:
+Use the LXC webpanel to add and configure containers; it's very easy to use.
+For Ubuntu this can be installed this way:
 
 ```bash
 sudo apt-get install -y lxc debootstrap bridge-utils
@@ -226,9 +234,9 @@ wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
 exit
 ```
 
-Now access the webpanel at http://myhost.com:5000, default login is admin/admin
+Now access the webpanel at http://myhost.com:5000, the default login is admin/admin
 (change this). Create a container, remember what you named it. Make it run at
-startup. Then go to command line to access the container.
+startup. Then, go to command line to access the container.
 
 ```bash
 lxc console <container name>
@@ -246,7 +254,7 @@ container:
 
 
 Exit your container. Now that it's set up, you should disable the LXC webpanel
-since it's a security risk.
+since, it's a security risk.
 
 ```bash
 sudo service lwp stop
@@ -254,7 +262,7 @@ sudo update-rc.d -f lwp remove
 ```
 
 Finally, set up your main server as a reverse proxy for the cozy container. For
-nginx I used this template:
+nginx we used this template:
 
 ```bash
 server {

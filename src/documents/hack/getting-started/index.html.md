@@ -10,8 +10,7 @@ toc: true
 # Getting Started
 
 
-To begin we'll introduce you to the standard NodeJS
-tools. This way your application will work in any environment. Then
+As an introduction, we’ll present to you the standard NodeJS tools. This way your application will work in any environment. Then
 we'll introduce you to our favorite tools to make your Cozy development
 experience more delightful and efficient: get ready for **painless
 web development** with Cozy!
