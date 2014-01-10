@@ -22,7 +22,6 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 * putting some realtime into applications
 * giving user notifications
 * sending emails
-* building translatable apps
 * managing fixtures with cozy-fixtures
 * understanding the cozy-manager
 * how to make unit and functional tests
