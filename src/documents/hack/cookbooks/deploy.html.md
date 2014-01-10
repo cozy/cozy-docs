@@ -37,16 +37,19 @@ In order to declare what permissions are required by your application, you must 
 The "description" fields will be displayed to the user during installation. Do not miss the occasion to build trust between the user and your application!
 
 ## Naming your application
-There are two fields regarding naming your application: "name" and "cozy-displayName".
+There are two fields regarding naming your application: "name", "cozy-displayName" and "description".
 
 Your application is identified by a slug withing Cozy, that slug is the "name field". You cannot put fancy characters in it, only use letters and "-" or "_", **no space**!
 
 The "cozy-displayName" field allows you to choose a fancy name, you can use all the character you want, but be careful! It will appear on the user's home, so it shouldn't be too long.
 
+The "description" field allows you to display to the user a description in the installation process.
+
 ```json
 {
     "name": "cozy-mysuperapp-slug",
     "cozy-displayName": "My Super Application"
+    "description": "My Super Application makes you awesome!"
 }
 ```
 
