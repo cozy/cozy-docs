@@ -25,9 +25,9 @@ If you want update your Cozy without Fabric, you can run the following commands
 directly on your server.
 
 ```bash
-sudo cozy-monitor light-update data-system
-sudo cozy-monitor light-update home
-sudo cozy-monitor light-update proxy
+sudo cozy-monitor update data-system
+sudo cozy-monitor update home
+sudo cozy-monitor update proxy
 sudo supervisorctl stop cozy-controller
 sudo pkill -9 node # make sure no process is remaining.
 sudo npm -g update cozy-controller
@@ -41,5 +41,5 @@ To update a single application, you can run the following command on your targe
 server.
 
 ```bash
-sudo cozy-monitor light-update <app>
+sudo cozy-monitor update <app>
 ```
