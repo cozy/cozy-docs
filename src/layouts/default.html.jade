@@ -54,6 +54,10 @@ html(lang='en')
       .wrap-menu.w25.mod.left
         &nbsp;
         aside
+          - var hasToc = "";
+          - if (document.tableOfContents.length > 0)
+            - hasToc = "toc";
+          p.title(class="#{hasToc}")= document.title
           nav#navigation(role="navigation")
             ul.nav.first-level
               - for item in document.tableOfContents

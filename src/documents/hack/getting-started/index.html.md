@@ -3,12 +3,9 @@ title: "Getting started"
 layout: "default"
 category: "hack"
 menuOrder: 0
-toc: true
 ---
 
-
 # Getting Started
-
 
 As an introduction, we’ll present to you the standard NodeJS tools. This way your application will work in any environment. Then
 we'll introduce you to our favorite tools to make your Cozy development
