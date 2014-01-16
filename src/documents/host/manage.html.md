@@ -54,6 +54,23 @@ Cozy stack means home, proxy and data-system. In others words, cozy stack corres
 ```bash
 cozy-monitor restart-cozy-stack
 ```
+### Information
+Display installed application
+
+```bash
+cozy-monitor status
+```
+
+Display cozy stack applications
+
+```bash
+cozy-monitor versions
+```
+Display applications versions
+
+```bash
+cozy-monitor versions-apps
+```
 
 ## Applications management
 
@@ -102,23 +119,6 @@ Brunch application <app>
 cozy-monitor brunch <app>
 ```
 
-### Information
-Display installed application
-
-```bash
-cozy-monitor status
-```
-
-Display cozy stack applications
-
-```bash
-cozy-monitor versions
-```
-Display applications versions
-
-```bash
-cozy-monitor versions-apps
-```
 
 ### Uninstallation
 
