@@ -77,7 +77,7 @@ Now start the server by running:
 node server.js
 ```
 
-And open your browser on http://localhost:9250/ and check the result.
+Then open your browser on http://localhost:9250/ and check the result.
 
 Woohoo, you've just made your first NodeJS app compatible with Cozy!
 
@@ -229,7 +229,6 @@ var http = require('http'),
     sqlite3 = require('sqlite3').verbose(),
     db = new sqlite3.Database('cozy.db');
 
-// Database initialization
 
 // Database initialization
 db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='bookmarks'",
@@ -319,6 +318,7 @@ If you want to deploy the app into a Cozy, your first need to put on a public gi
 
 When you have published your code, go to your Cozy if you have one, or to http://localhost:9104/#applications and install your app through the dedicated interface.
 The application logs are available inside the virtual machine. In order to take a look at them, do the following:
+
 ```bash
 vagrant ssh
 tail -f /usr/local/cozy/apps/{yourapplication}/{yourapplication}/{yourapplication}/logs/production.log

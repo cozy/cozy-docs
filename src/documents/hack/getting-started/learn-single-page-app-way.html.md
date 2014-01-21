@@ -61,7 +61,7 @@ You already know about the server part of the file structure, so let's focus on 
         * models/
         * templates/ - where your templates (Jade in our case) will be
         * views/
-        * application.js - bootstrap  the Backbone app
+        * application.js - bootstrap the Backbone app
         * initialize.js - start the whole application when ready
         * router.js - the Backbone router
     * public/ - where the "built" files are
@@ -111,6 +111,7 @@ The glue is Backbone's observer/observable pattern that allows a lower coupling 
 <br /><br />
 
 How does our template work? In the app/assets/index.html we load the JavaScript we need, and call the "initialize" script. This last action ensures sure that the DOM has been loaded and starts the Backbone application by creating and initializing the router.
+
 Then the router creates the main view and gives it the collection of bookmarks.
 Then the view is rendered. The render process is: load the template, put data in the template, add it to the DOM at the right place.
 
@@ -167,7 +168,9 @@ The new bookmark should now be displayed!
 
 ## Step 3: using a separate view for the bookmark
 If you want to fully take advantage of what Backbone offers you, you must think modular.
-We have a list of bookmarks and rendering them each time we add a new one could be a bottleneck one day. Also it could be better if we could manipulate each bookmark independently, so we deletion would be dead easy to implement. Let's do this!
+
+We have a list of bookmarks and rendering them each time we add a new one could be a bottleneck one day. Also it could be better if we could manipulate each bookmark independently, so deletion would be dead easy to implement. Let's do this!
+
 
 Create a new view `app/views/bookmark.js`:
 ```javascript
@@ -355,4 +358,5 @@ We are eager to see what application you will bring to the Cozy community, don't
 <br /><br />
 
 To go further in your study of Cozycloud, you can check out the [cookbooks](/hack/cookbooks/)!
+
 We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, choose the one you like, or add yours.

@@ -32,6 +32,7 @@ It also handles all the routing of Cozy (to send the right request to the right 
 
 pPaaS stands for "personal Platform as a Service".
 You may already know what a PaaS is: an execution environment for applications.
+
 A personal PaaS is a personal execution environment for personal applications collaborating around personal data. You got it, a pPaaS is all about the user!
 
 Technically, the "controller" and the "home application" play with each other to install, run, update and remove applications within Cozy. We've forked [Haibu](https://github.com/nodejitsu/haibu) to add custom options: more security (applications are run by separate users, restrict the access to the controller itself, ...), handling app authentification to the Data System, logging, etc.

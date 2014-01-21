@@ -8,10 +8,11 @@ toc: true
 
 # Contributing to Cozycloud
 
-You can contribute to Cozy in many ways, wether you are a NodeJS Ninja or a
-Net-Citizen willing to protect her/his privacy. All contributions are welcome!
+You can contribute to Cozy in many ways, whether you are a NodeJS Ninja or a
+Net-Citizen willing to protect her/his privacy, all contributions are welcome!
 Report a bug, submit a feature request or improve the documentation to ease
-self-hosting, translations, development of new applications...
+self-hosting, translations, developing new applications...
+
 **There's something for everyone!**
 
 Everything is free and open-source and hosted on
@@ -58,7 +59,7 @@ What's coming next? Here is what we plan to add (order is relevant). Feel free t
 
 ## Contributing to the core code
 
-These are explainations on how to test modifications done on the core modules:
+These are explanations on how to test modifications done on the core modules:
 Data System, Home, Controller or Proxy.
 
 1. Setup Vagrant
@@ -105,7 +106,7 @@ The --no-bin-links is needed because you can't symlink in the shared folder.
     ```
 
 6. On the host, browse to http://127.0.0.1:9104, register a user, and then check http://127.0.0.1:9104/#home.
-You should see logs popping up in your console. IF you are asked to login instead of register, use this fix :
+You should see logs popping up in your console. IF you are asked to login instead of registering, use this fix:
 
     ```sh
     Ctrl + C
@@ -117,7 +118,7 @@ You should see logs popping up in your console. IF you are asked to login instea
     node server
     ```
 
-7. Hack ! You should see the repository on your host system in the same directory where you did vagrant up.
+7. Hack ! You should see the repository on your host system in the same directory as where you did vagrant up.
 Use your favorite editor to edit the .coffee files. You will need to compile before seeing your changes.
 
     For server changes :

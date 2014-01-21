@@ -8,10 +8,11 @@ toc: true
 
 # The ODM for Data System API
 
-We've created a driver for JugglingDB, an ODM (Object Document Mapper) to eaasily work with Cozy Data System. This document will gives you the detailed API to use it, but you can already check [the tutorial](http://localhost:9778/hack/getting-started/play-with-data-system.html) where we introduce it in order to see a working example.
+We've created a driver for JugglingDB, an ODM (Object Document Mapper) to easily work with Cozy Data System. This document will gives you the detailed API to use it, but you can already check [the tutorial](/hack/getting-started/play-with-data-system.html) where we introduce it in order to see a working example.
 
 ## Generic note
-Depending on what do you use, you might want to install JugglingDB and the Cozy adapter in order to make it works. If you use a framework where it is integrated (like Americano with the Cozy plugin), refers to the framework's documentation too see how to boostrap it. Otherwise, you can follow the steps described in this section.
+Depending on what you use, you might want to install JugglingDB and the Cozy adapter in order to make it works. If you use a framework where it is integrated (like Americano with the Cozy plugin), refers to the framework's documentation too see how to boostrap it. Otherwise, you can follow the steps described in this section.
+
 
 ```bash
 npm install jugglindb jugglingdb-cozy-adapter --save

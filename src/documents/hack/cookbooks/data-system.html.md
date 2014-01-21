@@ -31,7 +31,7 @@ You will find HTTP status code for the response, here is what they mean:
 * 409: document already exists
 * 500: internal server error
 
-All the requests that mentions "Requires authentification and authorization" are likely to send 401 and 403 if the conditions are not met.
+All the requests that mention "Requires authentification and authorization" are likely to send 401 and 403 if the conditions are not met.
 See [troubleshootings](#troubleshootings) to understand what those error mean.
 
 ### Todo for this cookbook
@@ -39,7 +39,7 @@ See [troubleshootings](#troubleshootings) to understand what those error mean.
 
 ## Data API
 
-This API let you manage data with four common operations: create, read, update and delete but utiliy functions like exist, find or merge can also help you.
+This API lets you manage data with four common operations: create, read, update and delete but utiliy functions like exist, find or merge can also help you.
 
 ### Check the existence of a document
 ```http
@@ -240,7 +240,7 @@ Requires authentification and authorization.
 
 ## Attachments API
 
-Attachements are basically files attached to documents. It allows you file upload and download (e.g. music library application)
+Attachements are basically files attached to documents. It allows you to upload and download files (e.g. music library application)
 
 ### Save a file as attachement of a document
 ```http
@@ -396,7 +396,7 @@ dataSystem.post('/request/alarm/all/', function(err, res, body) {
 });
 ```
 
-More example and the complete documentation of request-json, please see the [github repository](http://github.com/mycozycloud/request-json/) of the module.
+For more examples and the complete documentation of request-json, please see the [github repository](http://github.com/mycozycloud/request-json/) of the module.
 
 
 <a name="troubleshootings"></a>

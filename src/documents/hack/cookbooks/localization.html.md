@@ -10,7 +10,7 @@ toc: true
 To improve your application user experience you might want to translate it (by yourself or by outsourcing contribution). This cookbook will provide you the information you need and give you the guidelines we use in Cozy apps. You are free to use your own, but if everyone follows the same rules contributions will be eased.
 
 ## Making your app translatable
-We didn't invented anything new here, we just made helper to ease the developer's life.
+We didn't invent anything new here, we just made helper to ease the developer's life.
 We'll use the final code of our tutorial to illustrate this cookbook. You can find it [here](https://github.com/mycozycloud/cozy-tutorial/tree/spa-final).
 
 NB: you can find the code of this tutorial [here](https://github.com/mycozycloud/cozy-tutorial/tree/localization)

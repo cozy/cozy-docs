@@ -9,14 +9,11 @@ toc: true
 # Tutorial 2: Play with the Data System
 
 We've just introduced you to the architecture of Cozy and you may want to know more about
-the Data System, and to play with it. Don't forget that if you are stuck or have
-any question, you can visit us on IRC (irc.freenode.org, #cozycloud).
+the Data System, and to play with it. Don't forget that if you are stuck or have any question, you can visit us on IRC (irc.freenode.org, #cozycloud).
 
 Just a quick reminder, the Data System (DS) allows you to access the database,
-the indexer and the file system. Technically speaking, it is a RESTful web
-application, meaning you can request it with a HTTP client.  It handles
-authorization and authentification for applications, meaning that user has to
-give his explicit agreement (during installation) to the app so it can access
+the indexer and the file system. Technically speaking, it is a RESTful web application, meaning you can request it with a HTTP client. It handles
+authorization and authentification for applications, meaning that user has to give his explicit agreement (during installation) to the app so it can access
 the data.
 
 ### What you will achieve
@@ -77,9 +74,7 @@ Bookmark = db.define('bookmarks', {
 });
 ```
 This defines a doctype in the data system. The doctype is a type of document
-(yup!) and is how data are structured inside Cozy. You can see them as SQL
-tables. There are already plenty of doctypes you can reuse. They are
-self-documented in the applications' code.  Now let's play with the data.
+(yup!) and is how data are structured inside Cozy. You can see them as SQL tables. There are already plenty of doctypes you can reuse. They are self-documented in the applications' code. Now let's play with the data.
 
 ### Adding and removing a bookmark
 ```javascript
@@ -164,7 +159,7 @@ app.get('/', function(req, res) {
 ```
 
 ## Permissions
-To retrieve the data from the Data System your application needs permissions.
+To retrieve the data from the Data System, your application needs permissions.
 You can declare permissions you need in the package.json file:
 
 ```json

@@ -15,10 +15,9 @@ Since Cozy is built on many software bricks, we wrapped it into an easy-to-use
 virtual machine, so you don't pollute your local system. That also means you can
 use the operation system you like (well, there are obviously issues on Windows)!
 
-
 ## Installing dependencies
 
-Before doing anything, install the fowlling:
+Before doing anything, install the following:
 
 ### For simple applications
 
@@ -38,7 +37,7 @@ here and jump to our [first tutorial](hack/getting-started/first-app.html).
 ### For applications that take advantage of the Data System
 
 #### VirtualBox (>= v4.3.0) (<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank">download</a>)
-Virtual Box allows you to run virtual machine on your computer. We use it
+Virtual Box allows you to run virtual machines on your computer. We use it
 indirectly with Vagrant to power our virtual machine.
 (Latest tested version: 4.3.0)
 
@@ -55,7 +54,8 @@ You will also need our tool:
 ``` bash
 npm install -g cozy
 ```
-The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also it can generate application skeletons from templates.
+
+The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also, it can generate application skeletons from templates.
 
 
 ### Initializing and starting the virtual machine
@@ -65,6 +65,7 @@ have a linux running on your computer with all a Cozy needs to work on already
 installed and configured.
 
 To help you managing the VM, the Cozy Manager comes to the rescue.
+
 Create a folder that will contain all your source code:
 ``` bash
 mkdir cozy-dev && cd cozy-dev
@@ -77,7 +78,7 @@ cozy dev:init
 This will download the base box file (~500MB) and a custom configuration ([see
 it on
 Github](https://github.com/mycozycloud/cozy-setup/blob/master/dev/Vagrantfile)).
-Then the VM will be created. The whole process will take you about 15 minutes
+Then the VM will be created. The whole process will take about 15 minutes
 (depending on your internet connection and your computer).
 
 Then you can start the VM and check that everything is running correctly.
@@ -91,10 +92,8 @@ because we don't update the base box each time we improve or fix a bug in the
 "core" of Cozy: ``` bash
 cozy dev:light-update
 ```
-
 You can go to `http://localhost:9104/` in order to see your Cozy running. You can also use
-it, but beware! The Cozy running in your virtual machine is in development mode,
-meaning that most of the security measures are disabled. Only use it for
+it, but beware! The Cozy running in your virtual machine is in development mode, meaning that most of the security measures are disabled. Only use it for
 testing purposes!
 
 We explain in detail how the Cozy Manager works in dedicated cookbook.
