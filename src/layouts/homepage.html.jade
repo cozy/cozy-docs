@@ -37,9 +37,16 @@ html(lang="en")
                         | and delete
                     h4
                         | Your web apps and your data on your hardware
-                    h4.special
-                        a(href="http://cozy.io/v1-snowden-release/").
-                            Cozy 1.0 Snowden release is available!
+                    p.
+                        Cozy allows you to turn your server
+                        in a kind of personal Google App Engine. Your
+                        calendars, contacts, files, mails... are all in the same
+                        place, at home.
+                    p.
+                        If you are a developer, 
+                        this platform is very new to you because you will be
+                        able to build easily web apps that reuse data from others. 
+
                     p.image-links
                         | images:&nbsp;
                         a(href="http://files.cozycloud.cc/cozycloud-virtualimage.zip")
@@ -63,45 +70,29 @@ html(lang="en")
                             | ?
                         )
                         |&nbsp;
-                    .image-links
-                        | newsletter:
-                        form(action="http://mycozycloud.us4.list-manage1.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=1f9ebbfb31",
-                             method="post",
-                             id="mc-embedded-subscribe-form",
-                             name="mc-embedded-subscribe-form",
-                             class="validate")
-                            input(type="email",
-                                  placeholder="email address",
-                                  id="mce-EMAIL",
-                                  class="search-query email",
-                                  name="EMAIL",
-                                  value="")
-                            button(class="btn btn-warning", id="mc-embedded-subscribe", name="subscribe", value="Subscribe", type="submit") subscribe
                     p.external-links.mt3
-                        a(href="https://github.com/mycozycloud/cozy-setup")
-                            | Github
                         a(href="https://demo.cozycloud.cc/")
                             | Demo
+                        a(href="https://github.com/mycozycloud/cozy-setup")
+                            | Github
                         a(href="https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud")
                             | Forum
         section#goals.line.social.txt-center.txt-black
             h1 Project goals
             .mod.w33.left
                 p Short term
-                p.smaller
-                    | Cozy will provide first-class agenda and contact applications, and
-                    a(href="http://www.mailpile.is/") &nbsp;Mailpile
-                    | &nbsp;will be integrated.
-                    | 25 apps will be made available and the Github repo will reach 500
-                    | stars.
+                p.smaller.
+                    All your calendars, contacts, files and mails are synced
+                    with all your devices. Apps from the community
+                    give you extra features: feed reader, personal finance
+                    management...
             .mod.w33.left
                 p Mid term
-                p.smaller
-                    | Cozy will be the perfect backend for&nbsp;
-                    a(href="http://www.mozilla.org/fr/firefox/os/") Firefox OS
-                    | ,&nbsp;and the application deployer will be based on
-                    a(href="http://www.docker.io/") &nbsp;Docker
-                    |.
+                p.smaller.
+                    The platform will be an awesome playground for developers.
+                    With their favorite language, they will build new tools that
+                    can play with existing apps and use a lot of data from the
+                    user.
             .mod.w33.left
                 p Long term
                 p.smaller
@@ -147,12 +138,14 @@ html(lang="en")
                 p
                     | Because of the numerous packages and process installed,
                     | we recommend you to install Cozy in a virtual machine or
-                    | in a
-                    a(href="/host/lxc.html") container.
+                    | in a&nbsp;
+                    a(href="/host/lxc.html") container
+                    |.
             .line.mt2
                 p
                     | Check our &nbsp;
-                    a(href="/host/install.html") full documentation.
+                    a(href="/host/install.html") full documentation
+                    |.
 
 
         section#developers.highlight
@@ -164,7 +157,7 @@ html(lang="en")
                         | Use our
                         | ready to-go templates and smooth deployment for your web app.
                     li
-                        | Write web apps that leverage the user' personal
+                        | Write web apps that leverage the user's personal
                         | data.
                     li Distribute them quickly to the community.
                    &nbsp;
@@ -192,7 +185,7 @@ html(lang="en")
             h3
                 | When you're done send us&nbsp;
                 a(href="mailto:contact@cozycloud.cc") an email
-                | ,&nbsp;and we will be gland to help you promote your app!
+                | ,&nbsp;and we will be glad to help you promote your app!
             .line.mt2
                 p
                     | For more details check our&nbsp;
@@ -358,7 +351,7 @@ html(lang="en")
             p
                 | Cozy Cloud is a young France-based startup. We are
                 | a&nbsp;
-                a(href="https://www.cozycloud.cc/team/") team of eight
+                a(href="https://www.cozycloud.cc/team/") team of six
                 | &nbsp;and we are supported by&nbsp;
                 a(href="http://webfwd.org") WebFWD
                 | , the Mozilla startup accelerator.
