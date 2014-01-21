@@ -19,46 +19,64 @@ html(lang='en')
 
   body
     .navbar.fixed
-        a.nav-logo.left(href="/")
-            img(src='/assets/images/happycloud.png', alt='Happy Cloud')
-        span.subtitle= document.title
-        a.right(href="/hack/getting-started/") hack
-        a.right(href="/host/install.html") host
+      a.nav-logo.left(href="/")
+          img(src='/assets/images/happycloud.png', alt='Happy Cloud')
+      span.subtitle
+        - var collectionName = "documents"
+        - if (document.category != null)
+          - collectionName = document.category + "Pages"
+        - items = generateMenu(document.url, collectionName)
+        - for item in items
+          - var className = ""
+          - if (item.state == "parent" || item.state == "current")
+            - className = 'current'
+          .breadcrumb-item(class="#{className}")
+            a(href="#{item.url}")= item.title
+            - if (item.children != null)
+              ul.menu-item
+                - for child in item.children
+                  li
+                    a(href="#{child.url}")= child.title
+
+      - var className = ""
+      - if(document.category == 'hack')
+        - className = 'selected'
+      .submenu-container.right(class="#{className}")
+        a(href="/hack/getting-started/") Hack
+
+      - var className = ""
+      - if(document.category == 'host')
+        - className = 'selected'
+      .submenu-container.right(class="#{className}")
+        a(href="/host/install.html") Host
 
     .wrapper
-      aside.mod.left.w25.aside
-        nav#navigation(role="navigation")
-          - var collectionName = "documents"
-          - if (document.category != null)
-            - collectionName = document.category + "Pages"
-          - endif
-          - items = generateMenu(document.url, collectionName)
-            ul.first-level
-              - var firstLevelClass = null
-              - for item in items
-                - if (item.state == "current" || item.state == "parent")
-                  - firstLevelClass = "big selected"
-                - else
-                  - firstLevelClass = "big"
-                - endif
-                  li(class="#{firstLevelClass}")
-                    a.label(href="#{item.url}")= item.title
-
+      .wrap-menu.w25.mod.left
+        &nbsp;
+        aside
+          - var hasToc = "";
+          - if (document.tableOfContents.length > 0)
+            - hasToc = "toc";
+          p.title(class="#{hasToc}")= document.title
+          nav#navigation(role="navigation")
+            ul.nav.first-level
+              - for item in document.tableOfContents
+                - var className = "big"
+                - if (document.tableOfContents.length == 1)
+                  - className = "big active"
+                - if(item.text != "")
+                  li(class="#{className}")
+                    a.label(href="##{item.id}")= item.text
                     - if (item.children != null)
-                      - if (item.state == "parent" || item.state == "current")
-                        ul.second-level
-                          - for child in item.children
-                            li.small
-                              - if (child.state == "current")
-                                a.label.selected(href="#{child.url}")= child.title
-                              - else
-                                a.label(href="#{child.url}")= child.title
-                              - endif
-                          - endfor
-                      - endif
-              - endfor
+                      ul.second-level
+                        - for child in item.children
+                          li.small
+                            a.label(href="##{child.id}")= child.text
 
-      #main.mod.pam(role="main").w75
+      - var className = "w75"
+      - if (document.tableOfContents.length == 0)
+        - className = "w80"
+      #main.mod.pam(role="main", class="#{className}")
         != content
 
       footer#footer.line.pam.row(role="contentinfo")
@@ -69,4 +87,5 @@ html(lang='en')
             | mailing-list
         a(href="https://cozycloud.cc") Cozy Cloud
 
-    != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/assets/javascripts/main.js']).toHTML()
+    != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
+

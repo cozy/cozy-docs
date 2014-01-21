@@ -24,7 +24,7 @@ docpadConfig = {
             @getCollection('html').findAllLive({isCategoryMaster:$exists:true})
 
     enabledPlugins:
-        "live-reload": false
+        "live-reload": true
 }
 
 # Export the DocPad Configuration

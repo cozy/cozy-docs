@@ -3,20 +3,21 @@ title: "Learn the Single Page App Way"
 layout: "default"
 category: "hack"
 menuOrder: 6
+toc: true
 ---
 
 # Learn the single page app way
 
-Until now we have built classic web applications: a server delivers HTML pages to the browser. This is a "multiple page application" approach, meaning that you have one HTML file for each page of your website.
+So far, we have built classic web applications in which a server delivers HTML pages to the browser. This is a "multiple page application" approach, meaning that you have one HTML file for each page of your website.
 
 Single page applications are made of one page and tons of JavaScript. While this is not a good news for some users (who likes to disable JavaScript), it offers the rest of your users the following advantages:
 
 * better user experience: it feels more like a native application
 * less network consumption: it only loads the needed data thanks to Ajax
-* better application architecture: you can build nice maintanable application by applying separation of concerns (MVC like stuff)
+* better application architecture: you can build nice maintainable application by applying separation of concerns (MVC like stuff)
 * the server is only a REST API, easy to request from the single page app or any other client (mobile!)
 
-If you want to know everything about single page app, we advise you to [check out this resource](http://singlepageappbook.com/) to learn more about Singe Page Apps.
+If you want to know everything about single page app, we advise you to [check out this resource](http://singlepageappbook.com/) in order to learn more about Singe Page Apps.
 
 From now on we'll use the SPA acronym to talk about Single Page Apps or everyone is going to shoot themselves.
 
@@ -46,11 +47,11 @@ cd client/
 npm install
 ```
 
-Note you perform have `npm install` twice. The client's one is for Brunch specific modules. We'll come back to what does Brunch soon.
+Note your command includes `npm install` twice. The client's one is for Brunch specific modules. We'll come back to what Brunch does soon.
 
 ## File structure of the bootstrap Backbone application
 
-You already know about the server part of the file structure so let's focus on the client/
+You already know about the server part of the file structure, so let's focus on the client folder.
 
 * client/
     * app/ - where you put your files while developping
@@ -69,21 +70,21 @@ You already know about the server part of the file structure so let's focus on t
     * config.js - Brunch configuration
     * package.json - Brunch modules to install
 
-There are two parts in the file structure: the "app" where you will write your code and "public" where Brunch will output everything you write correctly into one nice JavaScript file.
+There is two part in the file structure: the "app" where you will write your code, and "public" where Brunch will output everything you write correctly into one nice JavaScript file.
 
-Another important thing is that the folder structure is not **constrained at all**. It is a design choice from us and you can change the way you like, but don't forget to adjust the Brunch configuration then.
+Another important thing is that the folder structure is not **constrained at all**. It is a design choice from us and you can change the way you like, but don't forget to adjust the Brunch configuration afterwards.
 
-Now let's see what does do Brunch exactly.
+Now let's see what Brunch exactly does.
 
 ## Automatically build your application with Brunch
-Brunch gathers everything you will write in the app folder and wrap it with RequireJS (which allows you to use the "require" keyword) and put it all together in one JavaScript file.
+Brunch gathers everything you will write in the app folder and wrap it with RequireJS (which allows you to use the "require" keyword), and put it all together in one JavaScript file.
 
 It can also process your file to minify it (for example). If you want to write Coffee Script instead of JavaScript, Brunch will compile it for you. If you want to use Jade, it will compile it for you.
 You can use pretty much everything you want to for templates (Jade, Handlebars, Underscore, ...) or styles (Stylus, LESS, SASS, ...), just install the relevant node modules and adjust the configuration file.
 
 If you want to know everything about Brunch, please check out their [website](http://brunch.io/) (it is not mandatory for this tutorial though).
 
-Brunch is also awesome because it detects when a file changes and recompiles the code automatically so everything is smooth for you.
+Brunch is also awesome because it detects when a file changes and recompiles the code automatically, so everything is smooth for you.
 
 To start brunch, open a terminal:
 ```bash
@@ -91,7 +92,7 @@ cd tutorial-spa/client/
 brunch w
 ```
 
-From now you shouldn't be modifying a file outside the app/ directory.
+From now on, you shouldn't be modifying a file outside the app/ directory.
 
 
 ## Step 1: discovering Backbone
@@ -101,7 +102,7 @@ Backbone is a MVC framework for JavaScript that gives you evertyhing you might w
 
 As a result, your application will be made of:
 
-* a router that will allow you to handle multiple page in your single page app
+* a router that will allow you to handle multiple pages in your single page app
 * collections and models to store and manipulate your data
 * views to handle the logic of rendering the data
 * templates will represent the to-be-output HTML
@@ -109,7 +110,8 @@ As a result, your application will be made of:
 The glue is Backbone's observer/observable pattern that allows a lower coupling between each part.
 <br /><br />
 
-How is our template working? In the app/assets/index.html we load the JavaScript we need and call the "initialize" script. This last call makes sure that the DOM has been loaded and starts the Backbone application by creating and initializing the router.
+How does our template work? In the app/assets/index.html we load the JavaScript we need, and call the "initialize" script. This last action ensures sure that the DOM has been loaded and starts the Backbone application by creating and initializing the router.
+
 Then the router creates the main view and gives it the collection of bookmarks.
 Then the view is rendered. The render process is: load the template, put data in the template, add it to the DOM at the right place.
 
@@ -127,7 +129,7 @@ events: {
     "click #add-bookmark": "createBookmark"
 },
 ```
-This means that when the user clicks on the #add-bookmark button, the "createBookmark" callback will be called. So let's define the "createBookmark" function in the code:
+This means that when the user clicks on the #add-bookmark button, the "createBookmark" callback will be triggered. So let's define the "createBookmark" function in the code:
 
 ```javascript
 createBookmark: function(event) {
@@ -145,12 +147,12 @@ createBookmark: function(event) {
 }
 ```
 
-You will need the "Bookmark" class so put this at the top of the file:
+You will need the "Bookmark" class, so put this at the top of the file:
 ```javascript
 var Bookmark = require('../models/bookmark');
 ```
 
-If you try it, nothing will happen and it's normal. Let's bind the view to the collection so it can change when a new bookmark is created:
+If you try it, nothing will happen, and it's normal. Let's bind the view to the collection, so it can change when a new bookmark is created:
 
 ```javascript
 // initialize is automatically called once after the view is constructed
@@ -166,7 +168,9 @@ The new bookmark should now be displayed!
 
 ## Step 3: using a separate view for the bookmark
 If you want to fully take advantage of what Backbone offers you, you must think modular.
-We have a list of bookmarks and rendering them each time we add a new one could be a bottleneck one day. Also it could be better if we could manipulate each bookmark independently so a deletion would be dead easy to implement. Let's do this!
+
+We have a list of bookmarks and rendering them each time we add a new one could be a bottleneck one day. Also it could be better if we could manipulate each bookmark independently, so deletion would be dead easy to implement. Let's do this!
+
 
 Create a new view `app/views/bookmark.js`:
 ```javascript
@@ -218,9 +222,9 @@ onBookmarkAdded: function(bookmark) {
     this.$el.find('ul').append(bookmarkView.$el);
 }
 ```
-Everything should be working as before but each bookmark is rendered separately which also means they can be managed separately. Let's see how we can easily add the "delete" feature now.
+Everything should be working as before, but each bookmark is rendered separately, which also means they can be managed separately. Let's see how we can easily add the "delete" feature now.
 
-### Step 4: removing a bookmark
+## Step 4: removing a bookmark
 In the bookmark view, add the "delete" feature like we did earlier for the "create" one.
 
 ```javascript
@@ -237,10 +241,10 @@ deleteBookmark: function() {
 
 Note that the events declaration is reduced to the children of the view in the DOM so "a.delete" actually means (jQuery style): $(document).find('theview').find('a.delete').
 
-Your application is still useless (we came back in the first tutorial state :()) because the changes are not saved in the server. Let's fix this!
+Your application is still useless (we came back in the first tutorial state :(), because the changes are not saved in the server. Let's fix this!
 
 ## Step 5: binding your single page app with your server
-To achieve that we must tell Backbone collection where the server is and then create the right route on the server side.
+To achieve that we must tell the Backbone collection where the server is and then create the right route on the server side.
 
 ```javascript
 // app/collections/bookmarks.js
@@ -345,13 +349,14 @@ module.exports.delete = function(req, res) {
 You server is now a RESTful API that allows your single page app to request it easily thanks to Backbone.
 
 ## What's next?
-This tutorial doesn't cover every aspects and good practice of Backbone but it should give you a good insight into how you can build awesome single page apps.
+This tutorial doesn't cover every aspect and good practice of Backbone but it should give you good insight into how you can build awesome single page apps.
 
-We haven't talked about Cozy for a while but everything you've done until know should help you creating an (awesome) application for Cozy. There is more cool stuff you can do with Cozy and you can ask us on IRC or by email what the next steps are or just to get help from us.
+We haven't talked about Cozy for a while, but everything you've done until know should help you creating an (awesome) application for Cozy. There is more cool stuff you can do with Cozy and you can ask us on IRC or by email what the next steps are or just to get help from us.
 
 <br /><br />
 We are eager to see what application you will bring to the Cozy community, don't hesitate to show us your work!
 <br /><br />
 
 To go further in your study of Cozycloud, you can check out the [cookbooks](/hack/cookbooks/)!
-We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, chose the one you like or add your own.
+
+We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, choose the one you like, or add yours.

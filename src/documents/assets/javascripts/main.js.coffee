@@ -1,10 +1,7 @@
 $(document).ready ->
 
-    ###
-    $('nav li').click ->
-        $('nav li.selected').find('ul').hide()
-        $('nav li.selected').removeClass 'selected'
-        $(this).addClass 'selected'
+    # scroll spy management
+    $('body').scrollspy target: '#navigation'
+    $('body').on 'activate.bs.scrollspy', -> $(this).addClass 'active'
+    $(window).on 'load', -> $('body').scrollspy 'refresh'
 
-        $(this).find('ul').show()
-    ###

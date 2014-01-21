@@ -3,10 +3,11 @@ title: "Localize your applications"
 layout: "default"
 category: "hack"
 menuOrder: 3
+toc: true
 ---
 
 # Localize your applications
-To improve your application user experience you might want to translate it (by yourself or by getting external contributions). This cookbook will provide you with information you need and give you the guidelines we use in Cozy apps. You are free to use your own but if everyone follows the same rules contributions will be eased.
+To improve your application user experience you might want to translate it (by yourself or by outsourcing contribution). This cookbook will provide you the information you need and give you the guidelines we use in Cozy apps. You are free to use your own, but if everyone follows the same rules contributions will be eased.
 
 ## Making your app translatable
 We didn't invent anything new here, we just made helper to ease the developer's life.
@@ -20,7 +21,7 @@ First you need to add Polyglot to your client's vendor. [Polyglot](http://airbnb
 * make sure brunch is running, it will automatically add the library to the vendor.js file
 
 Next, create your "locales" files (one for each language) in your client. As an example, you can see how we did it for the ["Home" application](https://github.com/mycozycloud/cozy-home/tree/master/client/app/locales).
-We'll have english and french for our bookmark tutorial app:
+We'll have English and French for our bookmark tutorial app:
 ```javascript
 // client/app/locales/en.js
 module.exports = {
@@ -97,7 +98,7 @@ Then add the following to the 'common' section of your configuration (if you are
 // server/config.js
 require('cozy-i18n-helper').middleware
 ```
-It automatically retrieves the locale data of the cozy's user and create the route that will allow the client to get it. Don't forget to add the "CozyInstance" doctype to your application's permissions or you will get errors.
+It automatically retrieves the locale data of the cozy's user and create the route that will allow the client the get it. Don't forget to add the "CozyInstance" doctype to your application's permission, or you will get errors.
 
 Now you can change all the templates and view using the "t" function. Let's change `client/app/templates/home.hade` as an example:
 ```html
@@ -116,11 +117,10 @@ ul
 
 To learn all the great thing Polyglot can do (interpolation and pluralization), please [read its documentation](http://airbnb.github.io/polyglot.js/).
 
-<a name="summary"></a>
 If you want to test everything is working, go to http://localhost:9104/#account and change the language.
 
 ## Summary for translator contributors
-If you are not a developer but still want to help the community by adding translations, here is what should know/do. Let's say you want to add the german language to an application.
+If you are not a developer, but still want to help the community by adding tanslation, here what should know/do. Let's say you want to add the German language to an application.
 
 * the only technical requirement is git. If you don't know it and still want to help, we'll find another way (contact[at]cozycloud.cc).
 * get the application you want to translate on [Github](https://github.com/mycozycloud/)
@@ -130,7 +130,6 @@ If you are not a developer but still want to help the community by adding transl
 * commit your work
 * submit a pull request on github
 
-<a name="guidelines"></a>
 ## Localization guidelines
 This is how you should name the keys of your localization files:
 

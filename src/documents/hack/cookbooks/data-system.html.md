@@ -3,23 +3,23 @@ title: "The Data System API"
 layout: "default"
 category: "hack"
 menuOrder: 1
+toc: true
 ---
 
 # The Data System API
 
 The Data System API allows the access of the following:
 
-* the data themselves
+* the data itslef
 * the CouchDB views (through "requests")
 * the attachements (files)
 * the indexer
-* the accounts
 
 ## Generic notes
 
-All the responses body are encoded in JSON and all the data you send along requests should be encoded in JSON.
+All the responses' bodies are encoded in JSON and all the data you send along request should be encoded in JSON.
 
-You will find HTTP status code for response, here is what they mean:
+You will find HTTP status code for the response, here is what they mean:
 
 * 200: success
 * 201: success (and something has been created)
@@ -54,7 +54,7 @@ Response:
 ```
 Requires authentification and authorization.
 
-### Retrieving a document for a specific ID
+### Retrieving a document by ID
 ```http
 GET /data/:id/
 Param:
@@ -68,7 +68,7 @@ Response:
 ```
 Requires authentification and authorization.
 
-### Creating a document (automatically generates a new ID)
+### Creating (generates a new ID)
 ```http
 POST /data/
 Param:
@@ -81,7 +81,7 @@ Response:
 ```
 Requires authentification and authorization.
 
-### Creating a document (with specified ID)
+### Creating (with specified ID)
 ```http
 POST /data/:id/
 Param:
@@ -96,7 +96,7 @@ Response:
 ```
 Requires authentification and authorization.
 
-### Update a document (old version is fully overwritten)
+### Update (overwrite old version)
 ```http
 PUT /data/:id/
 Param:
@@ -111,7 +111,7 @@ Response
 ```
 Requires authentification and authorization.
 
-### Update or create a document (with specified ID)
+### Updating or creating (with specified ID)
 ```http
 PUT  /data/upsert/:id/
 Param:
@@ -140,7 +140,7 @@ Response
 ```
 Requires authentification and authorization.
 
-### Updating a document (only the given fields)
+### Updating (only the given fields)
 ```http
 PUT /data/merge/:id
 Param:
@@ -312,7 +312,7 @@ Response
     500: {error: "the error message"}
 ```
 
-### Searching 10 documents that match the best the query
+### Searching 10 documents that best match the query
 ```http
 POST /data/search/:type
 Param:
