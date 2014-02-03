@@ -86,7 +86,7 @@ Note.search("dragons", function(err, notes) {
 ```
 
 
-## Files/Attachements
+## Files
 
 ```javascript
 # Uploading/attaching a file to a document
