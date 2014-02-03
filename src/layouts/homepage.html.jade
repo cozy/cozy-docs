@@ -7,8 +7,8 @@ html(lang="en")
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos... there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/assets/css/home.css']).toHTML()
-        script(src='/vendors/javascripts/jquery-2.0.3.min.js')
-        script(type='text/javascript')
+        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
+        script(type='text/javascript').
           $(document).ready(function() {
              $(".diagbox").hover(function(event) {
                if($(window).width() > 800) {
@@ -21,7 +21,6 @@ html(lang="en")
             a(href="/")
                 img(src='/assets/images/happycloud.png', alt='Happy Cloud')
             a.right(href="/hack/getting-started/") hack
-            //-a.right(href="/del") use
             a.right(href="/host/install.html") host
 
         header.line.clearfix#header
@@ -43,9 +42,9 @@ html(lang="en")
                         calendars, contacts, files, mails... are all in the same
                         place, at home.
                     p.
-                        If you are a developer, 
+                        If you are a developer,
                         this platform is very new to you because you will be
-                        able to build easily web apps that reuse data from others. 
+                        able to build easily web apps that reuse data from others.
 
                     p.image-links
                         | images:&nbsp;
@@ -369,7 +368,7 @@ html(lang="en")
                 | (Flickr)
 
 
-        script(type='text/javascript')
+        script(type='text/javascript').
           var _paq = _paq || [];
           _paq.push(["trackPageView"]);
           _paq.push(["enableLinkTracking"]);

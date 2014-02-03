@@ -238,13 +238,15 @@ Response
 ```
 Requires authentification and authorization.
 
-## Attachments API
+## Files API
 
-Attachements are basically files attached to documents. It allows you to upload and download files (e.g. music library application)
+The Data System offers an API to upload/download files to the database (e.g. for a music library application).
 
-### Save a file as attachement of a document
+How does it work? Using the API you will attach a file to a document and retrieve it when needed. But behind the scene, a document is created with the doctype "Binary", so the same file can be reused by various applications in different context (e.g. music library application and files sync application). That's a technical detail you probably won't even have to deal with!
+
+### Save a file
 ```http
-POST /data/:id/attachments/
+POST /data/:id/binaries/
 Param:
   id: ID of the document the file will be attached to
   Body {
@@ -255,7 +257,7 @@ Response
   Status code: 201|400|404|500
   Body
     201: {success: true}
-    400: {error: "No file sent"}
+    400: {error: "no file sent"}
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
@@ -263,7 +265,7 @@ Requires authentification and authorization.
 
 ### Download an attached file
 ```http
-GET /data/:id/attachments/:name
+GET /data/:id/binaries/:name
 Param:
   id: ID of the document the file is attached to
   name: the file name
@@ -278,7 +280,7 @@ Requires authentification and authorization.
 
 ### Delete an attached file
 ```http
-DELETE /data/:id/attachments/:name
+DELETE /data/:id/binaries/:name
 Param:
   id: ID of the document the file is attached to
   name: the file name

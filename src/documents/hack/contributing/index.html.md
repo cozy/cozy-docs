@@ -66,20 +66,20 @@ Data System, Home, Controller or Proxy.
 
 2. Get the development virtual machine
 
-    ```sh
+    ```bash
     vagrant box add cozycloud-dev-latest http://files.cozycloud.cc/cozycloud-dev-latest.box
     ```
 
 3. Run the development virtual machine
 
-    ```sh
+    ```bash
     vagrant init cozycloud-dev-latest
     vagrant up
     ```
 
 4. Update it, if needed
 
-    ```sh
+    ```bash
     vagrant ssh
 
     sudo supervisorctl stop cozy-controller
@@ -97,7 +97,7 @@ Data System, Home, Controller or Proxy.
 5. Clone the repository you want to work with (home in this example), install and run it.
 The --no-bin-links is needed because you can't symlink in the shared folder.
 
-    ```sh
+    ```bash
     cd /vagrant/
     git clone https://github.com/mycozycloud/cozy-home
     cd /vagrant/cozy-home
@@ -108,7 +108,7 @@ The --no-bin-links is needed because you can't symlink in the shared folder.
 6. On the host, browse to http://127.0.0.1:9104, register a user, and then check http://127.0.0.1:9104/#home.
 You should see logs popping up in your console. IF you are asked to login instead of registering, use this fix:
 
-    ```sh
+    ```bash
     Ctrl + C
     sudo cozy-monitor start home
     cd /usr/local/cozy/apps/home/home/cozy-home/

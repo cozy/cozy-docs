@@ -59,6 +59,8 @@ you have previously downloaded):
 fab -H sudoer@ip install
 ```
 
+Where "sudoer" is a sudo user and "ip" your server IP.
+
 Enter your settings (such as domain name) when prompted by the installer.
 
 Be patient; some commands or app deployments can take some time. It
