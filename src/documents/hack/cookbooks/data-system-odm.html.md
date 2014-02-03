@@ -90,15 +90,26 @@ Note.search("dragons", function(err, notes) {
 
 ```javascript
 # Uploading/attaching a file to a document
-note.attachFile("./test.png", function(err) {
+note.attachBinary("./test.png", function(err) {
     console.log(err);
 });
 
-# Get file
-stream = note.getFile("test.png", functino(err) {
+# Get the file
+stream = note.getBinary("test.png", function(err) {
     console.log(err);
 });
 stream.pipe(fs.createWriteStream('./test.png'));
+
+# Save the file to the disk
+var path = "/tmp/test.png";
+note.saveBinary("test.png", path, function(err) {
+    console.log(err);
+});
+
+# Remove the file
+note.removeBinary("test.png", function(err) {
+    console.log(err);
+});
 ```
 
 ## Requests
