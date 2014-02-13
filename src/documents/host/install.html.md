@@ -10,14 +10,14 @@ toc: true
 
 ## Generic information
 ### Hardware requirements
-The CPU is not a limitation, Cozy can even run on RaspberryPi.
+The CPU is not a limitation; Cozy can even run on RaspberryPi.
 
-#### Mininum
-* RAM: 512MB (it allows to have 4 apps running simultaneously)
-* Disk space: 2GB
+#### Minimum
+* RAM: 512MB (it allows to have 4 apps running simultaneously).
+* Disk space: 2GB.
 
 #### Recommended
-* RAM: 1024 Mo (it allows to have 10 apps simultaneously).
+* RAM: 1024 Mo (it allows to have 10 apps running simultaneously).
 * Disk space: a lot of space to store all your files.
 
 ### About security in pre-installed images
@@ -29,14 +29,14 @@ wget https://raw.github.com/mycozycloud/cozy-setup/master/fabfile.py
 fab -H user@ip reset_security_tokens
 ```
 
-You should also change the superuser credentials and by the way, you should not user a password but a SSH key to connect to your Cozy. Please see [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password) to help you.
+You should also change the superuser credentials (and by the way, you should not user a password but a SSH key to connect to your Cozy). Please refer to [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password).
 
 
 ## Manual installation
 
 ### Use our script
 
-On your local machine install Fabric and fabtools:
+On your local machine, install Fabric and fabtools:
 
 ```bash
 apt-get install python python-pip python-dev software-properties-common
@@ -64,16 +64,16 @@ Where "sudoer" is a sudo user and "ip" your server IP.
 Enter your settings (such as domain name) when prompted by the installer.
 
 Be patient; some commands or app deployments can take some time. It
-depends on your network and hardware capabilities.
+depends on your network and hardware.
 
 #### About local installation
 
-To install Cozy locally, we recommend you to create a virtual machine,
-and then to run the fabfile script with your virtual machine as target.
+To install Cozy locally, we recommend you create a virtual machine,
+and then run the fabfile script with your virtual machine as target.
 This allows you to experiment with Cozy without installing numerous packages
 into your environment.
 
-The way to install it locally without VM or container is to run this command:
+To install it locally without VM or container, run this command:
 
 ```bash
 fab -H sudoer@localhost install
@@ -81,8 +81,8 @@ fab -H sudoer@localhost install
 
 #### Try Cozy with Vagrant
 
-If you want to use Vagrant to run Cozy Cloud Setup in a virtual machine
-we recommend you to use the Ubuntu 12.04 box. Be careful as the update will require that
+You can use Vagrant to run Cozy Cloud Setup in a virtual machine. To do so, 
+we recommend you use the Ubuntu 12.04 box. Be careful as the update will require that
 you configure your boot sequence. Choose the first filesystem that is offered, then click ok.
 
 http://files.vagrantup.com/precise64.box
@@ -90,8 +90,8 @@ http://files.vagrantup.com/precise64.box
 ### Test
 
 Once the installation is done, you can access https://IP:443 to create your Cozy
-main account. Be sure that you used the HTTPS protocol, if you just see the nginx
-welcome page.
+main account. If you're just seeing the nginx welcome page, make sure you're
+using the HTTPS protocol.
 
 ### What will this script install on your server?
 
@@ -108,24 +108,24 @@ The Cozy install script installs the following tools:
 * Cozy Home (web app)
 
 
-If you want to know more about how Cozy works, you can check our [architecture
+If you want to know more about how Cozy works, check out our [architecture
 page](https://github.com/mycozycloud/cozy-setup/wiki/Cozy-architecture).
 
 
 ### About virtual machines and containers
 
-Because of the numerous technologies involved, we recommend you to run the Cozy
+Because of the many technologies involved, we recommend you run the Cozy
 stack in an isolated virtual machine or in a container (OpenVz or LXC).
 
 ## Raspberry Pi image
 
-*Warning: For a production usage you have to change the superuser credentials,
+*Warning: For production use, you must change the superuser credentials,
 renew the SSL certificate, the database credentials and the controller token.*
 
 In order to run Cozy on your Raspberry Pi, the simplest way is to download our image and
 set it up on a SD card.
 
-For that, get the image archive:
+First, get the image archive:
 
 ```bash
 # Download the image (~ 1.5GB)
@@ -135,22 +135,22 @@ wget http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz
 tar -xvzf cozy-raspberrypi.im.tar.gz
 ```
 
-Next, find where is mounted your SDCard; let's assume it is on */dev/sdc*,
-then make a low level copy of the image to your card.
+Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
+then make a low-level dump of the image onto your card.
 
-WARNING: this operation will erase all previously stored data into the card.
+WARNING: this operation will erase all previously stored data on the card.
 
 ```bash
 sudo dd bs=4M if=/my/path/cozy-raspberry.im of=/dev/sdc
 ```
 
-Now insert the SD Card in your Raspberry Pi SD Card reader. Reboot your
-Raspberry, then you will be able to access to your Cozy through the port 443
+Now insert the SD card in your Raspberry Pi SD card reader. Reboot your
+Raspberry, and you will be able to access your Cozy through port 443
 (https protocol).
 
 ## Virtualbox image
 
-*Warning: For a production usage you have to change the superuser credentials,
+*Warning: For production use, you must change the superuser credentials,
 renew the SSL certificate, the database credentials and the controller token.*
 
 ### Download requirements
@@ -162,7 +162,7 @@ Virtual Machine for VirtualBox
 ### Import and try
 
 Import the image to Virtualbox and start it.
-You should be able to access to your Cozy through your browser by connecting to this URL:
+You should be able to access your Cozy through your browser by connecting to this URL:
 
 ```bash
 https://localhost:2223/
@@ -170,9 +170,9 @@ https://localhost:2223/
 
 ### Additional informations
 
-To access to the box shell use root/password as login and password.
+To access the box shell, use root/password as login and password.
 
-You can find the box ip with the `ifconfig` command.
+You can find the box' IP with the `ifconfig` command.
 
 You can connect through ssh with:
 
@@ -202,7 +202,7 @@ NB: Replace ctid by an available ctid (101, 102, etc.)
 
 ### With a configured network
 
-You will probably need to give access to your container from outside of your
+You will probably need to give access to your container from outside your
 host. Here is a way to do it:
 
 ```bash
@@ -227,7 +227,7 @@ Of course you can change 8888 by the value you want.
 
 
 Use the LXC webpanel to add and configure containers; it's very easy to use.
-For Ubuntu this can be installed this way:
+For Ubuntu this can be installed like so:
 
 ```bash
 sudo apt-get install -y lxc debootstrap bridge-utils
@@ -256,7 +256,7 @@ container:
 
 
 Exit your container. Now that it's set up, you should disable the LXC webpanel
-since, it's a security risk.
+since it's a security risk.
 
 ```bash
 sudo service lwp stop
