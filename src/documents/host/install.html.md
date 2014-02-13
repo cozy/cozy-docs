@@ -29,7 +29,7 @@ wget https://raw.github.com/mycozycloud/cozy-setup/master/fabfile.py
 fab -H user@ip reset_security_tokens
 ```
 
-You should also change the superuser credentials (and by the way, you should not user a password but a SSH key to connect to your Cozy). Please refer to [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password).
+You should also change the superuser credentials (and by the way, you should not use a password but a SSH key to connect to your Cozy). Please refer to [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password).
 
 
 ## Manual installation
