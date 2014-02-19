@@ -148,6 +148,8 @@ Now insert the SD card in your Raspberry Pi SD card reader. Reboot your
 Raspberry, and you will be able to access your Cozy through port 443
 (https protocol).
 
+If you want to login to the pi, use the default raspbian credentials ```pi``` and ```raspberry``` don't forget to change the password!
+
 ## Virtualbox image
 
 *Warning: For production use, you must change the superuser credentials,
