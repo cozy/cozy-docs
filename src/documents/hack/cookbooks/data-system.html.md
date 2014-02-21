@@ -10,9 +10,9 @@ toc: true
 
 The Data System API allows the access of the following:
 
-* the data itslef
+* the data itself
 * the CouchDB views (through "requests")
-* the attachements (files)
+* the attachments (files)
 * the indexer
 
 ## Generic notes
@@ -26,16 +26,16 @@ You will find HTTP status code for the response, here is what they mean:
 * 204: success (and something has been deleted)
 * 400: bad request
 * 401: unauthorized
-* 403: not authentificated
+* 403: not authenticated
 * 404: document not found
 * 409: document already exists
 * 500: internal server error
 
-All the requests that mention "Requires authentification and authorization" are likely to send 401 and 403 if the conditions are not met.
+All the requests that mention "Requires authentication and authorization" are likely to send 401 and 403 if the conditions are not met.
 See [troubleshootings](#troubleshootings) to understand what those error mean.
 
 ### Todo for this cookbook
-* Adding documentation about authentification and authorization process
+* Adding documentation about authentication and authorization process
 
 ## Data API
 
@@ -52,7 +52,7 @@ Response:
     200: {exist: true|false}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Retrieving a document by ID
 ```http
@@ -66,7 +66,7 @@ Response:
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Creating (generates a new ID)
 ```http
@@ -79,7 +79,7 @@ Response:
     201: {"_id": the document ID}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Creating (with specified ID)
 ```http
@@ -94,7 +94,7 @@ Response:
     409: {error: "The document exists"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Update (overwrite old version)
 ```http
@@ -109,7 +109,7 @@ Response
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Updating or creating (with specified ID)
 ```http
@@ -124,7 +124,7 @@ Response
     201: {"_id": the document ID}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Deleting a document
 ```http
@@ -138,7 +138,7 @@ Response
     404: {error: "not found"}
     500: {error: "the message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Updating (only the given fields)
 ```http
@@ -151,7 +151,7 @@ Response
     200: {success: true}
     500: {error: "the message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ## Request API
 
@@ -179,7 +179,7 @@ Response
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Create or update a view
 ```http
@@ -197,7 +197,7 @@ Response
     200: {success: true}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Delete all the docs returned by the specified view
 ```http
@@ -221,7 +221,7 @@ Response
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Delete the view
 ```http
@@ -236,7 +236,7 @@ Response
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ## Files API
 
@@ -261,7 +261,7 @@ Response
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Download an attached file
 ```http
@@ -276,7 +276,7 @@ Response
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ### Delete an attached file
 ```http
@@ -291,7 +291,7 @@ Response
     404: {error: "not found"}
     500: {error: "the error message"}
 ```
-Requires authentification and authorization.
+Requires authentication and authorization.
 
 ## Indexer API
 
@@ -406,5 +406,5 @@ For more examples and the complete documentation of request-json, please see the
 
 Coming soon...
 
-## Authentification and authorization
+## authentication and authorization
 Coming soon...

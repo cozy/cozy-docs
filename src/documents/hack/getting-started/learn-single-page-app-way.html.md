@@ -54,7 +54,7 @@ Note your command includes `npm install` twice. The client's one is for Brunch s
 You already know about the server part of the file structure, so let's focus on the client folder.
 
 * client/
-    * app/ - where you put your files while developping
+    * app/ - where you put your files while developing
         * assets/ - all your static assets: images, fonts, ...
             * index.html the entrance point of your application
         * collections/
@@ -66,7 +66,7 @@ You already know about the server part of the file structure, so let's focus on 
         * router.js - the Backbone router
     * public/ - where the "built" files are
     * vendor/
-        * scripts/ - the JS librairies we need
+        * scripts/ - the JS libraries we need
     * config.js - Brunch configuration
     * package.json - Brunch modules to install
 
