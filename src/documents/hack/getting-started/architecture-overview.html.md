@@ -23,7 +23,7 @@ Cozy is made of three different layers:
 ## The Proxy
 ([Github repository](https://github.com/mycozycloud/cozy-proxy/))
 
-The proxy main job is handling the authentification and authorization to the Cozy. It is the application that manage registration, login, logout and password reset.
+The proxy main job is handling the authentication and authorization to the Cozy. It is the application that manage registration, login, logout and password reset.
 
 It also handles all the routing of Cozy (to send the right request to the right application).
 
@@ -35,7 +35,7 @@ You may already know what a PaaS is: an execution environment for applications.
 
 A personal PaaS is a personal execution environment for personal applications collaborating around personal data. You got it, a pPaaS is all about the user!
 
-Technically, the "controller" and the "home application" play with each other to install, run, update and remove applications within Cozy. We've forked [Haibu](https://github.com/nodejitsu/haibu) to add custom options: more security (applications are run by separate users, restrict the access to the controller itself, ...), handling app authentification to the Data System, logging, etc.
+Technically, the "controller" and the "home application" play with each other to install, run, update and remove applications within Cozy. We've forked [Haibu](https://github.com/nodejitsu/haibu) to add custom options: more security (applications are run by separate users, restrict the access to the controller itself, ...), handling app authentication to the Data System, logging, etc.
 
 The [cozy-controller](https://github.com/mycozycloud/cozy-controller/) can also be used through a dedicated tool, the [cozy-monitor](https://github.com/mycozycloud/cozy-monitor/). You shouldn't be worried too much about it since it is unlikely you will one day use it (except if you host your own Cozy or are willing to contribute to the core).
 
@@ -58,7 +58,7 @@ You can find the complete API and details about the Data System on the dedicated
 
 ## What you should remember
 As a developer, you are going to create an application that will be run by Cozy's pPaaS. That application will access the data through the Data System.
-Also, you won't have to bother about user authentification and authorization because it is all handled by the Proxy.
+Also, you won't have to bother about user authentication and authorization because it is all handled by the Proxy.
 
 Keep in mind you develop for a **personal** environment, which is not something we are used to at first, but it only changes the relation to data we had until now!
 

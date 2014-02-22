@@ -46,7 +46,7 @@ What's coming next? Here is what we plan to add (order is relevant). Feel free t
 
 * cookbook: how to deploy a cozy app (permissions, ...)
 * data system's [current documentation](https://github.com/mycozycloud/cozy-data-system/wiki/)
-* data system's API cookbook: adding the authentification and authorization section
+* data system's API cookbook: adding the authentication and authorization section
 * cookbook: how to make your app notified by data system's changes in realtime
 * cookbook: how to add Cozy notifications from your app
 * cookbook: how to send emails from your app
@@ -54,7 +54,7 @@ What's coming next? Here is what we plan to add (order is relevant). Feel free t
 * cookbook: cozy-manager documentation
 * cookbook: resetting cozy
 * cookbook: everything about security in Cozy
-* cookbook: unit and funcitonal testing
+* cookbook: unit and functional testing
 * cookbook: how to easily manage the fixtures with cozy-fixtures
 
 ## Contributing to the core code
