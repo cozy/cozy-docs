@@ -10,17 +10,21 @@ toc: true
 
 ## Generic information
 ### Hardware requirements
+
 The CPU is not a limitation; Cozy can even run on RaspberryPi.
 
 #### Minimum
+
 * RAM: 512MB (it allows to have 4 apps running simultaneously).
 * Disk space: 2GB.
 
 #### Recommended
+
 * RAM: 1024 Mo (it allows to have 10 apps running simultaneously).
 * Disk space: a lot of space to store all your files.
 
 ### About security in pre-installed images
+
 For a production usage, you MUST renew the SSL certificate, reset the database credentials and reset the controller token.
 
 For this purpose, use the following command:
@@ -301,7 +305,3 @@ Restart nginx, and your Cozy should be accessible at http://cloud.myhost.com
 ## Hosting services
 ### Cozycloud
 [Cozycloud](https://cozycloud.cc) is the maintainer of the Cozy project.
-
-
-
-

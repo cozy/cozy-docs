@@ -43,6 +43,13 @@ html(lang="en")
                             | Github
                         a(href="https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud")
                             | Forum
+                    p.warning
+                        | Application installation from the Cozy is broken since
+                        | the Node Package Manager changes its certificate
+                        | policy. Here is the&nbsp;
+                        a(href="/host/npm-fix.html") fix
+                        | &nbsp;to run on your setup or on your
+                        | image after installation.
                     p.
                         Cozy allows you to turn your server
                         in a kind of personal Google App Engine. Your
@@ -75,7 +82,9 @@ html(lang="en")
                         a(href="http://cozy.io/host/install.html#openvz-image")
                             | ?
                         )
-                        |&nbsp;
+                        |,&nbsp;
+                        a(href="http://files.cozycloud.cc/cozy-cubieboard2.im.tar.gz")
+                            | Cubieboard2
         section#social.line.social.center.txt-black
             h1 What people say
             .mod.w33.left
