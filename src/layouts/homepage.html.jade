@@ -37,19 +37,12 @@ html(lang="en")
                     h4
                         | Your web apps and your data on your hardware
                     p.external-links.mt3
-                        a.action(href="https://demo.cozycloud.cc/")
+                        a(href="https://demo.cozycloud.cc/")
                             | Demo
                         a(href="https://github.com/mycozycloud/cozy-setup")
                             | Github
                         a(href="https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud")
                             | Forum
-                    p.warning
-                        | Application installation from the Cozy is broken since
-                        | the Node Package Manager changes its certificate
-                        | policy. Here is the&nbsp;
-                        a(href="/host/npm-fix.html") fix
-                        | &nbsp;to run on your setup or on your
-                        | image after installation.
                     p.
                         Cozy allows you to turn your server
                         in a kind of personal Google App Engine. Your
@@ -67,24 +60,35 @@ html(lang="en")
                         | &nbsp;(
                         a(href="http://cozy.io/host/install.html#virtualbox-image")
                             | ?
-                        )
-                        |,&nbsp;
+                        ),
+                        |&nbsp;
                         a(href="http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz")
                             | Raspberry Pi
                         | &nbsp;(
                         a(href="http://cozy.io/host/install.html#raspberry-pi-image")
                             | ?
-                        )
-                        |,&nbsp;
+                        ),
+                        |&nbsp;
                         a(href="http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar")
                             | OpenVZ
                         | &nbsp;(
                         a(href="http://cozy.io/host/install.html#openvz-image")
                             | ?
-                        )
-                        |,&nbsp;
+                        ),
+                        |&nbsp;
                         a(href="http://files.cozycloud.cc/cozy-cubieboard2.im.tar.gz")
                             | Cubieboard2
+                        | &nbsp;(
+                        a(href="http://cozy.io/host/install.html#cubieboard2")
+                            | ?
+                        ),
+                        |&nbsp;
+                        a(href="http://files.cozycloud.cc/cozy-cubietruck.im.tar.gz")
+                            | Cubietruck
+                        | &nbsp;(
+                        a(href="http://cozy.io/host/install.html#cubietruck")
+                            | ?
+                        )
         section#social.line.social.center.txt-black
             h1 What people say
             .mod.w33.left
