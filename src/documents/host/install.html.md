@@ -142,6 +142,9 @@ tar -xvzf cozy-raspberrypi.im.tar.gz
 Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
 then make a low-level dump of the image onto your card.
 
+NB: SD Class 10 card are recommended for better performance. It is based on the 
+[Cubian](http://cubian.org/) distribution.
+
 WARNING: this operation will erase all previously stored data on the card.
 
 ```bash
@@ -149,7 +152,7 @@ sudo dd bs=4M if=/my/path/cozy-raspberry.im of=/dev/sdc
 ```
 
 Now insert the SD card in your Raspberry Pi SD card reader. Reboot your
-Raspberry, and you will be able to access your Cozy through port 443
+Cubietruck, and you will be able to access your Cozy through port 443
 (https protocol).
 
 If you want to login to the pi, use the default raspbian credentials ```pi```
@@ -159,6 +162,85 @@ tokens](http://cozy.io/host/install.html#about-security-in-pre-installed-images)
 
 NB: The keyboard layout is
 azerty, so the a is switched with the q. We'll change that soon.
+
+## Cubieboard2 image
+
+*Warning: For production use, you must change the superuser credentials,
+renew the SSL certificate, the database credentials and the controller token.*
+
+In order to run Cozy on your Cubieboard2, the simplest way is to download our
+image and set it up on a SD card.
+
+First, get the image archive:
+
+```bash
+# Download the image (~ 1.5GB)
+wget http://files.cozycloud.cc/cozy-cubieboard2.im.tar.gz
+
+# Uncompress it
+tar -xvzf cozy-cubieboard2.im.tar.gz
+```
+
+Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
+then make a low-level dump of the image onto your card.
+
+NB: SD Class 10 card are recommended for better performance.
+
+WARNING: this operation will erase all previously stored data on the card.
+
+```bash
+sudo dd bs=4M if=/my/path/cozy-cubieboard2.im of=/dev/sdc
+```
+
+Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
+Raspberry, and you will be able to access your Cozy through port 443
+(https protocol).
+
+If you want to login to the board, use the default Cubian credentials ```cubie```
+and ```cubie```. By the way, don't forget to change the password and to
+[reset the security
+tokens](http://cozy.io/host/install.html#about-security-in-pre-installed-images)!
+
+## Cubietruck image
+
+*Warning: For production use, you must change the superuser credentials,
+renew the SSL certificate, the database credentials and the controller token.*
+
+In order to run Cozy on your Cubietruck, the simplest way is to download our
+image and set it up on a SD card. It is based on the 
+[Cubian](http://cubian.org/) distribution.
+
+First, get the image archive:
+
+```bash
+# Download the image (~ 1.5GB)
+wget http://files.cozycloud.cc/cozy-cubietruck.im.tar.gz
+
+# Uncompress it
+tar -xvzf cozy-cubietruck.im.tar.gz
+```
+
+Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
+then make a low-level dump of the image onto your card.
+
+NB: SD Class 10 card are recommended for better performance.
+
+WARNING: this operation will erase all previously stored data on the card.
+
+```bash
+sudo dd bs=4M if=/my/path/cozy-cubietruck.im of=/dev/sdc
+```
+
+Now insert the SD card in your Cubietruck SD card reader. Reboot your
+Cubietruck, and you will be able to access your Cozy through port 443
+(https protocol).
+
+If you want to login to the board, use the default Cubian credentials ```cubie```
+and ```cubie```. By the way, don't forget to change the password and to
+[reset the security
+tokens](http://cozy.io/host/install.html#about-security-in-pre-installed-images)!
+
+
 
 ## Virtualbox image
 
