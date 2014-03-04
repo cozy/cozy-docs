@@ -152,7 +152,7 @@ sudo dd bs=4M if=/my/path/cozy-raspberry.im of=/dev/sdc
 ```
 
 Now insert the SD card in your Raspberry Pi SD card reader. Reboot your
-Cubietruck, and you will be able to access your Cozy through port 443
+Raspberry, and you will be able to access your Cozy through port 443
 (https protocol).
 
 If you want to login to the pi, use the default raspbian credentials ```pi```
@@ -193,7 +193,7 @@ sudo dd bs=4M if=/my/path/cozy-cubieboard2.im of=/dev/sdc
 ```
 
 Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
-Raspberry, and you will be able to access your Cozy through port 443
+Cubieboard, and you will be able to access your Cozy through port 443
 (https protocol).
 
 If you want to login to the board, use the default Cubian credentials ```cubie```
