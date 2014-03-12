@@ -55,18 +55,18 @@ Cozy stack means home, proxy and data-system. In others words, cozy stack corres
 cozy-monitor restart-cozy-stack
 ```
 ### Information
-Display installed application
+Display installed application with their status (up or down).
 
 ```bash
 cozy-monitor status
 ```
 
-Display cozy stack applications
+Display cozy stack modules version
 
 ```bash
 cozy-monitor versions
 ```
-Display applications versions
+Display installed applications versions
 
 ```bash
 cozy-monitor versions-apps
@@ -75,33 +75,34 @@ cozy-monitor versions-apps
 ## Applications management
 
 ### Installation
-Install application <app>
+Install given application. If it is not an official Cozy application you should
+give repo location too.
 
 ```bash
-cozy-monitor install <app>
+cozy-monitor install <app> [--repo <repo>]
 ```
 
 
 ### Manage
-Stop application <app>
+Stop application with given name.
 
 ```bash
 cozy-monitor stop <app>
 ```
 
-Start application <app>
+Start application with given name.
 
 ```bash
 cozy-monitor start <app>
 ```
 
-Restart application <app>
+Restart application with given name.
 
 ```bash
 cozy-monitor restart <app>
 ```
 
-Update application <app>
+Update application with given name (git clone + npm install + restart).
 
 ```bash
 cozy-monitor update <app>
@@ -113,7 +114,7 @@ Update all applications. This commands update cozy stack applications and others
 cozy-monitor update-all
 ```
 
-Brunch application <app>
+Run Brunch build for the client of given application.
 
 ```bash
 cozy-monitor brunch <app>
@@ -122,13 +123,13 @@ cozy-monitor brunch <app>
 
 ### Uninstallation
 
-Uninstall application <app>
+Uninstall application with given name.
 
 ```bash
 cozy-monitor uninstall <app>
 ```
 
-Uninstall all applications
+Uninstall all applications.
 
 ```bash
 cozy-monitor uninstall-all
@@ -138,43 +139,46 @@ Warning: this commands uninstall also cozy stack applications.
 ## Database management
 By default, database option is "cozy".
 
-Compact database
+Run compact CouchDB command on database (remove unused revisions).
+
 ```bash
 cozy-monitor compact [database]
 ```
 
-Compact a view
+Compact a given CouchDB view.
 
 ```bash
 cozy-monitor compact-view <view> [database]
 ```
 
-Compact all views
+Compact all views.
 
 ```bash
 cozy-monitor compact-all-view [database]
 ```
 
-Backup database
+Backup database by replicating it to another CouchDB instance.
+
 ```bash
 cozy-monitor backup [target]
 ```
 
+Clean database.
 
-Clean database
 ```bash
 cozy-monitor cleanup [database]
 ```
 
 ## Others
 
-Reset proxy routes
+Ask for proxy to reset its routes via the information stored in the Data
+System.
 
 ```bash
 cozy-monitor reset-proxy
 ```
 
-Launch script that comes with given application
+Launch script that comes with given application (deprecated).
 
 ```bash
 cozy-monitor script <app> <script> [argument]

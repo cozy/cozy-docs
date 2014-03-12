@@ -59,15 +59,16 @@ Cozy is based on Node.js applications. Node.js apps download their dependencies 
 
 ### Node.js
 
-Node.js requires a specific configuration to be built on an ARM processor. Actually, the version that is set up only supports Raspberry Pi like processors (ARMv6).
+Node.js requires a specific configuration to be run on Raspberry Pi. Install
+Node with the prebuilt package available in the Node.js source directory. About
+building Node.js on other ARM processors, we successfully built it on A20
+Allwinner. 
 
 ### Nginx
 
-We didn't find yet a good solution to setting up Nginx on a Raspberry. We are still
-working on it. If you want to help us with solving this issue, feel free to
-contribute!
-
-Here is a good tutorial to install Nginx on your Raspberry Pi: http://virtualitblog.blogspot.fr/2013/05/install-nginx-141-raspberry-pi.html
+Here is a good tutorial to install Nginx on your Raspberry Pi:
+http://virtualitblog.blogspot.fr/2013/05/install-nginx-141-raspberry-pi.html .
+It works only for Debian based distributions.
 
 Package can be downloaded there: http://nginx.org/packages/debian/pool/nginx/n/nginx/
 
