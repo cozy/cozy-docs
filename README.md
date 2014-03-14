@@ -1,18 +1,48 @@
-# Description
+# [Cozy](http://cozy.io) Docs
 
-The Cozy documentation powered by [DocPad](http://docpad.org).
+Cozy Docs is the source respository for the [cozy.io](http://cozy.io) website.
 
-See http://cozy.io/ to browse the master version of the doc.
+## Install
 
-# About Cozy
+## Contribution
 
-Cozy is the personal server for everyone. It allows you to install your every day web applications
-easily on your server, a single place you control. This means you can manage
-efficiently your data while protecting your privacy without technical skills.
+Any contribution about the documentation is welcome: typos, new way to install,
+additional information, etc.
 
-More informations and hosting services on:
-http://cozycloud.cc
+## Hack
 
-# Cozy on IRC
+To get the source and see the results of your change run the following
+commands:
 
-Feel free to check out our IRC channel (#cozycloud at freenode.net) if you have any technical issues/inquiries or simply to speak about Cozy cloud in general.
+    git clone https://github.com/mycozycloud/cozy-docs.git
+    cd cozy-docs
+    npm install
+    docpad run
+
+See the result on http://localhost:9778/
+
+## Icons
+
+by [iconmonstr](http://iconmonstr.com/)
+
+## License
+
+Cozy Home is developed by Cozy Cloud and distributed under the AGPL v3 license.
+
+## What is Cozy?
+
+![Cozy Logo](https://raw.github.com/mycozycloud/cozy-setup/gh-pages/assets/images/happycloud.png)
+
+[Cozy](http://cozy.io) is a platform that brings all your web services in the
+same private space.  With it, your web apps and your devices can share data
+easily, providing you with a new experience. You can install Cozy on your own
+hardware where no one profiles you. 
+
+## Community 
+
+You can reach the Cozy Community by:
+
+* Chatting with us on IRC #cozycloud on irc.freenode.net
+* Posting on our [Forum](https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud)
+* Posting issues on the [Github repos](https://github.com/mycozycloud/)
+* Mentioning us on [Twitter](http://twitter.com/mycozycloud)
