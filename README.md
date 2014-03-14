@@ -2,8 +2,6 @@
 
 Cozy Docs is the source respository for the [cozy.io](http://cozy.io) website.
 
-## Install
-
 ## Contribution
 
 Any contribution about the documentation is welcome: typos, new way to install,
