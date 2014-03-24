@@ -15,7 +15,11 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 ## API
 * [Data System API](/hack/cookbooks/data-system.html)
 * [ODM for Data System API](/hack/cookbooks/data-system-odm.html)
+
+## General development cookbooks
+* [Deploy your application](/hack/cookbooks/deploy.html)
 * [Localize your application](/hack/cookbooks/localization.html)
+* [Using nodemon to auto-refresh the server on code change](/hack/cookbooks/nodemon-server-auto-refresh-on-change.html)
 
 ## Coming soon...
 
