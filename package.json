@@ -1,7 +1,14 @@
 {
   "name": "cozy-docs",
   "version": "0.0.1",
-  "description": "Cozy documentation",
+  "description": "Source for the Cozy.io website",
+  "author": "Cozy Cloud <contact@cozycloud.cc> (http://cozycloud.cc)",
+  "licenses": [
+    {
+      "type": "AGPL v3",
+      "url": "http://www.gnu.org/licenses/agpl-3.0.html"
+    }
+  ],
   "engines": {
     "node": "0.10",
     "npm": "1.3"

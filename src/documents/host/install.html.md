@@ -4,6 +4,7 @@ layout: "default"
 category: "host"
 menuOrder: 0
 toc: true
+urls: ["/host/"]
 ---
 
 # Installing Cozy
