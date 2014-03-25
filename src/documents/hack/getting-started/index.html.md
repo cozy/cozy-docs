@@ -3,6 +3,7 @@ title: "Getting started"
 layout: "default"
 category: "hack"
 menuOrder: 0
+urls: ["/hack/"]
 ---
 
 # Getting Started
