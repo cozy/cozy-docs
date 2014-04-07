@@ -21,7 +21,7 @@ Before doing anything, install the following:
 
 ### For simple applications
 
-#### Node.js (v0.8.20) ([download](http://blog.nodejs.org/2013/02/15/node-v0-8-20-stable/))
+#### Node.js (v0.10.26) ([download](http://blog.nodejs.org/2014/02/18/node-v0-10-26-stable/))
 Node.js powers awesome tools that we use to develop apps. We also wrote a tool
 to manage the virtual machine more easily.
 
