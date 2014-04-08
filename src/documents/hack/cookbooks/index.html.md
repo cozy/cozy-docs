@@ -23,6 +23,8 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 
 ## Reference
 * [Components](/hack/cookbooks/components.html)
+* [Authentication and Authorization workflows](/hack/cookbooks/authentication-authorization-workflows.html)
+* [Encryption management](/hack/cookbooks/encryption.html)
 
 ## Coming soon...
 
