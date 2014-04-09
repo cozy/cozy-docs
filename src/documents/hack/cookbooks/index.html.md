@@ -21,6 +21,11 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 * [Localize your application](/hack/cookbooks/localization.html)
 * [Using nodemon to auto-refresh the server on code change](/hack/cookbooks/nodemon-server-auto-refresh-on-change.html)
 
+## Reference
+* [Components](/hack/cookbooks/components.html)
+* [Authentication and Authorization workflows](/hack/cookbooks/authentication-authorization-workflows.html)
+* [Encryption management](/hack/cookbooks/encryption.html)
+
 ## Coming soon...
 
 * putting some realtime into applications
