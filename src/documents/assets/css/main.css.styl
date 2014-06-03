@@ -23,6 +23,10 @@ body
     font-family main-body
     background-color darkgrey
 
+pre
+code
+    margin-bottom 15px
+
 .wrapper
     margin auto auto
     width 100%
@@ -183,6 +187,7 @@ aside
         display none
 
     p.title
+        display: none
         margin 0 0 5px 20px
         font-size 25px
         &:not(.toc)
@@ -293,6 +298,7 @@ aside
 
         code
             padding 5px
+            margin-bottom 15px
 
     ul
         margin .75em 0
@@ -307,12 +313,12 @@ aside
         margin-top -50px
         padding-top 10px + 50px
         margin-bottom 15px
-        font-family main-title
+        font-family main-body
         font-weight normal
 
     h2
         margin-bottom 20px
-        font-family main-title
+        font-family main-body
         font-weight normal
         font-size 30px
 
@@ -320,7 +326,9 @@ aside
         padding-top 50px + 50px
 
     h1
-        font-family main-title
+        font-family main-body
+        margin-bottom 10px
+        margin-top 0
 
     a
     a:visited
@@ -329,7 +337,7 @@ aside
     a:hover
         color orange - 40%
 
-    pre.highlighted
+    pre.highlight
         margin-top 0
         margin-bottom 15px
 
@@ -338,6 +346,7 @@ aside
             border-radius 10px
             line-height 20px
             margin-top 10px
+            margin-bottom 30px
 
 // Footer styles
 #footer
