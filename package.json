@@ -20,7 +20,7 @@
     "docpad-plugin-marked": "2.2.1",
     "docpad-plugin-coffeescript": "2.4.0",
     "docpad-plugin-menu": "2.1.0",
-    "docpad-plugin-highlightjs": "2.2.0",
+    "docpad-plugin-highlightjs": "2.2.1",
     "docpad-plugin-tableofcontents": "2.0.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
