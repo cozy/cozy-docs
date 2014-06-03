@@ -52,7 +52,7 @@ a custom CLI tool, so you will not manipulate it directly.
 You will also need our tool:
 
 ``` bash
-npm install -g cozy
+npm install -g cozy-dev
 ```
 
 The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also, it can generate application skeletons from templates.
@@ -73,7 +73,7 @@ mkdir cozy-dev && cd cozy-dev
 
 Now you can use the Cozy Manager to initialize the VM by running:
 ``` bash
-cozy dev:init
+cozy-dev dev:init
 ```
 This will download the base box file (~500MB) and a custom configuration ([see
 it on
@@ -83,14 +83,14 @@ Then the VM will be created. The whole process will take about 15 minutes
 
 Then you can start the VM and check that everything is running correctly.
 ``` bash
-cozy dev:start
-cozy dev:vm-status
+cozy-dev dev:start
+cozy-dev dev:vm-status
 ```
 
 We advise you to update the VM the first time you start it (and regularly),
 because we don't update the base box each time we improve or fix a bug in the
 "core" of Cozy: ``` bash
-cozy dev:light-update
+cozy-dev dev:light-update
 ```
 You can go to `http://localhost:9104/` in order to see your Cozy running. You can also use
 it, but beware! The Cozy running in your virtual machine is in development mode, meaning that most of the security measures are disabled. Only use it for
