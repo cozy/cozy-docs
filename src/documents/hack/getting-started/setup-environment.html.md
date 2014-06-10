@@ -89,9 +89,11 @@ cozy-dev dev:vm-status
 
 We advise you to update the VM the first time you start it (and regularly),
 because we don't update the base box each time we improve or fix a bug in the
-"core" of Cozy: ``` bash
-cozy-dev dev:light-update
+"core" of Cozy:
+```bash
+cozy-dev dev:update
 ```
+
 You can go to `http://localhost:9104/` in order to see your Cozy running. You can also use
 it, but beware! The Cozy running in your virtual machine is in development mode, meaning that most of the security measures are disabled. Only use it for
 testing purposes!
