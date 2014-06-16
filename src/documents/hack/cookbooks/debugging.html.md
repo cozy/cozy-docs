@@ -1,5 +1,5 @@
 ---
-title: "Debug your applications"
+title: "Debug your application"
 layout: "default"
 category: "hack"
 menuOrder: 4
@@ -7,13 +7,16 @@ toc: true
 ---
 
 # Debug your application
-You might want to debug your cozy application. In order to do that, you will need the `node-inspector` NPM package.
+
+You might want to debug your cozy application.
+
+**Note:** Cozy uses CoffeeScript almost everywhere, but so far the debugging remains in Javascript, be ready :-D
+
+## Install dependencies
 
 ```bash
 npm install -g node-inspector
 ```
-
-**Note:** Cozy uses CoffeeScript almost everywhere, but so far the debugging remains in Javascript, be ready :-D
 
 ## Start the debugger
 
