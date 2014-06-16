@@ -1,5 +1,5 @@
 ---
-title: "Deploy your applications"
+title: "Deploy your application"
 layout: "default"
 category: "hack"
 menuOrder: 4
