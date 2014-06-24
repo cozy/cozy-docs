@@ -20,6 +20,7 @@ html(lang="en")
         .navbar.fixed
             a(href="/")
                 img(src='/assets/images/happycloud.png', alt='Happy Cloud')
+            a.right(href="https://blog.cozycloud.cc") Blog
             a.right(href="/hack/getting-started/") Dev
             a.right(href="/host/install.html") Install
 
@@ -37,14 +38,16 @@ html(lang="en")
                     h4
                         | Your web apps and your data stored on your hardware
                         | and synced with your devices
-                    p.image-links.mt3
-                        a.button(href="http://files.cozycloud.cc/cozycloud-virtualimage.zip")
-                            | Try on your desktop with <strong>Virtualbox</strong>
-                        | &nbsp;&nbsp;&nbsp;
-                        a.button(href="http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz")
-                            |  Try on your <strong>Raspberry Pi</strong>
-                    p 
-                        a(href="/host/install.html") See installation instruction and other available images
+                    .image-links.mt3
+                        p
+                            a.button(href="http://files.cozycloud.cc/cozycloud-virtualimage.zip")
+                                | Try on your desktop with <strong>Virtualbox</strong>
+                            br
+                            br
+                            a.button(href="http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz")
+                                |  Try on your <strong>Raspberry Pi</strong>
+                        p 
+                            a(href="/host/install.html") See installation instruction and other available images
             .line.external-links
                 .mod.w33.left.pa2.txtcenter
                     h4 Simple and Intuitive
@@ -67,9 +70,9 @@ html(lang="en")
                 h4
                     | Enjoy your personal cloud
                 p.textcenter.pa2
-                    | Cozy is your best assistant. You can trust him 
-                    | to keep your privacy safe and to serve you. Here are its
-                    | main features:
+                    | Cozy is your best assistant that will simplify your life.
+                    | You can trust him to keep your privacy safe and to serve
+                    | you. Here are its main features:
                 .line.mt2
                     .mod.w50.left
                         p.txtcenter
@@ -117,7 +120,7 @@ html(lang="en")
                      p
                         strong 2000 apps are downloaded each month!
                  .line.txtcenter.mt6
-                     a.button.mt6(href="http://cozy.io/host/install.html") 
+                     a#install-button.button.mt6(href="http://cozy.io/host/install.html") 
                             | Install Cozy on your favorite hardware
 
 
@@ -295,7 +298,7 @@ html(lang="en")
                 a(href="https://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
 
-        section#social.line.social.center.txt-black
+        section#social.line.social.txtcenter.txt-black
             h1 What people say
             .mod.w33.left
                 img(src="/assets/images/twitter_04.png")

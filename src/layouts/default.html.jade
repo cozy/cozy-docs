@@ -38,6 +38,9 @@ html(lang='en')
                   li
                     a(href="#{child.url}")= child.title
 
+      .submenu-container.right(class="#{className}")
+         a(href="https://blog.cozycloud.cc") Blog
+
       - var className = ""
       - if(document.category == 'hack')
         - className = 'selected'
@@ -49,7 +52,6 @@ html(lang='en')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
         a(href="/host/install.html") Install
-
     .wrapper
       .wrap-menu.w25.mod.left
         &nbsp;

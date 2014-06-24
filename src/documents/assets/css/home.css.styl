@@ -161,14 +161,14 @@ button:active
 
     a.button:hover
         color: white
-        -webkit-transition:color 0.3s ease-in
-        -moz-transition:color 0.3s ease-in
-        -o-transition:color 0.3s ease-in
-        transition:color 0.3s ease-in
-        -webkit-transition:background-color 0.3s ease-in
-        -moz-transition:background-color 0.3s ease-in
-        -o-transition:background-color 0.3s ease-in
-        transition:background-color 0.3s ease-in
+        -webkit-transition:color 0.2s ease-in
+        -moz-transition:color 0.2s ease-in
+        -o-transition:color 0.2s ease-in
+        transition:color 0.2s ease-in
+        -webkit-transition:background-color 0.2s ease-in
+        -moz-transition:background-color 0.2s ease-in
+        -o-transition:background-color 0.2s ease-in
+        transition:background-color 0.2s ease-in
         background: blue
 
     a.button:focus
@@ -181,6 +181,14 @@ button:active
         a.button
             margin-top: 40px
             background-color: green
+
+            &:hover
+                background: green + 30%
+
+            &:focus
+            &:active
+                background: green - 20%
+                shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
     .external-links
         h4
@@ -295,6 +303,9 @@ button:active
         text-decoration: none
         font-size: 30px
         margin-top: 10px
+
+    a.right
+        font-size: 24px
 
     a:hover
         color: black
@@ -594,21 +605,54 @@ header
         .main-text
             padding-left: 0
 
+    #hack
+    #leave
+        .button
+            font-size: 26px
+    #why
+        #install-button
+            font-size: 26px
 
-@media (max-width: 860px)
+
+
+@media (max-width: 1400px)
+    .w50
+        padding: 5px
+
+@media (max-width: 960px)
+
+    .w50
+        padding: 0
+        width: 100%
+
+    .w33
+        width: 100%
 
     header
+        text-align: center
+
         h1
             font-size: 30px
 
         h4
             font-size: 24px
 
+    .simple
+        h4
+            font-size: 40px
+
+        p
+            font-size: 24px
+
     .highlight
 
         h4
-            text-align: left
-            font-size: 30px
+            font-size: 40px
+
+        .line
+            p
+                font-size: 22px
+
         li
             margin-top: 20px
             font-size: 24px
@@ -637,6 +681,14 @@ header
         p
             padding-left: 0
 
+    #community-cozy
+    #hack
+        img
+            width: 96px
+
+    #header
+        .image-links
+            display: none
 
 @media (max-width: 600px)
 
@@ -690,7 +742,24 @@ header
             width: 100%
 
 
-@media (max-width: 400px)
+@media (max-width: 480px)
+
+    #about
+    .simple
+    .highlight
+        .line
+            padding: 5px
+
+            p
+    #hack
+    #leave
+        .button
+            display: none
+            font-size: 16px
+    #why
+        #install-button
+            display: none
+            font-size: 16px
 
     button
         font-size: 16px
