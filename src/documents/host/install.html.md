@@ -30,7 +30,7 @@ For a production usage, you MUST renew the SSL certificate, reset the database c
 
 For this purpose, use the following command:
 ```bash
-wget https://raw.github.com/mycozycloud/cozy-setup/master/fabfile.py
+wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
 fab -H user@ip reset_security_tokens
 ```
 
@@ -52,7 +52,7 @@ Download our Fabric file (a script that will run commands on your remote
 server):
 
 ```bash
-wget https://raw.github.com/mycozycloud/cozy-setup/master/fabfile.py
+wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
 ```
 
 
@@ -114,7 +114,7 @@ The Cozy install script installs the following tools:
 
 
 If you want to know more about how Cozy works, check out our [architecture
-page](https://github.com/mycozycloud/cozy-setup/wiki/Cozy-architecture).
+page](/hack/getting-started/architecture-overview.html).
 
 
 ### About virtual machines and containers
