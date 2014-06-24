@@ -470,15 +470,23 @@ header
 
 #community-cozy
     background: url(/assets/images/community.jpg) no-repeat center center fixed
+
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
     margin: 0
 
-    .line
-        background: bluegreen
+    .line:first-child
+        background: rgba(85, 204, 85, 0.85)
         padding-bottom: 40px
+
+    .line
+        img
+            margin-bottom: 10px
+
+        a
+            text-decoration: none
 
 #partners
     background: url(/assets/images/handshake.jpg) no-repeat center center fixed
@@ -516,13 +524,13 @@ header
         box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
 #architecture
-    background: bluegreen
-    color: white
+    background: white
+    color: #333
 
     .diagbox
         cursor: pointer
         color: black
-        background: bluegreen + 60%
+        background: lightblue
         rounded-border: 15px
         text-align: center
         margin-top: 10px

@@ -35,11 +35,12 @@ html(lang="en")
                         | You Can Host, Hack
                         | and Delete
                     h4
-                        | Your web apps and your data on your hardware
+                        | Your web apps and your data stored on your hardware
+                        | and synced with your devices
                     p.image-links.mt3
                         a.button(href="http://files.cozycloud.cc/cozycloud-virtualimage.zip")
                             | Try on your desktop with <strong>Virtualbox</strong>
-                    p.image-links.mt3
+                        | &nbsp;&nbsp;&nbsp;
                         a.button(href="http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz")
                             |  Try on your <strong>Raspberry Pi</strong>
                     p 
@@ -110,8 +111,12 @@ html(lang="en")
                         p.pa2
                             | Cozy is expandable: you can install applications
                             | developed by the community: photo galery, feed
-                            | reader, task managers, etc.
+                            | reader, task managers, etc. 
+                            
                  .line.txtcenter
+                     p
+                        strong 2000 apps are downloaded each month!
+                 .line.txtcenter.mt6
                      a.button.mt6(href="http://cozy.io/host/install.html") 
                             | Install Cozy on your favorite hardware
 
@@ -154,97 +159,6 @@ html(lang="en")
                         | Write your web app in 30 minutes
 
 
-        //-section#community-cozy.highlight
-            //-.line
-                //-h4
-                    //-| Join our community
-                //-p
-                    //-| We will provide you with support. We'll be glad to hear
-                    //-| your thoughts about the project and try your brand new
-                    //-| app.
-                //-p
-                    //-a(href="http://webchat.freenode.net/?channels=cozycloud")
-                       //-| <strong>#cozycloud</strong> on irc.freenode.net
-                //-p
-                    //-a(href='https://groups.google.com/forum/#!forum/cozy-cloud')
-                       //-| Google Group (Mailing List)
-                //-p
-                    //-a(href='https://twitter.com/mycozycloud')
-                       //-| Twitter Feed
-
-        //-section#architecture.line.target.simple
-            //-.line
-                //-h2.icon-nav &nbsp;  Cozy is architectured like a PaaS
-                //-p
-                    //-| It manages and isolate your web apps. It offers them a
-                    //-| JSON data store, an indexer and a file system. So, they
-                    //-| keep independent while they can communicate together
-            //-.line
-                //-.line
-                    //-.mod.w100.diagbox
-                        //-div proxy
-                        //-p.w100
-                            //-| The proxy handles all user requests. It manages
-                            //-| the authentication and routes requests to the
-                            //-| right application.
-                //-.line.grid5
-                    //-.diagbox
-                        //-div home / controller
-                        //-p.w100
-                            //-| The home app is an UI for the
-                            //-| controller. It allows to install or remove
-                            //-| applications and to set user parameters.
-                    //-.diagbox
-                        //-div app1
-                        //-p.w100
-                            //-| This is an application provided by Cozy Cloud
-                            //-| or the community. It is spawned by the home
-                            //-| that finds the sources on a github repo.
-                    //-.diagbox
-                        //-div app2
-                        //-p.w100
-                            //-| Your choice: notes, mails, budget, sport coach...
-                    //-.diagbox(style='background: transparent') ...
-                    //-.diagbox
-                        //-div your app
-                        //-p.w100
-                            //-| This is an application you developed. You can spawn it like
-                            //-| any other applications.
-                //-.line
-                    //-.mod.w100.diagbox
-                        //-div data system
-                        //-p.w100
-                            //-| The data system is a layer between apps and data.
-                            //-| It manages application permissions and
-                            //-| provides a unified API to access to all kind of
-                            //-| data: files, documents or indexes.
-                            //-| It publishes changes, so that applications
-                            //-| can share data with each other.
-                //-.line.grid3
-                    //-.diagbox
-                        //-div database
-                        //-p.w100
-                            //-| This NoSQL storage stores documents as JSON
-                            //-| objects.
-                    //-.diagbox
-                        //-div file system
-                        //-p.w100
-                            //-| Files are stored directly in the database as
-                            //-| attachments of documents. A fuse implementation
-                            //-| is on the roadmap to make things smoother.
-                    //-.diagbox
-                        //-div indexer
-                        //-p.w100
-                            //-| A dedicated module
-                            //-| handles content indexation through a REST API.
-                            //-| It's your personal search engine.
-            //-.line.mt2
-                //-p
-                    //-| If you want to know more about our architecture
-                    //-| check the&nbsp;
-                    //-a(href="/hack") full documentation
-                    //-| .
-
         section#leave.highlight
             .line
                 h4
@@ -260,6 +174,96 @@ html(lang="en")
                 .txtcenter.mt3
                     a.button(href="/host/uninstall.html")
                         | Uninstall Cozy
+
+
+        section#architecture.line.target.simple
+            .line
+                h4 Cozy is architectured like a PaaS
+            .line.mt6
+                .line
+                    .mod.w100.diagbox
+                        div proxy
+                        p.w100
+                            | The proxy handles all user requests. It manages
+                            | the authentication and routes requests to the
+                            | right application.
+                .line.grid5
+                    .diagbox
+                        div home / controller
+                        p.w100
+                            | The home app is an UI for the
+                            | controller. It allows to install or remove
+                            | applications and to set user parameters.
+                    .diagbox
+                        div app1
+                        p.w100
+                            | This is an application provided by Cozy Cloud
+                            | or the community. It is spawned by the home
+                            | that finds the sources on a github repo.
+                    .diagbox
+                        div app2
+                        p.w100
+                            | Your choice: notes, mails, budget, sport coach...
+                    .diagbox(style='background: transparent') ...
+                    .diagbox
+                        div your app
+                        p.w100
+                            | This is an application you developed. You can spawn it like
+                            | any other applications.
+                .line
+                    .mod.w100.diagbox
+                        div data system
+                        p.w100
+                            | The data system is a layer between apps and data.
+                            | It manages application permissions and
+                            | provides a unified API to access to all kind of
+                            | data: files, documents or indexes.
+                            | It publishes changes, so that applications
+                            | can share data with each other.
+                .line.grid3
+                    .diagbox
+                        div database
+                        p.w100
+                            | This NoSQL storage stores documents as JSON
+                            | objects.
+                    .diagbox
+                        div file system
+                        p.w100
+                            | Files are stored directly in the database as
+                            | attachments of documents. A fuse implementation
+                            | is on the roadmap to make things smoother.
+                    .diagbox
+                        div indexer
+                        p.w100
+                            | A dedicated module
+                            | handles content indexation through a REST API.
+                            | It's your personal search engine.
+
+        section#community-cozy.highlight
+            .line
+                h4
+                    | Join our community
+                p
+                    | We will provide you with support. We'll be glad to hear
+                    | your thoughts about the project and try your brand new
+                    | app.
+                .line
+                    p.mod.w33.left
+                        a(href="http://webchat.freenode.net/?channels=cozycloud")
+                           img(src='/assets/images/irc-logo.png', alt='IRC Logo')
+                           br
+                           | <strong>#cozycloud</strong> on irc.freenode.net
+                    p.mod.w33.left
+                        a(href='https://groups.google.com/forum/#!forum/cozy-cloud')
+                           img(src='/assets/images/forum.png', alt='Forum Icon')
+                           br
+                           | Forum
+                    p.mod.w33.left
+                        a(href='https://twitter.com/mycozycloud')
+                           img(src='/assets/images/twitter.png', alt='Twitter Logo')
+                           br
+                           | Twitter
+
 
         section#about.line
             h2.icon-rate &nbsp; About
@@ -279,8 +283,17 @@ html(lang="en")
             p
                 | Photo Credits: Cozy Cloud, TechGenStaffer
                 | (Flickr), license Creative Commons
+                br
                 | Icons: iconmonstr and KNACSS
-
+            p.mt6.txtcenter
+                a.mr3(href="http://redecentralize.org/interviews/2014/01/30/11-benjamin-cozycloud.html")
+                    img(src='/assets/images/redecentralize-logo.png', alt='LinuxFR Logo')
+                | &nbsp;&nbsp;
+                a.mr3(href="http://linuxfr.org/news/cozy-un-cloud-personnel-que-l-on-peut-heberger-bidouiller-et-supprimeri", )
+                    img(src='/assets/images/linuxfr-logo.png', alt='LinuxFR Logo')
+                | &nbsp;&nbsp;
+                a(href="https://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
+                    img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
 
         section#social.line.social.center.txt-black
             h1 What people say
