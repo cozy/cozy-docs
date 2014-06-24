@@ -54,7 +54,7 @@ code
         word-wrap
 
         .breadcrumb-item
-            @media (max-width: 800px)
+            @media (max-width: 960px)
                 display none
 
             display inline-block
@@ -67,6 +67,10 @@ code
             position relative
             min-width 135px
             font-family main-title
+
+            @media (max-width: 1200px)
+                font-size 16px
+                min-width 90px
 
             a
                 border-left 1px solid transparent
