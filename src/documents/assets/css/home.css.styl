@@ -101,6 +101,9 @@ button:active
     outline: none
 
 .mt3
+    margin-top: 0px
+
+.mt3
     margin-top: 30px
 
 .mt6
@@ -178,9 +181,14 @@ button:active
         color: white
 
     .image-links
+        a
+            text-decoration: none
+            border-bottom: 1px solid #333
+
         a.button
             margin-top: 40px
             background-color: green
+            border-bottom: 0
 
             &:hover
                 background: green + 30%
@@ -409,11 +417,21 @@ header
         padding-bottom: 40px
         background-color: rgba(14, 113, 160, 0.85)
 
+        p
+            margin-top: 0
+            font-size: 20px
+
+        p.mt3
+            margin-top: 30px
+
+        .tagline
+            font-size: 26px
+
     .button
         background: orange
         text-decoration: none
         padding: 20px
-        font-size: 40px
+        font-size: 34px
         border-radius: 10px
         font-family: cool
 
@@ -422,7 +440,6 @@ header
 
     .button:active
         box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
-
 
 
 #developers
@@ -495,6 +512,7 @@ header
     .line
         img
             margin-bottom: 10px
+            width: 96px
 
         a
             text-decoration: none
@@ -519,6 +537,9 @@ header
 #hack
     padding-bottom: 60px
     background: blue
+
+    img
+        width: 96px
 
     .button
         background: blue - 30%
