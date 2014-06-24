@@ -15,12 +15,18 @@ rounded-border()
     font-family: cool
     src: url('/assets/fonts/signika-regular.ttf')
 
+@font-face
+    font-family: cool-light
+    src: url('/assets/fonts/signika-light.ttf')
+
 blue = #1babf4
-deepbluE = #34A6FF
+deepblue = #34A6FF
 black = #333
 orange = #FE8800
 lightblue = #BBE5F9
-
+lightorange = orange + 60%
+bluegreen = #FC9633
+green = #5C5
 
 p
     font-weight: bold
@@ -94,6 +100,12 @@ button:active
     color: white
     outline: none
 
+.mt3
+    margin-top: 30px
+
+.mt6
+    margin-top: 60px
+
 [class*="grid"] > *
     float: left
 
@@ -132,42 +144,50 @@ button:active
     a:visited
         color: white
 
-.external-links
-    height: 60px
+#header
 
-.external-links a
-    border: 0
-    background: lightblue
-    margin-right: 10px
-    font-size: 25px
-    padding: 13px
-    rounded-border: 5px
-    cursor: pointer
-    text-decoration: none
+    a.button
+        height: 60px
+        border: 0
+        background: lightblue - 25%
+        margin-right: 10px
+        font-size: 21px
+        padding: 13px
+        rounded-border: 5px
+        cursor: pointer
+        text-decoration: none
+        font-family: cool-light
+        color: white
 
-.external-links a.action
-    background: #47B447 + 10%
-    font-weight: bold
-    color: white
+    a.button:hover
+        color: white
+        -webkit-transition:color 0.3s ease-in
+        -moz-transition:color 0.3s ease-in
+        -o-transition:color 0.3s ease-in
+        transition:color 0.3s ease-in
+        -webkit-transition:background-color 0.3s ease-in
+        -moz-transition:background-color 0.3s ease-in
+        -o-transition:background-color 0.3s ease-in
+        transition:background-color 0.3s ease-in
+        background: blue
 
+    a.button:focus
+    a.button:active
+        background: blue - 20%
+        shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+        color: white
 
-.external-links a:hover
-    color: white
-    -webkit-transition:color 0.3s ease-in
-    -moz-transition:color 0.3s ease-in
-    -o-transition:color 0.3s ease-in
-    transition:color 0.3s ease-in
-    -webkit-transition:background-color 0.3s ease-in
-    -moz-transition:background-color 0.3s ease-in
-    -o-transition:background-color 0.3s ease-in
-    transition:background-color 0.3s ease-in
-    background: blue
+    .image-links
+        a.button
+            margin-top: 40px
+            background-color: green
 
-.external-links a:focus
-.external-links a:active
-    background: blue - 10%
-    shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
-    color: white
+    .external-links
+        h4
+            font-family: main-light
+            margin-top: 40px
+            margin-bottom: 0px
+       
 
 .code
     display: inline-block
@@ -208,28 +228,38 @@ button:active
     font-size: 18px
     margin-top: 40px
 
+.simple
+    padding-bottom: 40px
+
+    h4
+        margin-top: 40px
+        text-align: center
+        font-size: 60px
+
 .highlight
+
+
     .line
         text: center
         padding: 20px
-        opacity: 0.85
 
     p
         text-align: center
-        font-size: 18px
+        font-size: 26px
         margin-top: 40px
         margin-bottom: 0px
 
     h4
         margin-top: 40px
         text-align: center
-        font-size: 40px
+        font-size: 60px
 
     ul
         padding: 20px
         padding-top: 10px
         margin-left: 0
         padding-left: 0
+        font-size: 40px
 
     li
         margin-left: 0
@@ -358,14 +388,30 @@ header
         font-size: 16px
 
 #why
-    background: url(/assets/images/rasp-black.jpg) no-repeat center center fixed
+    background: url(/assets/images/board-01.jpg) no-repeat center center fixed
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
 
-    .line
-        background: #643
+    .line:first-child
+        padding-bottom: 40px
+        background-color: rgba(14, 113, 160, 0.85)
+
+    .button
+        background: orange
+        text-decoration: none
+        padding: 20px
+        font-size: 40px
+        border-radius: 10px
+        font-family: cool
+
+    .button:hover
+        background: orange + 20%
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+
 
 
 #developers
@@ -376,19 +422,38 @@ header
     background-size: cover
 
     .line
-        background: #334
+        background: lightblue - 60%
 
 
 #leave
-    opacity: 0.9
     background: url(/assets/images/freedom.jpg) no-repeat center center fixed
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
 
+    .line:first-child
+        background-color: rgba(255, 255, 255, 0.85)
+
     .line
-        background: lightblue - 60%
+        padding-bottom: 40px
+        background: white
+        color: black
+
+    .button
+        background: #333
+        text-decoration: none
+        padding: 20px
+        font-size: 30px
+        border-radius: 10px
+        font-family: main
+
+    .button:hover
+        background: #666
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+
 
 
 #paas
@@ -400,7 +465,7 @@ header
     background-size: cover
 
     .line
-        background: #334
+        background: lightblue - 60%
 
 
 #community-cozy
@@ -409,9 +474,11 @@ header
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
+    margin: 0
 
     .line
-        background: #643
+        background: bluegreen
+        padding-bottom: 40px
 
 #partners
     background: url(/assets/images/handshake.jpg) no-repeat center center fixed
@@ -431,21 +498,31 @@ header
         background: #CC5F00
 
 #hack
-    h3
-        font-weight: bold
-
+    padding-bottom: 60px
     background: blue
 
-    .code
+    .button
         background: blue - 30%
+        text-decoration: none
+        padding: 20px
+        font-size: 30px
+        border-radius: 10px
+        font-family: main
+
+    .button:hover
+        background: blue + 30%
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
 #architecture
-    background: blue
+    background: bluegreen
     color: white
 
     .diagbox
+        cursor: pointer
         color: black
-        background: lightblue
+        background: bluegreen + 60%
         rounded-border: 15px
         text-align: center
         margin-top: 10px
@@ -455,11 +532,6 @@ header
 
         p
             display: none
-
-
-
-#community
-    background: orange
 
 
 #delete
