@@ -11,16 +11,16 @@ To improve your application user experience you might want to translate it (by y
 
 ## Making your app translatable
 We didn't invent anything new here, we just made helper to ease the developer's life.
-We'll use the final code of our tutorial to illustrate this cookbook. You can find it [here](https://github.com/mycozycloud/cozy-tutorial/tree/spa-final).
+We'll use the final code of our tutorial to illustrate this cookbook. You can find it [here](https://github.com/cozy/cozy-tutorial/tree/spa-final).
 
-NB: you can find the code of this tutorial [here](https://github.com/mycozycloud/cozy-tutorial/tree/localization)
+NB: you can find the code of this tutorial [here](https://github.com/cozy/cozy-tutorial/tree/localization)
 
 First you need to add Polyglot to your client's vendor. [Polyglot](http://airbnb.github.io/polyglot.js/) is a "tiny l18n helper library written in JavaScript". It supports interpolation and pluralization.
 
 * download it and put it inside the client/vendors/scripts/ folder
 * make sure brunch is running, it will automatically add the library to the vendor.js file
 
-Next, create your "locales" files (one for each language) in your client. As an example, you can see how we did it for the ["Home" application](https://github.com/mycozycloud/cozy-home/tree/master/client/app/locales).
+Next, create your "locales" files (one for each language) in your client. As an example, you can see how we did it for the ["Home" application](https://github.com/cozy/cozy-home/tree/master/client/app/locales).
 We'll have English and French for our bookmark tutorial app:
 ```javascript
 // client/app/locales/en.js
@@ -122,8 +122,8 @@ If you want to test everything is working, go to http://localhost:9104/#account 
 ## Summary for translator contributors
 If you are not a developer, but still want to help the community by adding tanslation, here what should know/do. Let's say you want to add the German language to an application.
 
+* get the application you want to translate on [Github](https://github.com/cozy/)
 * the only technical requirement is git. If you don't know it and still want to help, we'll find another way (contact[at]cozycloud.cc).
-* get the application you want to translate on [Github](https://github.com/mycozycloud/)
 * check the client/app/locales folder
     * if there is a "de.js" or "de.coffee" file, open it and make your changes
     * if there isn't, create it on the existing model and make your changes

@@ -398,7 +398,7 @@ dataSystem.post('/request/alarm/all/', function(err, res, body) {
 });
 ```
 
-For more examples and the complete documentation of request-json, please see the [github repository](http://github.com/mycozycloud/request-json/) of the module.
+For more examples and the complete documentation of request-json, please see the [github repository](http://github.com/cozy/request-json/) of the module.
 
 
 <a name="troubleshootings"></a>

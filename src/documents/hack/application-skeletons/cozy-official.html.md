@@ -10,8 +10,8 @@ toc: true
 The official Cozy skeleton comes in both JavaScript and CoffeeScript.
 You can find the code in the following repositories:
 
-* [JavaScript version](https://github.com/mycozycloud/cozy-template)
-* [CoffeeScript version](https://github.com/mycozycloud/cozy-template-coffee)
+* [JavaScript version](https://github.com/cozy/cozy-template)
+* [CoffeeScript version](https://github.com/cozy/cozy-template-coffee)
 
 
 ## Technologies

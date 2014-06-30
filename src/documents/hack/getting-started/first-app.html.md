@@ -32,7 +32,7 @@ Get the template:
 
 ```bash
 cd cozy-dev/ # where you start the VM
-git clone https://github.com/mycozycloud/cozy-tutorial.git && cd cozy-tutorial
+git clone https://github.com/cozy/cozy-tutorial.git && cd cozy-tutorial
 npm install
 ```
 
@@ -44,7 +44,7 @@ Here is how the folders and files are organized:
 
 ## Step 1: displaying HTML pages
 
-NB: the source code for this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-1).
+NB: the source code for this step can be found [here](https://github.com/cozy/cozy-tutorial/tree/step-1).
 
 We first need to create an HTTP server that will serve the content for requests:
 ```javascript
@@ -85,7 +85,7 @@ You might think "well, this sucks, I actually can't do anything with it". You ar
 
 ## Step 2: listing the bookmarks from the server
 
-NB: the source code for this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-2).
+NB: the source code for this step can be found [here](https://github.com/cozy/cozy-tutorial/tree/step-2).
 
 For the step 2, we are going to use a list stored in memory on the server and render it within a template. We are going to use Jade as a template engine. If you don't master Jade, you will find it is not difficult to read and write it.
 
@@ -150,7 +150,7 @@ Again, this is not very useful because you can't modify the list. Let's fix it!
 
 ## Step 3: adding and removing bookmarks
 
-NB: the source code for this step can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/step-3).
+NB: the source code for this step can be found [here](https://github.com/cozy/cozy-tutorial/tree/step-3).
 
 First, add the following before the list in `index.jade`
 
@@ -212,7 +212,7 @@ time you start and then stop the server you lose your data. Let's use a database
 ## Step 4: using a real database, SQLite
 
 NB: the source code for this step can be found
-[here](https://github.com/mycozycloud/cozy-tutorial/tree/step-4).
+[here](https://github.com/cozy/cozy-tutorial/tree/step-4).
 
 Even if Cozy main persistence layer is not SQLite, it is shipped with every Cozy.
 

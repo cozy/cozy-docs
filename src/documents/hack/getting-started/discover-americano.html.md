@@ -20,7 +20,7 @@ Also, Americano is modular, so you can extend it with plugins. That's what we di
 * Learning how to painlessly structure your code and improve your capacity to maintain your code.
 
 ### Source code
-The source code of this tutorial can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/americano).
+The source code of this tutorial can be found [here](https://github.com/cozy/cozy-tutorial/tree/americano).
 
 ### Getting stated
 In a brand new application folder, install americano:

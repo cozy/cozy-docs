@@ -29,7 +29,7 @@ Let's make your bookmark application with the single page app way!
 * Building a Single Page App!
 
 ### Source code
-The source code of this tutorial can be found [here](https://github.com/mycozycloud/cozy-tutorial/tree/spa-final).
+The source code of this tutorial can be found [here](https://github.com/cozy/cozy-tutorial/tree/spa-final).
 
 ### Get ready
 
@@ -40,7 +40,7 @@ npm install -g brunch
 
 Then, get the source we prepared for you to bootstrap the tutorial.
 ```bash
-git clone https://github.com/mycozycloud/cozy-tutorial.git --branch spa spa-bookmarks
+git clone https://github.com/cozy/cozy-tutorial.git --branch spa spa-bookmarks
 cd spa-bookmarks/
 npm install
 cd client/

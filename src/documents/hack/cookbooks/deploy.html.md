@@ -11,7 +11,7 @@ Once your awesome application is ready to be used, you migh wonder how use it in
 Open your package.json file, you'll need it!
 
 
-*Note: if you want to see a working example, please check [Calendar's package.json](https://github.com/mycozycloud/cozy-calendar/blob/master/package.json).*
+*Note: if you want to see a working example, please check [Calendar's package.json](https://github.com/cozy/cozy-calendar/blob/master/package.json).*
 
 ## Declaring the permissions
 In a production Cozy, the application will need permissions in order to access the Data System for every doctype it uses.

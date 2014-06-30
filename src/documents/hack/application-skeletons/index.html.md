@@ -6,7 +6,7 @@ menuOrder: 3
 ---
 
 # Application Skeletons
-Because Cozy is a [pPaas](/hack/getting-started/architecture-overview.html#The-pPaaS), you can use the frameworks you like to build your applications. The [Cozy manager](https://github.com/mycozycloud/cozy-manager/) CLI tool provides a command to create skeletons. Currently there are the following skeletons:
+Because Cozy is a [pPaas](/hack/getting-started/architecture-overview.html#The-pPaaS), you can use the frameworks you like to build your applications. The [Cozy manager](https://github.com/cozy/cozy-manager/) CLI tool provides a command to create skeletons. Currently there are the following skeletons:
 
 * [Cozy official (JavaScript)](/hack/application-skeletons/cozy-official.html): Americano/JugglingDB + Single page app with Backbone
 * [Cozy official (CoffeeScript)](/hack/application-skeletons/cozy-official.html): Americano/JugglingDB + Single page app with Backbone

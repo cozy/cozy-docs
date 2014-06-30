@@ -47,7 +47,7 @@ portable development environments." That's what we need here! We use it through
 a custom CLI tool, so you will not manipulate it directly.
 (Latest tested version: 1.3.5)
 
-#### [Cozy for developers](https://github.com/mycozycloud/cozy-manager)
+#### [Cozy for developers](https://github.com/cozy/cozy-manager)
 
 You will also need our tool:
 
@@ -77,7 +77,7 @@ cozy-dev dev:init
 ```
 This will download the base box file (~500MB) and a custom configuration ([see
 it on
-Github](https://github.com/mycozycloud/cozy-setup/blob/master/dev/Vagrantfile)).
+Github](https://github.com/cozy/cozy-setup/blob/master/dev/Vagrantfile)).
 Then the VM will be created. The whole process will take about 15 minutes
 (depending on your internet connection and your computer).
 
