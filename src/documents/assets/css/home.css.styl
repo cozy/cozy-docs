@@ -29,6 +29,7 @@ transform-compat()
 blue = #1babf4
 deepblue = #34A6FF
 black = #333
+midgrey = #999
 orange = #FE8800
 lightblue = #BBE5F9
 lightorange = orange + 60%
@@ -216,13 +217,13 @@ button:active
         a
             line-height: 45px
             text-decoration: none
-            border-bottom: 1px solid #999
+            border-bottom: 1px solid midgrey
 
         a.button
             font-size: 20px
             margin-top: 40px
             background-color: #fff
-            border: 1px solid #999
+            border: 2px solid blue
             color: #444
 
             &:hover
@@ -354,25 +355,6 @@ button:active
         color: black
         text-decoration: underline
         
-.icon-plus:before
-.icon-plus > li:before
-.icon-plus.after:after
-.icon-plus.after > li:after
-    content: "\2B"
-    font-weight: bold
-    font-size: 60px
-    margin-left: 40px
-    cursor: pointer
-
-.read-more
-    cursor: pointer
-    text-decoration: underline
-
-    img
-        -webkit-transition:-webkit-transform 0.5s ease
-        -moz-transition:-moz-transform 0.5s ease
-        -o-transition:-o-transform 0.5s ease
-        transition:transform 0.5s ease
 
 .menu
     padding 0
@@ -417,29 +399,6 @@ header
     form
         display: inline-block
 
-.social
-    padding-top: 40px
-    padding-bottom: 0px
-
-    h1
-        font-size: 24px
-        margin-bottom: 20px
-    img
-        margin: 0
-
-#goals
-    padding-bottom: 100px
-
-    h1
-        font-size: 24px
-        margin-bottom: 20px
-
-    p
-        padding: 0 40px 0 30px
-        font-weight: normal
-
-    .smaller
-        font-size: 16px
 
 #why
     background: url(/assets/images/board-01.jpg) no-repeat center center fixed
@@ -477,17 +436,6 @@ header
         box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
 
-#developers
-    background: url(/assets/images/painless_web_dev.jpg) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
-
-    .line
-        background: lightblue - 60%
-
-
 #leave
     background: url(/assets/images/freedom.jpg) no-repeat center center fixed
     -webkit-background-size: cover
@@ -518,19 +466,6 @@ header
         box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
 
-
-#paas
-    opacity: 0.9
-    background: url(/assets/images/home.png) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
-
-    .line
-        background: lightblue - 60%
-
-
 #community-cozy
     background: url(/assets/images/community.jpg) no-repeat center center fixed
 
@@ -551,17 +486,6 @@ header
 
         a
             text-decoration: none
-
-#partners
-    background: url(/assets/images/handshake.jpg) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
-    opacity: 0.9
-
-    .line
-        background: #222
 
 #host
     background: orange
