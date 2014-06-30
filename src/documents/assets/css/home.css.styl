@@ -3,6 +3,13 @@ rounded-border()
     -moz-border-radius: arguments
     border-radius: arguments
 
+transform-compat()
+    -webkit-transform: arguments
+    -moz-transform: arguments
+    -ms-transform: arguments
+    -o-transform: arguments
+    transform: arguments
+
 @font-face
     font-family: main-light
     src: url('/assets/fonts/maven-pro-light-200.otf')
@@ -109,6 +116,30 @@ button:active
 .mt6
     margin-top: 60px
 
+.gallery
+    div.screenshot-container
+        width: 480px
+        height: 380px
+        overflow: hidden
+        background: white
+        padding-left: 20px
+        rounded-border: 10px
+
+    img.screenshot
+        transform-compat: scale(1.1,1.1) rotate(-3deg)
+
+    img.picto
+        margin-top: 20px
+        height: 128px
+
+    h1.mt3
+        font-size: 30px
+        text-align: center
+        margin: 10px 0 20px
+
+//.gallery-footnote
+//    margin-top: 20px
+
 [class*="grid"] > *
     float: left
 
@@ -182,20 +213,23 @@ button:active
 
     .image-links
         a
+            line-height: 45px
             text-decoration: none
-            border-bottom: 1px solid #333
+            border-bottom: 1px solid #999
 
         a.button
+            font-size: 20px
             margin-top: 40px
-            background-color: green
-            border-bottom: 0
+            background-color: #fff
+            border: 1px solid #999
+            color: #444
 
             &:hover
-                background: green + 30%
+                background: blue + 90%
 
             &:focus
             &:active
-                background: green - 20%
+                background: blue + 90%
                 shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
     .external-links

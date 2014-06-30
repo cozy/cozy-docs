@@ -33,21 +33,17 @@ html(lang="en")
                         span.title Cozy&nbsp;
                         | a Personal Cloud
                         br
-                        | You Can Host, Hack
+                        | You can Host, Hack
                         | and Delete
                     h4
                         | Your contacts, calendars and files are stored on your
                         | hardware and synced with your devices
-                    .image-links.mt3
+                    .image-links.mt6
                         p
-                            a.button(href="http://files.cozycloud.cc/cozycloud-virtualimage.zip")
-                                | Try on your desktop with <strong>Virtualbox</strong>
-                            br
-                            br
-                            a.button(href="http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz")
-                                |  Try on your <strong>Raspberry Pi</strong>
+                            a.button(href="/host/install.html#virtualbox-image") Give a try on <strong>VirtualBox</strong>
+                            a.button(href="/host/install.html#raspberry-pi-image") Install on your <strong>Raspberry Pi</strong>
                         p
-                            a(href="/host/install.html") See installation instruction and other available images
+                            a.installation-notes(href="/host/install.html") See hardware requirements
             .line.external-links
                 .mod.w33.left.pa2.txtcenter
                     h4 Simple and Intuitive
@@ -73,52 +69,66 @@ html(lang="en")
                     | Cozy is the assistant that simplifies your life.
                     | You can trust it to keep your privacy safe and to serve
                     | you. Here are its main features:
-                .line.mt2
+                .line.mt2.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/calendar.png", alt="Calendar").screenshot
                     .mod.w50.left
                         p.txtcenter
-                            img(src="/assets/images/calendar.png", alt="Plus Icon")
-                        p.mt3
-                            | Calendar
+                            img(src="/assets/images/calendar-picto.png", alt="Calendar").picto
+                        h1.mt3
+                            | CALENDAR
                         p.pa2.mt0
                             | Manage your events and alarms via a simple
                             | web interface.
                             | Synchronize your smartphone calendar with Cozy
                             | via the CardDAV protocol.
+                .line.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/files.png", alt="Files").screenshot
                     .mod.w50.left
                         p.txtcenter
-                            img(src="/assets/images/files.png", alt="Plus Icon")
-                        p.mt3
-                            | Files
+                            img(src="/assets/images/files-picto.png", alt="Files").picto
+                        h1.mt3
+                            | FILES
                         p.pa2.mt0
                             | Store your important files in your Cozy.
                             | Android and OSX apps are on the way. Soon, you
                             | will be able to keep your
                             | files synced with your latop and your smartphone.
-                .line
+                .line.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/contacts.png", alt="Contacts").screenshot
                     .mod.w50.left
                         p.txtcenter
-                            img(src="/assets/images/contacts.png", alt="Plus Icon")
-                        p.mt3
-                            | Contacts
+                            img(src="/assets/images/contacts-picto.png", alt="Files").picto
+                        h1.mt3
+                            | CONTACTS
                         p.pa2.mt0
                             | Store your contacts in the cloud and share files
                             | and events with them.
                             | Synchronize your smartphone with your contact
                             | book through the CardDAV protocol.
+                .line.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/app-store.png", alt="App Store").screenshot
                     .mod.w50.left
                         p.txtcenter
-                            img(src="/assets/images/app-store.png", alt="Plus Icon")
-                        p.mt3
-                            | App Store
+                            img(src="/assets/images/app-store-picto.png", alt="App Store").picto
+                        h1.mt3
+                            | APP STORE
                         p.pa2.mt0
                             | Cozy is expandable: you can install applications
                             | developed by the community: photo gallery, feed
                             | reader, task manager, etc.
 
-                 .line.txtcenter
+                 .line.gallery-footnote.mt6
                      p
                         strong.biggest 2000 apps are downloaded each month!
-                 .line.txtcenter.mt6
+                 .line.txtcenter.mt2
                      a#install-button.button.mt6(href="http://cozy.io/host/install.html")
                             | Install Cozy on your favorite hardware
 
