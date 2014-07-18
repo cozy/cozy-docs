@@ -127,8 +127,9 @@ stack in an isolated virtual machine or in a container (OpenVz or LXC).
 *Warning: For production use, you must change the superuser credentials,
 renew the SSL certificate, the database credentials and the controller token.*
 
-In order to run Cozy on your Raspberry Pi, the simplest way is to download our image and
-set it up on a SD card.
+In order to run Cozy on your Raspberry Pi, the simplest way is to download our
+image and set it up on a SD card. The image is based on the
+[Raspbian](http://www.raspbian.org/) distribution.
 
 First, get the image archive:
 
@@ -143,8 +144,7 @@ tar -xvzf cozy-raspberrypi.im.tar.gz
 Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
 then make a low-level dump of the image onto your card.
 
-NB: SD Class 10 card are recommended for better performance. It is based on the 
-[Cubian](http://cubian.org/) distribution.
+NB: SD Class 10 card are recommended for better performance. 
 
 WARNING: this operation will erase all previously stored data on the card.
 
