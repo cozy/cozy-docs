@@ -41,11 +41,11 @@ Virtual Box allows you to run virtual machines on your computer. We use it
 indirectly with Vagrant to power our virtual machine.
 (Latest tested version: 4.3.0)
 
-#### Vagrant (>= v1.3.5) (<a href="http://downloads.vagrantup.com/" target="_blank">download</a>)
+#### Vagrant (>= v1.5.0) (<a href="http://downloads.vagrantup.com/" target="_blank">download</a>)
 Vagrant is a tool to "create and configure lightweight, reproducible and
 portable development environments." That's what we need here! We use it through
 a custom CLI tool, so you will not manipulate it directly.
-(Latest tested version: 1.3.5)
+(Latest tested version: 1.5.0)
 
 #### [Cozy for developers](https://github.com/cozy/cozy-manager)
 
