@@ -201,3 +201,48 @@ Launch script that comes with given application (deprecated).
 ```bash
 cozy-monitor script <app> <script> [argument]
 ```
+
+
+## Provide more disk space
+
+
+All data and files are stored in CouchDB. So, the simplest way to add more disk 
+space is to change your CouchDB configuraion. Currently your data are saved in
+that folder:
+ 
+```bash
+/usr/local/var/lib/couchdb/
+```
+
+You could change that directory where you want, on a mounting point with more
+free disk space. For that, open the following file:
+
+```bash
+/usr/local/etc/couchdb/local.ini
+```
+
+Add the couchdb section if it is not already present. Then you can change the
+database directory parameters:
+
+```bash
+[couchdb]
+database_dir = /home/storage/cozy-data
+view_index_dir = /home/storage/cozy-data
+```
+
+Once done, you will have to stop couchdb, move your database file then restart
+it:
+
+```bash
+supervisorctl stop couchdb
+mkdir /home/storage/cozy-data/
+# cp here, to have a copy of the data in case of problem.
+cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/ 
+chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
+supervisorctl start couchdb
+```
+
+**A backup is strongly recommended before performing that operation.** You
+could either backup the database files or replicate the database to another
+Couchdb instance.
+
