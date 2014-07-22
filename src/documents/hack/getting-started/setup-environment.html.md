@@ -41,18 +41,18 @@ Virtual Box allows you to run virtual machines on your computer. We use it
 indirectly with Vagrant to power our virtual machine.
 (Latest tested version: 4.3.0)
 
-#### Vagrant (>= v1.3.5) (<a href="http://downloads.vagrantup.com/" target="_blank">download</a>)
+#### Vagrant (>= v1.5.0) (<a href="http://downloads.vagrantup.com/" target="_blank">download</a>)
 Vagrant is a tool to "create and configure lightweight, reproducible and
 portable development environments." That's what we need here! We use it through
 a custom CLI tool, so you will not manipulate it directly.
-(Latest tested version: 1.3.5)
+(Latest tested version: 1.5.0)
 
-#### [Cozy for developers](https://github.com/mycozycloud/cozy-manager)
+#### [Cozy for developers](https://github.com/cozy/cozy-manager)
 
 You will also need our tool:
 
 ``` bash
-npm install -g cozy
+npm install -g cozy-dev
 ```
 
 The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also, it can generate application skeletons from templates.
@@ -73,25 +73,27 @@ mkdir cozy-dev && cd cozy-dev
 
 Now you can use the Cozy Manager to initialize the VM by running:
 ``` bash
-cozy dev:init
+cozy-dev dev:init
 ```
 This will download the base box file (~500MB) and a custom configuration ([see
 it on
-Github](https://github.com/mycozycloud/cozy-setup/blob/master/dev/Vagrantfile)).
+Github](https://github.com/cozy/cozy-setup/blob/master/dev/Vagrantfile)).
 Then the VM will be created. The whole process will take about 15 minutes
 (depending on your internet connection and your computer).
 
 Then you can start the VM and check that everything is running correctly.
 ``` bash
-cozy dev:start
-cozy dev:vm-status
+cozy-dev dev:start
+cozy-dev dev:vm-status
 ```
 
 We advise you to update the VM the first time you start it (and regularly),
 because we don't update the base box each time we improve or fix a bug in the
-"core" of Cozy: ``` bash
-cozy dev:light-update
+"core" of Cozy:
+```bash
+cozy-dev dev:update
 ```
+
 You can go to `http://localhost:9104/` in order to see your Cozy running. You can also use
 it, but beware! The Cozy running in your virtual machine is in development mode, meaning that most of the security measures are disabled. Only use it for
 testing purposes!

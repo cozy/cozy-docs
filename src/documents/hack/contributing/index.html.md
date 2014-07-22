@@ -16,7 +16,7 @@ self-hosting, translations, developing new applications...
 **There's something for everyone!**
 
 Everything is free and open-source and hosted on
-[Github](https://github.com/mycozycloud/), this page will explain you how can
+[Github](https://github.com/cozy/), this page will explain you how can
 help.
 
 
@@ -31,7 +31,7 @@ Try to be accurate in your descriptions and add, if possible, screenshots, espec
 
 You can improve the documentation you are currently reading by modifying and
 submitting us a pull request on the
-[dedicated Github repository](https://github.com/mycozycloud/cozy-docs/).
+[dedicated Github repository](https://github.com/cozy/cozy-docs/).
 
 ## Building and sharing an application
 
@@ -45,7 +45,7 @@ You can be very helpful by translating Cozy and applications. See the [translato
 What's coming next? Here is what we plan to add (order is relevant). Feel free to ask for something you are interested in.
 
 * cookbook: how to deploy a cozy app (permissions, ...)
-* data system's [current documentation](https://github.com/mycozycloud/cozy-data-system/wiki/)
+* data system's [current documentation](https://github.com/cozy/cozy-data-system/wiki/)
 * data system's API cookbook: adding the authentication and authorization section
 * cookbook: how to make your app notified by data system's changes in realtime
 * cookbook: how to add Cozy notifications from your app
@@ -99,7 +99,7 @@ The --no-bin-links is needed because you can't symlink in the shared folder.
 
     ```bash
     cd /vagrant/
-    git clone https://github.com/mycozycloud/cozy-home
+    git clone https://github.com/cozy/cozy-home
     cd /vagrant/cozy-home
     sudo npm install --no-bin-links
     node server.js

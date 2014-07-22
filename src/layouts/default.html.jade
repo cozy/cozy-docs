@@ -1,4 +1,4 @@
-!!! 5
+doctype html
 <!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
 <!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
 <!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
@@ -38,6 +38,9 @@ html(lang='en')
                   li
                     a(href="#{child.url}")= child.title
 
+      .submenu-container.right(class="#{className}")
+         a(href="https://blog.cozycloud.cc") Blog
+
       - var className = ""
       - if(document.category == 'hack')
         - className = 'selected'
@@ -49,10 +52,9 @@ html(lang='en')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
         a(href="/host/install.html") Install
-
     .wrapper
       .wrap-menu.w25.mod.left
-        &nbsp;
+        | &nbsp;
         aside
           - var hasToc = "";
           - if (document.tableOfContents.length > 0)
@@ -83,7 +85,7 @@ html(lang='en')
         a(href="https://github.com/mycozycloud") Github
         a(href="irc://irc.freenode.net/cozycloud") IRC
         a(href="mailto:contact@cozycloud.cc") Contact
-        a(href="https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud")
+        a(href="https://forum.cozy.io")
             | Mailing-list
         a(href="https://cozycloud.cc") Cozy Cloud
 

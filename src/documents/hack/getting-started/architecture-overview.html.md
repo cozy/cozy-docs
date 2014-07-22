@@ -21,14 +21,14 @@ Cozy is made of three different layers:
 * the persistence layer
 
 ## The Proxy
-([Github repository](https://github.com/mycozycloud/cozy-proxy/))
+([Github repository](https://github.com/cozy/cozy-proxy/))
 
 The proxy main job is handling the authentication and authorization to the Cozy. It is the application that manage registration, login, logout and password reset.
 
 It also handles all the routing of Cozy (to send the right request to the right application).
 
 ## The pPaaS
-([Github repository](https://github.com/mycozycloud/cozy-controller/))
+([Github repository](https://github.com/cozy/cozy-controller/))
 
 pPaaS stands for "personal Platform as a Service".
 You may already know what a PaaS is: an execution environment for applications.
@@ -37,10 +37,10 @@ A personal PaaS is a personal execution environment for personal applications co
 
 Technically, the "controller" and the "home application" play with each other to install, run, update and remove applications within Cozy. We've forked [Haibu](https://github.com/nodejitsu/haibu) to add custom options: more security (applications are run by separate users, restrict the access to the controller itself, ...), handling app authentication to the Data System, logging, etc.
 
-The [cozy-controller](https://github.com/mycozycloud/cozy-controller/) can also be used through a dedicated tool, the [cozy-monitor](https://github.com/mycozycloud/cozy-monitor/). You shouldn't be worried too much about it since it is unlikely you will one day use it (except if you host your own Cozy or are willing to contribute to the core).
+The [cozy-controller](https://github.com/cozy/cozy-controller/) can also be used through a dedicated tool, the [cozy-monitor](https://github.com/cozy/cozy-monitor/). You shouldn't be worried too much about it since it is unlikely you will one day use it (except if you host your own Cozy or are willing to contribute to the core).
 
 ## The persistence layer: the Data System
-([Github Repository](https://github.com/mycozycloud/cozy-data-system/))
+([Github Repository](https://github.com/cozy/cozy-data-system/))
 
 You've just built your first app using SQLite and you are wondering why we speak about another persistence mechanism? Well, let us introduce you the Data System.
 

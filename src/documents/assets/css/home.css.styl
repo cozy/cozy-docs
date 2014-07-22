@@ -3,6 +3,13 @@ rounded-border()
     -moz-border-radius: arguments
     border-radius: arguments
 
+transform-compat()
+    -webkit-transform: arguments
+    -moz-transform: arguments
+    -ms-transform: arguments
+    -o-transform: arguments
+    transform: arguments
+
 @font-face
     font-family: main-light
     src: url('/assets/fonts/maven-pro-light-200.otf')
@@ -15,12 +22,19 @@ rounded-border()
     font-family: cool
     src: url('/assets/fonts/signika-regular.ttf')
 
+@font-face
+    font-family: cool-light
+    src: url('/assets/fonts/signika-light.ttf')
+
 blue = #1babf4
-deepbluE = #34A6FF
+deepblue = #34A6FF
 black = #333
+midgrey = #999
 orange = #FE8800
 lightblue = #BBE5F9
-
+lightorange = orange + 60%
+bluegreen = #FC9633
+green = #5C5
 
 p
     font-weight: bold
@@ -94,11 +108,45 @@ button:active
     color: white
     outline: none
 
+.mt3
+    margin-top: 0px
+
+.mt3
+    margin-top: 30px
+
+.mt6
+    margin-top: 60px
+
+.gallery
+    div.screenshot-container
+        margin: 0 auto
+        max-width: 480px
+        max-height: 380px
+        overflow: hidden
+        background: white
+        padding-left: 20px
+        rounded-border: 10px
+
+    img.screenshot
+        transform-compat: scale(1.1,1.1) rotate(-3deg)
+
+    img.picto
+        margin-top: 20px
+        height: 128px
+
+    h1.mt3
+        font-size: 30px
+        text-align: center
+        margin: 10px 0 20px
+
 [class*="grid"] > *
     float: left
 
 [class*="grid"] > * + *
     margin-left: 2%
+
+.capitalize
+    text-transform: uppercase
 
 .grid5 > *
     width: 18.4%
@@ -132,42 +180,66 @@ button:active
     a:visited
         color: white
 
-.external-links
-    height: 60px
+#header
 
-.external-links a
-    border: 0
-    background: lightblue
-    margin-right: 10px
-    font-size: 25px
-    padding: 13px
-    rounded-border: 5px
-    cursor: pointer
-    text-decoration: none
+    a.button
+        height: 60px
+        border: 0
+        background: lightblue - 25%
+        margin-right: 10px
+        font-size: 21px
+        padding: 13px
+        rounded-border: 5px
+        cursor: pointer
+        text-decoration: none
+        font-family: cool-light
+        color: white
 
-.external-links a.action
-    background: #47B447 + 10%
-    font-weight: bold
-    color: white
+    a.button:hover
+        color: white
+        -webkit-transition:color 0.2s ease-in
+        -moz-transition:color 0.2s ease-in
+        -o-transition:color 0.2s ease-in
+        transition:color 0.2s ease-in
+        -webkit-transition:background-color 0.2s ease-in
+        -moz-transition:background-color 0.2s ease-in
+        -o-transition:background-color 0.2s ease-in
+        transition:background-color 0.2s ease-in
+        background: blue
 
+    a.button:focus
+    a.button:active
+        background: blue - 20%
+        shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+        color: white
 
-.external-links a:hover
-    color: white
-    -webkit-transition:color 0.3s ease-in
-    -moz-transition:color 0.3s ease-in
-    -o-transition:color 0.3s ease-in
-    transition:color 0.3s ease-in
-    -webkit-transition:background-color 0.3s ease-in
-    -moz-transition:background-color 0.3s ease-in
-    -o-transition:background-color 0.3s ease-in
-    transition:background-color 0.3s ease-in
-    background: blue
+    .image-links
+        a
+            line-height: 45px
+            text-decoration: none
+            border-bottom: 1px solid midgrey
 
-.external-links a:focus
-.external-links a:active
-    background: blue - 10%
-    shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
-    color: white
+        a.button
+            font-size: 20px
+            margin-top: 40px
+            background-color: #fff
+            border: 2px solid blue
+            color: #444
+
+            &:hover
+                background: blue + 90%
+
+            &:focus
+            &:active
+                background: blue + 90%
+                shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+
+    .external-links
+        h4
+            font-family: main-light
+            margin-top: 40px
+            margin-bottom: 0px
+       
 
 .code
     display: inline-block
@@ -208,28 +280,38 @@ button:active
     font-size: 18px
     margin-top: 40px
 
+.simple
+    padding-bottom: 40px
+
+    h4
+        margin-top: 40px
+        text-align: center
+        font-size: 60px
+
 .highlight
+
+
     .line
         text: center
         padding: 20px
-        opacity: 0.85
 
     p
         text-align: center
-        font-size: 18px
+        font-size: 26px
         margin-top: 40px
         margin-bottom: 0px
 
     h4
         margin-top: 40px
         text-align: center
-        font-size: 40px
+        font-size: 60px
 
     ul
         padding: 20px
         padding-top: 10px
         margin-left: 0
         padding-left: 0
+        font-size: 40px
 
     li
         margin-left: 0
@@ -266,29 +348,13 @@ button:active
         font-size: 30px
         margin-top: 10px
 
+    a.right
+        font-size: 24px
+
     a:hover
         color: black
         text-decoration: underline
         
-.icon-plus:before
-.icon-plus > li:before
-.icon-plus.after:after
-.icon-plus.after > li:after
-    content: "\2B"
-    font-weight: bold
-    font-size: 60px
-    margin-left: 40px
-    cursor: pointer
-
-.read-more
-    cursor: pointer
-    text-decoration: underline
-
-    img
-        -webkit-transition:-webkit-transform 0.5s ease
-        -moz-transition:-moz-transform 0.5s ease
-        -o-transition:-o-transform 0.5s ease
-        transition:transform 0.5s ease
 
 .menu
     padding 0
@@ -333,96 +399,93 @@ header
     form
         display: inline-block
 
-.social
-    padding-top: 40px
-    padding-bottom: 0px
-
-    h1
-        font-size: 24px
-        margin-bottom: 20px
-    img
-        margin: 0
-
-#goals
-    padding-bottom: 100px
-
-    h1
-        font-size: 24px
-        margin-bottom: 20px
-
-    p
-        padding: 0 40px 0 30px
-        font-weight: normal
-
-    .smaller
-        font-size: 16px
 
 #why
-    background: url(/assets/images/rasp-black.jpg) no-repeat center center fixed
+    background: url(/assets/images/board-01.jpg) no-repeat center center fixed
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
 
-    .line
-        background: #643
+    .line:first-child
+        padding-bottom: 40px
+        background-color: rgba(14, 113, 160, 0.85)
 
+        p
+            margin-top: 0
+            font-size: 20px
 
-#developers
-    background: url(/assets/images/painless_web_dev.jpg) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+        p.mt3
+            margin-top: 30px
 
-    .line
-        background: #334
+        .tagline
+            font-size: 26px
+
+    .button
+        background: orange
+        text-decoration: none
+        padding: 20px
+        font-size: 34px
+        border-radius: 10px
+        font-family: cool
+
+    .button:hover
+        background: orange + 20%
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
 
 #leave
-    opacity: 0.9
     background: url(/assets/images/freedom.jpg) no-repeat center center fixed
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
 
-    .line
-        background: lightblue - 60%
-
-
-#paas
-    opacity: 0.9
-    background: url(/assets/images/home.png) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+    .line:first-child
+        background-color: rgba(255, 255, 255, 0.85)
 
     .line
-        background: #334
+        padding-bottom: 40px
+        background: white
+        color: black
+
+    .button
+        background: #333
+        text-decoration: none
+        padding: 20px
+        font-size: 30px
+        border-radius: 10px
+        font-family: main
+
+    .button:hover
+        background: #666
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
 
 #community-cozy
     background: url(/assets/images/community.jpg) no-repeat center center fixed
+
     -webkit-background-size: cover
     -moz-background-size: cover
     -o-background-size: cover
     background-size: cover
+    margin: 0
+
+    .line:first-child
+        background: rgba(85, 204, 85, 0.85)
+        padding-bottom: 40px
 
     .line
-        background: #643
+        img
+            margin-bottom: 10px
+            width: 96px
 
-#partners
-    background: url(/assets/images/handshake.jpg) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
-    opacity: 0.9
-
-    .line
-        background: #222
+        a
+            text-decoration: none
 
 #host
     background: orange
@@ -431,19 +494,32 @@ header
         background: #CC5F00
 
 #hack
-    h3
-        font-weight: bold
-
+    padding-bottom: 60px
     background: blue
 
-    .code
+    img
+        width: 96px
+
+    .button
         background: blue - 30%
+        text-decoration: none
+        padding: 20px
+        font-size: 30px
+        border-radius: 10px
+        font-family: main
+
+    .button:hover
+        background: blue + 30%
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
 
 #architecture
-    background: blue
-    color: white
+    background: white
+    color: #333
 
     .diagbox
+        cursor: pointer
         color: black
         background: lightblue
         rounded-border: 15px
@@ -455,11 +531,6 @@ header
 
         p
             display: none
-
-
-
-#community
-    background: orange
 
 
 #delete
@@ -493,7 +564,7 @@ header
         padding-left: 60px
 
 
-@media (max-width: 1000px)
+@media (max-width: 1060px)
 
     #header
         .biglogo
@@ -514,21 +585,54 @@ header
         .main-text
             padding-left: 0
 
+    #hack
+    #leave
+        .button
+            font-size: 26px
+    #why
+        #install-button
+            font-size: 26px
 
-@media (max-width: 860px)
+
+
+@media (max-width: 1400px)
+    .w50
+        padding: 5px
+
+@media (max-width: 960px)
+
+    .w50
+        padding: 0
+        width: 100%
+
+    .w33
+        width: 100%
 
     header
+        text-align: center
+
         h1
             font-size: 30px
 
         h4
             font-size: 24px
 
+    .simple
+        h4
+            font-size: 40px
+
+        p
+            font-size: 24px
+
     .highlight
 
         h4
-            text-align: left
-            font-size: 30px
+            font-size: 40px
+
+        .line
+            p
+                font-size: 22px
+
         li
             margin-top: 20px
             font-size: 24px
@@ -557,6 +661,14 @@ header
         p
             padding-left: 0
 
+    #community-cozy
+    #hack
+        img
+            width: 96px
+
+    #header
+        .image-links
+            display: none
 
 @media (max-width: 600px)
 
@@ -610,7 +722,24 @@ header
             width: 100%
 
 
-@media (max-width: 400px)
+@media (max-width: 480px)
+
+    #about
+    .simple
+    .highlight
+        .line
+            padding: 5px
+
+            p
+    #hack
+    #leave
+        .button
+            display: none
+            font-size: 16px
+    #why
+        #install-button
+            display: none
+            font-size: 16px
 
     button
         font-size: 16px

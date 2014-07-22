@@ -34,6 +34,12 @@ It also works with Coffee Script:
 nodemon server.coffee
 ```
 
+You can also ignore files and folders, that's useful when you build the client separately like we do at Cozy:
+```bash
+nodemon server.js --ignore client/
+```
+This will tell nodemon not to watch files in the `client/` folder.
+
 Note that the first start can be slow but it's totally acceptable.
 
 That's it, why did we do differently before that?

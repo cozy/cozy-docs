@@ -24,7 +24,7 @@ will be able to use the data you store this way.
 
 ### Source code
 The source code of this tutorial can be found
-[here](https://github.com/mycozycloud/cozy-tutorial/tree/data-system-odm).
+[here](https://github.com/cozy/cozy-tutorial/tree/data-system-odm).
 
 
 ### Getting started
