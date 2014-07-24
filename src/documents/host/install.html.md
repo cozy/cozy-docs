@@ -134,7 +134,7 @@ image and set it up on a SD card. The image is based on the
 First, get the image archive:
 
 ```bash
-# Download the image (~ 1.5GB)
+# Download the image (~ 0.9GB)
 wget http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz
 
 # Uncompress it
