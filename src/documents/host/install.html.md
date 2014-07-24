@@ -149,7 +149,7 @@ NB: SD Class 10 card are recommended for better performance.
 WARNING: this operation will erase all previously stored data on the card.
 
 ```bash
-sudo dd bs=4M if=/my/path/cozy-raspberry.im of=/dev/sdc
+sudo dd bs=4M if=./cozy-raspberrypi-1.0.6.im of=/dev/sdc
 ```
 
 Now insert the SD card in your Raspberry Pi SD card reader. Reboot your
