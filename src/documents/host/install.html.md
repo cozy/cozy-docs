@@ -122,6 +122,63 @@ page](/hack/getting-started/architecture-overview.html).
 Because of the many technologies involved, we recommend you run the Cozy
 stack in an isolated virtual machine or in a container (OpenVz or LXC).
 
+## Ansible Playbook
+
+[Ansible](www.ansible.com) is a simple configuration system that allows people
+to automate installation and maintenance of services on a remote server. Its
+simplicity makes it very popular among people who hosts services on a personal
+server.
+
+It's based on the concept of playbooks. A playbook describes the state of a
+service and its requirements to work properly. If something is missing Ansible
+will perform required operations to bring the service to the required state.
+
+So, first [install Ansible](http://docs.ansible.com/intro_installation.html)
+on your local machine:
+
+```bash
+# Install ansible (for Ubuntu 14.04)
+sudo apt-get install ansible
+```
+
+Then get the description of the Cozy playbook.
+
+```bash
+# Get the Cozy Ansible Playbook (maintained by the community)
+git clone https://github.com/zaurky/ansible-cozy-playbook.git
+cd ansible-cozy-playbook
+```
+
+Cozy requires several software specific versions (Node.js, CouchDB, etc.).
+Ansible Galaxy provides a role repository (playbooks are set of roles) where
+users share installation for common softwares. Here we download the
+"dependencies" of the Cozy playbook.
+
+```bash
+# Install role dependencies
+ansible-galaxy install -r galaxy.yml -p ./roles
+```
+
+You have to store the information of the remote server on which you want to
+install your Cozy.
+
+```bash
+# Store your remote server address
+echo "[myserver]" > hosts
+echo "your.domain.me" >> hosts
+```
+
+Then you can perform the installation by running the playbook. You can run the
+playbook as much as you want. It will ensure that your Cozy is in the right
+state.
+
+```bash
+# Run the playbook
+ansible-playbook playbook.yml -i hosts
+```
+
+Once donce, your Cozy should be up on the 443 port. Now, enjoy!
+
 ## Raspberry Pi image
 
 *Warning: For production use, you must change the superuser credentials,
