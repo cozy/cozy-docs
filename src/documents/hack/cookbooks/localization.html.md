@@ -45,7 +45,7 @@ module.exports = {
 }
 ```
 
-Each localization file is a key-value list. The key should always be the same accross the file. We'll see how we use it later. We have rules to name the keys, you can find them at the [end of this page](#guidelines).
+Each localization file is a key-value list. The key should always be the same across the file. We'll see how we use it later. We have rules to name the keys, you can find them at the [end of this page](#guidelines).
 
 Then bootstrap Polyglot in your application:
 ```javascript
@@ -120,7 +120,7 @@ To learn all the great thing Polyglot can do (interpolation and pluralization), 
 If you want to test everything is working, go to http://localhost:9104/#account and change the language.
 
 ## Summary for translator contributors
-If you are not a developer, but still want to help the community by adding tanslation, here what should know/do. Let's say you want to add the German language to an application.
+If you are not a developer, but still want to help the community by adding translation, here what should know/do. Let's say you want to add the German language to an application.
 
 * get the application you want to translate on [Github](https://github.com/cozy/)
 * the only technical requirement is git. If you don't know it and still want to help, we'll find another way (contact[at]cozycloud.cc).
