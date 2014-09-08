@@ -1,6 +1,6 @@
 # [Cozy](http://cozy.io) Docs
 
-Cozy Docs is the source respository for the [cozy.io](http://cozy.io) website.
+Cozy Docs is the source repository for the [cozy.io](http://cozy.io) website.
 
 ## Contribution
 
