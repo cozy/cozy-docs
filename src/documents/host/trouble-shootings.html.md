@@ -10,7 +10,7 @@ toc: true
 
 In this section, you will find common errors that occur during the
 installation process.
-Mention us the problems you encoutered, and which are not listed here, and we will add them to the list as soon as possible.
+Mention us the problems you encountered, and which are not listed here, and we will add them to the list as soon as possible.
 
 ## I can only install one application
 
