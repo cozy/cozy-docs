@@ -46,7 +46,7 @@ cd /usr/local/cozy-indexer/cozy-data-indexer
 . virtualenv/bin/activate
 git pull origin master
 pip install --use-mirrors --upgrade -r ./requirements/common.txt
-supervisortctl restart cozy-indexer
+supervisorctl restart cozy-indexer
 ```
 
 Fabric update:
