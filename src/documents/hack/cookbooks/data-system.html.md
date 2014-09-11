@@ -321,6 +321,8 @@ Param:
   type: the doctype the searched documents belongs
   Body {
     query: "search query"
+    numPage: page result number (default is 1)
+    numByPage: number of results by page (default is 10)
   }
 Response
   Status code: 200|500
@@ -328,6 +330,8 @@ Response
     200: {rows: [the documents]}
     500: {error: "the error message"}
 ```
+Both `numPage` and `numByPage` are optional.
+
 
 ### Removing indexation for a given document
 ```http

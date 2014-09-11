@@ -1,6 +1,6 @@
 # [Cozy](http://cozy.io) Docs
 
-Cozy Docs is the source respository for the [cozy.io](http://cozy.io) website.
+Cozy Docs is the source repository for the [cozy.io](http://cozy.io) website.
 
 ## Contribution
 
@@ -41,6 +41,6 @@ hardware where no one profiles you.
 You can reach the Cozy Community by:
 
 * Chatting with us on IRC #cozycloud on irc.freenode.net
-* Posting on our [Forum](https://groups.google.com/forum/?fromgroups#!forum/cozy-cloud)
-* Posting issues on the [Github repos](https://github.com/mycozycloud/)
+* Posting on our [Forum](https://forum.cozy.io/)
+* Posting issues on the [Github repos](https://github.com/cozy/)
 * Mentioning us on [Twitter](http://twitter.com/mycozycloud)

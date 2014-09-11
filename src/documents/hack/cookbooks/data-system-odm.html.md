@@ -80,7 +80,12 @@ note.index(["title", "content"], function(err) {
 });
 
 // Searching the 10 most relevant indexed documents
-Note.search("dragons", function(err, notes) {
+options = {
+    query: "dragons",
+    numPage: 1, // optional
+    numByPage: 10 // optional
+}
+Note.search(options, function(err, notes) {
    console.log(notes);
 });
 ```
