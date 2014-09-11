@@ -257,7 +257,7 @@ Cubieboard, and you will be able to access your Cozy through port 443
 If you want to login to the board, use the default Cubian credentials ```cubie```
 and ```cubie```. By the way, don't forget to change the password and to
 [reset the security
-tokens](http://cozy.io/host/install.html#about-security-in-pre-installed-images)!
+tokens](#about-security-in-pre-installed-images)!
 
 ## Cubietruck image
 
@@ -296,7 +296,7 @@ Cubietruck, and you will be able to access your Cozy through port 443
 If you want to login to the board, use the default Cubian credentials ```cubie```
 and ```cubie```. By the way, don't forget to change the password and to
 [reset the security
-tokens](http://cozy.io/host/install.html#about-security-in-pre-installed-images)!
+tokens](#about-security-in-pre-installed-images)!
 
 
 
