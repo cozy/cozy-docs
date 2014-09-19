@@ -19,17 +19,32 @@ You will find HTTP status code for the response, here is what they mean:
 * 200: success
 * 400: bad request
 * 401: not authenticated
-* 403: unauthorized
 * 500: internal server error
 
 
-All application are declared in a manifest .... 
-
 Application should be authenticated to request controller. 
 
-Authentication is based on token shared by all cozy stack.
-This token should be send in 'x-auth-token' field in request header. Monitor can acces to this token thanks file "/etc/cozy/stack.token" 
-where token is stored.
+Authentication is based on a token shared by all the Cozy stack.
+This token should be sent in 'x-auth-token' request header. This token is stored in "/etc/cozy/stack.token" by default but this is configurable. Accessing it requires `sudo` privileges.
+
+## Application manifest
+
+Application are declared in a manifest.
+
+Manifest example :
+
+```json
+manifest =
+    user: "cozy",      # Required, user which start the application                 
+    name: "note",                                                 
+    domain: "localhost",           
+    repository:                   
+        type: "git",                 
+        url: "https://github.com/mycozycloud/cozy-notes.git",
+    scripts:                    
+        start: "server.js"
+```
+
 
 ## New application API
 
@@ -48,7 +63,6 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
 
 ### Start an application
 ```http
@@ -63,8 +77,7 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
-Return an error if application is not installed.
+Return an 400 error if application is not installed.
 
 ### Stop an application
 ```http
@@ -78,8 +91,7 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
-Return an error if application is not installed.
+Return an 400 error if application is not installed.
 
 ### Update an application
 ```http
@@ -93,8 +105,7 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
-Return an error if application is not installed.
+Return an 400 error if application is not installed.
 
 ### Uninstall an application
 ```http
@@ -108,8 +119,7 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
-Return an error if application is not installed.
+Return an 400 error if application is not installed.
 
 ### Recover all applications
 ```http
@@ -121,7 +131,6 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
 
 ### Recover all started applications
 ```http
@@ -133,7 +142,6 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
 
 ## Old application API
 
@@ -150,7 +158,6 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
 
 ### Start application
 ```http
@@ -165,7 +172,6 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
 
 ### Stop application
 ```http
@@ -180,8 +186,7 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
-Return an error if application is not installed.
+Return an 400 error if application is not installed.
 
 ### Update application
 ```http
@@ -196,8 +201,7 @@ Response:
     400: {error: "the error message"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
-Return an error if application is not installed.
+Return an 400 error if application is not installed.
 
 ### Uninstall application
 ```http
@@ -211,8 +215,7 @@ Response:
     200: {app: "application name"}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
-Return an error if application is not installed.
+Return an 400 error if application is not installed.
 
 ### Recover all running applications
 ```http
@@ -223,7 +226,6 @@ Response:
     200: {app: applications list}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
 
 ## Disk info API
 
@@ -238,14 +240,12 @@ Response:
           "totalDiskSpace": total disk space}
     500: {error: "the error message"}
 ```
-Requires authentication and authorization.
 
 ## Configuration
 
 Configuration are stored in file '/etc/cozy/controller.json'
 Every configuration are optional
-
-<!---
+Configuration file are avaible only for new controller (not already published)
 
 ### Common configuration
 
@@ -260,14 +260,7 @@ Every configuration are optional
   * By default: '/var/log/cozy'.
 * **dir_source**: 
   * Directory where application code source are stored
-  * By default: '/usr/local/cozy/apps',
-* **file_token**: 
-  * File where stack token  are stored
-  * By default: '/etc/cozy/stack.token',
-* **file_stack**: 
-  * File where stack information are stored 
-  * Format: json file
-  * By default: '/usr/local/cozy/apps/stack.json',
+  * By default: '/usr/local/cozy/apps'.
 
 ### Environement configuration
 
@@ -278,28 +271,6 @@ Every configuration are optional
     * proxy
 
 
-if data.env?
-    conf.env =
-        global:         data.env.global || false
-        data_system:    data.env.data_system || false
-        home:           data.env.home || false
-        proxy:          data.env.proxy || false
-
-### Configuration changes (pertinence ?????)
-
-oldConf =
-        dir_log :           data.old.dir_log || false
-        dir_source :        data.old.dir_source || false
-        file_stack :        data.old.file_stack || false
-
-### First patch (pertinence ????)
-
-* **patch**
-  * Fomat: Number
-  * Usefull between 
-
--->
-
 ### File configuration example
 ```json
 {
@@ -307,8 +278,6 @@ oldConf =
   "npm_strict_ssl": true,
   "dir_log": "/usr/local/logs",
   "dir_source": "/usr/local/myapps",
-  "file_token": "/usr/local/stack.token",
-  "file_stack": "/usr/local/stack.json",
   "env":
     {
       "global": {"STACK": "cozy"},
@@ -318,8 +287,6 @@ oldConf =
     }
 }
 ```
-
-Coming soon ...
 
 ## Autostart
 
