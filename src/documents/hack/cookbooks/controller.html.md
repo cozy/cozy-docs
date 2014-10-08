@@ -245,7 +245,7 @@ Response:
 
 Configuration are stored in file '/etc/cozy/controller.json'
 Every configuration are optional
-Configuration file are avaible only for new controller (not already published)
+Configuration file are avaible only for new controller
 
 ### Common configuration
 
@@ -255,12 +255,15 @@ Configuration file are avaible only for new controller (not already published)
 * **npm_strict_ssl**: 
   * Specify if you want use strict ssl option with npm.
   * By default : false.
+
+<!--
 * **dir_log**: 
   * Directory where application logs are stored
   * By default: '/var/log/cozy'.
 * **dir_source**: 
   * Directory where application code source are stored
   * By default: '/usr/local/cozy/apps'.
+-->
 
 ### Environement configuration
 
@@ -276,8 +279,6 @@ Configuration file are avaible only for new controller (not already published)
 {
   "npm_registry": https://my-registry.com,
   "npm_strict_ssl": true,
-  "dir_log": "/usr/local/logs",
-  "dir_source": "/usr/local/myapps",
   "env":
     {
       "global": {"STACK": "cozy"},
@@ -290,4 +291,18 @@ Configuration file are avaible only for new controller (not already published)
 
 ## Autostart
 
-Coming soon ....
+When controller are started, it starts all applications started before the last stop.
+
+Autostart has several steps :
+
+  * Checks if couchdb server is started
+    * Controller try 5 times (with 5 seconds between two tests)
+    * If couchDB server doesn't respond, controller are stopped
+  * Checks if stack application is installed
+    * If is not the case, main server start
+  * Start Data System application
+    * If Data System cannot start, controller are stopped
+  * Recover all application stored in database
+    * Start all application which have 'installed' as state
+  * Start Home application
+  * Start Proxy application
