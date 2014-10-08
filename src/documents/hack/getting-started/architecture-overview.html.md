@@ -54,7 +54,7 @@ The Data System is Cozy's true power. It keeps the users data safe by restrictin
 During the installation of an application, the users are prompted to allow or not the application to access various types of data ("doctypes") so they can **control** wether they trusts the application or not.
 It also opens the opportunity to use multiple data-source. Do you want to have contacts in your agenda application? Do it!
 
-You can find the complete API and details about the Data System on the dedicated [cookbook](/cookbooks/data-system.html).
+You can find the complete API and details about the Data System on the dedicated [cookbook](/hack/cookbooks/data-system.html).
 
 ## What you should remember
 As a developer, you are going to create an application that will be run by Cozy's pPaaS. That application will access the data through the Data System.
