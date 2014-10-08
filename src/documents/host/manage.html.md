@@ -58,7 +58,7 @@ fab -H sudoer@host:ip update_indexer
 
 #### Application update
 
-To update a single application, you can run the following command on your targe
+To update a single application, you can run the following command on your target
 server.
 
 ```bash
