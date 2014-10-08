@@ -10,7 +10,7 @@ toc: true
 
 So far, we have built classic web applications in which a server delivers HTML pages to the browser. This is a "multiple page application" approach, meaning that you have one HTML file for each page of your website.
 
-Single page applications are made of one page and tons of JavaScript. While this is not a good news for some users (who likes to disable JavaScript), it offers the rest of your users the following advantages:
+Single page applications are made of one page and tons of JavaScript. While this is not a good news for some users (who like to disable JavaScript), it offers the rest of your users the following advantages:
 
 * better user experience: it feels more like a native application
 * less network consumption: it only loads the needed data thanks to Ajax
@@ -70,7 +70,7 @@ You already know about the server part of the file structure, so let's focus on 
     * config.js - Brunch configuration
     * package.json - Brunch modules to install
 
-There is two part in the file structure: the "app" where you will write your code, and "public" where Brunch will output everything you write correctly into one nice JavaScript file.
+There are two parts in the file structure: the "app" where you will write your code, and "public" where Brunch will output everything you write correctly into one nice JavaScript file.
 
 Another important thing is that the folder structure is not **constrained at all**. It is a design choice from us and you can change the way you like, but don't forget to adjust the Brunch configuration afterwards.
 
@@ -110,7 +110,7 @@ As a result, your application will be made of:
 The glue is Backbone's observer/observable pattern that allows a lower coupling between each part.
 <br /><br />
 
-How does our template work? In the app/assets/index.html we load the JavaScript we need, and call the "initialize" script. This last action ensures sure that the DOM has been loaded and starts the Backbone application by creating and initializing the router.
+How does our template work? In the app/assets/index.html we load the JavaScript we need, and call the "initialize" script. This last action ensures us that the DOM has been loaded and starts the Backbone application by creating and initializing the router.
 
 Then the router creates the main view and gives it the collection of bookmarks.
 Then the view is rendered. The render process is: load the template, put data in the template, add it to the DOM at the right place.
