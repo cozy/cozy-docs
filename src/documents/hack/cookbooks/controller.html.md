@@ -302,7 +302,7 @@ Autostart has several steps :
     * Controller try 5 times (with 5 seconds between two tests)
     * If couchDB server doesn't respond, controller is stopped
   * Check if stack applications are installed
-    * If is not the case, controller starts without starts other applications
+    * If Data System is not installed, controller starts without starts other applications
   * Start Data System application
     * If Data System cannot start, controller is stopped
   * Retrieve all application stored in database
