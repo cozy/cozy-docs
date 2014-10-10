@@ -145,6 +145,9 @@ Response:
 
 ## Old application API
 
+For version 1.0.28 or older, controller doesn't support new API. This section describe API for old controller.
+Controller with more recent version supports old and new API.
+
 ### Install application
 ```http
 POST drones/:name/start
@@ -295,11 +298,11 @@ When controller is started, it starts all applications that were running before 
 
 Autostart has several steps :
 
-  * Checks if couchdb server is started
+  * Check if couchdb server is started
     * Controller try 5 times (with 5 seconds between two tests)
     * If couchDB server doesn't respond, controller is stopped
-  * Checks if stack application is installed
-    * If is not the case, main server start
+  * Check if stack applications are installed
+    * If is not the case, controller starts without starts other applications
   * Start Data System application
     * If Data System cannot start, controller is stopped
   * Retrieve all application stored in database
