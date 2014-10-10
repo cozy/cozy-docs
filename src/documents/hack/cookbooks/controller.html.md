@@ -22,7 +22,7 @@ You will find HTTP status code for the response, here is what they mean:
 * 500: internal server error
 
 
-Application should be authenticated to request controller. 
+Application should be authenticated to request controller.
 
 Authentication is based on a token shared by all the Cozy stack.
 This token should be sent in 'x-auth-token' request header. This token is stored in "/etc/cozy/stack.token" by default but this is configurable. Accessing it requires `sudo` privileges.
@@ -35,13 +35,13 @@ Manifest example :
 
 ```json
 manifest =
-    user: "cozy",      # Required, user which start the application                 
-    name: "note",                                                 
-    domain: "localhost",           
-    repository:                   
-        type: "git",                 
+    user: "cozy",      # Required, user which start the application
+    name: "note",
+    domain: "localhost",
+    repository:
+        type: "git",
         url: "https://github.com/mycozycloud/cozy-notes.git",
-    scripts:                    
+    scripts:
         start: "server.js"
 ```
 
@@ -121,7 +121,7 @@ Response:
 ```
 Return an 400 error if application is not installed.
 
-### Recover all applications
+### Get all applications
 ```http
 GET apps/all
 Response:
@@ -132,7 +132,7 @@ Response:
     500: {error: "the error message"}
 ```
 
-### Recover all started applications
+### Get all started applications
 ```http
 GET apps/started
 Response:
@@ -217,7 +217,7 @@ Response:
 ```
 Return an 400 error if application is not installed.
 
-### Recover all running applications
+### Get all running applications
 ```http
 GET drones/running
 Response:
@@ -229,7 +229,7 @@ Response:
 
 ## Disk info API
 
-### Recover information about disk usage
+### get information about disk usage
 ```http
 GET diskinfo
 Response:
@@ -249,18 +249,18 @@ Configuration file are avaible only for new controller
 
 ### Common configuration
 
-* **npm_registry**: 
+* **npm_registry**:
   * Specify a npm registry.
   * Use common npm registry by default.
-* **npm_strict_ssl**: 
+* **npm_strict_ssl**:
   * Specify if you want use strict ssl option with npm.
   * By default : false.
 
 <!--
-* **dir_log**: 
+* **dir_log**:
   * Directory where application logs are stored
   * By default: '/var/log/cozy'.
-* **dir_source**: 
+* **dir_source**:
   * Directory where application code source are stored
   * By default: '/usr/local/cozy/apps'.
 -->
@@ -284,7 +284,7 @@ Configuration file are avaible only for new controller
       "global": {"STACK": "cozy"},
       "data_system": {"DB": "mydatabase"},
       "home": {"PORT": 9103},
-      "proxy": {"PORT": 9104}      
+      "proxy": {"PORT": 9104}
     }
 }
 ```
@@ -302,7 +302,7 @@ Autostart has several steps :
     * If is not the case, main server start
   * Start Data System application
     * If Data System cannot start, controller are stopped
-  * Recover all application stored in database
+  * Retrieve all application stored in database
     * Start all application which have 'installed' as state
   * Start Home application
   * Start Proxy application
