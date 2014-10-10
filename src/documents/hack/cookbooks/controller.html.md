@@ -291,17 +291,17 @@ Configuration file are avaible only for new controller
 
 ## Autostart
 
-When controller are started, it starts all applications started before the last stop.
+When controller is started, it starts all applications that were running before it stops.
 
 Autostart has several steps :
 
   * Checks if couchdb server is started
     * Controller try 5 times (with 5 seconds between two tests)
-    * If couchDB server doesn't respond, controller are stopped
+    * If couchDB server doesn't respond, controller is stopped
   * Checks if stack application is installed
     * If is not the case, main server start
   * Start Data System application
-    * If Data System cannot start, controller are stopped
+    * If Data System cannot start, controller is stopped
   * Retrieve all application stored in database
     * Start all application which have 'installed' as state
   * Start Home application
