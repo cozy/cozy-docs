@@ -25,7 +25,7 @@ You will find HTTP status code for the response, here is what they mean:
 Application should be authenticated to request controller.
 
 Authentication is based on a token shared by all the Cozy stack.
-This token should be sent in 'x-auth-token' request header. This token is stored in "/etc/cozy/stack.token" by default but this is configurable. Accessing it requires `sudo` privileges.
+This token should be sent in 'x-auth-token' request header. This token is stored in **/etc/cozy/stack.token** by default but this is configurable. Accessing it requires `sudo` privileges.
 
 ## Application manifest
 
@@ -232,7 +232,7 @@ Response:
 
 ## Disk info API
 
-### get information about disk usage
+### Get information about disk usage
 ```http
 GET diskinfo
 Response:
@@ -246,9 +246,10 @@ Response:
 
 ## Configuration
 
-Configuration are stored in file '/etc/cozy/controller.json'
-Every configuration are optional
-Configuration file are avaible only for new controller
+Configuration are stored in file **/etc/cozy/controller.json**.
+Every configurations are optional.
+
+Configuration file is avaible only for new controller.
 
 ### Common configuration
 
@@ -294,7 +295,7 @@ Configuration file are avaible only for new controller
 
 ## Files used
 
-Controller stores several files in /etc/cozy, /usr/local/cozy and /usr/local/var/log/cozy
+Controller stores several files in **/etc/cozy**, **/usr/local/cozy** and **/usr/local/var/log/cozy**.
 
 In **/etc/cozy**, controller stores configurations:
   * **controller.json**: Contains controller configurations (see [Configuration section](controller.html#configuration))
