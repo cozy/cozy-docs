@@ -302,7 +302,7 @@ In **/etc/cozy**, controller stores configurations:
 
 In **/usr/local/cozy**, controller stores information about applications:
   * **apps**: Contains all application source code.
-  * **stack.json**: Contains information about stack cozy (git repository, branch, start script, ...).
+  * **apps/stack.json**: Contains information about stack cozy (git repository, branch, start script, ...).
 
 In **/usr/local/var/log/cozy**, controller stores all application logs:
   * **app.log**: Logs for application app.
