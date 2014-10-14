@@ -299,6 +299,7 @@ Controller stores several files in /etc/cozy, /usr/local/cozy and /usr/local/var
 In **/etc/cozy**, controller stores configurations:
   * **controller.json**: Contains controller configurations (see [Configuration section](controller.html#configuration))
   * **stack.token**: Contains token shared by cozy stack (Controller, Data system, Home and Proxy). This token is generated at each controller starting.
+  * **.controller.json-backup**: Hidden file, used for configuration changes.
 
 In **/usr/local/cozy**, controller stores information about applications:
   * **apps**: Contains all application source code.
