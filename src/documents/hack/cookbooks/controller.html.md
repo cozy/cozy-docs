@@ -292,6 +292,21 @@ Configuration file are avaible only for new controller
 }
 ```
 
+## Files used
+
+Controller stores several files in /etc/cozy, /usr/local/cozy and /usr/local/var/log/cozy
+
+In **/etc/cozy**, controller stores configurations:
+  * **controller.json**: Contains controller configurations (see [Configuration section](controller.html#configuration))
+  * **stack.token**: Contains token shared by cozy stack (Controller, Data system, Home and Proxy). This token is generated at each controller starting.
+
+In **/usr/local/cozy**, controller stores information about applications:
+  * **apps**: Contains all application source code.
+  * **stack.json**: Contains information about stack cozy (git repository, branch, start script, ...).
+
+In **/usr/local/var/log/cozy**, controller stores all application logs:
+  * **app.log**: Logs for application app.
+
 ## Autostart
 
 When controller is started, it starts all applications that were running before it stops.
