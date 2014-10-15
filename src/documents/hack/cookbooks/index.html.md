@@ -15,6 +15,7 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 ## API
 * [Data System API](/hack/cookbooks/data-system.html)
 * [ODM for Data System API](/hack/cookbooks/data-system-odm.html)
+* [Controller API](/hack/cookbooks/controller.html)
 
 ## General development cookbooks
 * [Debug your application](/hack/cookbooks/debugging.html)

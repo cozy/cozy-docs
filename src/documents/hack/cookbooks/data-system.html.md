@@ -25,8 +25,8 @@ You will find HTTP status code for the response, here is what they mean:
 * 201: success (and something has been created)
 * 204: success (and something has been deleted)
 * 400: bad request
-* 401: unauthorized
-* 403: not authenticated
+* 401: unauthorized (bad authentication)
+* 403: forbidden (authenticated but not enough permissions)
 * 404: document not found
 * 409: document already exists
 * 500: internal server error
