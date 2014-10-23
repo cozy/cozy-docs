@@ -73,7 +73,7 @@ mkdir cozy-dev && cd cozy-dev
 
 Now you can use the Cozy Manager to initialize the VM by running:
 ``` bash
-cozy-dev dev:init
+cozy-dev vm:init
 ```
 This will download the base box file (~500MB) and a custom configuration ([see
 it on
@@ -83,15 +83,15 @@ Then the VM will be created. The whole process will take about 15 minutes
 
 Then you can start the VM and check that everything is running correctly.
 ``` bash
-cozy-dev dev:start
-cozy-dev dev:vm-status
+cozy-dev vm:start
+cozy-dev vm:status
 ```
 
 We advise you to update the VM the first time you start it (and regularly),
 because we don't update the base box each time we improve or fix a bug in the
 "core" of Cozy:
 ```bash
-cozy-dev dev:update
+cozy-dev vm:update
 ```
 
 You can go to `http://localhost:9104/` in order to see your Cozy running. You can also use
