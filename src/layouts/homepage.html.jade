@@ -43,6 +43,10 @@ html(lang="en")
                             a.button(href="/host/install.html#virtualbox-image") Give a try on <strong>VirtualBox</strong>
                             //a.button(href="/host/install.html#raspberry-pi-image") Install on your <strong>Raspberry Pi</strong>
                         p
+                            | or try it with vagrant 
+                            br
+                            pre vagrant init cozycloud/cozy && vagrant up
+                        p
                             a(href="/host/install.html") 
                                 | then install it on your own box.
             .line.external-links
@@ -59,7 +63,7 @@ html(lang="en")
                 .mod.w33.left.pa2.txtcenter
                     h4 Free and Open Source
                     br
-                    a.button(href="https://github.com/cozy")
+                    a.button(href="https://github.com/cozy/cozy-setup")
                         | See Source Code
 
         section#why.why.center.highlight
@@ -128,7 +132,7 @@ html(lang="en")
 
                  .line.mt6
                      p
-                        strong.biggest 2000 apps are downloaded each month!
+                        strong.biggest 3000 apps are downloaded each month!
                  .line.txtcenter.mt2
                      a#install-button.button.mt6(href="/host/install.html")
                             | Install Cozy on your favorite hardware
