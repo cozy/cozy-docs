@@ -14,7 +14,7 @@ toc: true
 
 The easiest way to update Cozy is to use the Fabric installation file used for
 the installation. But in this case, you should not call the installation task but the
-udpate tasks:
+update tasks:
 
 ```bash
 fab -H user@ip update_stack
