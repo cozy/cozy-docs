@@ -86,7 +86,7 @@ fab -H sudoer@localhost install
 
 #### Try Cozy with Vagrant
 
-You can use Vagrant to run Cozy Cloud Setup in a virtual machine. To do so, 
+You can use Vagrant to run Cozy Cloud Setup in a virtual machine. To do so,
 we recommend you use the Ubuntu 12.04 box. Be careful as the update will require that
 you configure your boot sequence. Choose the first filesystem that is offered, then click ok.
 
@@ -201,7 +201,7 @@ tar -xvzf cozy-raspberrypi.im.tar.gz
 Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
 then make a low-level dump of the image onto your card.
 
-NB: SD Class 10 card are recommended for better performance. 
+NB: SD Class 10 card are recommended for better performance.
 
 WARNING: this operation will erase all previously stored data on the card.
 
@@ -252,10 +252,18 @@ sudo dd bs=4M if=/my/path/cozy-cubieboard2.im of=/dev/sdc
 
 Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
 Cubieboard, and you will be able to access your Cozy through port 443
-(https protocol).
+(https protocol). To find the IP address of your Cubieboard, you can use nmap on your local machine:
+```
+$ nmap -T4 -sP 192.168.x.0/24
+```
 
 If you want to login to the board, use the default Cubian credentials ```cubie```
-and ```cubie```. By the way, don't forget to change the password and to
+and ```cubie```:
+```
+$ ssh -p 36000 cubie@<ip-of-your-cubieboard>
+```
+
+By the way, don't forget to change the password and to
 [reset the security
 tokens](#about-security-in-pre-installed-images)!
 
@@ -265,7 +273,7 @@ tokens](#about-security-in-pre-installed-images)!
 renew the SSL certificate, the database credentials and the controller token.*
 
 In order to run Cozy on your Cubietruck, the simplest way is to download our
-image and set it up on a SD card. It is based on the 
+image and set it up on a SD card. It is based on the
 [Cubian](http://cubian.org/) distribution.
 
 First, get the image archive:
@@ -445,5 +453,5 @@ Restart nginx, and your Cozy should be accessible at http://cloud.myhost.com
 ## Hosting services
 ### Cozycloud
 [Cozycloud](https://cozycloud.cc) is the maintainer of the Cozy project. We can
-provide you a Cozy instance for free if you write us an 
+provide you a Cozy instance for free if you write us an
 [email](mailto:contact@cozycloud.cc).
