@@ -184,6 +184,10 @@ Once donce, your Cozy should be up on the 443 port. Now, enjoy!
 *Warning: For production use, you must change the superuser credentials,
 renew the SSL certificate, the database credentials and the controller token.*
 
+Cozy is a little bit heavy to run on the Raspberry Pi, you can check for a
+lightweight alternative called 
+[Cozy Light](https://github.com/cozy-labs/cozy-light)
+
 In order to run Cozy on your Raspberry Pi, the simplest way is to download our
 image and set it up on a SD card. The image is based on the
 [Raspbian](http://www.raspbian.org/) distribution.
@@ -221,6 +225,26 @@ tokens](http://cozy.io/host/install.html#about-security-in-pre-installed-images)
 NB: The keyboard layout is
 azerty, so the a is switched with the q. We'll change that soon.
 
+Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
+Raspberry, and you will be able to access your Cozy through port 443
+(https protocol). To find the IP address of your Cubieboard, you can use nmap
+on your local machine:
+
+```
+$ nmap -T4 -sP 192.168.x.0/24
+```
+
+If you want to login to the board, use the default Raspbiand credentials
+```pi``` and ```raspberry```:
+```
+$ ssh pi@<ip-of-your-raspberrypi>
+```
+
+By the way, don't forget to change the password and to
+[reset the security
+tokens](#about-security-in-pre-installed-images)!
+
+
 ## Cubieboard2 image
 
 *Warning: For production use, you must change the superuser credentials,
@@ -253,6 +277,7 @@ sudo dd bs=4M if=/my/path/cozy-cubieboard2.im of=/dev/sdc
 Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
 Cubieboard, and you will be able to access your Cozy through port 443
 (https protocol). To find the IP address of your Cubieboard, you can use nmap on your local machine:
+
 ```
 $ nmap -T4 -sP 192.168.x.0/24
 ```
@@ -301,8 +326,22 @@ Now insert the SD card in your Cubietruck SD card reader. Reboot your
 Cubietruck, and you will be able to access your Cozy through port 443
 (https protocol).
 
+Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
+Cubieboard, and you will be able to access your Cozy through port 443
+(https protocol). To find the IP address of your Cubieboard, you can use nmap on your local machine:
+
+```
+$ nmap -T4 -sP 192.168.x.0/24
+```
+
 If you want to login to the board, use the default Cubian credentials ```cubie```
-and ```cubie```. By the way, don't forget to change the password and to
+and ```cubie```:
+```
+$ ssh -p 36000 cubie@<ip-of-your-cubieboard>
+```
+
+
+By the way, don't forget to change the password and to
 [reset the security
 tokens](#about-security-in-pre-installed-images)!
 

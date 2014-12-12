@@ -11,6 +11,12 @@ toc: true
 
 Requirements: Android Phone (>=4.1 version)
 
+<a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"
+   />
+</a>
+
 Go to the PlayStore and search for "Cozy Cloud" in the search bar. Then
 select and install your app.
 
@@ -33,7 +39,7 @@ few information:
 ![Installation step 03](/assets/images/mobile/install_03.png)
 
 Once done, you have to confirm and wait for the first time synchronization to
-finish. Then you're done!
+finish.
 
 ## Browse files from your phone
 
