@@ -94,3 +94,4 @@ Let us know on the [forum](https://forum.cozy.io/) you would like to see the app
 ## Related resources
 * [Playstore page](https://play.google.com/store/apps/details?id=io.cozy.files_client&hl=)
 * [Forum discussion](https://forum.cozy.io/t/i-tried-cozy-mobile/188)
+* [Android APK](https://files.cozycloud.cc/cozy.apk) (sha1: 2f138e7f59278c44330546d752e70d18fc3451d3)
