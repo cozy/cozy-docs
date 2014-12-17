@@ -2,7 +2,7 @@
 title: "Manage"
 layout: "default"
 category: "host"
-menuOrder: 5
+menuOrder: 1
 toc: true
 ---
 # Manage your Cozy
@@ -206,10 +206,10 @@ cozy-monitor script <app> <script> [argument]
 ## Provide more disk space
 
 
-All data and files are stored in CouchDB. So, the simplest way to add more disk 
+All data and files are stored in CouchDB. So, the simplest way to add more disk
 space is to change your CouchDB configuraion. Currently your data are saved in
 that folder:
- 
+
 ```bash
 /usr/local/var/lib/couchdb/
 ```
@@ -237,7 +237,7 @@ it:
 supervisorctl stop couchdb
 mkdir /home/storage/cozy-data/
 # cp here, to have a copy of the data in case of problem.
-cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/ 
+cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
 supervisorctl start couchdb
 ```

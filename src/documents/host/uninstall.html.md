@@ -2,7 +2,7 @@
 title: "Uninstall"
 layout: "default"
 category: "host"
-menuOrder: 6
+menuOrder: 3
 toc: true
 ---
 
