@@ -1,11 +1,12 @@
 ---
-title: "Mobile sync"
+title: "Files synchronization"
 layout: "default"
 category: "mobile"
 menuOrder: 0
 toc: true
+urls: ["/mobile/"]
 ---
-# Mobile Synchronization
+# Files Synchronization
 
 ## Install and configure
 
