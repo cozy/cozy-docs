@@ -2,7 +2,7 @@
 title: "Trouble Shootings"
 layout: "default"
 category: "host"
-menuOrder: 7
+menuOrder: 2
 toc: true
 ---
 
@@ -62,7 +62,7 @@ Cozy is based on Node.js applications. Node.js apps download their dependencies 
 Node.js requires a specific configuration to be run on Raspberry Pi. Install
 Node with the prebuilt package available in the Node.js source directory. About
 building Node.js on other ARM processors, we successfully built it on A20
-Allwinner. 
+Allwinner.
 
 ### Nginx
 

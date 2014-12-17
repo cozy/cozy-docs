@@ -75,11 +75,12 @@ html(lang='en')
                 - if(item.text != "")
                   li(class="#{className}")
                     a.label(href="##{item.id}")= item.text
-                    - if (item.children != null)
+                    - if (item.children != null && item.children.length > 0)
                       ul.second-level
                         - for child in item.children
-                          li.small
-                            a.label(href="##{child.id}")= child.text
+                          - if (child.id != '')
+                            li.small
+                              a.label(href="##{child.id}")= child.text
 
       - var className = "w75"
       - if (document.tableOfContents.length == 0)

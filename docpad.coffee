@@ -15,13 +15,13 @@ docpadConfig = {
 
     collections:
         hostPages: ->
-            @getCollection('html').findAllLive({category: 'host', isCategoryMaster:$exists:false})
+            @getCollection('html').findAllLive category: 'host'
         mobilePages: ->
-            @getCollection('html').findAllLive({category: 'mobile', isCategoryMaster:$exists:false})
+            @getCollection('html').findAllLive category: 'mobile'
         hackPages: ->
-            @getCollection('html').findAllLive({category: 'hack', isCategoryMaster:$exists:false})
+            @getCollection('html').findAllLive category: 'hack'
         homePages: ->
-            @getCollection('html').findAllLive({isCategoryMaster:$exists:true})
+            @getCollection('html').findAllLive isCategoryMaster:$exists:true
 
     enabledPlugins:
         "live-reload": true
