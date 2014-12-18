@@ -98,3 +98,18 @@ html(lang='en')
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
 
+
+    script(type='text/javascript').
+      var _paq = _paq || [];
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+
+      (function() {
+        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.cozycloud.cc/";
+        _paq.push(["setTrackerUrl", u+"piwik.php"]);
+        _paq.push(["setSiteId", "3"]);
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+      })();
+    noscript
+        img(src="/https://piwik.cozycloud.cc/piwik.php?idsite=1&amp;rec=1", style="border:0", alt="")
