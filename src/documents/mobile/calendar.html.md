@@ -86,7 +86,57 @@ Touch the "Calendar" button and it'll trigger a synchronization.
 Congratulations, your mobile device is now synchronized with your Cozy!
 
 ## iOS
-Coming soon...
+
+#### Configure your CalDav account
+Open the Settings, select the "Mail, Contacts, Calendars" view, and click on "Add Account":
+<center>![iOS step 1](/assets/images/mobile/ios/calendar/step1.jpg)</center>
+
+<br />
+<br />
+Then select "Other" account:
+<center>![iOS step 2](/assets/images/mobile/ios/calendar/step2.jpg)</center>
+
+<br />
+<br />
+Then select "Add CalDav Account", in the Calendars section:
+<center>![iOS step 3](/assets/images/mobile/ios/calendar/step3.jpg)</center>
+
+<br />
+<br />
+Finally, fill the form with the credentials you got from Cozy's Sync app:
+
+* the "Server" input will vary vor each user: yourcozyaddress/public/sync/principals/me
+* the "Username input will always be "me",
+* the "Password" input will be the password you got earlier from Cozy,
+* the "Description" input stands for the user-friendly name of your choice, "Cozy" is just fine.
+
+<center>![iOS step 4](/assets/images/mobile/ios/calendar/step4.jpg)</center>
+
+<br />
+<br />
+And then click next. Activate or not reminders, and click save:
+<center>![iOS step 5](/assets/images/mobile/ios/calendar/step5.jpg)</center>
+
+<br />
+<br />
+Congratulations, your mobile device is now synchronized with your Cozy!
+You can now configure the mobile Calendars application to choose which calendar you want to display.
+
+#### Configure your calendars
+
+Open the Calendar app.
+
+You can already visualize the calendars of your Cozy.
+Click on calendars to toggle calendar's visibility.
+<center>![iOS step 6](/assets/images/mobile/ios/calendar/step6.jpg)</center>
+
+<br />
+<br />
+Open the menu and click the button to add a new calendar.
+<center>![iOS step 7](/assets/images/mobile/ios/calendar/step7.jpg)</center>
+
+<br />
+That's it! You can seamlessly manage your events from your mobile and your Cozy.
 
 ## Firefox OS
 
