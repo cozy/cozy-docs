@@ -86,7 +86,36 @@ Touch the "Contacts" button and it'll trigger a synchronization.
 Congratulations, your mobile device is now synchronized with your Cozy!
 
 ## iOS
-Coming soon...
+
+#### Configure your CalDav account
+Open the Settings, select the "Mail, Contacts, Calendars" view, and click on "Add Account":
+<center>![iOS step 1](/assets/images/mobile/ios/contacts/step1.jpg)</center>
+
+<br />
+<br />
+Then select "Other" account:
+<center>![iOS step 2](/assets/images/mobile/ios/contacts/step2.jpg)</center>
+
+<br />
+<br />
+Then select "Add CardDav Account", in the Contacts section:
+<center>![iOS step 3](/assets/images/mobile/ios/contacts/step3.jpg)</center>
+
+<br />
+<br />
+Finally, fill the form with the credentials you got from Cozy's Sync app:
+
+* the "Server" input will vary vor each user: yourcozyaddress/public/sync
+* the "Username input will always be "me".
+* the "Password" input will be the password you got earlier from Cozy.
+* the "Description" input stands for the user-friendly name of your choice, "Cozy" is just fine.
+
+<center>![iOS step 4](/assets/images/mobile/ios/contacts/step4.jpg)</center>
+
+<br />
+<br />
+Congratulations, your mobile device is now synchronized with your Cozy!
+<center>![iOS step 5](/assets/images/mobile/ios/contacts/step5.jpg)</center>
 
 ## Firefox OS
 
