@@ -15,7 +15,7 @@ Depending on what you use, you might want to install JugglingDB and the Cozy ada
 
 
 ```bash
-npm install jugglindb jugglingdb-cozy-adapter --save
+npm install jugglingdb jugglingdb-cozy-adapter --save
 ```
 
 In the following example, "Note" refers to a model and "note" to a document of the model "Note". "Note" was declared like this:
