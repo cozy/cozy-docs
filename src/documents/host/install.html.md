@@ -490,7 +490,20 @@ server {
 Restart nginx, and your Cozy should be accessible at http://cloud.myhost.com
 
 ## Hosting services
+
 ### Cozycloud
+
 [Cozycloud](https://cozycloud.cc) is the maintainer of the Cozy project. We can
 provide you a Cozy instance for free if you write us an
 [email](mailto:contact@cozycloud.cc).
+
+### VPS
+
+Renting a VPS and running the installation script is a good option. Here are
+the two hosting providers we performed tests on:
+
+* [OVH](http://www.ovh.com/fr/vps/vps-classic.xml), we recommend the VPS
+  Classic 2.
+* [Digital Ocean](https://www.digitalocean.com/pricing/). The $10 plan is a
+  minimum. We recommend the $20 plan.
+
