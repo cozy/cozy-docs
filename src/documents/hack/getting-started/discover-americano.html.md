@@ -8,7 +8,7 @@ toc: true
 
 # Discover Americano
 
-The more your application grows, the harder it is to maintain. [Express.js](http://expressjs.com/) is incredibely powerful, but lacks at helping the developer structuring their code. In order to facilitate development without sacrifying maintainability, let's try [Americano](https://github.com/frankrousseau/americano) the framework that makes Express.js more opinionated about configuration and code organization without making it a magician hat ("magic" when it comes to coding is never a good idea).
+The more your application grows, the harder it is to maintain. [Express.js](http://expressjs.com/) is incredibly powerful, but lacks at helping the developer structuring their code. In order to facilitate development without sacrificing maintainability, let's try [Americano](https://github.com/frankrousseau/americano) the framework that makes Express.js more opinionated about configuration and code organization without making it a magician hat ("magic" when it comes to coding is never a good idea).
 
 Americano extends Express: everything that works with Express will work out of the box with Americano. It's really just a matter of convention!
 
