@@ -49,6 +49,8 @@ npm install
 
 Note your command includes `npm install` twice. The client's one is for Brunch specific modules. We'll come back to what Brunch does soon.
 
+**Hint**: If you are later starting to build an app from scratch, the `cozy-dev new <appname>` command will take care of creating a project directory with a skeleton app structure for you.
+
 ## File structure of the bootstrap Backbone application
 
 You already know about the server part of the file structure, so let's focus on the client folder.
