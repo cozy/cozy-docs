@@ -351,9 +351,20 @@ module.exports.delete = function(req, res) {
 You server is now a RESTful API that allows your single page app to request it easily thanks to Backbone.
 
 ## What's next?
-This tutorial doesn't cover every aspect and good practice of Backbone but it should give you good insight into how you can build awesome single page apps.
 
-We haven't talked about Cozy for a while, but everything you've done until know should help you creating an (awesome) application for Cozy. There is more cool stuff you can do with Cozy and you can ask us on IRC or by email what the next steps are or just to get help from us.
+This tutorial doesn't cover every aspect and good practice of Backbone but it
+should give you good insight into how you can build awesome single page apps.
+
+Finally yo make your application Cozy-ready, you have to do one unfamiliar
+thing. You have to push, in your Git repository, the build of your application
+client.
+Why that? Because the Cozy platform don't run any build and we don't have a
+strong package manager yet. 
+The Cozy Platform fetch your git repository when it install an app. If you put
+the result of your build in your source, the platform can fetch it through git.
+
+Aside of this, there is a lot of cool stuff you can do with Cozy and you can
+ask us on IRC or by email what the next steps are or just to get help from us.
 
 <br /><br />
 We are eager to see what application you will bring to the Cozy community, don't hesitate to show us your work!
