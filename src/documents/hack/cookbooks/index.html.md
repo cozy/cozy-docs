@@ -34,7 +34,7 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 * giving user notifications
 * sending emails
 * managing fixtures with cozy-fixtures
-* understanding the cozy-manager
+* understanding the cozy-dev
 * how to make unit and functional tests
 * everything about security in Cozy
 * resetting the cozy database

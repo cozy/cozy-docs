@@ -51,7 +51,7 @@ What's coming next? Here is what we plan to add (order is relevant). Feel free t
 * cookbook: how to add Cozy notifications from your app
 * cookbook: how to send emails from your app
 * cookbook: how to add public routes to your application
-* cookbook: cozy-manager documentation
+* cookbook: cozy-dev documentation
 * cookbook: resetting cozy
 * cookbook: everything about security in Cozy
 * cookbook: unit and functional testing

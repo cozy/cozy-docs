@@ -71,5 +71,5 @@ This is a set a of libraries developed and maintained by Cozycloud that are used
 Using/developping with Cozy is easy thanks to the existing tools:
 
 * [cozy-monitor](https://github.com/cozy/cozy-monitor): easy Cozy management ([full documentation](/host/manage.html)) [![Dependencies Status](https://david-dm.org/cozy/cozy-monitor.png)](https://david-dm.org/cozy/cozy-monitor)
-* [cozy-manager](https://github.com/cozy/cozy-manager): your best friend to developer Cozy applications [![Dependencies Status](https://david-dm.org/cozy/cozy-manager.png)](https://david-dm.org/cozy/cozy-manager)
+* [cozy-dev](https://github.com/cozy/cozy-dev): your best friend to developer Cozy applications [![Dependencies Status](https://david-dm.org/cozy/cozy-dev.png)](https://david-dm.org/cozy/cozy-dev)
 * [cozy-fixtures](https://github.com/cozy/cozy-fixtures): add fixtures to the database to test your application [![Build Status](https://travis-ci.org/cozy/cozy-fixtures.png?branch=master)](https://travis-ci.org/cozy/cozy-fixtures) [![Dependencies Status](https://david-dm.org/cozy/cozy-fixtures.png)](https://david-dm.org/cozy/cozy-fixtures)

@@ -47,7 +47,7 @@ portable development environments." That's what we need here! We use it through
 a custom CLI tool, so you will not manipulate it directly.
 (Latest tested version: 1.5.0)
 
-#### [Cozy for developers](https://github.com/cozy/cozy-manager)
+#### [Cozy for developers](https://github.com/cozy/cozy-dev)
 
 You will also need our tool:
 
