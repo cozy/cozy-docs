@@ -47,13 +47,12 @@ switching the ODM's driver. At Cozycloud, we use the ODM in all our apps!
 
 ODM stands for Object Document Mapper, it's like an ORM (Object Relational
 Mapper) but for NoSQL. An O(D|R)M abstracts the storage engine, as a result you
-can switch the storage engine (e.g. from CouchDB to PostgreSQL) without
+can switch the storage engine (e.g. from CouchDB to Pouchdb) without
 changing your code.
 
 Enough talking, let's see how we can use it in our application.
 ```bash
-npm install jugglingdb --save
-npm install jugglingdb-cozy-adapter --save
+npm install cozydb --save
 ```
 
 Then remove all the SQLite-related stuff from your server.js code and add the following:
@@ -61,13 +60,12 @@ Then remove all the SQLite-related stuff from your server.js code and add the fo
 var http = require('http'),
     express = require('express'),
     app = express(),
-    Schema = require('jugglingdb').Schema,
-    db = new Schema('cozy-adapter', { url: 'http://localhost:9101/' });
+    cozydb = require('cozydb')
 
 // ...
 
 // We define our data schema
-Bookmark = db.define('bookmarks', {
+Bookmark = cozydb.getModel('bookmarks', {
   "id": String,
   "title": String,
   "url": { "type": String, "default": ""}
