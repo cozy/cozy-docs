@@ -18,7 +18,7 @@ You can find the code in the following repositories:
 
 ### Server
 * Americano for the NodeJS framework
-* JugglingDB Cozy Adapter to access the Data System (plugin americano-cozy)
+* Cozydb to access the Data System (plugin americano-cozy)
 * Mocha, Chai, Request-JSON, cozy-fixtures and coffeelint for dev mode (tests, fixture management, code style checking)
 
 ### Client
