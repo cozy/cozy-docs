@@ -55,7 +55,7 @@ You will also need our tool:
 npm install -g cozy-dev
 ```
 
-The `cozy` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also, it can generate application skeletons from templates.
+The `cozy-dev` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also, it can generate application skeletons from templates.
 
 
 ### Initializing and starting the virtual machine
