@@ -314,17 +314,7 @@ li
 
 ## Step 5 : deploying your app into Cozy
 
-If you want to deploy the app into a Cozy, your first need to put on a public git repository. We use [Github](https://github.com) because it's awesome, but you can use any git provider.
-
-When you have published your code, go to your Cozy if you have one, or to http://localhost:9104/#applications and install your app through the dedicated interface.
-The application logs are available inside the virtual machine. In order to take a look at them, do the following:
-
-```bash
-vagrant ssh
-tail -f /usr/local/cozy/apps/{yourapplication}/{yourapplication}/{yourapplication}/logs/production.log
-```
-
-You can also run your application directly inside the virtual machine:
+You can run your application directly inside the virtual machine:
 ```bash
 vagrant ssh
 cd /vagrant/{yourapplication}/
