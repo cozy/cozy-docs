@@ -10,22 +10,36 @@ toc: true
 
 It is important to understand how Cozy is built in order to understand how it works. Let's quickly see how it looks like.
 
-![Architecture Overview](/assets/images/cozy-architecture.png)
+![Architecture Overview](/assets/images/architecture-overview.svg)
 
-Too long, don't want to read ? Check out [what you should remember](#What-you-should-remember)!
+Too long, don't want to read ? Check out [what you should remember](#what-you-should-remember)!
 
-Cozy is made of three different layers:
+<br />
+Let's detail every part. Cozy is made of three different layers:
 
-* the Proxy
-* the pPaaS
-* the persistence layer
+* [the platform interface](#the-platform-interface)
+* [the pPaaS](#the-ppaas)
+* [the persistence layer](#the-persistence-layer-the-data-system)
 
-## The Proxy
+## The platform interface
+The platform interface is composed of two applications: the Proxy and the Home (see previous diagram).
+
+### The Proxy
 ([Github repository](https://github.com/cozy/cozy-proxy/))
 
 The proxy main job is handling the authentication and authorization to the Cozy. It is the application that manage registration, login, logout and password reset.
 
 It also handles all the routing of Cozy (to send the right request to the right application).
+
+<br />
+If you want to learn more about authentication and authorization in Cozy, there is a [dedicated cookbook on the subject](/hack/cookbooks/authentication-authorization-workflows.html).
+
+### The Home
+([Github repository](https://github.com/cozy/cozy-home/))
+
+The Home is basically a user interface to manage your Cozy: install, update, and uninstall applications, changing your settings (language, timezone). It is also the central hub for tranverse features like notifications or tags.
+
+This application is basically like the one you could write, except it has specific permissions to manage applications. That means one could imagine to write another version of the Home with other features and capabilities.
 
 ## The pPaaS
 ([Github repository](https://github.com/cozy/cozy-controller/))
@@ -35,9 +49,9 @@ You may already know what a PaaS is: an execution environment for applications.
 
 A personal PaaS is a personal execution environment for personal applications collaborating around personal data. You got it, a pPaaS is all about the user!
 
-Technically, the "controller" and the "home application" play with each other to install, run, update and remove applications within Cozy. We've forked [Haibu](https://github.com/nodejitsu/haibu) to add custom options: more security (applications are run by separate users, restrict the access to the controller itself, ...), handling app authentication to the Data System, logging, etc.
+Technically, the Controller and the Home play with each other to install, run, update and remove applications within Cozy. It makes sure applications are run in a good isolation, manage logging, and more.
 
-The [cozy-controller](https://github.com/cozy/cozy-controller/) can also be used through a dedicated tool, the [cozy-monitor](https://github.com/cozy/cozy-monitor/). You shouldn't be worried too much about it since it is unlikely you will one day use it (except if you host your own Cozy or are willing to contribute to the core).
+The [cozy-controller](https://github.com/cozy/cozy-controller/) can also be used through a dedicated tool, the [cozy-monitor](https://github.com/cozy/cozy-monitor/). The cozy-monitor is a CLI tool, equivalent to the Home: they are both interfaces to the Controller. To use it, you must be root on the machine hosting your Cozy.
 
 ## The persistence layer: the Data System
 ([Github Repository](https://github.com/cozy/cozy-data-system/))
@@ -47,19 +61,26 @@ You've just built your first app using SQLite and you are wondering why we speak
 It's a unified API that allows applications to access:
 
 * the database (CouchDB)
-* the file system
-* the indexer (Whoosh)
+* binaries (in CouchDB too)
+* the indexer (an REST wrapper of our own, around Whoosh)
 
 The Data System is Cozy's true power. It keeps the users data safe by restricting their access by applications.
 During the installation of an application, the users are prompted to allow or not the application to access various types of data ("doctypes") so they can **control** wether they trusts the application or not.
 It also opens the opportunity to use multiple data-source. Do you want to have contacts in your agenda application? Do it!
 
+One important thing to understand about Cozy, is that the platform owns the data, not the application. Applications are just granted permissions by the user to access and manipulate them.
+
+![Applications collaborating around data](/assets/images/architecture-collaborating-around-data.svg)
+
+In this scenario, if you uninstall "Sync", it won't delete your contacts, they will still be usable by Contacts and Files.
+
+<br / >
 You can find the complete API and details about the Data System on the dedicated [cookbook](/hack/cookbooks/data-system.html).
 
 ## What you should remember
 As a developer, you are going to create an application that will be run by Cozy's pPaaS. That application will access the data through the Data System.
 Also, you won't have to bother about user authentication and authorization because it is all handled by the Proxy.
 
-Keep in mind you develop for a **personal** environment, which is not something we are used to at first, but it only changes the relation to data we had until now!
+Keep in mind you develop for a **personal** environment, which is not something we are used to at first, it changes the relation to data we had until now!
 
 Ready to go one step further with Cozy? Get your hands dirty with [the Data System](/hack/getting-started/play-with-data-system.html).
