@@ -2,7 +2,7 @@
 title: "Localize your applications"
 layout: "default"
 category: "hack"
-menuOrder: 3
+menuOrder: 5
 toc: true
 ---
 
