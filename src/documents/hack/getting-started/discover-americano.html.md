@@ -12,7 +12,7 @@ The more your application grows, the harder it is to maintain. [Express.js](http
 
 Americano extends Express: everything that works with Express will work out of the box with Americano. It's really just a matter of convention!
 
-Also, Americano is modular, so you can extend it with plugins. That's what we did with the JugglingDB ODM that comes with the americano-cozy plugin that we are going to use here.
+Also, Americano is modular, so you can extend it with plugins. That's what we did with the cozydb plugin that we are going to use here.
 
 ### What you will achieve
 
@@ -27,7 +27,6 @@ In a brand new application folder, install americano:
 ```bash
 mkdir bookmark-americano && cd bookmark-americano/
 npm install americano --save
-npm install americano-cozy --save # the plugin that will handle database stuff
 ```
 
 Then put the following in the server.js file:
@@ -64,10 +63,9 @@ Start by creating the architecture, then we'll move on the models' creation.
 The models folder allows you to put the doctype definition in separate files. Let's take the code we previously had in server.js and move it to `server/models/bookmark.js`:
 
 ```javascript
-americano = require('americano');
+cozydb = require('cozydb');
 
-// The americano plugin wraps the "db.define" JugglingDB function in a simpler "getModel" call
-module.exports = Bookmark = americano.getModel('bookmarks', {
+module.exports = Bookmark = cozydb.getModel('bookmarks', {
   "id": String,
   "title": String,
   "url": { "type": String, "default": ""}
@@ -87,14 +85,14 @@ module.exports =
   };
 ```
 
-This will **automatically** trigger the old "Bookmark.defineRequest" when the server starts. Americano's Cozy plugin knows that the "all request" is often the same and offers this handy shortcut:
+This will **automatically** trigger the old "Bookmark.defineRequest" when the server starts. Americano's Cozydb plugin knows that the "all request" is often the same and offers this handy shortcut:
 
 ```javascript
-americano = require('americano');
+cozydb = require('cozydb');
 
 module.exports =
   bookmark: {
-    all: americano.defaultRequests.all
+    all: cozydb.defaultRequests.all
   };
 ```
 
@@ -248,6 +246,9 @@ module.exports = {
   ],
   production: [
     americano.logger('short')
+  ],
+  plugins: [
+    'cozydb'
   ]
 };
 ```
