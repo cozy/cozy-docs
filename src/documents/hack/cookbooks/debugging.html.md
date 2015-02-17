@@ -2,7 +2,7 @@
 title: "Debug your application"
 layout: "default"
 category: "hack"
-menuOrder: 4
+menuOrder: 6
 toc: true
 ---
 
@@ -20,7 +20,7 @@ npm install -g node-inspector
 
 ## Start the debugger
 
-By default, the debugger uses the port 5858 to transport debugging informations (as WebSocket), and the 8080 port to serve static files.    
+By default, the debugger uses the port 5858 to transport debugging informations (as WebSocket), and the 8080 port to serve static files.
 You might want to open those ports in the Vagrantfile if you use the [Cozy virtal environment](http://cozy.io/hack/getting-started/setup-environment.html).
 
 ```bash
@@ -40,7 +40,7 @@ You can manually add a breakpoint in your sources with the keyword `debugger`. T
 coffee --nodejs --debug-brk server.coffee
 ```
 
-The init will pause at the first Javascript line: Go to the debugger and press the "play" button to resume it.    
+The init will pause at the first Javascript line: Go to the debugger and press the "play" button to resume it.
 It will break again on your `debugger` instruction.
 
 ---

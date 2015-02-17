@@ -2,7 +2,7 @@
 title: "Using nodemon to auto-refresh the server on code change"
 layout: "default"
 category: "hack"
-menuOrder: 5
+menuOrder: 6
 toc: true
 ---
 

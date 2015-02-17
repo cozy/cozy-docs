@@ -316,16 +316,13 @@ li
 
 You can run your application directly inside the virtual machine:
 ```bash
-vagrant ssh
-cd /vagrant/{yourapplication}/
-cozy-monitor dev-route:start {appSlug} {port}
-PORT={port} node server.js
+cozy-dev deploy
 ```
-Then go to http://localhost:9104/#apps/{appSlug}/ and take a look at your app inside Cozy!
+Then go to `http://localhost:9104/#apps/tutorial/` and take a look at your app inside Cozy!
 
 ## What's next ?
 You've developed your first Cozy app and you must now understand that it's nothing more than a normal web application.
 
 You must also understand that if applications are built that way they will struggle collaborate around the user's data and you will not be able to use Cozy at its best.
 
-Now we'll introduce you to [the Cozy architecture](/hack/getting-started/architecture-overview.html) before coming back to this tutorial and getting into more Cozy webapp development.
+Now we'll introduce you to [the Cozy architecture](/hack/getting-started/architecture-overview.html) before coming back to the tutorial and getting into more Cozy web application development.

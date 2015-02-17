@@ -18,9 +18,10 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 * [Controller API](/hack/cookbooks/controller.html)
 
 ## General development cookbooks
-* [Debug your application](/hack/cookbooks/debugging.html)
+* [Understanding Cozy's development environement](/hack/cookbooks/dev-environment.html)
 * [Deploy your application](/hack/cookbooks/deploy.html)
 * [Localize your application](/hack/cookbooks/localization.html)
+* [Debug your application](/hack/cookbooks/debugging.html)
 * [Using nodemon to auto-refresh the server on code change](/hack/cookbooks/nodemon-server-auto-refresh-on-change.html)
 
 ## Reference
@@ -34,10 +35,7 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 * giving user notifications
 * sending emails
 * managing fixtures with cozy-fixtures
-* understanding the cozy-dev
 * how to make unit and functional tests
-* everything about security in Cozy
-* resetting the cozy database
 
 Do you want to know more about these subjects? Ask your question on IRC (#cozycloud on irc.freenode.net or by email (contact@cozycloud.cc).
 
