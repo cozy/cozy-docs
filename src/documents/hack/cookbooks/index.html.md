@@ -18,7 +18,7 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 * [Controller API](/hack/cookbooks/controller.html)
 
 ## General development cookbooks
-* [Understanding Cozy's development environement](/hack/cookbooks/dev-environment.html)
+* [Understanding Cozy's development environment](/hack/cookbooks/understanding-dev-environment.html)
 * [Deploy your application](/hack/cookbooks/deploy.html)
 * [Localize your application](/hack/cookbooks/localization.html)
 * [Debug your application](/hack/cookbooks/debugging.html)

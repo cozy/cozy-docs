@@ -131,17 +131,4 @@ If you are not a developer, but still want to help the community by adding trans
 * submit a pull request on github
 
 ## Localization guidelines
-This is how you should name the keys of your localization files:
-
-* key names should not contain punctuation
-* key names should be lowercased
-* key names should contain spaces rather than hyphens
-* key names should be no longer than 30 chars or 4 words
-* key names should be (as much as possible) understandable by themselves.
-* key names should be in english
-
-Some examples :
-
-* "Choose the language you want me to use to speak to you:" --> "choose language"
-* "Changing the locale requires to reload the page." --> "reload to change locales"
-* "Once updated, this application will require the following permissions:" --> "permissions after update"
+The localization guidelines can be found with all Cozy's guidelines: https://github.com/cozy/cozy-guidelines#localisation.
