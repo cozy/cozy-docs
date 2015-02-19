@@ -120,7 +120,14 @@ If you want to create a new application based on the coffee template (https://gi
 cozy-dev deploy [port]
 ```
 
-Trick the virtual machine to make it thinks your application is actually installed in the Cozy. By default, `port` is 9250. It will use the `package.json` at the root of your application.
+Trick the virtual machine to make it thinks your application is actually installed in the Cozy. By default, `port` is 9250. It will use the `package.json` at the root of your application to get the application's slug.
+Basically, it doesn't change anything for you, except that you can access your app through the Cozy interface. Just run the `deploy` command, and start your application's server like you are used to.
+
+<center><a href="/assets/images/cozy-dev-setup-deploy.svg" target="_blank">
+![Classic setup with cozy-dev with deploy](/assets/images/cozy-dev-setup-deploy.svg)
+(Click to enlarge)
+</a></center>
+
 
 ### undeploy
 
