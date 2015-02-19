@@ -179,118 +179,60 @@ ansible-playbook playbook.yml -i hosts
 
 Once donce, your Cozy should be up on the 443 port. Now, enjoy!
 
-## Raspberry Pi image
+## Raspberry Pi 2 image
 
-*Warning: For production use, you must change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.*
+**You will need the latest [Raspberry Pi 2](http://en.wikipedia.org/wiki/Raspberry_Pi) to be able to run Cozy properly.**
 
-Cozy is a little bit heavy to run on the Raspberry Pi, you can check for a
+*Note for previous Raspberry Pi:* Cozy is a little bit heavy to run on the previous Raspberry Pi model B/B+, you can check for a
 lightweight alternative called 
 [Cozy Light](https://github.com/cozy-labs/cozy-light)
 
-In order to run Cozy on your Raspberry Pi, the simplest way is to download our
+
+In order to run Cozy on your Raspberry Pi 2, the simplest way is to download our
 image and set it up on a SD card. The image is based on the
 [Raspbian](http://www.raspbian.org/) distribution.
 
 First, get the image archive:
 
 ```bash
-# Download the image (~ 0.9GB)
-wget http://files.cozycloud.cc/cozy-raspberrypi.im.tar.gz
+# Download the image (~ 650MB)
+wget http://files.cozycloud.cc/2015-02-19-cozy-raspberry-pi2.img.7z
 
 # Uncompress it
-tar -xvzf cozy-raspberrypi.im.tar.gz
+7zr e 2015-02-19-cozy-raspberry-pi2.img.7z
 ```
 
 Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
 then make a low-level dump of the image onto your card.
 
-NB: SD Class 10 card are recommended for better performance.
+**NB:** SD Class 10 card are recommended for better performance.
 
-WARNING: this operation will erase all previously stored data on the card.
+**WARNING:** This operation will erase all data previously stored on the card.
 
 ```bash
-sudo dd bs=4M if=./cozy-raspberrypi-1.0.6.im of=/dev/sdc
+sudo dd bs=4M if=2015-02-19-cozy-raspberry-pi2.img of=/dev/sdc
 ```
 
 Now insert the SD card in your Raspberry Pi SD card reader. Reboot your
 Raspberry, and you will be able to access your Cozy through port 443
 (https protocol).
 
-If you want to login to the pi, use the default raspbian credentials ```pi```
-and ```raspberry```. By the way, don't forget to change the password and to
-[reset the security
-tokens](http://cozy.io/host/install.html#about-security-in-pre-installed-images)!
-
-NB: The keyboard layout is
-azerty, so the a is switched with the q. We'll change that soon.
-
-Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
-Raspberry, and you will be able to access your Cozy through port 443
-(https protocol). To find the IP address of your Cubieboard, you can use nmap
+To find the IP address of your Raspberry Pi, you can use `nmap`
 on your local machine:
 
 ```
 $ nmap -T4 -sP 192.168.x.0/24
 ```
 
-If you want to login to the board, use the default Raspbiand credentials
+If you want to login to the board, use the default Raspbian credentials
 ```pi``` and ```raspberry```:
 ```
 $ ssh pi@<ip-of-your-raspberrypi>
 ```
 
-By the way, don't forget to change the password and to
-[reset the security
+By the way, don't forget to change the password and [reset the security
 tokens](#about-security-in-pre-installed-images)!
 
-
-## Cubieboard2 image
-
-*Warning: For production use, you must change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.*
-
-In order to run Cozy on your Cubieboard2, the simplest way is to download our
-image and set it up on a SD card.
-
-First, get the image archive:
-
-```bash
-# Download the image (~ 1.5GB)
-wget http://files.cozycloud.cc/cozy-cubieboard2.im.tar.gz
-
-# Uncompress it
-tar -xvzf cozy-cubieboard2.im.tar.gz
-```
-
-Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
-then make a low-level dump of the image onto your card.
-
-NB: SD Class 10 card are recommended for better performance.
-
-WARNING: this operation will erase all previously stored data on the card.
-
-```bash
-sudo dd bs=4M if=/my/path/cozy-cubieboard2.im of=/dev/sdc
-```
-
-Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
-Cubieboard, and you will be able to access your Cozy through port 443
-(https protocol). To find the IP address of your Cubieboard, you can use nmap on your local machine:
-
-```
-$ nmap -T4 -sP 192.168.x.0/24
-```
-
-If you want to login to the board, use the default Cubian credentials ```cubie```
-and ```cubie```:
-```
-$ ssh -p 36000 cubie@<ip-of-your-cubieboard>
-```
-
-By the way, don't forget to change the password and to
-[reset the security
-tokens](#about-security-in-pre-installed-images)!
 
 ## Cubietruck image
 
