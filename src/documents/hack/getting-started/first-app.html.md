@@ -117,7 +117,7 @@ app.get('/', function(req, res) {
     "bookmarks": bookmarks
   }
   res.render('index.jade', params, function(err, html) {
-    res.send(200, html);
+    res.send(html);
   });
 });
 ```
