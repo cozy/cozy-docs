@@ -77,10 +77,10 @@ This defines a doctype in the data system. The doctype is a type of document
 ### Adding and removing a bookmark
 ```javascript
 // We define a new route that will handle bookmark creation
-app.post('/add', function(req, res) {
+app.post('/add', function(req, res, next) {
   Bookmark.create(req.body, function(err, bookmark) {
     if(err != null) {
-      res.send(500, "An error has occurred -- " + err);
+      next(err);
     }
     else {
       res.redirect('back');
@@ -92,15 +92,15 @@ app.post('/add', function(req, res) {
 app.get('/delete/:id', function(req, res) {
   Bookmark.find(req.params.id, function(err, bookmark) {
     if(err != null) {
-      res.send(500, "Bookmark couldn't be retrieved -- " + err);
+      next(err);
     }
     else if(bookmark == null) {
-      res.send(404, "Bookmark not found");
+      res.status(404).send("Bookmark not found");
     }
     else {
       bookmark.destroy(function(err) {
         if(err != null) {
-          res.send(500, "An error has occurred -- " + err);
+          next(err);
         }
         else {
           res.redirect('back');
@@ -133,7 +133,7 @@ var request = function(doc) {
 };
 Bookmark.defineRequest("all", request, function(err) {
   if(err !== null) {
-    console.log("An error occurred while declaring the request -- " + err);
+    next(err);
   }
 });
 ```
@@ -141,15 +141,14 @@ Bookmark.defineRequest("all", request, function(err) {
 Then you can call the request to get the data:
 ```javascript
 // We render the templates with the data
-app.get('/', function(req, res) {
+app.get('/', function(req, res, next) {
   Bookmark.request("all", {}, function(err, bookmarks) {
     if(err !== null) {
-      console.log("An error has occurred -- " + err);
-    }
-    else {
+      next(err);
+    } else {
       data = {"bookmarks": bookmarks}
       res.render('index.jade', data, function(err, html) {
-        res.send(200, html);
+        res.send(html);
       });
     }
   });
