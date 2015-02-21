@@ -304,43 +304,46 @@ And adjust the controller in the right way:
 // server/controllers/bookmarks.js
 Bookmark = require('../models/bookmark');
 
-module.exports.list = function(req, res) {
+module.exports.list = function(req, res, next) {
     Bookmark.all(function(err, bookmarks) {
-        if(err != null) {
-            res.send(500, {error: "Couldn't retrieved the bookmarks."});
+        if(err !== null) {
+            // Here we want to handle errors our way so Backbone
+            // understands them.
+            res.status(500).send({error: "An error has occurred -- " + err});
         }
         else {
-            res.send(200, bookmarks);
+            res.send(bookmarks);
         }
     });
 };
 
-module.exports.add = function(req, res) {
+module.exports.add = function(req, res, next) {
     Bookmark.create(req.body, function(err, bookmark) {
-        if(err != null) {
-            res.send(500, "An error has occurred -- " + err);
+        if(err !== null) {
+            next(err);
         }
         else {
-            res.send(201);
+            // 201 is the HTTP code for creation success.
+            res.status(201).send({success: "Creation succeeded"}); 
         }
     });
 };
 
-module.exports.delete = function(req, res) {
+module.exports.delete = function(req, res, next) {
     Bookmark.find(req.params.id, function(err, bookmark) {
-        if(err != null) {
-            res.send(500, {error: "Bookmark couldn't be retrieved -- " + err});
+        if(err !== null) {
+            res.status(500).send({error: "An error has occurred -- " + err});
         }
-        else if(bookmark == null) {
-            res.send(404, {error: "Bookmark not found"});
+        else if(bookmark === null) {
+            res.status(404).send({error: "Bookmark not found"});
         }
         else {
             bookmark.destroy(function(err) {
-                if(err != null) {
-                    res.send(500, {error: "An error has occurred -- " + err});
+                if(err !== null) {
+                    res.status(500).send({error: "An error has occurred -- " + err});
                 }
                 else {
-                    res.send(200);
+                    res.status(204).send({success: "Deletion succeeded"});
                 }
             });
         }
