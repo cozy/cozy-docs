@@ -102,7 +102,11 @@ You can now add a helper to your bookmark model (we'll use it in the next sectio
 
 Bookmark.all = function(callback) {
   Bookmark.request("all", {}, function(err, bookmarks) {
-    callback(null, bookmarks);
+    if (err) {
+      callback(err);
+    } else {
+      callback(null, bookmarks);
+    }
   });
 };
 
@@ -116,25 +120,25 @@ Create the bookmark controller: server/controllers/bookmarks.js
 ```javascript
 Bookmark = require('../models/bookmark');
 
-module.exports.list = function(req, res) {
+module.exports.list = function(req, res, next) {
   Bookmark.all(function(err, bookmarks) {
-    if(err != null) {
-      res.send(500, "An error has occurred -- " + err);
+    if(err !== null) {
+      next(err);
     }
     else {
       data = {"bookmarks": bookmarks}
       res.render('index.jade', data, function(err, html) {
-        res.send(200, html);
+        res.send(html);
       });
     }
   });
 };
 
 // We define a new route that will handle bookmark creation
-module.exports.add = function(req, res) {
+module.exports.add = function(req, res, next) {
   Bookmark.create(req.body, function(err, bookmark) {
-    if(err != null) {
-      res.send(500, "An error has occurred -- " + err);
+    if(err !== null) {
+      next(err);
     }
     else {
       res.redirect('back');
@@ -143,18 +147,18 @@ module.exports.add = function(req, res) {
 };
 
 // We define another route that will handle bookmark deletion
-module.exports.delete = function(req, res) {
+module.exports.delete = function(req, res, next) {
   Bookmark.find(req.params.id, function(err, bookmark) {
-    if(err != null) {
-      res.send(500, "Bookmark couldn't be retrieved -- " + err);
+    if(err !== null) {
+      next(err);
     }
-    else if(bookmark == null) {
-      res.send(404, "Bookmark not found");
+    else if(bookmark === null) {
+      res.status(404).send("Bookmark not found");
     }
     else {
       bookmark.destroy(function(err) {
-        if(err != null) {
-          res.send(500, "An error has occurred -- " + err);
+        if(err !== null) {
+          next(err);
         }
         else {
           res.redirect('back');
