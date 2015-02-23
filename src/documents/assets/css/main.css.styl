@@ -1,6 +1,7 @@
 @import 'nib'
 
 blue = #34a6ff
+red = #ffa634
 lightblue = #cbe4fb
 greyblue = #34a6bb
 green = #5c5
@@ -324,6 +325,29 @@ aside
             font-size 15px
             font-family main-body
             color #444
+
+    #patch-note
+        ul
+            list-style-type none
+            padding-left 0
+
+        li
+            &:before
+                border-radius 50%
+                display inline-block
+                content " "
+                width 10px
+                height 10px
+                margin-right 5px
+
+        li.feature:before
+            background blue + 30%
+        li.bug:before
+            background orange + 30%
+        li.security:before
+            background red + 30%
+        li.internal:before
+            background green + 30%
 
     h3
         /* margin/padding is a trick to prevent the sticky header

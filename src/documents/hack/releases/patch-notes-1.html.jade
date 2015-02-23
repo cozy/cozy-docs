@@ -1,0 +1,140 @@
+---
+title: "Patch notes 2015/02/20"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 1
+---
+#patch-note
+    h1 Patch note #1
+    p This relates development from 2015/02/09 to 2015/02/20.
+
+    h2 Applications
+    h3 Calendar (v1.0.8)
+    ul
+        li.feature better favicons.
+        li.feature better fonts declaration.
+        li.feature use the fonts from Proxy.
+
+    h3 Contacts (v1.1.1)
+    ul
+        li.feature add colors to tags
+        li.feature better responsive (for small screen).
+        li.feature better name edition
+
+    h3 Emails (v0.6.8)
+    ul
+        li.feature better responsive (for small sreen).
+        li.feature on mobile, you can only read emails, not write them.
+        li.feature show full message headers when clicking on attachment icon.
+        li.feature improve button styles.
+        li.bug opening a message should be faster (no more transitions effects).
+        li.bug remove browser auto-complete when composing an email.
+        li.feature only display contact tooltip in the email preview.
+        li.bug fix behaviour when email had no content.
+        li.bug fix closing a message could lead to another mailbox.
+        li.bug fix infinite scrolling.
+        li.bug add missing localization.
+        li.bug improve performances.
+        li.feature remove progressbar during refresh, it is only shown during initial import.
+        li.feature add keyboard shortcuts to navigate inside a conversation (left and right arrows).
+        li.bug message list toolbar is now fixed
+        li.bug message list height stays the same in selection mode
+        li.internal switch to cozydb [internal].
+        li.internal tests can now be run with SlimerJS [internal].
+        li.internal minor improvements in development tasks and readme [internal].
+
+
+    h3 Files (v1.1.2)
+    ul
+        li.feature better responsive (for small screen).
+        li.feature better favicons.
+        li.feature better fonts.
+        li.feature use the fonts from Proxy.
+        li.bug fix last modification date
+        li.feature add checksum support
+
+    h3 Photos (v1.0.7)
+    ul
+        li.feature better responsive (for small screen).
+        li.feature better favicons.
+        li.feature better fonts.
+
+    h2 Mobile application (v0.1.2)
+    ul
+        li.feature better navigation: new breadcrumb.
+        li.feature better navigation: fix touch interactions.
+        li.feature better navigation: physical button recovers navigation history.
+        li.feature better icons.
+        li.feature enable landscape view.
+
+    h2 Platform
+    h3 Proxy (v1.0.12)
+    ul
+        li.feature better icons (Cozy's icon, favicon).
+        li.feature better fonts declaration.
+        li.feature better responsive (for small sreen).
+        li.feature provide official Cozy fonts as a CDN.
+
+    h3 Home (v1.0.38)
+    ul
+        li.feature better responsive (small screen)
+        li.feature better favicons.
+        li.feature better fonts declaration.
+        li.feature use the fonts from Proxy.
+        li.bug fix navigation in Firefox mobile.
+        li.bug fix application's icons for applications installed from Git.
+
+    h3 Data System (v1.0.26)
+    ul
+        li.bug fix: if there was no display name or no domain, "send mail from" bugged.
+
+    h3 Controller (v2.0.16)
+    ul
+        li.bug stop stack applications before updating them (partly fix issue of double-login during platform update).
+        li.bug update 'Proxy' before 'Home' during stack update (partly fix issue of double-login during platform update).
+        li.feature improve logs when application crashes.
+        li.internal code improvements.
+        li.bug check app's branch during update (fix <a href="https://github.com/cozy/cozy-home/issues/278">this issue</a>
+
+    h3 cozy-monitor (v1.2.15)
+    ul
+        li.feature better error handling.
+        li.bug fix status command.
+        li.feature improve feedbacks and readme (thank you <a href="https://github.com/bnjbvr/">bnj</a>)
+        li.bug fix typo (thank you <a href="https://github.com/bnjbvr/">bnj</a>)
+
+    h2 Development tools
+
+    h3 Documentation
+    ul
+        li.feature update 'getting started': links to vendors are fixed (<a href="http://cozy.io/hack/getting-started/setup-environment.html">link</a>).
+        li.feature update 'first app': use the new "deploy" command (<a href="http://cozy.io/hack/getting-started/first-app.html">link</a>).
+        li.feature update 'Cozy architecture': new diagrams, more explanations (<a href="http://cozy.io/hack/getting-started/architecture-overview.html">link</a>).
+        li.feature new cookbook: understanding Cozy's development environment (<a href="http://cozy.io/hack/cookbooks/understanding-dev-environment.html">link</a>).
+        li.feature remove install guide for Raspberry Pi.
+        li.feature add install guide for Raspberry Pi 2 (<a href="http://cozy.io/host/install.html#raspberry-pi-2-image">link</a>).
+
+    h3 cozy-dev (v1.0.15)
+    ul
+        li.feature new command: vm:update-image. Destroy and get the latest image version (<a href="http://cozy.io/hack/cookbooks/understanding-dev-environment.html#vm-update-image">link</a>).
+        li.feature new commands: deploy, undeploy. Make accessible through Cozy interface your local application (<a href="http://cozy.io/hack/cookbooks/understanding-dev-environment.html#deploy">link</a>).
+        li.feature new command: db:switch. Switch the database used by the Data System in the VM (useful for testing purposes) (<a href="http://cozy.io/hack/cookbooks/understanding-dev-environment.html#db-switch">link</a>).
+        li.feature new command: db:reset. Remove all data from a database (useful for testing purposes) (<a href="http://cozy.io/hack/cookbooks/understanding-dev-environment.html#db-reset">link</a>).
+        li.feature improve command: vm:start. VM's status is now displayed at start up.
+        li.feature improve command: vm:status. Now displays the port forwarded for each part.
+
+    h3 Virtual machine
+    ul
+        li.feature new version.
+
+    h3 cozy-template (v1.0.0)
+    ul
+        li.feature clean useless code.
+        li.feature use Cozy fonts.
+
+    h2 Guidelines
+    ul
+        li.feature add guildelines for stylus (<a href="https://github.com/cozy/cozy-guidelines#css--stylus">link</a>).
+        li.feature update localization guidelines (<a href="https://github.com/cozy/cozy-guidelines#localisation">link</a>).
+
