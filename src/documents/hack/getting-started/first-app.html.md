@@ -319,6 +319,7 @@ li
 
 You can run your application directly inside the virtual machine:
 ```bash
+node server.js # start your application UNLESS it's already running
 cozy-dev deploy
 ```
 Then go to `http://localhost:9104/#apps/tutorial/` and take a look at your app inside Cozy!
