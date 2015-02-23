@@ -327,11 +327,41 @@ aside
             color #444
 
     #patch-note
+
+        label
+            font-family main-body
+
+        input[type="checkbox"]
+            margin-right 25px
+            &:focus
+                outline none
+
+        label[for="toggle-feature"]
+            color blue + 30%
+
+        label[for="toggle-bug"]
+            color orange + 30%
+
+        label[for="toggle-security"]
+            color red + 30%
+
+        label[for="toggle-internal"]
+            color green + 30%
+
+        // handles "show/hide" actions when the checkbox is unchecked
+        #toggle-feature:checked ~ ul li.feature
+        #toggle-bug:checked ~ ul li.bug
+        #toggle-security:checked ~ ul li.security
+        #toggle-internal:checked ~ ul li.internal
+            display block
+
         ul
             list-style-type none
             padding-left 0
 
         li
+            display none
+            // color bullet
             &:before
                 border-radius 50%
                 display inline-block
