@@ -323,6 +323,8 @@ cozy-dev deploy
 ```
 Then go to `http://localhost:9104/#apps/tutorial/` and take a look at your app inside Cozy!
 
+You can find everything you need to know about `cozy-dev deploy` in [the cookbook](/hack/cookbooks/understanding-dev-environment.html#deploy).
+
 ## What's next ?
 You've developed your first Cozy app and you must now understand that it's nothing more than a normal web application.
 

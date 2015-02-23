@@ -101,4 +101,5 @@ This will just update the software within the running VM, it won't download anyt
 You can go to `http://localhost:9104/` in order to see your Cozy running. You can use it, but beware! The Cozy running in your virtual machine is in development mode, meaning that most of the security measures are disabled. Only use it for
 testing purposes.
 
+You can find everything you need to know about `cozy-dev` in [the cookbook](/hack/cookbooks/understanding-dev-environment.html#deploy), but we will introduce the concepts as we go in the next steps of the tutorial.
 You are now ready to [write your first application](/hack/getting-started/first-app.html).
