@@ -2,7 +2,7 @@
 title: "Authentication and Authorization workflows"
 layout: "default"
 category: "hack"
-menuOrder: 8
+menuOrder: 10
 toc: true
 ---
 
