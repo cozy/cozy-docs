@@ -26,12 +26,12 @@ If you want start application without controller, you can start it with:
 cozy-monitor start-standalone <port>
 ```
 
-This command should execute in your source root.
+This command should be executed in application source root.
 Option is the port used by your application.
 This function installs your application in your cozy and gives it its permission.
 
 
-Once, you have finish your debug, you can uninstall application with:
+Once, you have finish your debug, you can uninstall your application with:
 
 ```bash
 cozy-monitor stop-standalone

@@ -108,7 +108,7 @@ Stop application with given name.
 cozy-monitor stop <app>
 ```
 
-Stop all user application with given name.
+Stop all user applications.
 
 ```bash
 cozy-monitor stop-all <app>
@@ -127,13 +127,13 @@ cozy-monitor restart <app>
 ```
 
 Update application with given name (git clone + npm install + restart).
-The repo option is only useful if the app comes from a specific repo
+The repo option is only useful if application comes from a specific repository.
 
 ```bash
 cozy-monitor update <app> [repo]
 ```
 
-Update all applications. This commands update applications installed by cozy user
+Update all applications installed by cozy user.
 
 ```bash
 cozy-monitor update-all
