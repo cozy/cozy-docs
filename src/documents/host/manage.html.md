@@ -94,10 +94,10 @@ cozy-monitor versions-apps
 
 ### Installation
 Install given application. If it is not an official Cozy application you should
-give repo location too.
+give repo location too. You should also give a specific display name or a specific branch.
 
 ```bash
-cozy-monitor install <app> [--repo <repo>]
+cozy-monitor install <app> [-r <repo>] [-d <displayName>] [-b <branch>]
 ```
 
 
@@ -106,6 +106,12 @@ Stop application with given name.
 
 ```bash
 cozy-monitor stop <app>
+```
+
+Stop all user applications.
+
+```bash
+cozy-monitor stop-all <app>
 ```
 
 Start application with given name.
@@ -121,21 +127,16 @@ cozy-monitor restart <app>
 ```
 
 Update application with given name (git clone + npm install + restart).
+The repo option is only useful if application comes from a specific repository.
 
 ```bash
-cozy-monitor update <app>
+cozy-monitor update <app> [repo]
 ```
 
-Update all applications. This commands update cozy stack applications and others applications installed by cozy user
+Update all applications installed by cozy user.
 
 ```bash
 cozy-monitor update-all
-```
-
-Run Brunch build for the client of given application.
-
-```bash
-cozy-monitor brunch <app>
 ```
 
 
@@ -146,13 +147,6 @@ Uninstall application with given name.
 ```bash
 cozy-monitor uninstall <app>
 ```
-
-Uninstall all applications.
-
-```bash
-cozy-monitor uninstall-all
-```
-Warning: this commands uninstall also cozy stack applications.
 
 ## Database management
 By default, database option is "cozy".
