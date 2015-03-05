@@ -263,9 +263,9 @@ app.get('/', function(req, res, next) {
   db.all('SELECT * FROM bookmarks ORDER BY title', function(err, row) {
     if(err !== null) {
       // Express handles errors via its next function.
-      // It will call the next operation layer (middleware), 
+      // It will call the next operation layer (middleware),
       // which is by default one that handles errors.
-      next(err); 
+      next(err);
     }
     else {
       console.log(row);
@@ -320,11 +320,11 @@ li
 You can run your application directly inside the virtual machine:
 ```bash
 node server.js # start your application UNLESS it's already running
-cozy-dev deploy
+cozy-dev deploy 9250
 ```
 Then go to `http://localhost:9104/#apps/tutorial/` and take a look at your app inside Cozy!
 
-You can find everything you need to know about `cozy-dev deploy` in [the cookbook](/hack/cookbooks/understanding-dev-environment.html#deploy).
+You can find everything you need to know about `deploy` in [the cookbook](/hack/cookbooks/understanding-dev-environment.html#deploy).
 
 ## What's next ?
 You've developed your first Cozy app and you must now understand that it's nothing more than a normal web application.
