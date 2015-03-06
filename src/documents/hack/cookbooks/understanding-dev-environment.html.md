@@ -117,7 +117,7 @@ If you want to create a new application based on the coffee template (https://gi
 ### deploy
 
 ```bash
-cozy-dev deploy [port]
+cozy-dev deploy <port>
 ```
 
 Trick the virtual machine to make it thinks your application is actually installed in the Cozy. By default, `port` is 9250. It will use the `package.json` at the root of your application to get the application's slug.
