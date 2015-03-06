@@ -44,9 +44,9 @@ html(lang="en")
                             a.button(href="/host/install.html")
                                 | Install Cozy on your own hardware
                         p
-                            | To be kept updated with news about the project, follow us on 
-                            a(href="https://twitter.com/mycozycloud") Twitter 
-                            | or 
+                            | To be kept updated with news about the project, follow us on
+                            a(href="https://twitter.com/mycozycloud") Twitter
+                            | or
                             a(href="https://diaspora-fr.org/people/ce1528a0f88b013197aa01beea1f31e2") Diaspora
 
             .line.external-links
@@ -308,18 +308,17 @@ html(lang="en")
                 a(href="http://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
 
-
         script(type='text/javascript').
-          var _paq = _paq || [];
-          _paq.push(["trackPageView"]);
-          _paq.push(["enableLinkTracking"]);
-
-          (function() {
-            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.cozycloud.cc/";
-            _paq.push(["setTrackerUrl", u+"piwik.php"]);
-            _paq.push(["setSiteId", "3"]);
-            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-          })();
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+            var u="//piwik.cozycloud.cc/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 3]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
         noscript
-            img(src="/https://piwik.cozycloud.cc/piwik.php?idsite=1&amp;rec=1", style="border:0", alt="")
+            p
+                img(src="https://piwik.cozycloud.cc/piwik.php?idsite=3", style="border:0", alt="")
