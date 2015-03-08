@@ -122,6 +122,25 @@ page](/hack/getting-started/architecture-overview.html).
 Because of the many technologies involved, we recommend you run the Cozy
 stack in an isolated virtual machine or in a container (OpenVz or LXC).
 
+## Hosting services
+
+### Cozycloud
+
+[Cozycloud](https://cozycloud.cc) is the maintainer of the Cozy project. We can
+provide you a Cozy instance for free if you write us an
+[email](mailto:contact@cozycloud.cc).
+
+### VPS
+
+Renting a VPS and running the installation script is a good option. Here are
+the two hosting providers we performed tests on:
+
+* [OVH](http://www.ovh.com/fr/vps/vps-classic.xml), we recommend the VPS
+  Classic 2.
+* [Digital Ocean](https://www.digitalocean.com/pricing/). The $10 plan is a
+  minimum. We recommend the $20 plan.
+
+
 ## Ansible Playbook
 
 [Ansible](www.ansible.com) is a simple configuration system that allows people
@@ -246,11 +265,11 @@ image and set it up on a SD card. It is based on the
 First, get the image archive:
 
 ```bash
-# Download the image (~ 1.5GB)
-wget http://files.cozycloud.cc/cozy-cubietruck.im.tar.gz
+# Download the image (~ 860MB)
+wget http://files.cozycloud.cc/2015-03-09-cozy-cubietruck.img.7z
 
 # Uncompress it
-tar -xvzf cozy-cubietruck.im.tar.gz
+7zr e 2015-03-09-cozy-cubietruck.img.7z
 ```
 
 Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
@@ -430,22 +449,3 @@ server {
 ```
 
 Restart nginx, and your Cozy should be accessible at http://cloud.myhost.com
-
-## Hosting services
-
-### Cozycloud
-
-[Cozycloud](https://cozycloud.cc) is the maintainer of the Cozy project. We can
-provide you a Cozy instance for free if you write us an
-[email](mailto:contact@cozycloud.cc).
-
-### VPS
-
-Renting a VPS and running the installation script is a good option. Here are
-the two hosting providers we performed tests on:
-
-* [OVH](http://www.ovh.com/fr/vps/vps-classic.xml), we recommend the VPS
-  Classic 2.
-* [Digital Ocean](https://www.digitalocean.com/pricing/). The $10 plan is a
-  minimum. We recommend the $20 plan.
-
