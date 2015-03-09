@@ -102,7 +102,7 @@ The --no-bin-links is needed because you can't symlink in the shared folder.
     git clone https://github.com/cozy/cozy-home
     cd /vagrant/cozy-home
     sudo npm install --no-bin-links
-    node server.js
+    node build/server.js
     ```
 
 6. On the host, browse to http://127.0.0.1:9104, register a user, and then check http://127.0.0.1:9104/#home.
