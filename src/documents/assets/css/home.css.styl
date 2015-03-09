@@ -249,7 +249,6 @@ button:active
     .external-links
         h4
             font-family: main-light
-            margin-top: 40px
             margin-bottom: 0px
 
 .code
@@ -295,7 +294,6 @@ button:active
     padding-bottom: 40px
 
     h4
-        margin-top: 40px
         text-align: center
         font-size: 60px
 
@@ -313,7 +311,6 @@ button:active
         margin-bottom: 0px
 
     h4
-        margin-top: 40px
         text-align: center
         font-size: 60px
 
@@ -568,6 +565,87 @@ header
 
     a.txt-black
         color: black
+
+
+#subscription
+    padding-bottom: 60px
+    background: blue
+
+    .line
+        padding-bottom 1em
+        width 100%
+        max-width 60em
+        margin 0 auto
+
+    form
+        padding 2em 0 1em
+
+    // We temporary fix font-size in PX, due to some bugs. Need to rely on
+    // something like normalize.css to resolve this issue.
+    label
+    button
+    input
+    textarea
+        font-size 20px
+
+    label
+        display block
+        padding-bottom 1em
+
+        span
+            display block
+
+        input
+        textarea
+            display block
+            box-sizing border-box
+            border none
+            border-radius 3px
+
+        input
+        textarea
+            width 100%
+            padding 1em
+
+        textarea
+            font-family main
+            height 8em
+
+    button
+        position relative
+        display block
+        box-sizing border-box
+        padding 1em
+        border none
+        box-shadow 0 6px blue - 20%
+        background-color blue + 20%
+        color white
+
+        &:hover
+            box-shadow 0 4px orange
+
+    .email span
+        display none
+
+
+#keep-in-touch
+    @media (min-width: 690px)
+        label
+        input
+        button
+            float left
+
+        label
+            width 65%
+
+        button
+            width 34%
+            margin-left 1%
+
+#sign-me-up
+    padding-bottom 0 !important
+
+
 
 #about
     background: white
