@@ -58,7 +58,7 @@ docpadConfig = {
                 [lang, ...] = file.get('relativePath').split '/'
                 # rewrite URLs to prepend language
                 regex = /["]{1}\/(hack|host|mobile)/g
-                content = content.replace regex, "/#{lang}/$1"
+                content = content.replace regex, "\"/#{lang}/$1"
                 options.content = content
 
     enabledPlugins:
