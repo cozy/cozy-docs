@@ -23,6 +23,31 @@ docpadConfig = {
         homePages: ->
             @getCollection('html').findAllLive isCategoryMaster:$exists:true
 
+    events:
+        contextualizeAfter: (options) ->
+            {collection} = options
+            # rewrite the layout meta data to prepend the locale information
+            collection.each (model) ->
+                layout = model.get 'layout'
+
+                # assets files have don't have "layout" info
+                if layout?
+                    [lang, ...] = model.get('relativePath').split '/'
+                    newLayout = "#{lang}/#{layout}"
+                    model.set 'layout', newLayout
+
+
+        render: (options) ->
+            {content, file} = options
+
+            layout = file.get 'layout'
+            if layout?
+                [lang, ...] = file.get('relativePath').split '/'
+                # rewrite URLs to prepend language
+                regex = /[("]{1}\/(hack|host|mobile)/g
+                content = content.replace regex, "/#{lang}/$1"
+                options.content = content
+
     enabledPlugins:
         "live-reload": true
 }

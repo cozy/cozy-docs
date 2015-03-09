@@ -10,8 +10,7 @@ urls: ["/hack/"]
 
 As an introduction, we’ll present to you the standard NodeJS tools. This way your application will work in any environment. Then
 we'll introduce you to our favorite tools to make your Cozy development
-experience more delightful and efficient: get ready for **painless
-web development** with Cozy!
+experience more delightful and efficient: get ready for **painless web development** with Cozy!
 
 * [Setup your development environment](/hack/getting-started/setup-environment.html)
 * [Tutorial 1: Write your first web app in 30 minutes](/hack/getting-started/first-app.html)
