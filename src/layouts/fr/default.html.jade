@@ -19,7 +19,7 @@ html(lang='en')
 
   body
     .navbar.fixed
-      a.nav-logo.left(href="/en/")
+      a.nav-logo.left(href="/fr/")
           img(src='/assets/images/happycloud.png', alt='Happy Cloud')
       span.subtitle
         - var collectionName = "documents"
@@ -46,19 +46,19 @@ html(lang='en')
       - if(document.category == 'hack')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
-        a(href="/en/hack/getting-started/") Dev
+        a(href="/fr/hack/getting-started/") Dev'
 
       - var className = ""
       - if(document.category == 'mobile')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
-        a(href="/en/mobile/files.html") Sync
+        a(href="/fr/mobile/files.html") Sync
 
       - var className = ""
       - if(document.category == 'host')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
-        a(href="/en/host/install.html") Install
+        a(href="/fr/host/install.html") Install'
     .wrapper
       .wrap-menu.w25.mod.left
         | &nbsp;
