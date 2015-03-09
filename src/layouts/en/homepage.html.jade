@@ -6,7 +6,7 @@ html(lang="en")
         title="Cozy, a personal cloud you can hack, host and delete"
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos... there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
-        != getBlock('styles').add(['/vendors/css/knacss.css', '/assets/css/home.css']).toHTML()
+        != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
         script(src='/vendors/javascripts/jquery-2.0.3.min.js').
         script(type='text/javascript').
           $(document).ready(function() {
@@ -259,22 +259,30 @@ html(lang="en")
             .line
                 p
                     | Please keep me informed about what's going on at Cozy (very low volume newsletter, no spam, we promise!):
-                form#keep-in-touch
+                form#keep-in-touch(action="#subscription")
                     label.email
                         span email address
                         input(type="email", name="subscription", placeholder="email address")
-                    button(type="submit") Keep me informed
+                    button.icon-envelope-o(type="submit") Keep me informed
             .line
                 p
                     | I want to contribute to the Cozy project as an app developer, beta tester and/or localizer  and enjoy one of these free fancy Cozy instances with 1GB of RAM and 10GB of disk space (available in limited numbers, hosted in France).
-                form#sign-me-up
+                form#sign-me-up(action="#subscription")
                     label.email
                         span email address
                         input(type="email", name="subscription", placeholder="email address")
                     label
                         span What I could help with:
                         textarea(name="information")
-                    button(type="submit") Sign me up!
+                    button.icon-cloud(type="submit") Sign me up!
+            script.
+                $('#subscription').on('submit', 'form', function(event){
+                    $button = $(event.target).find('button');
+                    $button.addClass('active');
+                    setTimeout(function(){
+                        $button.removeClass('active');
+                    }, 550);
+                });
 
         section#community-cozy.highlight
             .line

@@ -1,3 +1,5 @@
+@import 'nib'
+
 rounded-border()
     -webkit-border-radius: arguments
     -moz-border-radius: arguments
@@ -616,6 +618,7 @@ header
         display block
         box-sizing border-box
         padding 1em
+        padding-left 3em
         border none
         box-shadow 0 6px blue - 20%
         background-color blue + 20%
@@ -624,23 +627,58 @@ header
         &:hover
             box-shadow 0 4px orange
 
+            &:before
+                color white
+
+        &:active:before
+        &.active:before
+            color blue - 20%
+            animation: scaleUp 0.5s
+
+        &:before
+            display block
+            position absolute
+            top 50%
+            left 0
+            width 3em
+            margin-top -.5em
+            text-align center
+            vertical-align middle
+            color blue - 20%
+
     .email span
         display none
 
+@keyframes scaleUp
+    80%
+        opacity: 0;
+        transform: scale(2);
+
+    100%
+        opacity: 0;
+        transform: scale(2);
+
 
 #keep-in-touch
-    @media (min-width: 690px)
+    @media (min-width: 640px)
         label
         input
         button
             float left
 
         label
+            width 55%
+
+        button
+            width 44%
+            margin-left 1%
+
+    @media (min-width: 805px)
+        label
             width 65%
 
         button
             width 34%
-            margin-left 1%
 
 #sign-me-up
     padding-bottom 0 !important
