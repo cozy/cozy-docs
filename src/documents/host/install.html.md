@@ -311,7 +311,7 @@ tokens](#about-security-in-pre-installed-images)!
 ## Virtualbox image
 
 *Warning: For production use, you must change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.*
+renew the SSL certificate, the database credentials and the [controller token](#about-security-in-pre-installed-images).*
 
 ### Download requirements
 
@@ -341,6 +341,9 @@ ssh -p 2222 root@localhost
 ```
 
 ## OpenVZ image
+
+*Warning: For production use, you must change the superuser credentials,
+renew the SSL certificate, the database credentials and the [controller token](#about-security-in-pre-installed-images).*
 
 Here we assume that you have already installed OpenVZ utilities.
 
