@@ -359,12 +359,18 @@ button:active
         font-size: 30px
         margin-top: 10px
 
-    a.right
-        font-size: 24px
+        &:hover
+            color: black
+            text-decoration: underline
 
-    a:hover
-        color: black
-        text-decoration: underline
+        &.right
+            font-size: 24px
+
+        &.lang-switcher
+            font-size 18px
+
+            &.selected
+                text-decoration underline
 
 
 .menu
