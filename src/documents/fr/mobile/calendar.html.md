@@ -1,176 +1,176 @@
 ---
-title: "Calendar synchronization"
+title: "Synchronisation des agendas"
 layout: "default"
 category: "mobile"
 menuOrder: 1
 toc: true
 ---
-# Calendar Synchronization
+# Synchronisation des agendas
 
-## Prepare your Cozy
-Cozy uses CalDav, which is the standard, to synchronize your calendars across devices. Everything is handled in a specific applications, Sync.
+## Préparer votre Cozy
+Cozy utilises CalDav, qui est le protocole standard, pour synchroniser vos agendas sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
 
-* First, go to your Cozy, under the "Choose your apps" menu.
-* Then select the "Sync" application.
-* Accept the application's permission, to process the installation.
+* Premièrement, allez dans votre Cozy dans le menu "Choisissez vos apps".
+* Puis sélectionnez l'application "Sync".
+* Acceptez les permissions de l'application et attendez la fin de l'installation.
 
 <center>![Sync's installation intructions](/assets/images/mobile/install_sync_steps.gif)</center>
 
 <br />
 <br />
-* Next, you need to get your CalDav credentials.
-* Open the Sync application.
-* Write down your password.
+* Après ça, vous devez récupérer vos identifiants CalDav.
+* Ouvrez l'application Sync.
+* Notez le mot de passe.
 
-<center>![Get CalDav credentials intructions](/assets/images/mobile/use_sync_steps.gif)</center>
+<center>![Get CardDav credentials intructions](/assets/images/mobile/use_sync_steps.gif)</center>
 
 <br />
 <br />
-You are now ready to synchronize your devices!
+Vous êtes maintenant prêt à synchoniser vos périphériques !
 
-Check the section relevant to your device's system to continue.
+Consultez la section correspondant au système de votre périphérique pour continuer.
 
 ## Android
 
-#### Install
+#### Installation
 There are multiple applications that can achieve what we want, but we advise you to use [DavDroid](http://davdroid.bitfire.at/) because it's open-source, though it's a paid app on the PlayStore.
 
 Note: you can download it and install for free from the [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid).
 
-#### Configure
-Once it's installed, open the application and click on the button to create a new account (see the blue circle on the picture below).
+#### Configuration
+Une fois l'application installée,, ouvrez-là et cliquez sur le bouton pour créer un nouveau compte (suivez le cercle bleu dans l'image ci-dessous).
 <center>![Android step 1](/assets/images/mobile/android/step1.png)</center>
 
 <br />
 <br />
-Next, select "DAVDroid".
+Puis, sélectionnez "DavDroid".
 <center>![Android step 2](/assets/images/mobile/android/step2.png)</center>
 
 <br />
 <br />
-You will have two choice. Choose "Login with URL and user name".
+Vous aurez deux choix. Choisissez "Connexion avec URL et identifiants".
 <center>![Android step 3](/assets/images/mobile/android/step3.png)</center>
 
 <br />
 <br />
-Fill the form with the credentials you got from the Cozy's Sync app.
+Remplissez le formulaire avec les identifiants que vous avez noté lors de l'étape 1.
 <center>![Android step 4](/assets/images/mobile/android/step4.png)</center>
 
 <br />
 <br />
-Select the calendars you want to synchronize. If you want to synchronize your contacts too, select the available address book too.
+Sélectionnez les agendas que vous voulez synchroniser. Si vous voulez aussi synchroniser vos contacts, sélectionnez le carnet d'adresse au même moment.
 <center>![Android step 5](/assets/images/mobile/android/step5.png)</center>
 
 <br />
 <br />
-Choose a name for your account, you can choose anything, "Cozy" is just fine.
+Choisissez un nom pour votre compte, "Cozy" fera très bien l'affaire.
 <center>![Android step 6](/assets/images/mobile/android/step6.png)</center>
 
 <br />
 <br />
-You are actually done, but if you want to force the first synchronization, go to the accounts list.
+Vous avez terminé, mais si vous voulez forcer la première synchonisation, allez dans la liste des comptes.
 <center>![Android step 7](/assets/images/mobile/android/step7.png)</center>
 
 <br />
 <br />
-Then select your DAVDroid account in the list.
+Sélectionnez le compte DavDroid dans la liste.
 <center>![Android step 8](/assets/images/mobile/android/step8.png)</center>
 
 <br />
 <br />
-Touch the "Calendar" button and it'll trigger a synchronization.
+Touchez le bouton "Calendar", ce qui aura pour effet de démarrer une synchonisation.
 <center>![Android step 9](/assets/images/mobile/android/step9.png)</center>
 
 <br />
 <br />
-Congratulations, your mobile device is now synchronized with your Cozy!
+Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
 
 ## iOS
 
-#### Configure your CalDav account
-Open the Settings, select the "Mail, Contacts, Calendars" view, and click on "Add Account":
-<center>![iOS step 1](/assets/images/mobile/ios/calendar/step1.jpg)</center>
+#### Configurez votre compte CalDav
+Ouvre les options, sélectionnez "Email, Contacts, Agendas" et cliquez sur "Ajouter un compte" :
+<center>![iOS step 1](/assets/images/mobile/ios/contacts/step1.jpg)</center>
 
 <br />
 <br />
-Then select "Other" account:
-<center>![iOS step 2](/assets/images/mobile/ios/calendar/step2.jpg)</center>
+Puis sélectionnez "Autre compte" :
+<center>![iOS step 2](/assets/images/mobile/ios/contacts/step2.jpg)</center>
 
 <br />
 <br />
-Then select "Add CalDav Account", in the Calendars section:
-<center>![iOS step 3](/assets/images/mobile/ios/calendar/step3.jpg)</center>
+Enfin sélectionnez "Ajouter un compte CalDav" dans la section Contacts :
+<center>![iOS step 3](/assets/images/mobile/ios/contacts/step3.jpg)</center>
 
 <br />
 <br />
-Finally, fill the form with the credentials you got from Cozy's Sync app:
+Enfin, remplissez le formulaire avec les identifiants que vous avez noté lors de l'étape 1 :
 
-* the "Server" input will vary vor each user: yourcozyaddress/public/sync/principals/me
-* the "Username input will always be "me",
-* the "Password" input will be the password you got earlier from Cozy,
-* the "Description" input stands for the user-friendly name of your choice, "Cozy" is just fine.
+* le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync
+* le champ "Nom d'utilisateur" sera toujours "me".
+* le champ "Mot de passe" sera celui que vous avez noté.
+* le champ "Description" permet de choisir un nom pour identifier ce compte. "Cozy" fera très bien l'affaire.
 
 <center>![iOS step 4](/assets/images/mobile/ios/calendar/step4.jpg)</center>
 
 <br />
 <br />
-And then click next. Activate or not reminders, and click save:
+Puis cliquez sur suivante. Activez ou pas les alarms, et sauvegardez. :
 <center>![iOS step 5](/assets/images/mobile/ios/calendar/step5.jpg)</center>
 
 <br />
 <br />
-Congratulations, your mobile device is now synchronized with your Cozy!
-You can now configure the mobile Calendars application to choose which calendar you want to display.
+Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
+Vous pouvez à présent configurer l'application mobile Agenda pour choisir quels agendas afficher.
 
-#### Configure your calendars
+#### Configurer vos agendas
 
-Open the Calendar app.
+Ouvrez l'application Calendar sur votre terminal mobile.
 
-You can already visualize the calendars of your Cozy.
+Vous pouvez déjà visualiser les agendas de votre Cozy. Cliquez sur les agendas pour les rendre visibles ou invisibles.
 Click on calendars to toggle calendar's visibility.
 <center>![iOS step 6](/assets/images/mobile/ios/calendar/step6.jpg)</center>
 
 <br />
 <br />
-Open the menu and click the button to add a new calendar.
+Ouvrez le menu et cliquez sur le bouton pour ajouter un nouveau calendrier.
 <center>![iOS step 7](/assets/images/mobile/ios/calendar/step7.jpg)</center>
 
 <br />
-That's it! You can seamlessly manage your events from your mobile and your Cozy.
+C'est tout ! vous pouvez gérer vos événements sur votre mobile ou sur votre Cozy de façon transparente.
 
 ## Firefox OS
 
-#### Install
-There is nothing to install to get started with Firefox OS! Just open the "Calendar" application.
+#### Installation
+Il n'y a rien à installer pour commencer avec Firefox OS ! Ouvrez simplement l'application "Calendar".
 
-#### Configure
-Open the menu and click the button to add a new calendar.
+#### Configuration
+Ouvrez le menu et cliquez sur le bouton pour ajouter un nouveau calendrier.
 <center>![Firefox OS step 1](/assets/images/mobile/firefoxos/step1.png)</center>
 
 <br />
 <br />
-Then choose "CalDav" option in the menu.
+Puis choisissez l'option "CalDav" dans le menu.
 <center>![Firefox OS step 2](/assets/images/mobile/firefoxos/step2.png)</center>
 
 <br />
 <br />
-Finally, fill the form with the credentials you got from Cozy's Sync app:
+Enfin; remplissez le formulaire avec les identifiants que vous avez noté dans l'étapz 1 :
 
-* the first input will always be "me".
-* the second will be the password you got earlier from Cozy.
-* the third will vary for each user: https://yourcozyaddress/public/sync/principals/me
+* le premier champ sera toujours "me".
+* le second sera le mot de passe que vous avez noté précédemment.
+* le troisième change pour chaque utilisateur : https://adresse-de-votre-cozy/public/sync/principals/me
 
 <center>![Firefox OS step 3](/assets/images/mobile/firefoxos/step3.png)</center>
 
 <br />
 <br />
-That's it! Your calendars will now be synchronized on a regular basis (default is 15 minutes). You can select calendars you want to synchronize directly from the menu.
+C'est tout ! Vos agendas seront synchronisés régulièrement (par défaut toutes les 15 minutes). Vous pouvez sélectionner les calendriers que vous voulez synchroniser directement depuis le menu.
 <center>![Firefox OS step 4](/assets/images/mobile/firefoxos/step4.png)</center>
 
 <br />
 <br />
-Congratulations, your mobile device is now synchronized with your Cozy!
+Félicitations, votre périphérique mobile est synchronisé avec votre Cozy !
 
-## Related resources
-* [Forum discussion](https://forum.cozy.io/)
+## Ressources connectés
+* [Discussion sur le forum](https://forum.cozy.io/)
 

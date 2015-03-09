@@ -1,126 +1,126 @@
 ---
-title: "Contacts synchronization"
+title: "Synchronisation de contacts"
 layout: "default"
 category: "mobile"
 menuOrder: 1
 toc: true
 ---
-# Contacts Synchronization
+# Synchronisation de contacts
 
-## Prepare your Cozy
-Cozy uses CardDav, which is the standard, to synchronize your contacts across devices. Everything is handled in a specific applications, Sync.
+## Préparer votre Cozy
+Cozy utilises CardDav, qui est le protocole standard, pour synchroniser vos contacts sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
 
-* First, go to your Cozy, under the "Choose your apps" menu.
-* Then select the "Sync" application.
-* Accept the application's permission, to process the installation.
+* Premièrement, allez dans votre Cozy dans le menu "Choisissez vos apps".
+* Puis sélectionnez l'application "Sync".
+* Acceptez les permissions de l'application et attendez la fin de l'installation.
 
 <center>![Sync's installation intructions](/assets/images/mobile/install_sync_steps.gif)</center>
 
 <br />
 <br />
-* Next, you need to get your CardDav credentials.
-* Open the Sync application.
-* Write down your password.
+* Après ça, vous devez récupérer vos identifiants CardDav.
+* Ouvrez l'application Sync.
+* Notez le mot de passe.
 
 <center>![Get CardDav credentials intructions](/assets/images/mobile/use_sync_steps.gif)</center>
 
 <br />
 <br />
-You are now ready to synchronize your devices!
+Vous êtes maintenant prêt à synchoniser vos périphériques !
 
-Check the section relevant to your device's system to continue.
+Consultez la section correspondant au système de votre périphérique pour continuer.
 
 ## Android
 
-#### Install
-There are multiple applications that can achieve what we want, but we advise you to use [DavDroid](http://davdroid.bitfire.at/) because it's open-source, though it's a paid app on the PlayStore.
+#### Installation
+Il y a de nombreuses applications qui permettent de synchroniser les contacts sur Android, mais nous conseillons d'utiliser [DavDroid](http://davdroid.bitfire.at/) car c'est une application open-source, et ce même si l'application est payante sur le PlayStore.
 
-Note: you can download it and install for free from the [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid).
+Note : vous pouvez télécharger l'application grauitement et l'installer depuis [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid).
 
-#### Configure
-Once it's installed, open the application and click on the button to create a new account (see the blue circle on the picture below).
+#### Configuration
+Une fois l'application installée,, ouvrez-là et cliquez sur le bouton pour créer un nouveau compte (suivez le cercle bleu dans l'image ci-dessous).
 <center>![Android step 1](/assets/images/mobile/android/step1.png)</center>
 
 <br />
 <br />
-Next, select "DAVDroid".
+Puis, sélectionnez "DavDroid".
 <center>![Android step 2](/assets/images/mobile/android/step2.png)</center>
 
 <br />
 <br />
-You will have two choice. Choose "Login with URL and user name".
+Vous aurez deux choix. Choisissez "Connexion avec URL et identifiants".
 <center>![Android step 3](/assets/images/mobile/android/step3.png)</center>
 
 <br />
 <br />
-Fill the form with the credentials you got from the Cozy's Sync app.
+Remplissez le formulaire avec les identifiants que vous avez noté lors de l'étape 1.
 <center>![Android step 4](/assets/images/mobile/android/step4.png)</center>
 
 <br />
 <br />
-Select the available address book. If you want to synchronize your calendars, select them too.
+Sélectionnez le carnet d'adresse disponible. Si vous voulez synchroniser vos agendas, sélectionnez les aussi.
 <center>![Android step 5](/assets/images/mobile/android/step5.png)</center>
 
 <br />
 <br />
-Choose a name for your account, you can choose anything, "Cozy" is just fine.
+Choisissez un nom pour votre compte, "Cozy" fera très bien l'affaire.
 <center>![Android step 6](/assets/images/mobile/android/step6.png)</center>
 
 <br />
 <br />
-You are actually done, but if you want to force the first synchronization, go to the accounts list.
+Vous avez terminé, mais si vous voulez forcer la première synchonisation, allez dans la liste des comptes.
 <center>![Android step 7](/assets/images/mobile/android/step7.png)</center>
 
 <br />
 <br />
-Then select your DAVDroid account in the list.
+Sélectionnez le compte DavDroid dans la liste.
 <center>![Android step 8](/assets/images/mobile/android/step8.png)</center>
 
 <br />
 <br />
-Touch the "Contacts" button and it'll trigger a synchronization.
+Touchez le bouton "Contacts", ce qui aura pour effet de démarrer une synchonisation.
 <center>![Android step 9](/assets/images/mobile/android/step9.png)</center>
 
 <br />
 <br />
-Congratulations, your mobile device is now synchronized with your Cozy!
+Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
 
 ## iOS
 
-#### Configure your CalDav account
-Open the Settings, select the "Mail, Contacts, Calendars" view, and click on "Add Account":
+#### Configurez votre compte CardDav
+Ouvre les options, sélectionnez "Email, Contacts, Agendas" et cliquez sur "Ajouter un compte" :
 <center>![iOS step 1](/assets/images/mobile/ios/contacts/step1.jpg)</center>
 
 <br />
 <br />
-Then select "Other" account:
+Puis sélectionnez "Autre compte" :
 <center>![iOS step 2](/assets/images/mobile/ios/contacts/step2.jpg)</center>
 
 <br />
 <br />
-Then select "Add CardDav Account", in the Contacts section:
+Enfin sélectionnez "Ajouter un compte CardDav" dans la section Contacts :
 <center>![iOS step 3](/assets/images/mobile/ios/contacts/step3.jpg)</center>
 
 <br />
 <br />
-Finally, fill the form with the credentials you got from Cozy's Sync app:
+Enfin, remplissez le formulaire avec les identifiants que vous avez noté lors de l'étape 1 :
 
-* the "Server" input will vary vor each user: yourcozyaddress/public/sync
-* the "Username input will always be "me".
-* the "Password" input will be the password you got earlier from Cozy.
-* the "Description" input stands for the user-friendly name of your choice, "Cozy" is just fine.
+* le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync
+* le champ "Nom d'utilisateur" sera toujours "me".
+* le champ "Mot de passe" sera celui que vous avez noté.
+* le champ "Description" permet de choisir un nom pour identifier ce compte. "Cozy" fera très bien l'affaire.
 
 <center>![iOS step 4](/assets/images/mobile/ios/contacts/step4.jpg)</center>
 
 <br />
 <br />
-Congratulations, your mobile device is now synchronized with your Cozy!
+Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
 <center>![iOS step 5](/assets/images/mobile/ios/contacts/step5.jpg)</center>
 
 ## Firefox OS
 
-Firefox OS doesn't have support to synchronize contacts as of today (version 2.1) :(
-We will definitely add a guide when it is ready!
+Firefox OS ne supporte pas encore la synchronisation de contacts (dans sa version 2.1) :(
+Nous mettrons à disposition un guide dès que ce sera possible !
 
-## Related resources
-* [Forum discussion](https://forum.cozy.io/)
+## Ressources connectées
+* [Discussion sur le forum](https://forum.cozy.io/)
