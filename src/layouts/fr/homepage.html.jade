@@ -7,25 +7,16 @@ html(lang="en")
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos&hellip; there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
-        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
-        script(type='text/javascript').
-          $(document).ready(function() {
-             $(".diagbox").click(function(event) {
-               if($(window).width() > 800) {
-                 $(event.target).find("p").slideDown();
-               };
-             });
-          });
     body
         .navbar.fixed
-            a(href="/fr/")
+            a.nav-logo(href="/fr/")
                 img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud')
             a.lang-switcher(href="/en/") EN
             a.lang-switcher.selected(href="/fr/") FR
             a.right(href="https://blog.cozycloud.cc") Blog
-            a.right(href="/fr/hack/getting-started/") Dev'
+            a.right(href="/fr/hack/getting-started/") Dev
             a.right(href="/fr/mobile/files.html") Sync
-            a.right(href="/fr/host/install.html") Install'
+            a.right(href="/fr/host/install.html") Install
 
         header.line.clearfix#header
             .left.mr2.biglogo
@@ -65,7 +56,7 @@ html(lang="en")
                     h4 Libre et Open Source
                     br
                     a.button(href="https://github.com/cozy/cozy-setup")
-                        | Accéder au code source
+                        | Accédez au code source
 
         section#why.why.center.highlight
             .line
@@ -175,8 +166,8 @@ html(lang="en")
                     | Nous n'essayons pas de vous enfermer
                 p
                     | De nos jours, les serveurs en ligne ont la fâcheuse habitude d'enfermer leurs utilisateurs.
-                    | C'es contraire à l'éhtique de Cozy. 
-                    | C'est pourquoi you avez la possibilité de supprimer vos données et de quitter la plateforme à tout moment.
+                    | C'est contraire à l'éthique de Cozy. 
+                    | C'est pourquoi vous avez la possibilité de supprimer vos données et de quitter la plateforme à tout moment.
                     br
                     | Voyez par vous même en cliquant sur le bouton ci-dessous :
                 .txtcenter.mt3
@@ -238,34 +229,6 @@ html(lang="en")
                             | Un module dédié qui gère l'indexation de documents à travers une API REST.
                             | C'est votre moteur de recherche personnel.
 
-        section#subscription.simple
-            h4 Restons en contact
-            .line
-                p
-                    | Tenez-moi au courant de ce qui se passe chez Cozy (newsletter à faible volume, zéro spam, promis !) :
-                form#keep-in-touch(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=e3091db2ef', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                    label(for='mce-keepintouch-EMAIL').email
-                        span email address
-                        input#mce-keepintouch-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
-                    div(style='position: absolute; left: -5000px;')
-                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
-                    button.icon-envelope-o(type='submit', name='subscribe') Tenez-moi au courant
-            .line
-                p
-                    | Je compte contribuer au projet Cozy en tant que dévelopeur d'application, de bêta-testeur ou de 
-                    | traducteur. Pour cela, j'aimerais bénéficier d'une instance Cozygratuite avec 1GO de RAM et 10GO de disque
-                    | (disponible en quantité limité, hébergement sur le territoire français).
-                form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                    label(for='mce-signmeup-EMAIL').email
-                        span email address
-                        input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
-                    label(for='mce-signmeup-MOTIV')
-                        span Je peux aider sur les sujets suivants :
-                        textarea(name="MOTIV")
-                    div(style='position: absolute; left: -5000px;')
-                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
-                    button.icon-cloud(type='submit', name='subscribe') Go !
-
         section#community-cozy.highlight
             .line
                 h4
@@ -290,32 +253,61 @@ html(lang="en")
                            br
                            | Twitter
 
+        section#subscription.simple
+            h4 Restons en contact
+            .line
+                p
+                    | Tenez-moi au courant de ce qui se passe chez Cozy (newsletter à faible volume, zéro spam, promis !) :
+                form#keep-in-touch(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=e3091db2ef', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-keepintouch-EMAIL').email
+                        span email address
+                        input#mce-keepintouch-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
+                    button.icon-envelope-o(type='submit', name='subscribe') Tenez-moi au courant
+            .line
+                p
+                    | Je compte contribuer au projet Cozy en tant que dévelopeur d'application, de bêta-testeur ou de 
+                    | traducteur. Pour cela, j'aimerais bénéficier d'une instance Cozy gratuite avec 1GO de RAM et 10GO de disque
+                    | (disponible en quantité limité, hébergement sur le territoire français).
+                form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-signmeup-EMAIL').email
+                        span email address
+                        input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
+                    label(for='mce-signmeup-MOTIV')
+                        span Je peux aider sur les sujets suivants :
+                        textarea(name="MOTIV")
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
+                    button.icon-cloud(type='submit', name='subscribe') Go !
+
+
         section#about.line
             h2.icon-rate &nbsp; À propos 
             p
                 | Cozy est fièrement codé à la main en France par l'équipe Cozy Cloud, 
                 | une startup prometteuse qui fait du logiciel libre.
             ul.team
-                li
-                    img(src="/assets/images/team/polaroid-ben.png", alt="Benjamin" title="Benjamin")
-                li
-                    img(src="/assets/images/team/polaroid-frank.png", alt="Frank" title)
-                li
-                    img(src="/assets/images/team/polaroid-lucas.png", alt="Lucas" title="Lucas")
-                li
-                    img(src="/assets/images/team/polaroid-zoe.png", alt="Zoé" title="Zoé")
-                li
-                    img(src="/assets/images/team/polaroid-joseph.png", alt="Joseph" title="Joseph")
-                li
-                    img(src="/assets/images/team/polaroid-romain.png", alt="Romain" title"=Romain")
-                li
-                    img(src="/assets/images/team/polaroid-alexis.png", alt="Alexis" title="Alexis")
-                li
-                    img(src="/assets/images/team/polaroid-nicolas.png", alt="Nicolas" title="Nicolas")
-                li
-                    img(src="/assets/images/team/polaroid-brice.png", alt="Clochix" title="Clochix")
-                li
-                    img(src="/assets/images/team/polaroid-paul.png", alt="Paul" title="Paul")
+                li(title="Benjamin")
+                    img(src="/assets/images/team/polaroid-ben.png", alt="Benjamin")
+                li(title="Frank")
+                    img(src="/assets/images/team/polaroid-frank.png", alt="Frank")
+                li(title="Lucas")
+                    img(src="/assets/images/team/polaroid-lucas.png", alt="Lucas")
+                li(title="Zoé")
+                    img(src="/assets/images/team/polaroid-zoe.png", alt="Zoé")
+                li(title="Joseph")
+                    img(src="/assets/images/team/polaroid-joseph.png", alt="Joseph")
+                li(title="Romain")
+                    img(src="/assets/images/team/polaroid-romain.png", alt="Romain")
+                li(title="Alexis")
+                    img(src="/assets/images/team/polaroid-alexis.png", alt="Alexis")
+                li(title="Nicolas")
+                    img(src="/assets/images/team/polaroid-nicolas.png", alt="Nicolas")
+                li(title="Clochix")
+                    img(src="/assets/images/team/polaroid-brice.png", alt="Clochix")
+                li(title="Paul")
+                    img(src="/assets/images/team/polaroid-paul.png", alt="Paul")
             p
                 | L'objectif de l'équipe Cozy Cloud est de construire un Cloud personel de confiance, décentralisé, en logiciel libre 
                 | qui permette à chacun de nous de reprendre le contrôle de nos données personelles tout en bénéficiant 
@@ -334,6 +326,16 @@ html(lang="en")
                 | &nbsp;&nbsp;
                 a(href="http://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
+
+        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
+        script(type='text/javascript').
+            (function($) {
+                $('#architecture').on('click', '.diagbox', function(event) {
+                    if($(window).width() > 800) {
+                        $(this).find('p').slideToggle();
+                    };
+                });
+            })(jQuery);
 
         script(type='text/javascript').
             var _paq = _paq || [];

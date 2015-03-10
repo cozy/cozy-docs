@@ -7,18 +7,9 @@ html(lang="en")
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos&hellip; there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
-        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
-        script(type='text/javascript').
-          $(document).ready(function() {
-             $(".diagbox").click(function(event) {
-               if($(window).width() > 800) {
-                 $(event.target).find("p").slideDown();
-               };
-             });
-          });
     body
         .navbar.fixed
-            a(href="/en/")
+            a.nav-logo(href="/en/")
                 img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud')
             a.lang-switcher.selected(href="/en/") EN
             a.lang-switcher(href="/fr/") FR
@@ -237,6 +228,30 @@ html(lang="en")
                             | A dedicated module handles content indexation through a REST API.
                             | It's your personal search engine.
 
+        section#community-cozy.highlight
+            .line
+                h4
+                    | Join our community
+                p
+                    | We need your help to make sure we can build the best Personal Server around.
+                    | Connect with us to get tech support, to share your thoughts, integrate your contributions or show off your brand new app.
+                .line
+                    p.mod.w33.left
+                        a(href="http://webchat.freenode.net/?channels=cozycloud")
+                           img(src='/assets/images/irc-logo.png', alt='IRC Logo')
+                           br
+                           | <strong>#cozycloud</strong> on irc.freenode.net
+                    p.mod.w33.left
+                        a(href='https://forum.cozy.io')
+                           img(src='/assets/images/forum.png', alt='Forum Icon')
+                           br
+                           | Forum
+                    p.mod.w33.left
+                        a(href='https://twitter.com/mycozycloud')
+                           img(src='/assets/images/twitter.png', alt='Twitter Logo')
+                           br
+                           | Twitter
+
         section#subscription.simple
             h4 Get in touch
             .line
@@ -263,54 +278,30 @@ html(lang="en")
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
                     button.icon-cloud(type='submit', name='subscribe') Sign me up!
 
-        section#community-cozy.highlight
-            .line
-                h4
-                    | Join our community
-                p
-                    | We need your help to make sure we can build the best Personal Server around.
-                    | Connect with us to get tech support, to share your thoughts, integrate your contributions or show off your brand new app.
-                .line
-                    p.mod.w33.left
-                        a(href="http://webchat.freenode.net/?channels=cozycloud")
-                           img(src='/assets/images/irc-logo.png', alt='IRC Logo')
-                           br
-                           | <strong>#cozycloud</strong> on irc.freenode.net
-                    p.mod.w33.left
-                        a(href='https://forum.cozy.io')
-                           img(src='/assets/images/forum.png', alt='Forum Icon')
-                           br
-                           | Forum
-                    p.mod.w33.left
-                        a(href='https://twitter.com/mycozycloud')
-                           img(src='/assets/images/twitter.png', alt='Twitter Logo')
-                           br
-                           | Twitter
-
         section#about.line
             h2.icon-rate &nbsp; About
             p
                 | Cozy is proudly hand-crafted in France by the Cozy Cloud team, a young open-source startup.
             ul.team
-                li
+                li(title="Benjamin")
                     img(src="/assets/images/team/polaroid-ben.png", alt="Benjamin")
-                li
+                li(title="Frank")
                     img(src="/assets/images/team/polaroid-frank.png", alt="Frank")
-                li
+                li(title="Lucas")
                     img(src="/assets/images/team/polaroid-lucas.png", alt="Lucas")
-                li
+                li(title="Zoé")
                     img(src="/assets/images/team/polaroid-zoe.png", alt="Zoé")
-                li
+                li(title="Joseph")
                     img(src="/assets/images/team/polaroid-joseph.png", alt="Joseph")
-                li
+                li(title="Romain")
                     img(src="/assets/images/team/polaroid-romain.png", alt="Romain")
-                li
+                li(title="Alexis")
                     img(src="/assets/images/team/polaroid-alexis.png", alt="Alexis")
-                li
+                li(title="Nicolas")
                     img(src="/assets/images/team/polaroid-nicolas.png", alt="Nicolas")
-                li
-                    img(src="/assets/images/team/polaroid-brice.png", alt="Brice")
-                li
+                li(title="Clochix")
+                    img(src="/assets/images/team/polaroid-brice.png", alt="Clochix")
+                li(title="Paul")
                     img(src="/assets/images/team/polaroid-paul.png", alt="Paul")
             p
                 | Cozy Cloud's team goal is to build an open-source, decentralized, trusted personal cloud that can help all of us take back control of our personal data while benefiting of cutting-edge cloud services.
@@ -328,6 +319,16 @@ html(lang="en")
                 | &nbsp;&nbsp;
                 a(href="http://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
+
+        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
+        script(type='text/javascript').
+            (function($) {
+                $('#architecture').on('click', '.diagbox', function(event) {
+                    if($(window).width() > 800) {
+                        $(this).find('p').slideToggle();
+                    };
+                });
+            })(jQuery);
 
         script(type='text/javascript').
             var _paq = _paq || [];
