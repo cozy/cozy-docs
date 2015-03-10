@@ -2,5 +2,3 @@
 title: "Welcome!"
 layout: "homepage"
 ---
-
-
