@@ -35,7 +35,7 @@ with [Github](https://github.com) that allows you to store online your
 repository and much more!
 
 If you don't want access to the specific features of Cozy Cloud, you can stop
-here and jump to our [first tutorial](hack/getting-started/first-app.html).
+here and jump to our [first tutorial](/hack/getting-started/first-app.html).
 
 ### For applications that take advantage of the Data System
 
