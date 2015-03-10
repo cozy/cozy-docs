@@ -19,12 +19,13 @@ html(lang='en')
 
   body
     .navbar.fixed
-      a.nav-logo.left(href="/")
+      a.nav-logo.left(href="/fr/")
           img(src='/assets/images/happycloud.png', alt='Happy Cloud')
       span.subtitle
         - var collectionName = "documents"
         - if (document.category != null)
           - collectionName = document.category + "Pages"
+        - collectionName = collectionName + getLang(document).toUpperCase()
         - items = generateMenu(document.url, collectionName)
         - for item in items
           - var className = ""
@@ -45,19 +46,19 @@ html(lang='en')
       - if(document.category == 'hack')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
-        a(href="/hack/getting-started/") Dev
+        a(href="/fr/hack/getting-started/") Dev'
 
       - var className = ""
       - if(document.category == 'mobile')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
-        a(href="/mobile/files.html") Sync
+        a(href="/fr/mobile/files.html") Sync
 
       - var className = ""
       - if(document.category == 'host')
         - className = 'selected'
       .submenu-container.right(class="#{className}")
-        a(href="/host/install.html") Install
+        a(href="/fr/host/install.html") Install'
     .wrapper
       .wrap-menu.w25.mod.left
         | &nbsp;
@@ -98,18 +99,17 @@ html(lang='en')
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
 
-
     script(type='text/javascript').
-      var _paq = _paq || [];
-      _paq.push(["trackPageView"]);
-      _paq.push(["enableLinkTracking"]);
-
-      (function() {
-        var u=(("https:" == document.location.protocol) ? "https" : "http") + "://piwik.cozycloud.cc/";
-        _paq.push(["setTrackerUrl", u+"piwik.php"]);
-        _paq.push(["setSiteId", "3"]);
-        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-        g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-      })();
+        var _paq = _paq || [];
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="//piwik.cozycloud.cc/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 3]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
     noscript
-        img(src="/https://piwik.cozycloud.cc/piwik.php?idsite=1&amp;rec=1", style="border:0", alt="")
+        p
+            img(src="https://piwik.cozycloud.cc/piwik.php?idsite=3", style="border:0", alt="")
