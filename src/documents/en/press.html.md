@@ -27,5 +27,4 @@ toc: true
 
 ### Photo Storage and Sharing
 
-
 [![Photos](/assets/press/en/screenshot_photos_en.png)](/assets/press/en/screenshot_photos_en.png)
