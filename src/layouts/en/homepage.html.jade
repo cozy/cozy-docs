@@ -259,30 +259,26 @@ html(lang="en")
             .line
                 p
                     | Please keep me informed about what's going on at Cozy (very low volume newsletter, no spam, we promise!):
-                form#keep-in-touch(action="#subscription")
-                    label.email
+                form#keep-in-touch(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=e3091db2ef', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-keepintouch-EMAIL').email
                         span email address
-                        input(type="email", name="subscription", placeholder="email address")
-                    button.icon-envelope-o(type="submit") Keep me informed
+                        input#mce-keepintouch-EMAIL(type="email", name="EMAIL", placeholder="email address")
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
+                    button.icon-envelope-o(type='submit', name='subscribe') Keep me informed
             .line
                 p
                     | I want to contribute to the Cozy project as an app developer, beta tester and/or localizer  and enjoy one of these free fancy Cozy instances with 1GB of RAM and 10GB of disk space (available in limited numbers, hosted in France).
-                form#sign-me-up(action="#subscription")
-                    label.email
+                form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-signmeup-EMAIL').email
                         span email address
-                        input(type="email", name="subscription", placeholder="email address")
-                    label
+                        input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="email address")
+                    label(for='mce-signmeup-MOTIV')
                         span What I could help with:
-                        textarea(name="information")
-                    button.icon-cloud(type="submit") Sign me up!
-            script.
-                $('#subscription').on('submit', 'form', function(event){
-                    $button = $(event.target).find('button');
-                    $button.addClass('active');
-                    setTimeout(function(){
-                        $button.removeClass('active');
-                    }, 550);
-                });
+                        textarea(name="MOTIV")
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
+                    button.icon-cloud(type='submit', name='subscribe') Sign me up!
 
         section#community-cozy.highlight
             .line

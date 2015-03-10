@@ -585,9 +585,9 @@ header
     // We temporary fix font-size in PX, due to some bugs. Need to rely on
     // something like normalize.css to resolve this issue.
     label
-    button
     input
     textarea
+    [type=submit]
         font-size 20px
 
     label
@@ -613,7 +613,7 @@ header
             font-family main
             height 8em
 
-    button
+    [type=submit]
         position relative
         display block
         box-sizing border-box
@@ -663,13 +663,13 @@ header
     @media (min-width: 640px)
         label
         input
-        button
+        [type=submit]
             float left
 
         label
             width 55%
 
-        button
+        [type=submit]
             width 44%
             margin-left 1%
 
@@ -677,7 +677,7 @@ header
         label
             width 65%
 
-        button
+        [type=submit]
             width 34%
 
 #sign-me-up
