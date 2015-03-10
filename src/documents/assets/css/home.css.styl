@@ -357,6 +357,7 @@ button:active
         text-decoration: none
         font-size: 30px
         margin-top: 10px
+        vertical-align middle
 
         &:hover
             color: black
@@ -367,12 +368,14 @@ button:active
 
         &.lang-switcher
             font-size 18px
+            padding-top 6px
+            text-decoration none
 
-            &:not(.selected)
+            &.selected
+                color blue
+
+            &:hover
                 text-decoration underline
-
-                &:hover
-                    text-decoration none
 
 
 
@@ -909,3 +912,12 @@ header
     .diagbox:hover
         p
             display:none
+
+@media (max-width: 320px)
+    .navbar a:first-child
+    .navbar .lang-switcher.selected
+        display none
+
+    .navbar .lang-switcher
+        float left
+        margin 10px 0 0 20px
