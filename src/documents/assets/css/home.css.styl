@@ -1,3 +1,5 @@
+@import 'nib'
+
 rounded-border()
     -webkit-border-radius: arguments
     -moz-border-radius: arguments
@@ -249,7 +251,6 @@ button:active
     .external-links
         h4
             font-family: main-light
-            margin-top: 40px
             margin-bottom: 0px
 
 .code
@@ -295,7 +296,6 @@ button:active
     padding-bottom: 40px
 
     h4
-        margin-top: 40px
         text-align: center
         font-size: 60px
 
@@ -313,7 +313,6 @@ button:active
         margin-bottom: 0px
 
     h4
-        margin-top: 40px
         text-align: center
         font-size: 60px
 
@@ -419,6 +418,11 @@ header
 
     form
         display: inline-block
+
+
+.credits
+    font-size 1em
+    color midgrey
 
 
 #why
@@ -564,6 +568,123 @@ header
     a.txt-black
         color: black
 
+
+#subscription
+    padding-bottom: 60px
+    background: blue
+
+    .line
+        padding-bottom 1em
+        width 100%
+        max-width 60em
+        margin 0 auto
+
+    form
+        padding 2em 0 1em
+
+    // We temporary fix font-size in PX, due to some bugs. Need to rely on
+    // something like normalize.css to resolve this issue.
+    label
+    input
+    textarea
+    [type=submit]
+        font-size 20px
+
+    label
+        display block
+        padding-bottom 1em
+
+        span
+            display block
+
+        input
+        textarea
+            display block
+            box-sizing border-box
+            border none
+            border-radius 3px
+
+        input
+        textarea
+            width 100%
+            padding 1em
+
+        textarea
+            font-family main
+            height 8em
+
+    [type=submit]
+        position relative
+        display block
+        box-sizing border-box
+        padding 1em
+        padding-left 3em
+        border none
+        box-shadow 0 6px blue - 20%
+        background-color blue + 20%
+        color white
+
+        &:hover
+            box-shadow 0 4px orange
+
+            &:before
+                color white
+
+        &:active:before
+        &.active:before
+            color blue - 20%
+            animation: scaleUp 0.5s
+
+        &:before
+            display block
+            position absolute
+            top 50%
+            left 0
+            width 3em
+            margin-top -.5em
+            text-align center
+            vertical-align middle
+            color blue - 20%
+
+    .email span
+        display none
+
+@keyframes scaleUp
+    80%
+        opacity: 0;
+        transform: scale(2);
+
+    100%
+        opacity: 0;
+        transform: scale(2);
+
+
+#keep-in-touch
+    @media (min-width: 640px)
+        label
+        input
+        [type=submit]
+            float left
+
+        label
+            width 55%
+
+        [type=submit]
+            width 44%
+            margin-left 1%
+
+    @media (min-width: 805px)
+        label
+            width 65%
+
+        [type=submit]
+            width 34%
+
+#sign-me-up
+    padding-bottom 0 !important
+
+
+
 #about
     background: white
     color: black
@@ -575,6 +696,23 @@ header
     .right
         margin-left: 20px
         margin-top: 0px
+
+
+.team
+    overflow auto
+    padding 0
+    font-size 1.43em
+    list-style-type none
+    text-align center
+
+    li
+        font-size: 0.01em
+        display inline-block
+        box-sizing border-box
+        width 15%
+        min-width 80px
+        padding 5px
+
 
 // Documentation
 @media (max-width: 1200px)

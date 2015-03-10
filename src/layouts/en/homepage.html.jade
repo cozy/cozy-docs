@@ -4,9 +4,9 @@ html(lang="en")
         meta(charset="UTF-8")
         link(rel="shortcut icon", href="/assets/images/favicon.png")
         title="Cozy, a personal cloud you can hack, host and delete"
-        meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos... there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
+        meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos&hellip; there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
-        != getBlock('styles').add(['/vendors/css/knacss.css', '/assets/css/home.css']).toHTML()
+        != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
         script(src='/vendors/javascripts/jquery-2.0.3.min.js').
         script(type='text/javascript').
           $(document).ready(function() {
@@ -19,7 +19,7 @@ html(lang="en")
     body
         .navbar.fixed
             a(href="/en/")
-                img(src='/assets/images/happycloud.png', alt='Happy Cloud')
+                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud')
             a.lang-switcher.selected(href="/en/") EN
             a.lang-switcher(href="/fr/") FR
             a.right(href="https://blog.cozycloud.cc") Blog
@@ -29,15 +29,14 @@ html(lang="en")
 
         header.line.clearfix#header
             .left.mr2.biglogo
-                img(src='/assets/images/bighappycloud.png')
+                img(src='/assets/images/cozy-logo-gradient.svg', width="350", height="266")
             .mod.main-text
                 .mod.left
                     h1
-                        span.title Cozy&nbsp;
+                        span.title Cozy 
                         | a Personal Cloud
                         br
-                        | you can host, customize
-                        | and fully control
+                        | you can host, customize and fully control
                     p.h4-like
                         | Sync your contacts, calendars and files between your devices and your personal server.
                         | Add your own services to leverage your personal data.
@@ -46,8 +45,8 @@ html(lang="en")
                             a.button(href="/host/install.html")
                                 | Install Cozy on your own hardware
                         p
-                            | To be kept updated with news about the project, follow us on&nbsp;
-                            a(href="https://twitter.com/mycozycloud") Twitter&nbsp;
+                            | To be kept updated with news about the project, follow us on 
+                            a(href="https://twitter.com/mycozycloud") Twitter 
                             | or&nbsp;
                             a(href="https://diaspora-fr.org/people/ce1528a0f88b013197aa01beea1f31e2") Diaspora
 
@@ -74,8 +73,8 @@ html(lang="en")
                     | Enjoy your personal cloud
                 p.textcenter.pa2.tagline
                     | Cozy is the assistant that simplifies your life.
-                    | You can trust it to keep your privacy safe and to serve
-                    | you. Here are its main features:
+                    | You can trust it to keep your privacy safe and to serve you.
+                    | Here are its main features:
                 .line.mt2.gallery
                     .mod.w50.left
                         .screenshot-container.txtcenter
@@ -88,8 +87,7 @@ html(lang="en")
                         p.pa2.mt0
                             | Store your important files in your Cozy.
                             | Backup your mobile pictures via our mobile app.
-                            | Keep your files synced with your laptop and your
-                            | smartphone.
+                            | Keep your files synced with your laptop and your smartphone.
                 .line.gallery
                     .mod.w50.left
                         .screenshot-container.txtcenter
@@ -100,10 +98,8 @@ html(lang="en")
                         h1.capitalize.mt3
                             | Calendar
                         p.pa2.mt0
-                            | Manage your events via a simple
-                            | web interface.
-                            | Synchronize your smartphone calendar with Cozy
-                            | via the CalDAV protocol.
+                            | Manage your events via a simple web interface.
+                            | Synchronize your smartphone calendar with Cozy via the CalDAV protocol.
                 .line.gallery
                     .mod.w50.left
                         .screenshot-container.txtcenter
@@ -114,10 +110,8 @@ html(lang="en")
                         h1.capitalize.mt3
                             | Contacts
                         p.pa2.mt0
-                            | Store your contacts in the cloud and share files
-                            | and events with them.
-                            | Synchronize your smartphone with your contact
-                            | book via the CardDAV protocol.
+                            | Store your contacts in the cloud and share files and events with them.
+                            | Synchronize your smartphone with your contact book via the CardDAV protocol.
                 .line.gallery
                     .mod.w50.left
                         .screenshot-container.txtcenter
@@ -128,9 +122,8 @@ html(lang="en")
                         h1.capitalize.mt3
                             | App Store
                         p.pa2.mt0
-                            | Cozy is expandable: you can install applications
-                            | developed by the community: photo gallery, feed
-                            | reader, task manager, etc.
+                            | Cozy is expandable: you can install applications developed by the community:
+                            | photo gallery, feed reader, task manager, etc.
 
                  .line.mt6
                      p
@@ -180,10 +173,9 @@ html(lang="en")
                 h4
                     | We're not trying to lock you in
                 p
-                    | What is annoying nowadays with online services is
-                    | that they lock you in. This is not what we intend to do with
-                    | Cozy. That's why you have the capability to
-                    | delete your data and leave the platform anytime you want.
+                    | What is annoying nowadays with online services is that they lock you in.
+                    | This is not what we intend to do with Cozy.
+                    | That's why you have the capability to delete your data and leave the platform anytime you want.
                     br
                     | See for yourself by clicking the button below:
                 .txtcenter.mt3
@@ -199,60 +191,77 @@ html(lang="en")
                     .mod.w100.diagbox
                         div proxy
                         p.w100
-                            | The proxy handles all user requests. It manages
-                            | the authentication and routes requests to the
-                            | right application.
+                            | The proxy handles all user requests.
+                            | It manages the authentication and routes requests to the right application.
                 .line.grid5
                     .diagbox
                         div home / controller
                         p.w100
-                            | The home app is an UI for the
-                            | controller. It allows to install or remove
-                            | applications and to set user parameters.
+                            | The home app is an UI for the controller.
+                            | It allows to install or remove applications and to set user parameters.
                     .diagbox
-                        div app1
+                        div app 1
                         p.w100
-                            | This is an application provided by Cozy Cloud
-                            | or the community. It is spawned by the home
-                            | that finds the sources on a github repo.
+                            | This is an application provided by Cozy Cloud or the community.
+                            | It is spawned by the home that finds the sources on a github repo.
                     .diagbox
-                        div app2
+                        div app 2
                         p.w100
-                            | Your choice: notes, mails, budget, sport coach...
-                    .diagbox(style='background: transparent') ...
+                            | Your choice: notes, mails, budget, sport coach&hellip;
+                    .diagbox(style='background: transparent') &hellip;
                     .diagbox
                         div your app
                         p.w100
-                            | This is an application you developed. You can spawn it like
-                            | any other applications.
+                            | This is an application you developed. 
+                            | You can spawn it like any other applications.
                 .line
                     .mod.w100.diagbox
                         div data system
                         p.w100
                             | The data system is a layer between apps and data.
-                            | It manages application permissions and
-                            | provides a unified API to access to all kind of
-                            | data: files, documents or indexes.
-                            | It publishes changes, so that applications
-                            | can share data with each other.
+                            | It manages application permissions and provides a unified API to access to all kind of data: files, documents or indexes.
+                            | It publishes changes, so that applications can share data with each other.
                 .line.grid3
                     .diagbox
                         div database
                         p.w100
-                            | This NoSQL storage stores documents as JSON
-                            | objects.
+                            | This NoSQL storage stores documents as JSON objects.
                     .diagbox
                         div file system
                         p.w100
-                            | Files are stored directly in the database as
-                            | attachments of documents. A fuse implementation
-                            | is on the roadmap to make things smoother.
+                            | Files are stored directly in the database as attachments of documents.
+                            | A fuse implementation is on the roadmap to make things smoother.
                     .diagbox
                         div indexer
                         p.w100
-                            | A dedicated module
-                            | handles content indexation through a REST API.
+                            | A dedicated module handles content indexation through a REST API.
                             | It's your personal search engine.
+
+        section#subscription.simple
+            h4 Get in touch
+            .line
+                p
+                    | Please keep me informed about what's going on at Cozy (very low volume newsletter, no spam, we promise!):
+                form#keep-in-touch(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=e3091db2ef', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-keepintouch-EMAIL').email
+                        span email address
+                        input#mce-keepintouch-EMAIL(type="email", name="EMAIL", placeholder="email address")
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
+                    button.icon-envelope-o(type='submit', name='subscribe') Keep me informed
+            .line
+                p
+                    | I want to contribute to the Cozy project as an app developer, beta tester and/or localizer  and enjoy one of these free fancy Cozy instances with 1GB of RAM and 10GB of disk space (available in limited numbers, hosted in France).
+                form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-signmeup-EMAIL').email
+                        span email address
+                        input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="email address")
+                    label(for='mce-signmeup-MOTIV')
+                        span What I could help with:
+                        textarea(name="MOTIV")
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
+                    button.icon-cloud(type='submit', name='subscribe') Sign me up!
 
         section#community-cozy.highlight
             .line
@@ -281,25 +290,35 @@ html(lang="en")
         section#about.line
             h2.icon-rate &nbsp; About
             p
-                | Cozy is made by Cozy Cloud, a young France-based startup.
-                | Learn more on&nbsp;
-                a(href="https://cozycloud.cc") our website
-                |.
+                | Cozy is proudly hand-crafted in France by the Cozy Cloud team, a young open-source startup.
+            ul.team
+                li
+                    img(src="/assets/images/team/polaroid-ben.png", alt="Benjamin")
+                li
+                    img(src="/assets/images/team/polaroid-frank.png", alt="Frank")
+                li
+                    img(src="/assets/images/team/polaroid-lucas.png", alt="Lucas")
+                li
+                    img(src="/assets/images/team/polaroid-zoe.png", alt="Zoé")
+                li
+                    img(src="/assets/images/team/polaroid-joseph.png", alt="Joseph")
+                li
+                    img(src="/assets/images/team/polaroid-romain.png", alt="Romain")
+                li
+                    img(src="/assets/images/team/polaroid-alexis.png", alt="Alexis")
+                li
+                    img(src="/assets/images/team/polaroid-nicolas.png", alt="Nicolas")
+                li
+                    img(src="/assets/images/team/polaroid-brice.png", alt="Brice")
+                li
+                    img(src="/assets/images/team/polaroid-paul.png", alt="Paul")
             p
-                | Our goal is to build a virtual assistant you can trust.
-                | Cozy will be the centre of gravity of your digital life.
-                | All your devices, your web services and your contacts will
-                | collaborate through it. This way, you will discover a whole
-                | new web experience!
-            p
-                | If you want to share our logo, click&nbsp;
-                a(href="/assets/images/cozy-logo-gradient.svg") here for the SVG version
-                | .
-            p
+                | Cozy Cloud's team goal is to build an open-source, decentralized, trusted personal cloud that can help all of us take back control of our personal data while benefiting of cutting-edge cloud services.
+            p.credits
                 | Photo Credits: Cozy Cloud, TechGenStaffer
                 | (Flickr), license Creative Commons
                 br
-                | Icons: iconmonstr and KNACSS
+                | Icons: iconmonstr, KNACSS &amp; Icomoon
             p.mt6.txtcenter
                 a.mr3(href="http://redecentralize.org/interviews/2014/01/30/11-benjamin-cozycloud.html")
                     img(src='/assets/images/redecentralize-logo.png', alt='LinuxFR Logo')
