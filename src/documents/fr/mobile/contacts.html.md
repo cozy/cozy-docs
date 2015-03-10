@@ -26,7 +26,7 @@ Cozy utilises CardDav, qui est le protocole standard, pour synchroniser vos cont
 
 <br />
 <br />
-Vous êtes maintenant prêt à synchoniser vos périphériques !
+Vous êtes maintenant prêt à synchroniser vos périphériques !
 
 Consultez la section correspondant au système de votre périphérique pour continuer.
 
@@ -35,10 +35,10 @@ Consultez la section correspondant au système de votre périphérique pour cont
 #### Installation
 Il y a de nombreuses applications qui permettent de synchroniser les contacts sur Android, mais nous conseillons d'utiliser [DavDroid](http://davdroid.bitfire.at/) car c'est une application open-source, et ce même si l'application est payante sur le PlayStore.
 
-Note : vous pouvez télécharger l'application grauitement et l'installer depuis [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid).
+Note : vous pouvez télécharger l'application gratuitement et l'installer depuis [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid).
 
 #### Configuration
-Une fois l'application installée,, ouvrez-là et cliquez sur le bouton pour créer un nouveau compte (suivez le cercle bleu dans l'image ci-dessous).
+Une fois l'application installée, ouvrez-là et cliquez sur le bouton pour créer un nouveau compte (suivez le cercle bleu dans l'image ci-dessous).
 <center>![Android step 1](/assets/images/mobile/android/step1.png)</center>
 
 <br />
@@ -68,7 +68,7 @@ Choisissez un nom pour votre compte, "Cozy" fera très bien l'affaire.
 
 <br />
 <br />
-Vous avez terminé, mais si vous voulez forcer la première synchonisation, allez dans la liste des comptes.
+Vous avez terminé, mais si vous voulez forcer la première synchronisation, allez dans la liste des comptes.
 <center>![Android step 7](/assets/images/mobile/android/step7.png)</center>
 
 <br />
@@ -78,7 +78,7 @@ Sélectionnez le compte DavDroid dans la liste.
 
 <br />
 <br />
-Touchez le bouton "Contacts", ce qui aura pour effet de démarrer une synchonisation.
+Touchez le bouton "Contacts", ce qui aura pour effet de démarrer une synchronisation.
 <center>![Android step 9](/assets/images/mobile/android/step9.png)</center>
 
 <br />
@@ -88,7 +88,7 @@ Félicitations, votre périphérique mobile est maintenant synchronisé avec vot
 ## iOS
 
 #### Configurez votre compte CardDav
-Ouvre les options, sélectionnez "Email, Contacts, Agendas" et cliquez sur "Ajouter un compte" :
+Ouvrez les options, sélectionnez "Email, Contacts, Agendas" et cliquez sur "Ajouter un compte" :
 <center>![iOS step 1](/assets/images/mobile/ios/contacts/step1.jpg)</center>
 
 <br />
@@ -98,12 +98,12 @@ Puis sélectionnez "Autre compte" :
 
 <br />
 <br />
-Enfin sélectionnez "Ajouter un compte CardDav" dans la section Contacts :
+Sélectionnez ensuite "Ajouter un compte CardDav" dans la section Contacts :
 <center>![iOS step 3](/assets/images/mobile/ios/contacts/step3.jpg)</center>
 
 <br />
 <br />
-Enfin, remplissez le formulaire avec les identifiants que vous avez noté lors de l'étape 1 :
+Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors de l'étape 1 :
 
 * le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync
 * le champ "Nom d'utilisateur" sera toujours "me".

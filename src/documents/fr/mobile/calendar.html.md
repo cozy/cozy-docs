@@ -26,19 +26,18 @@ Cozy utilises CalDav, qui est le protocole standard, pour synchroniser vos agend
 
 <br />
 <br />
-Vous êtes maintenant prêt à synchoniser vos périphériques !
+Vous êtes maintenant prêt à synchroniser vos périphériques !
 
 Consultez la section correspondant au système de votre périphérique pour continuer.
 
 ## Android
 
 #### Installation
-There are multiple applications that can achieve what we want, but we advise you to use [DavDroid](http://davdroid.bitfire.at/) because it's open-source, though it's a paid app on the PlayStore.
 
-Note: you can download it and install for free from the [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid).
+Sur Android, plusieurs applications permettent de synchroniser votre calendrier. Nous vous conseillons d’utiliser [DavDroid](http://davdroid.bitfire.at/) qui est un logiciel libre (l’application est payante dans le PlayStore de Google, vous pouvez également la télécharger et l’installer gratuitement dans le [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid)).
 
 #### Configuration
-Une fois l'application installée,, ouvrez-là et cliquez sur le bouton pour créer un nouveau compte (suivez le cercle bleu dans l'image ci-dessous).
+Une fois l'application installée, ouvrez-là et cliquez sur le bouton pour créer un nouveau compte (suivez le cercle bleu dans l'image ci-dessous).
 <center>![Android step 1](/assets/images/mobile/android/step1.png)</center>
 
 <br />
@@ -53,7 +52,7 @@ Vous aurez deux choix. Choisissez "Connexion avec URL et identifiants".
 
 <br />
 <br />
-Remplissez le formulaire avec les identifiants que vous avez noté lors de l'étape 1.
+Remplissez le formulaire avec les identifiants que vous avez notés lors de l'étape 1.
 <center>![Android step 4](/assets/images/mobile/android/step4.png)</center>
 
 <br />
@@ -68,7 +67,7 @@ Choisissez un nom pour votre compte, "Cozy" fera très bien l'affaire.
 
 <br />
 <br />
-Vous avez terminé, mais si vous voulez forcer la première synchonisation, allez dans la liste des comptes.
+Vous avez terminé, mais si vous voulez forcer la première synchronisation, allez dans la liste des comptes.
 <center>![Android step 7](/assets/images/mobile/android/step7.png)</center>
 
 <br />
@@ -78,7 +77,7 @@ Sélectionnez le compte DavDroid dans la liste.
 
 <br />
 <br />
-Touchez le bouton "Calendar", ce qui aura pour effet de démarrer une synchonisation.
+Touchez le bouton "Calendar", ce qui aura pour effet de démarrer une synchronisation.
 <center>![Android step 9](/assets/images/mobile/android/step9.png)</center>
 
 <br />
@@ -98,23 +97,23 @@ Puis sélectionnez "Autre compte" :
 
 <br />
 <br />
-Enfin sélectionnez "Ajouter un compte CalDav" dans la section Contacts :
+Sélectionnez ensuite "Ajouter un compte CalDav" dans la section Contacts :
 <center>![iOS step 3](/assets/images/mobile/ios/contacts/step3.jpg)</center>
 
 <br />
 <br />
-Enfin, remplissez le formulaire avec les identifiants que vous avez noté lors de l'étape 1 :
+Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors de l'étape 1 :
 
-* le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync
-* le champ "Nom d'utilisateur" sera toujours "me".
-* le champ "Mot de passe" sera celui que vous avez noté.
+* le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync ;
+* le champ "Nom d'utilisateur" sera toujours "me" ;
+* le champ "Mot de passe" sera celui que vous avez noté ;
 * le champ "Description" permet de choisir un nom pour identifier ce compte. "Cozy" fera très bien l'affaire.
 
 <center>![iOS step 4](/assets/images/mobile/ios/calendar/step4.jpg)</center>
 
 <br />
 <br />
-Puis cliquez sur suivante. Activez ou pas les alarms, et sauvegardez. :
+Puis cliquez sur suivante, configurez les alarmes, et enregistrez vos choix.
 <center>![iOS step 5](/assets/images/mobile/ios/calendar/step5.jpg)</center>
 
 <br />
@@ -127,7 +126,6 @@ Vous pouvez à présent configurer l'application mobile Agenda pour choisir quel
 Ouvrez l'application Calendar sur votre terminal mobile.
 
 Vous pouvez déjà visualiser les agendas de votre Cozy. Cliquez sur les agendas pour les rendre visibles ou invisibles.
-Click on calendars to toggle calendar's visibility.
 <center>![iOS step 6](/assets/images/mobile/ios/calendar/step6.jpg)</center>
 
 <br />
@@ -136,7 +134,7 @@ Ouvrez le menu et cliquez sur le bouton pour ajouter un nouveau calendrier.
 <center>![iOS step 7](/assets/images/mobile/ios/calendar/step7.jpg)</center>
 
 <br />
-C'est tout ! vous pouvez gérer vos événements sur votre mobile ou sur votre Cozy de façon transparente.
+C'est tout ! Vous pouvez gérer vos événements sur votre mobile ou sur votre Cozy de façon transparente.
 
 ## Firefox OS
 
@@ -154,10 +152,10 @@ Puis choisissez l'option "CalDav" dans le menu.
 
 <br />
 <br />
-Enfin; remplissez le formulaire avec les identifiants que vous avez noté dans l'étapz 1 :
+Enfin, remplissez le formulaire avec les identifiants que vous avez notés dans l'étape 1 :
 
-* le premier champ sera toujours "me".
-* le second sera le mot de passe que vous avez noté précédemment.
+* le premier champ sera toujours "me" ;
+* le second sera le mot de passe que vous avez noté précédemment ;
 * le troisième change pour chaque utilisateur : https://adresse-de-votre-cozy/public/sync/principals/me
 
 <center>![Firefox OS step 3](/assets/images/mobile/firefoxos/step3.png)</center>

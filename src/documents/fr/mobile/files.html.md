@@ -1,12 +1,12 @@
 ---
-title: "Synchronisaion de fichiers"
+title: "Synchronisation de fichiers"
 layout: "default"
 category: "mobile"
 menuOrder: 0
 toc: true
 urls: ["/mobile/"]
 ---
-# Synchronisaion de fichiers
+# Synchronisation de fichiers
 
 ## Installation et configuration
 
@@ -27,10 +27,10 @@ Allez sur le PlayStore et chercher "Cozy Cloud" dans la barre de recherche. Puis
 
 Une fois installée, démarrez là. Quleques informations vous seront alors demandées :
 
-* Le domaine où votre Cozy est situé
-* Le mot de passe de votre Cozy (il ne sera pas stockée, juste utilisé pour enregistrer votre périphérique la première fois)
-* Le nom du périphérique (il apparaîtra dans l'interface de votre Cozy)
-* Queques paramètres concernant la sauvegarde de vos photos
+* Le domaine où votre Cozy est situé ;
+* Le mot de passe de votre Cozy (il ne sera pas stocké, juste utilisé pour enregistrer votre périphérique la première fois) ;
+* Le nom du périphérique (il apparaîtra dans l'interface de votre Cozy) ;
+* Queques paramètres concernant la sauvegarde de vos photos.
 
 ![Installation step 01](/assets/images/mobile/install_01.png)
 ![Installation step 02](/assets/images/mobile/install_02.png)
@@ -40,14 +40,14 @@ Une fois le processus terminé, vous devrez confirmer et attendre la fin de la p
 
 ## Naviguez dans vos fichiers Cozy depuis votre téléphone
 
-Maintenant que l'arborescence est téléchargée, vous pouvez naviguer dans vos fichiers depuis votre mobile. Si vous voulez afficher un fichier, cliquez dessus. Il sera alors téléchargé sur votre téléphone/tablette. De cette manière, vous pourrez toujours le consulter même si vous perdez votre connexoin internet.
+Maintenant que l'arborescence est téléchargée, vous pouvez naviguer dans vos fichiers depuis votre mobile. Si vous voulez afficher un fichier, cliquez dessus. Il sera alors téléchargé sur votre téléphone/tablette. De cette manière, vous pourrez toujours le consulter même si vous perdez votre connexion internet.
 
 Voici quelques cas d'usage couverts par l'application mobile :
 
-* Transporter vos e-tickets à un événement sans les imprimer.
-* Lire des livres au format numérique dans les transports.
-* Ecouter votre musique préférée depius votre Cloud sur haut-parleur via le Bluetooth.
-* Regarder des séries télé depuis votre Cloud en faisant la queue.
+* transporter vos e-tickets à un événement sans les imprimer ;
+* lire des livres au format numérique dans les transports ;
+* écouter votre musique préférée depuis votre Cloud sur haut-parleur via le Bluetooth ;
+* regarder des séries télé depuis votre Cloud en faisant la queue ;
 
  Un champ de recherche est aussi disponible. Très pratique quand vous devez retrouver rapidement un fichier.
 
@@ -57,15 +57,15 @@ Voici quelques cas d'usage couverts par l'application mobile :
 
 
 ## Sauvegardez vos photos, faites des albums et partagez-les
-Par défaut, l'application mobile Cozy va sauvegarder toutes les images qu'elle trouve sur votre mobile dans votre Cozy. Ces images seront sauvegardés dans un dossier "Appareil photo".
+Par défaut, l'application mobile Cozy va sauvegarder toutes les images qu'elle trouve sur votre mobile dans votre Cozy. Ces images seront enregistrées dans un dossier "Appareil photo".
 
-NB : Si vous voulez économiser de la bande passante, vous pouvez désactiver cette fonctionalité depuis l'écran de configuration.
+NB : Si vous voulez économiser de la bande passante, vous pouvez désactiver cette fonctionnalité depuis l'écran de configuration.
 
-Une fois que la synchronisationest en place, vous pouvez construire des albums depuis l'application Cozy "Photos" à partir des fichiers stockés dans votre Cozy (et donc depuis votre mobile).
+Une fois que la synchronisation est en place, vous pouvez construire des albums depuis l'application Cozy "Photos" à partir des fichiers stockés dans votre Cozy (et donc depuis votre mobile).
 
 ![Screen browsing](/assets/images/mobile/photos_01.png)
 
-Vous pouvez alors partager cet album en un clic, en sélectionnant les contacts à qui vous souhaitez partager votre album.
+Vous pouvez alors partager cet album en un clic, en sélectionnant les contacts avec lesquels vous souhaitez le partager.
 
 ![Screen browsing](/assets/images/mobile/photos_02.png)
 
