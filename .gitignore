@@ -2,4 +2,3 @@ node_modules/
 public/
 .DS_Store
 *.swp
-.editorconfig
