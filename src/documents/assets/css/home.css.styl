@@ -848,9 +848,6 @@ header
             width: 100%
             display: inline-block
 
-    .lang-switcher
-        display none
-
     #social
         h1
             margin-top: 20px
@@ -916,11 +913,19 @@ header
         p
             display:none
 
-@media (max-width: 320px)
-    .navbar .nav-logo
+@media (max-width: 435px)
     .navbar .lang-switcher.selected
+        display none
+
+
+@media (max-width: 395px)
+    .navbar .nav-logo
         display none
 
     .navbar .lang-switcher
         float left
         margin 10px 0 0 20px
+
+@media (max-width: 305px)
+    .navbar .lang-switcher
+        display none
