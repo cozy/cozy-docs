@@ -1,4 +1,6 @@
 # editorconfig.org
+# editorconfig is a unified configuration file that all editors can take
+# into account
 root = true
 
 [*]
