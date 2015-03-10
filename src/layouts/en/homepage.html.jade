@@ -7,15 +7,6 @@ html(lang="en")
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos&hellip; there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
-        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
-        script(type='text/javascript').
-          $(document).ready(function() {
-             $(".diagbox").click(function(event) {
-               if($(window).width() > 800) {
-                 $(event.target).find("p").slideDown();
-               };
-             });
-          });
     body
         .navbar.fixed
             a.nav-logo(href="/en/")
@@ -328,6 +319,16 @@ html(lang="en")
                 | &nbsp;&nbsp;
                 a(href="http://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
+
+        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
+        script(type='text/javascript').
+            (function($) {
+                $('#architecture').on('click', '.diagbox', function(event) {
+                    if($(window).width() > 800) {
+                        $(this).find('p').slideToggle();
+                    };
+                });
+            })(jQuery);
 
         script(type='text/javascript').
             var _paq = _paq || [];
