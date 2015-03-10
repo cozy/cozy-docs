@@ -369,8 +369,12 @@ button:active
         &.lang-switcher
             font-size 18px
 
-            &.selected
+            &:not(.selected)
                 text-decoration underline
+
+                &:hover
+                    text-decoration none
+
 
 
 .menu
