@@ -6,10 +6,21 @@ toc: true
 
 # Press
 
-## Section 1
-### Sub-section 1
-### Sub-section 2
+## Press releases
 
-## Section 2
-### Sub-section 1
-### Sub-section 2
+[Innovacom and Seed4stoft invests $1.1M in Cozy Cloud](/assets/press/en/2014-06-06-cozy-raises-1M.pdf)
+
+## Screenshots
+
+### Cozy Main Dashboard
+
+[![Home](/assets/press/en/screenshot_home.png)](/assets/press/en/screenshot_home.png)
+
+### Email Application
+
+[![Emails](/assets/press/en/screenshot_emails_en.png)](/assets/press/en/screenshot_emails_en.png)
+
+### Photo Storage and Sharing
+
+
+[![Photos](/assets/press/en/screenshot_photos_en.png)](/assets/press/en/screenshot_photos_en.png)
