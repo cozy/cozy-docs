@@ -196,7 +196,7 @@ state.
 ansible-playbook playbook.yml -i hosts
 ```
 
-Once donce, your Cozy should be up on the 443 port. Now, enjoy!
+Once done, your Cozy should be up on the 443 port. Now, enjoy!
 
 ## Raspberry Pi 2 image
 
@@ -287,9 +287,7 @@ Now insert the SD card in your Cubietruck SD card reader. Reboot your
 Cubietruck, and you will be able to access your Cozy through port 443
 (https protocol).
 
-Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
-Cubieboard, and you will be able to access your Cozy through port 443
-(https protocol). To find the IP address of your Cubieboard, you can use nmap on your local machine:
+To find the IP address of your Cubieboard, you can use nmap on your local machine:
 
 ```
 $ nmap -T4 -sP 192.168.x.0/24

@@ -1,31 +1,30 @@
 ---
-title: "Manage"
+title: "Gérez votre instance"
 layout: "default"
 category: "host"
 menuOrder: 1
 toc: true
 ---
-# Manage your Cozy
+# Gérez votre instance Cozy
 
-## Cozy management
-### Update
+## Maintenance
+### Mise à jour
 
-#### Easy way
+#### La méthode simple
 
-The easiest way to update Cozy is to use the Fabric installation file used for
-the installation. But in this case, you should not call the installation task but the
-update tasks:
+Le moyen le plus simple de mettre à jour votre instance est d’utiliser le
+script Fabric d’installation. Il suffit d’appeler la tâche de mise à jour
+au lieu de celle d’installation :
 
 ```bash
 fab -H user@ip update_stack
 fab -H user@ip update_all_apps
 ```
 
+#### Mise à jour manuelle
 
-#### Manual update
-
-If you want update your Cozy without Fabric, you can run the following commands
-directly on your server.
+Si vous voulez mettre à jour votre instance sans utiliser Fabric, vous pouvez
+exécuter les commandes suivantes directement dans votre serveur :
 
 ```bash
 sudo cozy-monitor update data-system
@@ -37,9 +36,9 @@ sudo npm -g update cozy-controller
 sudo supervisorctl start cozy-controller
 ```
 
-#### Indexer update
+#### Mise à jour de l’indexeur
 
-Manual update:
+Mise à jour manuelle :
 
 ```bash
 cd /usr/local/cozy-indexer/cozy-data-indexer
@@ -49,174 +48,182 @@ pip install --use-mirrors --upgrade -r ./requirements/common.txt
 supervisorctl restart cozy-indexer
 ```
 
-Fabric update:
+Mise à jour en utilisant Fabric :
 
 ```bash
 fab -H sudoer@host:ip update_indexer
 ```
 
 
-#### Application update
+#### Mise à jour des applications
 
-To update a single application, you can run the following command on your target
-server.
+Pour mettre à jour une application, lancez cette commande dans votre serveur :
 
 ```bash
 sudo cozy-monitor update <app>
 ```
 
-### Restart
-Restart cozy stack.
-Cozy stack means home, proxy and data-system. In others words, cozy stack corresponds to applications allow to run Cozy.
+### Redémarrer la pile Cozy
+
+La pile Cozy comprend les applications Home, Proxy et Data System, c’est à dire
+les applications qui permettent le fonctionnement de votre instance.
 
 ```bash
 cozy-monitor restart-cozy-stack
 ```
-### Information
-Display installed application with their status (up or down).
+### Obtenir des informations sur votre instance
+
+Avoir la liste des applications et leur statut (allumée ou éteinte) :
 
 ```bash
 cozy-monitor status
 ```
 
-Display cozy stack modules version
+Afficher la version des applications de la pile :
 
 ```bash
 cozy-monitor versions
 ```
-Display installed applications versions
+
+Afficher la version de toutes les applications installées :
 
 ```bash
 cozy-monitor versions-apps
 ```
 
-## Applications management
+## Gestion des applications
 
 ### Installation
-Install given application. If it is not an official Cozy application you should
-give repo location too. You should also give a specific display name or a specific branch.
+
+Pour installer une application depuis la ligne de commande, utilisez :
 
 ```bash
 cozy-monitor install <app> [-r <repo>] [-d <displayName>] [-b <branch>]
 ```
 
+Si l’application n’est pas maintenue par CozyCloud, il faut préciser l’adresse
+de son dépôt. Vous pouvez également préciser une branche du dépôt à utiliser,
+et le nom sous lequel l’application apparaitra sur la page d’accueil.
 
-### Manage
-Stop application with given name.
+
+### Gestion
+
+Pour stopper une application :
 
 ```bash
 cozy-monitor stop <app>
 ```
 
-Stop all user applications.
+Pour stopper toutes les applications :
 
 ```bash
 cozy-monitor stop-all <app>
 ```
 
-Start application with given name.
+Pour démarrer une application :
 
 ```bash
 cozy-monitor start <app>
 ```
 
-Restart application with given name.
+Pour redémarrer une application
 
 ```bash
 cozy-monitor restart <app>
 ```
 
-Update application with given name (git clone + npm install + restart).
-The repo option is only useful if application comes from a specific repository.
+Pour mettre à jour une application (cela implique de cloner le dépôt Git,
+exécuter `npm install` et re-démarrer l’applicationi). Préciser l’adresse du
+dépôt n’est nécessaire que pour utiliser un dépôt spécifique :
 
 ```bash
 cozy-monitor update <app> [repo]
 ```
 
-Update all applications installed by cozy user.
+Mettre à jour toutes les applications installées :
 
 ```bash
 cozy-monitor update-all
 ```
 
 
-### Uninstallation
+### Désinstallation
 
-Uninstall application with given name.
+Pour désinstaller une application, tapez simplement :
 
 ```bash
 cozy-monitor uninstall <app>
 ```
 
-## Database management
-By default, database option is "cozy".
+## Gestion de la base de données
 
-Run compact CouchDB command on database (remove unused revisions).
+Par défaut, le nom de la base de données utilisée par ces commandes est `cozy`.
+
+Pour compresser la base (en supprimant les versions non utilisées des documents) :
 
 ```bash
 cozy-monitor compact [database]
 ```
 
-Compact a given CouchDB view.
+Compresser une vue CouchDB spécifique :
 
 ```bash
 cozy-monitor compact-view <view> [database]
 ```
 
-Compact all views.
+Compresser toutes les vues :
 
 ```bash
 cozy-monitor compact-all-view [database]
 ```
 
-Backup database by replicating it to another CouchDB instance.
+Faire une sauvegarde de la base en la répliquant sur une autre instance CouchDB :
 
 ```bash
 cozy-monitor backup [target]
 ```
 
-Clean database.
+Nettoyer la base de données :
 
 ```bash
 cozy-monitor cleanup [database]
 ```
 
-## Others
+## Commandes diverses
 
-Ask for proxy to reset its routes via the information stored in the Data
-System.
+Recharger toutes les routes du Proxy applicatif à partir du système de données :
 
 ```bash
 cozy-monitor reset-proxy
 ```
 
-Launch script that comes with given application (deprecated).
+Exécuter un script fourni par une application (option dépréciée) :
 
 ```bash
 cozy-monitor script <app> <script> [argument]
 ```
 
 
-## Provide more disk space
+## Augmenter l’espace disque
 
-
-All data and files are stored in CouchDB. So, the simplest way to add more disk
-space is to change your CouchDB configuraion. Currently your data are saved in
-that folder:
+Toutes les données et les fichiers sont stockés dans CouchDB.  Le moyen le plus
+simple d’allouer plus d’espace disque à votre instance est de modifier la
+configuration de CouchDB.  Actuellement, les données sont enregistrées dans le
+dossier :
 
 ```bash
 /usr/local/var/lib/couchdb/
 ```
 
-You could change that directory where you want, on a mounting point with more
-free disk space. For that, open the following file:
+Vous pouvez modifier ce chemin, par exemple pour le faire pointer vers un autre
+disque avec plus d’espace libre.  Pour cela, éditez le fichier :
 
 ```bash
 /usr/local/etc/couchdb/local.ini
 ```
 
-Add the couchdb section if it is not already present. Then you can change the
-database directory parameters:
+Ajoutez une section couchdb si elle n’es pas déjà présente. Vous pouvez alors
+modifier le paramètre spécifiant le dossier où est stocké la base de données :
 
 ```bash
 [couchdb]
@@ -224,8 +231,8 @@ database_dir = /home/storage/cozy-data
 view_index_dir = /home/storage/cozy-data
 ```
 
-Once done, you will have to stop couchdb, move your database file then restart
-it:
+Ceci fait, il faut couper CouchDB, déplacer le fichier contenant la base, puis
+la relancer :
 
 ```bash
 supervisorctl stop couchdb
@@ -236,7 +243,7 @@ chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
 supervisorctl start couchdb
 ```
 
-**A backup is strongly recommended before performing that operation.** You
-could either backup the database files or replicate the database to another
-Couchdb instance.
+**Il est fortement recommandé de sauvegarder vos données avant une telle
+opération** Vous pouvez soit faire une sauvegarde des fichiers contenant la
+base, soit répliquer la base sur une autre instance CouchDB.
 

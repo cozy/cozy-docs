@@ -1,5 +1,5 @@
 ---
-title: "Install"
+title: "Installation"
 layout: "default"
 category: "host"
 menuOrder: 0
@@ -7,368 +7,379 @@ toc: true
 urls: ["/host/"]
 ---
 
-# Installing Cozy
+# Installer Cozy
 
-## Generic information
-### Hardware requirements
+## Informations générales
+### Prérequis matériels
 
-The CPU is not a limitation; Cozy can even run on RaspberryPi.
+Cozy ne nécessite pas de processeur puissant et peut même fonctionner sur un Raspberry Pi.
 
-#### Minimum
+#### Configuration minimale
 
-* RAM: 1024MB (it allows to have 6 apps running simultaneously).
-* Disk space: 2GB.
+* RAM: 1024MB (permet d’avoir six applications actives simultanément).
+* Espace disque: 2GB.
 
-#### Recommended
+#### Configuration recommandée
 
-* RAM: 2048 MB (it allows to have 16 apps running simultaneously).
-* Disk space: a lot of space to store all your files.
+* RAM: 2048MB (permet d’avoir seize applications actives simultanément).
+* Espace disque: beaucoup, pour stocker tous vos fichiers.
 
-### About security in pre-installed images
+### Considérations sur la sécurité avec les images pré-installées
 
-For a production usage, you MUST renew the SSL certificate, reset the database credentials and reset the controller token.
+Pour utiliser une image pré-installée dans un contexte de production, vous *devez* :
+ - renouveler le certificat SSL ;
+ - modifier le mot de passe de connexion à la base de données ;
+ - réinitialiser le jeton d’authentification utilisé par le contrôleur.
 
-For this purpose, use the following command:
+Pour réinitialiser ce jeton, vous pouvez utiliser la commande suivante :
+
 ```bash
 wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
 fab -H user@ip reset_security_tokens
 ```
 
-You should also change the superuser credentials (and by the way, you should not use a password but a SSH key to connect to your Cozy). Please refer to [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password).
+Vous devriez également modifier les accréditations du super utilisateur (et utiliser une clé SSH de préférence à un mot de passe pour vous connecter à la machine hébergeant votre Cozy, comme expliqué dans [ce tutoriel](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password) (en anglais)).
 
 
-## Manual installation
+## Installation manuelle
 
-### Use our script
+### Utilisation de notre script
 
-On your local machine, install Fabric and fabtools:
+Sur votre machine locale, installez Fabric et les fabtools. Par exemple, sur Debian :
 
 ```bash
 apt-get install python python-pip python-dev software-properties-common
 sudo pip install fabric fabtools
 ```
 
-Download our Fabric file (a script that will run commands on your remote
-server):
+Puis téléchargez notre fichier Fabric (c’est un script qui va exécuter des commandes sur votre serveur distant) :
 
 ```bash
 wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
 ```
 
-
-Once your system is prepared, use the Fabric script from your local
-machine to launch the Cozy installation (run it in the same directory as the fabfile
-you have previously downloaded):
+Une fois que votre système est prêt, utilisez le script Fabric depuis votre
+machine locale pour lancer l’installation sur le serveur (lancez le script
+depuis le dossier dans lequel vous avez téléchargé le fichier `fabfile.py`) :
 
 ```bash
 fab -H sudoer@ip install
 ```
 
-Where "sudoer" is a sudo user and "ip" your server IP.
+où `sudoer` est un utilisateur autorisé à utiliser sudo, et `ip` l’adresse de votre serveur.
 
-Enter your settings (such as domain name) when prompted by the installer.
+Répondez ensuite aux questions posées par l’installateur (par exemple le nom de domaine de votre instance).
 
-Be patient; some commands or app deployments can take some time. It
-depends on your network and hardware.
+Soyez patients, certaines commandes ou le déploiement des applications
+peuvent demander un peu de temps, en fonction de votre bande passante et
+de la puissance de votre serveur.
 
-#### About local installation
+#### Installer Cozy en local
 
-To install Cozy locally, we recommend you create a virtual machine,
-and then run the fabfile script with your virtual machine as target.
-This allows you to experiment with Cozy without installing numerous packages
-into your environment.
+Pour installer Cozy sur votre machine locale, nous vous recommandons de créer
+une machine virtuelle et d’exécuter le script Fabric en ciblant cette machine.
+Cela vous permettra d’expérimenter Cozy sans installer ses nombreuses dépendances
+dans votre environnement principal.
 
-To install it locally without VM or container, run this command:
+Si vous souhaitez vraiment l’installer directement sur votre machine, utilisez
+cette commande :
 
 ```bash
 fab -H sudoer@localhost install
 ```
 
-#### Try Cozy with Vagrant
+#### Essayer Cozy avec Vagrant
 
-You can use Vagrant to run Cozy Cloud Setup in a virtual machine. To do so,
-we recommend you use the Ubuntu 12.04 box. Be careful as the update will require that
-you configure your boot sequence. Choose the first filesystem that is offered, then click ok.
-
-http://files.vagrantup.com/precise64.box
-
-### Test
-
-Once the installation is done, you can access https://IP:443 to create your Cozy
-main account. If you're just seeing the nginx welcome page, make sure you're
-using the HTTPS protocol.
-
-### What will this script install on your server?
-
-The Cozy install script installs the following tools:
-
-* Python runtime
-* Node.js runtime
-* CouchDB document database
-* Node tools: cozy-controller, cozy-monitor, coffee-script, compound, brunch
-* Cozy Controller Daemon
-* Cozy data indexer
-* Cozy data layer
-* Cozy proxy
-* Cozy Home (web app)
+Vous pouvez également utiliser [Vagrant](https://www.vagrantup.com/) pour installer
+une instance de Cozy dans une machine virtuelle. Pour cela, nous vous recommandons
+d’utiliser l’[image Ubuntu 12.04](http://files.vagrantup.com/precise64.box).
+Soyez attentifs, car la mise à jour nécessite de configurer votre séquence de
+démarrage. Sélectionnez le premier système de fichier proposé et cliquez sur OK.
 
 
-If you want to know more about how Cozy works, check out our [architecture
-page](/hack/getting-started/architecture-overview.html).
+### Tester l’installation
+
+Une fois l’installation achevée, vous pouvez accéder à votre instance en
+vous connectant avec un navigateur à https://IP:443 où vous pourrez créer votre compte.
+Si au lieu de la page d’accueil de Cozy vous voyez la page par défaut de nginx,
+assurez-vous que vous utilisez bien le protocole HTTPS.
 
 
-### About virtual machines and containers
+### Qu’est-ce que le script va installer sur votre serveur ?
 
-Because of the many technologies involved, we recommend you run the Cozy
-stack in an isolated virtual machine or in a container (OpenVz or LXC).
+Le script d’installation de Cozy installe les outils suivants :
 
-## Ansible Playbook
+* Python ;
+* Node.js ;
+* la base de données CouchDB ;
+* des outils Node.js : coffee-script, compound, brunch…
+* Cozy Controller, le serveur principal ;
+* Cozy Monitor, un outil en ligne de commande pour administrer l’instance ;
+* Cozy Data indexer ;
+* Cozy Data layer ;
+* Cozy Proxy ;
+* Cozy Home (l’application Web).
 
-[Ansible](www.ansible.com) is a simple configuration system that allows people
-to automate installation and maintenance of services on a remote server. Its
-simplicity makes it very popular among people who hosts services on a personal
-server.
+Pour mieux comprendre comment fonctionne une instance Cozy, vous pouvez
+consulter la [description de l’architecture](/hack/getting-started/architecture-overview.html).
 
-It's based on the concept of playbooks. A playbook describes the state of a
-service and its requirements to work properly. If something is missing Ansible
-will perform required operations to bring the service to the required state.
+### Machines virtuelles et conteneurs
 
-So, first [install Ansible](http://docs.ansible.com/intro_installation.html)
-on your local machine:
+Du fait du grand nombre de technologies mises en œuvre, nous recommandons
+de faire tourner les instances Cozy dans un environnement isolé, une machine
+virtuelle ou un conteneur (OpenVz ou LXC).
+
+## Utiliser une recette Ansible
+
+[Ansible](www.ansible.com) est un système de configuration simple qui permet
+d’automatiser l’installation et la mise à jour de services sur un serveur
+distant. Du fait de sa simplicité, il est très populaire chez les gens qui
+hébergent des services sur un serveur personnel.
+
+Ansible est basé sur le concept de recettes. Une recette décrit l’état d’un
+service et tout ce dont il a besoin pour fonctionner correctement. Si certains
+des prérequis manquent, Ansible va s’occuper d’amener le service dans l’état
+attendu.
+
+Commencez par [installer Ansible](http://docs.ansible.com/intro_installation.html)
+sur votre machine locale :
 
 ```bash
 # Install ansible (for Ubuntu 14.04)
 sudo apt-get install ansible
 ```
 
-Then get the description of the Cozy playbook.
+Puis récupérez la recette Cozy (qui est maintenue par la communauté) :
 
 ```bash
-# Get the Cozy Ansible Playbook (maintained by the community)
 git clone https://github.com/zaurky/ansible-cozy-playbook.git
 cd ansible-cozy-playbook
 ```
 
-Cozy requires several software specific versions (Node.js, CouchDB, etc.).
-Ansible Galaxy provides a role repository (playbooks are set of roles) where
-users share installation for common softwares. Here we download the
-"dependencies" of the Cozy playbook.
+Cozy a besoin de versions spécifiques de certains logiciels (Node.js,
+CouchDB, etc.). Le site [Ansible Galaxy](https://galaxy.ansible.com/)
+est un dépôt où les utilisateurs partagent les rôles (une recette est
+un ensemble de rôles) pour installer de nombreux logiciels. Voici
+comment installer les rôles de la recette Cozy :
 
 ```bash
-# Install role dependencies
 ansible-galaxy install -r galaxy.yml -p ./roles
 ```
 
-You have to store the information of the remote server on which you want to
-install your Cozy.
+Vous devez sauvegarder les paramètres du serveur distant sur lequel vous voulez
+installer Cozy :
 
 ```bash
-# Store your remote server address
 echo "[myserver]" > hosts
 echo "your.domain.me" >> hosts
 ```
 
-Then you can perform the installation by running the playbook. You can run the
-playbook as much as you want. It will ensure that your Cozy is in the right
-state.
+Vous pouvez alors installer Cozy en exécutant la recette.  Vous pouvez
+l’exécuter autant de fois que vous voulez. Elle s’assurera que votre instance
+est dans l’état attendu.
 
 ```bash
-# Run the playbook
+# Exécuter la recette
 ansible-playbook playbook.yml -i hosts
 ```
 
-Once donce, your Cozy should be up on the 443 port. Now, enjoy!
-
-## Raspberry Pi 2 image
-
-**You will need the latest [Raspberry Pi 2](http://en.wikipedia.org/wiki/Raspberry_Pi) to be able to run Cozy properly.**
-
-*Note for previous Raspberry Pi:* Cozy is a little bit heavy to run on the previous Raspberry Pi model B/B+, you can check for a
-lightweight alternative called 
-[Cozy Light](https://github.com/cozy-labs/cozy-light)
+La recette achevée, votre instance devrait être à l’écoute sur le port
+443, il ne vous reste plus qu’à jouer avec !
 
 
-In order to run Cozy on your Raspberry Pi 2, the simplest way is to download our
-image and set it up on a SD card. The image is based on the
-[Raspbian](http://www.raspbian.org/) distribution.
+## Utiliser l’image pour Raspberry Pi 2
 
-First, get the image archive:
+**Pour utiliser Cozy dans de bonnes conditions, vous aurez besoin du
+[Raspberry Pi 2](http://en.wikipedia.org/wiki/Raspberry_Pi)**
+
+*Note pour les possesseurs de Raspberry Pi :* Cozy demande un peu trop de
+ressources pour fonctionner correctement sur les précédents modèles B et B+
+de Raspberry Pi. Pour ces modèles, une version alternative et plus légère de
+Cozy existe : [Cozy Light](https://github.com/cozy-labs/cozy-light).
+
+Le moyen le plus simple d’utiliser Cozy sur un Raspberry Pi 2 est de télécharger
+notre image et de l’installer sur une carte SD. L’image est basée sur la
+distribution [Raspbian](http://www.raspbian.org/).
+
+Commencez par télécharger l’archive :
 
 ```bash
-# Download the image (~ 650MB)
+# Téléchargez l’image (environ 650MB)
 wget http://files.cozycloud.cc/2015-02-19-cozy-raspberry-pi2.img.7z
 
-# Uncompress it
+# Décompressez-la
 7zr e 2015-02-19-cozy-raspberry-pi2.img.7z
 ```
 
-Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
-then make a low-level dump of the image onto your card.
+Recherchez ensuite où est montée votre carte SD. Supposons que ce soit sur
+`/dev/sdc`. Faites alors une copie de l’image sur la carte :
 
-**NB:** SD Class 10 card are recommended for better performance.
+**NB:** une carte SD Class 10 est recommandée pour avoir de meilleures
+performances.
 
-**WARNING:** This operation will erase all data previously stored on the card.
+**ATTENTION:** cette opération va irrémédiablement supprimer toutes les
+données présentes sur la carte.
 
 ```bash
 sudo dd bs=4M if=2015-02-19-cozy-raspberry-pi2.img of=/dev/sdc
 ```
 
-Now insert the SD card in your Raspberry Pi SD card reader. Reboot your
-Raspberry, and you will be able to access your Cozy through port 443
-(https protocol).
+Insérez à présent la carte SD dans le lecteur de votre Raspberry Pi.
+Redémarrez-le, et vous devriez pouvoir accéder à votre instance Cozy en vous
+connectant au port 443 via le protocole https.
 
-To find the IP address of your Raspberry Pi, you can use `nmap`
-on your local machine:
+Pour trouvez l’adresse de votre Raspberry Pi, vous pouvez utiliser `nmap` sur
+votre machine locale :
 
 ```
 $ nmap -T4 -sP 192.168.x.0/24
 ```
 
-If you want to login to the board, use the default Raspbian credentials
-```pi``` and ```raspberry```:
+Pour vous connecter à la carte, utilisez les accréditations par défaut
+de Raspbian : ```pi``` and ```raspberry```:
 ```
 $ ssh pi@<ip-of-your-raspberrypi>
 ```
 
-By the way, don't forget to change the password and [reset the security
-tokens](#about-security-in-pre-installed-images)!
+Et n’oubliez pas de changer le mot de passe par défaut et le [jeton
+d’authentification](#about-security-in-pre-installed-images) !
 
 
-## Cubietruck image
+## Image pour Cubietruck
 
-*Warning: For production use, you must change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.*
+*Attention, pour un usage en production, n’oubliez pas de modifier le mot de
+passe du super-utilisateur et de la base de données, installer un nouveau
+certificat SSL et renouveller le [jeton
+d’authentification](#about-security-in-pre-installed-images) !*
 
-In order to run Cozy on your Cubietruck, the simplest way is to download our
-image and set it up on a SD card. It is based on the
-[Cubian](http://cubian.org/) distribution.
+Le moyen le plus simple d’utiliser Cozy sur une carte Cubietruck est de
+télécharger notre image, basée sur la distribution [Cubian](http://cubian.org),
+et de l’installer sur une carte SD.
 
-First, get the image archive:
+Commencez par télécharger l’image :
 
 ```bash
-# Download the image (~ 1.5GB)
+# Téléchargez l’image (environ 1.5GB)
 wget http://files.cozycloud.cc/cozy-cubietruck.im.tar.gz
 
-# Uncompress it
+# Décompressez-la
 tar -xvzf cozy-cubietruck.im.tar.gz
 ```
 
-Next, find where your SD card is mounted; let's assume it is on */dev/sdc*,
-then make a low-level dump of the image onto your card.
+Recherchez ensuite où est montée votre carte SD. Supposons que ce soit sur
+`/dev/sdc`. Faites alors une copie de l’image sur la carte :
 
-NB: SD Class 10 card are recommended for better performance.
+**NB:** une carte SD Class 10 est recommandée pour avoir de meilleures
+performances.
 
-WARNING: this operation will erase all previously stored data on the card.
+**ATTENTION:** cette opération va irrémédiablement supprimer toutes les
+données présentes sur la carte.
 
 ```bash
 sudo dd bs=4M if=/my/path/cozy-cubietruck.im of=/dev/sdc
 ```
 
-Now insert the SD card in your Cubietruck SD card reader. Reboot your
-Cubietruck, and you will be able to access your Cozy through port 443
-(https protocol).
+Insérez à présent la carte SD dans le lecteur de votre Cubietruck.
+Redémarrez-la, et vous devriez pouvoir accéder à votre instance Cozy en vous
+connectant au port 443 via le protocole https.
 
-Now insert the SD card in your Cubieboard2 SD card reader. Reboot your
-Cubieboard, and you will be able to access your Cozy through port 443
-(https protocol). To find the IP address of your Cubieboard, you can use nmap on your local machine:
+Pour trouvez l’adresse de votre Cubietruck, vous pouvez utiliser `nmap` sur
+votre machine locale :
 
 ```
 $ nmap -T4 -sP 192.168.x.0/24
 ```
 
-If you want to login to the board, use the default Cubian credentials ```cubie```
-and ```cubie```:
+Pour vous connecter à la carte, utilisez les accréditations par défaut
+de Raspbian : ```cubie``` and ```cubie```:
 ```
 $ ssh -p 36000 cubie@<ip-of-your-cubieboard>
 ```
 
-
-By the way, don't forget to change the password and to
-[reset the security
-tokens](#about-security-in-pre-installed-images)!
+Et n’oubliez pas de changer le mot de passe par défaut et le [jeton
+d’authentification](#about-security-in-pre-installed-images) !
 
 
 
-## Virtualbox image
+## Image pour Virtualbox
 
-*Warning: For production use, you must change the superuser credentials,
-renew the SSL certificate, the database credentials and the controller token.*
+*Attention, pour un usage en production, n’oubliez pas de modifier le mot de
+passe du super-utilisateur et de la base de données, installer un nouveau
+certificat SSL et renouveller le [jeton
+d’authentification](#about-security-in-pre-installed-images) !*
 
-### Download requirements
+### Prérequis
 
-* [Download](https://www.virtualbox.org/wiki/Downloads) and install VirtualBox.
-* [Download](http://files.cozycloud.cc/cozycloud-virtualimage.zip) the Cozy
-Virtual Machine for VirtualBox
+* [Téléchargez](https://www.virtualbox.org/wiki/Downloads) et installez
+VirtualBox ;
+* [Téléchargez](http://files.cozycloud.cc/cozycloud-virtualimage.zip) l’image
+de machine virtuelle Cozy pour VirtualBox.
 
-### Import and try
+### Installation
 
-Import the image to Virtualbox and start it.
-You should be able to access your Cozy through your browser by connecting to this URL:
+Importez l’image dans Virtualbox et démarrez-la. Vous devriez pouvoir vous
+connecter à votre instance en dirigeant un navigateur vers ```https://localhost:2223/```
 
-```bash
-https://localhost:2223/
-```
+### Informations complémentaires
 
-### Additional informations
+Vous pouvez trouver l’adresse de la machine virtuelle au moyen de la
+commande `ifconfig`.
 
-To access the box shell, use root/password as login and password.
-
-You can find the box' IP with the `ifconfig` command.
-
-You can connect through ssh with:
+Vous pouvez vous y connecter en ssh, le mot de passe du compte `root` est 
+`password` :
 
 ```bash
 ssh -p 2222 root@localhost
 ```
 
-## OpenVZ image
+## Image OpenVZ
 
-Here we assume that you have already installed OpenVZ utilities.
+Nous assumerons que vous avez déjà installé OpenVZ et ses utilitaires.
 
-### Download and start
+### Téléchargement et installation
 
 ```bash
-# Download the OpenVz template (~ 1.3GB)
+# Téléchargez le conteneur OpenVZ (environ 1.3GB)
 wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
 
-# Mount and start the container
+# Montez et démarrez le conteneur
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid
 vzctl start ctid
 ```
+NB: remplacez `ctid` par un identifiant de conteneur libre (101, 102, etc).
 
-*Credentials are root/password*
-
-NB: Replace ctid by an available ctid (101, 102, etc.)
+*Le mot de passe du compte `root` est `password`.*
 
 
-### With a configured network
+### Avec un réseau configuré
 
-You will probably need to give access to your container from outside your
-host. Here is a way to do it:
+Vous voudrez probablement permettre la connexion au conteneur depuis d’autres
+machines. Voici comment faire :
 
 ```bash
-# Download the OpenVz template (~ 1.3GB)
+# Téléchargez le conteneur OpenVZ (environ 1.3GB)
 wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
 
-# Mount your new container, give it an IP address and start it:
+# Montez et démarrez le conteneur
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid
 vzctl set ctid --ipadd 10.0.0.10  --save
 vzctl start ctid
 
-# Setup a reverse proxy that routes your 8888 port to https://10.0.0.10:443
-# (Use Nginx for instance).
+# Mettez en place un proxy inverse qui redirige les requêtes du port 8888
+# vers https://10.0.0.10:443 (par exemple avec Nginx)
 # ...
-# Then authorize the routing:
+# Puis autorisez le routage :
 /sbin/iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport 8888 -j DNAT --to 10.0.0.10:443
 ```
 
-Of course you can change 8888 by the value you want.
+Vous pouvez naturellement remplacer 8888 par le port que vous souhaitez exposer
+à l’extérieur.
 
-## LXC image
+## Image LXC
 
-
-Use the LXC webpanel to add and configure containers; it's very easy to use.
-For Ubuntu this can be installed like so:
+Utilisez l’interface Web de configuration de LXC pour ajouter et configurer des
+conteneurs. Elle est très simple à utiliser. Pour Ubuntu, elle peut être
+installée ainsi :
 
 ```bash
 sudo apt-get install -y lxc debootstrap bridge-utils
@@ -377,35 +388,36 @@ wget http://lxc-webpanel.github.com/tools/install.sh -O - | bash
 exit
 ```
 
-Now access the webpanel at http://myhost.com:5000, the default login is admin/admin
-(change this). Create a container, remember what you named it. Make it run at
-startup. Then, go to command line to access the container.
+Accédez à l’interface en vous connectant sur http://myhost.com:5000, les
+accréditations par défaut sont `admin/admin` (n’oubliez pas de les modifier).
+Créez un conteneur, et paramétrez-le pour qu’il se lance au démarrage.
+Accédez ensuite au conteneur via la ligne de commande :
 
 ```bash
-lxc console <container name>
+lxc console <nom du conteneur>
 ```
 
-
-Follow the Cozy installation instructions (install fab, curl fabfile). Once
-finished, Cozy is up and running and your Cozy container will be listening on
-port 9104. You also need to know the IP address that LXC assigned to your
-container:
+Suivez les installations d’instruction de Cozy ci-dessus (installer Fabric,
+télécharger la recette). Une fois l’installation terminée, votre Cozy sera
+accessible sur le port 9104 du conteneur. Pour connaitre l’adresse de celui-ci,
+vous pouvez taper :
 
 ```bash
 /sbin/ifconfig $1 | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'
 ```
 
-
-Exit your container. Now that it's set up, you should disable the LXC webpanel
-since it's a security risk.
+Vous pouvez à présent sortir du conteneur. N’oubliez pas de désactiver
+l’interface d’administration de LXC une fois que vous n’en avez plus besoin,
+pour augmenter votre sécurité.
 
 ```bash
 sudo service lwp stop
 sudo update-rc.d -f lwp remove
 ```
 
-Finally, set up your main server as a reverse proxy for the cozy container. For
-nginx we used this template:
+Enfin, configurez sur le serveur hôte un proxy inverse pour le conteneur
+hébergeant votre instance Cozy. Pour Nginx, vous pouvez utiliser cette
+configuration :
 
 ```bash
 server {
@@ -429,23 +441,25 @@ server {
 }
 ```
 
-Restart nginx, and your Cozy should be accessible at http://cloud.myhost.com
+Une fois Nginx redémarré, votre instance devrait être accessible sur `http://cloud.myhost.com`.
 
-## Hosting services
 
-### Cozycloud
+## Héberger une instance de Cozy chez un prestataire
 
-[Cozycloud](https://cozycloud.cc) is the maintainer of the Cozy project. We can
-provide you a Cozy instance for free if you write us an
-[email](mailto:contact@cozycloud.cc).
+### CozyCloud
 
-### VPS
+[Cozycloud](https://cozycloud.cc) est la société qui développe le projet Cozy.
+Nous pouvons vous fournir gratuitement, en échange de retours, une instance.
+Envoyez-nous simplement [un message](mailto:contact@cozycloud.cc).
 
-Renting a VPS and running the installation script is a good option. Here are
-the two hosting providers we performed tests on:
+### Serveurs virtuels
 
-* [OVH](http://www.ovh.com/fr/vps/vps-classic.xml), we recommend the VPS
+Louer un serveur personnel virtuel (VPS) et y lancer le script d’installation
+est une bonne option. Nous avons validé le fonctionnement de Cozy chez ces
+deux hébergeurs :
+
+* [OVH](http://www.ovh.com/fr/vps/vps-classic.xml), nous recommandons le VPS
   Classic 2.
-* [Digital Ocean](https://www.digitalocean.com/pricing/). The $10 plan is a
-  minimum. We recommend the $20 plan.
+* [Digital Ocean](https://www.digitalocean.com/pricing/). L’offre à 10$ est
+  la configuration minimale, nous recommandons plutôt celle à 20$.
 
