@@ -8,7 +8,12 @@ toc: true
 
 ## Communiqués de Presse
 
-[Innovacom et Seed4stoft investissent 800 000 euros dans Cozy Cloud](/assets/press/en/2014-06-06-cozy-leve-800k.pdf)
+[Innovacom et Seed4stoft investissent 800 000 euros dans Cozy Cloud](/assets/press/fr/2014-06-06-cozy-leve-800k.pdf)
+
+## Logos
+
+* [Format PNG](/assets/press/cozy-logo.png)
+* [Format SVG](/assets/press/cozy-logo.svg)
 
 ## Screenshots
 
