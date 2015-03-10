@@ -131,7 +131,7 @@ virtuelle ou un conteneur (OpenVz ou LXC).
 
 ## Utiliser une recette Ansible
 
-[Ansible](www.ansible.com) est un système de configuration simple qui permet
+[Ansible](http://www.ansible.com) est un système de configuration simple qui permet
 d’automatiser l’installation et la mise à jour de services sur un serveur
 distant. Du fait de sa simplicité, il est très populaire chez les gens qui
 hébergent des services sur un serveur personnel.
@@ -325,7 +325,7 @@ connecter à votre instance en dirigeant un navigateur vers ```https://localhost
 Vous pouvez trouver l’adresse de la machine virtuelle au moyen de la
 commande `ifconfig`.
 
-Vous pouvez vous y connecter en ssh, le mot de passe du compte `root` est 
+Vous pouvez vous y connecter en ssh, le mot de passe du compte `root` est
 `password` :
 
 ```bash

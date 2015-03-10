@@ -143,7 +143,7 @@ the two hosting providers we performed tests on:
 
 ## Ansible Playbook
 
-[Ansible](www.ansible.com) is a simple configuration system that allows people
+[Ansible](http://www.ansible.com) is a simple configuration system that allows people
 to automate installation and maintenance of services on a remote server. Its
 simplicity makes it very popular among people who hosts services on a personal
 server.
@@ -203,7 +203,7 @@ Once done, your Cozy should be up on the 443 port. Now, enjoy!
 **You will need the latest [Raspberry Pi 2](http://en.wikipedia.org/wiki/Raspberry_Pi) to be able to run Cozy properly.**
 
 *Note for previous Raspberry Pi:* Cozy is a little bit heavy to run on the previous Raspberry Pi model B/B+, you can check for a
-lightweight alternative called 
+lightweight alternative called
 [Cozy Light](https://github.com/cozy-labs/cozy-light)
 
 
