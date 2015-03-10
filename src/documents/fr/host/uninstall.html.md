@@ -1,32 +1,36 @@
 ---
-title: "Uninstall"
+title: "Désinstaller"
 layout: "default"
 category: "host"
 menuOrder: 3
 toc: true
 ---
 
-# Uninstall your Cozy
-Warning: this will delete all your data.
+# Désinstaller votre instance Cozy
 
-## Virtual machines and containers
+**Attention : désinstaller votre instance Cozy supprimera toutes les données
+que vous y avez stockées. Sauvegardez-les si nécessaire !**
 
-If you installed Cozy in a virtual machine or in a container, you just have
-to remove that virtual machine or container.
+## Instance dans une machine virtuelle ou un conteneur
 
+Si vous avez installé votre instance dans une machine virtuelle ou un conteneur,
+il suffit de les supprimer.
 
-## Easy way
+## Instance sur un serveur
 
-The easiest way to uninstall Cozy is to use the Fabric installation file used for the installation. But in this case, you should not call the installation task but the uninstall task:
+### Méthode simple
+
+La méthode la plus simple est d’utiliser la tâche de désinstallation du script
+Fabric que vous avez utilisé pour l’installation :
 
 ```bash
 fab -H user@ip uninstall_all
 ```
 
-## Manual uninstall
+## Suppression manuelle
 
-If you want to uninstall your Cozy without Fabric, you can run the following
-commands directly on your server.
+Si vous voulez désinstaller votre Cozy sans utiliser Fabric, vous pouvez
+exécuter les commandes suivantes sur votre serveur :
 
 ```bash
 supervisorctl stop cozy-controller

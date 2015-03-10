@@ -1,48 +1,62 @@
 ---
-title: "Trouble Shootings"
+title: "En cas de soucis"
 layout: "default"
 category: "host"
 menuOrder: 2
 toc: true
 ---
 
-# Trouble shootings
+# Que faire en cas de soucis
 
-In this section, you will find common errors that occur during the
-installation process.
-Mention us the problems you encountered, and which are not listed here, and we will add them to the list as soon as possible.
+Vous trouverez ici le moyen de résoudre la plupart des soucis qui peuvent survenir lors de l’installation de votre instance Cozy. Si vous rencontrez des problèmes qui ne sont pas listés ici, n’hésitez pas à nous les signaler, et nous enrichirons ce document dès que possible.
 
-## I can only install one application
+## Je n’arrive à installer qu’une seule application
 
-When you try to install an application it is marked as broken and it has the same behaviour for each additional application.
+*Description :* Lorsque vous essayez d’installer une application, l’installation
+échoue et l’application est marquée comme cassé. Ce comportement se reproduit
+pour chaque application que vous essayez d’installer.
 
-Check the amount of RAM available on your system by clicking on the manage button on your home page. If you RAM machine is full, that means your Cozy can't install new applications.
+*Solution :* Vérifiez la quantité de mémoire disponible dans votre instance. Les
+informations sur votre instance sont disponibles sur la page de gestion des 
+applications, à laquelle vous pouvez accéder depuis la page d’accueil. Si votre
+instance n’a plus assez de RAM, vous ne pourrez pas installer de nouvelles
+applications.
 
-## Install never ends until I refresh the page (F5)
+## L’installation ne s’achève pas jusqu’à ce que je rafraichisse la page avec F5
 
-That's because the data-system module is not properly synchronized with the database. Just restart the data system and everything should be back to normal.
+C’est probablement dû à un problème de synchronisation entre le gestionnaire de
+données de Cozy et la base de données. Pour le résoudre, connectez-vous en
+console à votre instance et redémarrez le gestionnaire de données :
 
 ```bash
-# On the cozy host
 sudo cozy-monitor restart data-system
 ```
 
-## Server error occured on login
+## Des erreurs apparaissent sur la page de connexion
 
-### Problem with home
+### Problème avec la page d’accueil
 
-Check that your home is installed. In your browser go to _https://yourcozyurl/status_
-Check that everything is set to true. If Home is marked as false, that means it is not running. To solve this problem, type the following commands in a terminal of your remote server:
+Vérifiez que l’application gérant la page d’accueil est bien installée.
+Pointez votre navigateur vers
+[https://yourcozyurl/status](https://yourcozyurl/status).  Vous devriez
+récupérer un fichier JSON contenant la liste des applications de la pile Cozy
+et leur statut.  Vérifiez qu’elles sont toutes installées (valeur à `true`).
+Si la page d’accueil (`home`) est à `false`, connectez-vous à la console de
+votre instance pour la réinstaller :
 
 ```bash
 cozy-monitor uninstall home
 cozy-monitor install home
 ```
 
-### Problem with data-system
+### Problèmes avec le système de données
 
-Check the log of your data-system in `/usr/local/cozy/apps/data-system/data-system/cozy-data-system/log/production.log`.
-If logs contain "Database cozy on localhost:5984 doesn't exist." and "The database could not be created, the file already exists.", that means data-system cannot connect to cozy database. To solve this problem, type the following commands in a terminal of your remote server :
+Connectez-vous à la console de votre instance et vérifiez les fichiers journaux,
+notamment `/usr/local/cozy/apps/data-system/data-system/cozy-data-system/log/production.log`.
+Si ce fichier contient des lignes comme `Database cozy on localhost:5984
+doesn't exist.` et `The database could not be created, the file already exists.`,
+cela signifie que le système de données de l’instance n’arrive pas à se connecter
+à la base de données. Une réinstallation devrait régler l’affaire :
 
 ```bash
 cozy-monitor uninstall data-system
@@ -51,36 +65,47 @@ cozy-monitor restart home
 cozy-monitor restart proxy
 ```
 
-### Npm errors
+### Erreurs Npm
 
-Cozy is based on Node.js applications. Node.js apps download their dependencies from the NPM registry. Sometimes this registry is not stable. So, if you encounter NPM related errors, try to run the installation again.
+Cozy est basé sur Node.js et le gestionnaire de paquets Npm. Les applications
+téléchargent les outils dont elles ont besoin depuis les dépôts de Npm. Il
+arrive que ceux-ci soient temporairement inaccessibles, générant des erreurs
+lors de l’installation d’application. Si vous rencontrez de telles erreurs,
+attendez un peu et essayez à nouveau d’exécuter l’application.
 
-## ARM processors
+
+## Cozy sur des processeurs ARM
 
 ### Node.js
 
-Node.js requires a specific configuration to be run on Raspberry Pi. Install
-Node with the prebuilt package available in the Node.js source directory. About
-building Node.js on other ARM processors, we successfully built it on A20
-Allwinner.
+Node.js a besoin d’une configuration spécifique pour fonctionner sur un
+Raspberry Pi. Installez la version binaire de Node spécifique disponible
+sur leur site.
+
+Concernant les autres processeurs ARM, nous avons réussi à compiler Node pour
+l’A20 Allwinner.
+
 
 ### Nginx
 
-Here is a good tutorial to install Nginx on your Raspberry Pi:
-http://virtualitblog.blogspot.fr/2013/05/install-nginx-141-raspberry-pi.html .
-It works only for Debian based distributions.
+Voici un [bon tutoriel](http://virtualitblog.blogspot.fr/2013/05/install-nginx-141-raspberry-pi.html)
+(en anglais et uniquement pour les distributions basées sur Debian) pour
+installer Nginx sur un Raspberry Pi.
 
-Package can be downloaded there: http://nginx.org/packages/debian/pool/nginx/n/nginx/
+Vous pouvez le télécharger ici: [http://nginx.org/packages/debian/pool/nginx/n/nginx/](http://nginx.org/packages/debian/pool/nginx/n/nginx/)
 
-## Cozy Controller not started
 
-If you get ECONNRESET when installing apps using the cozy-monitor, check if the cozy-controller is correctly started
+## Le contrôleur ne démarre pas
+
+Si, lorsque vous installez une application en ligne de commande avec `cozy-monitor`,
+vous faites face à des erreurs `ECONNRESET`, vérifiez que `cozy-controller` est
+bien démarré :
 
 ```bash
 sudo supervisorctl
 ```
 
-and check if the cozy-monitor is using port 9002
+Et vérifiez que `cozy-monitor` utilise le port 9002 :
 
 ```bash
 sudo netstat -plunt | grep 9002
@@ -88,21 +113,23 @@ tcp     0     0 0.0.0.0:9002      0.0.0.0:*        LISTEN      997/node
 ```
 
 
-## CouchDB password
+## Mot de passe CouchDB
 
-If you run several times the installation, the db password and the password used
-by the data-system could become different. To reset the password, comment the
-last line of `/usr/local/etc/couch/local.ini` in the admin section. Delete the
-file `/etc/cozy/couchdb.login` Then run installation again or run this command:
+Si vous ré-installez plusieurs fois votre instance Cozy, le mot de passe de la
+base CouchDB et celui utilisé par le système de données de Cozy peuvent devenir
+différents. Pour réinitialiser le mot de passe, éditez le fichier 
+`/usr/local/etc/couch/local.ini` et mettez en commentaire la dernière ligne
+de la section `admin`, puis effacez le fichier `/etc/cozy/couchdb.login` et
+re-lancez l’installation, ou exécutez :
 
 ```bash
 fab config_couchdb
 ```
 
-## Process duplication
+## Processus dupliqués
 
-Sometimes a Node.js process duplication occurs. In that case, the simplest way
-to go back to normal is to run the following commands:
+Il arrive parfois qu’un processus Node.js soit dupliqué. Dans ce cas, le moyen
+le plus simple pour retourner à un état normal est d’exécuter :
 
 ```bash
 sudo supervisorctl stop cozy-controller
