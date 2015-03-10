@@ -142,17 +142,19 @@ des prérequis manquent, Ansible va s’occuper d’amener le service dans l’�
 attendu.
 
 Commencez par [installer Ansible](http://docs.ansible.com/intro_installation.html)
-sur votre machine locale :
+sur votre machine locale. Requiert la version 1.4 ou ultérieure :
 
 ```bash
-# Install ansible (for Ubuntu 14.04)
+# Installer ansible (pour Ubuntu 14.04)
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
 sudo apt-get install ansible
 ```
 
 Puis récupérez la recette Cozy (qui est maintenue par la communauté) :
 
 ```bash
-git clone https://github.com/zaurky/ansible-cozy-playbook.git
+git clone https://github.com/Kloadut/ansible-cozy-playbook.git
 cd ansible-cozy-playbook
 ```
 
@@ -170,8 +172,17 @@ Vous devez sauvegarder les paramètres du serveur distant sur lequel vous voulez
 installer Cozy :
 
 ```bash
-echo "[myserver]" > hosts
-echo "your.domain.me" >> hosts
+echo "[monserveur]" > hosts
+echo "adresse.ip.du.serveur" >> hosts
+```
+
+Modifiez les trois jetons de sécurité contenus dans le fichier
+`./roles/Kloadut.cozy/vars/main.yml`. Vous pouvez générer ces jetons de manière
+aléatoire avec la commande qui suit (vous n'aurez pas à vous en souvenir par la
+suite) :
+
+```bash
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c16
 ```
 
 Vous pouvez alors installer Cozy en exécutant la recette.  Vous pouvez
@@ -180,8 +191,12 @@ est dans l’état attendu.
 
 ```bash
 # Exécuter la recette
-ansible-playbook playbook.yml -i hosts
+ansible-playbook playbook.yml -i hosts -u root
 ```
+
+**Note:** Si vous rencontrez une erreur lors de l'installation de cozy-indexer,
+vérifiez que vous possédez assez de RAM ou que votre serveur possède bien un
+fichier de swap.
 
 La recette achevée, votre instance devrait être à l’écoute sur le port
 443, il ne vous reste plus qu’à jouer avec !

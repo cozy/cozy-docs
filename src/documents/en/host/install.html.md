@@ -153,10 +153,12 @@ service and its requirements to work properly. If something is missing Ansible
 will perform required operations to bring the service to the required state.
 
 So, first [install Ansible](http://docs.ansible.com/intro_installation.html)
-on your local machine:
+on your local machine. It requires Ansible v1.4+:
 
 ```bash
 # Install ansible (for Ubuntu 14.04)
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
 sudo apt-get install ansible
 ```
 
@@ -164,7 +166,7 @@ Then get the description of the Cozy playbook.
 
 ```bash
 # Get the Cozy Ansible Playbook (maintained by the community)
-git clone https://github.com/zaurky/ansible-cozy-playbook.git
+git clone https://github.com/Kloadut/ansible-cozy-playbook.git
 cd ansible-cozy-playbook
 ```
 
@@ -184,7 +186,15 @@ install your Cozy.
 ```bash
 # Store your remote server address
 echo "[myserver]" > hosts
-echo "your.domain.me" >> hosts
+echo "your.server.ip" >> hosts
+```
+
+Change the 3 security tokens by editing the `./roles/Kloadut.cozy/vars/main.yml`
+file. You can use this command in order to generate new random tokens (you will not
+have to remember them).
+
+```bash
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c16
 ```
 
 Then you can perform the installation by running the playbook. You can run the
@@ -193,8 +203,12 @@ state.
 
 ```bash
 # Run the playbook
-ansible-playbook playbook.yml -i hosts
+ansible-playbook playbook.yml -i hosts -u root
 ```
+
+**Note:** If you run into trouble during the cozy-indexer installation, check
+that you have enough RAM capacity available or that you have an existing swap
+file.
 
 Once done, your Cozy should be up on the 443 port. Now, enjoy!
 
