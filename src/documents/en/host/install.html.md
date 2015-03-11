@@ -341,7 +341,7 @@ https://localhost:2223/
 ```
 
 If you are on OS X, you have to forward ports.
-Port 22 form your virtual machine should forward to 127.0.0.1:2222 and port 23 should forward to 127.0.0.1:2223.
+Port 22 form your virtual machine should forward to 127.0.0.1:2222 and port 443 should forward to 127.0.0.1:2223.
 
 ### Additional informations
 
