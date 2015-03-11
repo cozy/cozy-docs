@@ -8,7 +8,7 @@ toc: true
 # Synchronisation de contacts
 
 ## Préparer votre Cozy
-Cozy utilises CardDav, qui est le protocole standard, pour synchroniser vos contacts sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
+Cozy utilise CardDav, qui est le protocole standard, pour synchroniser vos contacts sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
 
 * Premièrement, allez dans votre Cozy dans le menu "Choisissez vos apps".
 * Puis sélectionnez l'application "Sync".
@@ -58,7 +58,7 @@ Remplissez le formulaire avec les identifiants que vous avez noté lors de l'ét
 
 <br />
 <br />
-Sélectionnez le carnet d'adresse disponible. Si vous voulez synchroniser vos agendas, sélectionnez les aussi.
+Sélectionnez le carnet d'adresses disponible. Si vous voulez synchroniser vos agendas, sélectionnez les aussi.
 <center>![Android step 5](/assets/images/mobile/android/step5.png)</center>
 
 <br />

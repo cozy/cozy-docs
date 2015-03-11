@@ -13,7 +13,7 @@ Vous trouverez ici le moyen de résoudre la plupart des soucis qui peuvent surve
 ## Je n’arrive à installer qu’une seule application
 
 *Description :* Lorsque vous essayez d’installer une application, l’installation
-échoue et l’application est marquée comme cassé. Ce comportement se reproduit
+échoue et l’application est marquée comme cassée. Ce comportement se reproduit
 pour chaque application que vous essayez d’installer.
 
 *Solution :* Vérifiez la quantité de mémoire disponible dans votre instance. Les
@@ -92,7 +92,7 @@ Voici un [bon tutoriel](http://virtualitblog.blogspot.fr/2013/05/install-nginx-1
 (en anglais et uniquement pour les distributions basées sur Debian) pour
 installer Nginx sur un Raspberry Pi.
 
-Vous pouvez le télécharger ici: [http://nginx.org/packages/debian/pool/nginx/n/nginx/](http://nginx.org/packages/debian/pool/nginx/n/nginx/)
+Vous pouvez le télécharger ici : [http://nginx.org/packages/debian/pool/nginx/n/nginx/](http://nginx.org/packages/debian/pool/nginx/n/nginx/)
 
 
 ## Le contrôleur ne démarre pas

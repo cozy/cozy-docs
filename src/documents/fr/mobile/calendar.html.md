@@ -8,7 +8,7 @@ toc: true
 # Synchronisation des agendas
 
 ## Préparer votre Cozy
-Cozy utilises CalDav, qui est le protocole standard, pour synchroniser vos agendas sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
+Cozy utilise CalDav, qui est le protocole standard, pour synchroniser vos agendas sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
 
 * Premièrement, allez dans votre Cozy dans le menu "Choisissez vos apps".
 * Puis sélectionnez l'application "Sync".
@@ -57,7 +57,7 @@ Remplissez le formulaire avec les identifiants que vous avez notés lors de l'é
 
 <br />
 <br />
-Sélectionnez les agendas que vous voulez synchroniser. Si vous voulez aussi synchroniser vos contacts, sélectionnez le carnet d'adresse au même moment.
+Sélectionnez les agendas que vous voulez synchroniser. Si vous voulez aussi synchroniser vos contacts, sélectionnez le carnet d'adresses au même moment.
 <center>![Android step 5](/assets/images/mobile/android/step5.png)</center>
 
 <br />
@@ -169,6 +169,6 @@ C'est tout ! Vos agendas seront synchronisés régulièrement (par défaut toute
 <br />
 Félicitations, votre périphérique mobile est synchronisé avec votre Cozy !
 
-## Ressources connectés
+## Ressources connectées
 * [Discussion sur le forum](https://forum.cozy.io/)
 
