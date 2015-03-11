@@ -335,6 +335,10 @@ de machine virtuelle Cozy pour VirtualBox.
 Importez l’image dans Virtualbox et démarrez-la. Vous devriez pouvoir vous
 connecter à votre instance en dirigeant un navigateur vers ```https://localhost:2223/```
 
+Si vous êtes sous OS X, vous devez ajouter la redirection des ports :
+le port 22 de votre machine virtuelle doit être redirigé vers le 127.0.0.1:2222
+ et le port 443 vers le 127.0.0.1:2223.
+
 ### Informations complémentaires
 
 Vous pouvez trouver l’adresse de la machine virtuelle au moyen de la
