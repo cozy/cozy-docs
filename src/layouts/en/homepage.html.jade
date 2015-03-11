@@ -273,7 +273,15 @@ html(lang="en")
                         input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="email address")
                     label(for='mce-signmeup-MOTIV')
                         span What I could help with:
-                        textarea(name="MOTIV")
+                        textarea(name="MOTIV", maxlength="255")
+                        span.notice
+                            | text limited, 
+                            span.counter 255
+                            |  chars left
+                        span.notice
+                            | you can also write directly to 
+                            a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
+                            |  if you prefer
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
                     button.icon-cloud(type='submit', name='subscribe') Sign me up!
@@ -327,6 +335,14 @@ html(lang="en")
                     if($(window).width() > 800) {
                         $(this).find('p').slideToggle();
                     };
+                });
+                var $motiv = $('[name=MOTIV]'),
+                    $counter = $motiv.siblings('.notice').find('.counter');
+                $('[name=MOTIV]').on('keydown', function(event) {
+                    var len = 255 - this.value.length
+                    $counter
+                        .text(len)
+                        .toggleClass('alert', len < 15);
                 });
             })(jQuery);
 
