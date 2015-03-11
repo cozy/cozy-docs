@@ -276,7 +276,15 @@ html(lang="en")
                         input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
                     label(for='mce-signmeup-MOTIV')
                         span Je peux aider sur les sujets suivants :
-                        textarea(name="MOTIV")
+                        textarea(name="MOTIV", maxlength="255")
+                        span.notice
+                            | texte limité, 
+                            span.counter 255
+                            |  caractères restants
+                        span.notice
+                            | vous pouvez aussi nous écrire directement à 
+                            a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
+                            |  si vous le désirez
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
                     button.icon-cloud(type='submit', name='subscribe') Go !
@@ -334,6 +342,14 @@ html(lang="en")
                     if($(window).width() > 800) {
                         $(this).find('p').slideToggle();
                     };
+                });
+                var $motiv = $('[name=MOTIV]'),
+                    $counter = $motiv.siblings('.notice').find('.counter');
+                $('[name=MOTIV]').on('keydown', function(event) {
+                    var len = 255 - this.value.length
+                    $counter
+                        .text(len)
+                        .toggleClass('alert', len < 15);
                 });
             })(jQuery);
 
