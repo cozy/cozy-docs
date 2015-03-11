@@ -340,6 +340,9 @@ You should be able to access your Cozy through your browser by connecting to thi
 https://localhost:2223/
 ```
 
+If you are on OS X, you have to forward ports.
+Port 22 form your virtual machine should forward to 127.0.0.1:2222 and port 23 should forward to 127.0.0.1:2223.
+
 ### Additional informations
 
 To access the box shell, use root/password as login and password.
