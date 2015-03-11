@@ -9,6 +9,7 @@ toc: true
 ## Communiqués de Presse
 
 [Innovacom et Seed4stoft investissent 800 000 euros dans Cozy Cloud](/assets/press/fr/2014-06-06-cozy-leve-800k.pdf)
+[Tristan Nitot rejoint Cozy Cloud](/assets/press/fr/2015-03-11-tristan-rejoint-cozy.pdf)
 
 ## Logos
 
