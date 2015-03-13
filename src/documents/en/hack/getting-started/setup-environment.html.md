@@ -44,7 +44,7 @@ Virtual Box allows you to run virtual machines on your computer. We use it
 indirectly with Vagrant to power our virtual machine.
 (Latest tested version: 4.3.0)
 
-#### Vagrant (>= v1.7.2) (<a href="https://www.vagrantup.com/downloads.html" target="_blank">download</a>)
+#### Vagrant (= v1.7.1) (<a href="https://www.vagrantup.com/downloads.html" target="_blank">download</a>)
 Vagrant is a tool to "create and configure lightweight, reproducible and
 portable development environments." That's what we need here! We use it through
 a custom CLI tool, so you will not manipulate it directly.
