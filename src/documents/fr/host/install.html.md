@@ -16,13 +16,13 @@ Cozy ne nécessite pas de processeur puissant et peut même fonctionner sur un R
 
 #### Configuration minimale
 
-* RAM: 1024MB (permet d’avoir six applications actives simultanément).
-* Espace disque: 2GB.
+* RAM : 1024MB (permet d’avoir six applications actives simultanément).
+* Espace disque : 2GB.
 
 #### Configuration recommandée
 
-* RAM: 2048MB (permet d’avoir seize applications actives simultanément).
-* Espace disque: beaucoup, pour stocker tous vos fichiers.
+* RAM : 2048MB (permet d’avoir seize applications actives simultanément).
+* Espace disque : beaucoup, pour stocker tous vos fichiers.
 
 ### Considérations sur la sécurité avec les images pré-installées
 
@@ -93,8 +93,8 @@ fab -H sudoer@localhost install
 Vous pouvez également utiliser [Vagrant](https://www.vagrantup.com/) pour installer
 une instance de Cozy dans une machine virtuelle. Pour cela, nous vous recommandons
 d’utiliser l’[image Ubuntu 12.04](http://files.vagrantup.com/precise64.box).
-Soyez attentifs, car la mise à jour nécessite de configurer votre séquence de
-démarrage. Sélectionnez le premier système de fichier proposé et cliquez sur OK.
+Soyez attentifs car la mise à jour nécessite de configurer votre séquence de
+démarrage. Sélectionnez le premier système de fichiers proposé et cliquez sur OK.
 
 
 ### Tester l’installation
@@ -194,7 +194,7 @@ est dans l’état attendu.
 ansible-playbook playbook.yml -i hosts -u root
 ```
 
-**Note:** Si vous rencontrez une erreur lors de l'installation de cozy-indexer,
+**Note :** Si vous rencontrez une erreur lors de l'installation de cozy-indexer,
 vérifiez que vous possédez assez de RAM ou que votre serveur possède bien un
 fichier de swap.
 
@@ -229,10 +229,10 @@ wget http://files.cozycloud.cc/2015-02-19-cozy-raspberry-pi2.img.7z
 Recherchez ensuite où est montée votre carte SD. Supposons que ce soit sur
 `/dev/sdc`. Faites alors une copie de l’image sur la carte :
 
-**NB:** une carte SD Class 10 est recommandée pour avoir de meilleures
+**NB :** une carte SD Class 10 est recommandée pour avoir de meilleures
 performances.
 
-**ATTENTION:** cette opération va irrémédiablement supprimer toutes les
+**ATTENTION :** cette opération va irrémédiablement supprimer toutes les
 données présentes sur la carte.
 
 ```bash
@@ -284,10 +284,10 @@ tar -xvzf cozy-cubietruck.im.tar.gz
 Recherchez ensuite où est montée votre carte SD. Supposons que ce soit sur
 `/dev/sdc`. Faites alors une copie de l’image sur la carte :
 
-**NB:** une carte SD Class 10 est recommandée pour avoir de meilleures
+**NB :** une carte SD Class 10 est recommandée pour avoir de meilleures
 performances.
 
-**ATTENTION:** cette opération va irrémédiablement supprimer toutes les
+**ATTENTION :** cette opération va irrémédiablement supprimer toutes les
 données présentes sur la carte.
 
 ```bash
@@ -365,7 +365,7 @@ wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid
 vzctl start ctid
 ```
-NB: remplacez `ctid` par un identifiant de conteneur libre (101, 102, etc).
+NB : remplacez `ctid` par un identifiant de conteneur libre (101, 102, etc).
 
 *Le mot de passe du compte `root` est `password`.*
 

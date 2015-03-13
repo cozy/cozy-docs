@@ -21,7 +21,7 @@ il suffit de les supprimer.
 ### Méthode simple
 
 La méthode la plus simple est d’utiliser la tâche de désinstallation du script
-Fabric que vous avez utilisé pour l’installation :
+Fabric que vous avez utilisée pour l’installation :
 
 ```bash
 fab -H user@ip uninstall_all

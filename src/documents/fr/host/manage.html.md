@@ -12,7 +12,7 @@ toc: true
 
 #### La méthode simple
 
-Le moyen le plus simple de mettre à jour votre instance est d’utiliser le
+Le moyen le plus simple pour mettre à jour votre instance est d’utiliser le
 script Fabric d’installation. Il suffit d’appeler la tâche de mise à jour
 au lieu de celle d’installation :
 
@@ -126,7 +126,7 @@ Pour démarrer une application :
 cozy-monitor start <app>
 ```
 
-Pour redémarrer une application
+Pour redémarrer une application :
 
 ```bash
 cozy-monitor restart <app>
