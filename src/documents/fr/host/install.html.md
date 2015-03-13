@@ -121,7 +121,7 @@ Le script d’installation de Cozy installe les outils suivants :
 * Cozy Home (l’application Web).
 
 Pour mieux comprendre comment fonctionne une instance Cozy, vous pouvez
-consulter la [description de l’architecture](/hack/getting-started/architecture-overview.html).
+consulter la [description de l’architecture (en)](/en/hack/getting-started/architecture-overview.html).
 
 ### Machines virtuelles et conteneurs
 
