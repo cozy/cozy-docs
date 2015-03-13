@@ -90,7 +90,9 @@ fab -H sudoer@localhost install
 
 #### Installer Cozy avec Apache
 
-Pour utiliser le serveur web Apache plutôt que celui installé avec Cozy, il est nécessaire de modifier le fichier `fabfile.py` pour commenter l'installation de nginx (insérer un # devant l'appel de `install_nginx()` dans la fonction `install()`), avant de lancer la commande `fab -H …` d'une part, puis d'autre part d'installer et d'activer les modules `proxy` et `proxy_http` d'Apache. Enfin il faudra définir un fichier vhost `cozy.conf` contenant ceci :
+Pour utiliser le serveur web Apache plutôt que celui installé avec Cozy, il est nécessaire de modifier le fichier `fabfile.py` pour commenter l'installation de nginx (insérer un # devant l'appel de `install_nginx()` dans la fonction `install()`), avant de lancer la commande `fab -H …`.
+
+Ensuite, il faudra définir un fichier vhost `cozy.conf` contenant ceci :
 
 ```
     # /etc/apache2/sites-available/cozy.conf
@@ -115,6 +117,15 @@ Pour utiliser le serveur web Apache plutôt que celui installé avec Cozy, il es
      </VirtualHost>
     </IfModule>
 ```
+
+Assurez-vous enfin que les modules `proxy` et `proxy_http` d’Apache sont installés et activés :
+
+```bash
+a2enmod proxy
+a2enmod proxy_http
+service apache2 restart
+```
+
 
 #### Essayer Cozy avec Vagrant
 

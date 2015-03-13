@@ -84,6 +84,46 @@ To install it locally without VM or container, run this command:
 fab -H sudoer@localhost install
 ```
 
+#### How to use Apache Web server
+
+By default, Cozy install a Nginx Web server. If you already have an Apache server, you may want to use it instead of Nginx. Here’s how you can do it.
+
+First, before executing `fab -H install`, edit `fabfile.py` and comment out the lines in charge of Nginx install (add a `#` in front of `install_nginx` inside `install` method).
+
+Then create a new vhost into your Apache config, with the following configuration:
+
+```
+    # /etc/apache2/sites-available/cozy.conf
+    <IfModule mod_ssl.c>
+     <VirtualHost *:443>
+            ServerName      mydomain.net
+            ServerAdmin     admin@mydomain.net
+
+            # On active le chiffrement (HTTPS)
+            SSLEngine               On
+            SSLCertificateFile      /etc/cozy/server.crt
+            SSLCertificateKeyFile   /etc/cozy/server.key
+
+            # Redirection des requêtes vers l'application Cozy Cloud
+            ProxyPass               / http://127.0.0.1:9104/ retry=0 Keepalive=On timeout=1600
+            ProxyPassReverse        / http://127.0.0.1:9104/
+            setenv proxy-initial-not-pooled 1
+
+            CustomLog               /var/log/apache2/cozy-access.log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+            ErrorLog                /var/log/apache2/cozy-error.log
+
+     </VirtualHost>
+    </IfModule>
+```
+
+At last, ensure that the `proxy` and `proxy_http` Apache modules are loaded:
+
+```bash
+a2enmod proxy
+a2enmod proxy_http
+service apache2 restart
+```
+
 #### Try Cozy with Vagrant
 
 You can use Vagrant to run Cozy Cloud Setup in a virtual machine. To do so,
@@ -105,6 +145,7 @@ The Cozy install script installs the following tools:
 * Python runtime
 * Node.js runtime
 * CouchDB document database
+* Nginx Web server
 * Node tools: cozy-controller, cozy-monitor, coffee-script, compound, brunch
 * Cozy Controller Daemon
 * Cozy data indexer
