@@ -88,6 +88,34 @@ cette commande :
 fab -H sudoer@localhost install
 ```
 
+#### Installer Cozy avec Apache
+
+Pour utiliser le serveur web Apache plutôt que celui installé avec Cozy, il est nécessaire de modifier le fichier `fabfile.py` pour commenter l'installation de nginx (insérer un # devant l'appel de `install_nginx()` dans la fonction `install()`), avant de lancer la commande `fab -H …` d'une part, puis d'autre part d'installer et d'activer les modules `proxy` et `proxy_http` d'Apache. Enfin il faudra définir un fichier vhost `cozy.conf` contenant ceci :
+
+```
+    # /etc/apache2/sites-available/cozy.conf
+    <IfModule mod_ssl.c>
+     <VirtualHost *:443>
+            ServerName      mydomain.net
+            ServerAdmin     admin@mydomain.net
+
+            # On active le chiffrement (HTTPS)
+            SSLEngine               On
+            SSLCertificateFile      /etc/cozy/server.crt
+            SSLCertificateKeyFile   /etc/cozy/server.key
+
+            # Redirection des requêtes vers l'application Cozy Cloud
+            ProxyPass               / http://127.0.0.1:9104/ retry=0 Keepalive=On timeout=1600
+            ProxyPassReverse        / http://127.0.0.1:9104/
+            setenv proxy-initial-not-pooled 1
+
+            CustomLog               /var/log/apache2/cozy-access.log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+            ErrorLog                /var/log/apache2/cozy-error.log
+
+     </VirtualHost>
+    </IfModule>
+```
+
 #### Essayer Cozy avec Vagrant
 
 Vous pouvez également utiliser [Vagrant](https://www.vagrantup.com/) pour installer
@@ -111,6 +139,7 @@ Le script d’installation de Cozy installe les outils suivants :
 
 * Python ;
 * Node.js ;
+* le serveur web nginx ;
 * la base de données CouchDB ;
 * des outils Node.js : coffee-script, compound, brunch…
 * Cozy Controller, le serveur principal ;
