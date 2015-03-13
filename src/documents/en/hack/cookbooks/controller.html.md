@@ -269,13 +269,19 @@ Configuration file is avaible only for new controller.
   * By default: '/usr/local/cozy/apps'.
 -->
 
-### Environement configuration
+### Environment configuration
+
+You can transmit specific environment variables to cozy applications.
+For that, you should add them in controller file configuration.
+
+In field `env`, you can add `global` field. Environment variables  will transmit to all applications started by controller.
+If you want transmit environment variable to a specific application, you should add `"<application name>": list of environment variables`
 
 * env :
-    * global
-    * data_system
-    * home
-    * proxy
+    * global: Transmits environment variables to all applications started by controller
+    * data_system: Transmits environment variables to data system
+    * home: Transmits environment variables to home
+    * proxy: Transmits environment variables to proxy
 
 
 ### File configuration example
@@ -285,7 +291,7 @@ Configuration file is avaible only for new controller.
   "npm_strict_ssl": true,
   "env":
     {
-      "global": {"STACK": "cozy"},
+      "global": {"STACK": "cozy", "DEMO": "true"},
       "data_system": {"DB": "mydatabase"},
       "home": {"PORT": 9103},
       "proxy": {"PORT": 9104}
