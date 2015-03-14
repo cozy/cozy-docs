@@ -110,7 +110,7 @@ sudo pkill -9 node
 sudo supervisorctl start cozy-controller
 ```
 
-## VM problems
+## VM problems in development environment
 
 ### My VM is not starting and says there's an error
 
