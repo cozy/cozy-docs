@@ -168,8 +168,8 @@ stack in an isolated virtual machine or in a container (OpenVz or LXC).
 ### Cozycloud
 
 [Cozycloud](https://cozycloud.cc) is the maintainer of the Cozy project. We can
-provide you a Cozy instance for free if you write us an
-[email](mailto:contact@cozycloud.cc).
+provide you a Cozy instance for free, to get your feedbacks. Simply fill
+[the subscription form](/en/#instance-request).
 
 ### VPS
 
