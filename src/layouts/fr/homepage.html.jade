@@ -7,16 +7,23 @@ html(lang="en")
         meta(name="description", content="Cozy est votre plateforme de cloud personnel. Stockez vos données dans un espace sous votre contrôle et accédez-y via des applications web. Photos, mails, notes, contacts, tâches&hellip; plusieurs applications sont déjà disponibles. Étendez vos possibilités en développant vos propres applications. Cozy est open-source et auto-hébergeable. Cozy respecte votre vie privée.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
-    body
-        .navbar.fixed
+    body.homepage
+        .navbar.fixed(aria-expanded='false')
             a.nav-logo(href="/fr/")
-                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud')
-            a.lang-switcher(href="/en/") EN
-            a.lang-switcher.selected(href="/fr/") FR
-            a.right(href="https://blog.cozycloud.cc") Blog
-            a.right(href="/en/hack/getting-started/") Dev
-            a.right(href="/fr/mobile/files.html") Sync
-            a.right(href="/fr/host/install.html") Install
+                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+            nav
+                ul.navigation.right
+                    li: a(href="/fr/host/install.html") Install
+                    li: a(href="/fr/mobile/files.html") Sync
+                    li: a(href="/en/hack/getting-started/") Dev
+                    li: a(href="https://blog.cozycloud.cc") Blog
+                    li: a(href="#about") À propos
+                    li: a(href="#contact") Contact
+                ul.lang-switcher
+                    li: a(href="/en/") EN
+                    li: a.selected(href="/fr/") FR
+            button.nav-toggle.icon-menu
+
 
         header.line.clearfix#header
             .left.mr2.biglogo
@@ -253,7 +260,7 @@ html(lang="en")
                            br
                            | Twitter
 
-        section#subscription.simple
+        section#contact.simple
             h4 Restons en contact
             .line
                 p
@@ -265,7 +272,7 @@ html(lang="en")
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
                     button.icon-envelope-o(type='submit', name='subscribe') Tenez-moi au courant
-            .line
+            .line#instance-request
                 p
                     | Je compte contribuer au projet Cozy en tant que dévelopeur d'application, de bêta-testeur ou de 
                     | traducteur. Pour cela, j'aimerais bénéficier d'une instance Cozy gratuite avec 1GO de RAM et 10GO de disque
@@ -281,13 +288,15 @@ html(lang="en")
                             | texte limité, 
                             span.counter 255
                             |  caractères restants
-                        span.notice
-                            | vous pouvez aussi nous écrire directement à 
-                            a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
-                            |  si vous le désirez
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
                     button.icon-cloud(type='submit', name='subscribe') Go !
+            .line
+                p
+                    | Vous chechez à contacter l'équipe ?
+                    | Utilisez cet outil robuste et décentralisé appelé e-mail en envoyant un message à 
+                    a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
+                    | .
 
 
         section#about.line
@@ -340,22 +349,7 @@ html(lang="en")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
 
         script(src='/vendors/javascripts/jquery-2.0.3.min.js').
-        script(type='text/javascript').
-            (function($) {
-                $('#architecture').on('click', '.diagbox', function(event) {
-                    if($(window).width() > 800) {
-                        $(this).find('p').slideToggle();
-                    };
-                });
-                var $motiv = $('[name=MOTIV]'),
-                    $counter = $motiv.siblings('.notice').find('.counter');
-                $('[name=MOTIV]').on('keydown', function(event) {
-                    var len = 255 - this.value.length
-                    $counter
-                        .text(len)
-                        .toggleClass('alert', len < 15);
-                });
-            })(jQuery);
+        script(src='/assets/javascripts/main.js')
 
         script(type='text/javascript').
             var _paq = _paq || [];

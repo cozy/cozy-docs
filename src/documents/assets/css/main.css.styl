@@ -41,7 +41,8 @@ p
     margin-bottom 5px
 
 .wrapper
-    margin auto auto
+    margin-left auto
+    margin-right auto
     width 100%
     max-width 960px
     background-color white
@@ -51,140 +52,52 @@ p
 
 // Header styles
 .navbar
-    box-shadow 2px 2px 2px rgba(10, 10, 10, 0.4)
+    box-shadow 2px 0 2px rgba(10, 10, 10, 0.4)
 
-    .nav-logo
-        margin-top 0
-        margin-right 10px
+    li
+        position relative
 
     .subtitle
         display inline-block
-        margin-right  20px
-        text-decoration none
-        font-size 25px
-        height 60px
-        line-height 45px
-        word-wrap
 
-        .breadcrumb-item
-            @media (max-width: 960px)
-                display none
+        li:hover > a
+            color blue
 
-            display inline-block
-            height 100%
-            margin 0 15px
-            padding 0
-            font-size 22px
-            line-height 60px
-            text-decoration none
-            position relative
-            min-width 135px
-            font-family main-title
-
-            @media (max-width: 1300px)
-                min-width 70px
-
-            a
-                border-left 1px solid transparent
-                border-right 1px solid transparent
-                font-size 22px
-                text-align center
-                text-decoration none
-                margin 0
-                padding 0 5px
-                display inline-block
-                width 100%
-                height 100%
-                z-index 100
-
-                @media (max-width: 1300px)
-                    font-size 18px
-
-            &:hover a
-                border-bottom 5px solid orange
-
-            &.current > a
-                border-bottom 5px solid blue
-                background #fefefe
-
-                &:hover
-                    border-bottom 5px solid orange
-
-            &.current a
-                border-bottom 5px solid blue
-                background #fefefe
-
-            &:hover
-                .menu-item
-                    display block
-
-            .menu-item
-                display none
-                z-index -1
-                position absolute
-                background #fefefe
-                border-radius 0 5px 5px 5px
-                margin 0
-                margin-top -1px
-                padding 0
-                left 0
-                list-style-type none
-                border 1px solid #ccc
-                box-shadow 0px 2px 2px rgba(10, 10, 10, 0.4)
-                min-width 100%
-                width 250px
-
-                li
-                    a
-                        text-align left
-                        font-size 15px
-                        border none
-                        margin 10px 0
-
-                    &:hover
-                        background orange
-                        a
-                            color #fff
-                            background orange
-
-
-
-        @media (max-width: 400px)
-            display: none
-
-    .submenu-container
-        display inline-block
-        margin-top 10px
-        position relative
-        text-align center
-        margin-right 20px
-        border 1px solid transparent
-
-        &.selected
-            background blue
-        &:hover
-            background orange
-
-        &:hover
-        &.selected
-            border 1px solid lightblue
-            border-radius 5px
-
-            a
-                color #fff
-                text-decoration none
         a
-            margin 0
-            padding 0 10px
-            display inline-block
-            font-size 24px
+            line-height 2.3
+            font-size 18px
 
-            @media (max-width: 1300px)
-                font-size 22px
-                padding 5px
+        .selected
+            color black
+            border-bottom 2px solid blue
+
+        @media (max-width: 1024px)
+            display none
+
+.dropdown-menu
+    display none
+    .subtitle > li:hover &
+        display block
+
+    position absolute
+    top 100%
+    left 0
+    box-sizing border-box
+    width 250px
+    padding 10px !important
+    background-color white
+    border 1px solid #ccc
+    border-top none
+    border-radius 0 0 4px 4px
+
+    li
+        display block
+
+    a
+        font-size 15px !important
+
 
 // Menu styles
-
 aside
     border-right 1px solid lightblue
     position fixed

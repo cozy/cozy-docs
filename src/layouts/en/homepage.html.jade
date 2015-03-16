@@ -7,16 +7,23 @@ html(lang="en")
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos&hellip; there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
-    body
-        .navbar.fixed
+    body.homepage
+        .navbar.fixed(aria-expanded='false')
             a.nav-logo(href="/en/")
-                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud')
-            a.lang-switcher.selected(href="/en/") EN
-            a.lang-switcher(href="/fr/") FR
-            a.right(href="https://blog.cozycloud.cc") Blog
-            a.right(href="/en/hack/getting-started/") Dev
-            a.right(href="/en/mobile/files.html") Sync
-            a.right(href="/en/host/install.html") Install
+                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+            nav
+                ul.navigation.right
+                    li: a(href="/en/host/install.html") Install
+                    li: a(href="/en/mobile/files.html") Sync
+                    li: a(href="/en/hack/getting-started/") Dev
+                    li: a(href="https://blog.cozycloud.cc") Blog
+                    li: a(href="#about") About
+                    li: a(href="#contact") Contact
+                ul.lang-switcher
+                    li: a.selected(href="/en/") EN
+                    li: a(href="/fr/") FR
+            button.nav-toggle.icon-menu
+
 
         header.line.clearfix#header
             .left.mr2.biglogo
@@ -252,7 +259,7 @@ html(lang="en")
                            br
                            | Twitter
 
-        section#subscription.simple
+        section#contact.simple
             h4 Get in touch
             .line
                 p
@@ -264,7 +271,7 @@ html(lang="en")
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
                     button.icon-envelope-o(type='submit', name='subscribe') Keep me informed
-            .line
+            .line#instance-request
                 p
                     | I want to contribute to the Cozy project as an app developer, beta tester and/or localizer  and enjoy one of these free fancy Cozy instances with 1GB of RAM and 10GB of disk space (available in limited numbers, hosted in France).
                 form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
@@ -278,13 +285,15 @@ html(lang="en")
                             | text limited, 
                             span.counter 255
                             |  chars left
-                        span.notice
-                            | you can also write directly to 
-                            a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
-                            |  if you prefer
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
                     button.icon-cloud(type='submit', name='subscribe') Sign me up!
+            .line
+                p
+                    | Need to contact the team for other reasons ?
+                    | Just use this trusty and decentralized tool called email by sending a message to 
+                    a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
+                    | .
 
         section#about.line
             h2.icon-rate &nbsp; About
@@ -332,23 +341,8 @@ html(lang="en")
                 a(href="http://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
 
-        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
-        script(type='text/javascript').
-            (function($) {
-                $('#architecture').on('click', '.diagbox', function(event) {
-                    if($(window).width() > 800) {
-                        $(this).find('p').slideToggle();
-                    };
-                });
-                var $motiv = $('[name=MOTIV]'),
-                    $counter = $motiv.siblings('.notice').find('.counter');
-                $('[name=MOTIV]').on('keydown', function(event) {
-                    var len = 255 - this.value.length
-                    $counter
-                        .text(len)
-                        .toggleClass('alert', len < 15);
-                });
-            })(jQuery);
+        script(src='/vendors/javascripts/jquery-2.0.3.min.js')
+        script(src='/assets/javascripts/main.js')
 
         script(type='text/javascript').
             var _paq = _paq || [];
