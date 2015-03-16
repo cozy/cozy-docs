@@ -339,44 +339,88 @@ button:active
 
 
 .navbar
-    z-index: 40
-    position: fixed
-    height: 60px
-    top: 0
-    width: 100%
-    background: white
+    z-index 40
+    position fixed
+    top 0
+    left 0
+    box-sizing border-box
+    width 100%
+    padding 10px
+    background white
 
-    img
-        width: 50px
-        margin: 10px
+    .nav-logo
+        display block
+        float left
+        margin-right 10px
+
+    nav
+        box-sizing border-box
+        display inline
+        background-color white
+
+    ul
+        list-style-type none
+        margin 0
+        padding 0
+
+    li
+        display inline
+        padding 0 5px
 
     a
         color: black
-        margin-right:  20px
-        margin-top: 10px
         text-decoration: none
-        font-size: 30px
-        margin-top: 10px
-        vertical-align middle
+        font-size: 24px
 
         &:hover
-            color: black
             text-decoration: underline
 
-        &.right
-            font-size: 24px
-
-        &.lang-switcher
+    .lang-switcher
+        a
+            line-height 2.3
             font-size 18px
-            padding-top 6px
-            text-decoration none
 
-            &.selected
-                color blue
+        .selected
+            color blue
 
-            &:hover
-                text-decoration underline
+    .nav-toggle
+        display none
+        float right
+        border none
+        background none
+        color blue
+        font-size 30px
 
+
+    @media (max-width:580px)
+        transition transform 500ms
+        transform translateY(0)
+
+        &[aria-expanded=true]
+            transform translateY(290px)
+
+        nav
+            position absolute
+            bottom 100%
+            left 0
+            width 100%
+            padding 10px
+
+        .right
+            float none
+
+        li
+            display block
+
+        .lang-switcher
+            margin-top 10px
+            border-top 1px solid #eee
+
+            li
+                display inline
+
+        .nav-toggle
+            display block
 
 
 .menu
@@ -922,15 +966,3 @@ header
     .diagbox:hover
         p
             display:none
-
-    .navbar .lang-switcher
-        display none
-
-@media (max-width: 395px)
-    .navbar .nav-logo
-        display none
-
-
-@media (max-width: 305px)
-    .navbar .lang-switcher
-        display none

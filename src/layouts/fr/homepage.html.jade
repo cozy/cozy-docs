@@ -8,17 +8,22 @@ html(lang="en")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
     body
-        .navbar.fixed
+        .navbar.fixed(aria-expanded='false')
             a.nav-logo(href="/fr/")
-                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud')
-            a.lang-switcher(href="/en/") EN
-            a.lang-switcher.selected(href="/fr/") FR
-            a.right(href="#about") À propos
-            a.right(href="#contact") Contact
-            a.right(href="https://blog.cozycloud.cc") Blog
-            a.right(href="/en/hack/getting-started/") Dev
-            a.right(href="/fr/mobile/files.html") Sync
-            a.right(href="/fr/host/install.html") Install
+                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+            nav
+                ul.navigation.right
+                    li: a(href="/fr/host/install.html") Install
+                    li: a(href="/fr/mobile/files.html") Sync
+                    li: a(href="/fr/hack/getting-started/") Dev
+                    li: a(href="https://blog.cozycloud.cc") Blog
+                    li: a(href="#about") À propos
+                    li: a(href="#contact") Contact
+                ul.lang-switcher
+                    li: a(href="/en/") EN
+                    li: a.selected(href="/fr/") FR
+            button.nav-toggle.icon-menu
+
 
         header.line.clearfix#header
             .left.mr2.biglogo
@@ -342,22 +347,7 @@ html(lang="en")
                     img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
 
         script(src='/vendors/javascripts/jquery-2.0.3.min.js').
-        script(type='text/javascript').
-            (function($) {
-                $('#architecture').on('click', '.diagbox', function(event) {
-                    if($(window).width() > 800) {
-                        $(this).find('p').slideToggle();
-                    };
-                });
-                var $motiv = $('[name=MOTIV]'),
-                    $counter = $motiv.siblings('.notice').find('.counter');
-                $('[name=MOTIV]').on('keydown', function(event) {
-                    var len = 255 - this.value.length
-                    $counter
-                        .text(len)
-                        .toggleClass('alert', len < 15);
-                });
-            })(jQuery);
+        script(src='/assets/javascripts/main.js')
 
         script(type='text/javascript').
             var _paq = _paq || [];
