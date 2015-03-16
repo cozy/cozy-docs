@@ -10,6 +10,8 @@ urls: ["/mobile/"]
 
 ## Install and configure
 
+To navigate in your files, you should install 'files' application in your Cozy.
+
 Requirements: Android Phone (>=4.1 version)
 
 <a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">

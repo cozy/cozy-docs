@@ -10,6 +10,8 @@ urls: ["/mobile/"]
 
 ## Installation et configuration
 
+Pour accéder à vos fichiers depuis votre Cozy, vous devez tout d'abord installer l'application 'files' sur ce dernier.
+
 Pré-requis : téléphone ou tablette Android (version >=4.1)
 
 <a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">
