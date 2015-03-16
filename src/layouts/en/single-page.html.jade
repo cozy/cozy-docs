@@ -19,29 +19,28 @@ html(lang='en')
 
   body
     .navbar.fixed
-      a.nav-logo.left(href="/en/")
-          img(src='/assets/images/happycloud.png', alt='Happy Cloud')
+        a.nav-logo.left(href="/en/")
+            img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
 
-      .submenu-container.right(class="#{className}")
-         a(href="https://blog.cozycloud.cc") Blog
+        nav
+            ul.navigation.right
+                li
+                    - var className = ""
+                    - if(document.category == 'host')
+                        - className = 'selected'
+                    a(class="#{className}", href="/en/host/install.html") Install
+                li
+                    - var className = ""
+                    - if(document.category == 'mobile')
+                      - className = 'selected'
+                    a(class="#{className}", href="/en/mobile/files.html") Sync
+                li
+                    - var className = ""
+                    - if(document.category == 'hack')
+                        - className = 'selected'
+                    a(class="#{className}", href="/en/hack/getting-started/") Dev
+                li: a(href="https://blog.cozycloud.cc") Blog
 
-      - var className = ""
-      - if(document.category == 'hack')
-        - className = 'selected'
-      .submenu-container.right(class="#{className}")
-        a(href="/en/hack/getting-started/") Dev
-
-      - var className = ""
-      - if(document.category == 'mobile')
-        - className = 'selected'
-      .submenu-container.right(class="#{className}")
-        a(href="/en/mobile/files.html") Sync
-
-      - var className = ""
-      - if(document.category == 'host')
-        - className = 'selected'
-      .submenu-container.right(class="#{className}")
-        a(href="/en/host/install.html") Install
     .wrapper
       .wrap-menu.w25.mod.left
         | &nbsp;

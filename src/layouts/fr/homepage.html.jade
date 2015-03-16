@@ -7,7 +7,7 @@ html(lang="en")
         meta(name="description", content="Cozy est votre plateforme de cloud personnel. Stockez vos données dans un espace sous votre contrôle et accédez-y via des applications web. Photos, mails, notes, contacts, tâches&hellip; plusieurs applications sont déjà disponibles. Étendez vos possibilités en développant vos propres applications. Cozy est open-source et auto-hébergeable. Cozy respecte votre vie privée.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
-    body
+    body.homepage
         .navbar.fixed(aria-expanded='false')
             a.nav-logo(href="/fr/")
                 img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
@@ -15,7 +15,7 @@ html(lang="en")
                 ul.navigation.right
                     li: a(href="/fr/host/install.html") Install
                     li: a(href="/fr/mobile/files.html") Sync
-                    li: a(href="/fr/hack/getting-started/") Dev
+                    li: a(href="/en/hack/getting-started/") Dev
                     li: a(href="https://blog.cozycloud.cc") Blog
                     li: a(href="#about") À propos
                     li: a(href="#contact") Contact

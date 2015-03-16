@@ -7,7 +7,7 @@ html(lang="en")
         meta(name="description", content="Cozy brings you a personal cloud platform. Store your data in a place you control and leverage it with personal web applications. Photos, mails, notes, contacts, todos&hellip; there's already many applications. Extend the possibility by developing your own app, you can leverage existing features! Cozy is open-source and you can self-host it. Cozy is privacy-friendly.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
-    body
+    body.homepage
         .navbar.fixed(aria-expanded='false')
             a.nav-logo(href="/en/")
                 img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")

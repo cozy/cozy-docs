@@ -380,8 +380,8 @@ button:active
             line-height 2.3
             font-size 18px
 
-        .selected
-            color blue
+    .selected
+        color blue
 
     .nav-toggle
         display none
@@ -393,34 +393,35 @@ button:active
 
 
     @media (max-width:580px)
-        transition transform 500ms
-        transform translateY(0)
+        .homepage &
+            transition transform 500ms
+            transform translateY(0)
 
-        &[aria-expanded=true]
-            transform translateY(290px)
+            &[aria-expanded=true]
+                transform translateY(290px)
 
-        nav
-            position absolute
-            bottom 100%
-            left 0
-            width 100%
-            padding 10px
+            nav
+                position absolute
+                bottom 100%
+                left 0
+                width 100%
+                padding 10px
 
-        .right
-            float none
-
-        li
-            display block
-
-        .lang-switcher
-            margin-top 10px
-            border-top 1px solid #eee
+            .right
+                float none
 
             li
-                display inline
+                display block
 
-        .nav-toggle
-            display block
+            .lang-switcher
+                margin-top 10px
+                border-top 1px solid #eee
+
+                li
+                    display inline
+
+            .nav-toggle
+                display block
 
 
 .menu
