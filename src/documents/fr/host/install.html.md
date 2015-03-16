@@ -509,7 +509,7 @@ Une fois Nginx redémarré, votre instance devrait être accessible sur `http://
 
 [Cozycloud](https://cozycloud.cc) est la société qui développe le projet Cozy.
 Nous pouvons vous fournir gratuitement, en échange de retours, une instance.
-Envoyez-nous simplement [un message](mailto:contact@cozycloud.cc).
+Envoyez-nous simplement un message [via le formulaire d'inscription](/fr/#instance-request).
 
 ### Serveurs virtuels
 
