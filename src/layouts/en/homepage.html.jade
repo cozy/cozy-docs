@@ -271,7 +271,7 @@ html(lang="en")
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
                     button.icon-envelope-o(type='submit', name='subscribe') Keep me informed
-            .line
+            .line#instance-request
                 p
                     | I want to contribute to the Cozy project as an app developer, beta tester and/or localizer  and enjoy one of these free fancy Cozy instances with 1GB of RAM and 10GB of disk space (available in limited numbers, hosted in France).
                 form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
@@ -285,13 +285,15 @@ html(lang="en")
                             | text limited, 
                             span.counter 255
                             |  chars left
-                        span.notice
-                            | you can also write directly to 
-                            a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
-                            |  if you prefer
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
                     button.icon-cloud(type='submit', name='subscribe') Sign me up!
+            .line
+                p
+                    | Need to contact the team for other reasons ?
+                    | Just use this trusty and decentralized tool called email by sending a message to 
+                    a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
+                    | .
 
         section#about.line
             h2.icon-rate &nbsp; About
