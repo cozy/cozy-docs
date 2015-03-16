@@ -82,7 +82,7 @@ Run a script to update the software within the virtual machine. NO DATA LOSS.
 ### vm:update-image
 
 ```bash
-cozy-dev vm:image-update
+cozy-dev vm:update-image
 ```
 
 Destroy and re-download the virtual machine image. ALL DATA WILL BE LOST.
