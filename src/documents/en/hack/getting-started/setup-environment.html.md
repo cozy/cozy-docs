@@ -103,3 +103,48 @@ testing purposes.
 
 You can find everything you need to know about `cozy-dev` in [the cookbook](/hack/cookbooks/understanding-dev-environment.html#deploy), but we will introduce the concepts as we go in the next steps of the tutorial.
 You are now ready to [write your first application](/hack/getting-started/first-app.html).
+
+
+## Troubleshootings
+
+### My VM is not starting and says there's an error
+
+The first thing to try is update the VM with cozy-dev: `cozy-dev vm:update`
+
+It will fetch the last changes and may fixe some problems. Then you can try to start your VM again with `cozy-dev vm:start`
+
+### My VM displays a lot of 'SSH Timeout'
+
+That can be "normal". It occurs when the network is not yet configured on the VM.
+You can force Virtual Box to open its GUI and check what is happening.
+
+Stop the vm with `cozy-dev vm:stop`, then open the `Vagrantfile` and paste
+
+```bash
+config.vm.provider :virtualbox do |vb|
+  vb.gui = true
+end
+```
+
+after `Vagrant.configure("2") do |config|`. You can now `cozy-dev vm-start` and have the Virtual Box GUI. what you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
+
+### It still doesn't work
+
+If your application only need access to the data-system, you can clone the data-system repository and use it standalone.
+You'll need to have couchdb installed (with apt, or homebrew etc.) with its dependencies.
+
+```bash
+git clone https://github.com/cozy/cozy-data-system.git
+cd cozy-data-system
+npm install
+coffee server.coffee
+```
+
+Your data-system should now run, you can now build your app and access it. Example with the cozy-calendar repo:
+
+```bash
+cd cozy-calendar
+npm install
+coffee server.coffee
+```
+then head to `http://127.0.0.1:9113`
