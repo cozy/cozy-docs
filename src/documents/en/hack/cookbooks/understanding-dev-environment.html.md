@@ -78,11 +78,12 @@ cozy-dev vm:update
 ```
 
 Run a script to update the software within the virtual machine. NO DATA LOSS.
+Before update your virtual machine, you should start it (`cozy-dev vm:start`).
 
 ### vm:update-image
 
 ```bash
-cozy-dev vm:image-update
+cozy-dev vm:update-image
 ```
 
 Destroy and re-download the virtual machine image. ALL DATA WILL BE LOST.

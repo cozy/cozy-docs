@@ -37,6 +37,7 @@ Pour réinitialiser ce jeton, vous pouvez utiliser la commande suivante :
 wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
 fab -H user@ip reset_security_tokens
 ```
+Pour utiliser cette commande, vous devez avoir Fabric d'installé sur votre machine locale.
 
 Vous devriez également modifier les accréditations du super utilisateur (et utiliser une clé SSH de préférence à un mot de passe pour vous connecter à la machine hébergeant votre Cozy, comme expliqué dans [ce tutoriel](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password) (en anglais)).
 
