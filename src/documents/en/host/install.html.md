@@ -183,77 +183,6 @@ the two hosting providers we performed tests on:
   minimum. We recommend the $20 plan.
 
 
-## Ansible Playbook
-
-[Ansible](http://www.ansible.com) is a simple configuration system that allows people
-to automate installation and maintenance of services on a remote server. Its
-simplicity makes it very popular among people who hosts services on a personal
-server.
-
-It's based on the concept of playbooks. A playbook describes the state of a
-service and its requirements to work properly. If something is missing Ansible
-will perform required operations to bring the service to the required state.
-
-So, first [install Ansible](http://docs.ansible.com/intro_installation.html)
-on your local machine. It requires Ansible v1.4+:
-
-```bash
-# Install ansible (for Ubuntu 14.04)
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install ansible
-```
-
-Then get the description of the Cozy playbook.
-
-```bash
-# Get the Cozy Ansible Playbook (maintained by the community)
-git clone https://github.com/Kloadut/ansible-cozy-playbook.git
-cd ansible-cozy-playbook
-```
-
-Cozy requires several software specific versions (Node.js, CouchDB, etc.).
-Ansible Galaxy provides a role repository (playbooks are set of roles) where
-users share installation for common softwares. Here we download the
-"dependencies" of the Cozy playbook.
-
-```bash
-# Install role dependencies
-ansible-galaxy install -r galaxy.yml -p ./roles
-```
-
-You have to store the information of the remote server on which you want to
-install your Cozy.
-
-```bash
-# Store your remote server address
-echo "[myserver]" > hosts
-echo "your.server.ip" >> hosts
-```
-
-Change the 3 security tokens by editing the `./roles/Kloadut.cozy/vars/main.yml`
-file. You can use this command in order to generate new random tokens (you will not
-have to remember them).
-
-```bash
-< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c16
-```
-
-Then you can perform the installation by running the playbook. You can run the
-playbook as much as you want. It will ensure that your Cozy is in the right
-state.
-
-```bash
-# Run the playbook
-ansible-playbook playbook.yml -i hosts -u root
-```
-
-**Note:** If you run into trouble during the cozy-indexer installation, check
-that you have enough RAM capacity available or that you have an existing swap
-file.
-
-Once done, your Cozy should be up on the 443 port. Now, enjoy!
-
 ## Raspberry Pi 2 image
 
 **You will need the latest [Raspberry Pi 2](http://en.wikipedia.org/wiki/Raspberry_Pi) to be able to run Cozy properly.**
@@ -445,7 +374,6 @@ Of course you can change 8888 by the value you want.
 
 ## LXC image
 
-
 Use the LXC webpanel to add and configure containers; it's very easy to use.
 For Ubuntu this can be installed like so:
 
@@ -509,3 +437,39 @@ server {
 ```
 
 Restart nginx, and your Cozy should be accessible at http://cloud.myhost.com
+
+
+## Docker image
+
+
+*You will need [Docker](https://www.docker.com/) v1.0.1 or newer to run this image*
+
+You can try Cozy very easily by pulling the official automatically built image
+from Docker Hub:
+
+```
+sudo docker pull cozy/full
+```
+
+If you want to run it in a production environment, it is recommended to build
+the image yourself:
+
+```
+sudo docker build -t cozy/full github.com/cozy-labs/cozy-docker
+```
+
+Then you can run the image:
+
+```
+sudo docker run -d -p 80:80 -p 443:443 cozy/full
+```
+
+You can indicate different ports if your port 80 and 443 are already in use.
+For example:
+```
+sudo docker run -d -p 6500:443 cozy/full
+```
+
+Then your Cozy should be accessible on https://localhost:443 (or 
+https://localhost:6500 for the second example)
+
