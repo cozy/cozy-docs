@@ -436,7 +436,7 @@ Une fois Nginx redémarré, votre instance devrait être accessible sur `http://
 ## Docker image
 
 
-* Vous aures besoin d'une version 1.0.1 de [Docker](https://www.docker.com/)
+*Vous aurez besoin d'une version 1.0.1 de [Docker](https://www.docker.com/)
 ou supérieur.*
 
 Vous pouvez essayer Cozy très simplement en téléchargeant l'image officielle
