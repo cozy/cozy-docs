@@ -170,78 +170,6 @@ Du fait du grand nombre de technologies mises en œuvre, nous recommandons
 de faire tourner les instances Cozy dans un environnement isolé, une machine
 virtuelle ou un conteneur (OpenVz ou LXC).
 
-## Utiliser une recette Ansible
-
-[Ansible](http://www.ansible.com) est un système de configuration simple qui permet
-d’automatiser l’installation et la mise à jour de services sur un serveur
-distant. Du fait de sa simplicité, il est très populaire chez les gens qui
-hébergent des services sur un serveur personnel.
-
-Ansible est basé sur le concept de recettes. Une recette décrit l’état d’un
-service et tout ce dont il a besoin pour fonctionner correctement. Si certains
-des prérequis manquent, Ansible va s’occuper d’amener le service dans l’état
-attendu.
-
-Commencez par [installer Ansible](http://docs.ansible.com/intro_installation.html)
-sur votre machine locale. Requiert la version 1.4 ou ultérieure :
-
-```bash
-# Installer ansible (pour Ubuntu 14.04)
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt-get update
-sudo apt-get install ansible
-```
-
-Puis récupérez la recette Cozy (qui est maintenue par la communauté) :
-
-```bash
-git clone https://github.com/Kloadut/ansible-cozy-playbook.git
-cd ansible-cozy-playbook
-```
-
-Cozy a besoin de versions spécifiques de certains logiciels (Node.js,
-CouchDB, etc.). Le site [Ansible Galaxy](https://galaxy.ansible.com/)
-est un dépôt où les utilisateurs partagent les rôles (une recette est
-un ensemble de rôles) pour installer de nombreux logiciels. Voici
-comment installer les rôles de la recette Cozy :
-
-```bash
-ansible-galaxy install -r galaxy.yml -p ./roles
-```
-
-Vous devez sauvegarder les paramètres du serveur distant sur lequel vous voulez
-installer Cozy :
-
-```bash
-echo "[monserveur]" > hosts
-echo "adresse.ip.du.serveur" >> hosts
-```
-
-Modifiez les trois jetons de sécurité contenus dans le fichier
-`./roles/Kloadut.cozy/vars/main.yml`. Vous pouvez générer ces jetons de manière
-aléatoire avec la commande qui suit (vous n'aurez pas à vous en souvenir par la
-suite) :
-
-```bash
-< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c16
-```
-
-Vous pouvez alors installer Cozy en exécutant la recette.  Vous pouvez
-l’exécuter autant de fois que vous voulez. Elle s’assurera que votre instance
-est dans l’état attendu.
-
-```bash
-# Exécuter la recette
-ansible-playbook playbook.yml -i hosts -u root
-```
-
-**Note :** Si vous rencontrez une erreur lors de l'installation de cozy-indexer,
-vérifiez que vous possédez assez de RAM ou que votre serveur possède bien un
-fichier de swap.
-
-La recette achevée, votre instance devrait être à l’écoute sur le port
-443, il ne vous reste plus qu’à jouer avec !
-
 
 ## Utiliser l’image pour Raspberry Pi 2
 
@@ -435,6 +363,7 @@ vzctl start ctid
 Vous pouvez naturellement remplacer 8888 par le port que vous souhaitez exposer
 à l’extérieur.
 
+
 ## Image LXC
 
 Utilisez l’interface Web de configuration de LXC pour ajouter et configurer des
@@ -502,6 +431,42 @@ server {
 ```
 
 Une fois Nginx redémarré, votre instance devrait être accessible sur `http://cloud.myhost.com`.
+
+
+## Docker image
+
+
+*Vous aurez besoin d'une version 1.0.1 de [Docker](https://www.docker.com/)
+ou supérieur.*
+
+Vous pouvez essayer Cozy très simplement en téléchargeant l'image officielle
+depuis Docker Hub :
+
+```
+sudo docker pull cozy/full
+```
+
+Si vous souhaitez l'utiliser dans un environnement de production, il est
+recommandé de construite l'image sur votre machine :
+
+```
+sudo docker build -t cozy/full github.com/cozy-labs/cozy-docker
+```
+
+Vous pouvez ensuite lancer l'image avec la commande :
+
+```
+sudo docker run -d -p 80:80 -p 443:443 cozy/full
+```
+
+Il vous est possible de changer les ports affectés l'image, par exemple si
+les ports 80 et 443 sont déjà utilisé :
+```
+sudo docker run -d -p 6500:443 cozy/full
+```
+
+Vous pouvez ensuite accéder à votre Cozy en vous rendant sur
+https://localhost:443 (ou https://localhost:6500 pour le deuxième exemple)
 
 
 ## Héberger une instance de Cozy chez un prestataire
