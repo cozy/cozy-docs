@@ -126,7 +126,87 @@ a2enmod proxy
 a2enmod proxy_http
 service apache2 restart
 ```
+#### Utiliser son propre serveur Nginx
 
+L'installation par défaut de Cozy installe une instance de Nginx, avec une configuration spécifique. Celle-ci redirige toutes les requêtes vers votre instance Cozy.
+Mais vous pourriez avoir besoin d'utiliser votre propre serveur Nginx.
+
+Selon votre fichier `nginx.conf` vous pourriez avoir besoin d'adapter les chemins de fichiers qui suivent.
+
+##### Créer un certificat autp-signé
+
+Tapez les commandes suivantes :
+
+```
+cd /etc/cozy
+openssl dhparam -out ./dh2048.pem -outform PEM -2 2048' #pretty long
+openssl genrsa -out ./server.key 2048')
+openssl req -new -x509 -days 3650 -key ./server.key -out ./server.crt
+chmod 640 server.key
+```
+
+Attention, lors de la dernière commande `openssl`. Les champs ne sont pas obligatoires, *à l'exception* du champ`Common Name`. Il doit correspondre au nom de votre hôte, par exemple: `cozy.mydomain.com`
+
+##### Créer a vitual host
+
+Une fois fait, créez un virtual host spécifique pour votre instance Cozy. Par exemple, en utilisant le fichier `conf.d/cozy.conf` :
+
+```
+server {
+    listen 443;
+    server_name cozy.mydomain.com;
+    ssl_certificate /etc/cozy/server.crt;
+    ssl_certificate_key /etc/cozy/server.key;
+    ssl_dhparam /etc/cozy/dh2048.pem;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout  10m;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers ALL:!aNULL:!eNULL:!LOW:!EXP:!RC4:!3DES:+HIGH:+MEDIUM;
+    ssl_prefer_server_ciphers   on;
+    ssl on;
+
+    gzip_vary on;
+    client_max_body_size 1024M;
+
+    add_header Strict-Transport-Security max-age=2678400;
+
+    location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect http:// https://;
+        proxy_pass http://127.0.0.1:9104;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    access_log /var/log/nginx/cozy.log;
+}
+
+# Always redirect http:// to https://
+server {
+    listen 80;
+    server_name cozy.mydomain.com;
+    return 301 https://$host$request_uri;
+}
+```
+Redémarrez votre serveur
+
+```
+service nginx restart
+```
+cozy.mydomain.com. Bien sûr, les zones DNS doivent être correctement configurées.
+
+##### Cas sépcifique : DavDroid
+
+Si vous comptez synchroniser votre Cozy avec un périphérique Android en utilisant DavDroid, vous allez devoir faire plusieurs choses. Suivez les instructions de [ce lien](https://davdroid.bitfire.at/faq/entry/importing-a-certificate).
+La méthode automatique utilisant `CaDroid` est rapide et efficace.
+
+Attention: comme vous avez mis en place un reverse-proxy pour votre instance Cozy, vous devez spécifier l'URL complète lorsque vous configurez votre compte DavDroid, par exemple: 'https://cozy.mydomain.com/public/sync/principals/me`. Dans le cas contraire, vous rencontrerez cette erreur:
+
+```
+Capacités manquantes. Invalid DAV response. Ni CalDAV ni CarDAV n'est disponible.
+```
 
 #### Essayer Cozy avec Vagrant
 

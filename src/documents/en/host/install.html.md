@@ -124,7 +124,7 @@ a2enmod proxy
 a2enmod proxy_http
 service apache2 restart
 ```
-#### How to use You own Nginx Web server
+#### How to use your own Nginx Web server
 
 The default installation of Cozy comes with a specific configuration of nginx. This redirects every request made to your host to the Cozy proxy. But you may need to use your own server.
 Depending on your `nginx.conf` file, you may adapt the following file paths.
@@ -192,14 +192,14 @@ Then restart your server
 service nginx restart
 ```
 
-You should be able to sync acces your cozy by browsing to cozy.mydomain.com. Of course, the DNS zone has to be properly configured.
+You should be able to acces your cozy by browsing to cozy.mydomain.com. Of course, the DNS zone has to be properly configured.
 
 ##### Specific case : DavDroid
 
 If you intend to sync your own cozy with an Android phone and using DavDroid, you'll have to do several things: follow [this link](https://davdroid.bitfire.at/faq/entry/importing-a-certificate).
 The automatic method using `CaDroid` is fast and efficient.
 
-Be careful : since you enabled a reverse proxy to serve your Cozy instance, you need to specify the full URL while configuring your DavDroid account. If you don't, you will face this error :
+Be careful : since you enabled a reverse proxy to serve your Cozy instance, you need to specify the full URL while configuring your DavDroid account, for instance 'https://cozy.mydomain.com/public/sync/principals/me`. If you don't, you will face this error :
 
 ```
 Missing capatibilities. Invalid DAV response. Neither CalDAV nor CardDAV available.
