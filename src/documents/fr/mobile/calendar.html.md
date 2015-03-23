@@ -5,6 +5,7 @@ category: "mobile"
 menuOrder: 1
 toc: true
 ---
+
 # Synchronisation des agendas
 
 ## Préparer votre Cozy
@@ -87,6 +88,7 @@ Félicitations, votre périphérique mobile est maintenant synchronisé avec vot
 ## iOS
 
 #### Configurez votre compte CalDav
+
 Ouvre les options, sélectionnez "Email, Contacts, Agendas" et cliquez sur "Ajouter un compte" :
 <center>![iOS step 1](/assets/images/mobile/ios/contacts/step1.jpg)</center>
 
@@ -139,9 +141,11 @@ C'est tout ! Vous pouvez gérer vos événements sur votre mobile ou sur votre C
 ## Firefox OS
 
 #### Installation
+
 Il n'y a rien à installer pour commencer avec Firefox OS ! Ouvrez simplement l'application "Calendar".
 
 #### Configuration
+
 Ouvrez le menu et cliquez sur le bouton pour ajouter un nouveau calendrier.
 <center>![Firefox OS step 1](/assets/images/mobile/firefoxos/step1.png)</center>
 
