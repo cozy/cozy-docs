@@ -141,7 +141,7 @@ sudo supervisorctl start cozy-controller
 
 Si vous avez perdu votre mot de passe, la première chose à faire est de cliquer sur le lien `Mot de passe oublié` afin de le recevoir par email.
 
-Si vous hébergez Cozy sur un serveur qui ne dispose pas de serveur email (comme Postfix par exemple), il vous faudra accéder à la page `CouchDB Relax` pour supprimer l'utilisateur courant. Vous avez 2 options:
+Si vous hébergez Cozy sur un serveur qui ne dispose pas de serveur email (comme Postfix par exemple), il vous faudra accéder à la page `Futon Web Admin` pour supprimer l'utilisateur courant. Vous avez 2 options:
 
 #### Vous pouvez accéder à 127.0.0.1 via un navigateur
 
@@ -160,9 +160,9 @@ ssh -L 5984:127.0.0.1:5984 cozy.mydomain.com
 ```
 
 Si vous avez déjà une instance CouchDB lancée sur votre serveur, vous devrez propablement changer le premier `5984`. Choisissez n'importe quel port disponible.
-Vous avez maintenant accès à `http://127.0.0.1:5984_utils/`
+Vous avez maintenant accès à `http://127.0.0.1:5984/_utils/`
 
-Une fois fait, vous devez vous connecter. Le lien de connexion est tout en ba à droite de la page. Vous trouverez vos identifiants CouchDB pour Cozy dans le fichier `/etc/cozy/couchdb.login`. La première ligne correspond au login, la seconde au mot de passe.
+Une fois fait, vous devez vous connecter. Le lien de connexion est tout en bas à droite de la page. Vous trouverez vos identifiants CouchDB pour Cozy dans le fichier `/etc/cozy/couchdb.login`. La première ligne correspond au login, la seconde au mot de passe.
 
 Une fois connecté, utilisez le menu déroulant `View` et choisissez `User -> all`. Vous devriez voir une ligne, que vous pouvez supprimer.
 En rafraîchissant la page de votre Cozy, celui-ci devrait vous proposer de vous enregistrer.

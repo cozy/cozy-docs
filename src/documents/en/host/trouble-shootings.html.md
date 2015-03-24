@@ -114,7 +114,7 @@ sudo supervisorctl start cozy-controller
 
 If you've lost your password, first thing to try is clicking on the `I forgot my password` link to get it sent by email.
 
-If, by any chance, you're hosting cozy on a system with no Email server installed (e.g Postfix), you'll need to access the `CouchDB Relax` page to remove the current user. You now have 2 solutions:
+If, by any chance, you're hosting cozy on a system with no Email server installed (e.g Postfix), you'll need to access the `Futon Web Admin` page to remove the current user. You now have 2 solutions:
 
 #### You can access 127.0.0.1 with a browser
 
@@ -132,7 +132,7 @@ ssh -L 5984:127.0.0.1:5984 cozy.mydomain.com
 ```
 
 If you already have a CouchDB instance running on your own server, you'll probably have to change the first `5984` to any available port.
-You can then browse to `http://127.0.0.1:5984_utils/`
+You can then browse to `http://127.0.0.1:5984/_utils/`
 
 Once this is done, you'll need to login. The `login` link is in the bottom right of the page. You'll find your Cozy CouchDB credentials in `/etc/cozy/couchdb.login`. The first line is your login, the second one your password.
 
