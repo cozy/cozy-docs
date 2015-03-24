@@ -17,7 +17,7 @@ Vous trouverez ici le moyen de résoudre la plupart des soucis qui peuvent surve
 pour chaque application que vous essayez d’installer.
 
 *Solution :* Vérifiez la quantité de mémoire disponible dans votre instance. Les
-informations sur votre instance sont disponibles sur la page de gestion des 
+informations sur votre instance sont disponibles sur la page de gestion des
 applications, à laquelle vous pouvez accéder depuis la page d’accueil. Si votre
 instance n’a plus assez de RAM, vous ne pourrez pas installer de nouvelles
 applications.
@@ -117,7 +117,7 @@ tcp     0     0 0.0.0.0:9002      0.0.0.0:*        LISTEN      997/node
 
 Si vous ré-installez plusieurs fois votre instance Cozy, le mot de passe de la
 base CouchDB et celui utilisé par le système de données de Cozy peuvent devenir
-différents. Pour réinitialiser le mot de passe, éditez le fichier 
+différents. Pour réinitialiser le mot de passe, éditez le fichier
 `/usr/local/etc/couch/local.ini` et mettez en commentaire la dernière ligne
 de la section `admin`, puis effacez le fichier `/etc/cozy/couchdb.login` et
 re-lancez l’installation, ou exécutez :
@@ -136,3 +136,33 @@ sudo supervisorctl stop cozy-controller
 sudo pkill -9 node
 sudo supervisorctl start cozy-controller
 ```
+
+## J'ai perdu mon mot de passe Cozy
+
+Si vous avez perdu votre mot de passe, la première chose à faire est de cliquer sur le lien `Mot de passe oublié` afin de le recevoir par email.
+
+Si vous hébergez Cozy sur un serveur qui ne dispose pas de serveur email (comme Postfix par exemple), il vous faudra accéder à la page `CouchDB Relax` pour supprimer l'utilisateur courant. Vous avez 2 options:
+
+#### Vous pouvez accéder à 127.0.0.1 via un navigateur
+
+Cela devrait être le cas si vous hébergez Cozy sur votre propre serveur.
+
+Naviguez sur `http://localhost:5984/_utils/`
+
+#### Vous utilisez un nom de domaine pour accéder à Cozy
+
+Cela devrait être le cas si vous hébergez Cozy sur un VPS par exemple.
+Pour éviter d'ouvrir l'accès à CouchDB à toutes les IP externes, nous utiliserons SSH.
+Sur le terminal de votre poste, tapez:
+
+```
+ssh -L 5984:127.0.0.1:5984 cozy.mydomain.com
+```
+
+Si vous avez déjà une instance CouchDB lancée sur votre serveur, vous devrez propablement changer le premier `5984`. Choisissez n'importe quel port disponible.
+Vous avez maintenant accès à `http://127.0.0.1:5984_utils/`
+
+Une fois fait, vous devez vous connecter. Le lien de connexion est tout en ba à droite de la page. Vous trouverez vos identifiants CouchDB pour Cozy dans le fichier `/etc/cozy/couchdb.login`. La première ligne correspond au login, la seconde au mot de passe.
+
+Une fois connecté, utilisez le menu déroulant `View` et choisissez `User -> all`. Vous devriez voir une ligne, que vous pouvez supprimer.
+En rafraîchissant la page de votre Cozy, celui-ci devrait vous proposer de vous enregistrer.
