@@ -135,8 +135,8 @@ Input the following commands :
 
 ```
 cd /etc/cozy
-openssl dhparam -out ./dh2048.pem -outform PEM -2 2048' #pretty long
-openssl genrsa -out ./server.key 2048')
+openssl dhparam -out ./dh2048.pem -outform PEM -2 2048
+openssl genrsa -out ./server.key 2048
 openssl req -new -x509 -days 3650 -key ./server.key -out ./server.crt
 chmod 640 server.key
 ```
