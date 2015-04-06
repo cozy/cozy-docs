@@ -12,6 +12,13 @@ transform-compat()
     -o-transform: arguments
     transform: arguments
 
+cover(path)
+    background: url(path) no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
 @font-face
     font-family: main-light
     src: url('/assets/fonts/maven-pro-light-200.otf')
@@ -474,11 +481,7 @@ header
 
 
 #why
-    background: url(/assets/images/board-01.jpg) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+    cover("/assets/images/board-01.jpg")
 
     .line:first-child
         padding-bottom: 40px
@@ -510,11 +513,7 @@ header
 
 
 #leave
-    background: url(/assets/images/freedom.jpg) no-repeat center center fixed
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+    cover("/assets/images/freedom.jpg")
 
     .line:first-child
         background-color: rgba(255, 255, 255, 0.85)
@@ -540,12 +539,8 @@ header
 
 
 #community-cozy
-    background: url(/assets/images/community.jpg) no-repeat center center fixed
-
-    -webkit-background-size: cover
-    -moz-background-size: cover
-    -o-background-size: cover
-    background-size: cover
+    cover("/assets/images/community.jpg")
+    
     margin: 0
 
     .line:first-child
@@ -934,6 +929,22 @@ header
         button
             width: 100%
 
+    #community-cozy
+    #leave
+    #why
+        -webkit-background-size 100%
+        -moz-background-size 100%
+        -o-background-size 100%
+        background-size 100%
+        background #FFF
+        padding 0
+
+        .line:first-child
+            padding-top 40px
+
+    #leave
+        background #DCC
+
 
 @media (max-width: 480px)
 
@@ -941,25 +952,47 @@ header
     .simple
     .highlight
         .line
-            padding: 5px
+            padding 5px
 
             p
+
     #hack
     #leave
+        font-size 16px
+
+        img
+            margin-top 20px
+
+        .pa2
+            padding 20px 0
+            font-weight normal
+            font-size 20px
+
         .button
-            display: none
-            font-size: 16px
+            font-size 12px
+
     #why
+        .tagline
+            font-size 16px
+            font-weight normal
+
+        .pa2
+            font-weight normal
+
         #install-button
-            display: none
-            font-size: 16px
+            font-size 12px
+
+    .gallery img.picto
+        margin-top 60px
 
     button
-        font-size: 16px
+        font-size 16px
+
     .code
-        font-size: 13px
+        font-size 13px
 
     .diagbox
     .diagbox:hover
         p
-            display:none
+            display none
+
