@@ -9,5 +9,7 @@ menuOrder: 4
 # Patch notes
 
 Check all the patch notes for Cozy!
+* [Patch #4 (from 2015/03/23 to 2015/04/03)](/hack/releases/patch-notes-4.html)
+* [Patch #3 (from 2015/03/09 to 2015/03/20)](/hack/releases/patch-notes-3.html)
 * [Patch #2 (from 2015/02/23 to 2015/03/06)](/hack/releases/patch-notes-2.html)
 * [Patch #1 (from 2015/02/09 to 2015/02/20)](/hack/releases/patch-notes-1.html)
