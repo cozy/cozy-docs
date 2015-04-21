@@ -45,7 +45,7 @@ You should also change the superuser credentials (and by the way, you should not
 On your local machine, install Fabric and fabtools:
 
 ```bash
-apt-get install python python-pip python-dev software-properties-common
+apt-get install python python-pip python-dev software-properties-common gcc build-essential sudo
 sudo pip install fabric fabtools
 ```
 
