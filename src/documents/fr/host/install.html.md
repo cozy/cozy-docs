@@ -49,7 +49,7 @@ Vous devriez également modifier les accréditations du super utilisateur (et ut
 Sur votre machine locale, installez Fabric et les fabtools. Par exemple, sur Debian :
 
 ```bash
-apt-get install python python-pip python-dev software-properties-common gcc build-essential sudo wget ca-certificates
+apt-get install python python-pip python-dev software-properties-common gcc build-essential sudo wget ca-certificates openssh-server
 sudo pip install fabric fabtools
 ```
 
