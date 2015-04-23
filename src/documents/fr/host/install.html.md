@@ -133,7 +133,7 @@ Mais vous pourriez avoir besoin d'utiliser votre propre serveur Nginx.
 
 Selon votre fichier `nginx.conf` vous pourriez avoir besoin d'adapter les chemins de fichiers qui suivent.
 
-##### Créer un certificat autp-signé
+##### Créer un certificat auto-signé
 
 Tapez les commandes suivantes :
 
