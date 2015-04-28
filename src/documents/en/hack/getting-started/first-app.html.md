@@ -98,24 +98,22 @@ Go back to `server.js` and change it in the following way:
 ```javascript
 // server.js
 
-/* We add configure directive to tell express to use Jade to
+/* We add directives to tell express to use Jade to
    render templates */
-app.configure(function() {
-  app.set('views', __dirname + '/public');
-  app.engine('.html', require('jade').__express);
-});
+app.set('views', __dirname + '/public');
+app.engine('.html', require('jade').__express);
 
 // Let's define some bookmarks
-var bookmarks = []
+var bookmarks = [];
 bookmarks.push({title: "Cozycloud", url: "https://cozycloud.cc"});
 bookmarks.push({title: "Cozy.io", url: "http://cozy.io"});
 bookmarks.push({title: "My Cozy", url: "http://localhost:9104/"});
 
 // We render the templates with the data
 app.get('/', function(req, res) {
-  params = {
+  var params = {
     "bookmarks": bookmarks
-  }
+  };
   res.render('index.jade', params, function(err, html) {
     res.send(html);
   });
@@ -174,16 +172,19 @@ li
     | )
 ```
 
-Now we can create the corresponding routes in the server:
+Now we can create the corresponding routes in the server, and for that we first need to add a middleware to express. This middleware is [body-parser](https://www.npmjs.com/package/body-parser). It will transform incoming data to a JS object.
+```bash
+npm install body-parser --save
+```
 
 ```javascript
 
 // add the body parser middleware to transform incoming data into a JS object.
-app.configure(function() {
-  app.set('views', __dirname + '/public');
-  app.engine('.html', require('jade').__express);
-  app.use(express.bodyParser());
-});
+app.set('views', __dirname + '/public');
+app.engine('.html', require('jade').__express);
+// To be able to get the data from the POST request, we need to tell express to
+process the parameters.
+app.use(bodyParser().urlencoded({ extended: true }));
 
 // We define a new route that will handle bookmark creation
 app.post('/add', function(req, res) {
@@ -196,14 +197,6 @@ app.get('/delete/:id', function(req, res) {
   bookmarks.splice(req.params.id, 1);
   res.redirect('/');
 });
-```
-
-To be able to get the data from the POST request, we need to tell express to
-process the parameters. Add the following inside the "app.configure" section:
-
-```javascript
-// Allows express to get data from POST requests
-app.use(express.bodyParser());
 ```
 
 Et voilà! You can now add and remove bookmarks. But it still sucks, right? Each
