@@ -1,0 +1,47 @@
+---
+title: "Patch notes 2015/04/30"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 1
+---
+#patch-note
+    h1 Patch note #6
+    p This relates development from 2015/04/20 to 2015/04/30.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+
+    h3 Emails (v0.8.0)
+    ul
+        li.feature Add filter on date, sender and recipient.
+        li.feature Improve refresh button.
+        li.feature Add tooltip on refresh button to display last refresh.
+        li.bug Fix undo action on conversation.
+        li.feature Add signatures for each mail account.
+        li.feature Add tooltips for action button.
+        li.bug Fix infinite scroll with conversation.
+        li.feature Refactor account component.
+        li.feature Refactor mass deletion.
+
+    h3 Photos (v.1.0.12)
+    ul
+        li.feature Add spanish translation.
+        li.bug Remove double import.
+
+    h2 Platforms
+
+    h3 Proxy (v.1.0.15)
+    ul
+        li.bug Update http-proxy to 1.11.0 to comply with eventemitter3.
+
+
+
