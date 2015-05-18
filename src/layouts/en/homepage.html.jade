@@ -230,61 +230,6 @@ html(lang="en")
                     a.button(href="/en/host/uninstall.html")
                         | Uninstall Cozy
 
-
-        section#architecture.line.target.simple
-            .line
-                h4 Cozy is architectured like a PaaS
-            .line.mt6
-                .line
-                    .mod.w100.diagbox
-                        div proxy
-                        p.w100
-                            | The proxy handles all user requests.
-                            | It manages the authentication and routes requests to the right application.
-                .line.grid5
-                    .diagbox
-                        div home / controller
-                        p.w100
-                            | The home app is an UI for the controller.
-                            | It allows to install or remove applications and to set user parameters.
-                    .diagbox
-                        div app 1
-                        p.w100
-                            | This is an application provided by Cozy Cloud or the community.
-                            | It is spawned by the home that finds the sources on a github repo.
-                    .diagbox
-                        div app 2
-                        p.w100
-                            | Your choice: notes, mails, budget, sport coach&hellip;
-                    .diagbox(style='background: transparent') &hellip;
-                    .diagbox
-                        div your app
-                        p.w100
-                            | This is an application you developed. 
-                            | You can spawn it like any other applications.
-                .line
-                    .mod.w100.diagbox
-                        div data system
-                        p.w100
-                            | The data system is a layer between apps and data.
-                            | It manages application permissions and provides a unified API to access to all kind of data: files, documents or indexes.
-                            | It publishes changes, so that applications can share data with each other.
-                .line.grid3
-                    .diagbox
-                        div database
-                        p.w100
-                            | This NoSQL storage stores documents as JSON objects.
-                    .diagbox
-                        div file system
-                        p.w100
-                            | Files are stored directly in the database as attachments of documents.
-                            | A fuse implementation is on the roadmap to make things smoother.
-                    .diagbox
-                        div indexer
-                        p.w100
-                            | A dedicated module handles content indexation through a REST API.
-                            | It's your personal search engine.
-
         section#about.line
             h2.icon-rate &nbsp; About
             p
