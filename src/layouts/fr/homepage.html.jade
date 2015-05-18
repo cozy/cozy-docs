@@ -131,6 +131,58 @@ html(lang="en")
                      a#install-button.button.mt6(href="/fr/host/install.html")
                             | Installez Cozy sur votre machine préférée
 
+        section#contact.simple
+            h4 Restons en contact
+            .line#instance-request
+                p
+                    | Je compte contribuer au projet Cozy en tant que dévelopeur d'application, de bêta-testeur ou de 
+                    | traducteur. Pour cela, j'aimerais bénéficier d'une instance Cozy gratuite avec 1GO de RAM et 10GO de disque
+                    | (disponible en quantité limité, hébergement sur le territoire français).
+                form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-signmeup-EMAIL').email
+                        span email address
+                        input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
+                    label(for='mce-signmeup-MOTIV')
+                        span Je peux aider sur les sujets suivants :
+                        textarea(name="MOTIV", maxlength="255")
+                        span.notice
+                            | texte limité, 
+                            span.counter 255
+                            |  caractères restants
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
+                    button.icon-cloud(type='submit', name='subscribe') Go !
+            .line
+                p
+                    | Vous chechez à contacter l'équipe ?
+                    | Utilisez cet outil robuste et décentralisé appelé e-mail en envoyant un message à 
+                    a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
+                    | .
+
+        section#community-cozy.highlight
+            .line
+                h4
+                    | Rejoignez notre communauté
+                p
+                    | Nous avons besoin de votre aide pour construire le meilleur serveur personnel possible.
+                    | Entrez en contact avec nous pour demander du support technique, partager vos réflexions, intégrer vos contributions ou montrer vos nouvelles applications.
+                .line
+                    p.mod.w33.left
+                        a(href="http://webchat.freenode.net/?channels=cozycloud")
+                           img(src='/assets/images/irc-logo.png', alt='IRC Logo')
+                           br
+                           | <strong>#cozycloud</strong> sur irc.freenode.net
+                    p.mod.w33.left
+                        a(href='https://forum.cozy.io')
+                           img(src='/assets/images/forum.png', alt='Forum Icon')
+                           br
+                           | Forum
+                    p.mod.w33.left
+                        a(href='https://twitter.com/mycozycloud')
+                           img(src='/assets/images/twitter.png', alt='Twitter Logo')
+                           br
+                           | Twitter
+
         section#hack.line.target.simple
             .line
                 h4
@@ -235,69 +287,6 @@ html(lang="en")
                         p.w100
                             | Un module dédié qui gère l'indexation de documents à travers une API REST.
                             | C'est votre moteur de recherche personnel.
-
-        section#community-cozy.highlight
-            .line
-                h4
-                    | Rejoignez notre communauté
-                p
-                    | Nous avons besoin de votre aide pour construire le meilleur serveur personnel possible.
-                    | Entrez en contact avec nous pour demander du support technique, partager vos réflexions, intégrer vos contributions ou montrer vos nouvelles applications.
-                .line
-                    p.mod.w33.left
-                        a(href="http://webchat.freenode.net/?channels=cozycloud")
-                           img(src='/assets/images/irc-logo.png', alt='IRC Logo')
-                           br
-                           | <strong>#cozycloud</strong> sur irc.freenode.net
-                    p.mod.w33.left
-                        a(href='https://forum.cozy.io')
-                           img(src='/assets/images/forum.png', alt='Forum Icon')
-                           br
-                           | Forum
-                    p.mod.w33.left
-                        a(href='https://twitter.com/mycozycloud')
-                           img(src='/assets/images/twitter.png', alt='Twitter Logo')
-                           br
-                           | Twitter
-
-        section#contact.simple
-            h4 Restons en contact
-            .line
-                p
-                    | Tenez-moi au courant de ce qui se passe chez Cozy (newsletter à faible volume, zéro spam, promis !) :
-                form#keep-in-touch(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=e3091db2ef', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                    label(for='mce-keepintouch-EMAIL').email
-                        span email address
-                        input#mce-keepintouch-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
-                    div(style='position: absolute; left: -5000px;')
-                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_e3091db2ef', tabindex='-1', value='')
-                    button.icon-envelope-o(type='submit', name='subscribe') Tenez-moi au courant
-            .line#instance-request
-                p
-                    | Je compte contribuer au projet Cozy en tant que dévelopeur d'application, de bêta-testeur ou de 
-                    | traducteur. Pour cela, j'aimerais bénéficier d'une instance Cozy gratuite avec 1GO de RAM et 10GO de disque
-                    | (disponible en quantité limité, hébergement sur le territoire français).
-                form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                    label(for='mce-signmeup-EMAIL').email
-                        span email address
-                        input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
-                    label(for='mce-signmeup-MOTIV')
-                        span Je peux aider sur les sujets suivants :
-                        textarea(name="MOTIV", maxlength="255")
-                        span.notice
-                            | texte limité, 
-                            span.counter 255
-                            |  caractères restants
-                    div(style='position: absolute; left: -5000px;')
-                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
-                    button.icon-cloud(type='submit', name='subscribe') Go !
-            .line
-                p
-                    | Vous chechez à contacter l'équipe ?
-                    | Utilisez cet outil robuste et décentralisé appelé e-mail en envoyant un message à 
-                    a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
-                    | .
-
 
         section#about.line
             h2.icon-rate &nbsp; À propos 
