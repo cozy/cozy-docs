@@ -234,60 +234,6 @@ html(lang="en")
                         | Désinstaller Cozy
 
 
-        section#architecture.line.target.simple
-            .line
-                h4 Cozy est architecturé comme un PaaS
-            .line.mt6
-                .line
-                    .mod.w100.diagbox
-                        div proxy
-                        p.w100
-                            | Le proxy gère toutes les requêtes de l'utilisateur.
-                            | Il gère l'authentification et redirige les requêtes vers la bonne application.
-                .line.grid5
-                    .diagbox
-                        div home / controller
-                        p.w100
-                            | L'application "Home" est une interface utilisateur pour le controller.
-                            | Elle permet d'installer ou supprimer des applications, ainsi que de définir des paramètres.
-                    .diagbox
-                        div app 1
-                        p.w100
-                            | C'est une application développée par Cozy Cloud ou la communauté.
-                            | Elle est démarrée par la Home qui trouve les sources dans un dépôt Github.
-                    .diagbox
-                        div app 2
-                        p.w100
-                            | Votre choix : notes, emails, budget, coach sportif&hellip;
-                    .diagbox(style='background: transparent') &hellip;
-                    .diagbox
-                        div votre application
-                        p.w100
-                            | C'est une application que vous développez.
-                            | Vous pouvez la démarrer comme n'importe quelle autre application.
-                .line
-                    .mod.w100.diagbox
-                        div data system
-                        p.w100
-                            | Le "data system" est une couche entre les applications et les données.
-                            | Il gère les permissions des applications et fournis une API unifiée pour accéder à toute sortre de données : fichiers, documents ou indexes.
-                            | Il publie un flux de changements pour que les applications puissent partager des données entre elles.
-                .line.grid3
-                    .diagbox
-                        div base de données
-                        p.w100
-                            | C'est un moteur NoSQL qui stocke des documents en tant qu'objets JSON.
-                    .diagbox
-                        div système de fichiers
-                        p.w100
-                            | Les fichiers sont stockées directement dans la base de données comme des pièces jointes de documents.
-                            | Une implémentation FUSE est sur la feuille de route pour faciliter les choses.
-                    .diagbox
-                        div indexeur
-                        p.w100
-                            | Un module dédié qui gère l'indexation de documents à travers une API REST.
-                            | C'est votre moteur de recherche personnel.
-
         section#about.line
             h2.icon-rate &nbsp; À propos 
             p
