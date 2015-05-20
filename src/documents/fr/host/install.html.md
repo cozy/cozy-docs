@@ -555,7 +555,7 @@ https://localhost:443 (ou https://localhost:6500 pour le deuxième exemple)
 
 [Cozycloud](https://cozycloud.cc) est la société qui développe le projet Cozy.
 Nous pouvons vous fournir gratuitement, en échange de retours, une instance.
-Envoyez-nous simplement un message [via le formulaire d'inscription](/fr/#instance-request).
+Envoyez-nous simplement un message [via le formulaire d'inscription](/fr/#contact).
 
 ### Serveurs virtuels
 
