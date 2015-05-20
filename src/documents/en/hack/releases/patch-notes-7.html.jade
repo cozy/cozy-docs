@@ -1,0 +1,63 @@
+---
+title: "Patch notes 2015/05/15"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 1
+---
+#patch-note
+    h1 Patch note #7
+    p This relates development from 2015/05/04 to 2015/05/15.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+
+    h3 Emails (v0.9.0)
+    ul
+      li.feature Improve interface for messages list.
+      li.feature Improve interface for left menu.
+      li.feature Display first unread message in conversation.
+      li.bug Fix account autoconfig reset account form.
+      li.feature Add two different fields for login and adress for IMAP configuration.
+      li.bug Deleting draft leads only one notification.
+      li.bug Don't mark all messages as read when opening a conversation.
+      li.bug Fix wrong in-teply-to header.
+      li.bug Mark messages as read often fails.
+      li.bug Fix '--\n' missing in signature when we reply to a message.
+      li.bug Fix forwarding a message.
+      li.bug Loading indicator changes the menu width.
+      li.feature Action buttons are always visible in messages list.
+
+
+
+    h3 Files (v1.1.7)
+    ul
+      li.bug Fix exception when sending sharing email.
+      li.bug Fix typo in an error message, reported by @carrieje.
+      li.bug Fix domain of sharing links, reported by @adrien80080.
+      li.bug Display more explicit error message when sending of sharing emails fails due to misconfiguration of Postfix.
+      li.bug Fix misc UI bugs reported by @arthurlutz.
+
+
+    h3 Calendar ()
+    ul
+      li.bug Fix calendar export.
+
+
+    h2 Platform
+
+    h3 Data System (v1.0.29)
+    ul
+      li.bug Parse user domain for mail.
+      li.bug Manage empty domain.
+
+
+
