@@ -147,12 +147,13 @@ html(lang="en")
                         span email address
                         input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
                     label(for='mce-signmeup-MOTIV')
-                        span (Optionnel) Je veux aider pour (ex : traduction, développement, rapport de bug) :
-                        textarea(name="MOTIV", maxlength="255")
-                        span.notice
-                            | texte limité, 
-                            span.counter 255
-                            |  caractères restants
+                        span (Optionnel) Je veux aider :
+                        select(name="MOTIV")
+                            option en envoyant des retours
+                            option en envoyant des rapports de bugs
+                            option pour les traductions
+                            option pour le développement d'applications
+
                     div(style='position: absolute; left: -5000px;')
                         input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
                     button.icon-cloud(type='submit', name='subscribe') Go !
