@@ -145,8 +145,12 @@ html(lang="en")
                         span email address
                         input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="email address")
                     label(for='mce-signmeup-MOTIV')
-                        span (Optional) What I want to help with (translation, app development, bug report):
-                        textarea(name="MOTIV", maxlength="255")
+                        span (Optional) What I want to help with :
+                        select(name="MOTIV", maxlength="255")
+                            option(selected="") providing feedback
+                            option bug report
+                            option translation
+                            option app development
                         span.notice
                             | text limited, 
                             span.counter 255
