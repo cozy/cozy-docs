@@ -145,9 +145,10 @@ html(lang="en")
                         span email address
                         input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="email address")
                     label(for='mce-signmeup-MOTIV')
-                        span (Optional) I want to help with :
+                        span (Optional) I want to help with:
                         select(name="MOTIV")
-                            option(selected="") providing feedback
+                            option(value="", disabled="", selected="") ...
+                            option providing feedback
                             option bug reports
                             option translation
                             option app development
@@ -157,7 +158,7 @@ html(lang="en")
             .line
                 p
                     | Need to contact the team for other reasons ?
-                    | Just use this trusty and decentralized tool called email by sending a message to 
+                    | Just send a message to 
                     a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
                     | .
 
