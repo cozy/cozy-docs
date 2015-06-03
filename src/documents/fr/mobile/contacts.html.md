@@ -142,7 +142,7 @@ Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors 
 
 <br />
 <br />
-Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
+Félicitations, votre ordinateur est maintenant synchronisé avec votre Cozy !
 <center>![OSX step 4](/assets/images/mobile/osx/contacts/step4.jpg)</center>
 
 ## Firefox OS
