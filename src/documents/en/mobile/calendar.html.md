@@ -141,12 +141,12 @@ That's it! You can seamlessly manage your events from your mobile and your Cozy.
 ## OXS
 
 Inside Calendar app, click on Calendrier and click on "Add Account" :
-<center>![OSX step 1](/assets/images/mobile/oxs/contacts/step1.jpg)</center>
+<center>![OSX step 1](/assets/images/mobile/oxs/calendar/step1.jpg)</center>
 
 <br />
 <br />
 Then select "Add CalDav Account", in the Calendars section :
-<center>![OSX step 3](/assets/images/mobile/oxs/contacts/step2.jpg)</center>
+<center>![OSX step 2](/assets/images/mobile/oxs/calendar/step2.jpg)</center>
 
 <br />
 <br />
@@ -156,7 +156,7 @@ Finally, fill the form with the credentials you got from Cozy's Sync app:
 * the "Server" input will vary vor each user: yourcozyaddress/public/sync/principals/me
 * the "Username input will always be "me",
 * the "Password" input will be the password you got earlier from Cozy,
-<center>![OSX step 4](/assets/images/mobile/oxs/calendar/step3.jpg)</center>
+<center>![OSX step 3](/assets/images/mobile/oxs/calendar/step3.jpg)</center>
 
 <br />
 <br />
