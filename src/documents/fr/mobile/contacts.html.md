@@ -117,6 +117,16 @@ Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors 
 Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
 <center>![iOS step 5](/assets/images/mobile/ios/contacts/step5.jpg)</center>
 
+## OSX
+
+#### Configurez votre compte CardDav
+Dans le logiciel Contacts, cliquez sur Contacts, "Ajouter un compte" :
+<center>![MacOS step 1](/assets/images/mobile/macos/contacts/step1.jpg)</center>
+
+<br />
+<br />
+Puis, le reste est commun à iOS et MacOS
+
 ## Firefox OS
 
 Firefox OS ne supporte pas encore la synchronisation de contacts (dans sa version 2.1) :(
