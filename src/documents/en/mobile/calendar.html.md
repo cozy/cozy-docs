@@ -138,6 +138,33 @@ Open the menu and click the button to add a new calendar.
 <br />
 That's it! You can seamlessly manage your events from your mobile and your Cozy.
 
+## OXS
+
+Inside Calendar app, click on Calendrier and click on "Add Account" :
+<center>![OSX step 1](/assets/images/mobile/oxs/contacts/step1.jpg)</center>
+
+<br />
+<br />
+Then select "Add CalDav Account", in the Calendars section :
+<center>![OSX step 3](/assets/images/mobile/oxs/contacts/step2.jpg)</center>
+
+<br />
+<br />
+Select the Type of contact : Manual.
+Finally, fill the form with the credentials you got from Cozy's Sync app:
+
+* the "Server" input will vary vor each user: yourcozyaddress/public/sync/principals/me
+* the "Username input will always be "me",
+* the "Password" input will be the password you got earlier from Cozy,
+<center>![OSX step 4](/assets/images/mobile/oxs/calendar/step3.jpg)</center>
+
+<br />
+<br />
+Finally click on create.
+Congratulations, your computer is now synchronized with your Cozy!
+You can now configure the Calendars application to choose which calendar you want to display.
+That's it! You can seamlessly manage your events from your computer and your Cozy.
+
 ## Firefox OS
 
 #### Install
