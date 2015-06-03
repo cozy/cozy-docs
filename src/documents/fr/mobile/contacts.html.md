@@ -121,12 +121,12 @@ Félicitations, votre périphérique mobile est maintenant synchronisé avec vot
 
 #### Configurez votre compte CardDav
 Dans le logiciel Contacts, cliquez sur Contacts, "Ajouter un compte" :
-<center>![MacOS step 1](/assets/images/mobile/osx/contacts/step1.jpg)</center>
+<center>![OSX step 1](/assets/images/mobile/osx/contacts/step1.jpg)</center>
 
 <br />
 <br />
 Puis sélectionnez "Autre compte contacts" :
-<center>![iOS step 2](/assets/images/mobile/osx/contacts/step2.jpg)</center>
+<center>![OSX step 2](/assets/images/mobile/osx/contacts/step2.jpg)</center>
 
 <br />
 <br />
@@ -138,12 +138,12 @@ Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors 
 * le champ "Mot de passe" sera celui que vous avez noté.
 * le champ "Description" permet de choisir un nom pour identifier ce compte. "Cozy" fera très bien l'affaire.
 
-<center>![iOS step 4](/assets/images/mobile/osx/contacts/step4.jpg)</center>
+<center>![OSX step 4](/assets/images/mobile/osx/contacts/step4.jpg)</center>
 
 <br />
 <br />
 Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
-<center>![iOS step 5](/assets/images/mobile/osx/contacts/step5.jpg)</center>
+<center>![OSX step 5](/assets/images/mobile/osx/contacts/step5.jpg)</center>
 
 ## Firefox OS
 
