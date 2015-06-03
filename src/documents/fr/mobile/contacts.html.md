@@ -138,12 +138,12 @@ Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors 
 * le champ "Mot de passe" sera celui que vous avez noté.
 * le champ "Description" permet de choisir un nom pour identifier ce compte. "Cozy" fera très bien l'affaire.
 
-<center>![OSX step 4](/assets/images/mobile/osx/contacts/step4.jpg)</center>
+<center>![OSX step 3](/assets/images/mobile/osx/contacts/step3.jpg)</center>
 
 <br />
 <br />
 Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
-<center>![OSX step 5](/assets/images/mobile/osx/contacts/step5.jpg)</center>
+<center>![OSX step 4](/assets/images/mobile/osx/contacts/step4.jpg)</center>
 
 ## Firefox OS
 
