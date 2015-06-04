@@ -120,7 +120,7 @@ Félicitations, votre périphérique mobile est maintenant synchronisé avec vot
 ## OSX
 
 #### Configurez votre compte CardDav
-Dans le logiciel Contacts, cliquez sur Contacts, "Ajouter un compte" :
+Dans le logiciel Contacts, cliquez sur "Contacts", puis "Ajouter un compte" :
 <center>![OSX step 1](/assets/images/mobile/osx/contacts/step1.jpg)</center>
 
 <br />
@@ -130,7 +130,7 @@ Puis sélectionnez "Autre compte contacts" :
 
 <br />
 <br />
-Assurez vous que la liste déroulante soir bien sur "CardDav".
+Assurez vous que la liste déroulante soit bien sur "CardDav".
 Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors de l'étape 1 :
 
 * le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync
