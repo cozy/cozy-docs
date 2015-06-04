@@ -156,6 +156,7 @@ Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors 
 * le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync/principals/me ;
 * le champ "Nom d'utilisateur" sera toujours "me" ;
 * le champ "Mot de passe" sera celui que vous avez noté ;
+
 <center>![OSX step 3](/assets/images/mobile/osx/calendar/step3.jpg)</center>
 
 <br />
