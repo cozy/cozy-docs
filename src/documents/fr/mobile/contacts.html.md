@@ -117,6 +117,34 @@ Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors 
 Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
 <center>![iOS step 5](/assets/images/mobile/ios/contacts/step5.jpg)</center>
 
+## OSX
+
+#### Configurez votre compte CardDav
+Dans le logiciel Contacts, cliquez sur "Contacts", puis "Ajouter un compte" :
+<center>![OSX step 1](/assets/images/mobile/osx/contacts/step1.jpg)</center>
+
+<br />
+<br />
+Puis sélectionnez "Autre compte contacts" :
+<center>![OSX step 2](/assets/images/mobile/osx/contacts/step2.jpg)</center>
+
+<br />
+<br />
+Assurez vous que la liste déroulante soit bien sur "CardDav".
+Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors de l'étape 1 :
+
+* le champ "Serveur" va changer pour chaque utilisateur : adresse-de-votre-cozy/public/sync
+* le champ "Nom d'utilisateur" sera toujours "me".
+* le champ "Mot de passe" sera celui que vous avez noté.
+* le champ "Description" permet de choisir un nom pour identifier ce compte. "Cozy" fera très bien l'affaire.
+
+<center>![OSX step 3](/assets/images/mobile/osx/contacts/step3.jpg)</center>
+
+<br />
+<br />
+Félicitations, votre ordinateur est maintenant synchronisé avec votre Cozy !
+<center>![OSX step 4](/assets/images/mobile/osx/contacts/step4.jpg)</center>
+
 ## Firefox OS
 
 Firefox OS ne supporte pas encore la synchronisation de contacts (dans sa version 2.1) :(
