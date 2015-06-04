@@ -156,6 +156,7 @@ Finally, fill the form with the credentials you got from Cozy's Sync app:
 * the "Server" input will vary vor each user: yourcozyaddress/public/sync/principals/me
 * the "Username input will always be "me",
 * the "Password" input will be the password you got earlier from Cozy,
+
 <center>![OSX step 3](/assets/images/mobile/osx/calendar/step3.jpg)</center>
 
 <br />
