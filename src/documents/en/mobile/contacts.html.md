@@ -120,12 +120,12 @@ Congratulations, your mobile device is now synchronized with your Cozy!
 ## OSX
 
 #### Configure your CardDav account
-Once the software "Contacts" open, click on Contacts and "Ajouter un compte" :
+Once the software Contacts open, click on "Contacts" and "Add Account":
 <center>![OSX step 1](/assets/images/mobile/osx/contacts/step1.jpg)</center>
 
 <br />
 <br />
-Then select "Add other Account" :
+Then select "Add other Account":
 <center>![OSX step 2](/assets/images/mobile/osx/contacts/step2.jpg)</center>
 
 <br />
