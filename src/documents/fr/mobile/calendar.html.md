@@ -49,15 +49,15 @@ Sélectionnez "Sur le réseau" et cliquez sur "suivant".
 
 <br />
 <br />
-Sélectionnez CalDav et entrez l'adresse d'emplacement de votre agenda (dans cozy), elle est différente pour chaque utilisateur et chaque agenda : https://adresse-de-votre-cozy/public/sync/calendars/me/nom-de-votre-agenda (attention au majuscule du "nom-de-votre-agenda").
+Sélectionnez CalDav et entrez l'adresse d'emplacement de votre agenda (dans cozy) ; elle est différente pour chaque utilisateur et chaque agenda : https://adresse-de-votre-cozy/public/sync/calendars/me/nom-de-votre-agenda (attention aux majuscules du "nom-de-votre-agenda").
 Cochez "Prise en charge du mode hors connexion" si vous souhaitez que Thunderbird mémorise les évènements pour que vous puissiez les conulter sans accès à internet.
 Cliquez sur "suivant".
 <center>![thunderbird step 3](/assets/images/thunderbird/FR/calendar/step3.jpg)</center>
 
 <br />
 <br />
-Entrez un nom pour identifier cet agenda. Le même nom que celui dans cozy, avec la mention cozy est conseillé "nom-de-votre-agenda_cozy".
-Choisissez une couleur (la même que celle de votre agenda dans cozy est conseillée). Choisissez aussi si vous souhaitez afficher les alarmes de ce calendrier, et enfin, sélectionnez l'adresse de courriel en lien avec l'activité de cet agenda.
+Entrez un nom pour identifier cet agenda. Il est conseillé d'utiliser le même nom que celui de votre cozy, avec le suffixe cozy : "nom-de-votre-agenda_cozy".
+Choisissez une couleur (la même que celle de votre agenda dans cozy est conseillée). Choisissez aussi si vous souhaitez afficher les alarmes de cet agenda, et enfin, sélectionnez l'adresse de courriel en lien avec l'activité de cet agenda.
 Cliquez sur "suivant".
 <center>![thunderbird step 4](/assets/images/thunderbird/FR/calendar/step4.jpg)</center>
 
