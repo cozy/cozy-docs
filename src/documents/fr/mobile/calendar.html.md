@@ -40,26 +40,26 @@ Il est nécessaire d'installer le module complémentaire Lightning  : https://ad
 #### Configurez votre compte CalDav
 
 Dans "Fichier", sélectionnez "Nouveau", et "Agenda...".
-<center>![thunderbird step 1](/assets/images/thunderbird/calendar/step1.jpg)</center>
+<center>![thunderbird step 1](/assets/images/thunderbird/FR/calendar/step1.jpg)</center>
 
 <br />
 <br />
 Sélectionnez "Sur le réseau" et cliquez sur "suivant".
-<center>![thunderbird step 2](/assets/images/thunderbird/calendar/step2.jpg)</center>
+<center>![thunderbird step 2](/assets/images/thunderbird/FR/calendar/step2.jpg)</center>
 
 <br />
 <br />
 Sélectionnez CalDav et entrez l'adresse d'emplacement de votre agenda (dans cozy), elle est différente pour chaque utilisateur et chaque agenda : https://adresse-de-votre-cozy/public/sync/calendars/me/nom-de-votre-agenda (attention au majuscule du "nom-de-votre-agenda").
 Cochez "Prise en charge du mode hors connexion" si vous souhaitez que Thunderbird mémorise les évènements pour que vous puissiez les conulter sans accès à internet.
 Cliquez sur "suivant".
-<center>![thunderbird step 3](/assets/images/thunderbird/calendar/step3.jpg)</center>
+<center>![thunderbird step 3](/assets/images/thunderbird/FR/calendar/step3.jpg)</center>
 
 <br />
 <br />
 Entrez un nom pour identifier cet agenda. Le même nom que celui dans cozy, avec la mention cozy est conseillé "nom-de-votre-agenda_cozy".
 Choisissez une couleur (la même que celle de votre agenda dans cozy est conseillée). Choisissez aussi si vous souhaitez afficher les alarmes de ce calendrier, et enfin, sélectionnez l'adresse de courriel en lien avec l'activité de cet agenda.
 Cliquez sur "suivant".
-<center>![thunderbird step 4](/assets/images/thunderbird/calendar/step4.jpg)</center>
+<center>![thunderbird step 4](/assets/images/thunderbird/FR/calendar/step4.jpg)</center>
 
 <br />
 <br />
@@ -71,7 +71,7 @@ Lorsque Thunderbird va vouloir synchroniser votre agenda pour la première fois,
 * le champ "Utilisateur" sera toujours "me" ;
 * le champ "Mot de passe" sera celui que vous avez noté ;
 * Cochez la cas "Utiliser le gestionnaire de mots de passe pour se souvenir de ce mot de passe" afin de ne plus avoir à le renseigner à chaque synchronisation.
-<center>![thunderbird step 5](/assets/images/thunderbird/calendar/step5.jpg)</center>
+<center>![thunderbird step 5](/assets/images/thunderbird/FR/calendar/step5.jpg)</center>
 
 <br />
 <br />
