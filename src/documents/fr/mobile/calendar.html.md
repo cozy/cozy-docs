@@ -70,7 +70,7 @@ Cliquez sur "Terminer". Votre agenda est bien créé dans Thunderbird.
 Lorsque Thunderbird va vouloir synchroniser votre agenda pour la première fois, il va vous demander vos identifiants.
 * le champ "Utilisateur" sera toujours "me" ;
 * le champ "Mot de passe" sera celui que vous avez noté ;
-* Cochez la cas "Utiliser le gestionnaire de mots de passe pour se souvenir de ce mot de passe" afin de ne plus avoir à le renseigner à chaque synchronisation.
+* Cochez la case "Utiliser le gestionnaire de mots de passe pour se souvenir de ce mot de passe" afin de ne plus avoir à le renseigner à chaque synchronisation.
 <center>![thunderbird step 5](/assets/images/thunderbird/FR/calendar/step5.jpg)</center>
 
 <br />
