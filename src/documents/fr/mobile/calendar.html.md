@@ -35,7 +35,7 @@ Consultez la section correspondant au système de votre périphérique pour cont
 
 #### Installation
 
-Il est nécessaire d'installer le Module complémentaire Lightning  : https://addons.mozilla.org/fr/thunderbird/addon/lightning/
+Il est nécessaire d'installer le module complémentaire Lightning  : https://addons.mozilla.org/fr/thunderbird/addon/lightning/
 
 #### Configurez votre compte CalDav
 
@@ -51,13 +51,13 @@ Sélectionnez "Sur le réseau" et cliquez sur "suivant".
 <br />
 Sélectionnez CalDav et entrez l'adresse d'emplacement de votre agenda (dans cozy), elle est différente pour chaque utilisateur et chaque agenda : https://adresse-de-votre-cozy/public/sync/calendars/me/nom-de-votre-agenda (attention au majuscule du "nom-de-votre-agenda").
 Cochez "Prise en charge du mode hors connexion" si vous souhaitez que Thunderbird mémorise les évènements pour que vous puissiez les conulter sans accès à internet.
-Cliquez sur "suivant"
+Cliquez sur "suivant".
 <center>![thunderbird step 3](/assets/images/thunderbird/calendar/step3.jpg)</center>
 
 <br />
 <br />
 Entrez un nom pour identifier cet agenda. Le même nom que celui dans cozy, avec la mention cozy est conseillé "nom-de-votre-agenda_cozy".
-Choisissez une couleur (la même que celle de votre agenda dans cozy est conseillée), si vous souhaitez afficher les alarmes de ce calendrier et l'adresse de courriel en lien avec l'activité de cet agenda.
+Choisissez une couleur (la même que celle de votre agenda dans cozy est conseillée). Choisissez aussi si vous souhaitez afficher les alarmes de ce calendrier, et enfin, sélectionnez l'adresse de courriel en lien avec l'activité de cet agenda.
 Cliquez sur "suivant".
 <center>![thunderbird step 4](/assets/images/thunderbird/calendar/step4.jpg)</center>
 
@@ -70,14 +70,13 @@ Cliquez sur "Terminer". Votre agenda est bien créé dans Thunderbird.
 Lorsque Thunderbird va vouloir synchroniser votre agenda pour la première fois, il va vous demander vos identifiants.
 * le champ "Utilisateur" sera toujours "me" ;
 * le champ "Mot de passe" sera celui que vous avez noté ;
-* Cochez la cas "Utiliser le gestionnaire de mots de passe pour se souvenir de ce mot de passe" afin de ne plus avoir à le signaler à chaque synchronisation.
+* Cochez la cas "Utiliser le gestionnaire de mots de passe pour se souvenir de ce mot de passe" afin de ne plus avoir à le renseigner à chaque synchronisation.
 <center>![thunderbird step 5](/assets/images/thunderbird/calendar/step5.jpg)</center>
 
 <br />
 <br />
 
 Félicitations, votre ordinateur est maintenant synchronisé avec votre Cozy !
-Vous pouvez à présent configurer l'application Calendrier pour choisir quels agendas afficher.
 C'est tout ! Vous pouvez gérer vos événements sur votre ordinateur ou sur votre Cozy de façon transparente.
 
 ## Android
