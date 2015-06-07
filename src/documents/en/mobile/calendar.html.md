@@ -30,53 +30,6 @@ You are now ready to synchronize your devices!
 
 Check the section relevant to your device's system to continue.
 
-## Thunderbird (Windows, OSX et GNU/Linux)
-
-#### Install
-
-It is necessary to install the addon Lightning: https://addons.mozilla.org/en-US/thunderbird/addon/lightning/
-
-#### Configure
-
-In "File", select "New", and "Calendar...".
-<center>![thunderbird step 1](/assets/images/thunderbird/EN/calendar/step1.jpg)</center>
-
-<br />
-<br />
-Select "On the Network" and click on "Next".
-<center>![thunderbird step 2](/assets/images/thunderbird/EN/calendar/step2.jpg)</center>
-
-<br />
-<br />
-Select "CalDav" and indicate the location of your calendar (from cozy), it will vary vor each user and each calendar : https://yourcozyaddress/public/sync/calendars/me/name-of-your-calendar (be carefull about capital letter of  "name-of-your-calendar").
-Tick "Offline Support" if you wish that Thunderbird memorise your event to be able to consult them when you don't have internet.
-Click on "Next".
-<center>![thunderbird step 3](/assets/images/thunderbird/EN/calendar/step3.jpg)</center>
-
-<br />
-<br />
-Choose a name to identify your cozy calendar. It's advised to choose the same name than on your cozy, mentioning it comes from your cozy "name-of-your-calendar_cozy".
-Choose a color (the same than on your cozy make it easier). Choose also if you want to display alarms of this calendar, and finally, select the email address you want to link to this agenda.
-Click on "Next".
-<center>![thunderbird step 4](/assets/images/thunderbird/EN/calendar/step4.jpg)</center>
-
-<br />
-<br />
-Click on "Finish". Your calendar is now created in Thunderbird.
-
-#### First synchronisation
-
-As soon as Thunderbird will try to synchronise your calendar the first time, it will ask for your calendar's credentials.
-* the "User Name" input will always be "me",
-* the "Password" input will be the password you got earlier from Cozy,
-* Tick the box "Use Password Manager to remember this password." if you don't want to indicate it every time Thunderbird will synchronise your calendars.
-<center>![thunderbird step 5](/assets/images/thunderbird/EN/calendar/step5.jpg)</center>
-
-<br />
-<br />
-Congratulations, your computer is now synchronized with your Cozy!
-That's it! You can seamlessly manage your events from your computer and your Cozy.
-
 ## Android
 
 #### Install
@@ -245,6 +198,54 @@ That's it! Your calendars will now be synchronized on a regular basis (default i
 <br />
 <br />
 Congratulations, your mobile device is now synchronized with your Cozy!
+
+## Thunderbird (Windows, OSX et GNU/Linux)
+
+#### Install
+
+It is necessary to install the addon Lightning: https://addons.mozilla.org/en-US/thunderbird/addon/lightning/
+
+#### Configure
+
+In "File", select "New", and "Calendar...".
+<center>![thunderbird step 1](/assets/images/mobile/thunderbird/en/calendar/step1.jpg)</center>
+
+<br />
+<br />
+Select "On the Network" and click on "Next".
+<center>![thunderbird step 2](/assets/images/mobile/thunderbird/en/calendar/step2.jpg)</center>
+
+<br />
+<br />
+Select "CalDav" and indicate the location of your calendar (from cozy), it will vary vor each user and each calendar : https://yourcozyaddress/public/sync/calendars/me/name-of-your-calendar (be carefull about capital letter of  "name-of-your-calendar").
+Tick "Offline Support" if you wish that Thunderbird memorise your event to be able to consult them when you don't have internet.
+Click on "Next".
+<center>![thunderbird step 3](/assets/images/mobile/thunderbird/en/calendar/step3.jpg)</center>
+
+<br />
+<br />
+Choose a name to identify your cozy calendar. It's advised to choose the same name than on your cozy, mentioning it comes from your cozy "name-of-your-calendar_cozy".
+Choose a color (the same than on your cozy make it easier). Choose also if you want to display alarms of this calendar, and finally, select the email address you want to link to this agenda.
+Click on "Next".
+<center>![thunderbird step 4](/assets/images/mobile/thunderbird/en/calendar/step4.jpg)</center>
+
+<br />
+<br />
+Click on "Finish". Your calendar is now created in Thunderbird.
+
+#### First synchronisation
+
+As soon as Thunderbird will try to synchronise your calendar the first time, it will ask for your calendar's credentials.
+* the "User Name" input will always be "me",
+* the "Password" input will be the password you got earlier from Cozy,
+* Tick the box "Use Password Manager to remember this password." if you don't want to indicate it every time Thunderbird will synchronise your calendars.
+<center>![thunderbird step 5](/assets/images/mobile/thunderbird/en/calendar/step5.jpg)</center>
+
+<br />
+<br />
+Congratulations, your computer is now synchronized with your Cozy!
+That's it! You can seamlessly manage your events from your computer and your Cozy.
+
 
 ## Related resources
 * [Forum discussion](https://forum.cozy.io/)
