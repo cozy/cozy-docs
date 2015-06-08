@@ -140,12 +140,12 @@ That's it! You can seamlessly manage your events from your mobile and your Cozy.
 
 ## OSX
 
-Inside Calendar app, click on Calendar and click on "Add Account":
+Inside Calendar app, click on "Calendar" and click on "Add Account":
 <center>![OSX step 1](/assets/images/mobile/osx/calendar/step1.jpg)</center>
 
 <br />
 <br />
-Then select "Add CalDav Account", in the Calendars section:
+Then select "Add CalDav Account", and click on "Next":
 <center>![OSX step 2](/assets/images/mobile/osx/calendar/step2.jpg)</center>
 
 <br />

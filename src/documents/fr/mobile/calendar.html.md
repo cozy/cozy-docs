@@ -144,7 +144,7 @@ Dans l'application Calendrier, cliquez sur "Calendrier", puis sur "Ajouter un co
 
 <br />
 <br />
-Puis, sélectionnez ensuite "Ajouter un compte CalDav..." dans la section Contacts :
+Sélectionnez ensuite "Ajouter un compte CalDav..." et cliquez sur "Continuez" :
 <center>![OSX step 2](/assets/images/mobile/osx/calendar/step2.jpg)</center>
 
 <br />
