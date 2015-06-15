@@ -17,9 +17,9 @@ Vous devez être sous **Debian 8 Jessie (stable)** pour pouvoir suivre les étap
 
 <br>
 
-1. Assurez-vous que le paquet `ca-certificates` est bien installé
+1. Assurez-vous que les paquets `ca-certificates` et `apt-transport-https` sont bien installés
     ```
-    apt-get install ca-certificates
+    apt-get install ca-certificates apt-transport-https
     ```
 2. Importez la clé publique du dépôt
     ```

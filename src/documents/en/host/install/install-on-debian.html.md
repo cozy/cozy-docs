@@ -17,9 +17,9 @@ You need **Debian 8 Jessie (stable)** in order to proceed to theses steps.
 
 <br>
 
-1. Make sure the package `ca-certificates` is properly installed
+1. Make sure that `ca-certificates` and `apt-transport-https` are properly installed
     ```
-    apt-get install ca-certificates
+    apt-get install ca-certificates apt-transport-https
     ```
 2. Import the repository public key
     ```
