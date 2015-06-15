@@ -45,7 +45,7 @@ html(lang='en')
                     - var className = ""
                     - if(document.category == 'host')
                         - className = 'selected'
-                    a(class="#{className}", href="/en/host/install.html") Install
+                    a(class="#{className}", href="/en/host/install/") Install
                 li
                     - var className = ""
                     - if(document.category == 'mobile')
@@ -91,10 +91,9 @@ html(lang='en')
       footer#footer.line.pam.row(role="contentinfo")
         a(href="https://github.com/cozy") Github
         a(href="irc://irc.freenode.net/cozycloud") IRC
-        a(href="mailto:contact@cozycloud.cc") Contact
         a(href="https://forum.cozy.io")
             | Mailing-list
-        a(href="https://cozycloud.cc") Cozy Cloud
+        a(href="mailto:contact@cozycloud.cc") Contact
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
 
