@@ -92,12 +92,9 @@ I want to enjoy a free Cozy instance with 2GB of RAM and 20GB of disk space
     <option>app development</option>
 </select>
 <div style='position: absolute; left: -5000px;'>
-<input type='text' name='b_e25ec3b4f8c222291f7d77997_a9da8da0de' tabindex='-1' value='' />
-    <button class="icon-cloud" type='submit' name='subscribe'>
-       Sign me up!
-    </button>
-<p>
-</p>
+<button class="icon-cloud" type='submit' name='subscribe'>
+   Sign me up!
+</button>
 </div>
 </form>
 
