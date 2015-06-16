@@ -66,4 +66,38 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
 
 <br>
 
-#### Vous pouvez également demander une <a href="/fr/#contact" target="_blank">instance Cozy gratuite</a>, hébergée sur nos serveurs !
+## Demandez une instance d'essai
+
+
+Je veux profiter d'une instance gratuite avec 20 Go de disque dur et 2Go de
+RAM. Cette instance est hébergée en France (quantitée limitée).
+
+<form id="sign-me-up"
+      action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de'
+      method='post' 
+      name='mc-embedded-subscribe-form' target='_blank' novalidate=''>
+
+<label for='mce-signmeup-EMAIL'>
+<span> email address: </span>
+</label>
+<input id="mce-signmeup-EMAIL" type="email" name="EMAIL" placeholder="email address">
+<label for='mce-signmeup-MOTIV'>
+<br />
+<br />
+<span>(Optional) I want to help with:</span>
+<select name="MOTIV">
+    <option value="" disabled="" selected=""> ...
+    <option>providing feedback</option>
+    <option>bug reports</option>
+    <option>translation</option>
+    <option>app development</option>
+</select>
+<input type='text' name='b_e25ec3b4f8c222291f7d77997_a9da8da0de' tabindex='-1' value='' />
+    <button class="icon-cloud" type='submit' name='subscribe'>
+       Sign me up!
+    </button>
+<p>
+</p>
+</div>
+</form>
+

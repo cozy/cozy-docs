@@ -19,11 +19,11 @@ Vous devez être sous **Ubuntu 14.04 Trusty Tahr** pour pouvoir suivre les étap
 
 1. Assurez-vous que les paquets `ca-certificates` et `apt-transport-https` sont bien installés
     ```
-    apt-get install ca-certificates apt-transport-https
+    sudo apt-get install ca-certificates apt-transport-https
     ```
 2. Importez la clé publique du dépôt
     ```
-    wget -O - http://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
+    sudo wget -O - http://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
     ```
 3. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
@@ -32,6 +32,6 @@ Vous devez être sous **Ubuntu 14.04 Trusty Tahr** pour pouvoir suivre les étap
     ```
 4. Installez Cozy
     ```
-    apt-get update
-    apt-get install cozy
+    sudo apt-get update
+    sudo apt-get install cozy
     ```
