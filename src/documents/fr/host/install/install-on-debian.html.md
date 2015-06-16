@@ -23,11 +23,11 @@ Vous devez être sous **Debian 8 Jessie (stable)** pour pouvoir suivre les étap
     ```
 2. Importez la clé publique du dépôt
     ```
-    wget -O - http://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
+    wget -O - http://debian.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
     ```
 3. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
-    echo 'deb http://debian.cozycloud.cc/debian jessie main' \
+    echo 'deb [arch=amd64] http://debian.cozycloud.cc/debian jessie main' \
     > /etc/apt/sources.list.d/cozy.list
     ```
 4. Installez Cozy
