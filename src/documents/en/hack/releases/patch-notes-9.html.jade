@@ -1,0 +1,80 @@
+---
+title: "Patch notes 2015/05/15"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 1
+---
+#patch-note
+    h1 Patch note #9
+    p This relates development from 2015/06/01 to 2015/06/12.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+
+    h3 Emails (v0.9.1)
+    ul
+      li.feature Contact labels on the same line than input in mail composition.
+      li.feature Improve mailbox refresh.
+      li.feature Improve conversation management.
+      li.feature Improve contact tooltip UX.
+      li.feature Refactor application component.
+      li.feature Refresh mailbox when open it.
+      li.bug Fix mails displayed when a filter is desactivated.
+
+
+    h3 Calendar (v1.0.15)
+    ul
+      li.feature Improve default colors for new calendars.
+      li.feature Improve "Modify calendar" label.
+      li.bug Popover is not closed when month is changer.
+      li.bug Remove moment deprecation warning.
+      li.feature Improve calendar's color picker.
+      li.feature Improve calendar's header.
+      li.feature Improve navigation between screens.
+      li.feature Improve list view.
+      li.feature Rework Sync screen.
+      li.bug Remove JS warning: Specified value does not conform to the required format.
+      li.bug 'Email update title' not translated in english.
+      li.bug Fix missing icons in top bar.
+      li.bug 'Today' is not automatically updated.
+
+
+    h2 Platform
+
+    h3 Home
+    ul
+      li.feature Lot of UI updates.
+      li.feature change main color set .
+      li.feature Capability to select a background.
+      li.feature Automatically organize apps in groups.
+      li.feature Allow  to change the main background.
+      li.feature You can now display the logs of the applications.
+      li.feature Add a feedback form in help section.
+      li.feature Allow to display favorite apps on top of home page.
+      li.feature Button to update an application is only displayed when an update is available.
+      li.feature Display an animation while applications are launching.
+      li.bug Add an error message when trying to set an empty password.
+      li.bug Fix a bug that occured in Chrome after closing the first tour wizard.
+
+    h2 Development tools
+    h3 VM image (v0.11.0)
+    ul
+        li.feature Add mailcatcher.
+    h3 Documentation
+    ul
+        li.feature Add Digital Ocean tutorial.
+        li.feature Add Debian installation.
+        li.feature Add Ubuntu installation.
+        li.feature Improve installation documentation.
+
+
+
