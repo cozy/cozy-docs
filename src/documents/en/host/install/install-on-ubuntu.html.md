@@ -23,11 +23,11 @@ You need **Ubuntu 14.04 Trusty Tahr** in order to proceed to theses steps.
     ```
 2. Import the repository public key
     ```
-    wget -O - http://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | sudo apt-key add -
+    wget -O - https://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | sudo apt-key add -
     ```
 3. Add the Cozy repository to your software sources
     ```
-    sudo echo 'deb [arch=amd64] http://ubuntu.cozycloud.cc/debian trusty main' \
+    sudo echo 'deb https://ubuntu.cozycloud.cc/debian trusty main' \
     > /etc/apt/sources.list.d/cozy.list
     ```
 4. Install Cozy
