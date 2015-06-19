@@ -15,6 +15,11 @@ toc: false
 
 Vous devez être sous **Ubuntu 14.04 Trusty Tahr** pour pouvoir suivre les étapes ci-dessous.
 
+```
+root@ubuntu-14-04:~# lsb_release -c
+Codename:     trusty
+```
+
 <br>
 
 1. Assurez-vous que les paquets `ca-certificates` et `apt-transport-https` sont bien installés
