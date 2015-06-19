@@ -15,6 +15,11 @@ toc: false
 
 Vous devez être sous **Debian 8 Jessie (stable)** pour pouvoir suivre les étapes ci-dessous.
 
+```
+root@debian-8:~# lsb_release -c
+Codename:     jessie
+```
+
 <br>
 
 1. Assurez-vous que les paquets `ca-certificates` et `apt-transport-https` sont bien installés
