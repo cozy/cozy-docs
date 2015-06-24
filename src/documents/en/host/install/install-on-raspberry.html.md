@@ -34,10 +34,10 @@ First, get the image archive:
 
 ```bash
 # Download the image (~ 650MB)
-wget http://files.cozycloud.cc/2015-02-19-cozy-raspberry-pi2.img.7z
+wget http://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
 
 # Uncompress it
-7zr e 2015-02-19-cozy-raspberry-pi2.img.7z
+7zr e 2015-06-16-cozy-raspberry-pi2.img.7z
 ```
 
 Then, find your SD card reference - we are assuming it is */dev/sdc* here -
@@ -46,7 +46,7 @@ and make a low-level dump of the image onto your card using `dd`.
 **WARNING:** This operation will erase all data previously stored on the card.
 
 ```bash
-sudo dd bs=4M if=2015-02-19-cozy-raspberry-pi2.img of=/dev/sdc
+sudo dd bs=4M if=2015-06-16-cozy-raspberry-pi2.img of=/dev/sdc
 ```
 
 On **Windows**, you can use a tool like [Win32 Disk Imager](http://sourceforge.net/projects/win32diskimager/)

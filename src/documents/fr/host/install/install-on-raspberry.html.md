@@ -35,10 +35,10 @@ Commencez par télécharger l’archive :
 
 ```bash
 # Téléchargez l’image (environ 650MB)
-wget http://files.cozycloud.cc/2015-02-19-cozy-raspberry-pi2.img.7z
+wget http://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
 
 # Décompressez-la
-7zr e 2015-02-19-cozy-raspberry-pi2.img.7z
+7zr e 2015-06-16-cozy-raspberry-pi2.img.7z
 ```
 
 Recherchez ensuite où est montée votre carte SD. Supposons que ce soit sur
@@ -51,7 +51,7 @@ performances.
 données présentes sur la carte.
 
 ```bash
-sudo dd bs=4M if=2015-02-19-cozy-raspberry-pi2.img of=/dev/sdc
+sudo dd bs=4M if=2015-06-16-cozy-raspberry-pi2.img of=/dev/sdc
 ```
 
 Insérez à présent la carte SD dans le lecteur de votre Raspberry Pi.
