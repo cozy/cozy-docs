@@ -8,7 +8,7 @@ toc: true
 
 # Tutorial 2: Play with the Data System
 
-We've just introduced you to the architecture of Cozy and you may want to know more about
+We've just introduced you to the architecture of Cozy. You may want to know more about
 the Data System, and to play with it. Don't forget that if you are stuck or have any question, you can visit us on IRC (irc.freenode.org, #cozycloud).
 
 Just a quick reminder, the Data System (DS) allows you to access the database,
@@ -36,7 +36,7 @@ because it is where the Data System is living.
 ## Playing with the data
 
 Accessing the data within the Data System can be achieved in two ways: by using
-an ODM we've developed a driver for, or by requesting directly the Data System
+an ODM we've developed a driver for, or by directly requesting the Data System
 API.
 
 That being said, using the ODM has a big advantage: you can still use your app
@@ -47,7 +47,7 @@ switching the ODM's driver. At Cozycloud, we use the ODM in all our apps!
 
 ODM stands for Object Document Mapper, it's like an ORM (Object Relational
 Mapper) but for NoSQL. An O(D|R)M abstracts the storage engine, as a result you
-can switch the storage engine (e.g. from CouchDB to Pouchdb) without
+can switch the storage engine (e.g. from CouchDB to PouchDB) without
 changing your code.
 
 Enough talking, let's see how we can use it in our application.
@@ -110,16 +110,17 @@ app.get('/delete/:id', function(req, res) {
   });
 });
 ```
-The code is pretty straightforward. However you must be aware that we don't do
-security checks and data validation in the tutorial, because it is not the
-point. If you want to know how to do it, please ask us on IRC or by email
-(contact[at]cozycloud.cc).
+The code is pretty straightforward. However, you must be aware that we aren't
+doing any security checks or data validation in this tutorial, to keep things simple.
+We will be writing a full tutorial about security soon. In the meanwhile, if you're
+curious about security issues, feel free to email us (contact[at]cozycloud.cc)
+or start a discussion at the [Cozy forum](https://forum.cozy.io/).
 
 
 ### Listing the bookmarks
 
 Now that we can add and remove bookmarks, we should also see how we retrieve them.
-It's a bit trickier if you don't know map/reduce, but you will figure out that
+It's a bit trickier if you don't know map/reduce, but you will find that
 the basics are easy.
 
 In order to retrieve data, you need to declare "requests" that will allow CouchDB to
