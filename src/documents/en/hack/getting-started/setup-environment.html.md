@@ -8,12 +8,11 @@ toc: true
 
 # Setting up the environment
 
-Welcome to the first step to get you started: the development environment setup
-process.
+Welcome to the first step: setting up your development environment.
 
-Since Cozy is built on many software bricks, we wrapped it into an easy-to-use
-virtual machine, so you don't pollute your local system. That also means you can
-use the operation system you like (well, there are obviously issues on Windows)!
+Since Cozy is made from several pieces, we wrapped it into an easy-to-use
+virtual machine, so you don't clutter your local system. That also means you can
+use the operation system you like! (Well, there are obviously issues on Windows.)
 
 ## Installing dependencies
 
@@ -30,9 +29,9 @@ If you already have NodeJS installed, but not the 0.10.26 version, you can use a
 
 #### Git (<a href="http://git-scm.com/book/en/Getting-Started-Installing-Git" target="_blank">download</a>)
 
-Git is a control version tool that is now very common. We use it in combination
-with [Github](https://github.com) that allows you to store online your
-repository and much more!
+Git is a version control tool that is now very common. We use it in combination
+with [Github](https://github.com), which allows you to store your repository online
+and much more!
 
 If you don't want access to the specific features of Cozy Cloud, you can stop
 here and jump to our [first tutorial](/hack/getting-started/first-app.html).
@@ -64,7 +63,7 @@ The `cozy-dev` tool will allow you to create and manage a virtual machine with a
 ### Initializing and starting the virtual machine
 
 The next step is to get your virtual machine. Basically, you are going to
-have a linux running on your computer with all a Cozy needs to work on already
+have a Linux-based OS running on your computer with all a Cozy needs to work already
 installed and configured.
 
 To help you managing the VM, the Cozy Manager comes to the rescue.
@@ -78,9 +77,8 @@ Now you can use the Cozy Manager to initialize the VM by running:
 ``` bash
 cozy-dev vm:init
 ```
-This will download the base box file (~500MB) and a custom configuration ([see
-it on
-Github](https://github.com/cozy/cozy-setup/blob/master/dev/Vagrantfile)).
+This will download the base box file (~500MB) and a custom configuration
+([see it on Github](https://github.com/cozy/cozy-setup/blob/master/dev/Vagrantfile)).
 Then the VM will be created. The whole process will take about 5-10 minutes
 (depending on your internet connection and your computer).
 
@@ -90,7 +88,7 @@ cozy-dev vm:start
 cozy-dev vm:status
 ```
 
-We advise you to update the VM the first time you start it (and regularly),
+We advise you to update the VM the first time you start it (and regularly after that),
 because we don't update the base box each time we improve or fix a bug in the
 Cozy platform:
 ```bash
@@ -111,27 +109,29 @@ You are now ready to [write your first application](/hack/getting-started/first-
 
 The first thing to try is update the VM with cozy-dev: `cozy-dev vm:update`
 
-It will fetch the last changes and may fixe some problems. Then you can try to start your VM again with `cozy-dev vm:start`
+It will fetch the last changes and may fix some problems. Then you can try to start your VM again with `cozy-dev vm:start`
 
 ### My VM displays a lot of 'SSH Timeout'
 
 That can be "normal". It occurs when the network is not yet configured on the VM.
 You can force Virtual Box to open its GUI and check what is happening.
 
-Stop the vm with `cozy-dev vm:stop`, then open the `Vagrantfile` and paste
+Stop the vm with `cozy-dev vm:stop`, then open the `Vagrantfile`.
+Look for where it says `Vagrant.configure("2") do |config|`
+and underneath that, paste this:
 
-```bash
+```
 config.vm.provider :virtualbox do |vb|
   vb.gui = true
 end
 ```
 
-after `Vagrant.configure("2") do |config|`. You can now `cozy-dev vm-start` and have the Virtual Box GUI. what you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
+You can now rung `cozy-dev vm-start` and have the Virtual Box GUI. What you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
 
 ### It still doesn't work
 
 If your application only need access to the data-system, you can clone the data-system repository and use it standalone.
-You'll need to have couchdb installed (with apt, or homebrew etc.) with its dependencies.
+You'll need to install couchdb along with its dependencies.
 
 ```bash
 git clone https://github.com/cozy/cozy-data-system.git
@@ -140,7 +140,8 @@ npm install
 coffee server.coffee
 ```
 
-Your data-system should now run, you can now build your app and access it. Example with the cozy-calendar repo:
+Your data-system should now run, you can now build your app and access it. 
+Here's an example with the cozy-calendar repo:
 
 ```bash
 cd cozy-calendar
