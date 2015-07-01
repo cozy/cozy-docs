@@ -249,6 +249,29 @@ Félicitations, votre ordinateur est maintenant synchronisé avec votre Cozy !
 C'est tout ! Vous pouvez gérer vos événements sur votre ordinateur ou sur votre Cozy de façon transparente.
 
 
+<br />
+<br />
+
+
+#### Comment synchroniser un agenda existant
+
+Synchroniser un agenda déjà créé dans Thunderbird avec votre serveur Cozy demande quelques manipulations. Il faut créer un nouvel agenda dans Cozy, y importer votre agenda local, puis créer un nouvel agenda local synchronisé avec le serveur.
+
+Voici comment faire depuis Thunderbird
+
+* **étape 1 : exporter votre agenda actuel depuis Thunderbird/Lightning** : dans l’onglet agenda de Thunderbird, dans la colonne de gauche "agendas" cochez la case correspondant à l’agenda et faites un clic droit > exporter. Notez bien l’emplacement où votre ficher .ics est sauvegardé ;
+
+* **étape 2 : créer un nouvel agenda dans votre Cozy** : si vous ne l’avez pas encore fait, installez l’application Calendar.  Ouvrez l’application et cliquez sur le "+" pour ajouter un agenda. En bas à gauche cliquez sur « Sync settings ». Dans la fenêtre qui s’ouvre, allez dans la section « Importer un iCalendar » et cliquez sur le bouton « sélectionner un fichier iCalendar ». Sélectionnez votre fichier .ics précédemment créé.  Attention si votre calendrier comporte beaucoup d’événements l’importation risque d’être un peu longue ;
+
+* **étape 3 : récupérer l’url de synchronisation** : dans votre Cozy, lancez l’application Sync et dans la section « Configuration de CalDav (Agenda) » cliquez sur « Thunderbird (Lightning) ». Sélectionnez l’agenda que vous voulez synchroniser et copiez l’url indiquée dans la boite en-dessous ;
+
+* **étape 4 : Créer un agenda synchronisé dans Thunderbird (Lightning)** : il vous reste à retourner dans Thunderbird, créer un nouvel agenda et le synchroniser avec l’url précédente, comme expliqué ci-dessus. Vous pouvez alors supprimer l’agenda initial, non synchronisé, pour ne pas avoir de doublons.
+
+
+<br />
+<br />
+
+
 ## Ressources connectées
 
 * [Discussion sur le forum](https://forum.cozy.io/)

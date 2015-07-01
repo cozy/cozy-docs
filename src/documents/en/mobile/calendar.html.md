@@ -247,6 +247,27 @@ Congratulations, your computer is now synchronized with your Cozy!
 That's it! You can seamlessly manage your events from your computer and your Cozy.
 
 
+
+<br />
+<br />
+
+#### How to synchronize an existing calendar
+
+If you want to synchronize an existing calendar with your Cozy, you will have to perform some manipulations. Create a new calendar inside Cozy, import your existing calendar into it, then create a new local calendar synchronized with Cozy. Here we go :
+
+(this tutorial explains how to do with Thunderbird, the same applies to other clients).
+
+* **First step : export your calendar from Thunderbird/ligthning**: in Thunderbird, open your calendar, select it in the left column, then right click on it and choose to export. You’ll get an `.ics` file;
+
+* **2° step : create a new calendar in Cozy**: if needed, install the Calendar app, and open it. Click on the plus sign to create a new calendar, then on “Sync Settings” in the bottom of left column. Inside the popup, go to “iCalendar Import”, click on “Select an iCalendar file” and select the `.ics` file you exported at step 1;
+
+* **3° step: get sync url**: inside Cozy, start Sync app, scroll to “CalDAV configuration (Calendar)” and click on “Thunderbird”. Choose the calendar you want to synchronize, and copy its url;
+
+* **last step: synchronize this new calendar with Thunderbird**: go back to Thunderbird, create a new calendar and sync it with the url you just copied, as explained above. Dont forget then to delete your initial, not synchronized, calendar, to prevent duplicates.
+
+<br />
+<br />
+
 ## Related resources
 * [Forum discussion](https://forum.cozy.io/)
 
