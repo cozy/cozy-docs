@@ -39,7 +39,7 @@ The "description" fields will be displayed to the user during installation. Do n
 ## Naming your application
 There are two fields regarding naming your application: "name", "cozy-displayName" and "description".
 
-Your application is identified by a slug withing Cozy, that slug is the "name field". You cannot put fancy characters in it, only use letters and "-" or "_", **no space**!
+Your application is identified by a slug withing Cozy, that slug is the "name field". You cannot put fancy characters in it, only use letters and "-" or "\_", **no space**!
 
 The "cozy-displayName" field allows you to choose a fancy name, you can use all the character you want, but be careful! It will appear on the user's home, so it shouldn't be too long.
 
@@ -52,6 +52,20 @@ The "description" field allows you to display to the user a description in the i
     "description": "My Super Application makes you awesome!"
 }
 ```
+
+## Adding an icon
+
+There are two ways to set an icon for your application:
+
+ - by convention: put a `main_icon.png` or `main_icon.svg` into `client/app/assets/icons/` folder, and Cozy will automatically use it;
+ - explicitly: add an `icon_path` field to `package.json`:
+```json
+{
+    "name": "cozy-mysuperapp-slug",
+    "icon_path": "mysuperapp.png"
+}
+```
+
 
 ## Distributing to other users
 The first thing to do is creating a Github account if you don't have one already. We are currently tightly integrated with Github but that's something we'll change when the time comes. So make a Github account and push your code to a **public** remote repository.
