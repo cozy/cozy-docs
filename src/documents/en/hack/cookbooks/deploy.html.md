@@ -58,11 +58,11 @@ The "description" field allows you to display to the user a description in the i
 There are two ways to set an icon for your application:
 
  - by convention: put a `main_icon.png` or `main_icon.svg` into `client/app/assets/icons/` folder, and Cozy will automatically use it;
- - explicitly: add an `icon_path` field to `package.json`:
+ - explicitly: add an `icon-path` field to `package.json`:
 ```json
 {
     "name": "cozy-mysuperapp-slug",
-    "icon_path": "mysuperapp.png"
+    "icon-path": "mysuperapp.png"
 }
 ```
 
