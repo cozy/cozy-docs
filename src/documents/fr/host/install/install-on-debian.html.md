@@ -30,13 +30,31 @@ Codename:     jessie
     ```
     wget -O - https://debian.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
     ```
-3. Ajoutez le dépôt Cozy à vos sources de logiciels.
+3. En option, vérifiez que la clé importée est valide
+    ```
+    apt-key --keyring /etc/apt/trusted.gpg finger
+    ```
+    Vous devriez lire:
+    ```
+    pub   2048R/2765B235 2014-11-17 [expires: 2015-11-17]
+          Key fingerprint = E28C F8B2 ABBF E285 743B  27F1 BCB2 ED5D 2765 B235
+    uid                  Cozy Debian Packaging <debian-packaging@cozycloud.cc>
+    sub   2048R/D58A9D35 2014-11-17 [expires: 2015-11-17]
+    ```
+4. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
     echo 'deb [arch=amd64] https://debian.cozycloud.cc/debian jessie main' \
     > /etc/apt/sources.list.d/cozy.list
     ```
-4. Installez Cozy
+5. Installez Cozy
     ```
     apt-get update
     apt-get install cozy
     ```
+6. Démarrez le service Nginx
+    ```
+    service nginx start
+    ```
+7. Enregistrer votre compte Cozy et profitez!
+    ```
+    https://your-cozy-IP/
