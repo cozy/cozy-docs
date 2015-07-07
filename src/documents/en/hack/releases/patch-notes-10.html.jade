@@ -1,0 +1,91 @@
+---
+title: "Patch notes 2015/06/26"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 1
+---
+#patch-note
+    h1 Patch note #10
+    p This relates development from 2015/06/15 to 2015/06/26.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+
+    h3 Emails (v0.9.4)
+    ul
+      li.feature Desactivate filter when user changes mailbox;
+      li.feature Compatibility for oauth2 gmail account;
+      li.bug Don't display new messages in filter;
+      li.bug Deleting several message should remove them instantly from list;
+      li.bug Fix sender/recipient filter exit;
+      li.bug Improve conversation management;
+
+
+    h3 Calendar (v1.0.16)
+    ul
+      li.bug Fix alarms;
+      li.bug Popover is not closed when month is changer.
+      li.bug Fix display of long calendar name;
+      li.bug Fix display of all day long events;
+      li.bug Renaming calendars with long names was sometimes difficult.
+
+
+    h3 Contacts (v 1.1.5)
+    ul
+      li.feature Sort of contact without first name has been improved
+      li.feature Display contact suffixe in list
+
+
+    h3 Files (v1.1.9)
+    ul
+      li.feature You can now select a file by clicking on its icon;
+
+    h3 Konnectors (v0.3.1)
+    ul
+      li.bug Fix installation error on instances using the `.deb` package
+      li. feature Add a nest konnector to retreive temperature
+
+
+    h2 Platform
+
+    h3 Home (v2.0.3)
+    ul
+      li.feature You can now open an application from the application management screen;
+      li.feature Installed application list now also shows the branch of the remote repository, allowing to know if your using a stable or development version of the application;
+      li.feature Updating an application icon doesn't require anymore to re-install the app;
+      li.feature Prevent users of managed instances to break them by altering their url;
+      li.feature Starting an application from status panel opens it;
+      li.feature When an application has no current logs, display the last log file we have
+      li.feature Remove notification list when open an application from it;
+      li.bug Fix hard disk usage and RAM calculus that was sometime wrong;
+      li.bug Fix a problem that prevented to restart the server;
+      li.bug Fix a display bug of application update button;
+      li.bug Forbid to set an empty contact address ;
+      li.bug Display an error message when contact address is wrong ;
+      li.bug Fix translation of messages when restarting the platform;
+      li.bug Fix a bug some sometime prevented to remove some notifications;
+      li.bug Weather application was still visible in market place after its installation. It's now fixed;
+      li.bug Fix a bug that prevented to send message to support when an application was broken;
+      li.bug Removing a connected device was broken, it should be fixed now.
+
+    h2 Development tools
+
+    h3 Cozy-Monitor (v1.2.26)
+    ul
+        li.feature `cozy-monitor status` now has a `--raw` option to use its output in other commands;
+
+
+    h3 Documentation
+    ul
+        li.feature Our user Aleth Gueguen added a section explaining how to synchronize with Cozy an existing calendar in Thunderbird.
+
+
