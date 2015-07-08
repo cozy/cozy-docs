@@ -40,3 +40,9 @@ Codename:     jessie
     apt-get update
     apt-get install cozy
     ```
+
+## Que faire en cas de soucis
+
+### Comment re-générer le certificat ?
+
+    sudo openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/cozy/server.key -out /etc/cozy/server.crt -days 3650 -subj "/CN=URL.DE.VOTRE.INSTANCE"
