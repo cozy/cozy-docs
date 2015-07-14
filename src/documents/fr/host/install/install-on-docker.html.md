@@ -31,7 +31,7 @@ sudo docker pull cozy/full
 ```
 
 Si vous souhaitez l'utiliser dans un environnement de production, il est
-recommandé de construite l'image sur votre machine :
+recommandé de construire l'image sur votre machine :
 
 ```
 sudo docker build -t cozy/full github.com/cozy-labs/cozy-docker
@@ -43,8 +43,8 @@ Vous pouvez ensuite lancer l'image avec la commande :
 sudo docker run -d -p 80:80 -p 443:443 cozy/full
 ```
 
-Il vous est possible de changer les ports affectés l'image, par exemple si
-les ports 80 et 443 sont déjà utilisé :
+Il vous est possible de changer les ports affectés à l'image, par exemple si
+les ports 80 et 443 sont déjà utilisés :
 ```
 sudo docker run -d -p 6500:443 cozy/full
 ```
