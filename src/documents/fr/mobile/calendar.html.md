@@ -9,7 +9,7 @@ toc: true
 # Synchronisation des agendas
 
 ## Préparer votre Cozy
-Cozy utilise CalDav, qui est le protocole standard, pour synchroniser vos agendas sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
+Cozy utilise CalDAV, qui est le protocole standard, pour synchroniser vos agendas sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.
 
 * Premièrement, allez dans votre Cozy dans le menu "Choisissez vos apps".
 * Puis sélectionnez l'application "Sync".
@@ -19,7 +19,7 @@ Cozy utilise CalDav, qui est le protocole standard, pour synchroniser vos agenda
 
 <br />
 <br />
-* Après ça, vous devez récupérer vos identifiants CalDav.
+* Après ça, vous devez récupérer vos identifiants CalDAV.
 * Ouvrez l'application Sync.
 * Notez le mot de passe.
 
@@ -86,7 +86,7 @@ Félicitations, votre périphérique mobile est maintenant synchronisé avec vot
 
 ## iOS
 
-#### Configurez votre compte CalDav
+#### Configurez votre compte CalDAV
 
 Ouvre les options, sélectionnez "Email, Contacts, Agendas" et cliquez sur "Ajouter un compte" :
 <center>![iOS step 1](/assets/images/mobile/ios/contacts/step1.jpg)</center>
@@ -98,7 +98,7 @@ Puis sélectionnez "Autre compte" :
 
 <br />
 <br />
-Sélectionnez ensuite "Ajouter un compte CalDav" dans la section Contacts :
+Sélectionnez ensuite "Ajouter un compte CalDAV" dans la section Contacts :
 <center>![iOS step 3](/assets/images/mobile/ios/contacts/step3.jpg)</center>
 
 <br />
@@ -144,7 +144,7 @@ Dans l'application Calendrier, cliquez sur "Calendrier", puis sur "Ajouter un co
 
 <br />
 <br />
-Sélectionnez ensuite "Ajouter un compte CalDav..." et cliquez sur "Continuez" :
+Sélectionnez ensuite "Ajouter un compte CalDAV..." et cliquez sur "Continuez" :
 <center>![OSX step 2](/assets/images/mobile/osx/calendar/step2.jpg)</center>
 
 <br />
@@ -178,7 +178,7 @@ Ouvrez le menu et cliquez sur le bouton pour ajouter un nouveau calendrier.
 
 <br />
 <br />
-Puis choisissez l'option "CalDav" dans le menu.
+Puis choisissez l'option "CalDAV" dans le menu.
 <center>![Firefox OS step 2](/assets/images/mobile/firefoxos/step2.png)</center>
 
 <br />
@@ -206,7 +206,7 @@ Félicitations, votre périphérique mobile est synchronisé avec votre Cozy !
 
 Il est nécessaire d'installer le module complémentaire Lightning  : https://addons.mozilla.org/fr/thunderbird/addon/lightning/
 
-#### Configurez votre compte CalDav
+#### Configurez votre compte CalDAV
 
 Dans "Fichier", sélectionnez "Nouveau", et "Agenda...".
 <center>![thunderbird step 1](/assets/images/mobile/thunderbird/fr/calendar/step1.jpg)</center>
@@ -218,14 +218,14 @@ Sélectionnez "Sur le réseau" et cliquez sur "suivant".
 
 <br />
 <br />
-Sélectionnez CalDav et entrez l'adresse d'emplacement de votre agenda (dans cozy) ; elle est différente pour chaque utilisateur et chaque agenda : https://adresse-de-votre-cozy/public/sync/calendars/me/nom-de-votre-agenda (attention aux majuscules du "nom-de-votre-agenda").
+Sélectionnez CalDAV et entrez l'adresse d'emplacement de votre agenda (dans Cozy) ; elle est différente pour chaque utilisateur et chaque agenda : https://adresse-de-votre-cozy/public/sync/calendars/me/nom-de-votre-agenda (attention aux majuscules du "nom-de-votre-agenda").
 Cochez "Prise en charge du mode hors connexion" si vous souhaitez que Thunderbird mémorise les évènements pour que vous puissiez les conulter sans accès à internet.
 Cliquez sur "suivant".
 <center>![thunderbird step 3](/assets/images/mobile/thunderbird/fr/calendar/step3.jpg)</center>
 
 <br />
 <br />
-Entrez un nom pour identifier cet agenda. Il est conseillé d'utiliser le même nom que celui de votre cozy, avec le suffixe cozy : "nom-de-votre-agenda_cozy".
+Entrez un nom pour identifier cet agenda. Il est conseillé d'utiliser le même nom que celui de votre Cozy, avec le suffixe cozy : "nom-de-votre-agenda_cozy".
 Choisissez une couleur (la même que celle de votre agenda dans cozy est conseillée). Choisissez aussi si vous souhaitez afficher les alarmes de cet agenda, et enfin, sélectionnez l'adresse de courriel en lien avec l'activité de cet agenda.
 Cliquez sur "suivant".
 <center>![thunderbird step 4](/assets/images/mobile/thunderbird/fr/calendar/step4.jpg)</center>
@@ -247,6 +247,29 @@ Lorsque Thunderbird va vouloir synchroniser votre agenda pour la première fois,
 
 Félicitations, votre ordinateur est maintenant synchronisé avec votre Cozy !
 C'est tout ! Vous pouvez gérer vos événements sur votre ordinateur ou sur votre Cozy de façon transparente.
+
+
+<br />
+<br />
+
+
+#### Comment synchroniser un agenda existant
+
+Synchroniser un agenda déjà créé dans Thunderbird avec votre serveur Cozy demande quelques manipulations. Il faut créer un nouvel agenda dans Cozy, y importer votre agenda local, puis créer un nouvel agenda local synchronisé avec le serveur.
+
+Voici comment faire depuis Thunderbird :
+
+* **étape 1 : exporter votre agenda actuel depuis Thunderbird/Lightning** : dans l’onglet agenda de Thunderbird, dans la colonne de gauche "agendas" cochez la case correspondant à l’agenda et faites un clic droit > exporter. Notez bien l’emplacement où votre ficher .ics est sauvegardé ;
+
+* **étape 2 : créer un nouvel agenda dans votre Cozy** : si vous ne l’avez pas encore fait, installez l’application Calendar.  Ouvrez l’application et cliquez sur le "+" pour ajouter un agenda. En bas à gauche cliquez sur « Sync settings ». Dans la fenêtre qui s’ouvre, allez dans la section « Importer un iCalendar » et cliquez sur le bouton « sélectionner un fichier iCalendar ». Sélectionnez votre fichier .ics précédemment créé.  Attention si votre calendrier comporte beaucoup d’événements l’importation risque d’être un peu longue ;
+
+* **étape 3 : récupérer l’url de synchronisation** : dans votre Cozy, lancez l’application Sync et dans la section « Configuration de CalDAV (Agenda) » cliquez sur « Thunderbird (Lightning) ». Sélectionnez l’agenda que vous voulez synchroniser et copiez l’url indiquée dans la boite en-dessous ;
+
+* **étape 4 : Créer un agenda synchronisé dans Thunderbird (Lightning)** : il vous reste à retourner dans Thunderbird, créer un nouvel agenda et le synchroniser avec l’url précédente, comme expliqué ci-dessus. Vous pouvez alors supprimer l’agenda initial, non synchronisé, pour ne pas avoir de doublons.
+
+
+<br />
+<br />
 
 
 ## Ressources connectées

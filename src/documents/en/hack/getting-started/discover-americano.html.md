@@ -77,12 +77,13 @@ module.exports = Bookmark = cozydb.getModel('bookmarks', {
 Then move to server/models/requests.js so we can define the request we are going to use. The nice part of the Cozy plugin for americano is that it makes requests declaration very clear:
 
 ```javascript
-module.exports =
+module.exports = {
   bookmark: {
     all: function(doc) {
       emit(doc._id, doc);
     }
   };
+}
 ```
 
 This will **automatically** trigger the old "Bookmark.defineRequest" when the server starts. Americano's Cozydb plugin knows that the "all request" is often the same and offers this handy shortcut:
@@ -90,10 +91,11 @@ This will **automatically** trigger the old "Bookmark.defineRequest" when the se
 ```javascript
 cozydb = require('cozydb');
 
-module.exports =
+module.exports = {
   bookmark: {
     all: cozydb.defaultRequests.all
   };
+}
 ```
 
 You can now add a helper to your bookmark model (we'll use it in the next section):

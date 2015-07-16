@@ -8,7 +8,7 @@ toc: true
 # Calendar Synchronization
 
 ## Prepare your Cozy
-Cozy uses CalDav, which is the standard, to synchronize your calendars across devices. Everything is handled in a specific applications, Sync.
+Cozy uses CalDAV, which is the standard, to synchronize your calendars across devices. Everything is handled in a specific applications, Sync.
 
 * First, go to your Cozy, under the "Choose your apps" menu.
 * Then select the "Sync" application.
@@ -18,11 +18,11 @@ Cozy uses CalDav, which is the standard, to synchronize your calendars across de
 
 <br />
 <br />
-* Next, you need to get your CalDav credentials.
+* Next, you need to get your CalDAV credentials.
 * Open the Sync application.
 * Write down your password.
 
-<center>![Get CalDav credentials intructions](/assets/images/mobile/use_sync_steps.gif)</center>
+<center>![Get CalDAV credentials intructions](/assets/images/mobile/use_sync_steps.gif)</center>
 
 <br />
 <br />
@@ -87,7 +87,7 @@ Congratulations, your mobile device is now synchronized with your Cozy!
 
 ## iOS
 
-#### Configure your CalDav account
+#### Configure your CalDAV account
 Open the Settings, select the "Mail, Contacts, Calendars" view, and click on "Add Account":
 <center>![iOS step 1](/assets/images/mobile/ios/calendar/step1.jpg)</center>
 
@@ -98,14 +98,14 @@ Then select "Other" account:
 
 <br />
 <br />
-Then select "Add CalDav Account", in the Calendars section:
+Then select "Add CalDAV Account", in the Calendars section:
 <center>![iOS step 3](/assets/images/mobile/ios/calendar/step3.jpg)</center>
 
 <br />
 <br />
 Finally, fill the form with the credentials you got from Cozy's Sync app:
 
-* the "Server" input will vary vor each user: yourcozyaddress/public/sync/principals/me
+* the "Server" input will vary for each user: yourcozyaddress/public/sync/principals/me
 * the "Username input will always be "me",
 * the "Password" input will be the password you got earlier from Cozy,
 * the "Description" input stands for the user-friendly name of your choice, "Cozy" is just fine.
@@ -145,15 +145,15 @@ Inside Calendar app, click on "Calendar" and click on "Add Account":
 
 <br />
 <br />
-Then select "Add CalDav Account", and click on "Next":
+Then select "Add CalDAV Account", and click on "Next":
 <center>![OSX step 2](/assets/images/mobile/osx/calendar/step2.jpg)</center>
 
 <br />
 <br />
-Select the Type of contact : Manual.
+Select the Type of contact: Manual.
 Finally, fill the form with the credentials you got from Cozy's Sync app:
 
-* the "Server" input will vary vor each user: yourcozyaddress/public/sync/principals/me
+* the "Server" input will vary for each user: yourcozyaddress/public/sync/principals/me
 * the "Username input will always be "me",
 * the "Password" input will be the password you got earlier from Cozy,
 
@@ -177,7 +177,7 @@ Open the menu and click the button to add a new calendar.
 
 <br />
 <br />
-Then choose "CalDav" option in the menu.
+Then choose "CalDAV" option in the menu.
 <center>![Firefox OS step 2](/assets/images/mobile/firefoxos/step2.png)</center>
 
 <br />
@@ -217,7 +217,7 @@ Select "On the Network" and click on "Next".
 
 <br />
 <br />
-Select "CalDav" and indicate the location of your calendar (from cozy), it will vary vor each user and each calendar : https://yourcozyaddress/public/sync/calendars/me/name-of-your-calendar (be carefull about capital letter of  "name-of-your-calendar").
+Select "CalDAV" and indicate the location of your calendar (from cozy), it will vary for each user and each calendar: https://yourcozyaddress/public/sync/calendars/me/name-of-your-calendar (be careful about capital letter of  "name-of-your-calendar").
 Tick "Offline Support" if you wish that Thunderbird memorise your event to be able to consult them when you don't have internet.
 Click on "Next".
 <center>![thunderbird step 3](/assets/images/mobile/thunderbird/en/calendar/step3.jpg)</center>
@@ -246,6 +246,27 @@ As soon as Thunderbird will try to synchronise your calendar the first time, it 
 Congratulations, your computer is now synchronized with your Cozy!
 That's it! You can seamlessly manage your events from your computer and your Cozy.
 
+
+
+<br />
+<br />
+
+#### How to synchronize an existing calendar
+
+If you want to synchronize an existing calendar with your Cozy, you will have to perform some manipulations. Create a new calendar inside Cozy, import your existing calendar into it, then create a new local calendar synchronized with Cozy. Here we go:
+
+(this tutorial explains how to do with Thunderbird, the same applies to other clients).
+
+* **First step : export your calendar from Thunderbird/ligthning**: in Thunderbird, open your calendar, select it in the left column, then right click on it and choose to export. You’ll get an `.ics` file;
+
+* **2° step : create a new calendar in Cozy**: if needed, install the Calendar app, and open it. Click on the plus sign to create a new calendar, then on “Sync Settings” in the bottom of left column. Inside the popup, go to “iCalendar Import”, click on “Select an iCalendar file” and select the `.ics` file you exported at step 1;
+
+* **3° step: get sync url**: inside Cozy, start Sync app, scroll to “CalDAV configuration (Calendar)” and click on “Thunderbird”. Choose the calendar you want to synchronize, and copy its URL;
+
+* **last step: synchronize this new calendar with Thunderbird**: go back to Thunderbird, create a new calendar and sync it with the URL you just copied, as explained above. Don’t forget then to delete your initial, not synchronized, calendar, to prevent duplicates.
+
+<br />
+<br />
 
 ## Related resources
 * [Forum discussion](https://forum.cozy.io/)

@@ -59,3 +59,9 @@ Codename:     jessie
     ```
     https://your-cozy-IP/
     ```
+
+## Troubleshooting
+
+### How to regenerate the certificate?
+
+    sudo openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/cozy/server.key -out /etc/cozy/server.crt -days 3650 -subj "/CN=YOUR.INSTANCE.URL"
