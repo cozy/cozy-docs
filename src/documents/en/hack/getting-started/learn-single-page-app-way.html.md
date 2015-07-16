@@ -19,7 +19,7 @@ Single page applications are made of one page and tons of JavaScript. While this
 
 If you want to know everything about single page app, we advise you to [check out this resource](http://singlepageappbook.com/) in order to learn more about Singe Page Apps.
 
-From now on we'll use the SPA acronym to talk about Single Page Apps or everyone is going to shoot themselves.
+From now on we'll use the acronym "SPA" to talk about Single Page Apps or everyone is going to shoot themselves.
 
 Let's make your bookmark application with the single page app way!
 
@@ -76,7 +76,7 @@ There are two parts in the file structure: the "app" where you will write your c
 
 Another important thing is that the folder structure is not **constrained at all**. It is a design choice from us and you can change the way you like, but don't forget to adjust the Brunch configuration afterwards.
 
-Now let's see what Brunch exactly does.
+Now let's see what exactly Brunch does.
 
 ## Automatically build your application with Brunch
 Brunch gathers everything you will write in the app folder and wrap it with RequireJS (which allows you to use the "require" keyword), and put it all together in one JavaScript file.
@@ -241,7 +241,7 @@ deleteBookmark: function() {
 }
 ```
 
-Note that the events declaration is reduced to the children of the view in the DOM so "a.delete" actually means (jQuery style): $(document).find('theview').find('a.delete').
+Note that the events declaration is reduced to the children of the view in the DOM, so "a.delete" actually means (jQuery style): `$(document).find('theview').find('a.delete')`.
 
 Your application is still useless (we came back in the first tutorial state :(), because the changes are not saved in the server. Let's fix this!
 
@@ -358,15 +358,13 @@ You server is now a RESTful API that allows your single page app to request it e
 This tutorial doesn't cover every aspect and good practice of Backbone but it
 should give you good insight into how you can build awesome single page apps.
 
-Finally yo make your application Cozy-ready, you have to do one unfamiliar
-thing. You have to push, in your Git repository, the build of your application
-client.
-Why that? Because the Cozy platform don't run any build and we don't have a
-strong package manager yet. 
-The Cozy Platform fetch your git repository when it install an app. If you put
-the result of your build in your source, the platform can fetch it through git.
+Finally, to you make your application Cozy-ready, you have to do one unfamiliar
+thing: You have to commit the the build of your application client when you push your
+git repository. Why? Because the Cozy platform doesn't run any build process and
+we don't have a strong package manager yet. So the only way for the platform to have
+the finished build of your app is to fetch it as part of the git repository.
 
-Aside of this, there is a lot of cool stuff you can do with Cozy and you can
+Besides this, there is a lot of cool stuff you can do with Cozy and you can
 ask us on IRC or by email what the next steps are or just to get help from us.
 
 <br /><br />
@@ -375,4 +373,5 @@ We are eager to see what application you will bring to the Cozy community, don't
 
 To go further in your study of Cozycloud, you can check out the [cookbooks](/hack/cookbooks/)!
 
-We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly, choose the one you like, or add yours.
+We also provide [application skeletons](/hack/application-skeletons/) to get you started quickly.
+Choose the one you like, or add yours.
