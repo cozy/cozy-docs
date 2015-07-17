@@ -24,6 +24,7 @@ It pieces together precise API documentations, conceptual tutorials, how-to's an
 * [Debug your application](/hack/cookbooks/debugging.html)
 * [Debug in production environment](/hack/cookbooks/debugging-production.html)
 * [Using nodemon to auto-refresh the server on code change](/hack/cookbooks/nodemon-server-auto-refresh-on-change.html)
+* [Connect a device](/hack/cookbooks/connect-a-device.html)
 
 ## Reference
 * [Components](/hack/cookbooks/components.html)
