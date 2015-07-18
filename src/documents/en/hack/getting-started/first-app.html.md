@@ -8,13 +8,20 @@ toc: true
 
 # Tutorial 1: your first app in 30 minutes
 
-This first tutorial is an introduction to cozy webapp development, but as you
-will see, you can also consider it as an introduction to webapp development with
-NodeJS.
+This first tutorial is an introduction to Cozy web app development. You can
+also consider it as an introduction to any web app development with NodeJS.
+
+It uses SQLite as a database. It's only here because most people know SQL. But
+quickly we'll get rid of it to use the Cozy embedded database called the Data
+System. So, don't focus too much on SQLite, it's just to make the introduction
+smoother.
+
+If you already know Node.js you can directly go to the next step of this
+tutorial. 
 
 ### What you will achieve
 
-* writing a small NodeJS webapp using [ExpressJS](http://expressjs.com/),
+* writing a small NodeJS web app using [ExpressJS](http://expressjs.com/),
   the standard framework for NodeJS
 * introducing [Jade](http://jade-lang.com/) to write the templates
   that the browser will display
@@ -28,11 +35,26 @@ NodeJS.
 
 ### Get ready
 
-Get the template:
+
+Be sure that your system has the low-level SQLite libraries installed. On
+Ubuntu you should run the following command:
 
 ```bash
-cd cozy-dev/ # where you start the VM
-git clone https://github.com/cozy/cozy-tutorial.git && cd cozy-tutorial
+sudo apt-get install sqlite3
+```
+
+Then get the tutorial code. It corresponds to the whole code of the tutorial.
+It will allow you to see what we explain here in action without typing 
+anything. You can follow this tutorial just by reading the code or by typing
+everything yourself.
+
+Download it in a subfolder of your development environment. It's important
+because Cozy dev tools will look for it when you want to test your application:
+
+```bash
+cd cozy-dev/
+git clone https://github.com/cozy/cozy-tutorial.git
+cd cozy-tutorial
 npm install
 ```
 
@@ -47,6 +69,7 @@ Here is how the folders and files are organized:
 NB: the source code for this step can be found [here](https://github.com/cozy/cozy-tutorial/tree/step-1).
 
 We first need to create an HTTP server that will serve the content for requests:
+
 ```javascript
 // server.js
 
@@ -81,7 +104,8 @@ Then open your browser on http://localhost:9250/ and check the result.
 
 Woohoo, you've just made your first NodeJS app compatible with Cozy!
 
-You might think "well, this sucks, I actually can't do anything with it". You are absolutely right, so let's move on to step 2.
+You might think "well, it sucks, I actually can't do anything with it". You are
+absolutely right, so let's move on to step 2.
 
 ## Step 2: listing the bookmarks from the server
 
