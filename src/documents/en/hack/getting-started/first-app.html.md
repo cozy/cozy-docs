@@ -8,16 +8,17 @@ toc: true
 
 # Tutorial 1: your first app in 30 minutes
 
-This first tutorial is an introduction to Cozy web app development. You can
+This first tutorial is an introduction to Cozy web app development. But you can
 also consider it as an introduction to any web app development with NodeJS.
 
-It uses SQLite as a database. It's only here because most people know SQL. But
+It uses SQLite as a database. It's only here because most people know SQL. but
 quickly we'll get rid of it to use the Cozy embedded database called the Data
 System. So, don't focus too much on SQLite, it's just to make the introduction
 smoother.
 
 If you already know Node.js you can directly go to the next step of this
-tutorial. 
+tutorial. If you are already familiar with NoSQL and REST API you can jump to
+the last step!
 
 ### What you will achieve
 
