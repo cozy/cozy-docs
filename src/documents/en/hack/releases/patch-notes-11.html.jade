@@ -1,0 +1,55 @@
+---
+title: "Patch notes 2015/07/10"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 1
+---
+#patch-note
+    h1 Patch note #11
+    p This relates development from 2015/06/29 to 2015/07/10.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+
+    h3 Emails (v0.9.5)
+    ul
+      li.feature Desactivates filter if user changes mailbox.
+      li.bug Fix problem with navigation after a deletion.
+      li.feature Enhance the overall experience of emails.
+      li.feature Enhance experience of the compose screen.
+      li.bug Fix problem with some message deletions.
+      li.bug Fix conversation management.
+      li.bug Fix several mails deletion.
+      li.bug New mails were displayed in filter, it's fixed.
+      li.bug Fix problems with filter on sender or recipient.
+      li.bug Signature changes in compose page was broken, it's fixed.
+      li.bug Drag'n'dropping files or images was broken, it's fixed.
+      li.bug Fix problem to add wanadoo account.
+
+
+    h3 Calendar (v1.0.16)
+    ul
+      li.feature Create an empty calendar when user use the application for the first time #301
+      li.bug Refresh calendar when day change #100
+      li.bug Remove warning about use of deprecated third party library #234
+      li.bug Fix sending of email notifications #250
+      li.bug Fix display of events on several days #291
+      li.bug Improve import preview #292
+      li.bug Fix import of recurring events #305
+      li.bug Fix display of headers on small screens #306
+      li.bug Fix crash on Raspberry Pi #312
+      li.bug Allow to export calendars with a / in their name #310
+
+
+
+
+
