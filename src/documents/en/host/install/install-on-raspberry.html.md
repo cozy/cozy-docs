@@ -77,5 +77,4 @@ Raspbian credentials ```pi``` and ```raspberry```:
 ssh pi@<ip-of-your-raspberrypi>
 ```
 
-By the way, do not forget to change the `pi` password and [reset the security
-tokens](/host/manage.html#about-security-in-pre-installed-images)!
+By the way, do not forget to change the `pi` password.
