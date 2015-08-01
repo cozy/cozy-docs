@@ -126,7 +126,7 @@ config.vm.provider :virtualbox do |vb|
 end
 ```
 
-You can now rung `cozy-dev vm-start` and have the Virtual Box GUI. What you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
+You can now run `cozy-dev vm:start` and have the Virtual Box GUI. What you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
 
 ### It still doesn't work
 
