@@ -111,6 +111,10 @@ The first thing to try is update the VM with cozy-dev: `cozy-dev vm:update`
 
 It will fetch the last changes and may fix some problems. Then you can try to start your VM again with `cozy-dev vm:start`
 
+### My VM is not starting and says "VERR_ZIP_CORRUPTED"
+
+Try running `vagrant box remove cozycloud/cozy-dev` and then re-running `cozy-dev vm:init`.
+
 ### My VM displays a lot of 'SSH Timeout'
 
 That can be "normal". It occurs when the network is not yet configured on the VM.
