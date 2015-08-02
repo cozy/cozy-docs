@@ -111,6 +111,10 @@ The first thing to try is update the VM with cozy-dev: `cozy-dev vm:update`
 
 It will fetch the last changes and may fix some problems. Then you can try to start your VM again with `cozy-dev vm:start`
 
+### My VM is not starting and says "VERR_ZIP_CORRUPTED"
+
+Try running `vagrant box remove cozycloud/cozy-dev` and then re-running `cozy-dev vm:init`.
+
 ### My VM displays a lot of 'SSH Timeout'
 
 That can be "normal". It occurs when the network is not yet configured on the VM.
@@ -126,7 +130,7 @@ config.vm.provider :virtualbox do |vb|
 end
 ```
 
-You can now rung `cozy-dev vm-start` and have the Virtual Box GUI. What you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
+You can now run `cozy-dev vm:start` and have the Virtual Box GUI. What you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
 
 ### It still doesn't work
 
