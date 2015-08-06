@@ -122,7 +122,7 @@ You can force Virtual Box to open its GUI and check what is happening.
 
 Stop the vm with `cozy-dev vm:stop`, then open the `Vagrantfile`.
 
-There should already be a block delimited by `config.vm.provider :virtualbox do |vb|` and `end`. If there is, just paste this beneath: `vb.gui = true`.
+There should already be a block delimited by `config.vm.provider :virtualbox do |vb|` and `end`. If there is, just paste this inside: `vb.gui = true`.
 
 If there is not, look for where it says `Vagrant.configure("2") do |config|`
 and underneath that, paste this:
