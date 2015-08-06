@@ -121,7 +121,10 @@ That can be "normal". It occurs when the network is not yet configured on the VM
 You can force Virtual Box to open its GUI and check what is happening.
 
 Stop the vm with `cozy-dev vm:stop`, then open the `Vagrantfile`.
-Look for where it says `Vagrant.configure("2") do |config|`
+
+There should already be a block delimited by `config.vm.provider :virtualbox do |vb|` and `end`. If there is, just paste this inside: `vb.gui = true`.
+
+If there is not, look for where it says `Vagrant.configure("2") do |config|`
 and underneath that, paste this:
 
 ```
@@ -131,6 +134,9 @@ end
 ```
 
 You can now run `cozy-dev vm:start` and have the Virtual Box GUI. What you may see in this case is the VM displaying "Waiting 60 more seconds for network configuration". Just be patient. It should work by itself and display the login prompt after a bit.
+Once the login prompt appears, you will be able to go back to your terminal and connect to the vm with `vagrant ssh`.
+
+Once connected, you will be allowed to check the status with `cozy-monitor status` and start the applications down.
 
 ### It still doesn't work
 
@@ -144,7 +150,7 @@ npm install
 coffee server.coffee
 ```
 
-Your data-system should now run, you can now build your app and access it. 
+Your data-system should now run, you can now build your app and access it.
 Here's an example with the cozy-calendar repo:
 
 ```bash
