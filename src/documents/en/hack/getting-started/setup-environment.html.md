@@ -61,7 +61,7 @@ The `cozy-dev` tool will allow you to create and manage a virtual machine with a
 
 #### [CoffeeLint](http://www.coffeelint.org/) (optional)
 
-You might want to install CoffeeLink to check that you .coffee scripts follow [Cozy's guidelines](https://github.com/cozy/cozy-guidelines/#cozy-code-guidelines):
+You might want to install CoffeeLink to check that your .coffee scripts follow [Cozy's guidelines](https://github.com/cozy/cozy-guidelines/#cozy-code-guidelines):
 
 ```bash
 npm install -g coffeelint
