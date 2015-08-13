@@ -40,7 +40,7 @@ sudo supervisorctl restart cozy-indexer
 
 - avec cozy-monitor pour le data-system, la home, et le proxy :
 ```bash
-sudo cozy-monitor start couch
+sudo cozy-monitor start data-system
 ```
 
 - avec les commandes de votre système pour le MTA et CouchDB, par exemple :
