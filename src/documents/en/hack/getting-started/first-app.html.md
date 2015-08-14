@@ -148,7 +148,7 @@ app.get('/', function(req, res) {
 We also need to change the HTML file into a Jade file:
 ```html
 # public/index.jade
-doctype 5
+doctype html
 html(lang="fr")
   head
     title My Own Bookmarks
