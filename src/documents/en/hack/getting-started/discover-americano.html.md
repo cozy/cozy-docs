@@ -22,7 +22,7 @@ Also, Americano is modular, so you can extend it with plugins. That's what we di
 ### Source code
 The source code of this tutorial can be found [here](https://github.com/cozy/cozy-tutorial/tree/americano).
 
-### Getting stated
+### Getting started
 In a brand new application folder, install americano:
 ```bash
 mkdir bookmark-americano && cd bookmark-americano/
@@ -53,7 +53,7 @@ Americano constrains the way your file structure should be, let's see how:
 * package.json : holds your app information and dependencies
 * server.js : the application starter
 
-Note that Americano makes the "server" structure mandatory but let you do whatever you want with the client/public folders.
+Note that Americano makes the "server" structure mandatory but lets you do whatever you want with the client/public folders.
 
 You might recognize familiar concepts: Model, Controller and somehow the View. It is important you understand that even if Americano doesn't actually put shiny MVC into Express, it brings separation of concerns to application, which is what really matters.
 

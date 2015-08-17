@@ -59,6 +59,13 @@ sudo npm install -g cozy-dev
 
 The `cozy-dev` tool will allow you to create and manage a virtual machine with a Cozy development environment, without dealing yourself with VirtualBox and Vagrant. Also, it can generate application skeletons from templates.
 
+#### [CoffeeLint](http://www.coffeelint.org/) (optional)
+
+You might want to install CoffeeLint to check that your .coffee scripts follow [Cozy's guidelines](https://github.com/cozy/cozy-guidelines/#cozy-code-guidelines):
+
+```bash
+npm install -g coffeelint
+```
 
 ### Initializing and starting the virtual machine
 
