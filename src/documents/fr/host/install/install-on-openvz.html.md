@@ -27,8 +27,11 @@ Nous prenons en compte que tous les outils OpenVZ sont déjà installés.
 ### Téléchargement et installation
 
 ```bash
-# Téléchargez le conteneur OpenVZ (environ 1.3GB)
-wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
+# Téléchargez le conteneur OpenVZ (environ 470Mo)
+wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
+
+# Décompressez le conteneur pour obtenir un .tar
+xz -d vzdump-openvz-cozycloud-debian.tar.xz
 
 # Montez et démarrez le conteneur
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid
@@ -45,8 +48,11 @@ Vous voudrez probablement permettre la connexion au conteneur depuis d’autres
 machines. Voici comment faire :
 
 ```bash
-# Téléchargez le conteneur OpenVZ (environ 1.3GB)
-wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
+# Téléchargez le conteneur OpenVZ (environ 470Mo)
+wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
+
+# Décompressez le conteneur pour obtenir un .tar
+xz -d vzdump-openvz-cozycloud-debian.tar.xz
 
 # Montez et démarrez le conteneur
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid

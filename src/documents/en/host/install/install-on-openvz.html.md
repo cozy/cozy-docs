@@ -26,8 +26,11 @@ We assume that you have already installed OpenVZ utilities.
 ### Download and start
 
 ```bash
-# Download the OpenVz template (~ 1.3GB)
-wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
+# Download the OpenVz template (~ 470MB)
+wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
+
+# Extract the template as a .tar file
+xz -d vzdump-openvz-cozycloud-debian.tar.xz
 
 # Mount and start the container
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid
@@ -45,8 +48,11 @@ You will probably need to give access to your container from outside your
 host. Here is a way to do it:
 
 ```bash
-# Download the OpenVz template (~ 1.3GB)
-wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar
+# Download the OpenVz template (~ 470MB)
+wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
+
+# Extract the template as a .tar file
+xz -d vzdump-openvz-cozycloud-debian.tar.xz
 
 # Mount your new container, give it an IP address and start it:
 vzrestore vzdump-openvz-cozycloud-debian.tar ctid
