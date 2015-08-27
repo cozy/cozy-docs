@@ -11,7 +11,7 @@ additional information, etc.
 
 If you would like to contribute to the documentation, clone the repository:
 
-    git clone https://github.com/mycozycloud/cozy-docs.git
+    git clone https://github.com/cozy/cozy-docs.git
 
 Now you can switch into the created directory and make some changes. If you want to build the documentation, you need to install [docpad](https://docpad.org) and its plugin for jade first. You can do so by:
 
@@ -35,7 +35,7 @@ Cozy Home is developed by Cozy Cloud and distributed under the AGPL v3 license.
 
 ## What is Cozy?
 
-![Cozy Logo](https://raw.github.com/mycozycloud/cozy-setup/gh-pages/assets/images/happycloud.png)
+![Cozy Logo](https://raw.github.com/cozy/cozy-setup/gh-pages/assets/images/happycloud.png)
 
 [Cozy](http://cozy.io) is a platform that brings all your web services in the
 same private space.  With it, your web apps and your devices can share data

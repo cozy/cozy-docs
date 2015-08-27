@@ -40,7 +40,7 @@ manifest =
     domain: "localhost",
     repository:
         type: "git",
-        url: "https://github.com/mycozycloud/cozy-notes.git",
+        url: "https://github.com/cozy/notes.git",
     scripts:
         start: "server.js"
 ```
