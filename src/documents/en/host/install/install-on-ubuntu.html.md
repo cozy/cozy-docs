@@ -32,8 +32,8 @@ Codename:     trusty
     ```
 3. Add the Cozy repository to your software sources
     ```
-    sudo echo 'deb https://ubuntu.cozycloud.cc/debian trusty main' \
-    > /etc/apt/sources.list.d/cozy.list
+    echo 'deb https://ubuntu.cozycloud.cc/debian trusty main' \
+    | sudo tee /etc/apt/sources.list.d/cozy.list > /dev/null
     ```
 4. Install Cozy
     ```
