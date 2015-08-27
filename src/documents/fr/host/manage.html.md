@@ -209,12 +209,17 @@ dossier :
 /usr/local/var/lib/couchdb/
 ```
 
+Ce chemin peut aussi être `/var/lib/couchdb`, notamment si vous avez installé
+cozy sur une Debian ou une Ubuntu.
+
 Vous pouvez modifier ce chemin, par exemple pour le faire pointer vers un autre
 disque avec plus d’espace libre.  Pour cela, éditez le fichier :
 
 ```bash
 /usr/local/etc/couchdb/local.ini
 ```
+
+C'est le fichier `/etc/couchdb/local.ini` sur Debian et Ubuntu.
 
 Ajoutez une section couchdb si elle n’es pas déjà présente. Vous pouvez alors
 modifier le paramètre spécifiant le dossier où est stocké la base de données :
@@ -235,6 +240,17 @@ mkdir /home/storage/cozy-data/
 cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
 supervisorctl start couchdb
+```
+
+Pour Debian et Ubuntu, le redémarrage de Couchdb ne passe pas supervisord :
+
+```bash
+service stop couchdb
+mkdir /home/storage/cozy-data/
+# cp here, to have a copy of the data in case of problem.
+cp /var/lib/couchdb/* /home/storage/cozy-data/
+chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
+service start couchdb
 ```
 
 **Il est fortement recommandé de sauvegarder vos données avant une telle

@@ -204,12 +204,17 @@ that folder:
 /usr/local/var/lib/couchdb/
 ```
 
+This path can also be `/var/lib/couchdb`, in particular if your cozy is
+installed on Debian or Ubuntu.
+
 You could change that directory where you want, on a mounting point with more
 free disk space. For that, open the following file:
 
 ```bash
 /usr/local/etc/couchdb/local.ini
 ```
+
+It's `/etc/couchdb/local.init` on Debian and Ubuntu.
 
 Add the couchdb section if it is not already present. Then you can change the
 database directory parameters:
@@ -230,6 +235,17 @@ mkdir /home/storage/cozy-data/
 cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
 supervisorctl start couchdb
+```
+
+For Debian and Ubuntu, Couchdb is not managed by supervisord:
+
+```bash
+service stop couchdb
+mkdir /home/storage/cozy-data/
+# cp here, to have a copy of the data in case of problem.
+cp /var/lib/couchdb/* /home/storage/cozy-data/
+chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
+service start couchdb
 ```
 
 **A backup is strongly recommended before performing that operation.** You
