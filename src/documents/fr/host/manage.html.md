@@ -71,6 +71,7 @@ les applications qui permettent le fonctionnement de votre instance.
 ```bash
 cozy-monitor restart-cozy-stack
 ```
+
 ### Obtenir des informations sur votre instance
 
 Avoir la liste des applications et leur statut (allumée ou éteinte) :
@@ -82,13 +83,13 @@ cozy-monitor status
 Afficher la version des applications de la pile :
 
 ```bash
-cozy-monitor versions
+cozy-monitor versions-stack
 ```
 
 Afficher la version de toutes les applications installées :
 
 ```bash
-cozy-monitor versions-apps
+cozy-monitor versions
 ```
 
 ## Gestion des applications
@@ -98,7 +99,7 @@ cozy-monitor versions-apps
 Pour installer une application depuis la ligne de commande, utilisez :
 
 ```bash
-cozy-monitor install <app> [-r <repo>] [-d <displayName>] [-b <branch>]
+sudo cozy-monitor install <app> [-r <repo>] [-d <displayName>] [-b <branch>]
 ```
 
 Si l’application n’est pas maintenue par CozyCloud, il faut préciser l’adresse
@@ -111,25 +112,25 @@ et le nom sous lequel l’application apparaitra sur la page d’accueil.
 Pour stopper une application :
 
 ```bash
-cozy-monitor stop <app>
+sudo cozy-monitor stop <app>
 ```
 
 Pour stopper toutes les applications :
 
 ```bash
-cozy-monitor stop-all <app>
+sudo cozy-monitor stop-all <app>
 ```
 
 Pour démarrer une application :
 
 ```bash
-cozy-monitor start <app>
+sudo cozy-monitor start <app>
 ```
 
 Pour redémarrer une application :
 
 ```bash
-cozy-monitor restart <app>
+sudo cozy-monitor restart <app>
 ```
 
 Pour mettre à jour une application (cela implique de cloner le dépôt Git,
@@ -137,13 +138,13 @@ exécuter `npm install` et re-démarrer l’applicationi). Préciser l’adresse
 dépôt n’est nécessaire que pour utiliser un dépôt spécifique :
 
 ```bash
-cozy-monitor update <app> [repo]
+sudo cozy-monitor update <app> [repo]
 ```
 
 Mettre à jour toutes les applications installées :
 
 ```bash
-cozy-monitor update-all
+sudo cozy-monitor update-all
 ```
 
 
@@ -152,7 +153,7 @@ cozy-monitor update-all
 Pour désinstaller une application, tapez simplement :
 
 ```bash
-cozy-monitor uninstall <app>
+sudo cozy-monitor uninstall <app>
 ```
 
 ## Gestion de la base de données
@@ -162,31 +163,31 @@ Par défaut, le nom de la base de données utilisée par ces commandes est `cozy
 Pour compresser la base (en supprimant les versions non utilisées des documents) :
 
 ```bash
-cozy-monitor compact [database]
+sudo cozy-monitor compact [database]
 ```
 
 Compresser une vue CouchDB spécifique :
 
 ```bash
-cozy-monitor compact-view <view> [database]
+sudo cozy-monitor compact-view <view> [database]
 ```
 
 Compresser toutes les vues :
 
 ```bash
-cozy-monitor compact-all-view [database]
+sudo cozy-monitor compact-all-view [database]
 ```
 
 Faire une sauvegarde de la base en la répliquant sur une autre instance CouchDB :
 
 ```bash
-cozy-monitor backup [target]
+sudo cozy-monitor backup [target]
 ```
 
 Nettoyer la base de données :
 
 ```bash
-cozy-monitor cleanup [database]
+sudo cozy-monitor cleanup [database]
 ```
 
 ## Commandes diverses
@@ -194,15 +195,8 @@ cozy-monitor cleanup [database]
 Recharger toutes les routes du Proxy applicatif à partir du système de données :
 
 ```bash
-cozy-monitor reset-proxy
+sudo cozy-monitor reset-proxy
 ```
-
-Exécuter un script fourni par une application (option dépréciée) :
-
-```bash
-cozy-monitor script <app> <script> [argument]
-```
-
 
 ## Augmenter l’espace disque
 
@@ -215,12 +209,17 @@ dossier :
 /usr/local/var/lib/couchdb/
 ```
 
+Ce chemin peut aussi être `/var/lib/couchdb`, notamment si vous avez installé
+cozy sur une Debian ou une Ubuntu.
+
 Vous pouvez modifier ce chemin, par exemple pour le faire pointer vers un autre
 disque avec plus d’espace libre.  Pour cela, éditez le fichier :
 
 ```bash
 /usr/local/etc/couchdb/local.ini
 ```
+
+C'est le fichier `/etc/couchdb/local.ini` sur Debian et Ubuntu.
 
 Ajoutez une section couchdb si elle n’es pas déjà présente. Vous pouvez alors
 modifier le paramètre spécifiant le dossier où est stocké la base de données :
@@ -232,7 +231,7 @@ view_index_dir = /home/storage/cozy-data
 ```
 
 Ceci fait, il faut couper CouchDB, déplacer le fichier contenant la base, puis
-la relancer :
+la relancer (en tant que root) :
 
 ```bash
 supervisorctl stop couchdb
@@ -241,6 +240,17 @@ mkdir /home/storage/cozy-data/
 cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
 supervisorctl start couchdb
+```
+
+Pour Debian et Ubuntu, le redémarrage de Couchdb ne passe pas supervisord :
+
+```bash
+service stop couchdb
+mkdir /home/storage/cozy-data/
+# cp here, to have a copy of the data in case of problem.
+cp /var/lib/couchdb/* /home/storage/cozy-data/
+chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
+service start couchdb
 ```
 
 **Il est fortement recommandé de sauvegarder vos données avant une telle

@@ -70,8 +70,9 @@ Restart cozy stack.
 Cozy stack means home, proxy and data-system. In others words, cozy stack corresponds to applications allow to run Cozy.
 
 ```bash
-cozy-monitor restart-cozy-stack
+sudo cozy-monitor restart-cozy-stack
 ```
+
 ### Information
 Display installed application with their status (up or down).
 
@@ -82,12 +83,13 @@ cozy-monitor status
 Display cozy stack modules version
 
 ```bash
-cozy-monitor versions
+cozy-monitor versions-stack
 ```
-Display installed applications versions
+
+Also display installed applications versions
 
 ```bash
-cozy-monitor versions-apps
+cozy-monitor versions
 ```
 
 ## Applications management
@@ -97,7 +99,7 @@ Install given application. If it is not an official Cozy application you should
 give repo location too. You should also give a specific display name or a specific branch.
 
 ```bash
-cozy-monitor install <app> [-r <repo>] [-d <displayName>] [-b <branch>]
+sudo cozy-monitor install <app> [-r <repo>] [-d <displayName>] [-b <branch>]
 ```
 
 
@@ -105,38 +107,38 @@ cozy-monitor install <app> [-r <repo>] [-d <displayName>] [-b <branch>]
 Stop application with given name.
 
 ```bash
-cozy-monitor stop <app>
+sudo cozy-monitor stop <app>
 ```
 
 Stop all user applications.
 
 ```bash
-cozy-monitor stop-all <app>
+sudo cozy-monitor stop-all <app>
 ```
 
 Start application with given name.
 
 ```bash
-cozy-monitor start <app>
+sudo cozy-monitor start <app>
 ```
 
 Restart application with given name.
 
 ```bash
-cozy-monitor restart <app>
+sudo cozy-monitor restart <app>
 ```
 
 Update application with given name (git clone + npm install + restart).
 The repo option is only useful if application comes from a specific repository.
 
 ```bash
-cozy-monitor update <app> [repo]
+sudo cozy-monitor update <app> [repo]
 ```
 
 Update all applications installed by cozy user.
 
 ```bash
-cozy-monitor update-all
+sudo cozy-monitor update-all
 ```
 
 
@@ -145,7 +147,7 @@ cozy-monitor update-all
 Uninstall application with given name.
 
 ```bash
-cozy-monitor uninstall <app>
+sudo cozy-monitor uninstall <app>
 ```
 
 ## Database management
@@ -154,31 +156,31 @@ By default, database option is "cozy".
 Run compact CouchDB command on database (remove unused revisions).
 
 ```bash
-cozy-monitor compact [database]
+sudo cozy-monitor compact [database]
 ```
 
 Compact a given CouchDB view.
 
 ```bash
-cozy-monitor compact-view <view> [database]
+sudo cozy-monitor compact-view <view> [database]
 ```
 
 Compact all views.
 
 ```bash
-cozy-monitor compact-all-view [database]
+sudo cozy-monitor compact-all-view [database]
 ```
 
 Backup database by replicating it to another CouchDB instance.
 
 ```bash
-cozy-monitor backup [target]
+sudo cozy-monitor backup [target]
 ```
 
 Clean database.
 
 ```bash
-cozy-monitor cleanup [database]
+sudo cozy-monitor cleanup [database]
 ```
 
 ## Others
@@ -187,13 +189,7 @@ Ask for proxy to reset its routes via the information stored in the Data
 System.
 
 ```bash
-cozy-monitor reset-proxy
-```
-
-Launch script that comes with given application (deprecated).
-
-```bash
-cozy-monitor script <app> <script> [argument]
+sudo cozy-monitor reset-proxy
 ```
 
 
@@ -208,12 +204,17 @@ that folder:
 /usr/local/var/lib/couchdb/
 ```
 
+This path can also be `/var/lib/couchdb`, in particular if your cozy is
+installed on Debian or Ubuntu.
+
 You could change that directory where you want, on a mounting point with more
 free disk space. For that, open the following file:
 
 ```bash
 /usr/local/etc/couchdb/local.ini
 ```
+
+It's `/etc/couchdb/local.init` on Debian and Ubuntu.
 
 Add the couchdb section if it is not already present. Then you can change the
 database directory parameters:
@@ -225,7 +226,7 @@ view_index_dir = /home/storage/cozy-data
 ```
 
 Once done, you will have to stop couchdb, move your database file then restart
-it:
+it (as root):
 
 ```bash
 supervisorctl stop couchdb
@@ -234,6 +235,17 @@ mkdir /home/storage/cozy-data/
 cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
 supervisorctl start couchdb
+```
+
+For Debian and Ubuntu, Couchdb is not managed by supervisord:
+
+```bash
+service stop couchdb
+mkdir /home/storage/cozy-data/
+# cp here, to have a copy of the data in case of problem.
+cp /var/lib/couchdb/* /home/storage/cozy-data/
+chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
+service start couchdb
 ```
 
 **A backup is strongly recommended before performing that operation.** You

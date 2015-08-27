@@ -20,6 +20,15 @@ root@debian-8:~# lsb_release -c
 Codename:     jessie
 ```
 
+Si `lsb_release` n'est pas installé, vous être probablement sur une version
+trop ancienne de Debian. Vous pouvez vous en assurez en regardant la version
+de cette façon :
+
+```
+root@debian-8:~# cat /etc/debian_version
+8.1
+```
+
 <br>
 
 1. Assurez-vous que les paquets `ca-certificates` et `apt-transport-https` sont bien installés
