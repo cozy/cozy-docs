@@ -82,4 +82,4 @@ Faites-nous savoir sur le [forum](https://forum.cozy.io/) que que voudriez avoir
 ## Ressources connectées
 * [Page du Playstore](https://play.google.com/store/apps/details?id=io.cozy.files_client&hl=)
 * [Discussion sur le forum (en)](https://forum.cozy.io/t/i-tried-cozy-mobile/188)
-* [APK Android](https://files.cozycloud.cc/cozy.apk) v0.1.9 (sha1: 4c6675877cf42a1e4a7fe71afc73b9e47c6403ed)
+* [APK Android](https://files.cozycloud.cc/cozy.apk) v0.1.10 (sha1: 484030d2037371dee6d649b3256aba29ea941a5f)
