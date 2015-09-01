@@ -1,0 +1,132 @@
+---
+title: "Patch notes 2015/04/03"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 10
+---
+#patch-note
+    h1 Patch note #4
+    p This relates development from 2015/03/23 to 2015/04/03.
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+    label(for="toggle-regression") Regression
+    input#toggle-regression(type="checkbox", checked="true")
+    h2 Applications
+    h3 Calendar (v1.0.13)
+    ul
+        li.feature Add german locale
+        li.bug Prevent socket.io from spamming reconnection attempts
+        li.feature Restore icon to duplicate an event
+        li.feature Allow to do multiple action (deletion/export)
+
+    h3 Contact
+    ul
+        li.feature Add german locale
+        li.feature Add .vcard as supported extension
+
+    h3 Emails (v0.7.0)
+    h4 Mail composing
+    ul
+        li.feature Remove default text when composing a new message
+        li.feature Allow to drag'n'drop contacts in compose form
+        li.feature Remove magnifying glass from send field in compose widget
+        li.feature Allow to compose new message with Ctrl+n (and `n`)
+        li.feature Handle better contacts that are not in address book
+    h4 Reply experience
+    ul
+        li.bug Make proper visual header for forwarded messages
+        li.feature Remove empty line at the beginning when replying to a message
+        li.feature Change displayed date as reply introduction
+        li.feature Add a style to blockquotes
+    h4 Mail reading
+    ul
+        li.bug Fix error displaying an attachment with spaces in its name
+        li.feature Make text easier to read by putting it at a higher position in the screen
+        li.feature Buttons in toolbar now uses dedicated icons
+        li.feature Attachments are displayed in footer with a visualisation link and a download link
+        li.featuree Attachments are displayed with paper clip button
+        li.feature Attached images are displayed as thumbnail in footer
+        li.regression Contact tooltip is temporary removed
+        li.regression Button to display message in fullscreen is temporary desactivate
+        li.feature A subbar in footer is available for quick-reply actions
+        li.feature Details box is available to display more header informations
+        li.feature Header display only sender and recipients
+        li.feature Conversation stack is compacted if there's more than 3 messages
+        li.feature Add notifications for new messages
+    h4 Mail navigation
+    ul
+        li.feature Clicking on a message in select mode opens it
+        li.bug Fix contact application opening
+        li.bug Fix navigation in message list after a message deletion with keyboard
+        li.bug Fix selected message indicator moves during refresh
+    h4 Action on mail
+    ul
+        li.bug Add a message when deleting a conversation already in trash
+        li.bug Fix bug when deleting non contiguous messages
+        li.bug Fix drag'n'drop of conversations to other folder
+        li.bug Fix error deleting draft message
+        li.bug Fix actions on selected messages in conversation view
+        li.feature Improve message/conversation removal
+            li.bug Fix undo conversation deletion
+    h4 Others
+    ul
+        li.bug Can't use emails with smtp server on alternate port
+        li.bug Fix nothing happens when refreshing if login/pass is incorrect
+        li.feature Improve spinner design
+
+    h3 Files
+    ul
+        li.feature Add german locale
+        li.bug Prevent socket.io from spamming reconnection attempts
+        li.feature Add jade precompilation at build time
+
+    h3 Photos
+    ul
+        li.feature Add german locale
+    h2 Mobile application (v0.1.5)
+    ul
+        li.feature Start service when a new photo is taken
+        li.feature Start service when mobile connect it to wifi
+        li.feature Download automatically last version for file in cache
+        li.bug Remove file in cache if it is removed from Cozy
+        li.bug Fix directory cache
+        li.bug Check wifi for each synchronization
+        li.feature Display message if application receives a certificat error
+        li.feature Synchronize notification when application is started
+    h2 Platform
+    h3 Controller (v2.0.22)
+    ul
+        li.security Use setgid and setgroups as carapace options
+        li.feature Improve error sending
+    h3 Home (v1.0.41)
+    ul
+        li.feature Add german locale
+        li.bug Prevent socket.io from spamming reconnection attempts
+        li.feature In market place, open application repository in new window
+
+    h3 Proxy
+    ul
+        li.feature Better responsive (smaller fonts and logo on the left for small screens)
+        li.feature Change font from maven to source sans
+        li.feature Add a white background to the option field
+        li.feature Add a padding to the password field
+
+    h3 Monitor (v1.2.19)
+    ul
+        li.feature Improve errors logging
+        li.feature Add '.git' if it's omitted
+        li.featre Use process.env to set host and port
+
+    h2 Development tools
+    h3 cozy-dev (v1.0.24)
+    ul
+        li.bug Fix db:name command
+        li.bug Fix: db:switch command didn't change the configuration
+        li.bug Fix type in icon handling

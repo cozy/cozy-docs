@@ -1,0 +1,378 @@
+@import 'nib'
+
+blue = #34a6ff
+red = #ffa634
+lightblue = #cbe4fb
+greyblue = #34a6bb
+green = #5c5
+orange = #fe8800
+lightorange = #ffc47f
+darkgrey = #333
+lightgrey = #ccc
+grey = #aaa
+red = #dd3333
+
+@font-face
+    font-family main-title
+    src url("../fonts/maven-pro-light-300.otf")
+
+@font-face
+    font-family main-body
+    src url("../fonts/signika-light.ttf")
+
+@font-face
+    font-family: main-body
+    src: url('/assets/fonts/source-sans-pro.ttf')
+
+@font-face
+    font-family: main-code
+    src: url('/assets/fonts/SourceCodePro-Regular.ttf')
+
+body
+    font-family main-body
+    background-color darkgrey
+
+pre
+code
+    font-family main-code
+    margin-bottom 10px
+
+p
+    margin-bottom 5px
+
+.wrapper
+    margin-left auto
+    margin-right auto
+    width 100%
+    max-width 960px
+    background-color white
+    border-bottom-left-radius 10px
+    border-bottom-right-radius 10px
+    padding-top 20px
+
+// Header styles
+.navbar
+    box-shadow 2px 0 2px rgba(10, 10, 10, 0.4)
+
+    li
+        position relative
+
+    .subtitle
+        display inline-block
+
+        li:hover > a
+            color blue
+
+        a
+            font-size 18px
+
+        .selected
+            color black
+            border-bottom 2px solid blue
+
+        @media (max-width: 1024px)
+            display none
+
+.dropdown-menu
+    display none
+    .subtitle > li:hover &
+        display block
+
+    position absolute
+    top 100%
+    left 0
+    box-sizing border-box
+    width 250px
+    padding 10px !important
+    background-color white
+    border 1px solid #ccc
+    border-top none
+    border-radius 0 0 4px 4px
+
+    li
+        display block
+        margin 0.75em
+
+    a
+        font-size 15px !important
+
+
+// Menu styles
+aside
+    border-right 1px solid lightblue
+    position fixed
+    width 250px
+    margin-top -20px
+
+    @media (max-width: 960px)
+        display none
+
+    p.title
+        display block
+        margin 0 0 5px 20px
+        font-size 20px
+        &:not(.toc)
+            display none
+
+
+#navigation
+    margin 0 0 0 20px
+
+
+    ul
+        list-style-type none
+        padding 0
+        font-family main-body
+
+
+        li
+            border-bottom 1px solid lightblue
+            line-height 30px
+            cursor pointer
+
+            a, a:active
+                color blue
+            &:hover a
+                color #fff
+
+            .label
+                width 100%
+                padding 10px 0
+                display inline-block
+                user-select none
+                text-decoration none
+
+                &:hover
+                    background orange
+                    color #fff
+
+            &:active
+                box-shadow inset 0 0 15px lightorange
+
+            &.active
+                background blue
+                .label
+                    color #fff
+
+            &:last-of-type
+                border-bottom 0
+
+            &:hover
+                background blue
+                padding-bottom 0
+
+        &.first-level
+            li
+                .label
+                    font-family main-body
+                    padding-left 10px
+
+                &:hover > ul
+                &.active > ul
+                    border-top 1px solid lightblue
+
+        &.second-level
+            display none
+
+        &.first-level li.active
+            ul.second-level
+                display block
+
+        &.first-level li.active
+        &.first-level li:hover
+
+                li
+                    color #fff
+                    border-bottom 0
+                    text-align left
+                    line-height 20px
+                    a
+                        padding-left 10px !important
+
+                    .label
+                        padding 7px 0
+
+                    &:hover
+                        background orange
+                    &.active
+                        background lightblue
+                        a
+                            color darkgrey
+
+            &:hover
+                color lightblue
+
+
+// Content styles
+#main
+
+    &.w80
+        margin auto
+
+    &.w75
+        padding-left 35px
+
+    p
+        font-weight normal
+        font-size 15px
+        font-family main-body
+        margin-top 2px
+        color #444
+
+        code
+            padding 5px
+            margin-bottom 15px
+
+    ul
+        margin .75em 0
+        li
+            font-size 15px
+            font-family main-body
+            color #444
+
+    #patch-note
+
+        label
+            font-family main-body
+
+        input[type="checkbox"]
+            margin-right 25px
+            &:focus
+                outline none
+
+        label[for="toggle-feature"]
+            color blue + 30%
+
+        label[for="toggle-bug"]
+            color orange + 30%
+
+        label[for="toggle-security"]
+            color red + 30%
+
+        label[for="toggle-internal"]
+            color green + 30%
+
+        // handles "show/hide" actions when the checkbox is unchecked
+        #toggle-feature:checked ~ ul li.feature
+        #toggle-bug:checked ~ ul li.bug
+        #toggle-security:checked ~ ul li.security
+        #toggle-internal:checked ~ ul li.internal
+            display block
+
+        ul
+            list-style-type none
+            padding-left 0
+
+        li
+            display none
+            // color bullet
+            &:before
+                border-radius 50%
+                display inline-block
+                content " "
+                width 10px
+                height 10px
+                margin-right 5px
+
+        li.feature:before
+            background blue + 30%
+        li.bug:before
+            background orange + 30%
+        li.security:before
+            background red + 30%
+        li.internal:before
+            background green + 30%
+
+    h3
+        /* margin/padding is a trick to prevent the sticky header
+        from hiding the title */
+        margin-top -50px
+        padding-top 10px + 50px
+        margin-bottom 15px
+        font-family main-body
+        font-weight normal
+
+    h2
+        margin-bottom 20px
+        font-family main-body
+        font-weight normal
+        font-size 30px
+
+        margin-top -50px
+        padding-top 50px + 50px
+        border-bottom 5px solid #eee
+
+    h2:first-letter
+        text-transform uppercase
+
+    h1
+        font-family main-body
+        margin-bottom 10px
+        margin-top 0
+
+    a
+    a:visited
+        color black
+
+    a:hover
+        color orange - 40%
+
+    pre.highlight
+        margin-top 0
+        margin-bottom 15px
+
+        code
+            padding 20px
+            border-radius 10px
+            line-height 20px
+            margin-top 10px
+            margin-bottom 30px
+
+    hr
+        border 0
+        height 0
+        border-bottom 3px solid #eee
+        margin 20px 0
+
+    .install-logo
+        a
+            display inline-block
+            width 128px
+            margin 0 30px
+            font-size 1.3em
+            color blue
+            text-decoration none
+
+            .label
+                text-align center
+                padding-top 7px
+
+        a:hover
+            color orange - 40%
+        
+
+        
+
+// Footer styles
+#footer
+    color white
+    text-align center
+    margin-bottom 10px
+    margin-top 30px
+    background lightgrey + 10%
+    border-bottom-left-radius 10px
+    border-bottom-right-radius 10px
+
+    ul
+        list-style-type none
+        padding 0
+        display inline-block
+
+    a
+        font-size 18px
+        text-decoration none
+        font-family main
+        color black
+
+    a:hover
+        color orange - 40%

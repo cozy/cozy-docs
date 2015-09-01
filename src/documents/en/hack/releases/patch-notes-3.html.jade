@@ -1,0 +1,90 @@
+---
+title: "Patch notes 2015/03/20"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 11
+---
+#patch-note
+    h1 Patch note #3
+    p This relates development from 2015/03/09 to 2015/03/20.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+    ul
+        li.bug Fix applications authentication after the Data System restarted.
+
+    h3 Calendar (v1.0.12)
+    ul
+        li.feature Explicit new calendar's creation (thank you <a href="https://github.com/sylzys">Sylzys</a>).
+        li.feature Better file names of ICS export.
+        li.bug Fix list view: previous events could not be displayed.
+        li.bug Fix spinner when removing an event.
+        li.bug Fix default calendar's selection when creating an event.
+        li.feature Improve calendar's name edition (thank you <a href="https://github.com/sylzys">Sylzys</a>).
+
+    h3 Contacts (v1.1.3)
+    ul
+        li.feature Improve keyboard navigation.
+        li.bug Fix VCF export.
+        li.feature Improve vCard support!
+
+    h3 Emails (v0.6.9)
+    ul
+        li.bug Fix some calendar invitation message were empty.
+        li.bug Fix: prevent editor from closing in reply.
+        li.bug Fix mark email as read.
+        li.bug Fix infinite scroll.
+        li.bug Fix alternate port fort SMTP server with emails authentication.
+
+    h3 Files (v1.1.3)
+    ul
+        li.feature Better error handling.
+        li.bug The upload mecanism has been reworked, fixing multiple weird bugs.
+
+    h3 Photos (v1.0.8)
+    ul
+        li.feature Improve import from Files.
+
+    h2 Platform
+
+    h3 Data System (v1.0.27)
+    ul
+        li.feature Binaries with no reference are automatically removed.
+
+    h3 Home (v1.0.40)
+    ul
+        li.feature Add the possibility to replay the wizard.
+        li.feature Remove the app's icon resizing.
+        li.feature Remove application's auto-stop by default.
+        li.bug Fix official applications marked as community application during update.
+        li.bug Fix icons.
+        li.feature Improve english wording (thank you <a href="https://github.com/jankeromnes">Janx</a>).
+        li.feature Users don't leave the marketplace when they install applications.
+        li.feature Improve "manage your app".
+        li.bug Fix disk space when not in Gigabytes.
+        li.feature Improve alert message during community applications installation.
+        li.bug Fix sorting in application's list ("manage your app")
+        li.bug Improve keyboard navigation.
+
+
+    h2 Development tools
+
+    h3 cozy-dev (v1.0.22)
+    ul
+        li.bug Better error handling during `vm:start`
+
+    h3 Documentation
+    ul
+        li.feature Improve layout.
+        li.bug Fix many typos.
+
+

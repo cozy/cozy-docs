@@ -1,0 +1,309 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        link(rel="shortcut icon", href="/assets/images/favicon.png")
+        title="Cozy, un Cloud personnel que vous pouvez héberger, personnaliser et entièrement contrôler"
+        meta(name="description", content="Cozy est votre plateforme de cloud personnel. Stockez vos données dans un espace sous votre contrôle et accédez-y via des applications web. Photos, mails, notes, contacts, tâches&hellip; plusieurs applications sont déjà disponibles. Étendez vos possibilités en développant vos propres applications. Cozy est open source et auto-hébergeable. Cozy respecte votre vie privée.")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+        != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
+    body.homepage
+        .navbar.fixed(aria-expanded='false')
+            a.nav-logo(href="/fr/")
+                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+            nav
+                ul.navigation.right
+                    li: a(href="/fr/host/install/") Install
+                    li: a(href="/fr/mobile/files.html") Sync
+                    li: a(href="/en/hack/getting-started/") Dev
+                    li: a(href="https://blog.cozycloud.cc") Blog
+                    li: a(href="#about") À propos
+                    li: a(href="#contact") Contact
+                ul.lang-switcher
+                    li: a(href="/en/") EN
+                    li: a.selected(href="/fr/") FR
+            button.nav-toggle.icon-menu
+
+
+        header.line.clearfix#header
+            .left.mr2.biglogo
+                img(src='/assets/images/cozy-logo-gradient.svg', width="350", height="266")
+            .mod.main-text
+                .mod.left
+                    h1
+                        span.title Cozy, 
+                        | un Cloud personnel que 
+                        | vous pouvez héberger, personnaliser
+                        | et entièrement contrôler
+                    p.h4-like
+                        | Synchronisez vos contacts, agendas et fichiers entre vos périphériques et votre serveur personnel.
+                        | Ajoutez vos propres applications pour tirer parti de vos données personnelles.
+                    .image-links.mt6
+                        p
+                            a.button(href="/fr/host/install/")
+                                | Installer sur votre serveur
+                        p
+                            | ou
+                        p
+                            a.button(href="/fr/#contact")
+                                | Essayer sur nos serveurs
+                        p
+                            | Pour être prévenu des nouveautés du projet, suivez-nous sur 
+                            a(href="https://twitter.com/mycozycloud") Twitter 
+                            | ou 
+                            a(href="https://diaspora-fr.org/people/ce1528a0f88b013197aa01beea1f31e2") Diaspora
+
+            .line.external-links
+                .mod.w33.left.pa2.txtcenter
+                    h4 Simple et intuitif
+                    br
+                    a.button(href="https://demo.cozycloud.cc")
+                        | Utilisez la démo
+                .mod.w33.left.pa2.txtcenter
+                    h4 Centré sur sa communauté
+                    br
+                    a.button(href="https://forum.cozy.io")
+                        | Visitez le forum
+                .mod.w33.left.pa2.txtcenter
+                    h4 Libre et Open Source
+                    br
+                    a.button(href="https://github.com/cozy/cozy-setup")
+                        | Accédez au code source
+
+        section#why.why.center.highlight
+            .line
+                h4
+                    | Découvrez votre cloud personnel
+                p.textcenter.pa2.tagline
+                    | Cozy est l'assistant qui vous simplifie la vie.
+                    | Vous pouvez lui faire confiance pour respecter votre vie privée et vous servir.
+                    | Voici ses principales fonctionnalités :
+                .line.mt2.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/files.png", alt="Files").screenshot
+                    .mod.w50.left
+                        p.txtcenter
+                            img(src="/assets/images/files-picto.png", alt="Files").picto
+                        h1.capitalize.mt3
+                            | Fichiers
+                        p.pa2.mt0
+                            | Stockez vos fichiers importants dans votre Cozy.
+                            | Sauvegardez les photos de votre téléphone grâce à l'application Cozy pour mobile.
+                            | Gardez vos fichiers synchronisés avec votre ordinateur portable et votre téléphone.
+                .line.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/calendar.png", alt="Calendar").screenshot
+                    .mod.w50.left
+                        p.txtcenter
+                            img(src="/assets/images/calendar-picto.png", alt="Calendar").picto
+                        h1.capitalize.mt3
+                            | Agenda
+                        p.pa2.mt0
+                            | Gérez vos événements grâce à une interface web simple.
+                            | Synchronisez-les sur téléphone avec le protocole CalDav.
+                .line.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/contacts.png", alt="Contacts").screenshot
+                    .mod.w50.left
+                        p.txtcenter
+                            img(src="/assets/images/contacts-picto.png", alt="Files").picto
+                        h1.capitalize.mt3
+                            | Contacts
+                        p.pa2.mt0
+                            | Gardez vos contacts dans votre cloud et partagez des fichiers et des événements avec eux.
+                            | Synchronisez le carnet d'adresses de votre téléphone via le protocole CardDav.
+                .line.gallery
+                    .mod.w50.left
+                        .screenshot-container.txtcenter
+                            img(src="/assets/images/app-store.png", alt="App Store").screenshot
+                    .mod.w50.left
+                        p.txtcenter
+                            img(src="/assets/images/app-store-picto.png", alt="App Store").picto
+                        h1.capitalize.mt3
+                            | Marché d'applications
+                        p.pa2.mt0
+                            | Cozy est extensible :
+                            | vous pouvez installer des applications développées par la communauté :
+                            | galerie photo, lecteur de flux RSS, gestionnaire de tâches, etc.
+
+                 .line.mt6
+                     p
+                        strong.biggest 9000 applications sont téléchargées chaque mois !
+                 .line.txtcenter.mt2
+                     a#install-button.button.mt6(href="/fr/host/install/")
+                            | Installez Cozy sur votre machine préférée
+
+        section#contact.simple
+            h4 Obtenez un Cozy en tant que bêta testeur
+            .line
+                p
+                    | J'aimerais bénéficier d'une instance Cozy gratuite avec 2GO de RAM et 20GO de disque
+                    | (disponible en quantité limitée, hébergement en France).
+                form#sign-me-up(action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    label(for='mce-signmeup-EMAIL').email
+                        span email address
+                        input#mce-signmeup-EMAIL(type="email", name="EMAIL", placeholder="adresse email")
+                    label(for='mce-signmeup-MOTIV')
+                        span (Optionnel) Je veux aider :
+                        select(name="MOTIV")
+                            option(value="", disabled="", selected="") ...
+                            option en envoyant des retours
+                            option en envoyant des rapports de bugs
+                            option pour les traductions
+                            option pour le développement d'applications
+
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_e25ec3b4f8c222291f7d77997_a9da8da0de', tabindex='-1', value='')
+                    button.icon-cloud(type='submit', name='subscribe') Go !
+            .line
+                p
+                    | Vous cherchez à contacter l'équipe ?
+                    | Envoyez un message à : 
+                    a(href="mailto:contact@cozycloud.cc") contact@cozycloud.cc
+                    | .
+
+        section#community-cozy.highlight
+            .line
+                h4
+                    | Rejoignez notre communauté
+                p
+                    | Nous avons besoin de votre aide pour construire le meilleur serveur personnel possible.
+                    | Entrez en contact avec nous pour demander une assistance technique, partager vos réflexions, intégrer vos contributions ou montrer vos nouvelles applications.
+                .line
+                    p.mod.w33.left
+                        a(href="http://webchat.freenode.net/?channels=cozycloud")
+                           img(src='/assets/images/irc-logo.png', alt='IRC Logo')
+                           br
+                           | <strong>#cozycloud</strong> sur irc.freenode.net
+                    p.mod.w33.left
+                        a(href='https://forum.cozy.io')
+                           img(src='/assets/images/forum.png', alt='Forum Icon')
+                           br
+                           | Forum
+                    p.mod.w33.left
+                        a(href='https://twitter.com/mycozycloud')
+                           img(src='/assets/images/twitter.png', alt='Twitter Logo')
+                           br
+                           | Twitter
+
+        section#hack.line.target.simple
+            .line
+                h4
+                    | Créez des applications pour votre Cozy et partagez-les avec les autres utilisateurs
+            .line.mt6
+                .mod.w33.left
+                    p.txtcenter
+                        img(src="/assets/images/big-plus.png", alt="Plus Icon")
+                    p.pa2
+                        | Développement rapide d'applications.
+                        br
+                        | Cozy accélère le développement de vos applications web.
+                        | Il fournit des patrons prêts à l'emploi, un cadriciel web simple, un ODM et de nombreuses bibliothèques.
+                        | Aucun IDE specifique n'est requis, conservez votre éditeur préféré !
+                .mod.w33.left
+                    p.txtcenter
+                        img(src="/assets/images/javascript_logo.png", alt="JS Logo")
+                    p.pa2
+                        | Basé sur JavaScript.
+                        br
+                        | Vous pouvez construire une application web avec un seul langage pour le client et le serveur : JavaScript.
+                        | Par ailleurs, nous supporterons bientôt les applications avec seulement HTML5 et JS, pour lesquelles le serveur ne sera pas requis.
+                .mod.w33.left
+                    p.txtcenter
+                        img(src="/assets/images/server.png", alt="Server Icon")
+                    p.pa2
+                        | Partage d'applications simplifié.
+                        br
+                        | Vous pourrez distribuer votre application facilement avec toute la communauté en partageant l'URL Git de votre dépôt.
+                        | Plus besoin de vous inquiéter pour le déploiement !
+            .line
+                .txtcenter.mt6
+                    a.button.mt6(href="http://cozy.io/en/hack/getting-started/")
+                        | Apprenez dès maintenant comment créer une application !
+
+
+        section#leave.highlight
+            .line
+                h4
+                    | Nous n'essayons pas de vous enfermer
+                p
+                    | De nos jours, les serveurs en ligne ont la fâcheuse habitude d'enfermer leurs utilisateurs.
+                    | C'est contraire à l'éthique de Cozy. 
+                    | C'est pourquoi vous avez la possibilité de supprimer vos données et de quitter la plateforme à tout moment.
+                    br
+                    | Voyez par vous même en cliquant sur le bouton ci-dessous :
+                .txtcenter.mt3
+                    a.button(href="/fr/host/uninstall.html")
+                        | Désinstaller Cozy
+
+
+        section#about.line
+            h2.icon-rate &nbsp; À propos 
+            p
+                | Cozy est fièrement codé à la main en France par l'équipe Cozy Cloud, 
+                | une startup prometteuse qui fait du logiciel libre.
+            ul.team
+                li(title="Benjamin")
+                    img(src="/assets/images/team/polaroid-ben.png", alt="Benjamin")
+                li(title="Frank")
+                    img(src="/assets/images/team/polaroid-frank.png", alt="Frank")
+                li(title="Lucas")
+                    img(src="/assets/images/team/polaroid-lucas.png", alt="Lucas")
+                li(title="Zoé")
+                    img(src="/assets/images/team/polaroid-zoe.png", alt="Zoé")
+                li(title="Joseph")
+                    img(src="/assets/images/team/polaroid-joseph.png", alt="Joseph")
+                li(title="Romain")
+                    img(src="/assets/images/team/polaroid-romain.png", alt="Romain")
+                li(title="Alexis")
+                    img(src="/assets/images/team/polaroid-alexis.png", alt="Alexis")
+                li(title="Nicolas")
+                    img(src="/assets/images/team/polaroid-nicolas.png", alt="Nicolas")
+                li(title="Clochix")
+                    img(src="/assets/images/team/polaroid-clochix.png", alt="Clochix")
+                li(title="Paul")
+                    img(src="/assets/images/team/polaroid-paul.png", alt="Paul")
+                li(title="m4dz")
+                    img(src="/assets/images/team/polaroid-m4dz.png", alt="m4dz")
+                li(title="Tristan")
+                    img(src="/assets/images/team/polaroid-tristan.png", alt="Tristan")
+            p
+                | L'objectif de l'équipe Cozy Cloud est de construire un Cloud personnel de confiance, décentralisé, en logiciel libre 
+                | qui permette à chacun de nous de reprendre le contrôle de nos données personnelles tout en bénéficiant 
+                | des dernières innovations du Cloud.
+            p.credits
+                | Crédits photos: Cozy Cloud, TechGenStaffer
+                | (Flickr), licence Creative Commons
+                br
+                | Icônes: iconmonstr, KNACSS &amp; Icomoon
+            p.mt6.txtcenter
+                a.mr3(href="http://redecentralize.org/interviews/2014/01/30/11-benjamin-cozycloud.html")
+                    img(src='/assets/images/redecentralize-logo.png', alt='LinuxFR Logo')
+                | &nbsp;&nbsp;
+                a.mr3(href="http://linuxfr.org/news/cozy-un-cloud-personnel-que-l-on-peut-heberger-bidouiller-et-supprimer", )
+                    img(src='/assets/images/linuxfr-logo.png', alt='LinuxFR Logo')
+                | &nbsp;&nbsp;
+                a(href="http://blog.webfwd.org/post/55880600928/new-team-intro-cozy-cloud")
+                    img(src='/assets/images/webfwd-logo.png', alt='WebFWD Logo')
+
+        script(src='/vendors/javascripts/jquery-2.0.3.min.js').
+        script(src='/assets/javascripts/main.js')
+
+        script(type='text/javascript').
+            var _paq = _paq || [];
+            _paq.push(['disableCookies']);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+            var u="//piwik.cozycloud.cc/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 3]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        noscript
+            p
+                img(src="https://piwik.cozycloud.cc/piwik.php?idsite=3", style="border:0", alt="")

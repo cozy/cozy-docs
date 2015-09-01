@@ -1,0 +1,65 @@
+    ---
+
+title: "Patch notes 2015/06/01"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 6
+---
+#patch-note
+    h1 Patch note #8
+    p This relates development from 2015/05/18 to 2015/06/01.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+
+    h3 Emails (---)
+    ul
+        li.bug Fix fields From and To in mail header description.
+        li.feature Improve all confirmation dialogs.
+        li.feature Really remove draft instead of moving it to trash.
+        li.bug Keayboard navigation doesn't start infinite scroll.
+        li.bug All messages list is loaded when application is in the background.
+        li.feature Canceling a draft creation should not display warning when the draft is empty.
+        li.bug Open next message after a deletion.
+        li.bug Fix locale.
+        li.bug Signature isn't changed if mailbox changes in compose page.
+        li.bug Deleting all displayed messages doeesn't load next messages.
+        li.feature Speed up infinite scrolll.
+        li.bug Don't navigate to next message when cancelling answer.
+        li.bug Fix message drag and drop.
+        li.feature Add possibility to close a message.
+        li.feature Add possibility to display message in full screen.
+        li.bug Some lines in messages list are too long.
+        li.feature Improve search exit.
+        li.feature Add filter on date.
+        li.bug Unable to re-open message preview after closing it.
+
+
+
+    h3 Files (v1.1.8)
+    ul
+        li.bug Server could be closed if the download was too long. (see [#279](https://github.com/cozy/cozy-files/issues/279))
+        li.bug Folder name was not trimmed (see [#282](https://github.com/cozy/cozy-files/issues/282))
+        li.bug Fix upload folder when the folder already existed.
+        li.feature Bulk actions icons have been changed for clarity.
+        li.feature Overall improvements of multiple selection handling.
+        li.feature Files and folders can now be selected by clicking their row .
+        li.feature Multiple elements can be selected by holding shift+click.
+        li.bug Minor fixes in navigation during uploading.
+        li.bug Performance improvements. Big folders are still hard to browse, we are still working on it.
+        li.feature Sharing emails have received a style update.
+
+
+    h3 Photo (v1.0.13)
+    ul
+        li.bug Photos imported from Files could not be downloaded.
+

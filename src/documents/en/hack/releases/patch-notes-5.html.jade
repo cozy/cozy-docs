@@ -1,0 +1,75 @@
+---
+title: "Patch notes 2015/04/17"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 9
+---
+#patch-note
+    h1 Patch note #5
+    p This relates development from 2015/03/30 to 2015/04/17.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+    h2 Applications
+
+    h3 Emails (v0.7.1)
+    ul
+        li.feature Add mail in header of forwarded messages.
+        li.bug Fix loss of in-reply-to header when replying to a message.
+        li.bug Fix count of unread messages.
+        li.bug Fix twice displaying prefix 'Re:' in reply subject.
+        li.bug Fix contact drag and drop.
+        li.bug Remove line breaks on the top of reply mail.
+        li.feature Remove toastr to indicate that draft is saved.
+        li.feature Improve information message style.
+        li.feature Spam folder emails aren't dsplayed as unread.
+        li.bug Use Reply-To when replying.
+        li.bug Fix errors in mail replying
+        li.bug Fix name when downloading attachment with spaces.
+        li.feature Display immediately reply in conversation.
+        li.bug Fix reply to a message without body.
+        li.feature Put focus on CC or Bcc when add it.
+        li.feature Don't display message action in list toolbar.
+        li.feature Add spinner on account check button.
+
+    h3 Photos (v1.0.11)
+    ul
+        li.feature Add german locale.
+
+    h3 Sync (v1.0.7)
+    ul
+        li.feature Add german locale.
+
+    h3 Files (v1.1.5)
+    ul
+        li.feature Add german locale.
+
+    h3 Contacts (v.1.1.4)
+    ul
+        li.feature Add german locale.
+
+    h2 Platform
+
+    h3 Monitor (v1.2.20)
+    ul
+        li.feature Add function to reinstall missing applications, usefull for relocation.
+
+    h3 Proxy (v1.0.14)
+    ul
+        li.bug Fix locale initilization after stack restart.
+        li.feature Improve success alert style.
+        li.feature Add german locale.
+
+    h3 Controller (v2.0.24)
+    ul
+        li.feature Start home after proxy during autostart
+
+

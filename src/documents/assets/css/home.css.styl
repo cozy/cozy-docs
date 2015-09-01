@@ -1,0 +1,1018 @@
+@import 'nib'
+
+rounded-border()
+    -webkit-border-radius: arguments
+    -moz-border-radius: arguments
+    border-radius: arguments
+
+transform-compat()
+    -webkit-transform: arguments
+    -moz-transform: arguments
+    -ms-transform: arguments
+    -o-transform: arguments
+    transform: arguments
+
+cover(path)
+    background: url(path) no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+
+@font-face
+    font-family: main-light
+    src: url('/assets/fonts/maven-pro-light-200.otf')
+
+@font-face
+    font-family: main
+    src: url('/assets/fonts/maven-pro-light-300.otf')
+
+@font-face
+    font-family: cool
+    src: url('/assets/fonts/source-sans-pro.ttf')
+
+@font-face
+    font-family: cool-light
+    src: url('/assets/fonts/source-sans-pro.ttf')
+
+blue = #1babf4
+deepblue = #34A6FF
+black = #333
+midgrey = #999
+orange = #FE8800
+lightblue = #BBE5F9
+lightorange = orange + 60%
+bluegreen = #FC9633
+green = #5C5
+
+p
+    font-weight: bold
+
+body
+    font-family: main-light
+
+section
+    padding 60px 100px
+    color: white
+    font-family: main
+
+h1
+    font-size: 40px
+    margin-bottom: 0px
+    padding-bottom: 0px
+    font-weight: normal
+
+h2
+    font-family: cool
+    font-weight: normal
+    font-size: 30px
+    margin-bottom: 30px
+
+h3
+    margin-bottom: 30px
+
+h4
+.h4-like
+    font-weight: normal
+    line-height: 1.5em
+
+p
+    font-size: 20px
+
+a
+a:hover
+a:visited
+    color: white
+
+a:focus
+    outline: 0
+
+input
+    border: 1px solid lightblue
+    font-family: main
+
+input:hover
+input:active
+    border: 1px solid blue
+    box-shadow: none
+
+button
+    border: 1px solid lightblue
+    background: lightblue
+    color: grey
+    box-shadow: none
+    text-shadow: none
+    border-radius: 3px
+    font-family: main
+    font-weight: normal
+    cursor: pointer
+    outline: none
+    padding: 1px
+
+button:hover
+    background: blue
+    color: white
+    outline: none
+
+button:active
+    background: blue - 10%
+    shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+    color: white
+    outline: none
+
+.mt3
+    margin-top: 0px
+
+.mt3
+    margin-top: 30px
+
+.mt6
+    margin-top: 60px
+
+.gallery
+    div.screenshot-container
+        margin: 0 auto
+        max-width: 480px
+        max-height: 380px
+        overflow: hidden
+        background: white
+        padding-left: 20px
+        rounded-border: 10px
+
+    img.screenshot
+        transform-compat: scale(1.1,1.1) rotate(-3deg)
+
+    img.picto
+        margin-top: 20px
+        height: 128px
+
+    h1.mt3
+        font-size: 30px
+        text-align: center
+        margin: 10px 0 20px
+
+[class*="grid"] > *
+    float: left
+
+[class*="grid"] > * + *
+    margin-left: 2%
+
+.capitalize
+    text-transform: uppercase
+
+.grid5 > *
+    width: 18.4%
+
+.special
+    background: blue
+    padding: 10px
+    border-radius: 5px
+    color: white
+
+    h4
+        color: white
+
+    a
+    a:visited
+    a:focus
+        color: white
+
+.grid3 > *
+    width: 32%
+
+.warning
+    color: white
+    font-weight: bold
+    background-color: orange - 10%
+    border-radius: 5px
+    padding: 20px
+
+    a
+    a:hover
+    a:visited
+        color: white
+
+#header
+
+    a.button
+        height: 60px
+        border: 0
+        background: lightblue - 25%
+        margin-right: 10px
+        font-size: 21px
+        padding: 13px
+        rounded-border: 5px
+        cursor: pointer
+        text-decoration: none
+        font-family: cool-light
+        color: white
+
+    a.button:hover
+        color: white
+        -webkit-transition:color 0.2s ease-in
+        -moz-transition:color 0.2s ease-in
+        -o-transition:color 0.2s ease-in
+        transition:color 0.2s ease-in
+        -webkit-transition:background-color 0.2s ease-in
+        -moz-transition:background-color 0.2s ease-in
+        -o-transition:background-color 0.2s ease-in
+        transition:background-color 0.2s ease-in
+        background: blue
+
+    a.button:focus
+    a.button:active
+        background: blue - 20%
+        shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+        color: white
+
+    .image-links
+        a
+            line-height: 45px
+            text-decoration: none
+            border-bottom: 1px solid midgrey
+
+        a.button
+            font-size: 26px
+            margin-top: 40px
+            background-color: #fff
+            border: 2px solid blue
+            color: #444
+
+            &:hover
+                background: blue + 90%
+
+            &:focus
+            &:active
+                background: blue + 90%
+                shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+
+        span.code-sample
+            font-family: "DejaVu Sans Mono",courier,monospace
+            background: #DDD
+            padding: 10px
+            border-radius: 4px
+            margin-top: 20px
+            font-size: 14px
+            color: #333
+
+    .external-links
+        h4
+            font-family: main-light
+            margin-bottom: 0px
+
+.code
+    display: inline-block
+    max-width: none
+
+.wrapper
+    margin-top 60px
+
+.txt-white
+    color: white
+
+.txt-black
+    color: black
+
+    a
+    a:hover
+        color: black
+
+.black-text
+    color: black
+
+.additional-infos
+    display: none
+
+.title
+    font-size: 60px
+
+.image
+    margin-top: 20px
+    margin-left: 50px
+
+.main-text
+    padding-left: 40px
+
+.next
+    text-decoration: none
+    font-weight: bold
+    font-size: 18px
+    margin-top: 40px
+
+.simple
+    padding-bottom: 40px
+
+    h4
+        text-align: center
+        font-size: 60px
+
+.highlight
+
+
+    .line
+        text: center
+        padding: 20px
+
+    p
+        text-align: center
+        font-size: 26px
+        margin-top: 40px
+        margin-bottom: 0px
+
+    h4
+        text-align: center
+        font-size: 60px
+
+    ul
+        padding: 20px
+        padding-top: 10px
+        margin-left: 0
+        padding-left: 0
+        font-size: 40px
+
+    li
+        margin-left: 0
+        margin-top: 0px
+        list-style-type: none
+        text-align: center
+        font-size: 30px
+
+.code
+    color: white
+    font-size: 20px
+    line-height: 60px
+    padding: 20px
+    rounded-border: 15px
+
+
+.navbar
+    z-index 40
+    position fixed
+    top 0
+    left 0
+    box-sizing border-box
+    width 100%
+    padding 10px
+    background white
+
+    .nav-logo
+        display block
+        float left
+        margin-right 10px
+
+    nav
+        box-sizing border-box
+        display inline
+        background-color white
+
+    ul
+        list-style-type none
+        margin 0
+        padding 0
+
+    li
+        display inline
+        padding 0 5px
+
+    a
+        color: black
+        text-decoration: none
+        font-size: 24px
+
+        &:hover
+            text-decoration: underline
+
+    .lang-switcher
+        a
+            line-height 2.3
+            font-size 18px
+
+    .selected
+        color blue
+
+    .nav-toggle
+        display none
+        float right
+        border none
+        background none
+        color blue
+        font-size 30px
+
+
+    @media (max-width:580px)
+        .homepage &
+            transition transform 500ms
+            transform translateY(0)
+
+            &[aria-expanded=true]
+                transform translateY(290px)
+
+            nav
+                position absolute
+                bottom 100%
+                left 0
+                width 100%
+                padding 10px
+
+            .right
+                float none
+
+            li
+                display block
+
+            .lang-switcher
+                margin-top 10px
+                border-top 1px solid #eee
+
+                li
+                    display inline
+
+            .nav-toggle
+                display block
+
+
+.menu
+    padding 0
+    margin 0
+    position:fixed
+    height: 60px
+    background: white
+    width: 100%
+
+    p
+    h1
+        margin 0
+
+    button
+    .read-more
+    .happy-pic
+        display: none
+
+header
+    padding: 140px 60px 40px 120px
+
+    font-size: 20px
+
+    p:first-child
+        margin-top: 30px
+        padding-top: 0px
+
+    .image
+        width: 160px
+        text-align: center
+        margin-right: 20px
+
+    a
+    a:hover
+    a:visited
+        color: black
+
+    p
+        font-weight: normal
+
+
+    form
+        display: inline-block
+
+
+.credits
+    font-size 1em
+    color midgrey
+
+
+#why
+    cover("/assets/images/board-01.jpg")
+
+    .line:first-child
+        padding-bottom: 40px
+        background-color: rgba(14, 113, 160, 0.85)
+
+        p
+            margin-top: 0
+            font-size: 20px
+
+        p.mt3
+            margin-top: 30px
+
+        .tagline
+            font-size: 26px
+
+    .button
+        background: orange
+        text-decoration: none
+        padding: 20px
+        font-size: 34px
+        border-radius: 10px
+        font-family: cool
+
+    .button:hover
+        background: orange + 20%
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+
+
+#leave
+    cover("/assets/images/freedom.jpg")
+
+    .line:first-child
+        background-color: rgba(255, 255, 255, 0.85)
+
+    .line
+        padding-bottom: 40px
+        background: white
+        color: black
+
+    .button
+        background: #333
+        text-decoration: none
+        padding: 20px
+        font-size: 30px
+        border-radius: 10px
+        font-family: main
+
+    .button:hover
+        background: #666
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+
+
+#community-cozy
+    cover("/assets/images/community.jpg")
+    
+    margin: 0
+
+    .line:first-child
+        background: rgba(85, 204, 85, 0.85)
+        padding-bottom: 40px
+
+    .line
+        img
+            margin-bottom: 10px
+            width: 96px
+
+        a
+            text-decoration: none
+
+#host
+    background: orange
+
+    .code
+        background: #CC5F00
+
+#hack
+    padding-bottom: 60px
+    background: blue
+
+    img
+        width: 96px
+
+    .button
+        background: blue - 30%
+        text-decoration: none
+        padding: 20px
+        font-size: 30px
+        border-radius: 10px
+        font-family: main
+
+    .button:hover
+        background: blue + 30%
+
+    .button:active
+        box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+
+#architecture
+    background: white
+    color: #333
+
+    .diagbox
+        cursor: pointer
+        color: black
+        background: lightblue
+        rounded-border: 15px
+        text-align: center
+        margin-top: 10px
+        padding: 10px
+        font-size: 14px
+        font-weight: bold
+
+        p
+            display: none
+
+
+#delete
+    background: lightblue
+    color: black
+
+    .code
+        background: lightblue - 30%
+
+    a.txt-black
+        color: black
+
+
+#contact
+    padding-bottom: 60px
+    background: blue
+
+    .line
+        padding-bottom 1em
+        width 100%
+        max-width 60em
+        margin 0 auto
+
+    form
+        padding 2em 0 1em
+
+    // We temporary fix font-size in PX, due to some bugs. Need to rely on
+    // something like normalize.css to resolve this issue.
+    label
+    input
+    textarea
+    select
+    [type=submit]
+        font-size 20px
+
+    select
+        outline none
+        cursor pointer
+
+    label
+        display block
+        padding-bottom 1em
+
+        span
+            display 3lock
+
+        input
+        textarea
+        select
+            display block
+            box-sizing border-box
+            border none
+            border-radius 3px
+
+        input
+        textarea
+        select
+            width 100%
+            padding 1em
+
+        input:active
+        input:focus
+            outline 0
+
+        select
+        select:active
+        select:focus
+            font-family main
+            height 2.5em
+            padding 0.5em
+            background white
+            border 0
+            outline 0
+
+    [type=submit]
+        position relative
+        display block
+        box-sizing border-box
+        padding 1em
+        padding-left 3em
+        border none
+        box-shadow 0 6px blue - 20%
+        background-color blue + 20%
+        color white
+
+        &:hover
+            box-shadow 0 4px orange
+
+            &:before
+                color white
+
+        &:active:before
+        &.active:before
+            color blue - 20%
+            animation: scaleUp 0.5s
+
+        &:before
+            display block
+            position absolute
+            top 50%
+            left 0
+            width 3em
+            margin-top -.5em
+            text-align center
+            vertical-align middle
+            color blue - 20%
+
+    .email span
+        display none
+
+    .notice
+        font-size .75em
+        color blue - 40%
+
+    .counter
+        display inline
+
+        &.alert
+            color white
+
+@keyframes scaleUp
+    80%
+        opacity: 0;
+        transform: scale(2);
+
+    100%
+        opacity: 0;
+        transform: scale(2);
+
+
+#keep-in-touch
+    @media (min-width: 640px)
+        label
+        input
+        [type=submit]
+            float left
+
+        label
+            width 55%
+
+        [type=submit]
+            width 44%
+            margin-left 1%
+
+    @media (min-width: 805px)
+        label
+            width 65%
+
+        [type=submit]
+            width 34%
+
+
+#about
+    background: white
+    color: black
+
+    a
+    a:hover
+        color: black
+
+    .right
+        margin-left: 20px
+        margin-top: 0px
+
+
+.team
+    overflow auto
+    padding 0
+    font-size 1.43em
+    list-style-type none
+    text-align center
+
+    li
+        font-size: 0.01em
+        display inline-block
+        box-sizing border-box
+        width 15%
+        min-width 80px
+        padding 5px
+
+
+// Documentation
+@media (max-width: 1200px)
+
+    header
+    .social
+        padding-right: 60px
+        padding-left: 60px
+
+
+@media (max-width: 1060px)
+
+    #header
+        .biglogo
+            float: none
+            width: 100%
+            margin-bottom: 30px
+
+        .biglogo.left
+            float: none
+
+    header
+    section
+    .social
+        padding-left: 40px
+        padding-right: 40px
+
+    header
+        .main-text
+            padding-left: 0
+
+    #hack
+    #leave
+        .button
+            font-size: 26px
+    #why
+        #install-button
+            font-size: 26px
+
+
+
+@media (max-width: 1400px)
+    .w50
+        padding: 5px
+
+@media (max-width: 960px)
+
+    .w50
+        padding: 0
+        width: 100%
+
+    .w33
+        width: 100%
+
+    header
+        text-align: center
+
+        h1
+            font-size: 30px
+
+        h4
+            font-size: 24px
+
+    .simple
+        h4
+            font-size: 40px
+
+        p
+            font-size: 24px
+
+    .highlight
+
+        h4
+            font-size: 40px
+
+        .line
+            p
+                font-size: 22px
+
+        li
+            margin-top: 20px
+            font-size: 24px
+            text-align: left
+
+    h3
+            font-size: 20px
+
+    .code
+        font-size: 15px
+
+    #social
+        padding: 0
+        padding-bottom: 20px
+
+        .w33
+            width: 100%
+
+        h1
+            padding-left: 40px
+
+    #goals
+        padding-left: 40px
+        padding-right: 20px
+
+        p
+            padding-left: 0
+
+    #community-cozy
+    #hack
+        img
+            width: 96px
+
+    #header
+        .image-links
+            a.button
+                height auto
+                display block
+
+
+@media (max-width: 600px)
+
+    header
+        padding: 80px 20px 10px 20px
+        margin-top: 40px
+
+        h1
+            font-size: 24px
+
+        h4
+            font-size: 20px
+
+        .title
+            width: 100%
+            display: inline-block
+
+    #social
+        h1
+            margin-top: 20px
+            padding-left: 20px
+
+    #goals
+        padding-left: 20px
+        padding-right: 20px
+
+
+    .image-links
+        font-size: 20px
+
+    .image-links:nth-child(2)
+        margin-top: 0
+
+    .highlight
+        padding: 10px
+
+    .target
+        padding: 20px
+
+    .external-links
+        height: auto
+
+        a
+            width: 100%
+            margin-top: 10px
+            display: inline-block
+
+    #mc-embedded-subscribe-form
+        input
+        button
+            width: 100%
+
+    #community-cozy
+    #leave
+    #why
+        -webkit-background-size 100%
+        -moz-background-size 100%
+        -o-background-size 100%
+        background-size 100%
+        background #FFF
+        padding 0
+
+        .line:first-child
+            padding-top 40px
+
+    #leave
+        background #DCC
+
+
+@media (max-width: 480px)
+
+    #about
+    .simple
+    .highlight
+        .line
+            padding 5px
+
+            p
+
+    #hack
+    #leave
+        font-size 16px
+
+        img
+            margin-top 20px
+
+        .pa2
+            padding 20px 0
+            font-weight normal
+            font-size 20px
+
+        .button
+            font-size 12px
+
+    #why
+        .tagline
+            font-size 16px
+            font-weight normal
+
+        .pa2
+            font-weight normal
+
+        #install-button
+            font-size 12px
+
+    .gallery img.picto
+        margin-top 60px
+
+    button
+        font-size 16px
+
+    .code
+        font-size 13px
+
+    .diagbox
+    .diagbox:hover
+        p
+            display none
+

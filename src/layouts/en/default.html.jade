@@ -1,0 +1,114 @@
+doctype html
+<!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width')
+      link(rel="shortcut icon", href="/assets/images/favicon.png")
+      title
+        block title
+          = document.title
+      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css',  '/assets/css/home.css', '/assets/css/main.css']).toHTML()
+
+  body
+    .navbar.fixed
+        a.nav-logo.left(href="/en/")
+            img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+
+        nav
+            ul.subtitle
+                - var collectionName = "documents"
+                - if (document.category != null)
+                    - collectionName = document.category + "Pages"
+                - collectionName = collectionName + getLang(document).toUpperCase()
+                - items = generateMenu(document.url, collectionName)
+                - for item in items
+                    - var className = ""
+                    - if (item.state == "parent" || item.state == "current")
+                        - className = 'selected'
+                    li
+                        a(class="#{className}", href="#{item.url}")= item.title
+                        - if (item.children != null)
+                            ul.dropdown-menu
+                                - for child in item.children
+                                    li: a(href="#{child.url}")= child.title
+
+            ul.navigation.right
+                li
+                    - var className = ""
+                    - if(document.category == 'host')
+                        - className = 'selected'
+                    a(class="#{className}", href="/en/host/install/") Install
+                li
+                    - var className = ""
+                    - if(document.category == 'mobile')
+                      - className = 'selected'
+                    a(class="#{className}", href="/en/mobile/files.html") Sync
+                li
+                    - var className = ""
+                    - if(document.category == 'hack')
+                        - className = 'selected'
+                    a(class="#{className}", href="/en/hack/getting-started/") Dev
+                li: a(href="https://blog.cozycloud.cc") Blog
+
+    .wrapper
+      .wrap-menu.w25.mod.left
+        | &nbsp;
+        aside
+          - var hasToc = "";
+          - if (document.tableOfContents != null && document.tableOfContents.length > 0)
+            - hasToc = "toc";
+          p.title(class="#{hasToc}")= document.title
+          nav#navigation(role="navigation")
+            ul.nav.first-level
+              - for item in document.tableOfContents
+                - var className = "big"
+                - if (document.tableOfContents != null && document.tableOfContents.length == 1)
+                  - className = "big active"
+                - if(item.text != "")
+                  li(class="#{className}")
+                    a.label(href="##{item.id}")= item.text
+                    - if (item.children != null && item.children.length > 0)
+                      ul.second-level
+                        - for child in item.children
+                          - if (child.id != '')
+                            li.small
+                              a.label(href="##{child.id}")= child.text
+
+      - var className = "w75"
+      - if (document.tableOfContents.length == 0)
+        - className = "w80"
+      #main.mod.pam(role="main", class="#{className}")
+        != content
+
+      footer#footer.line.pam.row(role="contentinfo")
+        a(href="https://github.com/cozy") Github
+        a(href="irc://irc.freenode.net/cozycloud") IRC
+        a(href="https://forum.cozy.io")
+            | Mailing-list
+        a(href="mailto:contact@cozycloud.cc") Contact
+
+    != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
+
+    script(type='text/javascript').
+        var _paq = _paq || [];
+        _paq.push(['disableCookies']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+        var u="//piwik.cozycloud.cc/";
+        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setSiteId', 3]);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        })();
+    noscript
+        p
+            img(src="https://piwik.cozycloud.cc/piwik.php?idsite=3", style="border:0", alt="")

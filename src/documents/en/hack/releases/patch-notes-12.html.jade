@@ -1,0 +1,83 @@
+---
+title: "Patch notes 2015/07/24"
+layout: "default"
+category: "hack"
+toc: true
+menuOrder: 2
+---
+#patch-note
+    h1 Patch note #12
+    p This relates development from 2015/07/13 to 2015/07/24.
+
+    label(for="toggle-feature") Feature
+    input#toggle-feature(type="checkbox", checked="true")
+    label(for="toggle-bug") Bug
+    input#toggle-bug(type="checkbox", checked="true")
+    label(for="toggle-security") Security
+    input#toggle-security(type="checkbox", checked="true")
+    label(for="toggle-internal") Internal
+    input#toggle-internal(type="checkbox", checked="true")
+
+
+    h2 Stack
+
+    h3 Home
+    ul
+      li.feature Don't update application if its permissions have changed (#480)
+      li.feature Check all application to know if an update is necessary : (#334)
+      li.bug Fix device revokation #439
+      li.bug Fix alarm deletion
+
+    h3 Onboarding
+    ul
+      li.feature improve import of GMail account
+
+    h3 Tools
+    ul
+      li.bug Fix a bug when developping start satndalone application ([cozy-monitor/#89](https://github.com/cozy/cozy-monitor/issues/89))
+
+
+    h2 Applications
+
+    h3 Emails (v0.9.6)
+    ul
+      li.feature When clicking on notification of new messages, open the account with new messages (#570)
+      li.bug Fix discovery of parameters when creating a new account (#562);
+      li.bug Fix bug with SSL/TLS checkboxes on account creation (#573)
+      li.bug Fix a JavaScript exception when updating IMAP server port
+      li.bug Allow to clise delete confirmation dialog by hitting the Enter key (#575)
+      li.bug Fix update of Sent and Draft folders (#578)
+
+
+    h3 Calendar (v1.0.19)
+    ul
+      li.feature Joseph did a lot of work to make the event detail popup prettier, cleaner, better (#259 - #260);
+      li.bug Fixed problem with the colors of the calendars #328
+      li.bug Fix import of recurring events event #305
+      li.bug Fix bug with german translation #330
+
+    h3 Files (V1.1.10)
+    ul
+      li.feature Allow to deselect all files by clicking outside file list (#296)
+      li.feature Use a placeholder when creating a new folder (#305)
+      li.feature Add a tooltip to the file preview icon (#309)
+      li.feature Make file drop zone bigger (#310)
+      li.bug Fix french translation of the sharing email (#308)
+      li.bug Update call to the datetime library to suppress a warning (#313)
+      li.bug Fix a random server crash (#314);
+
+    h3 Cozy-Debian (1.12)
+    ul
+      li.feature Add a warning about self-signed certificate
+      li.feature Add default apps & background
+      li.feature Use ucf to handle config files
+      li.feature Delete cozy Couch database at package purge
+      li.feature Configure Cozy domain
+
+    h2 Mobile Application (V0.1.7)
+    ul
+      li.feature Synchronise cozy contacts in android address book.
+      li.bug Background operations only in Wifi (if "Backup on Wifi only" checked)
+
+
+
