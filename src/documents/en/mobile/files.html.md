@@ -14,19 +14,21 @@ To navigate in your files, you should install 'files' application in your Cozy.
 
 Requirements: Android Phone (>=4.1 version)
 
+You can either download the APK and install it on your phone, or get the application from Google PlayStore:
+
+* download the [Android APK](https://files.cozycloud.cc/cozy.apk) (latest version is v0.1.10, its sha1 is: 484030d2037371dee6d649b3256aba29ea941a5f)
+* or go to the PlayStore and search for "Cozy Cloud" in the search bar. Then select and install your app.
+
+
 <a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"
    />
 </a>
 
-Go to the PlayStore and search for "Cozy Cloud" in the search bar. Then
-select and install your app.
 
 ![Play Store 01](/assets/images/mobile/playstore_01.png)
 ![Play Store 02](/assets/images/mobile/playstore_02.png)
-
-
 
 Once installed, run it and it will ask you for a
 few information:
