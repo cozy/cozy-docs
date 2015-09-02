@@ -12,7 +12,7 @@ Welcome to the first step: setting up your development environment.
 
 Since Cozy is made from several pieces, we wrapped it into an easy-to-use
 virtual machine, so you don't clutter your local system. That also means you can
-use the operation system you like! (Well, there are obviously issues on Windows.)
+use the operation system you like! (Well, there are obviously issues on Windows).
 
 ## Installing dependencies
 

@@ -184,7 +184,7 @@ bookmarks, one for tags, ...)!
 
 ## Routing
 
-There is still one very important missing thing, the routes. The routes are the
+There is still one very important missing thing: the routes. The routes are the
 "which URL will trigger which action" information.
 
 We put them in a dedicated file, so you don't have to look at every single
