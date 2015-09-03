@@ -43,7 +43,7 @@ Now that we have a general idea of why these frameworks are getting so much atte
 
 ### Source code
 * The source code the Backbone.js tutorial can be found [here](https://github.com/cozy/cozy-tutorial/tree/spa-final)
-* The source code the Angular.js tutorial can be found [here](https://github.com/lemelon/cozy-tutorial-spa-angular-final)
+* The source code the Angular.js  tutorial can be found [here](https://github.com/cozy/cozy-tutorial/tree/spa-angular)
 
 ### Get ready
 
@@ -57,11 +57,9 @@ Then, get the source we prepared for you to bootstrap the tutorial.
 // For backbone
 git clone https://github.com/cozy/cozy-tutorial.git --branch spa spa-bookmarks
 // For angular
-git clone https://github.com/lemelon/cozy-tutorial-spa-angular-final.git
-// For Backbone
+git clone https://github.com/cozy/cozy-tutorial.git --branch spa-angular spa-bookmarks
+// For both Angular and Backbone
 cd spa-bookmarks/
-// For Angular
-cd cozy-tutorial-spa-angular-final
 npm install
 cd client/
 npm install
