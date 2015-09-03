@@ -60,9 +60,6 @@ docpadConfig = {
                 regex = /["]{1}\/(hack|host|mobile)/g
                 content = content.replace regex, "\"/#{lang}/$1"
                 options.content = content
-
-    enabledPlugins:
-        "live-reload": true
 }
 
 # Export the DocPad Configuration

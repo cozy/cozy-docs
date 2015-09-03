@@ -62,7 +62,7 @@ npm install
 Here is how the folders and files are organized:
 
 * public/ : this is where we will have our public assets (html pages, styles, images, javascripts)
-* package.json : holds your app information and dependencies.
+* package.json : holds your app information and dependencies
 * server.js : where you will write your code
 
 ## Step 1: displaying HTML pages
