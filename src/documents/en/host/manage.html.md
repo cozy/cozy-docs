@@ -183,14 +183,18 @@ Clean database.
 sudo cozy-monitor cleanup [database]
 ```
 
-## Others
+## Security
 
-Ask for proxy to reset its routes via the information stored in the Data
-System.
+For a production usage, you MUST renew the SSL certificate, reset the database credentials and reset the controller token.
 
+For this purpose, use the following command:
 ```bash
-sudo cozy-monitor reset-proxy
+wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
+fab -H user@ip reset_security_tokens
 ```
+To use this command, you should install Fabric on your local machine.
+
+You should also change the superuser credentials (and by the way, you should not use a password but a SSH key to connect to your Cozy). Please refer to [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password).
 
 
 ## Provide more disk space
@@ -251,4 +255,14 @@ service start couchdb
 **A backup is strongly recommended before performing that operation.** You
 could either backup the database files or replicate the database to another
 Couchdb instance.
+
+
+## Others
+
+Ask for proxy to reset its routes via the information stored in the Data
+System.
+
+```bash
+sudo cozy-monitor reset-proxy
+```
 
