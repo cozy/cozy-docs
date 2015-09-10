@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/digitalocean-logo.png">
+<img alt="Logo de DigitalOcean" src="/assets/images/digitalocean-logo.png">
 </div>
 
 # Installer Cozy sur un VPS DigitalOcean

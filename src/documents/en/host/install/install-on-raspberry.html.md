@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/raspberry-logo.png">
+<img alt="Raspberry logo" src="/assets/images/raspberry-logo.png">
 </div>
 
 # Install Cozy on a Raspberry Pi

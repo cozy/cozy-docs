@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/cubieboard-logo.png">
+<img alt="Logo de CubieBoard" src="/assets/images/cubieboard-logo.png">
 </div>
 
 # Installer Cozy sur un CubieTruck
