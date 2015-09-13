@@ -23,7 +23,7 @@ Before doing anything, install the following:
 #### Node.js (v0.10.26) (<a href="http://blog.nodejs.org/2014/02/18/node-v0-10-26-stable/" target="_blank">download</a>)
 Node.js powers awesome tools that we use to develop apps. We also wrote a tool
 to manage the virtual machine more easily.
-If you have trouble installing NodeJS on your system, check the [official guilde](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
+If you have trouble installing NodeJS on your system, check the [official guide](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
 
 If you already have NodeJS installed, but not the 0.10.26 version, you can use a version manager like https://github.com/tj/n.
 
