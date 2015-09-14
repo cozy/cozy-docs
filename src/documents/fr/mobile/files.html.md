@@ -14,13 +14,17 @@ Pour accéder à vos fichiers depuis votre Cozy, vous devez tout d'abord install
 
 Pré-requis : téléphone ou tablette Android (version >=4.1)
 
+Vous pouvez soit télécharger l’APK et l’installer directement sur votre terminal, soit l’installer depuis le PlayStore de Google :
+
+* téléchargez le [fichier APK](https://files.cozycloud.cc/cozy.apk) (la dernière version de l’application est la v0.1.10, dont le sha1 est : 484030d2037371dee6d649b3256aba29ea941a5f)
+* ou allez sur le PlayStore et cherchez "Cozy Cloud" dans la barre de recherche. Puis sélectionnez et installez l'application.
+
 <a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">
   <img alt="Get it on Google Play"
        src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"
    />
 </a>
 
-Allez sur le PlayStore et cherchez "Cozy Cloud" dans la barre de recherche. Puis sélectionnez et installez l'application.
 
 ![Play Store 01](/assets/images/mobile/playstore_01.png)
 ![Play Store 02](/assets/images/mobile/playstore_02.png)

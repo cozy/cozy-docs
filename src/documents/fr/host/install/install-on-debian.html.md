@@ -21,7 +21,7 @@ Codename:     jessie
 ```
 
 Si `lsb_release` n'est pas installé, vous être probablement sur une version
-trop ancienne de Debian. Vous pouvez vous en assurez en regardant la version
+trop ancienne de Debian. Vous pouvez vous en assurer en regardant la version
 de cette façon :
 
 ```
