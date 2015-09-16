@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/ubuntu-logo.png">
+<img alt="Logo d’Ubuntu" src="/assets/images/ubuntu-logo.png">
 </div>
 
 # Installer Cozy sur Ubuntu
