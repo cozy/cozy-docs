@@ -208,7 +208,7 @@ npm install body-parser --save
 app.set('views', __dirname + '/public');
 app.engine('.html', require('jade').__express);
 // To be able to get the data from the POST request, we need to tell express to
-process the parameters.
+// process the parameters.
 app.use(bodyParser().urlencoded({ extended: true }));
 
 // We define a new route that will handle bookmark creation
