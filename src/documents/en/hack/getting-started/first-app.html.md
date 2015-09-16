@@ -112,7 +112,7 @@ absolutely right, so let's move on to step 2.
 
 NB: the source code for this step can be found [here](https://github.com/cozy/cozy-tutorial/tree/step-2).
 
-For the step 2, we are going to use a list stored in memory on the server and render it within a template. We are going to use Jade as a template engine. If you don't master Jade, you will find it is not difficult to read and write it.
+For the step 2, we are going to use a list stored in memory on the server and render it within a template. We are going to use Jade as a template engine. Even if you don't master Jade, you will find it is not difficult to read and write it.
 
 First, install jade:
 ```bash
