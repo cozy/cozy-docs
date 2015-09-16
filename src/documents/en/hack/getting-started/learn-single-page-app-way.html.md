@@ -195,7 +195,6 @@ a(href=bookmark.url)= bookmark.title
 a.delete delete
 | )
 ```
-
 We must also change the way the app_view renders. First clean the home template (`apps/templates/home.jade`) by removing everything under the "ul" tag.
 
 Next rewrite the render function that way:

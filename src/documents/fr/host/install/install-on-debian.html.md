@@ -68,7 +68,8 @@ root@debian-8:~# cat /etc/debian_version
 7. Enregistrer votre compte Cozy et profitez!
     ```
     https://your-cozy-IP/
-
+    ```
+    
 ## Que faire en cas de soucis
 
 ### Comment re-générer le certificat ?

@@ -15,13 +15,13 @@
   },
   "dependencies": {
     "docpad": "~6.78.3",
-    "docpad-plugin-coffeescript": "2.4.0",
-    "docpad-plugin-highlightjs": "2.2.2",
+    "docpad-plugin-coffeescript": "~2.5.0",
+    "docpad-plugin-highlightjs": "~2.3.0",
     "docpad-plugin-jade": "~2.9.0",
-    "docpad-plugin-marked": "2.2.1",
-    "docpad-plugin-menu": "2.1.0",
-    "docpad-plugin-stylus": "2.7.0",
-    "docpad-plugin-tableofcontents": "2.0.1"
+    "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-menu": "~2.1.0",
+    "docpad-plugin-stylus": "~2.10.0",
+    "docpad-plugin-tableofcontents": "~2.0.1"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
