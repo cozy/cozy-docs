@@ -134,7 +134,7 @@ sudo cozy-monitor restart <app>
 ```
 
 Pour mettre à jour une application (cela implique de cloner le dépôt Git,
-exécuter `npm install` et re-démarrer l’applicationi). Préciser l’adresse du
+exécuter `npm install` et re-démarrer l’application). Préciser l’adresse du
 dépôt n’est nécessaire que pour utiliser un dépôt spécifique :
 
 ```bash
