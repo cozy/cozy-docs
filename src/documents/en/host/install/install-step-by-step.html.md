@@ -70,7 +70,7 @@ ln -s /opt/node/bin/npm /usr/bin/npm
 
 4. Test your node installation
 ```bash
-node -e "console.log('Hello, World!')"
+node -e 'console.log("Hello, World!")'
 ```
 
 ## Step 3: Install CouchDB 1.3.0 or greater
