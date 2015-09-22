@@ -22,7 +22,7 @@ You can either download the APK and install it on your phone, or get the applica
 
 <a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">
   <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"
+       src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png"
    />
 </a>
 
