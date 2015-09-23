@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/debian-logo.png">
+<img alt="Debian logo" src="/assets/images/debian-logo.png">
 </div>
 
 # Install Cozy on Debian

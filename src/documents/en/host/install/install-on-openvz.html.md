@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/openvz-logo.png">
+<img alt="OpenVZ logo" src="/assets/images/openvz-logo.png">
 </div>
 
 # Install Cozy on OpenVZ

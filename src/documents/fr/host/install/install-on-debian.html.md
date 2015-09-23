@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/debian-logo.png">
+<img alt="Logo de Debian" src="/assets/images/debian-logo.png">
 </div>
 
 # Installer Cozy sur Debian
@@ -68,7 +68,8 @@ root@debian-8:~# cat /etc/debian_version
 7. Enregistrer votre compte Cozy et profitez!
     ```
     https://your-cozy-IP/
-
+    ```
+    
 ## Que faire en cas de soucis
 
 ### Comment re-générer le certificat ?

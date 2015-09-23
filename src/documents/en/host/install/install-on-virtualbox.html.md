@@ -8,7 +8,7 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img src="/assets/images/virtualbox-logo.png">
+<img alt="Virtualbox logo" src="/assets/images/virtualbox-logo.png">
 </div>
 
 # Install Cozy on VirtualBox
