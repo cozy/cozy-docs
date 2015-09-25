@@ -28,12 +28,12 @@ Codename:     trusty
     ```
 2. Importez la clé publique du dépôt
     ```
-    sudo wget -O - https://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
+    wget -O - https://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | sudo apt-key add -
     ```
 3. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
-    echo 'deb https://ubuntu.cozycloud.cc/debian trusty main' \
-    > /etc/apt/sources.list.d/cozy.list
+    echo 'deb https://ubuntu.cozycloud.cc/debian trusty main' \ 
+        | sudo tee /etc/apt/sources.list.d/cozy.list > /dev/null
     ```
 4. Installez Cozy
     ```

@@ -21,7 +21,7 @@ Vous pouvez soit télécharger l’APK et l’installer directement sur votre te
 
 <a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">
   <img alt="Get it on Google Play"
-       src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"
+       src="https://developer.android.com/images/brand/fr_app_rgb_wo_45.png"
    />
 </a>
 
