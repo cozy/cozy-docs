@@ -49,24 +49,25 @@ html(lang='en')
           - if (document.tableOfContents != null && document.tableOfContents.length > 0)
             - hasToc = "toc";
           p.title(class="#{hasToc}")= document.title
-          nav#navigation(role="navigation")
-            ul.nav.first-level
-              - for item in document.tableOfContents
-                - var className = "big"
-                - if (document.tableOfContents != null && document.tableOfContents.length == 1)
-                  - className = "big active"
-                - if(item.text != "")
-                  li(class="#{className}")
-                    a.label(href="##{item.id}")= item.text
-                    - if (item.children != null && item.children.length > 0)
-                      ul.second-level
-                        - for child in item.children
-                          - if (child.id != '')
-                            li.small
-                              a.label(href="##{child.id}")= child.text
+          - if (document.tableOfContents != null && document.tableOfContents.length > 0)
+            nav#navigation(role="navigation")
+              ul.nav.first-level
+                - for item in document.tableOfContents
+                  - var className = "big"
+                  - if (document.tableOfContents != null && document.tableOfContents.length == 1)
+                    - className = "big active"
+                  - if(item.text != "")
+                    li(class="#{className}")
+                      a.label(href="##{item.id}")= item.text
+                      - if (item.children != null && item.children.length > 0)
+                        ul.second-level
+                          - for child in item.children
+                            - if (child.id != '')
+                              li.small
+                                a.label(href="##{child.id}")= child.text
 
       - var className = "w75"
-      - if (document.tableOfContents.length == 0)
+      - if (document.tableOfContents != null && document.tableOfContents.length == 0)
         - className = "w80"
       #main.mod.pam(role="main", class="#{className}")
         != content
