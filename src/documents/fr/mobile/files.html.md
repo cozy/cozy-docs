@@ -18,6 +18,7 @@ Vous pouvez soit télécharger l’APK et l’installer directement sur votre te
 
 * téléchargez le [fichier APK](https://files.cozycloud.cc/cozy.apk) (la dernière version de l’application est la v0.1.10, dont le sha1 est : 484030d2037371dee6d649b3256aba29ea941a5f)
 * ou allez sur le PlayStore et cherchez "Cozy Cloud" dans la barre de recherche. Puis sélectionnez et installez l'application.
+* ou accedez aux [versions précédentes](https://files.cozycloud.cc/android/).
 
 <a href="https://play.google.com/store/apps/details?id=io.cozy.files_client">
   <img alt="Get it on Google Play"
