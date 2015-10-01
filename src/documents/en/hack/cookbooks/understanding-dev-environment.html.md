@@ -21,7 +21,7 @@ Install the CLI tool:
 sudo npm install -g cozy-dev
 ```
 
-You also need Virtualbox and Vagran in order to run the virtual machine. Please see our [getting started](/hack/getting-started/setup-environment.html) if you haven't installed them yet.
+You also need Virtualbox and Vagrant in order to run the virtual machine. Please see our [getting started](/hack/getting-started/setup-environment.html) if you haven't installed them yet.
 
 ## Classic setup
 This is how you will develop your applications. Run the application on your computer, test it out. If you need features from Cozy, just use them as if they were on `localhost`, the virtual machine provides them thanks to port forwarding.

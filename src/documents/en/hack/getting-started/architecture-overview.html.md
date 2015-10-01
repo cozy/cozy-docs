@@ -65,7 +65,7 @@ It's a unified API that allows applications to access:
 * the indexer (a REST wrapper of our own, built around Whoosh)
 
 The Data System is Cozy's true power. It keeps the users data safe by restricting their access by applications.
-During the installation of an application, the user is prompted to allow or deny access to various types of data ("doctypes"), so they can **decide** wether they trust the application or not.
+During the installation of an application, the user is prompted to allow or deny access to various types of data ("doctypes"), so they can **decide** whether they trust the application or not.
 It also opens the opportunity to use multiple data sources. Do you want to have contacts in your agenda application? Well, you can. It's all up to you!
 
 One important thing to understand about Cozy, is that the platform owns the data, not the application. Applications are just granted permissions by the user to access and manipulate them.

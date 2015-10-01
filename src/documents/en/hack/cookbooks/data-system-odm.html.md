@@ -11,7 +11,7 @@ toc: true
 We've created a small library that acts as an ODM (Object Document Mapper) to easily work with Cozy Data System. This document will gives you the detailed API to use it, but you can already check [the tutorial](/hack/getting-started/play-with-data-system.html) where we introduce it in order to see a working example.
 
 ## Generic note
-Depending on what you use, you might want to install the Cozy adapter in order to make it works. If you use a framework where it is integrated (like Americano with the Cozy plugin), refers to the framework's documentation too see how to boostrap it. Otherwise, you can follow the steps described in this section.
+Depending on what you use, you might want to install the Cozy adapter in order to make it works. If you use a framework where it is integrated (like Americano with the Cozy plugin), refers to the framework's documentation too see how to bootstrap it. Otherwise, you can follow the steps described in this section.
 
 
 ```bash
@@ -28,7 +28,7 @@ Note = cozydb.getModel('Note', {
 });
 ```
 
-Also, you don't have to worry about authentfication and authorization while using the ODM, because they are automatically handled for you.
+Also, you don't have to worry about authentication and authorization while using the ODM, because they are automatically handled for you.
 
 ## Documents
 

@@ -32,7 +32,7 @@ You will find HTTP status code for the response, here is what they mean:
 * 500: internal server error
 
 All the requests that mention "Requires authentication and authorization" are likely to send 401 and 403 if the conditions are not met.
-See [troubleshootings](#troubleshootings) to understand what those error mean.
+See [troubleshooting](#troubleshooting) to understand what those error mean.
 
 ### Todo for this cookbook
 * Adding documentation about authentication and authorization process
@@ -381,7 +381,7 @@ Client = require('request-json').JsonClient;
 // The data system listens to localhost:9101
 dataSystem = new Client('http://localhost:9101');
 
-// In production we must authentificate the application
+// In production we must authenticate the application
 if(process.env.NODE_ENV === 'production') {
   user = process.env.NAME;
   password = process.env.TOKEN;
@@ -405,8 +405,8 @@ dataSystem.post('/request/alarm/all/', function(err, res, body) {
 For more examples and the complete documentation of request-json, please see the [github repository](http://github.com/cozy/request-json/) of the module.
 
 
-<a name="troubleshootings"></a>
-# Troubleshootings
+<a name="troubleshooting"></a>
+# Troubleshooting
 
 Coming soon...
 

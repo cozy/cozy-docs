@@ -50,18 +50,18 @@ know what you are doing.
 
 
 Cozy is only tested and supported on Node version `0.10.x`    
-Please check that this step will not interfer with any NodeJS version that
+Please check that this step will not interfere with any NodeJS version that
 you might have on your server already.
 
 Here we install NodeJS `0.10.26`, if you have any other `0.10.x` version, it
 should work as well.
 
-1. Find the sources or the binairies you need on http://nodejs.org/dist/v0.10.26/
+1. Find the sources or the binaries you need on http://nodejs.org/dist/v0.10.26/
  (you may want to choose the`arm-pi` version on a RaspberryPi).
 
 2. Download and extract it
 
-3. Build the sources, or link the binairies to a place in your `$PATH`
+3. Build the sources, or link the binaries to a place in your `$PATH`
 ```bash
 # If you have untar in /opt/node
 ln -s /opt/node/bin/node /usr/bin/node

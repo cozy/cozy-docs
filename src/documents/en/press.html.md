@@ -8,7 +8,7 @@ toc: true
 
 ## Press releases
 
-[Innovacom and Seed4stoft invests $1.1M in Cozy Cloud](/assets/press/en/2014-06-06-cozy-raises-1M.pdf)
+[Innovacom and Seed4Soft invests $1.1M in Cozy Cloud](/assets/press/en/2014-06-06-cozy-raises-1M.pdf)
 
 ## Logos
 

@@ -7,7 +7,7 @@ toc: true
 ---
 
 # Deploy your application
-Once your awesome application is ready to be used, you migh wonder how use it in your Cozy. This cookbook will describe packaging and distributing your application while avoiding common pitfalls.
+Once your awesome application is ready to be used, you might wonder how use it in your Cozy. This cookbook will describe packaging and distributing your application while avoiding common pitfalls.
 Open your package.json file, you'll need it!
 
 
@@ -75,11 +75,11 @@ Next comes the Cozy app market. Currently there isn't a fancy centralized market
 For now, we do it manually. So send us an email (at contacts[at]cozycloud.cc) with the link of the previously created Github repository, saying "Hello I have built an awesome application, please add review it and add it to the market" and we will be more than happy to do it!
 
 
-## Troubleshootings
+## Troubleshooting
 When you install an application on Cozy, errors can occur. First thing to do is to try again 5 minutes later. If it still doesn't work, check the following sections and ask us for help on the IRC channel (#cozycloud on irc.freenode.net).
 
 ### Error: "NPM failed"
-This error means something went wrong during the "npm install" phase. Two things: the NPM repository is down and we can't do anything except waiting (we don't own it!) or your application doesn't its depdency properly declared. Make sure you can do a local "npm install" before deploying!
+This error means something went wrong during the "npm install" phase. Two things: the NPM repository is down and we can't do anything except waiting (we don't own it!) or your application doesn't have its dependencies properly declared. Make sure you can do a local "npm install" before deploying!
 
 ```bash
 cd my-app/

@@ -317,7 +317,7 @@ Another popular feature is directives and it will get even more important when [
 * A [tutorial](http://blog.revolunet.com/blog/2014/02/14/angularjs-services-inheritance/) that explains how to build a Object Oriented framework and get closer to Angular 2 new architecture
 * A [document](https://github.com/johnpapa/angular-styleguide) that explains how to write clean code in Angular.
 * [Karma](https://karma-runner.github.io/0.8/plus/AngularJS.html). A generator for testing AngularJS.
-* A nice [tutorial](https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make) that explains what you shoud'nt do in AngularJS
+* A nice [tutorial](https://www.airpair.com/angularjs/posts/top-10-mistakes-angularjs-developers-make) that explains what you shouldn't do in AngularJS
 
 Important : because of his evolution, a lot of the angularJS tutorial get's depreciated very fast.
 
@@ -342,7 +342,7 @@ function add(bookItem) {
     bookmark.setBookmark(bookItem);
     // will send the data to the factory to make a call to the server
     bookmark.addBookmark().then(function() {
-        // vm.bookmarks will be binded to home.html with ng-repeat. 
+        // vm.bookmarks will be bound to home.html with ng-repeat.
         vm.bookmarks.push(bookmark._bookmark);
         
         // useful to reset the form in the view
