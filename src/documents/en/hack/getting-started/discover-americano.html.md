@@ -176,7 +176,7 @@ We basically copied and pasted what was in the old server.js, and removed the
 
 You probably noticed the "require" instruction. It loads the bookmark model we
 
-defined earlier. More precisely, it loads what has previously been module.exports'ed (this
+defined earlier. More precisely, it loads what has previously been assigned to `module.exports` (this
 is NodeJS stuff, abuse that to create small modules of code).
 
 Don't hesitate to split your code in multiple coherent controllers (one for
