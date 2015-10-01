@@ -41,6 +41,7 @@ Une fois installée, démarrez là. Quleques informations vous seront alors dema
 
 ![Installation step 01](/assets/images/mobile/install_01.png)
 ![Installation step 02](/assets/images/mobile/install_02.png)
+
 ![Installation step 03](/assets/images/mobile/install_03.png)
 
 Une fois le processus terminé, vous devrez confirmer et attendre la fin de la première synchronisation de l'arborescence.
@@ -60,6 +61,7 @@ Voici quelques cas d'usage couverts par l'application mobile :
 
 ![Screen browsing](/assets/images/mobile/screen_01.png)
 ![Screen browsing](/assets/images/mobile/screen_02.png)
+
 ![Screen browsing](/assets/images/mobile/screen_03.png)
 
 
