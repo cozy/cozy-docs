@@ -1,12 +1,12 @@
 ---
-title: "Trouble Shootings"
+title: "Troubleshooting"
 layout: "default"
 category: "host"
 menuOrder: 2
 toc: true
 ---
 
-# Trouble shootings
+# Troubleshooting
 
 In this section, you will find common errors that occur during the
 installation process.

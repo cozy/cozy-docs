@@ -13,7 +13,7 @@ the Data System, and to play with it. Don't forget that if you are stuck or have
 
 Just a quick reminder, the Data System (DS) allows you to access the database,
 the indexer and the file system. Technically speaking, it is a RESTful web application, meaning you can request it with a HTTP client. It handles
-authorization and authentification for applications, meaning that user has to give his explicit agreement (during installation) to the app so it can access
+authorization and authentication for applications, meaning that user has to give his explicit agreement (during installation) to the app so it can access
 the data.
 
 ### What you will achieve

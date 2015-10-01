@@ -16,7 +16,7 @@ In production environment, to access to data, applications should be authenticat
 For each application, you have a file `<app>.log` where you can find current logs and a file `<app>.log-backup` with old logs.
 
 
-* Only controller logs are stored in a different place: `\var\log\supervirsorctl\cozy-controller-stdout...`
+* Only controller logs are stored in a different place: `\var\log\supervisorctl\cozy-controller-stdout...`
 
 ## Start an application in a cozy.
 

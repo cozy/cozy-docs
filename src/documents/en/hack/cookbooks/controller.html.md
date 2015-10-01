@@ -249,7 +249,7 @@ Response:
 Configuration are stored in file **/etc/cozy/controller.json**.
 Every configurations are optional.
 
-Configuration file is avaible only for new controller.
+Configuration file is available only for new controller.
 
 ### Common configuration
 

@@ -20,8 +20,8 @@ npm install -g node-inspector
 
 ## Start the debugger
 
-By default, the debugger uses the port 5858 to transport debugging informations (as WebSocket), and the 8080 port to serve static files.
-You might want to open those ports in the Vagrantfile if you use the [Cozy virtal environment](http://cozy.io/hack/getting-started/setup-environment.html).
+By default, the debugger uses the port 5858 to transport debugging information (as WebSocket), and the 8080 port to serve static files.
+You might want to open those ports in the Vagrantfile if you use the [Cozy virtual environment](http://cozy.io/hack/getting-started/setup-environment.html).
 
 ```bash
 node-inspector &
@@ -45,5 +45,5 @@ It will break again on your `debugger` instruction.
 
 ---
 
-**Happy debbugging !**
+**Happy debugging !**
 

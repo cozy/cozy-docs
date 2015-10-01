@@ -16,7 +16,7 @@ What we call the "stack" are the core components of Cozy:
 * [Controller](https://github.com/cozy/cozy-controller): the PaaS that run the various applications [![Build Status](https://travis-ci.org/cozy/cozy-controller.png?branch=master)](https://travis-ci.org/cozy/cozy-controller) [![Dependencies Status](https://david-dm.org/cozy/cozy-controller.png)](https://david-dm.org/cozy/cozy-controller)
 * [Carapace](https://github.com/cozy/cozy-controller-carapace): the process wrapper for NodeJS the controller uses [![Build Status](https://travis-ci.org/cozy/cozy-controller-carapace.png?branch=master)](https://travis-ci.org/cozy/cozy-controller-carapace) [![Dependencies Status](https://david-dm.org/cozy/cozy-controller-carapace.png)](https://david-dm.org/cozy/cozy-controller-carapace)
 * [Data System](https://github.com/cozy/cozy-data-system): unified persistence layer [![Build Status](https://travis-ci.org/cozy/cozy-data-system.png?branch=master)](https://travis-ci.org/cozy/cozy-data-system) [![Dependencies Status](https://david-dm.org/cozy/cozy-data-system.png)](https://david-dm.org/cozy/cozy-data-system)
-* [Proxy](https://github.com/cozy/cozy-proxy): handles registrer and authentication [![Build Status](https://travis-ci.org/cozy/cozy-proxy.png?branch=master)](https://travis-ci.org/cozy/cozy-proxy) [![Dependencies Status](https://david-dm.org/cozy/cozy-proxy.png)](https://david-dm.org/cozy/cozy-proxy)
+* [Proxy](https://github.com/cozy/cozy-proxy): handles registration and authentication [![Build Status](https://travis-ci.org/cozy/cozy-proxy.png?branch=master)](https://travis-ci.org/cozy/cozy-proxy) [![Dependencies Status](https://david-dm.org/cozy/cozy-proxy.png)](https://david-dm.org/cozy/cozy-proxy)
 * [Home](https://github.com/cozy/cozy-home): end-user friendly Cozy manager [![Build Status](https://travis-ci.org/cozy/cozy-home.png?branch=master)](https://travis-ci.org/cozy/cozy-home) [![Dependencies Status](https://david-dm.org/cozy/cozy-home.png)](https://david-dm.org/cozy/cozy-home)
 * [Indexer](https://github.com/cozy/cozy-data-indexer)
 
@@ -36,7 +36,7 @@ These applications are officially maintained by Cozycloud:
 ### Community contributions
 These applications have been released by members of the Community or by Cozycloud (but aren't officially maintained)
 
-* [Bookmarks](https://github.com/Piour/cozy-bookmarks): manage your brower's bookmarks [![Dependencies Status](https://david-dm.org/Piour/cozy-bookmarks.png)](https://david-dm.org/Piour/cozy-bookmarks)
+* [Bookmarks](https://github.com/Piour/cozy-bookmarks): manage your browser's bookmarks [![Dependencies Status](https://david-dm.org/Piour/cozy-bookmarks.png)](https://david-dm.org/Piour/cozy-bookmarks)
 * [Cozic](https://github.com/rdubigny/cozy-music): your music whenever you need it [![Dependencies Status](https://david-dm.org/rdubigny/cozy-music.png)](https://david-dm.org/rdubigny/cozy-music)
 * [Databrowser](https://github.com/n-a-n/cozy-databrowser): browse all your data [![Dependencies Status](https://david-dm.org/n-a-n/cozy-databrowser.png)](https://david-dm.org/n-a-n/cozy-databrowser)
 * [Feeds](https://github.com/Piour/cozy-feeds): a RSS feed reader [![Dependencies Status](https://david-dm.org/Piour/cozy-feeds.png)](https://david-dm.org/Piour/cozy-feeds)

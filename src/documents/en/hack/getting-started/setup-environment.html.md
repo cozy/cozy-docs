@@ -110,7 +110,7 @@ You can find everything you need to know about `cozy-dev` in [the cookbook](/hac
 You are now ready to [write your first application](/hack/getting-started/first-app.html).
 
 
-## Troubleshootings
+## Troubleshooting
 
 ### My VM is not starting and says there's an error
 
