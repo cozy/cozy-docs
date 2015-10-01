@@ -42,6 +42,7 @@ few information:
 
 ![Installation step 01](/assets/images/mobile/install_01.png)
 ![Installation step 02](/assets/images/mobile/install_02.png)
+
 ![Installation step 03](/assets/images/mobile/install_03.png)
 
 Once done, you have to confirm and wait for the first time synchronization to
@@ -65,6 +66,7 @@ A search field is available too, it's useful to find quickly an important file.
 
 ![Screen browsing](/assets/images/mobile/screen_01.png)
 ![Screen browsing](/assets/images/mobile/screen_02.png)
+
 ![Screen browsing](/assets/images/mobile/screen_03.png)
 
 
