@@ -33,7 +33,7 @@ Nous offrons 40Go de stockage garantis pour chaque serveur (techniquement, chaqu
 
 ## Que faire si j'oublie/perds mon mot de passe ?
 
-Pour des raisons de sécurité et de confidentialité, nous n'aurons jamais accès à vos données chiffrées, ce qui entraînera la perte des données de vos applications. Mais heureusement, pas votre cozy ! La seule solution est de créer un nouveau mot de passe en le retapant dans l'"email de réinitialisation", que vous pouvez activer dans la page de login de votre cozy ("Forget password? Email me instructions"). Il va ensuite falloir réinitialiser toutes vos applications.
+Pour des raisons de sécurité et de confidentialité, nous n'aurons jamais accès à votre mot de passe, ce qui entraînera la perte des données de vos applications. Mais heureusement, pas votre cozy ! La seule solution est de créer un nouveau mot de passe en le retapant dans l'"email de réinitialisation", que vous pouvez activer dans la page de login de votre cozy ("Forget password? Email me instructions"). Il va ensuite falloir réinitialiser toutes vos applications.
 
 Si vous vous demandez comment le chiffrement fonctionne sur CozyCloud, vous pouvez visiter [cette](https://cozy.io/en/hack/cookbooks/encryption.html) page. 
 
