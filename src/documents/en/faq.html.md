@@ -30,5 +30,10 @@ We also perform daily backups of your data, so we can restore them if needed.
 
 We provide 40GB of storage with each instance (well, technically 60GB are available, but we recommend for now not to use more than 40GB)
 
+## What can i do if I forget/loose my password ?
+
+For security and confidentiality reasons, we never have access to your decrypted password, and as a result, your datas of your different apps will be lost. But happely enough, not your cozy ! The only solution is to create a new password and to do that, you'll need to retype your new password in the "password recovery email", that you can activate in the login page of your cozy. You will then have to reinitialize all your apps.
+
+If you are interrested by how encryption works in CozyCloud, please visit [this](https://cozy.io/en/hack/cookbooks/encryption.html) page. 
 
 ---

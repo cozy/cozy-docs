@@ -31,6 +31,10 @@ Par ailleurs, nous effectuons une sauvegarde de vos données toutes les nuits, d
 
 Nous offrons 40Go de stockage garantis pour chaque serveur (techniquement, chaque instance dispose de 60Go, mais nous vous conseillons pour l’instant de ne pas dépasser les 40Go).
 
+## Que faire si j'oublie/perds mon mot de passe ?
 
+Pour des raisons de sécurité et de confidentialité, nous n'aurons jamais accès à vos données chiffrées, et cela va entraîner la perte des données de vos applications. Mais heureusement, pas votre cozy ! La seule solution est de créer un nouveau mot de passe et pour faire ceci, vous devez retaper votre nouveau mot de passe dans l'"email de réinitialisation de mot de passe", que vous pouvez activer dans la page de login de votre cozy. Il va ensuite falloir réinitialiser toutes vos applications.
+
+Si vous vous demandez comment le chiffrement fonctionne sur CozyCloud, vous pouvez visiter [cette](https://cozy.io/en/hack/cookbooks/encryption.html) page. 
 
 ---
