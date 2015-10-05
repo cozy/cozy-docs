@@ -14,11 +14,9 @@ There are several ways to contact our friendly Support team:
  - if you encouter issues on your server, describe them in the form inside the Help page (available at the bottom of the Home app). This form will send us some informations so we can debug the problem;
  - and of course, you can send us emails at the following address: support@cozycloud.cc.
 
-
 ## Where is your datacenter located?
 
 Our infrastructure is located in Roubaix, France.
-
 
 ## Is my data safe?
 
@@ -32,7 +30,7 @@ We provide 40GB of storage with each instance (well, technically 60GB are availa
 
 ## What can i do if I forget my password ?
 
-The "password recovery email", that you can activate in the login page of your cozy ("Forget password? Email me instructions"), will send you a link that will enable you to enter a new password. If needed, you will have to reenter this new password in your different apps of your cozy.
+The "password recovery email", that you can activate in the login page of your cozy ("Forget password? Email me instructions"), will send you a link that will enable you to enter a new password. If needed, you will have to reenter this new password in the different apps of your cozy.
 
 If you are interested by how encryption works in CozyCloud, please visit [this](https://cozy.io/en/hack/cookbooks/encryption.html) page. 
  
