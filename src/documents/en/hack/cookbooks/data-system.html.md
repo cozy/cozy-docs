@@ -189,7 +189,7 @@ Param:
   req_name: the name of the request
   Body {
     map: the map function
-    recuce: the reduce function (optional)
+    reduce: the reduce function (optional)
   }
 Response
   Status code: 200|500
