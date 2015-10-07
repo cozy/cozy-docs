@@ -51,7 +51,7 @@ As mentioned above, the reset of the user password is a critical operation since
 Another limitation is when the Data System is restarted. The user must log in afterwards otherwise the master key won't be found, resulting in the Data System unable to decrypt data.
 
 ### Security concern
-If an attacker gains a root access he can scans the memory to retrieve the user password, or at least the master key.
+If an attacker gains a root access he can scan the memory to retrieve the user password, or at least the master key.
 
 Applications are run with their own (non-sudoer) user so they can't do that.
 

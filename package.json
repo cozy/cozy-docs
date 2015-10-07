@@ -17,7 +17,7 @@
     "docpad": "~6.78.3",
     "docpad-plugin-coffeescript": "~2.5.0",
     "docpad-plugin-highlightjs": "~2.3.0",
-    "docpad-plugin-jade": "~2.9.0",
+    "docpad-plugin-jade": "~2.10.0",
     "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-menu": "~2.1.0",
     "docpad-plugin-stylus": "~2.10.0",

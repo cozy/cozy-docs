@@ -37,7 +37,7 @@ If you want to learn more about authentication and authorization in Cozy, there 
 ### The Home
 ([Github repository](https://github.com/cozy/cozy-home/))
 
-The Home is basically a user interface to manage your Cozy: install, update, and uninstall applications, changing your settings (language, timezone). It is also the central hub for tranverse features like notifications or tags.
+The Home is basically a user interface to manage your Cozy: install, update, and uninstall applications, changing your settings (language, timezone). It is also the central hub for tranversal features like notifications or tags.
 
 This application is basically like the one you could write, except it has specific permissions to manage other applications. That means one could imagine writing another version of the Home with other features and capabilities.
 
