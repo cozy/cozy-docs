@@ -33,7 +33,7 @@ Nous offrons 40Go de stockage garantis pour chaque serveur (techniquement, chaqu
 
 ## Que faire si j'oublie mon mot de passe ?
 
-L'"email de réinitialisation", que vous pouvez activer dans la page de login de votre cozy ("Forget password? Email me instructions"), vous enverra un lien qui vous permettra d'entrer un nouveau mot de passe. Si besoin, il va falloir rappeler ce nouveau mot de passe dans les différentes applications de votre cozy. 
+Une fois votre mot de passe mis à jour, il vous faudra faire un tour de toutes les applications qui utilisent un mot de passe pour se connecter à un compte distant (par example Mail, Konnectors, Kresus…), et saisir à nouveau les mots de passe des comptes. Pour des raisons de sécurité, lorsque le mot de passe de votre serveur est changé, nous effaçons les différents mots de passe de vos autres comptes stockés dans Cozy. 
 
 Si vous vous demandez comment le chiffrement fonctionne sur CozyCloud, vous pouvez visiter [cette](https://cozy.io/en/hack/cookbooks/encryption.html) page. 
 

@@ -30,7 +30,7 @@ We provide 40GB of storage with each instance (well, technically 60GB are availa
 
 ## What can i do if I forget my password ?
 
-The "password recovery email", that you can activate in the login page of your cozy ("Forget password? Email me instructions"), will send you a link that will enable you to enter a new password. If needed, you will have to reenter this new password in the different apps of your cozy.
+Once your password has been updated, you will have to look around all the applications that requires a password for connecting from an external account (for example Mail, Konnectors, Kresus...), and add again your new password to these accounts. For security reasons, when the password of the server is changed, we delete the different password of your other accounts stocked in Cozy.
 
 If you are interested by how encryption works in CozyCloud, please visit [this](https://cozy.io/en/hack/cookbooks/encryption.html) page. 
  
