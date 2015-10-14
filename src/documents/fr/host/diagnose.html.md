@@ -71,3 +71,12 @@ Sinon, un message d’erreur peut vous mettre sur la piste du problème.
 ## Si tout a échoué
 
 Enfin, si tout a échoué, vous pouvez télécharger ce [script de diagnostique](http://debian.cozycloud.cc/diag.sh), le lire attentivement et l’adapter à votre configuration, puis l’exécuter et nous envoyer le résultat, afin de nous aider à déterminer la cause du souci.
+
+
+## Comment puis-je trouver de l’aide ?
+
+Notre équipe support est toujours disponible pour vous aider. Vous pouvez nous contacter de plusieurs manières :
+ - discuter sur IRC, sur le canal #cozycloud des serveurs irc.freenode.net (également accessible [via le Web](https://webchat.freenode.net/?channels=cozycloud)) ;
+ - poser vos questions sur notre forum [forum.cozy.io](https://forum.cozy.io/) pour profiter de l’entraide de la communauté ;
+ - en cas de soucis sur votre serveur, la page d’aide propose un formulaire où décrire votre problème. Celui-ci nous enverra des informations sur votre serveur, afin de nous permettre d’indentifier les causes ;
+ - écrire à : support@cozycloud.cc
