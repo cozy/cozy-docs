@@ -175,7 +175,7 @@ chmod 700 /etc/cozy/controller.token
 ```bash
 # Ensure that a couchdb daemon is running, then 
 # request the database via HTTP to add a new admin
-supervisorctl start couchdb
+service start couchdb
 curl -s -X PUT 127.0.0.1:5984/_config/admins/$(head -n1 /etc/cozy/couchdb.login) -d "\"$(tail -n1 /etc/cozy/couchdb.login)\""
 ```
 
@@ -193,7 +193,7 @@ npm install -g coffee-script cozy-monitor cozy-controller
 2. Ensure that CouchDB, Cozy Indexer and Cozy Controller are running
 ```bash
 # If you are running supervisord with the proper configuration files, try
-supervisorctl start couchdb
+service start couchdb
 supervisorctl start cozy-indexer
 supervisorctl start cozy-controller
 ```
