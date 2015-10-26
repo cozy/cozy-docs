@@ -15,6 +15,8 @@ toc: false
 
 You need **Ubuntu 14.04 Trusty Tahr** in order to proceed to theses steps.
 
+(It has been reported that the Ubuntu repository may also work for installing Cozy on GNU/Linux Mint)
+
 ```
 root@ubuntu-14-04:~# lsb_release -c
 Codename:     trusty
