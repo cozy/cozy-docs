@@ -15,6 +15,8 @@ toc: false
 
 Vous devez être sous **Ubuntu 14.04 Trusty Tahr** pour pouvoir suivre les étapes ci-dessous.
 
+(Des utilisateurs nous ont signalé que cette procédure pouvait également fonctionner pour GNU/linx Mint)
+
 ```
 root@ubuntu-14-04:~# lsb_release -c
 Codename:     trusty
