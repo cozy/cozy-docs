@@ -1,0 +1,144 @@
+---
+title: "Patch notes 2015/11/02"
+layout: "default"
+category: "hack"
+toc: true
+menuHidden: false
+menuOrder: 1
+menuTitle: Last release note
+---
+
+#patch-note.v2
+    h1 Patch note #16
+    p This relates development from 2015/10/19 to 2015/11/02.
+
+
+    h2 Highlights
+
+    p Here's another big release for Contacts, with better search, batch actions and the ability to merge two contacts;
+    p We also did a lot of minor improvements and bug fixes in all our applications, the complete list is below.
+
+
+
+    h2 Applications
+
+
+    h3 Calendar (1.0.28)
+    ul
+        li This version should work better with Node 4.x
+        li.contributors Contributors: aenario
+
+
+    h3 Contacts (2.1.0)
+    ul
+        li Better search: you can now use advanced search parameters, and the results are sorted;
+        li Display is updated on the fly when you add a contact from anoter application, like Emails;
+        li You can now merge two contacts, for example if you imported them twice
+        li You can select multiple contacts to perform actions on them: delete, export, merge…
+        li.contributors Contributors: aenario, jacquarg, kelukelu, m4dz
+
+
+    h3 Import-from-google (0.1.5)
+    ul
+        li Lots of fixes and improvements on contact import
+        li Log client errors on server side
+        li Update icons
+        li.contributors Contributors: clochix, frankrousseau, jacquarg, kelukelu
+
+
+    h3 Files (1.1.16)
+    ul
+        li This version should work better with Node 4.x
+        li Remove all client tests
+        li Fix english translation
+        li.contributors Contributors: aenario, clochix
+
+
+    h3 Photos (1.0.17)
+    ul
+        li Fix server crash when extracting GPS data, refs <a href="https://github.com/cozy/Cozy-photos/issues/159" target="_blank">#159</a>
+        li Fix crash when deleting album, refs <a href="https://github.com/cozy/Cozy-photos/issues/163" target="_blank">#163</a>
+        li.contributors Contributors: clochix
+
+
+    h3 Sync
+    ul
+        li Fix server crash when exporting some addresses refs <a href="https://github.com/cozy/Cozy-vcard/issues/18" target="_blank">#18</a>
+        li.contributors Contributors: clochix, parro-it
+
+
+    h2 Cozy stack
+
+    p We added the <em>Import from Google</em> application to the market, so everybody can now install it.
+
+
+    h3 Home (2.0.12)
+    ul
+        li This version should work better with Node 4.x
+        li Improve README
+        li.contributors Contributors: aenario, nono
+
+
+    h3 Controller (2.0.34)
+    ul
+        li Add option to remove folder application during uninstallation
+        li Improve configuration management
+        li Add option to block monitor update
+        li Update controller only if a new version is available
+        li.contributors Contributors: aenario, poupotte
+
+
+    h3 Data-system (2.0.9)
+    ul
+        li This version should work better with Node 4.x
+        li.contributors Contributors: aenario
+
+
+    h3 Proxy (2.1.7)
+    ul
+        li Update translations
+        li.contributors Contributors: aenario, clochix, lemelon
+
+
+    h3 Desktop client (0.4.0)
+    ul
+        li Rewrite the read-only to prepare full sync
+        li Add unit tests
+        li GUI is currently broken
+        li.contributors Contributors: nono
+
+    h2 Other tools
+
+    h3 Website
+    ul
+        li Mention that Ubuntu package may also work on Linux Mint
+        li.contributors Contributors: clochix
+
+
+
+    h3 CozyDB (0.1.3)
+    ul
+        li Bugfix with string reduce (_count)
+        li Improve code clarity
+        li.contributors Contributors: aenario
+
+
+    h3 Debian package
+    ul
+        li Fix <a href="https://github.com/cozy/Cozy-debian/issues/19" target="_blank">#19</a>
+        li.contributors Contributors: nledez
+
+
+    h3 Indexer (0.0.2)
+    p This is a new library to help indexing contents inside Cozy
+    ul
+        li.contributors Contributors: aenario
+
+
+    h3 Printit (0.1.10)
+    ul
+        li Fix bad file from stack
+        li Fix a typo
+        li Display nicely Errors
+        li.contributors Contributors: nono
+
