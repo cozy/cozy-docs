@@ -71,3 +71,6 @@ Import is running...
 </div>
 <br />
 
+When the import is finished, you can access to your calendar and contacts
+from your Cozy app. Enjoy your data without Google!
+
