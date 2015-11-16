@@ -52,8 +52,8 @@ est apparu et validez le.
 
 ## Step 2: Importez vos données
 
-Une fois le formulaire précédente validé vous pourrez choisir les données que
-vous voulez importer dans votre Cozy. Sélectionner des contacts, des
+Une fois l'étape précédente validé vous pourrez choisir les données que
+vous voulez importer dans votre Cozy: des contacts, des
 calendriers ou les deux. Enfin cliquez sur *Importer les données*.
 
 <br />
@@ -71,6 +71,6 @@ L'import est en cours...
 <br />
 
 Quand l'import est terminé, vous pouvez accéder à vos calendriers et contacts
-depuis vos apps Cozy. Maintenant, vous allez pouvoir profiter de vos données
+depuis vos apps Cozy. Ca y est, vous allez pouvoir profiter de vos données
 sans Google !
 
