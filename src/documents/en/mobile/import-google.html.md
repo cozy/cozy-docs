@@ -10,7 +10,7 @@ toc: true
 
 ## Retrieve authentication token.
 
-To import your data from your Google account, you should connect you on your account and retrieve an authentication token. 
+To import your data from your Google account, you must connect to your account and retrieve an authentication token. 
 
 This token allows Cozy to access to your Google data.
 
@@ -48,5 +48,5 @@ Select data that you want import on your Cozy and validate.
 
 Import starts...
 
-Once finished, you can access to your data in Cozy. Enjoy !
+Once finished, you can access to your data in Cozy. Enjoy!
 
