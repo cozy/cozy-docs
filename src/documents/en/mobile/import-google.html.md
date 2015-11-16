@@ -9,8 +9,12 @@ toc: true
 
 # Import your Google data into your Cozy
 
+<<<<<<< HEAD
 In the following steps, we will show you how to import your calendar and
 contacts from your Google account directly into your Cozy. 
+=======
+To import your data from your Google account, you must connect to your account and retrieve an authentication token. 
+>>>>>>> ac2c516eeeee4ec4bca5d255dd273b1158f998b4
 
 
 ## Step 1: Connect your Cozy to your Google account
@@ -71,7 +75,4 @@ Import is running...
 ![Onboarding 05](/assets/images/onboarding/05.png)
 </div>
 <br />
-
-When the import is finished, you can access to your calendar and contacty data
-directly from your Cozy apps. Enjoy!
 
