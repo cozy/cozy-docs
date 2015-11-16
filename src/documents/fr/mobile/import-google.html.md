@@ -10,7 +10,7 @@ toc: true
 
 ## Récupération du token d'authentification.
 
-Pour importer vos données à partir de votre compte Google, vous devez vous connectez à votre compte Google et récupérer un token afin d'autoriser Cozy à accéder à vos données.
+Pour importer vos données à partir de votre compte Google, vous devez vous connecter à votre compte Google et récupérer un token afin d'autoriser Cozy à accéder à vos données.
 
 ![Onboarding 01](/assets/images/onboarding/01_fr.png)
 
@@ -32,11 +32,11 @@ Retournez sur votre Cozy.
 
 ## Import de vos données.
 
-Une fois le token validé, vous pouvez choisir quelles données synchronisées.
+Une fois le token validé, vous pouvez choisir quelles données synchroniser.
 
 ![Onboarding 04](/assets/images/onboarding/04_fr.png)
 
-Selectionner les données que vous souhaitez puis validez.
+Selectionnez les données que vous souhaitez puis validez.
 
 ![Onboarding 05](/assets/images/onboarding/05_fr.png)
 

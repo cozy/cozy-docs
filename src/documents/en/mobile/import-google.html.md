@@ -18,7 +18,7 @@ This token allows Cozy to access to your Google data.
 
 Click on **Sign In To Google** button.
 
-A new window open it.
+A new window opens.
 
 ![Onboarding 02](/assets/images/onboarding/02.png)
 
