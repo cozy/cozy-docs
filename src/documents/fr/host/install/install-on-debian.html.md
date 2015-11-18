@@ -45,10 +45,10 @@ root@debian-8:~# cat /etc/debian_version
     ```
     Vous devriez lire:
     ```
-    pub   2048R/2765B235 2014-11-17 [expires: 2015-11-17]
+    pub   2048R/2765B235 2014-11-17 [expires: 2016-11-17]
           Key fingerprint = E28C F8B2 ABBF E285 743B  27F1 BCB2 ED5D 2765 B235
     uid                  Cozy Debian Packaging <debian-packaging@cozycloud.cc>
-    sub   2048R/D58A9D35 2014-11-17 [expires: 2015-11-17]
+    sub   2048R/D58A9D35 2014-11-17 [expires: 2016-11-17]
     ```
 4. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```

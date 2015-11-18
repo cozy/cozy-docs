@@ -259,6 +259,12 @@ Couchdb instance.
 
 ## Others
 
+### Increase max upload size
+
+If you’re using Nginx as a reverse proxy in front of Cozy, you may notice that you’re not allowed to upload big files. By default, Nginx limit the maximum size of a client request to 1Mo. To increase this limit, just add a [client_max_body_size](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) to your Nginx config.
+
+### Reset internal routes
+
 Ask for proxy to reset its routes via the information stored in the Data
 System.
 

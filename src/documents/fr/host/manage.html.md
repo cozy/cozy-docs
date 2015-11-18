@@ -257,3 +257,10 @@ service start couchdb
 opération** Vous pouvez soit faire une sauvegarde des fichiers contenant la
 base, soit répliquer la base sur une autre instance CouchDB.
 
+
+## Divers
+
+### Augmenter la taille maximale des fichiers téléversés.
+
+Si vous utilisez Nginx comme serveur proxy inverse, il vous sera impossible de téléverser de gros fichiers. Nginx limite par défaut la taille des requêtes envoyées par les clients à 1Mo. Pour augmenter cette limite, ajoutez simplement une instruction [client_max_body_size](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) à votre configuration Nginx.
+
