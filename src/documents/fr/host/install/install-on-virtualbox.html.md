@@ -25,7 +25,7 @@ toc: false
 * [Téléchargez](https://www.virtualbox.org/wiki/Downloads) et installez VirtualBox.
 * [Téléchargez](http://files.cozycloud.cc/cozycloud-virtualimage.zip) et dézippez l’image Cozy pour VirtualBox.
 
-<h3>2. Importez and essayez</h3>
+<h3>2. Importez et essayez</h3>
 
 Importez l’image Cozy dans VirtualBox et démarrez la machine virtuelle.
 Vous devriez avoir accès à votre Cozy via vore navigateur web sur :
