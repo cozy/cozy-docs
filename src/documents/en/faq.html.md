@@ -6,6 +6,12 @@ toc: true
 
 # Frequently Asked Questions
 
+## How can I test Cozy
+
+First, you could have a look at the [demo server](https://demo.cozycloud.cc/).
+
+If you want to fully test our services, you can [ask for a free instance](https://cozy.io/en/#contact) as a beta tester. Just enter your email on this form. The space on our servers is limited, so you will be put on a waiting list. After submitting the form, you will receive two messages, the first one asking to confirm your email address, the second to confirm that you’re on the waiting list. Once your instance will be ready, we’ll send you another email with a link to it. Following this link, you’ll be able to setup your password and configure your instance.
+
 ## How can I find assistance?
 
 There are several ways to contact our friendly Support team:
