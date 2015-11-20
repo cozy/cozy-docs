@@ -25,7 +25,7 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
     ![Ubuntu](/assets/images/ubuntu-logo.png)<div class="label">Ubuntu</div>
   </a>
   <a href="install-on-debian.html">
-    ![Debian](/assets/images/debian-logo.png)<div class="label">Debian</div>
+    ![Debian](/assets/images/debian-logo.png)<div class="label">Debian (64 bits)</div>
   </a>
 </div>
 
