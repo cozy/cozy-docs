@@ -199,14 +199,14 @@ supervisorctl start cozy-controller
 ```
 ```bash
 # Then check their status by requesting their port
-# (respectively 5984, 9002 and 9102)
+# (respectively 5984, 9102 and 9002)
 curl -s 127.0.0.1:5984 \
   && echo "CouchDB is running" \
   || echo "CouchDB is NOT running"
-curl -s 127.0.0.1:9002 \
+curl -s 127.0.0.1:9102 \
   && echo "Cozy Indexer is running" \
   || echo "Cozy Indexer is NOT running"
-curl -s 127.0.0.1:9102 \
+curl -s 127.0.0.1:9002 \
   && echo "Cozy Controller is running" \
   || echo "Cozy Controller is NOT running"
 ```
