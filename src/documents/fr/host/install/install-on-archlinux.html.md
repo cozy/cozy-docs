@@ -13,6 +13,8 @@ toc: false
 
 # Installer Cozy sur Archlinux
 
+## Avertissement
+
 Les paquets de Cozy sont disponibles sur le dépôt d'utilisateurs d'Archlinux, ou **AUR** (pour *Archlinux User Repository*). Ce dépôt n'est pas supporté nativement, il vous faudra donc installer un utilitaire vous permettant d'y accéder, parmi la liste disponible [ici](https://wiki.archlinux.org/index.php/AUR_helpers). 
 
 Dans cette documentation, nous utiliserons **Yaourt**, que vous pouvez installer en suivant les instructions disponibles [ici](https://archlinux.fr/yaourt).
