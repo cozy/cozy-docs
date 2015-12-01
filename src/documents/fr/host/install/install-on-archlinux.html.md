@@ -27,7 +27,7 @@ Sous Archlinux, Cozy se décline en trois paquets, dépendant du [reverse proxy]
 
 Ce paquet utilise le serveur Web **nginx** comme *reverse proxy*, et l'installe si cela n'a pas été fait précédemment. Si un serveur nginx tourne déjà sur votre machine, l'utilisation de ce paquet est vivement conseillé. La configuration est effectuée automatiquement, via une inclusion dans `/etc/nginx/nginx.conf`.
 
-#### `nginx-apache`
+#### `cozy-apache`
 
 Ce paquet est exactement le même que le précédent, à la différence qu'il s'adresse au serveur Web **Apache**. La configuration est effectuée automatiquement, via une inclusion dans `/etc/httpd/conf/httpd.conf`.
 
