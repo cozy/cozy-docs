@@ -27,7 +27,7 @@ On Archlinux, Cozy has three different packages, depending on the [reverse proxy
 
 This package uses the **nginx** Web server as reverse proxy, and installs it if it hasn't already been done. If an nginx server is already running on your machine, it's very recommended that you use this package. The Web server's configuration is automatically handled via an include in `/etc/nginx/nginx.conf`.
 
-#### `nginx-apache`
+#### `cozy-apache`
 
 This package is the same as the above one, except that it uses the **Apache** Web server instead of nginx. The Web server's configuration is automatically handled via an include in `/etc/httpd/conf/httpd.conf`.
 
