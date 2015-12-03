@@ -25,7 +25,10 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
     ![Ubuntu](/assets/images/ubuntu-logo.png)<div class="label">Ubuntu</div>
   </a>
   <a href="install-on-debian.html">
-    ![Debian](/assets/images/debian-logo.png)<div class="label">Debian</div>
+    ![Debian](/assets/images/debian-logo.png)<div class="label">Debian (64 bits)</div>
+  </a>
+  <a href="install-on-archlinux.html">
+    ![Archlinux](/assets/images/archlinux-logo.png)<div class="label">Archlinux</div>
   </a>
 </div>
 

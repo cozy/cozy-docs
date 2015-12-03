@@ -138,3 +138,31 @@ Once this is done, you'll need to login. The `login` link is in the bottom right
 
 Once logged in, use the `View` dropdown menu, and select `User -> all`. You should see one line, which you can delete.
 When you refresh your Cozy page, it should ask you to register.
+
+## Websockets do not work in Apache
+
+If you are using Apache and meet some errors in your browser console like the one below, you might want to enable the websocket proxying.
+
+> WebSocket connection to 'wss://domain/public/files/socket.io/?EIO=3&transport=websocket&sid=DGvqewDGc_GvZX-3AAAB' failed: Error during WebSocket handshake: Unexpected response code: 400
+
+First,enable the *proxy_wstunnel* and *mod_rewrite* modules:
+
+```bash
+sudo a2enmod proxy_wstunnel
+sudo a2enmod mod_rewrite
+```
+
+ Then edit your apache configuration file (`/etc/apache2/sites-available/cozy.conf` on the default Debian installation for example) to insert the following lines:
+
+```apache-config
+RewriteEngine           On
+RewriteCond             %{REQUEST_URI} ^/.*socket\.io [NC]
+RewriteCond             %{THE_REQUEST} websocket [NC]
+RewriteRule             /(.*)           ws://127.0.0.1:9104/$1 [P,L]
+```
+
+ Finally, reload apache, and that's it!
+
+```bash
+sudo service apache2 reload
+```
