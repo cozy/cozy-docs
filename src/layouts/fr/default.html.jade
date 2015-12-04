@@ -56,7 +56,6 @@ html(lang='en')
                     - if(document.category == 'hack')
                         - className = 'selected'
                     a(class="#{className}", href="/en/hack/getting-started/") Dev
-                li: a(href="https://blog.cozycloud.cc") Blog
 
     .wrapper
       .wrap-menu.w25.mod.left
@@ -98,18 +97,18 @@ html(lang='en')
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
 
-    script(type='text/javascript').
-        var _paq = _paq || [];
-        _paq.push(['disableCookies']);
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-        var u="//piwik.cozycloud.cc/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 3]);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-        })();
-    noscript
-        p
-            img(src="https://piwik.cozycloud.cc/piwik.php?idsite=3", style="border:0", alt="")
+    //-script(type='text/javascript').
+        //-var _paq = _paq || [];
+        //-_paq.push(['disableCookies']);
+        //-_paq.push(['trackPageView']);
+        //-_paq.push(['enableLinkTracking']);
+        //-(function() {
+        //-var u="//piwik.cozycloud.cc/";
+        //-_paq.push(['setTrackerUrl', u+'piwik.php']);
+        //-_paq.push(['setSiteId', 3]);
+        //-var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        //-g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+        //-})();
+    //-noscript
+        //-p
+            //-img(src="https://piwik.cozycloud.cc/piwik.php?idsite=3", style="border:0", alt="")
