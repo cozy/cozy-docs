@@ -183,20 +183,6 @@ Clean database.
 sudo cozy-monitor cleanup [database]
 ```
 
-## Security
-
-For a production usage, you MUST renew the SSL certificate, reset the database credentials and reset the controller token.
-
-For this purpose, use the following command:
-```bash
-wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
-fab -H user@ip reset_security_tokens
-```
-To use this command, you should install Fabric on your local machine.
-
-You should also change the superuser credentials (and by the way, you should not use a password but a SSH key to connect to your Cozy). Please refer to [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password).
-
-
 ## Provide more disk space
 
 

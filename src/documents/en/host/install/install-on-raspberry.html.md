@@ -60,6 +60,9 @@ should be able to access your Cozy through port 443
 
 `https://ip.of.your.pi`
 
+**WARNING:** Installing and configuring Cozy may take quite a long time, one
+hour or so, before the server starts listening on port 443, so be patient.
+
 <br>
 
 If you are not able to know your Pi's IP address, you can use `nmap`
