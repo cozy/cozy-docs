@@ -18,7 +18,6 @@ What we call the "stack" are the core components of Cozy:
 * [Data System](https://github.com/cozy/cozy-data-system): unified persistence layer [![Build Status](https://travis-ci.org/cozy/cozy-data-system.png?branch=master)](https://travis-ci.org/cozy/cozy-data-system) [![Dependencies Status](https://david-dm.org/cozy/cozy-data-system.png)](https://david-dm.org/cozy/cozy-data-system)
 * [Proxy](https://github.com/cozy/cozy-proxy): handles registration and authentication [![Build Status](https://travis-ci.org/cozy/cozy-proxy.png?branch=master)](https://travis-ci.org/cozy/cozy-proxy) [![Dependencies Status](https://david-dm.org/cozy/cozy-proxy.png)](https://david-dm.org/cozy/cozy-proxy)
 * [Home](https://github.com/cozy/cozy-home): end-user friendly Cozy manager [![Build Status](https://travis-ci.org/cozy/cozy-home.png?branch=master)](https://travis-ci.org/cozy/cozy-home) [![Dependencies Status](https://david-dm.org/cozy/cozy-home.png)](https://david-dm.org/cozy/cozy-home)
-* [Indexer](https://github.com/cozy/cozy-data-indexer)
 
 The last one is not a true Cozy component but is used to install and manage self-hosted Cozy: [cozy-setup](https://github.com/cozy/cozy-setup).
 
