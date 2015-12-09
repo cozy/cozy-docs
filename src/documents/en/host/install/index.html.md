@@ -10,7 +10,7 @@ urls: ["/host/"]
 
 # Install Cozy
 
-You have several ways to install Cozy on your own. Cozy is architecture and platform agnostic, since it is basically composed of Node.JS daemons and a Python indexer on top of CouchDB.
+You have several ways to install Cozy on your own. Cozy is architecture and platform agnostic, since it is basically composed of Node.JS daemons on top of CouchDB.
 
 A minimum amount of RAM is required though: **1024MB** is a good start for 6 Cozy applications running simultaneously.
 
