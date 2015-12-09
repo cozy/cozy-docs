@@ -9,7 +9,7 @@ toc: false
 # Install Cozy step by step
 
 This documentation is a formal page aiming to summarize what components you
-need in order to run Cozy properly.    
+need in order to run Cozy properly.
 You can reproduce those steps on any UNIX operating system (ArchLinux, 
 FreeBSD, etc.) and on any architecture (armhf, i386, etc.), as long as all
 the components are available for it.
@@ -126,22 +126,7 @@ configuration files. One for each service, except `cozy-init` that you won't
 need here.
 
 
-## Step 6: Install Cozy Indexer
-
-The Cozy Indexer is the only python module of Cozy. You can install it via
-`pip`.
-
-```bash
-pip install cozy-indexer
-```
-
-If you run into a trouble by installing this way, you may want to try the
-manual way:
-
-https://github.com/cozy/cozy-data-indexer#install--hack
-
-
-## Step 7: Initialize users, directories and tokens
+## Step 6: Initialize users, directories and tokens
 
 1. 3 UNIX users to create (without home directory)
 ```
@@ -194,7 +179,6 @@ npm install -g coffee-script cozy-monitor cozy-controller
 ```bash
 # If you are running supervisord with the proper configuration files, try
 service start couchdb
-supervisorctl start cozy-indexer
 supervisorctl start cozy-controller
 ```
 ```bash
@@ -203,9 +187,6 @@ supervisorctl start cozy-controller
 curl -s 127.0.0.1:5984 \
   && echo "CouchDB is running" \
   || echo "CouchDB is NOT running"
-curl -s 127.0.0.1:9102 \
-  && echo "Cozy Indexer is running" \
-  || echo "Cozy Indexer is NOT running"
 curl -s 127.0.0.1:9002 \
   && echo "Cozy Controller is running" \
   || echo "Cozy Controller is NOT running"
@@ -222,7 +203,7 @@ cozy-monitor install proxy
 ## Step 9: Configure a reverse proxy
 
 If you followed the previous steps carefuly, you should have a working Cozy
-by now.    
+by now.
 The Cozy Proxy listens locally on the port `9104`, and if you want to open this
 port to the outside world, or on a specific domain name, you will need to
 configure a reverse proxy.

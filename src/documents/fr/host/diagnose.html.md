@@ -30,12 +30,11 @@ Si l’une des applications surveillées par `supervisorctl` est arrêtée, rela
 sudo supervisorctl restart cozy-controller
 ```
 
-Cozy-monitor affiche l’état de toutes les applications, aussi bien de la pile Cozy que de celles que vous avez installées vous-même. Les premières doivent toutes être démarrées : postfix, couch, controller, data-system, home, proxy, index. Si l’une d’elles est arrêtée, relancez-la :
+Cozy-monitor affiche l’état de toutes les applications, aussi bien de la pile Cozy que de celles que vous avez installées vous-même. Les premières doivent toutes être démarrées : postfix, couch, controller, data-system, home, proxy. Si l’une d’elles est arrêtée, relancez-la :
 
-- avec supervisorctl pour le contrôleur et l’indexeur :
+- avec supervisorctl pour le contrôleur :
 ```bash
 sudo supervisorctl restart cozy-controller
-sudo supervisorctl restart cozy-indexer
 ```
 
 - avec cozy-monitor pour le data-system, la home, et le proxy :

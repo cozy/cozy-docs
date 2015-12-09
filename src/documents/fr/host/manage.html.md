@@ -36,25 +36,6 @@ sudo npm -g update cozy-controller
 sudo supervisorctl start cozy-controller
 ```
 
-#### Mise à jour de l’indexeur
-
-Mise à jour manuelle :
-
-```bash
-cd /usr/local/cozy-indexer/cozy-data-indexer
-. virtualenv/bin/activate
-git pull origin master
-pip install --use-mirrors --upgrade -r ./requirements/common.txt
-supervisorctl restart cozy-indexer
-```
-
-Mise à jour en utilisant Fabric :
-
-```bash
-fab -H sudoer@host:ip update_indexer
-```
-
-
 #### Mise à jour des applications
 
 Pour mettre à jour une application, lancez cette commande dans votre serveur :
