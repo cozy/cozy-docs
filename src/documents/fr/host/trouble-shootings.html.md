@@ -194,3 +194,9 @@ RewriteRule             /(.*)           ws://127.0.0.1:9104/$1 [P,L]
 ```bash
 sudo service apache2 reload
 ```
+
+## Je n’arrive pas à envoyer de gros fichiers / à synchroniser de grosses photos
+
+Si vous utilisez Nginx comme serveur proxy inverse, il vous sera impossible de téléverser de gros fichiers. Nginx limite par défaut la taille des requêtes envoyées par les clients à 1Mo. Pour augmenter cette limite, ajoutez simplement une instruction [client_max_body_size](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) à votre configuration Nginx.
+
+
