@@ -86,6 +86,17 @@ html(lang='en')
       - if (document.tableOfContents != null && document.tableOfContents.length == 0)
         - className = "w80"
       #main.mod.pam(role="main", class="#{className}")
+        - if (document.tableOfContents != null && document.tableOfContents.length > 5)
+          h1.summary
+            | Sommaire
+          ul.summary.first-level
+            - for item in document.tableOfContents
+              - var className = "big"
+              - if (document.tableOfContents != null && document.tableOfContents.length == 1)
+                - className = "big active"
+              - if(item.text != "")
+                li(class="#{className}")
+                  a.label(href="##{item.id}")= item.text
         != content
 
       footer#footer.line.pam.row(role="contentinfo")
