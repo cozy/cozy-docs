@@ -150,13 +150,13 @@ sudo cozy-monitor compact [database]
 Compresser une vue CouchDB spécifique :
 
 ```bash
-sudo cozy-monitor compact-view <view> [database]
+sudo cozy-monitor compact-views <view> [database]
 ```
 
 Compresser toutes les vues :
 
 ```bash
-sudo cozy-monitor compact-all-view [database]
+sudo cozy-monitor compact-all-views [database]
 ```
 
 Faire une sauvegarde de la base en la répliquant sur une autre instance CouchDB :
