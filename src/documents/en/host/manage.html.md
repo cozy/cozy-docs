@@ -143,13 +143,13 @@ sudo cozy-monitor compact [database]
 Compact a given CouchDB view.
 
 ```bash
-sudo cozy-monitor compact-view <view> [database]
+sudo cozy-monitor compact-views <view> [database]
 ```
 
 Compact all views.
 
 ```bash
-sudo cozy-monitor compact-all-view [database]
+sudo cozy-monitor compact-all-views [database]
 ```
 
 Backup database by replicating it to another CouchDB instance.
