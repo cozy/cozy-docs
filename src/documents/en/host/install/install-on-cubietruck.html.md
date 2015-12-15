@@ -28,7 +28,7 @@ First, get the image archive:
 
 ```bash
 # Download the image (~ 860MB)
-wget http://files.cozycloud.cc/2015-03-09-cozy-cubietruck.img.7z
+wget https://files.cozycloud.cc/2015-03-09-cozy-cubietruck.img.7z
 
 # Uncompress it
 7zr e 2015-03-09-cozy-cubietruck.img.7z

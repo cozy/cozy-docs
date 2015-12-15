@@ -27,7 +27,7 @@ We assume that you have already installed OpenVZ utilities.
 
 ```bash
 # Download the OpenVz template (~ 470MB)
-wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
+wget https://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
 
 # Extract the template as a .tar file
 xz -d vzdump-openvz-cozycloud-debian.tar.xz
@@ -49,7 +49,7 @@ host. Here is a way to do it:
 
 ```bash
 # Download the OpenVz template (~ 470MB)
-wget http://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
+wget https://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
 
 # Extract the template as a .tar file
 xz -d vzdump-openvz-cozycloud-debian.tar.xz
