@@ -35,7 +35,7 @@ Commencez par télécharger l’archive :
 
 ```bash
 # Téléchargez l’image (environ 650MB)
-wget http://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
+wget https://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
 
 # Décompressez-la
 7zr e 2015-06-16-cozy-raspberry-pi2.img.7z

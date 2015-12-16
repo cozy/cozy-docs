@@ -34,7 +34,7 @@ First, get the image archive:
 
 ```bash
 # Download the image (~ 650MB)
-wget http://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
+wget https://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
 
 # Uncompress it
 7zr e 2015-06-16-cozy-raspberry-pi2.img.7z

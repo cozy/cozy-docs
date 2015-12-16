@@ -67,7 +67,7 @@ Data System, Home, Controller or Proxy.
 2. Get the development virtual machine
 
     ```bash
-    vagrant box add cozycloud-dev-latest http://files.cozycloud.cc/cozycloud-dev-latest.box
+    vagrant box add cozycloud-dev-latest https://files.cozycloud.cc/cozycloud-dev-latest.box
     ```
 
 3. Run the development virtual machine
