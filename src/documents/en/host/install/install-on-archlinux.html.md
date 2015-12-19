@@ -56,14 +56,18 @@ Please answer it with a positive answer. Cozy's stack installation and configura
 
 During installation process, you will have to give your instance's name. This is the web adress that your instance will have.
 
-Once the installation is completed, and if you're not using the standalone version, don't forget to reload your reverse proxy with one of the following commands:
-
-    systemctl reload nginx  ## for nginx
-    systemctl reload httpd  ## for apache
-
 ## Troubleshooting
 
 If you encounter any issue during the installation, please open an issue on [GitHub](https://github.com/babolivier/cozy-archlinux) or on [the Cozy forum](https://forum.cozy.io/t/cozy-on-archlinux/1342).
+
+### Can't access Cozy
+
+If you can't access your Cozy instance once the installation is complete, it can mean your reverse proxy hasn't correctly applied its new configuration. This can be corrected by reloading the Web server's configuration:
+
+```
+systemctl reload nginx  ## for nginx
+systemctl reload httpd  ## for apache
+```
 
 ### Conflict between `nodejs` and `nodejs10`
 
