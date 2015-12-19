@@ -1,0 +1,414 @@
+---
+title: "Patch notes 2015/12/02"
+layout: "default"
+category: "hack"
+toc: true
+menuHidden: false
+menuOrder: 1
+menuTitle: Last release note
+---
+
+#patch-note.v2
+    h1 Patch note #16
+    p This relates development from 2015-11-02 to 2015-12-02
+
+
+    h2 Highlights
+
+    p We worked hard to improve stability of most of our applications;
+    p Bruno is fully commited to the desktop sync client, a beta version should be available soon;
+    p For now, the only way for applications to persist data was to save it into the Cozy database. Thanks to Zoé, each application can now also access a folder on the server file system. It will allow to easily port to Cozy third party applications that rely on file storage;
+    p Brendan ported Cozy to Archlinux and documented it.
+
+
+
+    h2 Web Applications
+
+
+
+    h3 Calendar (1.0.29)
+    ul
+        li Fix color format to always be in hexadecimal. Refs <a href="https://github.com/cozy/cozy-calendar/issues/435" target="_blank">#435</a>
+        li Fix recurring event issue with daylight saving. Refs <a href="https://github.com/cozy/cozy-calendar/issues/433" target="_blank">#433</a>
+        li Attach Cozy logo to notification emails
+        li Fix typo in french locale
+        li Fix cursor display in Chrome, refs <a href="https://github.com/cozy/cozy-calendar/issues/442" target="_blank">#442</a>
+        li Update german translation
+        li Update translations
+        li.contributors Contributors: Clochix, Danny4927, Jsilvestre
+
+
+
+    h3 Contacts (2.1.2)
+    ul
+        li Close modal if user cancel merge, refs <a href="https://github.com/cozy/cozy-contacts/issues/176" target="_blank">#176</a>
+        li Fix postal addresses display and save format
+        li Display contacts without name at the end of contacts list
+        li Add missing bower dependencies, fix import of quoted printable, refs <a href="https://github.com/cozy/cozy-contacts/issues/183" target="_blank">#183</a>
+        li Update server dependencies
+        li.contributors Contributors: Clochix, M4dz, Poupotte
+
+
+
+    h3 Data-system (2.1.5)
+    ul
+        li Fix bulk_docs permissions
+        li Add options to show rev in request result
+        li Fix authentication in replication
+        li Use APPLICATION_PERSISTENT_DIRECTORY
+        li Remove now-useless comment
+        li Fix syntax for decrypt condition
+        li Fix decrypting passwords on requests
+        li Add _passwordStillEncrypted for request results
+        li Remove port number from domain when sending emails, refs <a href="https://github.com/cozy/cozy-data-system/issues/179" target="_blank">#179</a>
+        li Fix licence formating in package.json
+        li.contributors Contributors: Aenario, Bnjbvr, Clochix, Poupotte
+
+
+
+
+    h3 Files (1.1.17)
+    ul
+        li Fix URL of logo in sharing emails
+        li Fix server crash when locale email template is missing
+        li Add link to file in sharing email
+        li Fix Express deprecation warning
+        li Embed Cozy logo into sharing email
+        li.contributors Contributors: Clochix
+
+
+
+
+
+    h3 Import-from-google (0.1.5)
+    ul
+        li Fix exception because global variable request was redefined. Refs <a href="https://github.com/cozy-labs/import-from-google/issues/38" target="_blank">#38</a>
+        li.contributors Contributors: Jsilvestre
+
+
+
+
+
+
+    h3 Konnectors (0.4.6)
+    ul
+        li Fix error displaying
+        li Improve error message when unencrytion failed
+        li Up cozydb version
+        li Improve error logging for passwords
+        li Do not allow to run an import twice from the UI
+        li Fix withings konnector. Do not crash all the konnector app when the password hashing fails.
+        li Do not remove duplicated commits anymore
+        li Quick and dirty support of sleep for withings
+        li Add missing listed model to withings konnector
+        li Update link_bank_operation.coffee
+        li.contributors Contributors: Frankrousseau, ZeHiro
+
+
+
+
+
+
+    h3 Notes (1.0.3)
+    ul
+        li Update dependencies
+        li.contributors Contributors: Clochix
+
+
+
+
+    h3 Photos (1.0.18)
+    ul
+        li Fix URL of OSM search engine (via @Miton)
+        li Fix Express deprecation warning on res.sendfile
+        li Server code lint
+        li Embed Cozy logo into sharing email
+        li Fix error when sending sharing email, refs <a href="https://github.com/cozy/cozy-photos/issues/168" target="_blank">#168</a>
+        li Update dependencies
+        li.contributors Contributors: Clochix, Nono
+
+
+
+
+    h3 Self-hosting (1.0.1)
+    p Nicolas is working on a Web application to help self-hosted user manage their server.
+    ul
+        li.contributors Contributors: Aenario, Nledez
+
+
+
+    h2 Other Apps
+
+
+    h3 Desktop (0.5.0)
+    p Bruno worked to sync files from Cozy to the local filesystem, and from the local filesystem to Cozy.
+    ul
+        li.contributors Contributors: Greenkeeperio-bot, Nono
+
+
+    h3 Mobile
+    ul
+        li Update PouchDB to 5.1.0 .
+        li Migration script from sqlite to indexedDB.
+        li Fixes in sqlite -> indexedDB migration.
+        li Add defensive code against cozy address datapoint value type.
+        li Fix i18n source with new UI keywords, and update translations : add korean.
+        li Add message during migration.
+        li Fix hang on initialisation with notification's requests missing.
+        li In send logs, Fix + signs (thanks nicofrand) and i18n of the messages.
+        li Move app config data to a _local pouch document. Delete unused DevicesByLocalId mapreduce query
+        li Update some i18n in german.
+        li Quit on error during initialisation (instead of blocking on splashscreen).
+        li Dont migrate adapter on pre 4.4 androids.
+        li Migrate config onpre 4.4 .
+        li Avoid aliasing android version / pouchdb adapter choices.
+        li Switch back to version check, as catching PouchDB initialisation error is a nightmare.
+        li Fix missing error on install on pre 4.4 . Test for idb adapter compatibility trought PouchDB.
+        li Remove compiled files
+        li Remove unnecessary gitignore file
+        li Update package for best compatibility
+        li Add versioneye badge
+        li Add continuous integration
+        li Add cordova build in CI
+        li Update dependency
+        li Upgrade version from 0.1.13 to 0.1.14
+        li Add codeclimate && codacy services
+        li Add version number on some plugin, to allow safe upgrades and further devs.
+        li.contributors Contributors: Jacquarg, Kosssi, Poupotte
+
+
+
+
+    h2 Cozy stack
+
+
+    h3 Controller (2.0.37)
+    ul
+        li Use df -h instead of df -H
+        li Transmit application directory through env variable APPLICATION_PERSISTENT_DIRECTORY, refs <a href="https://github.com/cozy/cozy-controller/issues/92" target="_blank">#92</a>
+        li Use folderDir
+        li Allow to start JavaScript applications
+        li Write error in usual logs file too
+        li Add missing error logging in stderr management
+        li Manage package.json corrupted, refs <a href="https://github.com/cozy/cozy-controller/issues/102" target="_blank">#102</a>
+        li Log process pid
+        li.contributors Contributors: Clochix, Frankrousseau, Poupotte
+
+
+
+
+    h3 Monitor (1.2.32)
+    ul
+        li Allow to set branch at the end of the url when installing
+        li Add a json option to versions subcommand
+        li Add a json option to status subcommand
+        li Upgrade cozy-clients from 1.0.4 to 1.0.5
+        li Add `--json` option to module-status and views-list commands
+        li Code cleanup
+        li Improve JSON output of views-list
+        li Add static
+        li Retrieve git url in market, refs <a href="https://github.com/cozy/cozy-monitor/issues/109" target="_blank">#109</a>
+        li Add static exception + add status
+        li Compact-all-views: wait until compaction ends
+        li Remove notifications after application update, refs <a href="https://github.com/cozy/cozy-monitor/issues/113" target="_blank">#113</a>
+        li Update dependencies
+        li Improve display of stack versions
+        li Remove notifications after stack application update, refs <a href="https://github.com/cozy/cozy-monitor/issues/113" target="_blank">#113</a>
+        li Add couchdb auth even if it's necessary
+        li Fix reinstall app with new permissions, refs <a href="https://github.com/cozy/cozy-monitor/issues/114" target="_blank">#114</a>
+        li Remove indexer
+        li.contributors Contributors: Clochix, Lemelon, Poupotte
+
+
+
+
+    h3 Home (2.1.3)
+    ul
+        li Store: alert message for the community apps - changed from red to dark grey background
+        li White background + design adjustments related to this
+        li Status: add background to hardware's icons
+        li Status - application: remove hover from action buttons
+        li Store: changed spinner + block's hover
+        li Status: layout + responsive
+        li Fix favorite buttons titles
+        li Make syntax of initialize.coffee more coffee styled
+        li Fix application collection sorting
+        li Fix window title display
+        li Order app on display name instead of name
+        li Capitalize app name in status page
+        li Add missing comment to collection comparator
+        li Fix sorting in status page
+        li Modify user agent with NODE_ENV
+        li Save icon prior running the full installation
+        li Fix locales and labels
+        li Add 'market install your app tutorial' locale
+        li Fix log sending
+        li Up printit version
+        li Clean code for log management
+        li Better ux for start / stop button
+        li Update config application view after start/stop
+        li Fix market update after installation
+        li Add clean build
+        li Fix application list on status page
+        li Fix index for application list
+        li Fix update stack
+        li Fix application URL in state page, refs <a href="https://github.com/cozy/cozy-home/issues/593" target="_blank">#593</a>
+        li Update Clearance version
+        li Home: removed overflow hidden to div's icons
+        li Fix design issue with long application name, refs <a href="https://github.com/cozy/cozy-home/issues/586" target="_blank">#586</a>
+        li Fix <a href="https://github.com/cozy/cozy-home/issues/590" target="_blank">#590</a>: wrong layout for store
+        li Fix <a href="https://github.com/cozy/cozy-home/issues/591" target="_blank">#591</a>: make consumption labels cleaner
+        li Update Clearance version
+        li Fix URL of Android Marketplace logo
+        li Remove dead code
+        li Fix client exception on stack update, refs <a href="https://github.com/cozy/cozy-home/issues/609" target="_blank">#609</a>
+        li Fix display of “update stack” button, refs <a href="https://github.com/cozy/cozy-home/issues/610" target="_blank">#610</a>
+        li Fix typo in english locale, refs <a href="https://github.com/cozy/cozy-home/issues/602" target="_blank">#602</a>
+        li Add korean language, refs <a href="https://github.com/cozy/cozy-home/issues/580" target="_blank">#580</a>
+        li Fix command getdomain
+        li Update ru.json
+        li.contributors Contributors: Aenario, Clochix, Fairyfeller, Frankrousseau, Jsilvestre, Kelukelu, Poupotte
+
+
+
+
+
+    h3 Proxy (2.1.11)
+    ul
+        li Get ENV server-side and expose it to env module
+        li Skip import from google step if app isn't installed
+        li Remove email preset from onboarding
+        li Improve display for ECONNREFUSED errors
+        li Fix redirect during registration, refs <a href="https://github.com/cozy/cozy-proxy/issues/202" target="_blank">#202</a>
+        li Make getEnv more simple and readable
+        li Improve onboarding wording
+        li Replace datalist with select in timezone selector
+        li Improve congratulation wording
+        li Fix english locale
+        li Handle errors from import-from-google properly
+        li Improve the way users are guided through the import google process
+        li Make import from Google more consistent with standalone app
+        li Update front locales from Tx
+        li Do some CoffeeScript Cooking \o/
+        li Suppress select label to prevent Ui overflows
+        li Fix inputs scope in formviews
+        li Fix erroneous build script
+        li Add url for token documentation
+        li Update translation
+        li Fix domain in password reset link
+        li Fix style
+        li Fix device update
+        li.contributors Contributors: Aenario, Clochix, Frankrousseau, M4dz, Nono, Poupotte
+
+
+
+
+    h2 Other tools
+
+
+
+
+    h3 CozyDb (0.1.5)
+    ul
+        li Remove double depencie
+        li Add index definition registering
+        li Fix searching / deprecate indexing
+        li Transfer additional search infos to app
+        li.contributors Contributors: Aenario
+
+
+
+    h3 Dev-image-builder
+    p Nicolas created a script to help us keep the development VM up to date
+
+    h3 Localization-manager (0.1.0)
+    p Joseph created a new library to improve localization management inside our apps.
+
+    h3 Clearance (0.1.22)
+    ul
+        li Allow to add attachments to sharing email
+        li Manage error when retrieving email template
+        li.contributors Contributors: Clochix
+
+
+
+    h3 Debian package
+    ul
+        li Allow websockets proxying
+        li Create README.md
+        li Remove indexer
+        li Add self-hosting app
+        li Update path
+        li Fix apache and debian-reconfigure-cozy-domain.sh rights
+        li.contributors Contributors: Frankrousseau, Nicofrand, Nledez
+
+
+
+
+    h3 Docs
+    ul
+        li Update PNG version of Cozy logo
+        li Patch note <a href="https://github.com/cozy/cozy-docs/issues/16" target="_blank">#16</a>
+        li Removing the space after the escaping backslash
+        li Fix link display on home page
+        li Add onboarding documentation
+        li Improve onboarding documentation
+        li Improve import documentation
+        li Update dependencies
+        li Improve import google docs
+        li Add missing conclusion in import from google page
+        li Fix french typo in the import google page
+        li Update PGP key expiration date
+        li Explain how to increase Nginx max upload size
+        li Update install-on-virtualbox.html.md
+        li How to enable ws proxying on apache
+        li Upgrade mobile version
+        li Clarify "64 bits" for Debian
+        li Update install-step-by-step.html.md. Indexer and Controller ports were mixed.
+        li Upgrade android version from 0.1.12 to 0.1.13
+        li Add rm -rf /usr/local/var/cozy/
+        li Upgrade android version from 0.1.13 to 0.1.14
+        li Added documentation for installation on Archlinux, as well as Archlinux's logo
+        li Changed english yaourt documentation link
+        li Added the link to the index, and added a title to have a nice vertical offset
+        li.contributors Contributors: Babolivier, Clochix, Frankrousseau, Maxlath, Nicofrand, Poupotte, Simon0356
+
+
+
+
+
+    h3 Printit (0.1.15)
+    ul
+        li Put back logs for production environment
+        li Log error and warning in normal output too
+        li Put back debugging in test environment
+        li Fix for PouchError
+        li.contributors Contributors: Frankrousseau, Nono
+
+
+
+
+
+    h3 Template-coffee (1.0.0)
+    ul
+        li Add build dirs to gitignore
+        li Remove build dir from gitignore
+        li Add brunch as dependency
+        li Use root option to find config when using compiled JS
+        li.contributors Contributors: G07cha, Jsilvestre, Nono
+
+
+
+
+    h3 Ui (0.1.4)
+    ul
+        li Fix build;
+        li Fix the link to cozy-ui in the demo app
+        li Added proper drawer handling in app-2panes-toolbar
+        li Improve 2 panes layout in demo
+        li.contributors Contributors: Bnjbvr, Doubleface, M4dz
+
+
+
+
+

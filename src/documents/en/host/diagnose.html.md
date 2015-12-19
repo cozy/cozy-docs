@@ -30,12 +30,11 @@ If one of the applications monitored by `supervisorctl` is not running, restart 
 sudo supervisorctl restart cozy-controller
 ```
 
-Cozy-monitor shows the status of all applications, the Cozy stack and the ones you installed. Every application of the Cozy stack must be started: postfix, couch, controller, data-system, home, proxy, index. If one of them is stopped, restart it:
+Cozy-monitor shows the status of all applications, the Cozy stack and the ones you installed. Every application of the Cozy stack must be started: postfix, couch, controller, data-system, home, proxy. If one of them is stopped, restart it:
 
-- use supervisorctl if controller or indexer are down:
+- use supervisorctl if controller is down:
 ```bash
 sudo supervisorctl restart cozy-controller
-sudo supervisorctl restart cozy-indexer
 ```
 
 - use cozy-monitor if data-system, home or proxy are down

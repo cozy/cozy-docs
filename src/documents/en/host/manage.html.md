@@ -37,25 +37,6 @@ sudo npm -g update cozy-controller
 sudo supervisorctl start cozy-controller
 ```
 
-#### Indexer update
-
-Manual update:
-
-```bash
-cd /usr/local/cozy-indexer/cozy-data-indexer
-. virtualenv/bin/activate
-git pull origin master
-pip install --use-mirrors --upgrade -r ./requirements/common.txt
-supervisorctl restart cozy-indexer
-```
-
-Fabric update:
-
-```bash
-fab -H sudoer@host:ip update_indexer
-```
-
-
 #### Application update
 
 To update a single application, you can run the following command on your target
@@ -162,13 +143,13 @@ sudo cozy-monitor compact [database]
 Compact a given CouchDB view.
 
 ```bash
-sudo cozy-monitor compact-view <view> [database]
+sudo cozy-monitor compact-views <view> [database]
 ```
 
 Compact all views.
 
 ```bash
-sudo cozy-monitor compact-all-view [database]
+sudo cozy-monitor compact-all-views [database]
 ```
 
 Backup database by replicating it to another CouchDB instance.
@@ -182,20 +163,6 @@ Clean database.
 ```bash
 sudo cozy-monitor cleanup [database]
 ```
-
-## Security
-
-For a production usage, you MUST renew the SSL certificate, reset the database credentials and reset the controller token.
-
-For this purpose, use the following command:
-```bash
-wget https://raw.githubusercontent.com/cozy/cozy-setup/master/fabfile.py
-fab -H user@ip reset_security_tokens
-```
-To use this command, you should install Fabric on your local machine.
-
-You should also change the superuser credentials (and by the way, you should not use a password but a SSH key to connect to your Cozy). Please refer to [this tutorial](http://www.debian-administration.org/article/SSH_with_authentication_key_instead_of_password).
-
 
 ## Provide more disk space
 

@@ -28,7 +28,7 @@ Commencez par télécharger l’image :
 
 ```bash
 # Téléchargez l’image (environ 1.5GB)
-wget http://files.cozycloud.cc/cozy-cubietruck.im.tar.gz
+wget https://files.cozycloud.cc/cozy-cubietruck.im.tar.gz
 
 # Décompressez-la
 tar -xvzf cozy-cubietruck.im.tar.gz

@@ -7,6 +7,13 @@ toc: true
 # Foire Aux Questions
 
 
+## Comment puis-je tester Cozy ?
+
+Pour avoir une idée de ce que fait cozy, [essayez notre démo](https://demo.cozycloud.cc).
+
+Pour essayer plus complètement le service, vous pouvez nous [demander une instance de test](https://cozy.io/fr/#contact). Il suffit de saisir votre adresse de courriel dans ce formulaire. La place sur nos serveurs étant limitée, vous serez placé sur une liste d’attente. Vous allez recevoir deux messages, le premier vous demandant de valider votre adresse, le second confirmant votre inscription à la liste d’attente. Quelques jours plus tard, une fois votre instance disponible, vous recevrez un nouveau message avec un lien vers votre serveur. En suivant ce lien, vous pourrez choisir le mot de passe de votre instance et commencer à la paramétrer.
+
+
 ## Comment puis-je trouver de l’aide ?
 
 Notre équipe support est toujours disponible pour vous aider. Vous pouvez nous contacter de plusieurs manières :

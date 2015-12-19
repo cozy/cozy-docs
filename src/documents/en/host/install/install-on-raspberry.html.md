@@ -34,7 +34,7 @@ First, get the image archive:
 
 ```bash
 # Download the image (~ 650MB)
-wget http://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
+wget https://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
 
 # Uncompress it
 7zr e 2015-06-16-cozy-raspberry-pi2.img.7z
@@ -59,6 +59,9 @@ should be able to access your Cozy through port 443
 (https protocol):
 
 `https://ip.of.your.pi`
+
+**WARNING:** Installing and configuring Cozy may take quite a long time, one
+hour or so, before the server starts listening on port 443, so be patient.
 
 <br>
 

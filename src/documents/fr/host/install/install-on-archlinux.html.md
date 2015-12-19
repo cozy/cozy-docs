@@ -8,14 +8,14 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img alt="Logo d’Ubuntu" src="/assets/images/archlinux-logo.png">
+<img alt="Logo d’Archlinux" src="/assets/images/archlinux-logo.png">
 </div>
 
 # Installer Cozy sur Archlinux
 
 ## Avertissement
 
-Les paquets de Cozy sont disponibles sur le dépôt d'utilisateurs d'Archlinux, ou **AUR** (pour *Archlinux User Repository*). Ce dépôt n'est pas supporté nativement, il vous faudra donc installer un utilitaire vous permettant d'y accéder, parmi la liste disponible [ici](https://wiki.archlinux.org/index.php/AUR_helpers). 
+Les paquets de Cozy sont disponibles sur le dépôt d'utilisateurs d'Archlinux, ou **AUR** (pour *Archlinux User Repository*). Ce dépôt n'est pas supporté nativement, il vous faudra donc installer un utilitaire vous permettant d'y accéder, parmi la liste disponible [ici](https://wiki.archlinux.org/index.php/AUR_helpers).
 
 Dans cette documentation, nous utiliserons **Yaourt**, que vous pouvez installer en suivant les instructions disponibles [ici](https://archlinux.fr/yaourt).
 
@@ -23,13 +23,13 @@ Dans cette documentation, nous utiliserons **Yaourt**, que vous pouvez installer
 
 Sous Archlinux, Cozy se décline en trois paquets, dépendant du [reverse proxy](https://fr.wikipedia.org/wiki/Proxy_inverse) que vous souhaitez utiliser avec Cozy :
 
-#### `cozy-nginx` 
+#### `cozy-nginx`
 
 Ce paquet utilise le serveur Web **nginx** comme *reverse proxy*, et l'installe si cela n'a pas été fait précédemment. Si un serveur nginx tourne déjà sur votre machine, l'utilisation de ce paquet est vivement conseillé. La configuration est effectuée automatiquement, via une inclusion dans `/etc/nginx/nginx.conf`.
 
 #### `cozy-apache`
 
-Ce paquet est exactement le même que le précédent, à la différence qu'il s'adresse au serveur Web **Apache**. La configuration est effectuée automatiquement, via une inclusion dans `/etc/httpd/conf/httpd.conf`.
+Ce paquet est exactement le même que le précédent, à la différence qu'il s'adresse au serveur Web **Apache**. La configuration est effectuée automatiquement, via un fichier `/etc/httpd/conf/extra/cozy.conf` inclus dans `/etc/httpd/conf/httpd.conf`.
 
 #### `cozy-standalone`
 
@@ -55,6 +55,13 @@ Une fois l'installation des dépendances et la création du paquet terminées, Y
 Message auquel vous répondrez par l'affirmative.
 
 S'en suit la procédure d'installation des différents composants de Cozy, et de configuration.
+
+Au cours de l'installation, il vous sera demandé le nom de votre instance Cozy. Il s'agit de l'adresse à laquelle votre instance sera disponible.
+
+À la fin de l'installation, si vous n'utilisez pas la version standalone, n'oubliez pas de recharger sa configuration avec une des commandes suivantes :
+
+    systemctl reload nginx  ## pour nginx
+    systemctl reload httpd  ## pour apache
 
 ## Que faire en cas de soucis
 

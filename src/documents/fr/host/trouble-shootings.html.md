@@ -194,3 +194,20 @@ RewriteRule             /(.*)           ws://127.0.0.1:9104/$1 [P,L]
 ```bash
 sudo service apache2 reload
 ```
+
+## Je n’arrive pas à envoyer de gros fichiers / à synchroniser de grosses photos
+
+Si vous utilisez Nginx comme serveur proxy inverse, il vous sera impossible de téléverser de gros fichiers. Nginx limite par défaut la taille des requêtes envoyées par les clients à 1Mo. Pour augmenter cette limite, ajoutez simplement une instruction [client_max_body_size](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) à votre configuration Nginx.
+
+
+
+## Mon serveur n’arrive pas à envoyer de courriels
+
+Cozy a besoin d’un serveur SMTP relai pour envoyer certains messages :
+- des notifications, par exemple les rappels avant un évènement ;
+- les liens lorsque vous partagez un fichier ou des photos ;
+- le message de réinitialisation de votre mot de passe si vous l’avez oublié…
+
+Pour envoyer ces messages, Cozy essaie de se connecter à un serveur SMTP sur le port 25 du même serveur. Il est de votre responsabilité de configurer et de gérer ce serveur. Gardez à l’esprit que si vous ne le paramétrez pas correctement, de nombreux serveurs de messagerie risquent de considérer ces messages comme des pourriels. Garantir le bon acheminement de messages depuis un serveur personnel peut se révéler complexe.
+
+Pour vous aider à configurer un serveur relai, vous pouvez consulter cette documentation rédigée par un Cozynaute qui explique [comment utiliser Postfix](https://forum.cozy.io/t/tutorial-files-photos-how-to-be-able-to-send-mail-from-a-self-hosted-cozy-using-a-postfix-relayhost/1719) avec Cozy.

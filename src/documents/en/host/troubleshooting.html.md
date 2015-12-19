@@ -166,3 +166,18 @@ RewriteRule             /(.*)           ws://127.0.0.1:9104/$1 [P,L]
 ```bash
 sudo service apache2 reload
 ```
+
+## I’m unable to upload large files / synchronize large photos
+
+If you’re using Nginx as a reverse proxy in front of Cozy, you may notice that you’re not allowed to upload big files. By default, Nginx limit the maximum size of a client request to 1Mo. To increase this limit, just add a [client_max_body_size](http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size) to your Nginx config.
+
+## My server is unable to send emails
+
+Cozy uses an SMTP relay to send emails:
+- notification emails, for exemple event reminders;
+- when you share contents like files or photos;
+- the message to reset your password if you forger it…
+
+To send this messages, Cozy tries to connect to an SMTP server listening on port 25 on the same host. It is your responsability to configure such a server and monitor it. Also, keep in mind that a lot of email provider will mark as spam messages sent from a random internet server, if it is not well configurated. Managing delivery of messages sent from your server may be quite difficult.
+
+You may have a look at this tutorial, written by one of our users, explaining how to [use Postfix](https://forum.cozy.io/t/tutorial-files-photos-how-to-be-able-to-send-mail-from-a-self-hosted-cozy-using-a-postfix-relayhost/1719) as an SMTP relay for Cozy.

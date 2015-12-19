@@ -21,11 +21,11 @@ cover(path)
 
 @font-face
     font-family: main-light
-    src: url('/assets/fonts/maven-pro-light-200.otf')
+    src: url('/assets/fonts/source-sans-pro-light.otf')
 
 @font-face
     font-family: main
-    src: url('/assets/fonts/maven-pro-light-300.otf')
+    src: url('/assets/fonts/source-sans-pro-light.otf')
 
 @font-face
     font-family: cool
@@ -44,6 +44,9 @@ lightblue = #BBE5F9
 lightorange = orange + 60%
 bluegreen = #FC9633
 green = #5C5
+
+.mt4
+    padding-top 40px
 
 p
     font-weight: bold
@@ -75,6 +78,7 @@ h4
 .h4-like
     font-weight: normal
     line-height: 1.5em
+    margin-top 15px
 
 p
     font-size: 20px
@@ -195,48 +199,36 @@ button:active
 #header
 
     a.button
-        height: 60px
         border: 0
-        background: lightblue - 25%
         margin-right: 10px
         font-size: 21px
         padding: 13px
-        rounded-border: 5px
         cursor: pointer
         text-decoration: none
         font-family: cool-light
-        color: white
+        color: blue
 
     a.button:hover
-        color: white
-        -webkit-transition:color 0.2s ease-in
-        -moz-transition:color 0.2s ease-in
-        -o-transition:color 0.2s ease-in
+        text-decoration underline
         transition:color 0.2s ease-in
-        -webkit-transition:background-color 0.2s ease-in
-        -moz-transition:background-color 0.2s ease-in
-        -o-transition:background-color 0.2s ease-in
         transition:background-color 0.2s ease-in
-        background: blue
 
-    a.button:focus
-    a.button:active
-        background: blue - 20%
-        shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
-        color: white
+    .main-title
+        margin-top 30px
 
     .image-links
-        a
-            line-height: 45px
-            text-decoration: none
-            border-bottom: 1px solid midgrey
-
         a.button
+            width 99%
+            display block
+            background #F2F2F2
+            text-decoration: none
+            border 0 
+            padding 1px
             font-size: 26px
-            margin-top: 40px
-            background-color: #fff
-            border: 2px solid blue
-            color: #444
+            padding 20px
+            text-align center
+            margin 2px
+            border 1px solid #CCC
 
             &:hover
                 background: blue + 90%
@@ -245,12 +237,19 @@ button:active
             &:active
                 background: blue + 90%
                 shadow: 1px 3px 2px rgba(0, 0, 0, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.0)
+            @media (max-width:1200px)
+                font-size: 22px
+
+
+        a:nth-child(2)
+            padding 1px 0px
+
 
         span.code-sample
             font-family: "DejaVu Sans Mono",courier,monospace
             background: #DDD
             padding: 10px
-            border-radius: 4px
+            border-radius: 3px
             margin-top: 20px
             font-size: 14px
             color: #333
@@ -291,7 +290,7 @@ button:active
     margin-left: 50px
 
 .main-text
-    padding-left: 40px
+    padding-left: 30px
 
 .next
     text-decoration: none
@@ -449,7 +448,7 @@ button:active
         display: none
 
 header
-    padding: 140px 60px 40px 120px
+    padding: 100px 60px
 
     font-size: 20px
 
@@ -838,9 +837,16 @@ header
 
         h1
             font-size: 30px
+            text-align: center
 
         h4
             font-size: 24px
+
+        .mod.left
+            float none
+
+        .main-text
+            text-align: center
 
     .simple
         h4
@@ -904,15 +910,14 @@ header
         padding: 80px 20px 10px 20px
         margin-top: 40px
 
-        h1
-            font-size: 24px
-
-        h4
-            font-size: 20px
-
         .title
+            font-size: 40px
             width: 100%
             display: inline-block
+
+        .h4-like
+            font-size: 26px
+
 
     #social
         h1

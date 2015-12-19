@@ -35,7 +35,7 @@ Commencez par télécharger l’archive :
 
 ```bash
 # Téléchargez l’image (environ 650MB)
-wget http://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
+wget https://files.cozycloud.cc/2015-06-16-cozy-raspberry-pi2.img.7z
 
 # Décompressez-la
 7zr e 2015-06-16-cozy-raspberry-pi2.img.7z
@@ -57,6 +57,13 @@ sudo dd bs=4M if=2015-06-16-cozy-raspberry-pi2.img of=/dev/sdc
 Insérez à présent la carte SD dans le lecteur de votre Raspberry Pi.
 Redémarrez-le, et vous devriez pouvoir accéder à votre instance Cozy en vous
 connectant au port 443 via le protocole https.
+
+`https://ip.of.your.pi`
+
+**ATTENTION :** l’installation et la configuration de Cozy peuvent être assez
+lentes, il n’est pas rare de devoir attendre près d’une heure avant que le
+serveur ne soit prêt et à l’écoute sur le port 443.  Laissez-lui un peu de
+temps avant de vous inquiéter.
 
 Pour trouvez l’adresse de votre Raspberry Pi, vous pouvez utiliser `nmap` sur
 votre machine locale :
