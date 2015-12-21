@@ -58,14 +58,18 @@ S'en suit la procédure d'installation des différents composants de Cozy, et de
 
 Au cours de l'installation, il vous sera demandé le nom de votre instance Cozy. Il s'agit de l'adresse à laquelle votre instance sera disponible.
 
-À la fin de l'installation, si vous n'utilisez pas la version standalone, n'oubliez pas de recharger sa configuration avec une des commandes suivantes :
-
-    systemctl reload nginx  ## pour nginx
-    systemctl reload httpd  ## pour apache
-
 ## Que faire en cas de soucis
 
 Si vous rencontrez un soucis lors de l'installation, merci d'ouvrir un ticket sur [GitHub](https://github.com/babolivier/cozy-archlinux) ou sur [le forum Cozy](https://forum.cozy.io/t/cozy-sur-archlinux/1341).
+
+### Impossible d'accéder à Cozy
+
+Si votre Cozy n'est pas accessible une fois l'installation terminée, il se peut que la configuration de votre *reverse proxy* ne se soit pas correctement appliquée. Ceci peut être corrigé en rechargeant la configuration du serveur Web :
+
+```
+systemctl reload nginx  ## pour nginx
+systemctl reload httpd  ## pour apache
+```
 
 ### Conflit entre `nodejs` et `nodejs10`
 
