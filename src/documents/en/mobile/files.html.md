@@ -89,17 +89,3 @@ Then, you can share the album via a simple click on the share button and
 selecting your contacts with who you want to share the album.
 
 ![Screen browsing](/assets/images/mobile/photos_02.png)
-
-## Note about self-signed certificates
-About Self hosted instances, you probably have a self-signed certificate.
-Cozy Mobile won't recognize it until you validate it on your mobile. See
-[there](http://davdroid.bitfire.at/faq/entry/importing-a-certificate)
-for instruction on how to do it.
-
-## I don't have an Android Phone
-Let us know on the [forum](https://forum.cozy.io/) you would like to see the application for your system!
-
-## Related resources
-* [Playstore page](https://play.google.com/store/apps/details?id=io.cozy.files_client&hl=)
-* [Forum discussion](https://forum.cozy.io/t/i-tried-cozy-mobile/188)
-* [Android APK](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (latest version is v0.1.16, its sha1 is: fd328193b20431ec998071318c3bd38fe2c05043)
