@@ -78,6 +78,27 @@ Vous pouvez alors partager cet album en un clic, en sélectionnant les contacts 
 
 ![Screen browsing](/assets/images/mobile/photos_02.png)
 
+## Envoyer des informations de debug.
+Lorsque vous rencontrez un soucis sur votre téléphone, vous pouvez nous envoyer le journal de votre application, afin que nous puissons comprendre et donc corriger au mieux votre problème.
+Pour envoyer ces informations :
+
+ * Accedez au menu de votre application en cliquant sur les trois lignes blanches en haut à droite
+
+![Screen browsing](/assets/images/mobile/logs_fr_01.png)
+
+ * Dans ce menu, sélectionnez 'Configuration'.
+ * En bas de la section de configuration, vous trouverez un bouton 'Envoyer Journal'.
+ * Cliquez sur ce bouton.
+
+![Screen browsing](/assets/images/mobile/logs_fr_02.png)
+
+ * L'application va vous ouvrir un mail à envoyer.
+ * N'oubliez pas d'ajouter une description de votre problème. Il est très difficile de corriger un soucis sans cette description.
+
+![Screen browsing](/assets/images/mobile/logs_fr_03.png)
+
+ * Et enfin, envoyez le mails.
+
 ## A propos des certificats auto-signés
 A propos des Cozy auto-hébergé : vous avez probablement un certificat SSL auto-signé.
 L'application mobile Cozy ne le reconnaîtra pas avant qu'il soit validé sur votre mobile. Suivez les instructions
