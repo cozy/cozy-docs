@@ -25,8 +25,9 @@ lightweight alternative called
 
 ---
 
-In order to run Cozy on your Raspberry Pi 2, the simplest way is to download
-our image and set it up on a SD card. The image is based on the [Raspbian Jessie lite](https://www.raspberrypi.org/downloads/raspbian/).
+In order to run Cozy on your Raspberry Pi 2, download our image and set it up
+on a SD card.
+The image is based on [Raspbian Jessie lite](https://www.raspberrypi.org/downloads/raspbian/).
 
 First, get the image archive:
 
@@ -44,7 +45,7 @@ Follow the guide [Installing operating system images](https://www.raspberrypi.or
 
 ---
 
-Now, insert the SD card in your Raspberry Pi and boot it.
+Now, insert the SD card into your Raspberry Pi, and boot it.
 
 If you are not able to know your Pi's IP address on the console, you can use
 `nmap` on your local workstation:
@@ -53,7 +54,7 @@ If you are not able to know your Pi's IP address on the console, you can use
 nmap -T4 -sP 192.168.x.0/24  # Or your sub network
 ```
 
-Login to the board via SSH, you can use the default Raspbian credentials
+In order to log into the board via SSH, you can use the default Raspbian credentials
 ```pi``` and ```raspberry```:
 
 ```bash
@@ -78,10 +79,10 @@ curl http://127.0.0.1:5984/_config/admins/
 
 # Need to return: {}
 
-# If it look like good, remove file containing credentials informations:
+# If it looks good, remove the file containing credentials information:
 rm /etc/cozy/couchdb.login
 
-# If you want to change the FQDN of certificate:
+# If you want to change the certificate's FQDN:
 rm /etc/cozy/server.crt /etc/cozy/server.key
 
 # Launch CouchDB token and certificate regeneration:

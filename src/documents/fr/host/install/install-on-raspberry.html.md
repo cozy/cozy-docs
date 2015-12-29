@@ -16,7 +16,7 @@ toc: false
 **Vous aurez besoin du dernier [Raspberry Pi 2](http://fr.wikipedia.org/wiki/Raspberry_Pi)
 pour y faire tourner Cozy efficacement.**
 
-**L’utilisation d’une carte SD rapide (class10) est fortement recommandé.**
+**L’utilisation d’une carte SD rapide (class10) est fortement recommandée.**
 
 ---
 
@@ -51,7 +51,7 @@ Suivez le guide [Installing operating system images](https://www.raspberrypi.org
 Insérez à présent la carte SD dans le lecteur de votre Raspberry Pi et démarrez
 le.
 
-Pour trouver l’adresse de votre Raspberry Pi sur la console. Sinon vous pouvez
+Vous pourrez trouver l’adresse de votre Raspberry Pi sur la console. Sinon vous pouvez
 utiliser `nmap` sur votre machine locale :
 
 ```
