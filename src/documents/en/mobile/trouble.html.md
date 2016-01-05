@@ -14,7 +14,7 @@ When you hit a problem with the application, you can send us a message with the 
 Here’s how to send the logs:
 
 
- * click on the inco on top left corner and select Configuration inside the menu
+ * click on the icon on top left corner and select Configuration inside the menu
 
 ![Screen browsing](/assets/images/mobile/logs_fr_01.png)
 
