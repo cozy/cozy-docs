@@ -78,15 +78,3 @@ Vous pouvez alors partager cet album en un clic, en sélectionnant les contacts 
 
 ![Screen browsing](/assets/images/mobile/photos_02.png)
 
-## A propos des certificats auto-signés
-A propos des Cozy auto-hébergé : vous avez probablement un certificat SSL auto-signé.
-L'application mobile Cozy ne le reconnaîtra pas avant qu'il soit validé sur votre mobile. Suivez les instructions
-[suivantes (en)](http://davdroid.bitfire.at/faq/entry/importing-a-certificate) pour savoir comment faire.
-
-## Je n'ai pas de périphérique Android
-Faites-nous savoir sur le [forum](https://forum.cozy.io/) que que voudriez avoir l'application sur votre système !
-
-## Ressources connectées
-* [Page du Playstore](https://play.google.com/store/apps/details?id=io.cozy.files_client&hl=)
-* [Discussion sur le forum (en)](https://forum.cozy.io/t/i-tried-cozy-mobile/188)
-* [APK Android](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (la dernière version de l’application est la v0.1.17, dont le sha1 est : bd3f1c7fd4092dd4667b022545d3218fed2d6d58)
