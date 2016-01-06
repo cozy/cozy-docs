@@ -42,8 +42,28 @@ Codename:     trusty
     sudo apt-get update
     sudo apt-get install cozy
     ```
+    (lisez également le paragraphe ci-dessous à propos des dépendances)
+
+5. Assurez vous que le service Nginx est bien démarré :
+    ```
+    service nginx start
+    ```
+
+6. Paramétrez votre compte Cozy et profitez !
+    ```
+    https://your-cozy-IP/
+    ```
 
 ## Que faire en cas de soucis
+
+### À propos des dépendances
+
+Pour fonctionner, Cozy a absolument besoin d’une base de données CouchDB, celle-ci sera donc installée automatiquement. Mais il a également besoin d’un serveur SMTP écoutant sur le port 25 de la machine, et d’un serveur Web agissant comme un proxy inversé. Le paquet Cozy n’impose pas l’installation de ces composants, car, selon votre configuration, vous pouvez vous en passer (le proxy peut par exemple être installé sur une autre machine). Cependant, pour une installation basique de Cozy, vous devriez installer les dépendances recommandées en utilisant la commande `apt-get install --install-recommends cozy`.
+
+Les paquets recommandés sont :
+
+* un serveur Web, de préférence Nginx. Il va gérer les certificats SSL et rediriger les requêtes vers le serveur Cozy lui-même ;
+* un serveur SMTP, pour envoyer des messages de la part de votre Cozy (par exemple pour réinitialiser votre mot de passe, vous rappeler un rendez-vous ou inviter des contacts à un évènement).
 
 ### Comment re-générer le certificat ?
 
