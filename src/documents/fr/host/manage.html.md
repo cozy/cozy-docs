@@ -239,6 +239,11 @@ opération** Vous pouvez soit faire une sauvegarde des fichiers contenant la
 base, soit répliquer la base sur une autre instance CouchDB.
 
 
+## Utiliser un certificat Let’s Encrypt
+
+Vous pouvez vous référer à [cet article](https://blog.cozycloud.cc/post/2016/01/06/Un-certificat-Let-s-Encrypt-pour-votre-Cozy) sur notre blog pour découvrir comment générer, installer et renouveler automatiquement un certificat gratuit sur votre serveur grâce à Let’s Encrypt.
+
+
 ## Divers
 
 ### Augmenter la taille maximale des fichiers téléversés.
