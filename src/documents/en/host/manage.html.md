@@ -224,6 +224,11 @@ could either backup the database files or replicate the database to another
 Couchdb instance.
 
 
+## Use a Let’s Encrypt certificate
+
+See [this post on our blog](https://blog.cozycloud.cc/post/2016/01/06/Lets-Encrypt-certificate-for-your-Cozy) that explains how to generate, install and renew a free certificate on your server with Let’s encrypt.
+
+
 ## Others
 
 ### Increase max upload size
