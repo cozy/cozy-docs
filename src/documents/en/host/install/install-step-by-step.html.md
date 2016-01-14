@@ -46,18 +46,17 @@ Once again, those are Debian names. Do not copy/paste them as is, unless you
 know what you are doing.
 
 
-## Step 2: Install NodeJS 0.10.x
+## Step 2: Install NodeJS 4.2.x
 
-
-Cozy is only tested and supported on Node version `0.10.x`    
+Cozy is only tested and supported on Node LTS versions.
 Please check that this step will not interfere with any NodeJS version that
 you might have on your server already.
 
-Here we install NodeJS `0.10.26`, if you have any other `0.10.x` version, it
+Here we install NodeJS `4.2.`, if you have any other `4.x.y` version, it
 should work as well.
 
-1. Find the sources or the binaries you need on http://nodejs.org/dist/v0.10.26/
- (you may want to choose the`arm-pi` version on a RaspberryPi).
+1. Find the sources or the binaries you need on http://nodejs.org/
+ (you may want to choose the `arm-pi` version on a RaspberryPi).
 
 2. Download and extract it
 

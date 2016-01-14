@@ -8,7 +8,7 @@ docpadConfig = {
 
     templateData:
         site:
-            url: "http://cozy.io/"
+            url: "https://cozy.io/"
             title: ""
             description: ""
             keywords: ""
