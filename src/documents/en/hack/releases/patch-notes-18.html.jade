@@ -1,0 +1,308 @@
+---
+title: "Patch notes 2016/01/15"
+layout: "default"
+category: "hack"
+toc: true
+menuHidden: false
+menuOrder: 1
+menuTitle: Last release note
+---
+
+
+#patch-note.v2
+    h1 Patch note #18
+    p This relates development from 2015-12-02 to 2016-01-15
+
+
+    h2 Highlights
+
+    p M4dz and Frank are still working on improving the performances of the Contacts application;
+    p Joseph did an awesome work rewriting the developer documentation;
+    p Nono released an alpha version of the desktop sync application;
+    p Frank and Luc published the new version of our Website
+
+
+
+    h2 Web Applications
+
+
+    h3 Calendar (1.0.30)
+    p Some bug fixes
+    ul
+        li Add background color on past days, refs <a href="https://github.com/cozy/cozy-calendar/issues/423" target="_blank">#423</a>
+        li Improve opening of event description, refs <a href="https://github.com/cozy/cozy-calendar/issues/446" target="_blank">#446</a>
+        li Fix Done button in event popups, refs <a href="https://github.com/cozy/cozy-calendar/issues/447" target="_blank">#447</a>
+        li.contributors Contributors: Aenario, Clochix
+
+
+    h3 Contacts (2.1.4)
+    p We are working hard under the hood to improve performances.
+    ul
+        li Filter properly tag list when editing labels
+        li Fix contact export (<a href="https://github.com/cozy/cozy-contacts/issues/119" target="_blank">#119</a>)
+        li Display a loader before saving a contact
+        li.contributors Contributors: Aenario, Clochix, Frankrousseau, M4dz, Niols
+
+
+    h3 Emails (0.9.17)
+    p Layout improvements and bug fixes
+    ul
+        li Revamp messages list layout
+        li Add compact column layout
+        li Fix avatar-wrapper for Webkit based browsers
+        li Bolderize unseen messages subject
+        li Revamp toolbar and search bar layout
+        li Only hide filters in search mode
+        li Fix actions buttons alignment
+        li Fix switching in account-picker from current account
+        li Highlight search pattern in messages list
+        li Restore active mode in messages list
+        li Add menuitem to display shortcuts
+        li Fix menuitems style
+        li Simplify indexing rules
+        li Fix exception in hilightSearch, refs <a href="https://github.com/cozy/cozy-emails/issues/716" target="_blank">#716</a>
+        li Log errors to stderr
+        li Move workaround for using buffers as attachments to cozydb
+        li.contributors Contributors: Aenario, Clochix, Kosssi, M4dz, Nono
+
+
+    h3 Files (1.1.18)
+    ul
+        li Fix URL for hack/getting-started
+        li Fix typos
+        li.contributors Contributors: Clochix, Eunomie, Goofy-bz
+
+
+    h3 Ghost (1.0.0)
+    ul
+        li code maintenance for compatibility with Node 4
+        li.contributors Contributors: Nono
+
+
+    h3 Konnectors (0.4.8)
+    p Peltoche added a connector to import your contacts from LinkedIn.
+    ul
+        li Add Linkedin Konnector
+        li Fix import orange
+        li.contributors Contributors: Frankrousseau, Peltoche, ZeHiro
+
+
+    h3 Photos (1.0.20)
+    ul
+        li Fix path of error image, refs <a href="https://github.com/cozy/cozy-photos/issues/175" target="_blank">#175</a>
+        li Fix GPS extract, refs <a href="https://github.com/cozy/cozy-photos/issues/177" target="_blank">#177</a>
+        li Manage instantly counter plural + good pluralization management
+        li.contributors Contributors: 0gust1, Aenario, Clochix, Nono
+
+
+
+
+
+
+    h2 Other Apps
+
+
+    h3 Desktop Sync application
+    ul
+        li Add simple conflict resolution
+        li Fix invalid date issue
+        li Conflict on folder move
+        li Fix content-type for uploading files
+        li Fix a race condition when deleting a folder
+        li Fix moving a folder with files inside
+        li Fix overwritting a local file
+        li Work-around for a bug in PouchDB
+        li Add documentation for inotify limit
+        li Add chokidar watchers debugging on USR1
+        li Add doc about debugging tools
+        li Explain how to use tee to keep logs
+        li On node 0.12+, birthtime is a better creationDate
+        li First draft to detect local files move/rename
+        li Explain how to enable request debug
+        li Improve first replication by copying docs from a view
+        li Add a default for devicename when adding a remote
+        li Ask confirmation before reset-database
+        li Validate URL for add-remote-cozy
+        li Add executable field to files
+        li Fix for files deleted on both local and remote sides
+        li Fix for files with no checksum
+        li Stop watchers on CTRL-C
+        li Fix for images from mobile
+        li Fix a race condition on conflicts
+        li Update async and remove moment
+        li.contributors Contributors: Greenkeeperio-bot, Nono
+
+
+
+    h3 Mobile application
+    ul
+        li Fix calendar color.
+        li Escape filename in android sd as cache. Fix <a href="https://github.com/cozy/cozy-mobile/issues/89" target="_blank">#89</a>
+        li Fix conflict on events. Cozy is right on conflicts.
+        li Fix punctual date converted to Android with random timezone. Fix all day to timed event conversion not working.
+        li Cleanup messages in init steps.
+        li Fix Translation
+        li Fix missing error on delete event from cozy.
+        li Add editor configuration
+        li Fix <a href="https://github.com/cozy/cozy-mobile/issues/86" target="_blank">#86</a>: update url placeholder
+        li Fix crash with bad path on require. Fix hide alarm reminders type for calendars.
+        li Rolleback to cordova 4.3.1, with old javascript-bg-plugin.
+        li Fix sqlite plugin not available anymore. Fix missing API in js-bg lplugin. Fix CORS error on offline start.
+        li Put corodva 4.3.1 indication in readme back. Add test guide to manually validate the application.
+        li Fix realtime looks  broken, list doesn't refresh.
+        li Fix error message on bad platform version during initialisation. Update translations.
+        li Fix create photo folder, and adapt it to the new routes.
+        li Add retry on inital replication steps, to avoid timeouts, during view initialisations on the cozy.
+        li Fix floody log. Set pouchDb request timeout to comply with cozy's timeout.
+        li Update min required versions. Fix min required versions algorithm for 2 digits versions parts.
+        li Add play store link
+        li Update support mail
+        li Upgrade version from 0.1.15 to 0.1.16
+        li Refactoring to create design documents
+        li Fix for password with special chars.
+        li Upgrade version from 0.1.16 to 0.1.17
+        li Update to latest cordova version  5.*
+        li Fix photo upload on pre 4.3 devices.
+        li Fix in browser debugging feature.
+        li Remove inapropriate 'loading' title
+        li Update jsbg-service version, to remove obsolete permission.
+        li Avoid special chars in device name. Show errors on initialreplication requests.
+        li Escape auth on binary upload, if device name still contain specials chars.
+        li Fix myCozy organizer attendee on event created on android.
+        li Remove pouchdb-quick-search plugin, and replace with bruteforce substring search.
+        li Change pouchdb import
+        li Fix tap on checkbox not heard. THanks @kosssi, fix <a href="https://github.com/cozy/cozy-mobile/issues/142" target="_blank">#142</a> fix <a href="https://github.com/cozy/cozy-mobile/issues/69" target="_blank">#69</a> .
+        li Upgrade version from 0.1.17 to 0.1.18
+        li.contributors Contributors: Jacquarg, Kosssi, Poupotte
+
+
+
+
+
+    h2 Cozy stack
+
+
+    h3 Controller (2.0.40)
+    p The Controller can now install Web applications that doesn't need a server.
+    ul
+        li Fix error on corrupted manifest, refs <a href="https://github.com/cozy/cozy-controller/issues/102" target="_blank">#102</a>
+        li Update request-json, refs <a href="https://github.com/cozy/cozy-controller/issues/98" target="_blank">#98</a>
+        li Doesn't block update with a warning, refs <a href="https://github.com/cozy/cozy-controller/issues/109" target="_blank">#109</a>
+        li Fix for starting cozy-controller
+        li.contributors Contributors: Aenario, Lemelon, Nono, Poupotte
+
+    h3 Data-system (2.1.7)
+    ul
+        li Improve reindexing
+        li Improve replication used by the mobile app
+        li Manage error not found in bulk_docs
+        li Improve logging
+        li Add filter API
+        li.contributors Contributors: Aenario, Kosssi, Nono, Poupotte
+
+
+    h3 Home (2.1.5)
+    p The Home can now install Web applications that doesn't need a server.
+    ul
+        li Fix subject of help email, refs <a href="https://github.com/cozy/cozy-home/issues/574" target="_blank">#574</a>
+        li Update some locales
+        li Fix display of Sync on Home page, refs <a href="https://github.com/cozy/cozy-home/issues/620" target="_blank">#620</a>
+        li Fix error logging on server side
+        li Fix exception on unhandled error
+        li Add error handler to prevent server exception
+        li.contributors Contributors: Aenario, Clochix, Fairyfeller, Goofy-bz, Lemelon, Nono
+
+
+    h3 Monitor (1.2.33)
+    ul
+        li Fix reinstall app with new permissions, refs <a href="https://github.com/cozy/cozy-monitor/issues/114" target="_blank">#114</a>
+        li Remove indexer
+        li Fix update if last version of application is unknown
+        li Update documentation link
+        li.contributors Contributors: Kosssi, Poupotte
+
+
+    h3 Proxy (2.1.13)
+    p The Proxy can now handle Web applications that doesn't need a server.
+    ul
+        li Remove permissions in device document
+        li Correct urlencode for redirection from login when user isn t auth. <a href="https://github.com/cozy/cozy-proxy/issues/215" target="_blank">#215</a>
+        li Show static app
+        li Fix wrong error handling
+        li Cleanup domain in reset password message
+        li Update URL of documentation
+        li Fix error handling on server side, refs <a href="https://github.com/cozy/cozy-proxy/issues/223" target="_blank">#223</a>
+        li Improve error logging
+        li Add a missing error handler
+        li Remove status checking of the indexer, refs <a href="https://github.com/cozy/cozy-proxy/issues/228" target="_blank">#228</a>
+        li.contributors Contributors: Clochix, Khertan, Lemelon, Nono, Poupotte
+
+
+
+
+
+
+    h2 Other tools
+
+
+
+    h3 Dev-image-builder
+
+    p Nicolas created this new tool to help us maintain images to install Cozy
+
+
+    h3 Docker image
+    ul
+        li Fix problems with npm version
+        li.contributors Contributors: Nono
+
+
+
+    h3 Debian package
+    ul
+        li Add description
+        li Split cozy in multiple packages, move .py scripts in cozy_management
+        li Have better description for packages
+        li Add cozy-apt-list & sort .gitignore
+        li Add bash_completion.d/cozy-monitor
+        li Move nginx & apache2 post inst/rm in external package
+        li.contributors Contributors: Nledez
+
+
+
+    h3 Docs (0.0.1)
+    ul
+        li Add patch note 17
+        li Explain how to upload large files in troubleshooting section
+        li Add summary on top of long pages
+        li Add some words about the SMTP relay
+        li Make archlinux installation a little bit more precise
+        li Improved troubleshooting for Archlinux
+        li Add description to send logs in mobile application
+        li Move mobile troubleshooting to their own pages
+        li Update raspberryπ2 installation with new image
+        li Some corrections
+        li Upgrade android version from 0.1.16 to 0.1.17
+        li Upgrade Android version from 0.1.17 to 0.1.18
+        li Change URLs to the new developper documentation
+        li Some words about recommended dependencies
+        li Add link to the Let's encrypt tutorial
+        li.contributors Contributors: Babolivier, Clochix, Frankrousseau, Goofy-bz, Jsilvestre, LaPalice, Niols, Nledez, Nono, Poupotte
+
+
+
+
+    h3 Python_cozy_management
+    p Nicolas is working on a new tool to make administrating Cozy servers easier
+    ul
+        li Add certificate generation
+        li Add some ssl commands to CLI & add regenerate_dhparam
+        li Add debian packaging
+        li Add compare_version
+        li Add missing deps, bash_completion & 0.0.8
+        li Add unregister_cozy
+        li Add is_cozy_registered & fix bash_completion path
+        li Add fix_oom_score
+        li Add fix_oom_score to bash completion
+        li.contributors Contributors: Nledez
+
