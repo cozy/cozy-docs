@@ -105,3 +105,10 @@ https protocol:
 
 **WARNING:** Installing and configuring Cozy may take quite a long time, one
 hour or so, before the server starts listening on port 443, so be patient.
+
+# Troubleshooting
+
+## Corrupted filesystem
+
+If after a brutal system halt, the server refuse to boot again, and you get a “vfs unable to mount root fs on unknown-block” message when plugging a screen, the filesystem is probably corrupted. You can try to fix this by mounting the SD card on another server and perform a file system check. Run `lsblk` to identify the device, then `e2fsck` to try to fix the filesystem. 
+

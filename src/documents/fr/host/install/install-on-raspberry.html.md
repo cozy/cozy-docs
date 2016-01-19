@@ -69,7 +69,7 @@ sudo -s
 
 ## Remettre à zéro les tokens CouchDB :
 
-# Arreter le cozy :
+# Arrêter le cozy :
 supervisorctl stop cozy-controller
 
 # Vérifier les informations de connexion à la base de données :
@@ -111,3 +111,9 @@ connectant au port 443 via le protocole https.
 être assez lentes, il n’est pas rare de devoir attendre près d’une heure avant
 que le serveur ne soit prêt et à l’écoute sur le port 443.  Laissez-lui un peu
 de temps avant de vous inquiéter.
+
+# En cas de problèmes…
+
+## Système de fichiers corrompu
+
+Après un arrêt brutal de votre Raspberry, il se peut que le serveur refuse de redémarrer. Branchez alors un écran pour afficher le message d’erreur. Si vous voyez « vfs unable to mount root fs on unknown-block », cela signifie que le système de fichiers de la carte est corrompu. Vous pouvez essayer de le réparer en connectant la carte à un autre ordinateur, utilisant `lsblk` pour identifier son point de montage, puis `e2fsck` pour tenter de corriger les erreurs.
