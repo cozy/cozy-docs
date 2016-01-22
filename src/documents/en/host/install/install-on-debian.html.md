@@ -34,11 +34,15 @@ root@debian-8:~# cat /etc/debian_version
     ```
     apt-get install ca-certificates apt-transport-https
     ```
-2. Import the repository public key
+2. Cozy needs npm 2, which is not available for now in Debian Stable, so we need to install it by hand:
+   ```
+   apt-get install nodejs nodejs-legacy npm && npm install -g npm@latest-2
+   ```
+3. Import the repository public key
     ```
     wget -O - https://debian.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
     ```
-3. Optionally check that the imported key is valid
+4. Optionally check that the imported key is valid
     ```
     apt-key --keyring /etc/apt/trusted.gpg finger
     ```
@@ -49,22 +53,22 @@ root@debian-8:~# cat /etc/debian_version
     uid                  Cozy Debian Packaging <debian-packaging@cozycloud.cc>
     sub   2048R/D58A9D35 2014-11-17 [expires: 2016-11-17]
     ```
-4. Add the Cozy repository to your software sources
+5. Add the Cozy repository to your software sources
     ```
     echo 'deb [arch=amd64] https://debian.cozycloud.cc/debian jessie main' \
     > /etc/apt/sources.list.d/cozy.list
     ```
-5. Install Cozy
+6. Install Cozy
     ```
     apt-get update
     apt-get install cozy
     ```
     (please read comment bellow about the recommended dependencies).
-6. Start Nginx service
+7. Start Nginx service
     ```
     service nginx start
     ```
-7. Register your Cozy account and enjoy!
+8. Register your Cozy account and enjoy!
     ```
     https://your-cozy-IP/
     ```
