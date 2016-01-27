@@ -40,6 +40,7 @@ These applications have been released by members of the Community or by Cozyclou
 * [Databrowser](https://github.com/n-a-n/cozy-databrowser): browse all your data [![Dependencies Status](https://david-dm.org/n-a-n/cozy-databrowser.png)](https://david-dm.org/n-a-n/cozy-databrowser)
 * [Feeds](https://github.com/Piour/cozy-feeds): a RSS feed reader [![Dependencies Status](https://david-dm.org/Piour/cozy-feeds.png)](https://david-dm.org/Piour/cozy-feeds)
 * [Konnectors](https://github.com/frankrousseau/konnectors): bring more data to your Cozy [![Dependencies Status](https://david-dm.org/frankrousseau/konnectors.png)](https://david-dm.org/frankrousseau/konnectors)
+* [Kresus](https://github.com/bnjbvr/kresus): an open-source personal finances management app [![Dependencies Status](https://david-dm.org/bnjbvr/kresus.png)](https://david-dm.org/bnjbvr/kresus)
 * [KYou](https://github.com/frankrousseau/kyou): Know Yourself through various measures [![Dependencies Status](https://david-dm.org/frankrousseau/kyou.png)](https://david-dm.org/frankrousseau/kyou)
 * [MesComptes](https://github.com/seeker89/cozy-pfm): manage your banking accounts [![Dependencies Status](https://david-dm.org/seeker89/cozy-pfm.png)](https://david-dm.org/seeker89/cozy-pfm)
 * [Nirc](https://github.com/frankrousseau/cozy-nirc): an IRC client [![Dependencies Status](https://david-dm.org/frankrousseau/cozy-nirc.png)](https://david-dm.org/frankrousseau/cozy-nirc)
