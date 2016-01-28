@@ -38,9 +38,6 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   <a href="install-on-raspberry.html">
     ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2</div>
   </a>
-  <a href="install-on-cubietruck.html">
-    ![CubieTruck](/assets/images/cubieboard-logo.png)<div class="label">CubieTruck</div>
-  </a>
 </div>
 
 ## sur une machine virtuelle
@@ -77,7 +74,7 @@ RAM. Cette instance est hébergée en France (quantitée limitée).
 
 <form id="sign-me-up"
       action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de'
-      method='post' 
+      method='post'
       name='mc-embedded-subscribe-form' target='_blank' novalidate=''>
 
 <label for='mce-signmeup-EMAIL'>

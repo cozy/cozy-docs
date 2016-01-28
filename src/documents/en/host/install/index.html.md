@@ -38,9 +38,6 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   <a href="install-on-raspberry.html">
     ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2</div>
   </a>
-  <a href="install-on-cubietruck.html">
-    ![CubieTruck](/assets/images/cubieboard-logo.png)<div class="label">CubieTruck</div>
-  </a>
 </div>
 
 ## on a Virtual Machine
@@ -65,6 +62,13 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
 </div>
 
+## step by step
+<div class="install-logo">
+  <a href="install-step-by-step.html">
+    ![StepByStep](/assets/images/step-by-step-logo.png)<div class="label">Step by step</div>
+  </a>
+</div>
+
 <br>
 
 <br>
@@ -76,7 +80,7 @@ I want to enjoy a free Cozy instance with 2GB of RAM and 20GB of disk space
 
 <form id="sign-me-up"
       action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de'
-      method='post' 
+      method='post'
       name='mc-embedded-subscribe-form' target='_blank' novalidate=''>
 
 <label for='mce-signmeup-EMAIL'>
