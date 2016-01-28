@@ -23,7 +23,7 @@ toc: false
 <h3>1. Download requirements</h3>
 
 * [Download](https://www.virtualbox.org/wiki/Downloads) and install VirtualBox.
-* [Download](https://files.cozycloud.cc/cozycloud-virtualimage.zip) and unzip the Cozy
+* [Download](https://files.cozycloud.cc/cozy/virtualbox-cozycloud-latest.zip) and unzip the Cozy
 virtual image for VirtualBox
 
 <h3>2. Import and try</h3>
