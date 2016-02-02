@@ -40,6 +40,30 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
 </div>
 
+## on a Virtual Private Server
+
+
+<div class="install-logo">
+
+  <a href="install-on-scaleway.html">
+    ![Scaleway](/assets/images/scaleway-logo.png)<div class="label">Scaleway</div>
+  </a>
+
+  <a href="install-on-digitalocean.html">
+    ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
+  </a>
+</div>
+
+
+
+## step by step
+
+<div class="install-logo">
+  <a href="install-step-by-step.html">
+    ![StepByStep](/assets/images/step-by-step-logo.png)<div class="label">Step by step</div>
+  </a>
+</div>
+
 ## on a Virtual Machine
 
 <div class="install-logo">
@@ -54,23 +78,7 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
 </div>
 
-## on a Virtual Private Server
-
-<div class="install-logo">
-  <a href="install-on-digitalocean.html">
-    ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
-  </a>
-</div>
-
-## step by step
-<div class="install-logo">
-  <a href="install-step-by-step.html">
-    ![StepByStep](/assets/images/step-by-step-logo.png)<div class="label">Step by step</div>
-  </a>
-</div>
-
 <br>
-
 <br>
 
 ## Ask for a trial on our servers
