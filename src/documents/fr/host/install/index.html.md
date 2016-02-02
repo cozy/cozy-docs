@@ -40,6 +40,19 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   </a>
 </div>
 
+## sur un serveur privé virtuel (VPS)
+
+<div class="install-logo">
+
+  <a href="install-on-scaleway.html">
+    ![Scaleway](/assets/images/scaleway-logo.png)<div class="label">Scaleway</div>
+  </a>
+
+  <a href="install-on-digitalocean.html">
+    ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
+  </a>
+</div>
+
 ## sur une machine virtuelle
 
 <div class="install-logo">
@@ -53,15 +66,6 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
     ![OpenVZ](/assets/images/openvz-logo.png)<div class="label">OpenVZ</div>
   </a>
 </div>
-
-## sur un serveur privé virtuel (VPS)
-
-<div class="install-logo">
-  <a href="install-on-digitalocean.html">
-    ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
-  </a>
-</div>
-
 <br>
 
 <br>
