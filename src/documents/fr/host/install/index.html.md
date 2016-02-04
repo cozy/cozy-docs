@@ -18,7 +18,7 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
 
 *Suivez l'un des guides ci-dessous pour commencer :*
 
-## sur votre système
+## Sur votre système
 
 <div class="install-logo">
   <a href="install-on-ubuntu.html">
@@ -32,7 +32,7 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   </a>
 </div>
 
-## sur votre matériel
+## Sur votre matériel
 
 <div class="install-logo">
   <a href="install-on-raspberry.html">
@@ -40,7 +40,7 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   </a>
 </div>
 
-## sur un serveur privé virtuel (VPS)
+## Sur un serveur dédié ou sur un serveur privé virtuel (VPS)
 
 <div class="install-logo">
 
@@ -53,7 +53,7 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   </a>
 </div>
 
-## sur une machine virtuelle
+## Sur une machine virtuelle
 
 <div class="install-logo">
   <a href="install-on-virtualbox.html">
