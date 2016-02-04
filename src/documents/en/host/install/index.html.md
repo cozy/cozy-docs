@@ -40,7 +40,7 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
 </div>
 
-## on a Virtual Private Server
+## on a Dedicated or Virtual Private Server
 
 
 <div class="install-logo">
