@@ -42,7 +42,6 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
 
 ## on a Dedicated or Virtual Private Server
 
-
 <div class="install-logo">
 
   <a href="install-on-scaleway.html">
@@ -53,7 +52,6 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
     ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
   </a>
 </div>
-
 
 
 ## step by step
@@ -78,6 +76,7 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
 </div>
 
+<br>
 <br>
 <br>
 
