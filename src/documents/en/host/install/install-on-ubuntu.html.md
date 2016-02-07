@@ -60,7 +60,7 @@ Cozy requires a CouchDB database, which will be automatically installed. It also
 
 The recommended packages are:
 
-* a Web server, preferably Ninx. It handles the SSL certificate and redirects requests to the Cozy server itself;
+* a Web server, preferably Nginx. It handles the SSL certificate and redirects requests to the Cozy server itself;
 * a SMTP server, used to send emails from your server (for example, the reset password message, events reminder, or to invite some of your contacts).
 
 
