@@ -24,7 +24,7 @@ Codename:     trusty
 
 <br>
 
-1. Make sure that `ca-certificates` and `apt-transport-https` are properly installed
+1. Make sure that `wget`, ca-certificates` and `apt-transport-https` are properly installed
     ```
     sudo apt-get install ca-certificates apt-transport-https
     ```
@@ -34,13 +34,14 @@ Codename:     trusty
     ```
 3. Add the Cozy repository to your software sources
     ```
-    echo 'deb https://ubuntu.cozycloud.cc/debian trusty main' \
+    echo 'deb https://ubuntu.cozycloud.cc/debian trusty cozy' \
     | sudo tee /etc/apt/sources.list.d/cozy.list > /dev/null
     ```
 4. Install Cozy
     ```
     sudo apt-get update
-    sudo apt-get install cozy
+    apt-get install -y python-cozy-management
+    cozy_management install_cozy
     ```
     (please read comment bellow about the recommended dependencies).
 6. Start Nginx service
