@@ -22,6 +22,10 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
 
 <div class="install-logo">
 
+  <a href="install-on-ovh.html">
+    ![Scaleway](/assets/images/ovh-logo.png)<div class="label">OVH</div>
+  </a>
+
   <a href="install-on-scaleway.html">
     ![Scaleway](/assets/images/scaleway-logo.png)<div class="label">Scaleway</div>
   </a>
