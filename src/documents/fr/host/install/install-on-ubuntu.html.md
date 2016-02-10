@@ -24,7 +24,7 @@ Codename:     trusty
 
 <br>
 
-1. Assurez-vous que les paquets `ca-certificates` et `apt-transport-https` sont bien installés
+1. Assurez-vous que les paquets `wget`, ca-certificates` et `apt-transport-https` sont bien installés
     ```
     sudo apt-get install ca-certificates apt-transport-https
     ```
@@ -34,13 +34,14 @@ Codename:     trusty
     ```
 3. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
-    echo 'deb https://ubuntu.cozycloud.cc/debian trusty main' \
+    echo 'deb https://ubuntu.cozycloud.cc/debian trusty cozy' \
         | sudo tee /etc/apt/sources.list.d/cozy.list > /dev/null
     ```
 4. Installez Cozy
     ```
     sudo apt-get update
-    sudo apt-get install cozy
+    apt-get install -y python-cozy-management
+    cozy_management install_cozy
     ```
     (lisez également le paragraphe ci-dessous à propos des dépendances)
 
