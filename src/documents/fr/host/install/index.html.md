@@ -18,17 +18,16 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
 
 *Suivez l'un des guides ci-dessous pour commencer :*
 
-## Sur votre système
+## Sur un serveur dédié ou sur un serveur privé virtuel (VPS)
 
 <div class="install-logo">
-  <a href="install-on-ubuntu.html">
-    ![Ubuntu](/assets/images/ubuntu-logo.png)<div class="label">Ubuntu</div>
+
+  <a href="install-on-scaleway.html">
+    ![Scaleway](/assets/images/scaleway-logo.png)<div class="label">Scaleway</div>
   </a>
-  <a href="install-on-debian.html">
-    ![Debian](/assets/images/debian-logo.png)<div class="label">Debian (64 bits)</div>
-  </a>
-  <a href="install-on-archlinux.html">
-    ![Archlinux](/assets/images/archlinux-logo.png)<div class="label">Archlinux</div>
+
+  <a href="install-on-digitalocean.html">
+    ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
   </a>
 </div>
 
@@ -40,16 +39,17 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   </a>
 </div>
 
-## Sur un serveur dédié ou sur un serveur privé virtuel (VPS)
+## Sur votre système
 
 <div class="install-logo">
-
-  <a href="install-on-scaleway.html">
-    ![Scaleway](/assets/images/scaleway-logo.png)<div class="label">Scaleway</div>
+  <a href="install-on-ubuntu.html">
+    ![Ubuntu](/assets/images/ubuntu-logo.png)<div class="label">Ubuntu</div>
   </a>
-
-  <a href="install-on-digitalocean.html">
-    ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
+  <a href="install-on-debian.html">
+    ![Debian](/assets/images/debian-logo.png)<div class="label">Debian (64 bits)</div>
+  </a>
+  <a href="install-on-archlinux.html">
+    ![Archlinux](/assets/images/archlinux-logo.png)<div class="label">Archlinux</div>
   </a>
 </div>
 
