@@ -39,7 +39,7 @@ Ouvrez le port 22 de votre machine virtuelle vers 127.0.0.1:2222, et le port 443
 
 <h3>3. Informations complémentaires</h3>
 
-* Pour accéder à un terminal sur votre machine virtuelle, utilisez comme identifiants `root`/`password`.
+* Pour accéder à un terminal sur votre machine virtuelle, utilisez comme identifiants `vagrant`/`vagrant`. (attention, le clavier de la machine virtuelle utilise probablement la disposition Qwerty)
 * Vous trouverez l’IP de votre machine virtuelle en y tapant `ifconfig`.
 * Connectez-vous en SSH à l'aide de cette commande :
 
