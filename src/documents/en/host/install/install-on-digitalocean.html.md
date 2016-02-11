@@ -56,13 +56,14 @@ ssh root@server.ip
 
 ```
 # Import the repository public key
-wget -O - http://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
+wget -O - http://debian.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
 
 # Add the Cozy repository to the software sources
-echo 'deb http://debian.cozycloud.cc/debian jessie main' \
+echo 'deb http://debian.cozycloud.cc/debian jessie cozy' \
  > /etc/apt/sources.list.d/cozy.list
 
 # Install Cozy
 apt-get update
-apt-get install cozy
+apt-get install python-cozy-management
+cozy_management install_cozy
 ```
