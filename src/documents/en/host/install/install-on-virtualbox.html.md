@@ -40,7 +40,7 @@ Port 22 form your virtual machine should forward to 127.0.0.1:2222 and port 443 
 
 <h3>3. Additional information</h3>
 
-To access the box shell, use `root`/`password` as login and password.
+To access the box shell, use `vagrant`/`vagrant` as login and password. (warning, the keyboard probably uses the qwerty layout)
 
 You can find the box' IP with the `ifconfig` command.
 
