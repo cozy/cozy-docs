@@ -1,5 +1,5 @@
 ---
-title: "on DigitalOcean"
+title: "Install Cozy on OVH"
 layout: "default"
 category: "host"
 menuOrder: 8
@@ -8,61 +8,65 @@ toc: false
 
 
 <div style="height: 0; overflow: shown; text-align: right">
-<img alt="DigitalOcean logo" src="/assets/images/digitalocean-logo.png">
+<img alt="OVH logo" src="/assets/images/ovh-logo.png">
 </div>
 
-# Install Cozy on a DigitalOcean VPS
+# Install Cozy on a OVH VPS
 
-**DigitalOcean is a Virtual Private Server (VPS) provider which enables you to deploy**    
-**instances in a minute.**    
-**You need a credited account to follow the steps below.**
+**OVH provides low-cost Virtual Private Servers which allows you to deploy instances in a minute.**    
 
 <br>
 
-## 1. Create the droplet
+## 1. Connect to the OVH VPS product page.
 
-Cozy requires 1024MB RAM to run properly.
+Product page: https://www.ovh.com/us/
+
+Select the level of robustness you prefer (SSD VPS are cheaper).
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
-![step1](/assets/images/digitalocean-capture-1.jpg)
+![step1](/assets/images/ovh-capture-1.png)
 </div>
+
 
 <br>
 
-Select `Debian 8 x64` in the distribution list.
+## 2. Size your VPS
+
+Chose among the different sizes of disk space and pricing. Every VPS proposes
+2GB of RAM which is enough for Cozy.
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
-![step2](/assets/images/digitalocean-capture-2.jpg)
-</div>
-
-
-## 2. Connect to the server via SSH
-
-Find your server's IP address.
-
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
-![step3](/assets/images/digitalocean-capture-3.jpg)
+![step2](/assets/images/ovh-capture-2.png)
 </div>
 
 <br>
 
-Then login via SSH as `root` user:
-```
-ssh root@server.ip
-```
+## 3. Choose the distribution (OS) for your server
 
+Select the Cozycloud image in the distribution Combobox. 
 
-## 3. Install the Debian package
+NB: Cozy is only available above Debian 8 distribution.
 
-```
-# Import the repository public key
-wget -O - http://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
+<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+![step3](/assets/images/ovh-capture-3.png)
+</div>
 
-# Add the Cozy repository to the software sources
-echo 'deb http://debian.cozycloud.cc/debian jessie main' \
- > /etc/apt/sources.list.d/cozy.list
+<br>
 
-# Install Cozy
-apt-get update
-apt-get install cozy
-```
+## 4. Proceed to the billing
+
+<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+![step3](/assets/images/ovh-capture-4.png)
+</div>
+
+## 5. Wait for the installation email and start using your Cozy.
+
+You will receive an email from OVH confirming you that your VPS was shipped.
+
+Connection credentials are given in the email. OVH will automatically create a
+user on your Cozy. So, once you connect with the credentials given in the
+email, go directly to the settings section to update your parameters and change
+your password.
+
+And now enjoy your personal server!
+

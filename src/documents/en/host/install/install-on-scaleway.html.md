@@ -11,7 +11,7 @@ toc: false
 <img alt="Scaleway logo" src="/assets/images/scaleway-logo.png">
 </div>
 
-# Install Cozy on a Scaleway VPS
+# Install Cozy on a Scaleway Dedicated Private Server
 
 **Scaleway is a Private Server provider which enables you to deploy instances in a minute.**    
 **You need a credited account to follow the steps below.**

@@ -18,7 +18,36 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
 
 *Follow one of the guide below to get started:*
 
-## on your system
+## On a Dedicated or Virtual Private Server
+
+<div class="install-logo">
+
+  <a href="install-on-ovh.html">
+    ![OVH](/assets/images/ovh-logo.png)<div class="label">OVH</div>
+  </a>
+
+  <a href="install-on-scaleway.html">
+    ![Scaleway](/assets/images/scaleway-logo.png)
+    <div class="label">Scaleway</div>
+  </a>
+
+  <a href="install-on-digitalocean.html">
+    ![DigitalOcean](/assets/images/digitalocean-logo.png)
+    <div class="label">DigitalOcean</div>
+  </a>
+</div>
+
+
+## On your hardware
+
+<div class="install-logo">
+  <a href="install-on-raspberry.html">
+    ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2</div>
+  </a>
+</div>
+
+
+## On your system
 
 <div class="install-logo">
   <a href="install-on-ubuntu.html">
@@ -32,37 +61,8 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
 </div>
 
-## on your hardware
 
-<div class="install-logo">
-  <a href="install-on-raspberry.html">
-    ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2</div>
-  </a>
-</div>
-
-## on a Dedicated or Virtual Private Server
-
-<div class="install-logo">
-
-  <a href="install-on-scaleway.html">
-    ![Scaleway](/assets/images/scaleway-logo.png)<div class="label">Scaleway</div>
-  </a>
-
-  <a href="install-on-digitalocean.html">
-    ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
-  </a>
-</div>
-
-
-## step by step
-
-<div class="install-logo">
-  <a href="install-step-by-step.html">
-    ![StepByStep](/assets/images/step-by-step-logo.png)<div class="label">Step by step</div>
-  </a>
-</div>
-
-## on a Virtual Machine
+## On a Virtual Machine
 
 <div class="install-logo">
   <a href="install-on-virtualbox.html">
@@ -73,6 +73,14 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
   <a href="install-on-openvz.html">
     ![OpenVZ](/assets/images/openvz-logo.png)<div class="label">OpenVZ</div>
+  </a>
+</div>
+
+## Step by step
+
+<div class="install-logo">
+  <a href="install-step-by-step.html">
+    ![StepByStep](/assets/images/step-by-step-logo.png)<div class="label">Step by step</div>
   </a>
 </div>
 
