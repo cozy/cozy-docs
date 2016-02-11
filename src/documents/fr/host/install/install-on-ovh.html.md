@@ -1,5 +1,5 @@
 ---
-title: "Install Cozy on OVH"
+title: "Installer Cozy sur un VPS OVH"
 layout: "default"
 category: "host"
 menuOrder: 8
@@ -13,8 +13,10 @@ toc: false
 
 # Installer Cozy sur un VPS OVH
 
-**OVH propose des serveurs privés virtuels à bas coût. Cela vous permet de 
-déployer un nouveau Cozy en un instant.**    
+**OVH propose des serveurs privés virtuels à bas coût.**
+<br>
+
+** Cela vous permet de déployer un nouveau Cozy en un instant.**    
 
 <br>
 
@@ -32,10 +34,7 @@ chers).
 
 <br>
 
-## 2. Donner une taille à votre VPS
-
-Chose among the different size of disk space and pricing. Every VPS proposes
-2GB of RAM which is enough for Cozy.
+## 2. Donnez une taille à votre VPS
 
 Vous pouvez choisir ici parmi les différentes tailles de SSD et leur prix.
 Vous n'avez pas trop à vous soucier de la RAM. Chaque VPS propose 2Go de RAM, 
