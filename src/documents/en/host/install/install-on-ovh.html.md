@@ -1,5 +1,5 @@
 ---
-title: "Install Cozy on OVH"
+title: "Install Cozy on a OVH VPS"
 layout: "default"
 category: "host"
 menuOrder: 8
@@ -13,7 +13,9 @@ toc: false
 
 # Install Cozy on a OVH VPS
 
-**OVH provides low-cost Virtual Private Servers which allows you to deploy instances in a minute.**    
+**OVH provides low-cost Virtual Private Servers.**
+
+**It allows you to deploy instances in a minute.**    
 
 <br>
 
