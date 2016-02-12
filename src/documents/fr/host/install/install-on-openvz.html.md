@@ -13,34 +13,25 @@ toc: false
 
 # Installer Cozy sur OpenVZ
 
-**Le conteneur OpenVZ n’est pas forcément à jour.**    
-**N’oubliez pas de le mettre à jour manuellement une fois lancé.**
-
-<br>
-
----
-
 Nous prenons en compte que tous les outils OpenVZ sont déjà installés.
 
 ---
 
-### Téléchargement et installation
-
+### Téléchargement
 ```bash
-# Téléchargez le conteneur OpenVZ (environ 470Mo)
-wget https://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
+# Téléchargez le conteneur OpenVZ (environ 340Mo)
+wget https://files.cozycloud.cc/openvz/openvz-cozycloud-latest.tar.gz
+```
 
-# Décompressez le conteneur pour obtenir un .tar
-xz -d vzdump-openvz-cozycloud-debian.tar.xz
-
-# Montez et démarrez le conteneur
-vzrestore vzdump-openvz-cozycloud-debian.tar ctid
+### Montez et démarrez le conteneur
+```
+vzrestore openvz-cozycloud-latest.tar.gz ctid
 vzctl start ctid
 ```
-NB : remplacez `ctid` par un identifiant de conteneur libre (101, 102, etc).
+*Il n'y a pas de mot de passe de définit. Il faut faire un `vzctl enter ctid` pour en définir un.
+Ou mettre votre clé SSH.*
 
-*Le mot de passe du compte `root` est `password`.*
-
+**NB** : remplacez `ctid` par un identifiant de conteneur libre (101, 102, etc).
 
 ### Avec un réseau configuré
 
@@ -48,14 +39,8 @@ Vous voudrez probablement permettre la connexion au conteneur depuis d’autres
 machines. Voici comment faire :
 
 ```bash
-# Téléchargez le conteneur OpenVZ (environ 470Mo)
-wget https://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
-
-# Décompressez le conteneur pour obtenir un .tar
-xz -d vzdump-openvz-cozycloud-debian.tar.xz
-
 # Montez et démarrez le conteneur
-vzrestore vzdump-openvz-cozycloud-debian.tar ctid
+vzrestore openvz-cozycloud-latest.tar.gz ctid
 vzctl set ctid --ipadd 10.0.0.10  --save
 vzctl start ctid
 

@@ -13,34 +13,25 @@ toc: false
 
 # Install Cozy on OpenVZ
 
-**The OpenVZ container is not up-to-date. Do not forget to upgrade it manually.**   
-
-<br>
-
----
-
 We assume that you have already installed OpenVZ utilities.
 
 ---
 
-### Download and start
-
+### Download
 ```bash
-# Download the OpenVz template (~ 470MB)
-wget https://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
-
-# Extract the template as a .tar file
-xz -d vzdump-openvz-cozycloud-debian.tar.xz
-
-# Mount and start the container
-vzrestore vzdump-openvz-cozycloud-debian.tar ctid
-vzctl start ctid
+# Download the OpenVz template (~ 340MB)
+wget https://files.cozycloud.cc/openvz/openvz-cozycloud-latest.tar.gz
 ```
 
-*Credentials are `root`/`password`*
+### Mount and start the container
+```
+vzrestore openvz-cozycloud-latest.tar.gz ctid
+vzctl start ctid
+```
+*There are no password. You need to do a `vzctl enter ctid` to put one.
+Or put your SSH key.*
 
 **NB**: Replace ctid with an available ctid (101, 102, etc.)
-
 
 ### With a configured network
 
@@ -48,14 +39,8 @@ You will probably need to give access to your container from outside your
 host. Here is a way to do it:
 
 ```bash
-# Download the OpenVz template (~ 470MB)
-wget https://files.cozycloud.cc/vzdump-openvz-cozycloud-debian.tar.xz
-
-# Extract the template as a .tar file
-xz -d vzdump-openvz-cozycloud-debian.tar.xz
-
 # Mount your new container, give it an IP address and start it:
-vzrestore vzdump-openvz-cozycloud-debian.tar ctid
+vzrestore openvz-cozycloud-latest.tar.gz ctid
 vzctl set ctid --ipadd 10.0.0.10  --save
 vzctl start ctid
 
