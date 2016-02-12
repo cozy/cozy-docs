@@ -124,6 +124,12 @@ have to create a `/etc/supervisor/conf.d/` directory to put the rest of the
 configuration files. One for each service, except `cozy-init` that you won't
 need here.
 
+⚠ In `cozy-controller.conf`, you should replace the line with
+`%(ENV_NODE_ENV)s` with the following:
+```
+environment=NODE_ENV="production"
+```
+
 
 ## Step 6: Initialize users, directories and tokens
 
