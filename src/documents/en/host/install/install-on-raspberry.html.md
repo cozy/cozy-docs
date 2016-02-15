@@ -74,7 +74,7 @@ admin_user="$(sed -n '1,1p' /etc/cozy/couchdb.login)";admin_pass="$(sed -n '2,1p
 # Delete the CouchDB user:
 admin_user="$(sed -n '1,1p' /etc/cozy/couchdb.login)";admin_pass="$(sed -n '2,1p' /etc/cozy/couchdb.login)";curl -X DELETE http://${admin_user}:${admin_pass}@127.0.0.1:5984/_config/admins/${admin_user}
 
-# Check if user realy destroy:
+# Check that the user has been correctly removed:
 curl http://127.0.0.1:5984/_config/admins/
 
 # Need to return: {}
