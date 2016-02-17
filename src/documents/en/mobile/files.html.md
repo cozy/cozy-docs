@@ -16,7 +16,7 @@ Requirements: Android Phone (>=4.1 version)
 
 You can either download the APK and install it on your phone, or get the application from Google PlayStore:
 
-* download the [Android APK](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (latest version is v0.1.20, its sha1 is: 0e58c13f24239973a87510fdad9439a00ff5b188)
+* download the [Android APK](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (latest version is v0.2.0, its sha1 is: 6439dc2f2a6bf0458514c88f72f1833c1dcad35c)
 * or go to the PlayStore and search for "Cozy Cloud" in the search bar. Then select and install your app.
 * or access to [old versions](https://files.cozycloud.cc/android/).
 
