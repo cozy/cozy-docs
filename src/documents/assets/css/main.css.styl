@@ -30,7 +30,8 @@ red = #dd3333
 
 body
     font-family main-body
-    background-color darkgrey
+    font-size 16px
+    background-color white
 
 pre
 code
@@ -52,13 +53,12 @@ p
 
 // Header styles
 .navbar
-    box-shadow 2px 0 2px rgba(10, 10, 10, 0.4)
+    box-shadow 0 2px 6px rgba(0,0,0,.12)
 
     li
         position relative
 
     .subtitle
-        padding-top 5px
         display inline-block
 
         li:hover > a
@@ -66,11 +66,13 @@ p
             text-decoration none
 
         a
-            font-size 18px
+            font-size 1em
+            text-transform none
 
         .selected
             color black
             border-bottom 2px solid blue
+            padding-bottom .375em
 
         @media (max-width: 1024px)
             display none
@@ -216,7 +218,7 @@ aside
 
     p
         font-weight normal
-        font-size 15px
+        font-size 1em
         font-family main-body
         margin-top 2px
         color #444
@@ -228,15 +230,19 @@ aside
     ul
         margin .75em 0
         li
-            font-size 15px
+            font-size 1em
             font-family main-body
             color #444
+            padding-bottom .25em
 
     ul.summary
         list-style-type none
         margin 0
         padding 0
         font-family main-body
+
+    img
+        border 1px solid #e5e5e5
 
     #patch-note
 
@@ -306,9 +312,8 @@ aside
         font-weight normal
         font-size 30px
 
-        margin-top -50px
-        padding-top 50px + 50px
-        border-bottom 5px solid #eee
+        margin-top 0
+        padding-top 50px
 
     h2:first-letter
         text-transform uppercase
@@ -371,11 +376,9 @@ aside
 #footer
     color white
     text-align center
-    margin-bottom 10px
+    margin-bottom 20px
     margin-top 30px
-    background lightgrey + 10%
-    border-bottom-left-radius 10px
-    border-bottom-right-radius 10px
+    border-top 2px solid #e5e5e5
 
     ul
         list-style-type none
