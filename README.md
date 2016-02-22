@@ -20,7 +20,6 @@ Now you can switch into the created directory and make some changes. If you want
 
 After that, execute the following commands in the project directory:
 
-    npm install
     docpad run
 
 You can see the documentation being served on: http://localhost:9778/en/. Do not be irritated if you see only a plain text page welcoming you, append the appropriate path for the page you would like to see, in example: http://localhost:9778/en/hack/getting-started/
