@@ -1,19 +1,23 @@
 ---
-title: "Installation sur Scaleway"
+title: "Installer Cozy sur Scaleway"
 layout: "default"
 category: "host"
-menuOrder: 8
+menuOrder: 2
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo">
 <img alt="Scaleway logo" src="/assets/images/scaleway-logo.png">
 </div>
 
-# Installer Cozy sur un serveur privé Scaleway
+# Installer Cozy sur Scaleway
 
-**Scaleway est un fournisseur de serveur privé qui vous permet de déployer Cozy en quelques minutes.**    
+**Scaleway est un fournisseur de serveur privé.**
+
+**Il vous permet de déployer Cozy en quelques minutes en utilisant que le
+navigateur.**    
+
 **Pour suivre ces instructions vous avez besoin d'un compte configuré et
 crédité.**
 

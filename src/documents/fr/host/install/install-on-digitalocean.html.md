@@ -1,13 +1,13 @@
 ---
-title: "sur DigitalOcean"
+title: "Installer Cozy sur DigitalOcean"
 layout: "default"
 category: "host"
-menuOrder: 8
+menuOrder: 3
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Logo de DigitalOcean" src="/assets/images/digitalocean-logo.png">
 </div>
 

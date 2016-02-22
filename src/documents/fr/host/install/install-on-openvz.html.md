@@ -1,13 +1,13 @@
 ---
-title: "sur OpenVZ"
+title: "Installer Cozy sur OpenVZ"
 layout: "default"
 category: "host"
-menuOrder: 6
+menuOrder: 10
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Logo d’OpenVZ" src="/assets/images/openvz-logo.png">
 </div>
 

@@ -1,13 +1,13 @@
 ---
-title: "Installer sur Archlinux"
+title: "Installer Cozy sur Archlinux"
 layout: "default"
 category: "host"
-menuOrder: 2
+menuOrder: 6
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Logo d’Archlinux" src="/assets/images/archlinux-logo.png">
 </div>
 

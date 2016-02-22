@@ -2,18 +2,21 @@
 title: "Install Cozy on Scaleway"
 layout: "default"
 category: "host"
-menuOrder: 8
+menuOrder: 2
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Scaleway logo" src="/assets/images/scaleway-logo.png">
 </div>
 
-# Install Cozy on a Scaleway Dedicated Private Server
+# Install Cozy on Scaleway
 
-**Scaleway is a Private Server provider which enables you to deploy instances in a minute.**    
+**Scaleway is a pre-configured Private Server provider.**
+
+**They enable you to start with Cozy in a minute.**    
+
 **You need a credited account to follow the steps below.**
 
 <br>
@@ -58,7 +61,7 @@ button. At the bottom of the page.
 Certificate generation is very long on Scaleway hardware. So wait for 20
 minutes to one hour, then connect with your browser to the IP address given by
 the Scaleway team (https://ip.of.your.cozy/). You should see the registration 
-screen!
+screen of your Cozy. Let's enjoy your new personal server!
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
 ![step3](/assets/images/scaleway-capture-4.png)

@@ -1,8 +1,8 @@
 ---
-title: "step by step"
+title: "Install Cozy step by step"
 layout: "default"
 category: "host"
-menuOrder: 9
+menuOrder: 11
 toc: false
 ---
 

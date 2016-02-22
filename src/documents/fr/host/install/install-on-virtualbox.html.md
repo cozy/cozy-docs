@@ -1,13 +1,13 @@
 ---
-title: "sur VirtualBox"
+title: "Installer Cozy sur VirtualBox"
 layout: "default"
 category: "host"
-menuOrder: 4
+menuOrder: 7
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo">
 <img alt="Logo de VirtualBox" src="/assets/images/virtualbox-logo.png">
 </div>
 

@@ -1,13 +1,13 @@
 ---
-title: "on Ubuntu"
+title: "Install Cozy on Ubuntu"
 layout: "default"
 category: "host"
-menuOrder: 0
+menuOrder: 5
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Ubuntu logo" src="/assets/images/ubuntu-logo.png">
 </div>
 

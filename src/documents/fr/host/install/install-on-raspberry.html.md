@@ -1,13 +1,13 @@
 ---
-title: "sur un Raspberry Pi"
+title: "Installer Cozy sur Raspberry Pi"
 layout: "default"
 category: "host"
-menuOrder: 2
+menuOrder: 4
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Logo de Raspberry" src="/assets/images/raspberry-logo.png">
 </div>
 
