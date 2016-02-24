@@ -30,10 +30,24 @@ Here’s how to send the logs:
 
 
 ## Note about self-signed certificates
-About Self hosted instances, you probably have a self-signed certificate.
-Cozy Mobile won't recognize it until you validate it on your mobile. See
-[there](http://davdroid.bitfire.at/faq/entry/importing-a-certificate)
-for instruction on how to do it.
+About Self hosted instances, you probably have a self-signed certificate. You have to install it on your Android device, to allow Cozy Mobile to recognize it.
+
+1. Install on your Android device the application [CADroid](https://cadroid.bitfire.at/), which will help you in this task (from the [PlayStore](https://play.google.com/store/apps/details?id=at.bitfire.cadroid) or [FDroid](https://f-droid.org/repository/browse/?fdfilter=cadroid&fdid=at.bitfire.cadroid).
+2. Run the CADroid application, then touch **Next** (in the upper right corner).
+3. Type your cozy URL, then touch **Fetch**.
+4. Select your certificate, check it informations and that CADroid didn't find any issue with it, then touch **Next**.
+5. CADroid has just exported your certificate in the root of the SD card of your device. Note the filename ! CADroid converted the certificat in the format expected by Android. Touch Next to get some informations from CADroid.
+6. Then, still on your ANdroid device, go to Settings/Security/**Install from device storage** (in the _Credential storage_ section).
+7. Browse to find your certificate, exported in step 5, and select it.
+8. Android will then ask you a certificate name (doesn't matter), and to chose the use of your certificate. Select _VPN and Applications_. Android may also ask you to upgrade the access sécurity level of your device (adding a unlocking  schema, ...).
+
+Now, your certificate will be accepted by any applications on your device !
+
+Complements:
+* Android ask to upgrade the access security level. It looks strange, but apparently Android thinks there's a client certificate with a private key that must be protected.
+* On Android 4.4+ devices, there'll be an annoying hint _Network may be monitored_ on each device start. This an [Android bug](https://code.google.com/p/android/issues/detail?id=62076).
+
+_Thanks to the DavDroid team, for CADroid and elements for this documentation !_
 
 ## I don't have an Android Phone
 Let us know on the [forum](https://forum.cozy.io/) you would like to see the application for your system!
