@@ -6,6 +6,10 @@ menuOrder: 0
 urls: ["/hack/"]
 ---
 
+<div class="deprecated">
+<b>Warning</b> This documentation is outdated, you should use our new [developper documentation site](https://dev.cozy.io).
+</div>
+
 # Getting Started
 
 As an introduction, we’ll present to you the standard NodeJS tools. This way your application will work in any environment. Then
