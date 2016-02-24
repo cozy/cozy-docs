@@ -117,6 +117,13 @@ Enfin, remplissez le formulaire avec les identifiants que vous avez notés lors 
 Félicitations, votre périphérique mobile est maintenant synchronisé avec votre Cozy !
 <center>![iOS step 5](/assets/images/mobile/ios/contacts/step5.jpg)</center>
 
+Attention, pour que la synchronisation fonctionne, vous devez vous assurer que l’application de votre téléphone est bien paramétrée pour enregistrer les contacts dans le carnet d’adresse synchronisé avec le serveur, et non dans le carnet local :
+
+<center>![iOS step 5](/assets/images/mobile/ios/contacts2/step1.png)</center>
+<center>![iOS step 6](/assets/images/mobile/ios/contacts2/step2.png)</center>
+<center>![iOS step 7](/assets/images/mobile/ios/contacts2/step3.png)</center>
+<center>![iOS step 8](/assets/images/mobile/ios/contacts2/step4.png)</center>
+
 ## OSX
 
 #### Configurez votre compte CardDav
