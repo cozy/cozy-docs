@@ -117,6 +117,13 @@ Finally, fill the form with the credentials you got from Cozy's Sync app:
 Congratulations, your mobile device is now synchronized with your Cozy!
 <center>![iOS step 5](/assets/images/mobile/ios/contacts/step5.jpg)</center>
 
+For the synchronization to work, you have to configure your phone to save your contacts on your remote account, not the local one (which is the default).
+
+<center>![iOS step 5](/assets/images/mobile/ios/contacts2/step1.png)</center>
+<center>![iOS step 6](/assets/images/mobile/ios/contacts2/step2.png)</center>
+<center>![iOS step 7](/assets/images/mobile/ios/contacts2/step3.png)</center>
+<center>![iOS step 8](/assets/images/mobile/ios/contacts2/step4.png)</center>
+
 ## OSX
 
 #### Configure your CardDav account

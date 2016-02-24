@@ -6,6 +6,11 @@ menuOrder: 2
 toc: true
 ---
 
+
+<div class="deprecated">
+<b>Warning</b> This documentation is outdated, you should use our new [developper documentation site](https://dev.cozy.io).
+</div>
+
 # Tutorial 1: your first app in 30 minutes
 
 This first tutorial is an introduction to Cozy web app development. But you can
