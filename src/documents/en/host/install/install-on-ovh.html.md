@@ -1,29 +1,30 @@
 ---
-title: "Install Cozy on a OVH VPS"
+title: "Install Cozy on OVH"
 layout: "default"
 category: "host"
-menuOrder: 8
+menuOrder: 1
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="OVH logo" src="/assets/images/ovh-logo.png">
 </div>
 
-# Install Cozy on a OVH VPS
+# Install Cozy on OVH
 
-**OVH provides low-cost Virtual Private Servers.**
+**Start quickly using Cozy with OVH pre-configured virtual private servers.**
 
-**It allows you to deploy instances in a minute.**    
+**It's easy. Everything can be done from the browser.**
 
 <br>
 
 ## 1. Connect to the OVH VPS product page.
 
-Product page: https://www.ovh.com/us/
+Product page: https://www.ovh.com/us/vps/
 
-Select the level of robustness you prefer (SSD VPS are cheaper).
+Select the level of robustness you prefer (SSD VPS are cheaper, CLOUD VPS are
+more stable).
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
 ![step1](/assets/images/ovh-capture-1.png)
@@ -32,7 +33,7 @@ Select the level of robustness you prefer (SSD VPS are cheaper).
 
 <br>
 
-## 2. Size your VPS
+## 2. Size your VPS.
 
 Chose among the different sizes of disk space and pricing. Every VPS proposes
 2GB of RAM which is enough for Cozy.
@@ -43,7 +44,7 @@ Chose among the different sizes of disk space and pricing. Every VPS proposes
 
 <br>
 
-## 3. Choose the distribution (OS) for your server
+## 3. Choose the distribution (OS) for your server.
 
 Select the Cozycloud image in the distribution Combobox. 
 
@@ -55,7 +56,7 @@ NB: Cozy is only available above Debian 8 distribution.
 
 <br>
 
-## 4. Proceed to the billing
+## 4. Proceed to the billing.
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
 ![step3](/assets/images/ovh-capture-4.png)

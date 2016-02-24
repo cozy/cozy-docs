@@ -1,22 +1,23 @@
 ---
-title: "Installer Cozy sur un VPS OVH"
+title: "Installer Cozy sur OVH"
 layout: "default"
 category: "host"
-menuOrder: 8
+menuOrder: 1
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="OVH logo" src="/assets/images/ovh-logo.png">
 </div>
 
 # Installer Cozy sur un VPS OVH
 
-**OVH propose des serveurs privés virtuels à bas coût.**
+**OVH propose des serveurs privés virtuels pré-configurés.**
 <br>
 
-** Cela vous permet de déployer un nouveau Cozy en un instant.**    
+** Cela vous permet de déployer Cozy en un instant en n'utilisant que votre
+nagvigateur.**    
 
 <br>
 

@@ -1,13 +1,13 @@
 ---
-title: "on Docker"
+title: "Install Cozy on Docker"
 layout: "default"
 category: "host"
-menuOrder: 5
+menuOrder: 9
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Docker logo" src="/assets/images/docker-logo.png">
 </div>
 

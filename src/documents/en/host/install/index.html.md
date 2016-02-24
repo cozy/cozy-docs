@@ -84,39 +84,5 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
 </div>
 
-<br>
-<br>
-<br>
-
-## Ask for a trial on our servers
-
-I want to enjoy a free Cozy instance with 2GB of RAM and 20GB of disk space
-(available in limited numbers, hosted in France).
-
-<form id="sign-me-up"
-      action='//cozy.us4.list-manage.com/subscribe/post?u=e25ec3b4f8c222291f7d77997&id=a9da8da0de'
-      method='post'
-      name='mc-embedded-subscribe-form' target='_blank' novalidate=''>
-
-<label for='mce-signmeup-EMAIL'>
-<span> email address: </span>
-</label>
-<input id="mce-signmeup-EMAIL" type="email" name="EMAIL" placeholder="email address">
-<label for='mce-signmeup-MOTIV'>
-<br />
-<br />
-<span>(Optional) I want to help with:</span>
-<select name="MOTIV">
-    <option value="" disabled="" selected=""> ...
-    <option>providing feedback</option>
-    <option>bug reports</option>
-    <option>translation</option>
-    <option>app development</option>
-</select>
-<div style='position: absolute; left: -5000px;'>
-<button class="icon-cloud" type='submit' name='subscribe'>
-   Sign me up!
-</button>
-</div>
 </form>
 

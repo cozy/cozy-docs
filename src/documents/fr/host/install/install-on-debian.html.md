@@ -1,19 +1,22 @@
 ---
-title: "sur Debian"
+title: "Installer Cozy sur Debian"
 layout: "default"
 category: "host"
-menuOrder: 1
+menuOrder: 5
 toc: false
 ---
 
 
-<div style="height: 0; overflow: shown; text-align: right">
+<div class="install-inner-logo"> 
 <img alt="Logo de Debian" src="/assets/images/debian-logo.png">
 </div>
 
 # Installer Cozy sur Debian
 
 Vous devez être sous **Debian 8 Jessie (stable)** pour pouvoir suivre les étapes ci-dessous.
+<br>
+<br>
+<br>
 
 ```
 root@debian-8:~# lsb_release -c
