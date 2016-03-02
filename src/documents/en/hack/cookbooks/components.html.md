@@ -60,12 +60,12 @@ This is a set a of libraries developed and maintained by Cozycloud that are used
 * [americano](https://github.com/cozy/americano): makes Expressjs more opinionated about configuration [![Build Status](https://travis-ci.org/cozy/americano.png?branch=master)](https://travis-ci.org/cozy/americano) [![Dependencies Status](https://david-dm.org/cozy/americano.png)](https://david-dm.org/cozy/americano)
 
 ### Cozy specific
-* [americano-cozy](https://github.com/cozy/americano-cozy): an americano plugin to ease the use of the Data System [![Dependencies Status](https://david-dm.org/cozy/americano-cozy.png)](https://david-dm.org/cozy/americano-cozy)
+* [americano-cozy](https://github.com/cozy/americano-cozy): [DEPRECATED] an americano plugin to ease the use of the Data System [![Dependencies Status](https://david-dm.org/cozy/americano-cozy.png)](https://david-dm.org/cozy/americano-cozy)
 * [cozy-realtime-adapter](https://github.com/cozy/cozy-realtime-adapter): let your app be notified in realtime of changes [![Dependencies Status](https://david-dm.org/cozy/cozy-realtime-adapter.png)](https://david-dm.org/cozy/cozy-realtime-adapter)
 * [cozy-notifications-helper](https://github.com/cozy/cozy-notifications-helper): east notifications for your app [![Build Status](https://travis-ci.org/cozy/cozy-notifications-helper.png?branch=master)](https://travis-ci.org/cozy/cozy-notifications-helper) [![Dependencies Status](https://david-dm.org/cozy/cozy-notifications-helper.png)](https://david-dm.org/cozy/cozy-notifications-helper)
 * [cozy-i18n-helper](https://github.com/cozy/cozy-i18n-helper): enable localization in your application with no effort [![Dependencies Status](https://david-dm.org/cozy/cozy-i18n-helper.png)](https://david-dm.org/cozy/cozy-i18n-helper)
 * [jugglingdb-cozy-adapter](https://github.com/cozy/jugglingdb-cozy-adapter): [DEPRECATED] Data System ODM plugin [![Build Status](https://travis-ci.org/cozy/jugglingdb-cozy-adapter.png?branch=master)](https://travis-ci.org/cozy/jugglingdb-cozy-adapter) [![Dependencies Status](https://david-dm.org/cozy/jugglingdb-cozy-adapter.png)](https://david-dm.org/cozy/jugglingdb-cozy-adapter)
-* [cozydb](https://github.com/aenario/cozydb): Data System ODM plugin [![Build Status](https://travis-ci.org/aenario/cozydb.png?branch=master)](https://travis-ci.org/aenario/cozydb) [![Dependencies Status](https://david-dm.org/aenario/cozydb.png)](https://david-dm.org/aenario/cozydb)
+* [cozydb](https://github.com/aenario/cozydb): Data System ODM plugin [![Build Status](https://travis-ci.org/cozy/cozydb.png?branch=master)](https://travis-ci.org/cozy/cozydb) [![Dependencies Status](https://david-dm.org/cozy/cozydb.png)](https://david-dm.org/cozy/cozydb)
 * [cozy-clearance](https://github.com/aenario/cozy-clearance): sharing feature in a snap of a finger [![Dependencies Status](https://david-dm.org/aenario/cozy-clearance.png)](https://david-dm.org/aenario/cozy-clearance)
 
 ## Tools
