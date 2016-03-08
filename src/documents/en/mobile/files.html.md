@@ -44,6 +44,7 @@ few information:
 ![Installation step 02](/assets/images/mobile/install_02.png)
 
 ![Installation step 03](/assets/images/mobile/install_03.png)
+![Installation step 04](/assets/images/mobile/install_04.png)
 
 Once done, you have to confirm and wait for the first time synchronization to
 finish.
