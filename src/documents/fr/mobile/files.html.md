@@ -39,10 +39,11 @@ Une fois installée, démarrez là. Quleques informations vous seront alors dema
 * Le nom du périphérique (il apparaîtra dans l'interface de votre Cozy) ;
 * Queques paramètres concernant la sauvegarde de vos photos.
 
-![Installation step 01](/assets/images/mobile/install_01.png)
-![Installation step 02](/assets/images/mobile/install_02.png)
+![Installation step 01](/assets/images/mobile/install_fr_01.png)
+![Installation step 02](/assets/images/mobile/install_fr_02.png)
 
-![Installation step 03](/assets/images/mobile/install_03.png)
+![Installation step 03](/assets/images/mobile/install_fr_03.png)
+![Installation step 04](/assets/images/mobile/install_fr_04.png)
 
 Une fois le processus terminé, vous devrez confirmer et attendre la fin de la première synchronisation de l'arborescence.
 
