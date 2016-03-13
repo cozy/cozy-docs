@@ -15,65 +15,59 @@ toc: false
 
 ## Warning
 
-Cozy packages are available on the **AUR** (*Archlinux User Repository*) repository, which is not natively supported by Archlinux. In order to install Cozy, you will need an AUR helper, preferably among the ones listed [here](https://wiki.archlinux.org/index.php/AUR_helpers).
+The Cozy package is available on the **AUR** (*Archlinux User Repository*) repository, which is not natively supported by Archlinux. In order to install Cozy, you will need an AUR helper, preferably among the ones listed [here](https://wiki.archlinux.org/index.php/AUR_helpers).
 
 In this documentation, we'll be using **Yaourt**, which you can install following [these instructions](https://archlinux.fr/yaourt-en).
 
-## Choosing the right package
-
-On Archlinux, Cozy has three different packages, depending on the [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy) you wish you use with Cozy:
-
-#### `cozy-nginx`
-
-This package uses the **nginx** Web server as reverse proxy, and installs it if it hasn't already been done. If an nginx server is already running on your machine, it's very recommended that you use this package. The Web server's configuration is automatically handled via an include in `/etc/nginx/nginx.conf`.
-
-#### `cozy-apache`
-
-This package is the same as the above one, except that it uses the **Apache** Web server instead of nginx. The Web server's configuration is automatically handled via a file `/etc/httpd/conf/extra/cozy.conf` included in `/etc/httpd/conf/httpd.conf`.
-
-#### `cozy-standalone`
-
-This package addresses users who wish to configure themselves Cozy's reverse proxy, which can be either nginx, Apache, or another software. Please note that Cozy needs a reverse proxy in order to work properly.
-
 ## Installing
 
-Once Yaourt is installed, and the package is chosen (we'll call it `cozy-xxx` from here for simplicity's sake), please enter the following command:
+Once Yaourt is installed, please enter the following command:
 
 ```
-yaourt -S cozy-xxx
+yaourt -S cozy
 ```
 
-Unless you want to hack the package, please answer "no" when being asked if you want to edit the files `PKGBUILD` and `cozy-xxx.install`, and "yes" when being asked if you want to compile the package.
-
-Among the dependencies is the `nodejs10` package, needed for Cozy to work properly. This package compiles Node.JS completely, which can take a lot of time on smaller configurations. Please wait until the end of this compilation.
+Unless you want to hack the package, please answer "no" when being asked if you want to edit the files `PKGBUILD` and `cozy.install`, and "yes" when being asked if you want to compile the package.
 
 Once both the dependencies' installation and the package's creation is over, Yaourt will display the following message:
 
 ```
-==> Install cozy-xxx ? [Y/n]
+==> Install cozy ? [Y/n]
 ```
+
 Please answer it with a positive answer. Cozy's stack installation and configuration will then begin.
 
-During installation process, you will have to give your instance's name. This is the web adress that your instance will have.
+## Configuring
+
+Once the package is installed, Cozy won't instantly be usable. Before that, you will have to configure your Cozy's domain name and a [reverse proxy](https://en.wikipedia.org/wiki/Reverse_proxy).
+
+### Configuring the domain name
+
+The package comes with a script allowing the user to easily set Cozy's domain name and generate the needed certificates. You can run it with
+
+```
+sudo configure-cozy-domain cozy.example.tld
+```
+
+where you will replace `cozy.example.tld` with your Cozy's domain name.
+
+This script can also be run whenever you wish to change your Cozy's domain name.
+
+### Configuring the reverse proxy
+
+In order for Cozy to work, it is necessary to use a reverse proxy. It can be a Web server or any software including this feature.
+
+Among the software able to act as a reverse proxy, we have [Apache](https://wiki.archlinux.org/index.php/Apache_HTTP_Server) or [nginx](https://wiki.archlinux.org/index.php/Nginx), for which configurations examples are available ([here](https://github.com/cozy/cozy-debian/blob/master/apache-config) for Apache and [here](https://github.com/cozy/cozy-debian/blob/master/nginx-config) for nginx).
 
 ## Troubleshooting
 
 If you encounter any issue during the installation, please open an issue on [GitHub](https://github.com/babolivier/cozy-archlinux) or on [the Cozy forum](https://forum.cozy.io/t/cozy-on-archlinux/1342).
 
-### Can't access Cozy
+### Conflict between `nodejs` and `nodejslts-bin`
 
-If you can't access your Cozy instance once the installation is complete, it can mean your reverse proxy hasn't correctly applied its new configuration. This can be corrected by reloading the Web server's configuration:
+In order to run Cozy, we need to install Node.JS v4.x.x (LTS), located in the `nodejs-lts-bin` AUR package.
 
-```
-systemctl reload nginx  ## for nginx
-systemctl reload httpd  ## for apache
-```
-
-### Conflict between `nodejs` and `nodejs10`
-
-In order to run Cozy, we need to install Node.JS v0.10.x, located in the `nodejs10` AUR package.
-
-Unfortunately, if Node.JS is already installed on your machine with the `nodejs` official package, a conflict will appear between it and `nodejs10`. All you have to do to solve this issue is hitting "y" (letter can vary according to the system language, but you get it) when the installer asks you if you want to replace `nodejs` and `npm`.
+Unfortunately, if Node.JS is already installed on your machine with the `nodejs` official package, a conflict will appear between it and `nodejs-lts-bin`. All you have to do to solve this issue is hitting "y" (letter can vary according to the system language, but you get it) when the installer asks you if you want to replace `nodejs` and `npm`.
 
 ### How to regenerate the certificate?
 
