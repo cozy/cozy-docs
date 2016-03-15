@@ -63,7 +63,7 @@ Among the software able to act as a reverse proxy, we have [Apache](https://wiki
 
 If you encounter any issue during the installation, please open an issue on [GitHub](https://github.com/babolivier/cozy-archlinux) or on [the Cozy forum](https://forum.cozy.io/t/cozy-on-archlinux/1342).
 
-### Conflict between `nodejs` and `nodejslts-bin`
+### Conflict between `nodejs` and `nodejs-lts-bin`
 
 In order to run Cozy, we need to install Node.JS v4.x.x (LTS), located in the `nodejs-lts-bin` AUR package.
 
