@@ -10,30 +10,16 @@ toc: true
 ## Maintenance
 ### Mise à jour
 
-#### La méthode simple
-
-Le moyen le plus simple pour mettre à jour votre instance est d’utiliser le
-script Fabric d’installation. Il suffit d’appeler la tâche de mise à jour
-au lieu de celle d’installation :
-
-```bash
-fab -H user@ip update_stack
-fab -H user@ip update_all_apps
-```
-
 #### Mise à jour manuelle
 
-Si vous voulez mettre à jour votre instance sans utiliser Fabric, vous pouvez
-exécuter les commandes suivantes directement dans votre serveur :
+
+Pour mettre à jour la plateforme et toutes les applications installées,
+exécutez les commandes suivantes directement dans votre serveur :
 
 ```bash
-sudo cozy-monitor update data-system
-sudo cozy-monitor update home
-sudo cozy-monitor update proxy
-sudo supervisorctl stop cozy-controller
-sudo pkill -9 node # make sure no process is remaining.
-sudo npm -g update cozy-controller
-sudo supervisorctl start cozy-controller
+sudo cozy-monitor update-all-cozy-stack
+sudo cozy-monitor update-all
+sudo supervisorctl restart cozy-controller
 ```
 
 #### Mise à jour des applications

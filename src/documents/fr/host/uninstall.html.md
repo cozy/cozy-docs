@@ -18,18 +18,9 @@ il suffit de les supprimer.
 
 ## Instance sur un serveur
 
-### Méthode simple
+### Suppression manuelle
 
-La méthode la plus simple est d’utiliser la tâche de désinstallation du script
-Fabric que vous avez utilisée pour l’installation :
-
-```bash
-fab -H user@ip uninstall_all
-```
-
-## Suppression manuelle
-
-Si vous voulez désinstaller votre Cozy sans utiliser Fabric, vous pouvez
+Pour supprimer toute trace de Cozy sur votre serveur, vous pouvez
 exécuter les commandes suivantes sur votre serveur :
 
 ```bash
