@@ -15,18 +15,9 @@ If you installed Cozy in a virtual machine or in a container, you just have
 to remove that virtual machine or container.
 
 
-## Easy way
-
-The easiest way to uninstall Cozy is to use the Fabric installation file used for the installation. But in this case, you should not call the installation task but the uninstall task:
-
-```bash
-fab -H user@ip uninstall_all
-```
-
 ## Manual uninstall
 
-If you want to uninstall your Cozy without Fabric, you can run the following
-commands directly on your server.
+To remove every Cozy files, you can run the following commands:
 
 ```bash
 supervisorctl stop cozy-controller
