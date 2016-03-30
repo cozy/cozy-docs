@@ -47,5 +47,5 @@ You can find the box' IP with the `ifconfig` command.
 You can connect through ssh with:
 
 ```bash
-ssh -p 2222 root@localhost
+ssh -p 2222 vagrant@localhost
 ```

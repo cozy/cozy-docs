@@ -44,5 +44,5 @@ Ouvrez le port 22 de votre machine virtuelle vers 127.0.0.1:2222, et le port 443
 * Connectez-vous en SSH à l'aide de cette commande :
 
 ```bash
-ssh -p 2222 root@localhost
+ssh -p 2222 vagrant@localhost
 ```
