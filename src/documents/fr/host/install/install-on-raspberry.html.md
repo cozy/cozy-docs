@@ -35,7 +35,7 @@ Commencez par télécharger l’archive :
 
 ```bash
 # Téléchargez l’image (environ 680MB)
-wget https://files.cozycloud.cc/cozy-raspberrypi-latest.zip
+wget https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi-latest.zip
 
 # Décompressez-la
 unzip cozy-raspberrypi-latest.zip
@@ -72,19 +72,8 @@ sudo -s
 # Arrêter le cozy :
 supervisorctl stop cozy-controller
 
-# Vérifier les informations de connexion à la base de données :
-admin_user="$(sed -n '1,1p' /etc/cozy/couchdb.login)";admin_pass="$(sed -n '2,1p' /etc/cozy/couchdb.login)";curl http://${admin_user}:${admin_pass}@127.0.0.1:5984/cozy
-
-# Supprimer l'utilisateur CouchDB :
-admin_user="$(sed -n '1,1p' /etc/cozy/couchdb.login)";admin_pass="$(sed -n '2,1p' /etc/cozy/couchdb.login)";curl -X DELETE http://${admin_user}:${admin_pass}@127.0.0.1:5984/_config/admins/${admin_user}
-
-# Vérifier que l'utilisateur est bien supprimé :
-curl http://127.0.0.1:5984/_config/admins/
-
-# Dois renvoyer : {}
-
-# Si c'est bon, supprimer le fichier avec les informations de connexions :
-rm /etc/cozy/couchdb.login
+# Réinitialisation des jetons de sécurité :
+cozy_management reset_token
 
 # Si vous voulez changer le FQDN du certificat autosigné :
 rm /etc/cozy/server.crt /etc/cozy/server.key
