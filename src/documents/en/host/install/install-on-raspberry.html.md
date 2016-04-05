@@ -33,8 +33,8 @@ First, get the image archive:
 
 ```bash
 # Download the image (~ 680MB)
-wget https://files.cozycloud.cc/cozy-raspberrypi-latest.zip
-
+wget https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi-latest.zip
+ 
 # Uncompress it
 unzip cozy-raspberrypi-latest.zip
 ```
