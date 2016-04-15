@@ -24,6 +24,10 @@ Codename:     trusty
 
 <br>
 
+Cozy needs a web server. By default, we will install and configure Nginx, but if a web server is already installed, you can use it, just add a virtual host for Cozy.
+
+<br>
+
 1. Make sure that `wget`, ca-certificates` and `apt-transport-https` are properly installed
     ```
     sudo apt-get install ca-certificates apt-transport-https
@@ -39,8 +43,8 @@ Codename:     trusty
     ```
 4. Install Cozy
     ```
-    sudo apt-get update
-    apt-get install -y python-cozy-management
+    sudo apt-get update ;
+    apt-get install -y python-cozy-management ;
     cozy_management install_cozy
     ```
     (please read comment bellow about the recommended dependencies).

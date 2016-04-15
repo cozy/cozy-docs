@@ -34,6 +34,10 @@ root@debian-8:~# cat /etc/debian_version
 
 <br>
 
+Cozy needs a web server. By default, we will install and configure Nginx, but if a web server is already installed, you can use it, just add a virtual host for Cozy.
+
+<br>
+
 1. Make sure that `wget`, `ca-certificates` and `apt-transport-https` are properly installed
     ```
     apt-get install wget ca-certificates apt-transport-https
@@ -60,8 +64,8 @@ root@debian-8:~# cat /etc/debian_version
     ```
 5. Install Cozy
     ```
-    apt-get update
-    apt-get install python-cozy-management
+    apt-get update ;
+    apt-get install python-cozy-management ;
     cozy_management install_cozy
     ```
     (please read comment bellow about the recommended dependencies).

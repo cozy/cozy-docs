@@ -63,7 +63,7 @@ echo 'deb http://debian.cozycloud.cc/debian jessie cozy' \
  > /etc/apt/sources.list.d/cozy.list
 
 # Install Cozy
-apt-get update
-apt-get install python-cozy-management
+apt-get update ;
+apt-get install python-cozy-management ;
 cozy_management install_cozy
 ```
