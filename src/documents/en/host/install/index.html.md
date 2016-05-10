@@ -44,12 +44,6 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   <a href="install-on-raspberry.html">
     ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2</div>
   </a>
-</div>
-
-
-## On your system
-
-<div class="install-logo">
   <a href="install-on-ubuntu.html">
     ![Ubuntu](/assets/images/ubuntu-logo.png)<div class="label">Ubuntu</div>
   </a>
@@ -58,6 +52,9 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
   <a href="install-on-archlinux.html">
     ![Archlinux](/assets/images/archlinux-logo.png)<div class="label">Archlinux</div>
+  </a>
+  <a href="install-step-by-step.html">
+    ![StepByStep](/assets/images/step-by-step-logo.png)<div class="label">Step by step</div>
   </a>
 </div>
 
@@ -73,14 +70,6 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   </a>
   <a href="install-on-openvz.html">
     ![OpenVZ](/assets/images/openvz-logo.png)<div class="label">OpenVZ</div>
-  </a>
-</div>
-
-## Step by step
-
-<div class="install-logo">
-  <a href="install-step-by-step.html">
-    ![StepByStep](/assets/images/step-by-step-logo.png)<div class="label">Step by step</div>
   </a>
 </div>
 

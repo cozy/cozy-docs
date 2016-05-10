@@ -41,11 +41,6 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   <a href="install-on-raspberry.html">
     ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2</div>
   </a>
-</div>
-
-## Sur votre système
-
-<div class="install-logo">
   <a href="install-on-ubuntu.html">
     ![Ubuntu](/assets/images/ubuntu-logo.png)<div class="label">Ubuntu</div>
   </a>
