@@ -35,6 +35,10 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
     ![DigitalOcean](/assets/images/digitalocean-logo.png)
     <div class="label">DigitalOcean</div>
   </a>
+
+  <a href="install-on-swhosting.html">
+    ![SWHosting](/assets/images/swhosting-logo.png)<div class="label">SWHosting</div>
+  </a>
 </div>
 
 
