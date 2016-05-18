@@ -33,6 +33,15 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   <a href="install-on-digitalocean.html">
     ![DigitalOcean](/assets/images/digitalocean-logo.png)<div class="label">DigitalOcean</div>
   </a>
+
+  <a href="install-on-swhosting.html">
+    ![SWHosting](/assets/images/swhosting-logo.png)<div class="label">SWHosting</div>
+  </a>
+
+  <a href="install-on-pingfiles.html">
+    ![SWHosting](/assets/images/pingfiles-logo.png)<div class="label">PingFiles</div>
+  </a>
+
 </div>
 
 ## Sur votre matériel
