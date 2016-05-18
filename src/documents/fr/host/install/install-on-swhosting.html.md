@@ -20,7 +20,7 @@ de SWHosting.**
 
 <br>
 
-## 1. Connecter vous à la page produit Cozy VPS (1-click app).
+## 1. Connectez vous à la page produit Cozy VPS (1-click app).
 
 Lien vers la page produit: https://www.swhosting.com/en/cloud/aplicacion/cozy
 
