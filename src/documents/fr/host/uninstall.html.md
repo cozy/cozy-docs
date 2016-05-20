@@ -26,7 +26,7 @@ exécuter les commandes suivantes sur votre serveur :
 ```bash
 supervisorctl stop cozy-controller
 supervisorctl stop cozy-indexer
-service stop couchdb
+service couchdb stop
 rm -rf /usr/local/var/cozy-indexer
 rm -f /etc/supervisor/conf.d/cozy-controller.conf
 rm -f /etc/supervisor/conf.d/cozy-indexer.conf

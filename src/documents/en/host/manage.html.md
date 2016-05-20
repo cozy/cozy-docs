@@ -183,23 +183,23 @@ Once done, you will have to stop couchdb, move your database file then restart
 it (as root):
 
 ```bash
-service stop couchdb
+service couchdb stop
 mkdir /home/storage/cozy-data/
 # cp here, to have a copy of the data in case of problem.
 cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
-service start couchdb
+service couchdb start
 ```
 
 For Debian and Ubuntu, Couchdb is not managed by supervisord:
 
 ```bash
-service stop couchdb
+service couchdb stop
 mkdir /home/storage/cozy-data/
 # cp here, to have a copy of the data in case of problem.
 cp /var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
-service start couchdb
+service couchdb start
 ```
 
 **A backup is strongly recommended before performing that operation.** You

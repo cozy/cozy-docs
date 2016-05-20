@@ -201,23 +201,23 @@ Ceci fait, il faut couper CouchDB, déplacer le fichier contenant la base, puis
 la relancer (en tant que root) :
 
 ```bash
-service stop couchdb
+service couchdb stop
 mkdir /home/storage/cozy-data/
 # cp here, to have a copy of the data in case of problem.
 cp /usr/local/var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
-service start couchdb
+service couchdb start
 ```
 
 Pour Debian et Ubuntu, le redémarrage de Couchdb ne passe pas supervisord :
 
 ```bash
-service stop couchdb
+service couchdb stop
 mkdir /home/storage/cozy-data/
 # cp here, to have a copy of the data in case of problem.
 cp /var/lib/couchdb/* /home/storage/cozy-data/
 chown -R couchdb:couchdb /home/storage/cozy-data/ # Rights required.
-service start couchdb
+service couchdb start
 ```
 
 **Il est fortement recommandé de sauvegarder vos données avant une telle
