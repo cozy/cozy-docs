@@ -55,5 +55,5 @@ Faites-nous savoir sur le [forum](https://forum.cozy.io/) que vous voudriez avoi
 ## Ressources connectées
 * [Page du Playstore](https://play.google.com/store/apps/details?id=io.cozy.files_client&hl=)
 * [Discussion sur le forum (en)](https://forum.cozy.io/t/i-tried-cozy-mobile/188)
-* [APK Android](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (la dernière version de l’application est la v1.2.8, dont le sha1 est : ea3ca8460e200c57527900cf4bb657fb5e9df84b)
+* [APK Android](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (la dernière version de l’application est la v1.3.1, dont le sha1 est : 093076d1963c5e8890687672b62327efcd6c9b69)
 
