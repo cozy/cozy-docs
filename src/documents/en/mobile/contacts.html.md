@@ -1,8 +1,8 @@
 ---
-title: "Contacts synchronization"
+title: "Contacts"
 layout: "default"
 category: "mobile"
-menuOrder: 1
+menuOrder: 3
 toc: true
 ---
 # Contacts Synchronization
