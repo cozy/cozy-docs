@@ -7,7 +7,7 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
+<div class="install-inner-logo">
 <img alt="Virtualbox logo" src="/assets/images/virtualbox-logo.png">
 </div>
 
@@ -28,15 +28,16 @@ virtual image for VirtualBox
 
 <h3>2. Import and try</h3>
 
-Import the image to Virtualbox and start it.
-You should be able to access your Cozy through your browser by connecting to this URL:
-
-```bash
-https://localhost:2223/
-```
-
-If you are on OS X, you have to forward ports.
-Port 22 form your virtual machine should forward to 127.0.0.1:2222 and port 443 should forward to 127.0.0.1:2223.
+* Import the Cozy image into Virtualbox
+* Edit machine settings
+  * In "Network" tab, change network mode ("Attached to") from "NAT" to "Bridged Adaptateur"
+  * Select your physical network card on the "Name" field
+* Start the virtual machine
+* Get the IP address of your virtual machine
+  * Login to console (login `vagrant`/`vagrant`)
+  * Enter `ifconfig eth0`
+  * IP address is available on the `inet` line
+* You should be able to access your Cozy through your browser by connecting to `https://<virtual-machine-ip-address>:2223/`
 
 <h3>3. Additional information</h3>
 

@@ -27,15 +27,16 @@ toc: false
 
 <h3>2. Importez et essayez</h3>
 
-Importez l’image Cozy dans VirtualBox et démarrez la machine virtuelle.
-Vous devriez avoir accès à votre Cozy via vore navigateur web sur :
-
-```bash
-https://localhost:2223/
-```
-
-Si vous êtes sous Max OS X, vous devrez ouvrir certains ports manuellement.
-Ouvrez le port 22 de votre machine virtuelle vers 127.0.0.1:2222, et le port 443 vers 127.0.0.1:2223.
+* Importez l’image Cozy dans VirtualBox
+* Éditez la configuration de la machine
+  * Dans l’onglet « Réseau », changez le mode d’accès de « NAT » à « Accès par pont »
+  * Sélectionnez la carte réseau de votre machine physique dans « Nom »
+* Démarrez la machine virtuelle
+* Obtenez l’adresse IP de votre machine virtuelle
+  * Connectez-vous à la console (identifiants `vagrant`/`vagrant`)
+  * Tapez `ifconfig eth0`
+  * L’adresse est disponible sur la ligne `inet`
+* Vous devriez avoir accès à votre Cozy via votre navigateur web sur `https://<adresse-ip-machine-virtuelle>:2223/`
 
 <h3>3. Informations complémentaires</h3>
 
