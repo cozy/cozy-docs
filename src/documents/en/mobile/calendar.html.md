@@ -1,8 +1,8 @@
 ---
-title: "Calendar synchronization"
+title: "Calendar"
 layout: "default"
 category: "mobile"
-menuOrder: 1
+menuOrder: 2
 toc: true
 ---
 # Calendar Synchronization

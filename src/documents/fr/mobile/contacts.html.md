@@ -1,11 +1,11 @@
 ---
-title: "Synchronisation de contacts"
+title: "Contacts"
 layout: "default"
 category: "mobile"
-menuOrder: 1
+menuOrder: 3
 toc: true
 ---
-# Synchronisation de contacts
+# Contacts
 
 ## Préparer votre Cozy
 Cozy utilise CardDav, qui est le protocole standard, pour synchroniser vos contacts sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.

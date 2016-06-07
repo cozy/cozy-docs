@@ -1,12 +1,12 @@
 ---
-title: "Synchronisation des agendas"
+title: "Agendas"
 layout: "default"
 category: "mobile"
-menuOrder: 1
+menuOrder: 2
 toc: true
 ---
 
-# Synchronisation des agendas
+# Agendas
 
 ## Préparer votre Cozy
 Cozy utilise CalDAV, qui est le protocole standard, pour synchroniser vos agendas sur tous vos périphériques. Tout est géré dans une application spécifique, Sync.

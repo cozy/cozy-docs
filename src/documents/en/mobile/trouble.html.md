@@ -2,7 +2,7 @@
 title: "Troubleshooting"
 layout: "default"
 category: "mobile"
-menuOrder: 2
+menuOrder: 4
 toc: true
 ---
 

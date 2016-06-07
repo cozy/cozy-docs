@@ -1,5 +1,5 @@
 ---
-title: "Files synchronization"
+title: "Mobile"
 layout: "default"
 category: "mobile"
 menuOrder: 0
