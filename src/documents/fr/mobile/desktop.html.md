@@ -14,10 +14,19 @@ Le client Cozy-desktop vous permet de synchroniser vos fichiers et vos dossiers 
 
 Avant de commencer l'installation de Cozy-desktop, nous vous conseillons de mettre à jour votre Cozy.
 
-***Commande d'installation à ajouter***
-
 
 ### Linux
+
+```bash
+apt-get install ca-certificates apt-transport-https
+
+wget -O - https://cozy-desktop.cozycloud.cc/debian/cozy-desktop.gpg.key 2>/dev/null | apt-key add -
+
+echo 'deb [arch=amd64] https://cozy-desktop.cozycloud.cc/debian jessie cozy-desktop' > /etc/apt/sources.list.d/cozy.list
+
+apt-get update
+apt-get install cozy-desktop-gui
+```
 
 ### OSX
 
