@@ -12,7 +12,7 @@ Cozy-desktop client allows you to synchronize your files and folders between you
 
 ## Installation
 
-Before install Cozy-desktop, your Cozy should be up-to-date.
+Before installing Cozy-desktop, your Cozy should be up-to-date.
 
 
 
@@ -43,14 +43,14 @@ Coming soon ... :)
 Once installed, run it. It will ask you for a few information:
 
 * Your Cozy url. In other words, address used to access to your Cozy.
-* Your Cozy password. We don't save your password, we use it only to create a new device login which it uses to synchronize your files.
-* Folder where you want to synchronize your files.
+* Your Cozy password. We don't save your password, we only use it to create a new device login which it uses to synchronize your files.
+* The folder where you want to synchronize your files.
 
 ![Onboarding](/assets/images/desktop/en_onboarding.png)
 
-Once done, application redirects you to dashboard. First synchronization can now start.
+Once done, you will be redirected to the dashboard. First synchronization can now start.
 
-Dashboard is composed of :
+The dashboard is composed of :
 
 * An information panel about synchronizations and available disk space on your Cozy.
 * A settings panel to configure autostart.
