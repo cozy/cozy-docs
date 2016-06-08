@@ -18,6 +18,8 @@ Before installing Cozy-desktop, your Cozy should be up-to-date.
 
 ### Linux
 
+On Debian and Ubuntu, you can use your repository to install cozy-desktop:
+
 ```bash
 sudo apt-get install ca-certificates apt-transport-https
 
@@ -29,6 +31,8 @@ echo 'deb [arch=amd64] https://cozy-desktop.cozycloud.cc/debian jessie cozy-desk
 sudo apt-get update
 sudo apt-get install cozy-desktop-gui
 ```
+
+If you are on Arch, one of our contributors maintains https://aur.archlinux.org/packages/cozy-desktop-gui/.
 
 ### OSX
 

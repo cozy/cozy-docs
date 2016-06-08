@@ -17,6 +17,8 @@ Avant de commencer l'installation de Cozy-desktop, nous vous conseillons de mett
 
 ### Linux
 
+Pour Debian et Ubuntu, vous pouvez installer cozy-desktop via notre dépôt :
+
 ```bash
 sudo apt-get install ca-certificates apt-transport-https
 
@@ -27,6 +29,8 @@ echo 'deb [arch=amd64] https://cozy-desktop.cozycloud.cc/debian jessie cozy-desk
 sudo apt-get update
 sudo apt-get install cozy-desktop-gui
 ```
+
+Si vous êtes sous Arch, un de nos contributeurs maintient https://aur.archlinux.org/packages/cozy-desktop-gui/.
 
 ### OSX
 
