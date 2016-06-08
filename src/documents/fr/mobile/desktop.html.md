@@ -18,14 +18,14 @@ Avant de commencer l'installation de Cozy-desktop, nous vous conseillons de mett
 ### Linux
 
 ```bash
-apt-get install ca-certificates apt-transport-https
+sudo apt-get install ca-certificates apt-transport-https
 
-wget -O - https://cozy-desktop.cozycloud.cc/debian/cozy-desktop.gpg.key 2>/dev/null | apt-key add -
+wget -O - https://cozy-desktop.cozycloud.cc/debian/cozy-desktop.gpg.key 2>/dev/null | sudo apt-key add -
 
-echo 'deb [arch=amd64] https://cozy-desktop.cozycloud.cc/debian jessie cozy-desktop' > /etc/apt/sources.list.d/cozy.list
+echo 'deb [arch=amd64] https://cozy-desktop.cozycloud.cc/debian jessie cozy-desktop' | sudo tee /etc/apt/sources.list.d/cozy.list
 
-apt-get update
-apt-get install cozy-desktop-gui
+sudo apt-get update
+sudo apt-get install cozy-desktop-gui
 ```
 
 ### OSX
