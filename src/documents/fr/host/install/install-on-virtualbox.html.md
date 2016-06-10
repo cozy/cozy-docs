@@ -36,14 +36,10 @@ toc: false
   * Connectez-vous à la console (identifiants `vagrant`/`vagrant`)
   * Tapez `ifconfig eth0`
   * L’adresse est disponible sur la ligne `inet`
-* Vous devriez avoir accès à votre Cozy via votre navigateur web sur `https://<adresse-ip-machine-virtuelle>:2223/`
+* Vous devriez avoir accès à votre Cozy via votre navigateur web sur `https://<adresse-ip-machine-virtuelle>/`
 
 <h3>3. Informations complémentaires</h3>
 
-* Pour accéder à un terminal sur votre machine virtuelle, utilisez comme identifiants `vagrant`/`vagrant`. (attention, le clavier de la machine virtuelle utilise probablement la disposition Qwerty)
-* Vous trouverez l’IP de votre machine virtuelle en y tapant `ifconfig`.
-* Connectez-vous en SSH à l'aide de cette commande :
-
-```bash
-ssh -p 2222 vagrant@localhost
-```
+* Pour accéder à un terminal sur votre machine virtuelle, utilisez comme identifiants `vagrant`/`vagrant`. (Attention : le clavier de la machine virtuelle utilise probablement la disposition qwerty.)
+* Vous pouvez vous connecter en SSH via `ssh vagrant@<adresse-ip-machine-virtuelle>`.
+* Il est possible que votre Cozy s’installe mal lors du premier démarrage de la machine. Pour relancer l’installation, vous pouvez exécuter `rm /tmp/cozy-init.lock; /etc/init.d/cozy-init` en SSH.

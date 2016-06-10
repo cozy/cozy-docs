@@ -37,16 +37,10 @@ virtual image for VirtualBox
   * Login to console (login `vagrant`/`vagrant`)
   * Enter `ifconfig eth0`
   * IP address is available on the `inet` line
-* You should be able to access your Cozy through your browser by connecting to `https://<virtual-machine-ip-address>:2223/`
+* You should be able to access your Cozy through your browser by connecting to `https://<virtual-machine-ip-address>/`
 
 <h3>3. Additional information</h3>
 
-To access the box shell, use `vagrant`/`vagrant` as login and password. (warning, the keyboard probably uses the qwerty layout)
-
-You can find the box' IP with the `ifconfig` command.
-
-You can connect through ssh with:
-
-```bash
-ssh -p 2222 vagrant@localhost
-```
+* To login into the shell of your virtual machine, use `vagrant`/`vagrant` as login and password. (Warning: the keyboard probably uses the qwerty layout.)
+* You can connect through SSH with `ssh vagrant@<virtual-machine-ip-address>`
+* Setup of your Cozy may fail at the first boot. You can restart the setup through SSH with `rm /tmp/cozy-init.lock; /etc/init.d/cozy-init`
