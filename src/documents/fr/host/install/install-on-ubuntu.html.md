@@ -44,14 +44,14 @@ Cozy a besoin d’un serveur web. Par défaut, nous installons et configurons un
 4. Installez Cozy
     ```
     sudo apt-get update ;
-    apt-get install -y python-cozy-management ;
-    cozy_management install_cozy
+    sudo apt-get install -y python-cozy-management ;
+    sudo cozy_management install_cozy
     ```
     (lisez également le paragraphe ci-dessous à propos des dépendances)
 
 5. Assurez vous que le service Nginx est bien démarré :
     ```
-    service nginx start
+    sudo service nginx start
     ```
 
 6. Paramétrez votre compte Cozy et profitez !
