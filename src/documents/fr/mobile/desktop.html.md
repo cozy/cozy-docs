@@ -76,7 +76,7 @@ Pour résoudre ce soucis, la solution est d'utiliser un autre dossier temporaire
 ```bash
 export TMPDIR="$HOME/tmp"
 mkdir -p $TMPDIR
-cozy-desktop
+cozy-desktop-gui
 ```
 
 

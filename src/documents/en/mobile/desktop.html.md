@@ -77,7 +77,7 @@ It means that Cozy-desktop can't run correctly because the temporary directory i
 ```bash
 export TMPDIR="$HOME/tmp"
 mkdir -p $TMPDIR
-cozy-desktop
+cozy-desktop-gui
 ```
 
 
