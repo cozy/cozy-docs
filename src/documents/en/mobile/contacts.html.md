@@ -32,6 +32,8 @@ Check the section relevant to your device's system to continue.
 
 ## Android
 
+For Android, we advise you to use [Cozy application](/en/mobile/files.html).
+
 #### Install
 There are multiple applications that can achieve what we want, but we advise you to use [DavDroid](http://davdroid.bitfire.at/) because it's open-source, though it's a paid app on the PlayStore.
 

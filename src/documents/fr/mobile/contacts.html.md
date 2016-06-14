@@ -32,6 +32,9 @@ Consultez la section correspondant au système de votre périphérique pour cont
 
 ## Android
 
+Pour Android, nous vous conseillons d'utiliser directment l'[application Cozy](/fr/mobile/files.html) sous Android.
+
+
 #### Installation
 Il y a de nombreuses applications qui permettent de synchroniser les contacts sur Android, mais nous conseillons d'utiliser [DavDroid](http://davdroid.bitfire.at/) car c'est une application open-source, et ce même si l'application est payante sur le PlayStore.
 
