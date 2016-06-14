@@ -32,6 +32,9 @@ Vous êtes maintenant prêt à synchroniser vos périphériques !
 Consultez la section correspondant au système de votre périphérique pour continuer.
 ## Android
 
+Pour Android, nous vous conseillons d'utiliser directment l'[application Cozy](/fr/mobile/files.html) sous Android.
+
+
 #### Installation
 
 Sur Android, plusieurs applications permettent de synchroniser votre calendrier. Nous vous conseillons d’utiliser [DavDroid](http://davdroid.bitfire.at/) qui est un logiciel libre (l’application est payante dans le PlayStore de Google, vous pouvez également la télécharger et l’installer gratuitement dans le [F-droid store](https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid)).
