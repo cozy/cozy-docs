@@ -33,5 +33,5 @@ rm -f /etc/supervisor/conf.d/cozy-indexer.conf
 rm -rf /usr/local/cozy
 rm -rf /etc/cozy
 rm -rf /usr/local/var/cozy/
-apt-get purge supervisord
+apt-get purge supervisor
 ```
