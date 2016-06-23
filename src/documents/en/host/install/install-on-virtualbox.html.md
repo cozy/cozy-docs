@@ -13,7 +13,7 @@ toc: false
 
 # Install Cozy on VirtualBox
 
-**Usage of the VirtualBox image below is not recommended in a production environment.**    
+**Usage of the VirtualBox image below is not recommended in a production environment.**
 **See the [Debian installation guide](install-on-debian.html) for production.**
 
 <br>
@@ -25,6 +25,13 @@ toc: false
 * [Download](https://www.virtualbox.org/wiki/Downloads) and install VirtualBox.
 * [Download](https://files.cozycloud.cc/cozy/virtualbox-cozycloud-latest.zip) and unzip the Cozy
 virtual image for VirtualBox
+* Download the image's signatures [here](https://files.cozycloud.cc/cozy/virtualbox-cozycloud-latest.tar.xz.sha512.asc) and [here](https://files.cozycloud.cc/cozy/virtualbox-cozycloud-latest.tar.xz.sha512)
+* Check the integrity of the image:
+
+```
+gpg2 -v virtualbox-cozycloud-4.0.0.tar.xz.sha512.asc
+sha512sum -c virtualbox-cozycloud-4.0.0.tar.xz.sha512
+```
 
 <h3>2. Import and try</h3>
 
@@ -33,14 +40,15 @@ virtual image for VirtualBox
   * In "Network" tab, change network mode ("Attached to") from "NAT" to "Bridged Adaptateur"
   * Select your physical network card on the "Name" field
 * Start the virtual machine
-* Get the IP address of your virtual machine
-  * Login to console (login `vagrant`/`vagrant`)
-  * Enter `ifconfig eth0`
-  * IP address is available on the `inet` line
-* You should be able to access your Cozy through your browser by connecting to `https://<virtual-machine-ip-address>/`
+* Open your browser and go to `https://cozy.local`
+
+Alternatively, you can reach your Cozy with the VM's IP address:
+
+  * Login to console (login `root`/`root`)
+  * Enter `hostname -I`
+  * You should be able to access your Cozy through your browser by connecting to `https://<virtual-machine-ip-address>/`
 
 <h3>3. Additional information</h3>
 
-* To login into the shell of your virtual machine, use `vagrant`/`vagrant` as login and password. (Warning: the keyboard probably uses the qwerty layout.)
-* You can connect through SSH with `ssh vagrant@<virtual-machine-ip-address>`
-* Setup of your Cozy may fail at the first boot. You can restart the setup through SSH with `rm /tmp/cozy-init.lock; /etc/init.d/cozy-init`
+* To login into the shell of your virtual machine, use `root`/`root` as login and password. (Warning: the keyboard probably uses the qwerty layout.)
+* You can connect through SSH with `ssh root@cozy.local` or `ssh root@<virtual-machine-ip-address>`
