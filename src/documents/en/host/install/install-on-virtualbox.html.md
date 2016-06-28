@@ -23,9 +23,9 @@ toc: false
 <h3>1. Download requirements</h3>
 
 * [Download](https://www.virtualbox.org/wiki/Downloads) and install VirtualBox.
-* [Download](https://files.cozycloud.cc/cozy/virtualbox-cozycloud-latest.zip) and unzip the Cozy
-virtual image for VirtualBox
-* Download the image's signatures [here](https://files.cozycloud.cc/cozy/virtualbox-cozycloud-latest.tar.xz.sha512.asc) and [here](https://files.cozycloud.cc/cozy/virtualbox-cozycloud-latest.tar.xz.sha512)
+* [Download](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz) and decompress the Cozy
+virtual image for VirtualBox.
+* Download the image's signatures [here](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512.asc) and [here](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512).
 * Check the integrity of the image:
 
 ```
