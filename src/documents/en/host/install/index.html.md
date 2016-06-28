@@ -46,7 +46,7 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
 
 <div class="install-logo">
   <a href="install-on-raspberry.html">
-    ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2</div>
+    ![RaspberryPi](/assets/images/raspberry-logo.png)<div class="label">Raspberry Pi 2 and 3</div>
   </a>
   <a href="install-on-ubuntu.html">
     ![Ubuntu](/assets/images/ubuntu-logo.png)<div class="label">Ubuntu</div>

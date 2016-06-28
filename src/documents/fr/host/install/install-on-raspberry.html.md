@@ -13,14 +13,14 @@ toc: false
 
 # Installer Cozy sur un Raspberry Pi
 
-**Vous aurez besoin du dernier [Raspberry Pi 2 our Raspberry Pi 3](http://fr.wikipedia.org/wiki/Raspberry_Pi)
+**Vous aurez besoin du dernier [Raspberry Pi 2 ou Raspberry Pi 3](http://fr.wikipedia.org/wiki/Raspberry_Pi)
 pour y faire tourner Cozy efficacement.**
 
 **L’utilisation d’une carte SD rapide (class10) est fortement recommandée.**
 
 Pour installer Cozy sur votre Raspberry Pi, vous devez :
 
-* Télécharger notre [image](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.tar.xz) et la décompresser.
+* Télécharger notre [image](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz) et la décompresser.
 * Télécharger les signatures de l'image [ici](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512.asc) et [ici](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512).
 * Vérifier l'intégrité de l'image :
 
