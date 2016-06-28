@@ -7,101 +7,59 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
+<div class="install-inner-logo">
 <img alt="Logo de Raspberry" src="/assets/images/raspberry-logo.png">
 </div>
 
 # Installer Cozy sur un Raspberry Pi
 
-**Vous aurez besoin du dernier [Raspberry Pi 2](http://fr.wikipedia.org/wiki/Raspberry_Pi)
+**Vous aurez besoin du dernier [Raspberry Pi 2 our Raspberry Pi 3](http://fr.wikipedia.org/wiki/Raspberry_Pi)
 pour y faire tourner Cozy efficacement.**
 
 **L’utilisation d’une carte SD rapide (class10) est fortement recommandée.**
 
----
+Pour installer Cozy sur votre Raspberry Pi, vous devez :
 
-*Note pour les possesseurs de Raspberry Pi :* Cozy demande un peu trop de
-ressources pour fonctionner correctement sur les précédents modèles B et B+
-de Raspberry Pi. Pour ces modèles, une version alternative et plus légère de
-Cozy existe : [Cozy Light](https://github.com/cozy-labs/cozy-light).
+* Télécharger notre [image](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.tar.xz) et la décompresser.
+* Télécharger les signatures de l'image [ici](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512.asc) et [ici](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512).
+* Vérifier l'intégrité de l'image :
 
----
-
-Le moyen le plus simple d’utiliser Cozy sur un Raspberry Pi 2 est de
-télécharger notre image et de l’installer sur une carte SD. L’image est basée
-sur la distribution [Raspbian Jessie lite](https://www.raspberrypi.org/downloads/raspbian/).
-
-Commencez par télécharger l’archive :
-
-```bash
-# Téléchargez l’image (environ 680MB)
-wget https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi-latest.zip
-
-# Décompressez-la
-unzip cozy-raspberrypi-latest.zip
 ```
+gpg2 -v cozycloud-raspberry_4.1.0.img.xz.sha512.asc
+sha512sum -c cozycloud-raspberry_4.1.0.img.xz.sha512
+```
+
+L’image est basée sur la distribution [Raspbian Jessie lite](https://www.raspberrypi.org/downloads/raspbian/).
 
 **ATTENTION :** cette opération va irrémédiablement supprimer toutes les
 données présentes sur la carte.
 
-Suivez le guide [Installing operating system images](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+Suivez le guide officiel sur [Installing operating system images](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
 
 ---
 
 Insérez à présent la carte SD dans le lecteur de votre Raspberry Pi et démarrez
 le.
 
-Vous pourrez trouver l’adresse de votre Raspberry Pi sur la console. Sinon vous pouvez
-utiliser `nmap` sur votre machine locale :
-
-```
-$ nmap -T4 -sP 192.168.x.0/24 # Ou votre sous réseau
-```
+Vous pouvez accéder à votre Cozy via `https://cozy.local/`.
 
 Pour vous connecter à la carte, utilisez les informations de connexion par
 défaut de Raspbian : ```pi``` and ```raspberry``` :
 
 ```bash
-$ ssh pi@<ip-du-raspberrypi>
-
-# Passer en root pour la suite des commandes :
-sudo -s
-
-## Remettre à zéro les tokens CouchDB :
-
-# Arrêter le cozy :
-supervisorctl stop cozy-controller
-
-# Réinitialisation des jetons de sécurité :
-cozy_management reset_token
-
-# Si vous voulez changer le FQDN du certificat autosigné :
-rm /etc/cozy/server.crt /etc/cozy/server.key
-
-# Reconfigurer les tokens d'accès à CouchDB et le certificat SSL :
-dpkg-reconfigure cozy
-
-# Agrandir le système de fichier /
-/usr/bin/raspi-config --expand-rootfs
-
-# Vous pouvez en profiter pour changer le mot de passe de pi :
-passwd pi
-
-# Redémarer le Raspberry π2
-systemctl reboot
+$ ssh pi@cozy.local # ou ssh pi@<ip-du-raspberrypi>
 ```
 
-Une fois redémarré, vous devriez pouvoir accéder à votre instance Cozy en vous
-connectant au port 443 via le protocole https.
-
-`https://<ip-du-raspberrypi>`
-
-**ATTENTION :** l’installation, la configuration et le démarrage de Cozy peuvent
-être assez lentes, il n’est pas rare de devoir attendre près d’une heure avant
-que le serveur ne soit prêt et à l’écoute sur le port 443.  Laissez-lui un peu
-de temps avant de vous inquiéter.
-
 # En cas de problèmes…
+
+## L'hôte cozy.local ne fonctionne pas
+
+Vous pourrez trouver l’adresse de votre Raspberry Pi via la console. Sinon vous pouvez
+utiliser `nmap` sur votre machine locale :
+
+```
+$ nmap -T4 -sP 192.168.x.0/24 # Ou votre sous-réseau
+```
 
 ## Système de fichiers corrompu
 
