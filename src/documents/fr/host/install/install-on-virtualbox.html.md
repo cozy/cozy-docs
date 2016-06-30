@@ -23,13 +23,13 @@ toc: false
 <h3>1. Téléchargez les prérequis</h3>
 
 * [Téléchargez](https://www.virtualbox.org/wiki/Downloads) et installez VirtualBox.
-* [Téléchargez](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz) et décompressez l’image Cozy pour VirtualBox.
+* [Téléchargez](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz) et décompressez là (`xz -d cozy-virtualbox_4.0.0.tar.xz` sur Linux, utilisez votre logiciel de décompression préféré sur Windows et MacOs).
 * Téléchargez les signatures de l'image [ici](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512.asc) et [ici](https://files.cozycloud.cc/cozy/cozy-virtualbox_latestt.tar.xz.sha512)
 * Vérifiez l'intégrité de l'image :
 
 ```
-gpg2 -v virtualbox-cozycloud-4.0.0.tar.xz.sha512.asc
-sha512sum -c virtualbox-cozycloud-4.0.0.tar.xz.sha512
+gpg2 -v cozy-virtualbox-4.0.0.tar.xz.sha512.asc
+sha512sum -c cozy-virtualbox-4.0.0.tar.xz.sha512
 ```
 
 <h3>2. Importez et essayez</h3>

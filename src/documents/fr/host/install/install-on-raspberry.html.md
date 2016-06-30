@@ -20,13 +20,13 @@ pour y faire tourner Cozy efficacement.**
 
 Pour installer Cozy sur votre Raspberry Pi, vous devez :
 
-* Télécharger notre [image](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz) et la décompresser.
+* Télécharger notre [image](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz) et la décompresser (`xz -d cozy-raspberrypi_4.1.0.img.xz` sur Linux, utilisez votre logiciel de décompression préféré sur Windows et MacOs).
 * Télécharger les signatures de l'image [ici](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512.asc) et [ici](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512).
 * Vérifier l'intégrité de l'image :
 
 ```
-gpg2 -v cozycloud-raspberrypi_4.1.0.img.xz.sha512.asc
-sha512sum -c cozycloud-raspberrypi_4.1.0.img.xz.sha512
+gpg2 -v cozy-raspberrypi_4.1.0.img.xz.sha512.asc
+sha512sum -c cozy-raspberrypi_4.1.0.img.xz.sha512
 ```
 
 L’image est basée sur la distribution [Raspbian Jessie lite](https://www.raspberrypi.org/downloads/raspbian/).

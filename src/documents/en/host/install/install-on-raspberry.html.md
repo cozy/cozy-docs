@@ -20,13 +20,13 @@ toc: false
 
 In order to run Cozy on your Raspberry Pi, you need to:
 
-* Download our [image](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz) and decompress it.
+* Download our [image](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz) and decompress it (`xz -d cozy-raspberrypi_4.1.0.img.xz` on Linux, use your favorite software on Windows and MacOs).
 * Download the image's signatures [here](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512.asc) and [here](https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512).
 * Check the integrity of the image:
 
 ```
-gpg2 -v cozycloud-raspberrypi_4.1.0.img.xz.sha512.asc
-sha512sum -c cozycloud-raspberrypi_4.1.0.img.xz.sha512
+gpg2 -v cozy-raspberrypi_4.1.0.img.xz.sha512.asc
+sha512sum -c cozy-raspberrypi_4.1.0.img.xz.sha512
 ```
 
 The image is based on [Raspbian Jessie lite](https://www.raspberrypi.org/downloads/raspbian/).
