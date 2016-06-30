@@ -25,7 +25,7 @@ In order to run Cozy on your Raspberry Pi, you need to:
 * Check the integrity of the image:
 
 ```
-gpg2 -v cozy-raspberrypi_4.1.0.img.xz.sha512.asc
+gpgv2 -v cozy-raspberrypi_4.1.0.img.xz.sha512.asc
 sha512sum -c cozy-raspberrypi_4.1.0.img.xz.sha512
 ```
 

@@ -28,7 +28,7 @@ toc: false
 * Vérifiez l'intégrité de l'image :
 
 ```
-gpg2 -v cozy-virtualbox-4.0.0.tar.xz.sha512.asc
+gpgv2 -v cozy-virtualbox-4.0.0.tar.xz.sha512.asc
 sha512sum -c cozy-virtualbox-4.0.0.tar.xz.sha512
 ```
 

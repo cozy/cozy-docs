@@ -25,7 +25,7 @@ Pour installer Cozy sur votre Raspberry Pi, vous devez :
 * Vérifier l'intégrité de l'image :
 
 ```
-gpg2 -v cozy-raspberrypi_4.1.0.img.xz.sha512.asc
+gpgv2 -v cozy-raspberrypi_4.1.0.img.xz.sha512.asc
 sha512sum -c cozy-raspberrypi_4.1.0.img.xz.sha512
 ```
 
