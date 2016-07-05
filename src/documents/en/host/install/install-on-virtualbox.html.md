@@ -23,13 +23,13 @@ toc: false
 <h3>1. Download requirements</h3>
 
 * [Download](https://www.virtualbox.org/wiki/Downloads) and install VirtualBox.
-* [Download](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz) and decompress it (`xz -d cozy-virtualbox_4.0.0.tar.xz` on Linux, use your favorite software on Windows and MacOs).
+* [Download](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz) and decompress it (`xz -d cozy-virtualbox_4.0.1.tar.xz` on Linux, use your favorite software on Windows and MacOs).
 * Download the image's signatures [here](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512.asc) and [here](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512).
 * Check the integrity of the image:
 
 ```
-gpgv2 -v cozy-virtualbox-4.0.0.tar.xz.sha512.asc
-sha512sum -c cozy-virtualbox-4.0.0.tar.xz.sha512
+gpgv2 -v cozy-virtualbox-4.0.1.tar.xz.sha512.asc
+sha512sum -c cozy-virtualbox-4.0.1.tar.xz.sha512
 ```
 
 <h3>2. Import and try</h3>
