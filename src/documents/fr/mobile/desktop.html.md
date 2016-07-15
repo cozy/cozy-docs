@@ -22,7 +22,7 @@ Pour Debian et Ubuntu, vous pouvez installer cozy-desktop via notre dépôt :
 ```bash
 sudo apt-get install ca-certificates apt-transport-https
 
-wget -O - https://cozy-desktop.cozycloud.cc/debian/cozy-desktop.gpg.key 2>/dev/null | sudo apt-key add -
+wget -O - https://cozy-desktop.cozycloud.cc/cozy-desktop.gpg.key 2>/dev/null | sudo apt-key add -
 
 echo 'deb [arch=amd64] https://cozy-desktop.cozycloud.cc/debian jessie cozy-desktop' | sudo tee /etc/apt/sources.list.d/cozy.list
 
@@ -52,7 +52,7 @@ Une fois votre client installé, demarrez le. Quelques informations vous seront 
 ![Onboarding](/assets/images/desktop/fr_onboarding.png)
 
 
-Une fois ces quatre écrans passés, l'application va vous rediriger vers le tableau de bord et la première synchronisation peut démarrer. Le tableau de bord est composé : 
+Une fois ces quatre écrans passés, l'application va vous rediriger vers le tableau de bord et la première synchronisation peut démarrer. Le tableau de bord est composé :
 
 * D'un panneau d'information sur les synchronisations en cours et l'espace disque disponible de votre Cozy.
 * D'une section de préférences vous permettant de démarrer votre client au démarrage de votre ordinateur et vous indiquant la version de votre client.
@@ -69,7 +69,7 @@ Si vous rencontrez une erreur qui ressemble à :
 
     [Error: Error: /tmp/.org.chromium.Chromium.ox2yyn: failed to map segment from shared object: Operation not permitted: unable to import leveldown]
 
-Cela signifie que le client Cozy-desktop ne peut pas démarrer correctement à cause du dossier temporaire qui est monté avec l'option noexec. Cela empêche le chargement dynamique de librairie comme leveldown dans notre cas. 
+Cela signifie que le client Cozy-desktop ne peut pas démarrer correctement à cause du dossier temporaire qui est monté avec l'option noexec. Cela empêche le chargement dynamique de librairie comme leveldown dans notre cas.
 
 Pour résoudre ce soucis, la solution est d'utiliser un autre dossier temporaire :
 

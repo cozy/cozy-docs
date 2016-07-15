@@ -23,7 +23,7 @@ On Debian and Ubuntu, you can use your repository to install cozy-desktop:
 ```bash
 sudo apt-get install ca-certificates apt-transport-https
 
-wget -O - https://cozy-desktop.cozycloud.cc/debian/cozy-desktop.gpg.key 2>/dev/null | sudo apt-key add -
+wget -O - https://cozy-desktop.cozycloud.cc/cozy-desktop.gpg.key 2>/dev/null | sudo apt-key add -
 
 echo 'deb [arch=amd64] https://cozy-desktop.cozycloud.cc/debian jessie cozy-desktop' | sudo tee /etc/apt/sources.list.d/cozy.list
 
