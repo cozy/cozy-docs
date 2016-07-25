@@ -7,7 +7,7 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
+<div class="install-inner-logo">
 <img alt="Logo de Debian" src="/assets/images/debian-logo.png">
 </div>
 
@@ -59,7 +59,7 @@ Cozy a besoin d’un serveur web. Par défaut, nous installons et configurons un
     ```
 4. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
-    echo 'deb [arch=amd64] https://debian.cozycloud.cc/debian jessie cozy' \
+    echo 'deb https://debian.cozycloud.cc/debian jessie cozy' \
     > /etc/apt/sources.list.d/cozy.list
     ```
 5. Installez Cozy

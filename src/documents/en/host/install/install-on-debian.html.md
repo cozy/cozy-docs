@@ -7,7 +7,7 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
+<div class="install-inner-logo">
 <img alt="Debian logo" src="/assets/images/debian-logo.png">
 </div>
 
@@ -15,9 +15,9 @@ toc: false
 
 You need **Debian 8 Jessie (stable)** in order to proceed to theses steps.
 
-<br> 
-<br> 
-<br> 
+<br>
+<br>
+<br>
 
 ```
 root@debian-8:~# lsb_release -c
@@ -59,7 +59,7 @@ Cozy needs a web server. By default, we will install and configure Nginx, but if
     ```
 4. Add the Cozy repository to your software sources
     ```
-    echo 'deb [arch=amd64] https://debian.cozycloud.cc/debian jessie cozy' \
+    echo 'deb https://debian.cozycloud.cc/debian jessie cozy' \
     > /etc/apt/sources.list.d/cozy.list
     ```
 5. Install Cozy
