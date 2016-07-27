@@ -50,6 +50,11 @@ défaut de Raspbian : ```pi``` and ```raspberry``` :
 $ ssh pi@cozy.local # ou ssh pi@<ip-du-raspberrypi>
 ```
 
+Pour étendre la partition, suivez ces étapes :
+
+* connectez vous au PI en SSH
+* exécutez cette commande: `/usr/bin/raspi-config --expand-rootfs`
+
 # En cas de problèmes…
 
 ## L'hôte cozy.local ne fonctionne pas

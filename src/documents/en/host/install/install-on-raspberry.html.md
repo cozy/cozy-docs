@@ -49,6 +49,12 @@ $ ssh pi@cozy.local # or ssh pi@<ip-of-your-raspberrypi>
 
 ```
 
+In order to expand the partition, follow those steps:
+
+* log into the board via SSH
+* run this command: `/usr/bin/raspi-config --expand-rootfs`
+
+
 # Troubleshooting
 
 ## Host cozy.local doesn't work
