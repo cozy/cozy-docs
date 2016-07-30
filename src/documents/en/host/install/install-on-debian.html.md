@@ -99,7 +99,7 @@ Cozy now requires nodejs 4.x, and actually the cozy_management installer include
 * Includes nodesource.com repository in your APT sources
 * Tries to install nodejs package from this new source
  
-The thing is, Debian 8 (Jessie) already has its own repository for nodejs, containing a quite old version (0.10.x). If you have once installed that old version, the Cozy installer won't be able to installer the newer, and the whole installation will crash, with no other message than this one:
+The thing is, Debian 8 (Jessie) already has its own repository for nodejs, containing a quite old version (0.10.x). If you have once installed that old version, the Cozy installer won't be able to install the newer, and the whole installation will crash, with no other message than:
 ```
 update-alternatives: error: alternative link /usr/bin/node is already managed by nodejs
 dpkg: error processing package nodejs (--configure): subprocess installed post-installation script returned error exit status 2
