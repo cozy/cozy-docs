@@ -16,7 +16,7 @@ Pré-requis : téléphone ou tablette Android (version >=4.4)
 
 Vous pouvez soit télécharger l’APK et l’installer directement sur votre terminal, soit l’installer depuis le PlayStore de Google :
 
-* téléchargez le [fichier APK](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (la dernière version de l’application est la v1.4.3, dont le sha1 est : 0caf0124874a2e952a10135a67c6c1b0b0987ff3)
+* téléchargez le [fichier APK](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (la dernière version de l’application est la v1.4.4, dont le sha1 est : 8cdeafe3b9713086c20e247bf295e3551a2339ea)
 * ou allez sur le PlayStore et cherchez "Cozy Cloud" dans la barre de recherche. Puis sélectionnez et installez l'application.
 * ou accedez aux [versions précédentes](https://files.cozycloud.cc/android/).
 
@@ -78,4 +78,3 @@ Une fois que la synchronisation est en place, vous pouvez construire des albums 
 Vous pouvez alors partager cet album en un clic, en sélectionnant les contacts avec lesquels vous souhaitez le partager.
 
 ![Screen browsing](/assets/images/mobile/photos_02.png)
-
