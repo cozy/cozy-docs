@@ -15,76 +15,48 @@ html(lang='en')
       title
         block title
           = document.title
-      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css',  '/assets/css/home.css', '/assets/css/main.css']).toHTML()
+      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css']).toHTML()
 
   body
     .navbar.fixed
-        a.nav-logo.left(href="/en/")
-            img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+        a.nav-logo(href="/en/")
+            img(src='/assets/images/cozy-logo-docs.svg')
 
-        nav
-            ul.subtitle
-                - var collectionName = "documents"
-                - if (document.category != null)
-                    - collectionName = document.category + "Pages"
-                - collectionName = collectionName + getLang(document).toUpperCase()
-                - items = generateMenu(document.url, collectionName)
-                - for item in items
-                    - var className = ""
-                    - if (item.state == "parent" || item.state == "current")
-                        - className = 'selected'
-                    li
-                        a(class="#{className}", href="#{item.url}")= item.title
-                        - if (item.children != null)
-                            ul.dropdown-menu
-                                - for child in item.children
-                                    li: a(href="#{child.url}")= child.title
+        ul.subtitle
+            - var collectionName = "documents"
+            - if (document.category != null)
+                - collectionName = document.category + "Pages"
+            - collectionName = collectionName + getLang(document).toUpperCase()
+            - items = generateMenu(document.url, collectionName)
+            - for item in items
+                - var className = ""
+                - if (item.state == "parent" || item.state == "current")
+                    - className = 'selected'
+                li
+                    a(class="#{className}", href="#{item.url}")= item.title
+                    - if (item.children != null)
+                        ul.dropdown-menu
+                            - for child in item.children
+                                li: a(href="#{child.url}")= child.title
 
-            ul.navigation.right
-                li
-                    - var className = ""
-                    - if(document.category == 'host')
-                        - className = 'selected'
-                    a(class="#{className}", href="/en/host/install/") Install
-                li
-                    - var className = ""
-                    - if(document.category == 'mobile')
-                      - className = 'selected'
-                    a(class="#{className}", href="/en/mobile/files.html") Sync
-                li
-                    - var className = ""
-                    - if(document.category == 'hack')
-                        - className = 'selected'
-                    a(class="#{className}", href="https://dev.cozy.io") Dev
+        ul.navigation
+            li
+                - var className = ""
+                - if(document.category == 'host')
+                    - className = 'selected'
+                a(class="#{className}", href="/en/host/install/") Install
+            li
+                - var className = ""
+                - if(document.category == 'mobile')
+                  - className = 'selected'
+                a(class="#{className}", href="/en/mobile/files.html") Sync
+            li
+                - var className = ""
+                - if(document.category == 'hack')
+                    - className = 'selected'
+                a(class="#{className}", href="https://dev.cozy.io") Dev
 
     .wrapper
-      .wrap-menu.w25.mod.left
-        | &nbsp;
-        aside
-          - var hasToc = "";
-          - if (document.tableOfContents != null && document.tableOfContents.length > 0)
-            - hasToc = "toc";
-          p.title(class="#{hasToc}")= document.title
-          - if (document.tableOfContents != null && document.tableOfContents.length > 0)
-            nav#navigation(role="navigation")
-              ul.nav.first-level
-                - for item in document.tableOfContents
-                  - var className = "big"
-                  - if (document.tableOfContents != null && document.tableOfContents.length == 1)
-                    - className = "big active"
-                  - if(item.text != "")
-                    li(class="#{className}")
-                      a.label(href="##{item.id}")= item.text
-                      - if (item.children != null && item.children.length > 0)
-                        ul.second-level
-                          - for child in item.children
-                            - if (child.id != '')
-                              li.small
-                                a.label(href="##{child.id}")= child.text
-
-      - var className = "w75"
-      - if (document.tableOfContents != null && document.tableOfContents.length == 0)
-        - className = "w80"
       #main.mod.pam(role="main", class="#{className}")
         - if (document.tableOfContents != null && document.tableOfContents.length > 5)
           h1.summary
@@ -99,12 +71,22 @@ html(lang='en')
                   a.label(href="##{item.id}")= item.text
         != content
 
-      footer#footer.line.pam.row(role="contentinfo")
-        a(href="https://github.com/cozy") Github
-        a(href="irc://irc.freenode.net/cozycloud") IRC
+      footer#footer(role="contentinfo")
+        a(href="https://github.com/cozy")
+            img(src='/assets/images/icons/icon-github.svg')
+            | Github
+        a(href="irc://irc.freenode.net/cozycloud")
+            img(src='/assets/images/icons/icon-message.svg')
+            | IRC
         a(href="https://forum.cozy.io")
-            | Mailing-list
-        a(href="mailto:contact@cozycloud.cc") Contact
+            img(src='/assets/images/icons/icon-smiley.svg')
+            | Forum
+        a(href="mailto:contact@cozycloud.cc")
+            img(src='/assets/images/icons/icon-mail.svg')
+            | Contact
+        a(href="https://www.cozy.io")
+            img(src='/assets/images/icons/icon-cloud.svg')
+            | Cozy's site
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
 
