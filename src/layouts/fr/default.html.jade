@@ -19,43 +19,42 @@ html(lang='en')
 
   body
     .navbar.fixed
-        a.nav-logo.left(href="/fr/")
+        a.nav-logo(href="/fr/")
             img(src='/assets/images/cozy-logo-docs.svg')
 
-        nav
-            ul.subtitle
-                - var collectionName = "documents"
-                - if (document.category != null)
-                    - collectionName = document.category + "Pages"
-                - collectionName = collectionName + getLang(document).toUpperCase()
-                - items = generateMenu(document.url, collectionName)
-                - for item in items
-                    - var className = ""
-                    - if (item.state == "parent" || item.state == "current")
-                        - className = 'selected'
-                    li
-                        a(class="#{className}", href="#{item.url}")= item.title
-                        - if (item.children != null)
-                            ul.dropdown-menu
-                                - for child in item.children
-                                    li: a(href="#{child.url}")= child.title
+        ul.subtitle
+            - var collectionName = "documents"
+            - if (document.category != null)
+                - collectionName = document.category + "Pages"
+            - collectionName = collectionName + getLang(document).toUpperCase()
+            - items = generateMenu(document.url, collectionName)
+            - for item in items
+                - var className = ""
+                - if (item.state == "parent" || item.state == "current")
+                    - className = 'selected'
+                li
+                    a(class="#{className}", href="#{item.url}")= item.title
+                    - if (item.children != null)
+                        ul.dropdown-menu
+                            - for child in item.children
+                                li: a(href="#{child.url}")= child.title
 
-            ul.navigation.right
-                li
-                    - var className = ""
-                    - if(document.category == 'host')
-                        - className = 'selected'
-                    a(class="#{className}", href="/fr/host/install/") Install
-                li
-                    - var className = ""
-                    - if(document.category == 'mobile')
-                      - className = 'selected'
-                    a(class="#{className}", href="/fr/mobile/files.html") Sync
-                li
-                    - var className = ""
-                    - if(document.category == 'hack')
-                        - className = 'selected'
-                    a(class="#{className}", href="https://dev.cozy.io") Dev
+        ul.navigation.right
+            li
+                - var className = ""
+                - if(document.category == 'host')
+                    - className = 'selected'
+                a(class="#{className}", href="/fr/host/install/") Install
+            li
+                - var className = ""
+                - if(document.category == 'mobile')
+                  - className = 'selected'
+                a(class="#{className}", href="/fr/mobile/files.html") Sync
+            li
+                - var className = ""
+                - if(document.category == 'hack')
+                    - className = 'selected'
+                a(class="#{className}", href="https://dev.cozy.io") Dev
 
     .wrapper
       .wrap-menu.w25.mod.left
