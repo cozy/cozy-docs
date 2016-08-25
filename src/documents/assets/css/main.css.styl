@@ -469,22 +469,30 @@ aside
 
 // Footer styles
 #footer
-    margin-bottom 1em
-    margin-top    1em
-    border-top    1px solid grey-03
-    text-align    center
+    display         flex
+    justify-content space-around
+    margin          1em auto
+    border-top      2px solid grey-02
 
-    ul
-        list-style-type none
-        padding 0
-        display inline-block
+    @media (max-width:450px)
+        flex-direction column
+        padding        .5em 0
 
     a
+        display         flex
+        align-items     center
+        padding         1em
         text-decoration none
         color           grey-06
 
-    a:hover
-        color blue
+        @media (max-width:450px)
+            padding .5em 1em
+
+        &:hover
+            color blue
+
+        img
+            padding-right .5em
 
 .install-inner-logo
     float right

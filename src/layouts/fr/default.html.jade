@@ -98,12 +98,22 @@ html(lang='en')
                   a.label(href="##{item.id}")= item.text
         != content
 
-      footer#footer.line.pam.row(role="contentinfo")
-        a(href="https://github.com/cozy") Github
-        a(href="irc://irc.freenode.net/cozycloud") IRC
-        a(href="mailto:contact@cozycloud.cc") Contact
+      footer#footer(role="contentinfo")
+        a(href="https://github.com/cozy")
+            img(src='/assets/images/icons/icon-github.svg')
+            | Github
+        a(href="irc://irc.freenode.net/cozycloud")
+            img(src='/assets/images/icons/icon-message.svg')
+            | IRC
         a(href="https://forum.cozy.io")
-            | Mailing-list
+            img(src='/assets/images/icons/icon-smiley.svg')
+            | Forum
+        a(href="mailto:contact@cozycloud.cc")
+            img(src='/assets/images/icons/icon-mail.svg')
+            | Contact
+        a(href="https://www.cozy.io")
+            img(src='/assets/images/icons/icon-cloud.svg')
+            | Cozy's site
 
     != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
 
