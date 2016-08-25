@@ -15,12 +15,12 @@ html(lang='en')
       title
         block title
           = document.title
-      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css', '/assets/css/home.css']).toHTML()
+      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css']).toHTML()
 
   body
     .navbar.fixed
         a.nav-logo.left(href="/en/")
-            img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+            img(src='/assets/images/cozy-logo-docs.svg')
 
         nav
             ul.navigation.right
