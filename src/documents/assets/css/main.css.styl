@@ -92,12 +92,16 @@ p
     width           100%
     padding         1em 2em
     background      white
+    border-bottom   1px solid grey-02
 
     @media (max-width: 425px)
-        padding .5em 1em
+        padding 1em
 
     img
         height 2em
+
+        @media (max-width: 425px)
+            height 1.5em
 
     ul
         list-style-type none
@@ -159,8 +163,6 @@ p
                 display block
 
 .navbar
-    box-shadow 2px 0 2px rgba(10, 10, 10, 0.4)
-
     li
         position relative
 
@@ -176,7 +178,7 @@ p
             color black
             border-bottom 2px solid blue
 
-        @media (max-width: 1024px)
+        @media (max-width: 1023px)
             display none
 
 .dropdown-menu
@@ -311,12 +313,10 @@ aside
 
 // Content styles
 #main
+    padding 2em
 
-    &.w80
-        margin auto
-
-    &.w75
-        padding-left 35px
+    @media (max-width: 425px)
+        padding 1em
 
     p
         margin-top 2px
