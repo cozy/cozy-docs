@@ -58,22 +58,17 @@ body
 
 pre
 code
-    font-family main-code
-    margin-bottom 10px
+    font-family   main-code
 
 p
-    margin-bottom 5px
+    margin .25em 0
 
 .wrapper
-    margin-left                auto
-    margin-right               auto
-    margin-top                 60px
-    width                      100%
-    max-width                  960px
-    background-color           white
-    border-bottom-left-radius  10px
-    border-bottom-right-radius 10px
-    padding-top                20px
+    width        100%
+    max-width    50em
+    margin-left  auto
+    margin-right auto
+    margin-top   5em
 
 // Header styles
 //
@@ -318,19 +313,20 @@ aside
     @media (max-width: 425px)
         padding 1em
 
-    p
-        margin-top 2px
+    img
+        margin     .5em
+        box-shadow 0 2px 8px rgba(grey-06, .33)
 
+    p
         code
             padding 5px
             margin-bottom 15px
 
     ul
         margin .75em 0
+
         li
-            font-size 15px
-            font-family main-body
-            color #444
+            padding .25em 0
 
     ul.summary
         list-style-type none
@@ -414,28 +410,31 @@ aside
 
     a
     a:visited
-        color black
+        color           blue
+        text-decoration none
 
     a:hover
-        color blue - 40%
+        color darkblue
+        text-decoration underline
 
     pre.highlight
 
-        margin-top 0
-        margin-bottom 15px
+        margin-top    0
+        margin-bottom 1em
 
         code
-            padding 20px
-            border-radius 10px
-            line-height 20px
-            margin-top 10px
-            margin-bottom 30px
+            padding          1em
+            margin-top       10px
+            margin-bottom    30px
+            background-color black
+            border-radius    5px
+            line-height      1.5
 
     hr
-        border 0
-        height 0
+        border        0
+        height        0
         border-bottom 3px solid #eee
-        margin 20px 0
+        margin        1em 0
 
     .install-logo
         display     flex
