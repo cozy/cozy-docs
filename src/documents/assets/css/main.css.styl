@@ -1,25 +1,5 @@
 @import 'nib'
 
-blue = #34a6ff
-red = #ffa634
-lightblue = #cbe4fb
-greyblue = #34a6bb
-green = #5c5
-orange = #fe8800
-lightorange = #ffc47f
-darkgrey = #333
-lightgrey = #ccc
-grey = #aaa
-red = #dd3333
-
-@font-face
-    font-family main-title
-    src url("../fonts/maven-pro-light-300.otf")
-
-@font-face
-    font-family main-body
-    src url("../fonts/signika-light.ttf")
-
 @font-face
     font-family: main-body
     src: url('/assets/fonts/source-sans-pro.ttf')
@@ -28,32 +8,156 @@ red = #dd3333
     font-family: main-code
     src: url('/assets/fonts/SourceCodePro-Regular.ttf')
 
+
+// VARIABLES
+//
+// ========================================================
+//rainbow
+blue  = #33A6FF
+red   = #FF3713
+green = #16D943
+
+// gray and dark gray
+lightcolor           = grey-01
+mediumcolor          = grey-04
+mediumcolor-contrast = grey-05
+darkcolor-contrast   = grey-07
+darkcolor            = grey-08
+
+// special cozy colors
+homeheadercolor = #363a46
+bluegreen       = #34A6BB
+lightblue       = #CBE4FB
+lightred        = #F4F4F4
+grey            = #666
+lightgrey       = lightcolor
+darkblue        = blue - 20%
+
+// 50 (well, in fact, mostly 8) shades of grey
+grey-01 = #ECEFF3
+grey-02 = #DFE4E9
+grey-03 = #C8D5DF
+grey-04 = #ACB8C5
+grey-05 = #92A0B2
+grey-06 = #748192
+grey-07 = #4F5B69
+grey-08 = #32363F
+
+
+// OLD ONES
+black       = grey-08
+midgrey     = grey-05
+
+
+
+
 body
-    font-family main-body
-    background-color darkgrey
+    font-family "Source Sans Pro", helvetica, arial, sans-serif
+    font-size   16px
+    color       black
 
 pre
 code
-    font-family main-code
-    margin-bottom 10px
+    font-family   main-code
 
 p
-    margin-bottom 5px
+    margin .25em 0
 
 .wrapper
-    margin-left auto
+    width        100%
+    max-width    50em
+    margin-left  auto
     margin-right auto
-    width 100%
-    max-width 960px
-    background-color white
-    border-bottom-left-radius 10px
-    border-bottom-right-radius 10px
-    padding-top 20px
+    margin-top   5em
 
 // Header styles
-.navbar
-    box-shadow 2px 0 2px rgba(10, 10, 10, 0.4)
+//
+// ========================================================
 
+// from home.css.styl
+.navbar
+    z-index         100
+    position        fixed
+    top             0
+    left            0
+    box-sizing      border-box
+    display         flex
+    justify-content space-between
+    align-items     center
+    width           100%
+    padding         1em 2em
+    background      white
+    border-bottom   1px solid grey-02
+
+    @media (max-width: 425px)
+        padding 1em
+
+    img
+        height 2em
+
+        @media (max-width: 425px)
+            height 1.5em
+
+    ul
+        list-style-type none
+        margin          0
+        padding         0
+
+    li
+        display inline
+
+        a
+            padding         .5em
+            color           grey-06
+            text-decoration none
+
+            &:hover
+                border-bottom 2px solid blue
+
+    .selected
+        color blue
+
+    .nav-toggle
+        display none
+        float right
+        border none
+        background none
+        color blue
+        font-size 30px
+
+
+    @media (max-width:580px)
+        .homepage &
+            transition transform 500ms
+            transform translateY(0)
+
+            &[aria-expanded=true]
+                transform translateY(290px)
+
+            nav
+                position absolute
+                bottom 100%
+                left 0
+                width 100%
+                padding 10px
+
+            .right
+                float none
+
+            li
+                display block
+
+            .lang-switcher
+                margin-top 10px
+                border-top 1px solid #eee
+
+                li
+                    display inline
+
+            .nav-toggle
+                display block
+
+.navbar
     li
         position relative
 
@@ -65,14 +169,11 @@ p
             color blue
             text-decoration none
 
-        a
-            font-size 18px
-
         .selected
             color black
             border-bottom 2px solid blue
 
-        @media (max-width: 1024px)
+        @media (max-width: 1023px)
             display none
 
 .dropdown-menu
@@ -207,30 +308,25 @@ aside
 
 // Content styles
 #main
+    padding 2em
 
-    &.w80
-        margin auto
+    @media (max-width: 425px)
+        padding 1em
 
-    &.w75
-        padding-left 35px
+    img
+        margin     .5em
+        box-shadow 0 2px 8px rgba(grey-06, .33)
 
     p
-        font-weight normal
-        font-size 15px
-        font-family main-body
-        margin-top 2px
-        color #444
-
         code
             padding 5px
             margin-bottom 15px
 
     ul
         margin .75em 0
+
         li
-            font-size 15px
-            font-family main-body
-            color #444
+            padding .25em 0
 
     ul.summary
         list-style-type none
@@ -292,64 +388,67 @@ aside
             background green + 30%
 
     h3
-        /* margin/padding is a trick to prevent the sticky header
-        from hiding the title */
-        margin-top -50px
-        padding-top 10px + 50px
-        margin-bottom 15px
-        font-family main-body
-        font-weight normal
+        margin-top    1em
+        margin-bottom 1em
+        font-weight   normal
 
     h2
-        margin-bottom 20px
-        font-family main-body
-        font-weight normal
-        font-size 30px
-
-        margin-top -50px
-        padding-top 50px + 50px
-        border-bottom 5px solid #eee
+        margin-bottom 1em
+        margin-top    1.5em
+        padding-top   1em
+        border-top    2px solid grey-01
+        font-weight   normal
+        font-size     2em
 
     h2:first-letter
         text-transform uppercase
 
     h1
-        font-family main-body
         margin-bottom 10px
         margin-top 0
+        font-weight normal
 
     a
     a:visited
-        color black
+        color           blue
+        text-decoration none
 
     a:hover
-        color blue - 40%
+        color darkblue
+        text-decoration underline
 
     pre.highlight
 
-        margin-top 0
-        margin-bottom 15px
+        margin-top    0
+        margin-bottom 1em
 
         code
-            padding 20px
-            border-radius 10px
-            line-height 20px
-            margin-top 10px
-            margin-bottom 30px
+            padding          1em
+            margin-top       10px
+            margin-bottom    30px
+            background-color black
+            border-radius    5px
+            line-height      1.5
 
     hr
-        border 0
-        height 0
+        border        0
+        height        0
         border-bottom 3px solid #eee
-        margin 20px 0
+        margin        1em 0
 
     .install-logo
+        display     flex
+        flex-wrap   wrap
+        align-items top
+
         a
-            display inline-block
-            width 128px
-            margin 0 30px
-            font-size 1.3em
-            color blue
+            display         block
+            width           9em
+            margin-bottom   1em
+            padding         0 1em
+            font-size       1.25em
+            color           blue
+            text-align      center
             text-decoration none
 
             .label
@@ -369,29 +468,32 @@ aside
 
 // Footer styles
 #footer
-    color white
-    text-align center
-    margin-bottom 10px
-    margin-top 30px
-    background lightgrey + 10%
-    border-bottom-left-radius 10px
-    border-bottom-right-radius 10px
+    display         flex
+    justify-content space-around
+    margin          1em auto
+    border-top      2px solid grey-02
 
-    ul
-        list-style-type none
-        padding 0
-        display inline-block
+    @media (max-width:450px)
+        flex-direction column
+        padding        .5em 0
 
     a
-        font-size 18px
+        display         flex
+        align-items     center
+        padding         1em
         text-decoration none
-        font-family main
-        color black
+        color           grey-06
 
-    a:hover
-        color blue - 40%
+        @media (max-width:450px)
+            padding .5em 1em
 
-.install-inner-logo 
+        &:hover
+            color blue
+
+        img
+            padding-right .5em
+
+.install-inner-logo
     float right
     margin-left 1em
     margin-bottom 1em

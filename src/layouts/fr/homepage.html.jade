@@ -7,53 +7,60 @@ html(lang="fr")
         meta(name="description", content="It is the place to find documentation about Cozy. Cozy brings is a personal cloud platform that allows you to store, sync and share data the way you want.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
         != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
+
     body.homepage
         .navbar.fixed(aria-expanded='false')
             a.nav-logo(href="/en/")
-                img(src='/assets/images/cozy-logo-gradient.svg', alt='Happy Cloud', width="50", height="38")
+                img(src='/assets/images/cozy-logo-docs.svg')
             nav
-                ul.navigation.right
-                    li: a(href="http://cozy.io/") Cozy.io
-                ul.lang-switcher
-                    li: a(href="/en/") EN
-                    li: a.selected(href="/fr/") FR
-            button.nav-toggle.icon-menu
+                ul
+                    li: a(href="http://cozy.io/") Site de Cozy
+                    li: a(href="/en/") English
+                    li: a.selected(href="/fr/") Français
 
-
-        header.line.clearfix#header
-            .line
-                .left.mr2.biglogo
-                    img(src='/assets/images/cozy-logo-gradient.svg', width="263", height="200", alt="Cozy logo")
-                .mod.main-text
-                    .mod.left
-                        h1.mt2.main-title
-                            span.title La documentation de Cozy
-                        p.h4-like
-                            | Informations sur la manière dont Cozy fonctionne
-            .line.image-links.mb2.mt4
-                .mod.w33.left
+        main.line.clearfix
+            section
+                h1
+                    | Documentation de Cozy
+                h2
+                    | Toutes les informations à propos de la configuration et du fonctionnement d'un Cozy.
+            section.main-actions
+                .w30
                     a.button(href="/fr/host/install/")
-                        | Installation
-                .mod.w33.left
+                        img(src='/assets/images/icons/icon-install.svg')
+                        h3 
+                            | Installer Cozy
+                        span 
+                            | Découvrez les 3 façons d'installer Cozy sur votre serveur
+                .w30
                     a.button(href="/fr/mobile/files.html")
-                        | Synchronisation
-                .mod.w33.left
+                        img(src='/assets/images/icons/icon-phone.svg')
+                        h3 
+                            | Synchroniser votre téléphone
+                        span 
+                            | Apprenez comment synchroniser votre mobile avec votre Cozy
+                .w30
                     a.button(href="https://dev.cozy.io/")
-                        | Développement d'applications (en)
+                        img(src='/assets/images/icons/icon-dev.svg')
+                        h3 
+                            | Développer une app Cozy
+                        span 
+                            | Tout ce dont vous avez besoin pour commencer une app ou un konnector
 
-            .line.external-links.txtcenter.mt4
-                p.txtcenter.mb2
-                    | Si vous avez besoin d'aide, vous avez trois moyens de
-                    | nous contacter : 
-                .mod.w33.left
-                    a.button(href="mailto:support@cozycloud.cc")
-                        | Ecrire à notre équipe support
-                .mod.w33.left
-                    a.button(href="https://forum.cozy.io")
-                        | Poster sur notre forum
-                .mod.w33.left
-                    a.button(href="https://webchat.freenode.net/?channels=cozycloud")
-                        | Chattez avec nous sur IRC
+            .line.external-links
+                p
+                    | Si vous avez des questions, 3 options s'offrent à vous :
+                ul
+                    li
+                        a.button(href="mailto:support@cozycloud.cc")
+                            | Écrire un email à notre support
+                    li
+                        a.button(href="https://forum.cozy.io")
+                            | Poster un message sur le forum
+                    li
+                        a.button(href="https://webchat.freenode.net/?channels=cozycloud")
+                            | Chatter avec nous sur IRC
+
 
         script(type='text/javascript').
             var _paq = _paq || [];
