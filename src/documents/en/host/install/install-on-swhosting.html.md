@@ -25,7 +25,7 @@ Product page: https://www.swhosting.com/en/cloud/aplicacion/cozy
 
 Click on the *Deploy Cozy on Cloud* button.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step1](/assets/images/swhosting-capture-1.png)
 </div>
 
@@ -34,7 +34,7 @@ Click on the *Deploy Cozy on Cloud* button.
 
 ## 2. Proceed to the billing.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/swhosting-capture-2.png)
 </div>
 

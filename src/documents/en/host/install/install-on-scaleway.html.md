@@ -27,7 +27,7 @@ Subscribe to [https://scaleway.com](https://scaleway.com) then connect to your
 account. Once connected, click on the *Create Server* button to start the
 Cozy creation process.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step1](/assets/images/scaleway-capture-1.png)
 </div>
 
@@ -39,7 +39,7 @@ Cozy creation process.
 Enter a name for your server in the dedicated field,  then scroll down to the
 image selection.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step2](/assets/images/scaleway-capture-2.png)
 </div>
 
@@ -50,7 +50,7 @@ image selection.
 Select the Cozy image in the imagehub tab, then click on the create server
 button. At the bottom of the page.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/scaleway-capture-3.png)
 </div>
 
@@ -63,7 +63,7 @@ minutes to one hour, then connect with your browser to the IP address given by
 the Scaleway team (https://ip.of.your.cozy/). You should see the registration
 screen of your Cozy. Let's enjoy your new personal server!
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/scaleway-capture-4.png)
 </div>
 

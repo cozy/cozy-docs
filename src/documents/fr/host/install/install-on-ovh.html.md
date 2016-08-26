@@ -28,7 +28,7 @@ Page produit : https://www.ovh.com/fr/vps/
 Sélectionnez le niveau de robustesse que vous préférez (les VPS SSD sont moins
 chers).
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step1](/assets/images/ovh-capture-1.png)
 </div>
 
@@ -41,7 +41,7 @@ Vous pouvez choisir ici parmi les différentes tailles de SSD et leur prix.
 Vous n'avez pas trop à vous soucier de la RAM. Chaque VPS propose 2Go de RAM,
 ce qui est suffisant pour faire tourner votre serveur personnel.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step2](/assets/images/ovh-capture-2.png)
 </div>
 
@@ -54,7 +54,7 @@ Dans la boite de sélection de la distribution, sélectionnez Cozycloud.
 
 NB : Cozy n'est disponible qu'au dessus une distribution Debian 8.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/ovh-capture-3.png)
 </div>
 
@@ -62,7 +62,7 @@ NB : Cozy n'est disponible qu'au dessus une distribution Debian 8.
 
 ## 4. Payez pour votre VPS
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/ovh-capture-4.png)
 </div>
 
