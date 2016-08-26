@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="Ubuntu logo" src="/assets/images/ubuntu-logo.png">
+<div class="install-inner-logo">
+<img alt="Ubuntu logo" src="/assets/images/host/ubuntu-logo.svg">
 </div>
 
 # Install Cozy on Ubuntu

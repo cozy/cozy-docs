@@ -8,7 +8,7 @@ toc: false
 
 
 <div class="install-inner-logo">
-<img alt="Logo de VirtualBox" src="/assets/images/virtualbox-logo.png">
+<img alt="Logo de VirtualBox" src="/assets/images/host/virtualbox-logo.svg">
 </div>
 
 # Installer Cozy sur VirtualBox

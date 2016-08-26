@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="PingFiles logo" src="/assets/images/pingfiles-logo.png">
+<div class="install-inner-logo">
+<img alt="PingFiles logo" src="/assets/images/host/pingfiles-logo.svg">
 </div>
 
 # Installer Cozy sur Pingfiles
@@ -24,14 +24,14 @@ de Pingfiles.**
 
 Lien vers la page VPS : https://www.pingfiles.com/serveur-prive-virtuel.html
 
-Choisissez le format de VPS qui vous convient. Nous recommandons 
+Choisissez le format de VPS qui vous convient. Nous recommandons
 d'utiliser la version Connect au minimum.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step1](/assets/images/pingfiles-capture-1.png)
 </div>
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step1](/assets/images/pingfiles-capture-2.png)
 </div>
 
@@ -42,7 +42,7 @@ d'utiliser la version Connect au minimum.
 Pour cela sélectionnez *Cozy Cloud - 64 bits* dans le champ Système
 d'exploitation puis cliquez sur *Continuer*.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/pingfiles-capture-3.png)
 </div>
 

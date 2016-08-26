@@ -6,11 +6,16 @@ menuOrder: 11
 toc: false
 ---
 
+
+<div class="install-inner-logo">
+<img alt="Cozy logo" src="/assets/images/host/cozy-logo.svg">
+</div>
+
 # Install Cozy step by step
 
 This documentation is a formal page aiming to summarize what components you
 need in order to run Cozy properly.
-You can reproduce those steps on any UNIX operating system (ArchLinux, 
+You can reproduce those steps on any UNIX operating system (ArchLinux,
 FreeBSD, etc.) and on any architecture (armhf, i386, etc.), as long as all
 the components are available for it.
 
@@ -163,7 +168,7 @@ chmod 700 /etc/cozy/controller.token
 
 4. Configure a new CouchDB admin
 ```bash
-# Ensure that a couchdb daemon is running, then 
+# Ensure that a couchdb daemon is running, then
 # request the database via HTTP to add a new admin
 service couchdb start
 curl -s -X PUT 127.0.0.1:5984/_config/admins/$(head -n1 /etc/cozy/couchdb.login) -d "\"$(tail -n1 /etc/cozy/couchdb.login)\""

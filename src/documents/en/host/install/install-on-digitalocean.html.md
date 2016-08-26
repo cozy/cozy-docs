@@ -7,14 +7,14 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="DigitalOcean logo" src="/assets/images/digitalocean-logo.png">
+<div class="install-inner-logo">
+<img alt="DigitalOcean logo" src="/assets/images/host/digitalocean-logo.svg">
 </div>
 
 # Install Cozy on a DigitalOcean VPS
 
-**DigitalOcean is a Virtual Private Server (VPS) provider which enables you to deploy**    
-**instances in a minute.**    
+**DigitalOcean is a Virtual Private Server (VPS) provider which enables you to deploy**
+**instances in a minute.**
 **You need a credited account to follow the steps below.**
 
 <br>
@@ -23,7 +23,7 @@ toc: false
 
 Cozy requires 1024MB RAM to run properly.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step1](/assets/images/digitalocean-capture-1.jpg)
 </div>
 
@@ -31,7 +31,7 @@ Cozy requires 1024MB RAM to run properly.
 
 Select `Debian 8 x64` in the distribution list.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step2](/assets/images/digitalocean-capture-2.jpg)
 </div>
 
@@ -40,7 +40,7 @@ Select `Debian 8 x64` in the distribution list.
 
 Find your server's IP address.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/digitalocean-capture-3.jpg)
 </div>
 
