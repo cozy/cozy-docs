@@ -7,14 +7,14 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="Logo de DigitalOcean" src="/assets/images/digitalocean-logo.png">
+<div class="install-inner-logo">
+<img alt="Logo de DigitalOcean" src="/assets/images/host/digitalocean-logo.svg">
 </div>
 
 # Installer Cozy sur un VPS DigitalOcean
 
-**DigitalOcean est un hébergeur de serveurs privés virtuels (VPS) américain, qui vous**    
-**permet de déployer des serveurs en une minute.**    
+**DigitalOcean est un hébergeur de serveurs privés virtuels (VPS) américain, qui vous**
+**permet de déployer des serveurs en une minute.**
 **Créez un compte DigitalOcean et créditez-le avant de continuer.**
 
 <br>

@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="OVH logo" src="/assets/images/ovh-logo.png">
+<div class="install-inner-logo">
+<img alt="OVH logo" src="/assets/images/host/ovh-logo.svg">
 </div>
 
 # Install Cozy on OVH
@@ -46,7 +46,7 @@ Chose among the different sizes of disk space and pricing. Every VPS proposes
 
 ## 3. Choose the distribution (OS) for your server.
 
-Select the Cozycloud image in the distribution Combobox. 
+Select the Cozycloud image in the distribution Combobox.
 
 NB: Cozy is only available above Debian 8 distribution.
 

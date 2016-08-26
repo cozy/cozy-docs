@@ -8,7 +8,7 @@ toc: false
 
 
 <div class="install-inner-logo">
-<img alt="Scaleway logo" src="/assets/images/scaleway-logo.png">
+<img alt="Scaleway logo" src="/assets/images/host/scaleway-logo.svg">
 </div>
 
 # Installer Cozy sur Scaleway
@@ -16,7 +16,7 @@ toc: false
 **Scaleway est un fournisseur de serveur privé.**
 
 **Il vous permet de déployer Cozy en quelques minutes en utilisant que le
-navigateur.**    
+navigateur.**
 
 **Pour suivre ces instructions vous avez besoin d'un compte configuré et
 crédité.**
@@ -26,7 +26,7 @@ crédité.**
 ## 1. Connectez vous à votre compte et créez un serveur.
 
 Inscrivez vous sur [https://scaleway.com](https://scaleway.com) puis connectez
-vous à votre compte. Une fois connectés, cliquez sur *Create Server* pour 
+vous à votre compte. Une fois connectés, cliquez sur *Create Server* pour
 démarrer le processus de création du Cozy.
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
@@ -49,7 +49,7 @@ panneau de sélection d'image.
 
 ## 3. Créez le serveur.
 
-Sélectionnez l'image Cozy dans l'interface Image Hub. Puis cliquez sur le 
+Sélectionnez l'image Cozy dans l'interface Image Hub. Puis cliquez sur le
 bouton *Create Server* situé en bas.
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">

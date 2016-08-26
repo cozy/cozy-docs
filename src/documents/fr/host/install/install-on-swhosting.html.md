@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="SWHosting logo" src="/assets/images/swhosting-logo.png">
+<div class="install-inner-logo">
+<img alt="SWHosting logo" src="/assets/images/host/swhosting-logo.svg">
 </div>
 
 # Installer Cozy sur SWHosting

@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="OVH logo" src="/assets/images/ovh-logo.png">
+<div class="install-inner-logo">
+<img alt="OVH logo" src="/assets/images/host/ovh-logo.svg">
 </div>
 
 # Installer Cozy sur un VPS OVH
@@ -17,7 +17,7 @@ toc: false
 <br>
 
 ** Cela vous permet de déployer Cozy en un instant en n'utilisant que votre
-nagvigateur.**    
+nagvigateur.**
 
 <br>
 
@@ -38,7 +38,7 @@ chers).
 ## 2. Donnez une taille à votre VPS
 
 Vous pouvez choisir ici parmi les différentes tailles de SSD et leur prix.
-Vous n'avez pas trop à vous soucier de la RAM. Chaque VPS propose 2Go de RAM, 
+Vous n'avez pas trop à vous soucier de la RAM. Chaque VPS propose 2Go de RAM,
 ce qui est suffisant pour faire tourner votre serveur personnel.
 
 <div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
@@ -68,7 +68,7 @@ NB : Cozy n'est disponible qu'au dessus une distribution Debian 8.
 
 ## 5. Attendez l'email de confirmation et commencez à utiliser Cozy.
 
-Vous allez recevoir un email confirmant que votre VPS a été livré. 
+Vous allez recevoir un email confirmant que votre VPS a été livré.
 
 Cet email contient les identifiants de votre Cozy. En effet, un utilisateur a
 automatiquement été créé par OVH. Donc une fois connecté sur votre Cozy avec

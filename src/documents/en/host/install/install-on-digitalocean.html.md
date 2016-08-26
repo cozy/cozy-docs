@@ -7,14 +7,14 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="DigitalOcean logo" src="/assets/images/digitalocean-logo.png">
+<div class="install-inner-logo">
+<img alt="DigitalOcean logo" src="/assets/images/host/digitalocean-logo.svg">
 </div>
 
 # Install Cozy on a DigitalOcean VPS
 
-**DigitalOcean is a Virtual Private Server (VPS) provider which enables you to deploy**    
-**instances in a minute.**    
+**DigitalOcean is a Virtual Private Server (VPS) provider which enables you to deploy**
+**instances in a minute.**
 **You need a credited account to follow the steps below.**
 
 <br>

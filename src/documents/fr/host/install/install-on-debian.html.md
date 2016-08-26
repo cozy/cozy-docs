@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="Logo de Debian" src="/assets/images/debian-logo.png">
+<div class="install-inner-logo">
+<img alt="Logo de Debian" src="/assets/images/host/debian-logo.svg">
 </div>
 
 # Installer Cozy sur Debian

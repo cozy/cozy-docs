@@ -7,17 +7,17 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="Debian logo" src="/assets/images/debian-logo.png">
+<div class="install-inner-logo">
+<img alt="Debian logo" src="/assets/images/host/debian-logo.svg">
 </div>
 
 # Install Cozy on Debian
 
 You need **Debian 8 Jessie (stable)** in order to proceed to theses steps.
 
-<br> 
-<br> 
-<br> 
+<br>
+<br>
+<br>
 
 ```
 root@debian-8:~# lsb_release -c
