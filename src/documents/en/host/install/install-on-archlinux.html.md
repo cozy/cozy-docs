@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="Archlinux logo" src="/assets/images/archlinux-logo.png">
+<div class="install-inner-logo">
+<img alt="Archlinux logo" src="/assets/images/host/archlinux-logo.svg">
 </div>
 
 # Install Cozy on Archlinux

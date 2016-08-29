@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="OVH logo" src="/assets/images/ovh-logo.png">
+<div class="install-inner-logo">
+<img alt="OVH logo" src="/assets/images/host/ovh-logo.svg">
 </div>
 
 # Install Cozy on OVH
@@ -26,7 +26,7 @@ Product page: https://www.ovh.com/us/vps/
 Select the level of robustness you prefer (SSD VPS are cheaper, CLOUD VPS are
 more stable).
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step1](/assets/images/ovh-capture-1.png)
 </div>
 
@@ -38,7 +38,7 @@ more stable).
 Chose among the different sizes of disk space and pricing. Every VPS proposes
 2GB of RAM which is enough for Cozy.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step2](/assets/images/ovh-capture-2.png)
 </div>
 
@@ -46,11 +46,11 @@ Chose among the different sizes of disk space and pricing. Every VPS proposes
 
 ## 3. Choose the distribution (OS) for your server.
 
-Select the Cozycloud image in the distribution Combobox. 
+Select the Cozycloud image in the distribution Combobox.
 
 NB: Cozy is only available above Debian 8 distribution.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/ovh-capture-3.png)
 </div>
 
@@ -58,7 +58,7 @@ NB: Cozy is only available above Debian 8 distribution.
 
 ## 4. Proceed to the billing.
 
-<div style="border: 3px solid #eee; text-align: center; border-radius: 5px">
+<div>
 ![step3](/assets/images/ovh-capture-4.png)
 </div>
 

@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="Logo de Docker" src="/assets/images/docker-logo.png">
+<div class="install-inner-logo">
+<img alt="Logo de Docker" src="/assets/images/host/docker-logo.svg">
 </div>
 
 # Installer Cozy sur Docker

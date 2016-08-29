@@ -8,7 +8,7 @@ toc: false
 
 
 <div class="install-inner-logo">
-<img alt="Raspberry logo" src="/assets/images/raspberry-logo.png">
+<img alt="Raspberry logo" src="/assets/images/host/raspberry-logo.svg">
 </div>
 
 # Install Cozy on a Raspberry Pi

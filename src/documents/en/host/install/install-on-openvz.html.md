@@ -7,8 +7,8 @@ toc: false
 ---
 
 
-<div class="install-inner-logo"> 
-<img alt="OpenVZ logo" src="/assets/images/openvz-logo.png">
+<div class="install-inner-logo">
+<img alt="OpenVZ logo" src="/assets/images/host/openvz-logo.svg">
 </div>
 
 # Install Cozy on OpenVZ
