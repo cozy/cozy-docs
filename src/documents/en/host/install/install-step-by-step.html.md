@@ -140,9 +140,9 @@ environment=NODE_ENV="production"
 
 1. 3 UNIX users to create (without home directory)
 ```
-useradd -M cozy
-useradd -M cozy-data-system
-useradd -M cozy-home
+useradd -MU cozy
+useradd -MU cozy-data-system
+useradd -MU cozy-home
 ```
 
 2. Create the `/etc/cozy` directory with the proper permissions
