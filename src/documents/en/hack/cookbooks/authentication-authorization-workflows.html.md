@@ -21,7 +21,7 @@ As you can see, there are 3 entry points, corresponding to 3 use cases. Let's de
 ### The user
 The classic use case is the user that authenticate with its password into Cozy and then access applications. How those applications are authorized or not to retrieve data is discussed later on this page.
 
-The user password is salted and hashed using [Bcrypt](http://en.wikipedia.org/wiki/Bcrypt) and is **never** stored as-in in Cozy.
+The user password is salted and hashed using [Bcrypt](http://en.wikipedia.org/wiki/Bcrypt) and is **never** stored as-is in Cozy.
 
 ### First-party client
 First-party clients are external clients that ask for the user's password for their initialization. The password shouldn't be stored but is used to register the first-party client as a "device" in the Data System. During the intialization, a unique token is generated and transmitted to the client that will use it to authenticate further requests.
