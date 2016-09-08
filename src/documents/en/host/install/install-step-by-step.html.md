@@ -37,8 +37,10 @@ You will need a few dependencies to run Cozy properly. Here are the Debian
 packages' names, feel free to adapt the names regarding your OS.
 
 ```
-python, openssl, git, imagemagick, curl , wget, sqlite3
+python, openssl, git, imagemagick, curl , wget, sqlite3, sudo
 ```
+
+(sudo is actually needed by controller and to install apps and cannot be replaced by using a root session)
 
 Some dependencies are required to **build** the Cozy components properly.
 
