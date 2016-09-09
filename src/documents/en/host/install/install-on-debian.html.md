@@ -92,3 +92,16 @@ The recommended packages are:
 ### How to regenerate the certificate?
 
     sudo openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/cozy/server.key -out /etc/cozy/server.crt -days 3650 -subj "/CN=YOUR.INSTANCE.URL"
+
+### Debian 8: wrong nodejs version?
+
+Cozy now requires nodejs 4.x, and actually the cozy_management installer includes a step that:
+* Includes nodesource.com repository in your APT sources
+* Tries to install nodejs package from this new source
+ 
+The thing is, Debian 8 (Jessie) already has its own repository for nodejs, containing a quite old version (0.10.x). If you have once installed that old version, the Cozy installer won't be able to install the newer, and the whole installation will crash, with no other message than:
+```
+update-alternatives: error: alternative link /usr/bin/node is already managed by nodejs
+dpkg: error processing package nodejs (--configure): subprocess installed post-installation script returned error exit status 2
+```
+Even if you used `apt-get purge nodejs` to uninstall the old nodejs, there are still some traces in the alternative system. So, to make sure there are no traces of nodejs left on your Debian, you can trust [this StackOverflow question](http://stackoverflow.com/questions/25094718/error-on-update-alternatives-when-installing-upgrading-nodejs-v0-10-30) and use `update-alternatives --remove-all nodejs`, then Cozy installation should be able to install nodejs 4.x properly and to continue as expected.
