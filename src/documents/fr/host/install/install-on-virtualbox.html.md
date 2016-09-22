@@ -24,7 +24,7 @@ toc: false
 
 * [Téléchargez](https://www.virtualbox.org/wiki/Downloads) et installez VirtualBox.
 * [Téléchargez](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz) et décompressez là (`xz -d cozy-virtualbox_4.0.1.tar.xz` sur Linux, utilisez votre logiciel de décompression préféré sur Windows et MacOs).
-* Téléchargez les signatures de l'image [ici](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512.asc) et [ici](https://files.cozycloud.cc/cozy/cozy-virtualbox_latestt.tar.xz.sha512)
+* Téléchargez les signatures de l'image [ici](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512.asc) et [ici](https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512)
 * Vérifiez l'intégrité de l'image :
 
 ```
