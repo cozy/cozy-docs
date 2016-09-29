@@ -117,6 +117,8 @@ you to manipulate (start/stop) them.
 
 On Cozy instances we typically use `supervisord` for that purpose.
 
+There are [several ways of installing supervisor](http://supervisord.org/installing.html), for example using `pip`:
+
 ```
 pip install supervisor
 ```
@@ -137,6 +139,10 @@ need here.
 environment=NODE_ENV="production"
 ```
 
+Don’t forget to [start the supervisor daemon](http://supervisord.org/running.html#running), for example:
+```
+/usr/bin/python /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+```
 
 ## Step 6: Initialize users, directories and tokens
 
