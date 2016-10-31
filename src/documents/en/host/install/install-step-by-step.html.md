@@ -183,7 +183,7 @@ curl -s -X PUT 127.0.0.1:5984/_config/admins/$(head -n1 /etc/cozy/couchdb.login)
 ```
 
 
-## Step 8: Install Cozy core modules
+## Step 7: Install Cozy core modules
 
 Now you should have everything you need to install the core NodeJS modules of
 Cozy.
@@ -217,7 +217,7 @@ cozy-monitor install home
 cozy-monitor install proxy
 ```
 
-## Step 9: Configure the instance
+## Step 8: Configure the instance
 
 1. Configure Cozy with your domain name
 ```bash
@@ -231,7 +231,7 @@ curl -X POST http://localhost:9103/api/instance -H "Content-Type: application/js
 ```
 This can be change afterwards from the "Settings" page in your Cozy.
 
-## Step 10: Configure a reverse proxy
+## Step 9: Configure a reverse proxy
 
 If you followed the previous steps carefuly, you should have a working Cozy
 by now.
