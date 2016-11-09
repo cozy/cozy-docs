@@ -55,4 +55,4 @@ Let us know on the [forum](https://forum.cozy.io/) you would like to see the app
 ## Related resources
 * [Playstore page](https://play.google.com/store/apps/details?id=io.cozy.files_client&hl=)
 * [Forum discussion](https://forum.cozy.io/t/i-tried-cozy-mobile/188)
-* [Android APK](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (latest version is v2.0.0, its sha1 is: fdcebc605dd4c022b5a43c3a1c67b10530e5be69)
+* [Android APK](https://files.cozycloud.cc/android/CozyMobile_lastest.apk) (latest version is v2.0.2, its sha1 is: cd346a19e24c25fc453722235811082dbf2814c9)
