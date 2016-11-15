@@ -63,6 +63,11 @@ minutes to one hour, then connect with your browser to the IP address given by
 the Scaleway team (https://ip.of.your.cozy/). You should see the registration
 screen of your Cozy. Let's enjoy your new personal server!
 
+
+## 5. Allow server to send emails.
+
+By default, outgoing connections to email servers are blocked. To allow your server to send emails (for example, if you forgot your password or when you share some content), you have to go to the Scaleway admin panel and [change the option](https://www.scaleway.com/faq/server/network/#-I-cannot-send-any-email).
+
 <div>
 ![step3](/assets/images/scaleway-capture-4.png)
 </div>

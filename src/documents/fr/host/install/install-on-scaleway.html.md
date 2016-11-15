@@ -65,6 +65,11 @@ Scaleway. Vous devrez attendre 20 minutes comme une heure avant de vous
 connecter. Une fois connecté avec votre navigateur à l'adresse IP donée par
 l'équipe Scaleway, vous devriez voir l'écran d'enregistrement du Cozy !
 
+
+## 5. Activez l’envoi de courriels.
+
+Par défaut, les serveurs Scaleway ne sont pas autorisés à envoyer des courriels. Pour permettre à votre Cozy d’envoyer des messages (par exemple si vous avez oublié votre mot de passe ou pour partager des contenus), vous devez aller dans l’interface d’administration de Scaleway et [débloquer l’envoi des courriels](https://www.scaleway.com/faq/server/network/#-I-cannot-send-any-email).
+
 <div>
 ![step3](/assets/images/scaleway-capture-4.png)
 </div>
