@@ -56,10 +56,10 @@ ssh root@server.ip
 
 ```
 # Import the repository public key
-wget -O - http://debian.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
+wget https://debian.cozycloud.cc/cozy.gpg.key -O /etc/apt/trusted.gpg.d/cozy.gpg
 
 # Add the Cozy repository to the software sources
-echo 'deb http://debian.cozycloud.cc/debian jessie cozy' \
+echo 'deb https://debian.cozycloud.cc/debian jessie cozy' \
  > /etc/apt/sources.list.d/cozy.list
 
 # Install Cozy
