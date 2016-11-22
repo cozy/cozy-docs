@@ -34,7 +34,7 @@ Cozy needs a web server. By default, we will install and configure Nginx, but if
     ```
 2. Import the repository public key
     ```
-    wget -O - https://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | sudo apt-key add -
+    wget https://debian.cozycloud.cc/cozy.gpg.key -O /etc/apt/trusted.gpg.d/cozy.gpg
     ```
 3. Add the Cozy repository to your software sources
     ```

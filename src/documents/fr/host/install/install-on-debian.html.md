@@ -44,7 +44,7 @@ Cozy a besoin d’un serveur web. Par défaut, nous installons et configurons un
     ```
 2. Importez la clé publique du dépôt
     ```
-    wget -O - https://debian.cozycloud.cc/cozy.gpg.key 2>/dev/null | apt-key add -
+    wget https://debian.cozycloud.cc/cozy.gpg.key -O /etc/apt/trusted.gpg.d/cozy.gpg
     ```
 3. En option, vérifiez que la clé importée est valide
     ```
@@ -104,6 +104,6 @@ Les versions récentes de Cozy nécessitent nodejs 4.x, et Cozy est tellement sy
 Le problème, c'est que Debian 8 (Jessie) propose déjà, dans ses dépôts standards, une version de nodejs, malheureusement obsolète (0.10.x) ; et que si vous avez eu le malheur, par le passé, d'installer nodejs via le dépôt standard de Debian, cette version, même désinstallée via un bon vieux `apt-get purge nodejs`, entrera en conflit avec l'installation de nodejs 4.x, ce qui fera planter toute l'installation de Cozy. De plus, le message d'erreur que vous rencontrerez sera très bas niveau :
 ```
 update-alternatives: error: alternative link /usr/bin/node is already managed by nodejs
-dpkg: error processing package nodejs (--configure): subprocess installed post-installation script returned error exit status 
+dpkg: error processing package nodejs (--configure): subprocess installed post-installation script returned error exit status
 ```
 La solution (qui nous vient de [cette question StackOverflow](http://stackoverflow.com/questions/25094718/error-on-update-alternatives-when-installing-upgrading-nodejs-v0-10-30)) : `update-alternatives --remove-all nodejs`, qui supprime toute trace de nodejs 0.10.x de votre système et laisse ainsi la voie libre à Cozy pour installer nodejs 4.x.

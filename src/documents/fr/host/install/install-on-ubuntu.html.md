@@ -34,7 +34,7 @@ Cozy a besoin d’un serveur web. Par défaut, nous installons et configurons un
     ```
 2. Importez la clé publique du dépôt
     ```
-    wget -O - https://ubuntu.cozycloud.cc/cozy.gpg.key 2>/dev/null | sudo apt-key add -
+    wget https://debian.cozycloud.cc/cozy.gpg.key -O /etc/apt/trusted.gpg.d/cozy.gpg
     ```
 3. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
