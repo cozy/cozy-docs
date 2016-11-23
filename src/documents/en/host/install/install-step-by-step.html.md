@@ -220,13 +220,20 @@ cozy-monitor install proxy
 
 ## Step 9: Configure a reverse proxy
 
-If you followed the previous steps carefuly, you should have a working Cozy
+If you followed the previous steps carefully, you should have a working Cozy
 by now.
-The Cozy Proxy listens locally on the port `9104`, and if you want to open this
-port to the outside world, or on a specific domain name, you will need to
-configure a reverse proxy.
 
-Here is an example Nginx location for **Nginx**:
+The Cozy Proxy listens locally on the port `9104`.
+
+To protect your privacy, Cozy only accepts connections through https. Every
+request sent through http will be redirected to the login page. So if you want
+to check the installation, you can go to http://localhost:9104 but you won’t
+be able to connect: you first need to setup TLS.
+
+The recommended way to expose your Cozy to the outside world is to use a
+reverse proxy (an alternative solution is documented below)
+
+Here is an example `location` directive for **Nginx**:
 
 ```nginx
 location / {
@@ -239,7 +246,9 @@ location / {
     proxy_set_header Connection "upgrade";
 }
 ```
-Note that a standard **Apache** reverse proxy will work too.
+
+Note that a standard **Apache** reverse proxy will work too, there’s a
+[sample Apache configuration file](https://github.com/cozy/cozy-debian/blob/master/apache-config).
 
 ---
 
@@ -262,14 +271,29 @@ https://github.com/cozy-labs/cozy-docker/blob/master/nginx/cozy-ssl
 
 **Do not forget to add a `server_name` directive if you have multiple virtualhosts.**
 
+### Without a reverse proxy
+
+It is recommended to run Cozy Proxy behind a reverse proxy that does the
+SSL/TLS stuff. But if you don’t want to use a reverse proxy (low memory server
+for example), you can also [configure the cozy-proxy itself to listen on
+https](https://github.com/cozy/cozy-proxy/#listen-on-https). This will allow
+to connect on https://localhost.
+
+
+## Step 10: Install cozy_management
+
+[cozy_management](https://github.com/cozy/python_cozy_management) is an
+optional tool that provide useful commands that ease the management of
+a Cozy server. This tool has been designed to work on a standard Cozy
+install, and some commands may not work on custom installations. Just
+[give it a try](https://github.com/cozy/python_cozy_management#install).
+It is mostly a wrapper around shell commands, so if some commands doesn’t
+work, you can probably read the code and adapt the commands to your
+configuration.
 
 ## Troubleshooting
 
-A troobleshooting guide is available on the Cozy Forum:
-
-https://forum.cozy.io/t/diagnostiquer-letat-dun-cozy/775
-
-(in french only for now)
+Please refer to [the dedicated section](https://docs.cozy.io/en/host/troubleshooting.html).
 
 ---
 
