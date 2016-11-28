@@ -15,6 +15,13 @@ If you installed Cozy in a virtual machine or in a container, you just have
 to remove that virtual machine or container.
 
 
+### Automatic uninstall
+
+```bash
+dpkg -l "*cozy*" | grep ^ii | awk '{print $2}' | xargs apt-get autoremove --purge -y
+```
+
+
 ## Manual uninstall
 
 To remove every Cozy files, you can run the following commands:
