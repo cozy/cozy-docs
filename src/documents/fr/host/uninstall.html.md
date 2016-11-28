@@ -18,6 +18,12 @@ il suffit de les supprimer.
 
 ## Instance sur un serveur
 
+### Suppression automatique
+
+```bash
+dpkg -l "*cozy*" | grep ^ii | awk '{print $2}' | xargs apt-get autoremove --purge -y
+```
+
 ### Suppression manuelle
 
 Pour supprimer toute trace de Cozy sur votre serveur, vous pouvez
