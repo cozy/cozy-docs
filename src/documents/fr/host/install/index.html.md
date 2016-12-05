@@ -70,9 +70,6 @@ Un minimum de RAM est tout de même recommandé: **1024 Mo** semble être un bon
   <a href="install-on-docker.html">
     ![Docker](/assets/images/host/docker-logo.svg)<div class="label">Docker</div>
   </a>
-  <a href="install-on-openvz.html">
-    ![OpenVZ](/assets/images/host/openvz-logo.svg)<div class="label">OpenVZ</div>
-  </a>
 </div>
 <br>
 <br>

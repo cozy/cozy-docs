@@ -72,9 +72,6 @@ A minimum amount of RAM is required though: **1024MB** is a good start for 6 Coz
   <a href="install-on-docker.html">
     ![Docker](/assets/images/host/docker-logo.svg)<div class="label">Docker</div>
   </a>
-  <a href="install-on-openvz.html">
-    ![OpenVZ](/assets/images/host/openvz-logo.svg)<div class="label">OpenVZ</div>
-  </a>
 </div>
 
 </form>
