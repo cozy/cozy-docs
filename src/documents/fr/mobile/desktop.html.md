@@ -32,6 +32,8 @@ sudo apt-get install cozy-desktop-gui
 
 Si vous êtes sous Arch, un de nos contributeurs maintient https://aur.archlinux.org/packages/cozy-desktop-gui/.
 
+La version complète de `cozy-desktop` utilise [Electron](http://electron.atom.io/), qui n’est pas encore disponible pour toutes les distributions GNU/Linux. Si vous utilisez une distribution où Electron n’est pas disponible, ou préférez la ligne de commande, vous pouvez installer la [version en ligne de commande de `cozy-desktop`](https://github.com/cozy-labs/cozy-desktop#cli-install). Elle ne dépend que de Node 4.
+
 ### OSX
 
 A venir ... :)
