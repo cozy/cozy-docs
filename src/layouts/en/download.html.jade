@@ -1,0 +1,77 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        link(rel="shortcut icon", href="/assets/images/favicon.png")
+        title="Cozy Documentation"
+        meta(name="description", content="It is the place to find Apps from Cozy. Cozy brings is a personal cloud platform that allows you to store, sync and share data the way you want.")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+        != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
+
+    body.homepage
+        .navbar.fixed(aria-expanded='false')
+            a.nav-logo(href="/en/")
+                img(src='/assets/images/cozy-logo-docs.svg')
+            nav
+                ul
+                    li: a(href="http://cozy.io/") Cozy's site
+                    li: a.selected(href="/en/download/") English
+                    li: a(href="/fr/download/") Français
+
+        main.line.clearfix
+            section
+                h1
+                    | Cozy apps
+                    
+            h2.mt6.txtcenter
+                | Desktop apps
+            section.main-actions.mt3
+                .w40
+                    a.button(href="https://nuts.cozycloud.cc/download/channel/beta/osx")
+                        img(src='/assets/images/icons/icon-macos.svg')
+                        h3 
+                            | macOS
+                        span 
+                            | Minimum version required 10.12.x Sierra
+                .w40
+                    a.button(href="https://nuts.cozycloud.cc/download/channel/beta/win")
+                        img(src='/assets/images/icons/icon-windows.svg', class='wide')
+                        h3 
+                            | Windows
+                        span 
+                            | Minimum version required Windows 10
+                            
+            h2.mt6.txtcenter
+                | Mobile apps
+            section.main-actions.mt3
+                .w40
+                    a.button(href="https://itunes.apple.com/fr/app/cozy-drive/id1224102389?mt=8")
+                        img(src='/assets/images/icons/icon-ios.svg')
+                        h3 
+                            | iOS
+                        span 
+                            | Minimum version required iOS 10
+                .w40
+                    a.button(href="https://play.google.com/store/apps/details?id=io.cozy.drive.mobile")
+                        img(src='/assets/images/icons/icon-android.svg')
+                        h3 
+                            | Android
+                        span 
+                            | Minimum version required Android 5.0.0
+
+
+        script(type='text/javascript').
+            var _paq = _paq || [];
+            _paq.push(['disableCookies']);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+            var u="//piwik.cozycloud.cc/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', 7]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        noscript
+            p
+                img(src="https://piwik.cozycloud.cc/piwik.php?idsite=7", style="border:0", alt="")
