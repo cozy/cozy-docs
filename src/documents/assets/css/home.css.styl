@@ -38,6 +38,7 @@ grey-05 = #92A0B2
 grey-06 = #748192
 grey-07 = #4F5B69
 grey-08 = #32363F
+grey-09 = #95999d
 
 
 // OLD ONES
@@ -134,8 +135,17 @@ button:active
 .mt3
     margin-top: 0px
 
+.mt1-5
+    margin-top: 15px
+
 .mt3
     margin-top: 30px
+
+.mt4
+    margin-top: 40px
+
+.mb4
+    margin-bottom: 40px
 
 .mt6
     margin-top: 60px
@@ -198,12 +208,66 @@ main
         text-decoration none
         transition      all 0.2s ease-out
 
+    &.main-download
+        max-width     92em
+        margin-left   auto
+        margin-right  auto
+
+        h1
+            font-size 2em
+
+        h2
+            color        grey-08
+            font-weight  bold
+
+        .btn
+            display inline-block
+
+            &.txt
+                border-radius     2px
+                padding           1em
+                background-color  #297ef2
+                color             white
+                font-weight       bold
+                line-height       1.5
+                text-transform    uppercase
+                &--mac:before
+                    content         ''
+                    display         inline-block
+                    width           1.25em
+                    height          1.25em
+                    margin-right    1em
+                    background      url('/assets/images/icons/icon-16-apple.svg') center 0 no-repeat
+                    vertical-align  -.125em
+                &--win:before
+                    content         ''
+                    display         inline-block
+                    width           1.25em
+                    height          1.25em
+                    margin-right    1em
+                    background      url('/assets/images/icons/icon-16-windows.svg') center 0 no-repeat
+                    vertical-align  -.25em
+
+            img
+                display  block
+                width    190px
+
+        .main-actions
+            h3
+                color      grey-08
+                font-size  1em
+            .w50
+                margin-bottom 2em
+
+        .os
+            max-height 3em
+
+        .version
+            color grey-09
+
     .main-actions
         display         flex
         justify-content space-between
-        max-width       60em
-        margin-left     auto
-        margin-right    auto
 
         @media (max-width: 960px)
             flex-direction column

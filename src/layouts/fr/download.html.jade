@@ -18,46 +18,49 @@ html(lang="fr")
                     li: a(href="/en/download/") English
                     li: a.selected(href="/fr/download/") Français
 
-        main.line.clearfix
-            section
+        main.line.clearfix.main-download
+            section.mb4
                 h1
-                    | Applications Cozy
+                    | Utilisez Cozy Drive sur tout support
                     
-            h2.mt6.txtcenter
-                | Les applications Desktop
+            h2.mt4
+                | Les applications Cozy Drive sur ordinateur
             section.main-actions.mt3
-                .w40
-                    a.button(href="https://nuts.cozycloud.cc/download/channel/beta/osx")
-                        img(src='/assets/images/icons/icon-macos.svg')
-                        h3 
-                            | macOS
-                        span 
-                            | Version minimum requise 10.12.x Sierra
-                .w40
-                    a.button(href="https://nuts.cozycloud.cc/download/channel/beta/win")
-                        img(src='/assets/images/icons/icon-windows.svg', class='wide')
-                        h3 
-                            | Windows
-                        span 
-                            | Version minimum requise Windows 10
-                            
-            h2.mt6.txtcenter
-                | Les applications Mobile
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-apple.svg')
+                    h3 
+                        | Cozy Drive pour macOS
+                    div.version
+                        | Version minimum requise 10.12.x Sierra
+                    a.btn.txt.txt--mac.mt1-5(href="https://nuts.cozycloud.cc/download/channel/beta/osx")
+                        | Télécharger pour MacOS
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-windows.svg', class='wide')
+                    h3 
+                        | Cozy Drive pour Windows
+                    div.version
+                        | Version minimum requise Windows 10
+                    a.btn.txt.txt--win.mt1-5(href="https://nuts.cozycloud.cc/download/channel/beta/win")
+                        | Télécharger pour Windows
+            h2.mt4
+                | Les applications Cozy Drive sur mobile
             section.main-actions.mt3
-                .w40
-                    a.button(href="https://itunes.apple.com/fr/app/cozy-drive/id1224102389?mt=8")
-                        img(src='/assets/images/icons/icon-ios.svg')
-                        h3 
-                            | iOS
-                        span 
-                            | Version minimum requise iOS 10
-                .w40
-                    a.button(href="https://play.google.com/store/apps/details?id=io.cozy.drive.mobile")
-                        img(src='/assets/images/icons/icon-android.svg')
-                        h3 
-                            | Android
-                        span 
-                            | Version minimum requise Android 5.0.0
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-apple.svg')
+                    h3 
+                        | Cozy Drive pour iOS
+                    div.version 
+                        | Version minimum requise iOS 10
+                    a.btn.mt1-5(href="https://itunes.apple.com/fr/app/cozy-drive/id1224102389?mt=8")
+                        img(src="/assets/images/icons/download-button_apple.svg", height="56", width="189")
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-android.svg')
+                    h3 
+                        | Cozy Drive pour Android
+                    div.version 
+                        | Version minimum requise Android 5.0.0
+                    a.btn.mt1-5(href="https://play.google.com/store/apps/details?id=io.cozy.drive.mobile")
+                        img(src="/assets/images/icons/download-button_android.png", height="56", width="189")
 
 
         script(type='text/javascript').

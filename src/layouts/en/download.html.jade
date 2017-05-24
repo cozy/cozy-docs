@@ -18,46 +18,49 @@ html(lang="fr")
                     li: a.selected(href="/en/download/") English
                     li: a(href="/fr/download/") Français
 
-        main.line.clearfix
-            section
+        main.line.clearfix.main-download
+            section.mb4
                 h1
-                    | Cozy apps
+                    | Use Cozy Drive on all of your devices
                     
-            h2.mt6.txtcenter
-                | Desktop apps
+            h2.mt4
+                | Cozy Drive apps for desktop
             section.main-actions.mt3
-                .w40
-                    a.button(href="https://nuts.cozycloud.cc/download/channel/beta/osx")
-                        img(src='/assets/images/icons/icon-macos.svg')
-                        h3 
-                            | macOS
-                        span 
-                            | Minimum version required 10.12.x Sierra
-                .w40
-                    a.button(href="https://nuts.cozycloud.cc/download/channel/beta/win")
-                        img(src='/assets/images/icons/icon-windows.svg', class='wide')
-                        h3 
-                            | Windows
-                        span 
-                            | Minimum version required Windows 10
-                            
-            h2.mt6.txtcenter
-                | Mobile apps
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-apple.svg')
+                    h3 
+                        | Cozy Drive for macOS
+                    div.version
+                        | Minimum version required 10.12.x Sierra
+                    a.btn.txt.txt--mac.mt1-5(href="https://nuts.cozycloud.cc/download/channel/beta/osx")
+                        | Download for MacOS
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-windows.svg', class='wide')
+                    h3 
+                        | Cozy Drive for Windows
+                    div.version
+                        | Minimum version required Windows 10
+                    a.btn.txt.txt--win.mt1-5(href="https://nuts.cozycloud.cc/download/channel/beta/win")
+                        | Download for Windows
+            h2.mt4
+                | Cozy Drive apps for mobile
             section.main-actions.mt3
-                .w40
-                    a.button(href="https://itunes.apple.com/fr/app/cozy-drive/id1224102389?mt=8")
-                        img(src='/assets/images/icons/icon-ios.svg')
-                        h3 
-                            | iOS
-                        span 
-                            | Minimum version required iOS 10
-                .w40
-                    a.button(href="https://play.google.com/store/apps/details?id=io.cozy.drive.mobile")
-                        img(src='/assets/images/icons/icon-android.svg')
-                        h3 
-                            | Android
-                        span 
-                            | Minimum version required Android 5.0.0
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-apple.svg')
+                    h3 
+                        | Cozy Drive for iOS
+                    div.version 
+                        | Minimum version required iOS 10
+                    a.btn.mt1-5(href="https://itunes.apple.com/fr/app/cozy-drive/id1224102389?mt=8")
+                        img(src="/assets/images/icons/download-button_apple.svg", height="56", width="189")
+                .w50
+                    img.os(src='/assets/images/icons/icon-48-android.svg')
+                    h3 
+                        | Cozy Drive for Android
+                    div.version 
+                        | Minimum version required Android 5.0.0
+                    a.btn.mt1-5(href="https://play.google.com/store/apps/details?id=io.cozy.drive.mobile")
+                        img(src="/assets/images/icons/download-button_android.png", height="56", width="189")
 
 
         script(type='text/javascript').
