@@ -38,7 +38,7 @@ Cozy needs a web server. By default, we will install and configure Nginx, but if
     ```
 3. Add the Cozy repository to your software sources
     ```
-    echo 'deb https://ubuntu.cozycloud.cc/debian trusty cozy' \
+    echo 'deb [arch=amd64] https://ubuntu.cozycloud.cc/debian trusty cozy' \
     | sudo tee /etc/apt/sources.list.d/cozy.list > /dev/null
     ```
 4. Install Cozy

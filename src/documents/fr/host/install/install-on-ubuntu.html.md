@@ -38,7 +38,7 @@ Cozy a besoin d’un serveur web. Par défaut, nous installons et configurons un
     ```
 3. Ajoutez le dépôt Cozy à vos sources de logiciels.
     ```
-    echo 'deb https://ubuntu.cozycloud.cc/debian trusty cozy' \
+    echo 'deb [arch=amd64] https://ubuntu.cozycloud.cc/debian trusty cozy' \
         | sudo tee /etc/apt/sources.list.d/cozy.list > /dev/null
     ```
 4. Installez Cozy
