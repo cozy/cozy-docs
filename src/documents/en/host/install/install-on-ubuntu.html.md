@@ -13,6 +13,13 @@ toc: false
 
 # Install Cozy on Ubuntu
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!**
+
+---
+
+
 You need **Ubuntu 14.04 Trusty Tahr** in order to proceed to theses steps.
 
 (It has been reported that the Ubuntu repository may also work for installing Cozy on GNU/Linux Mint)

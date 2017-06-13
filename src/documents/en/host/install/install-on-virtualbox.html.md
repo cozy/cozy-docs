@@ -13,6 +13,13 @@ toc: false
 
 # Install Cozy on VirtualBox
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!**
+
+---
+
+
 **Usage of the VirtualBox image below is not recommended in a production environment.**
 **See the [Debian installation guide](install-on-debian.html) for production.**
 

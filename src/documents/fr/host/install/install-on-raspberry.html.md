@@ -13,6 +13,13 @@ toc: false
 
 # Installer Cozy sur un Raspberry Pi
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">Cette documentation concerne l’installation de l’ancien prototype de Cozy, aujourd’hui déprécié et dont nous n’assurons plus le support. La documentation d’installation de la nouvelle version sera disponible très bientôt.**
+
+---
+
+
 **Vous aurez besoin du dernier [Raspberry Pi 2 ou Raspberry Pi 3](http://fr.wikipedia.org/wiki/Raspberry_Pi)
 pour y faire tourner Cozy efficacement.**
 
