@@ -13,6 +13,13 @@ toc: false
 
 # Install Cozy on a Raspberry Pi
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!**
+
+---
+
+
 **You will need the latest [Raspberry Pi 2 or Raspberry Pi 3](http://en.wikipedia.org/wiki/Raspberry_Pi) to be able to run Cozy properly.**
 
 **A class10 high-speed SD card is also highly recommended.**

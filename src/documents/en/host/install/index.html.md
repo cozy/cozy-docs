@@ -10,6 +10,12 @@ urls: ["/host/"]
 
 # Install Cozy
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!**
+
+---
+
 You have several ways to install Cozy on your own. Cozy is architecture and platform agnostic, since it is basically composed of Node.JS daemons on top of CouchDB.
 
 A minimum amount of RAM is required though: **1024MB** is a good start for 6 Cozy applications running simultaneously.

@@ -13,6 +13,13 @@ toc: false
 
 # Install Cozy step by step
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!**
+
+---
+
+
 This documentation is a formal page aiming to summarize what components you
 need in order to run Cozy properly.
 You can reproduce those steps on any UNIX operating system (ArchLinux,

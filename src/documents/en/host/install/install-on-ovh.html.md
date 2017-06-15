@@ -13,6 +13,13 @@ toc: false
 
 # Install Cozy on OVH
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!**
+
+---
+
+
 **Start quickly using Cozy with OVH pre-configured virtual private servers.**
 
 **It's easy. Everything can be done from the browser.**

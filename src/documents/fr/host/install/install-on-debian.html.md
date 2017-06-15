@@ -13,6 +13,13 @@ toc: false
 
 # Installer Cozy sur Debian
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">Cette documentation concerne l’installation de l’ancien prototype de Cozy, aujourd’hui déprécié et dont nous n’assurons plus le support. La documentation d’installation de la nouvelle version sera disponible très bientôt.**
+
+---
+
+
 Vous devez être sous **Debian 8 Jessie (stable)** pour pouvoir suivre les étapes ci-dessous.
 <br>
 <br>

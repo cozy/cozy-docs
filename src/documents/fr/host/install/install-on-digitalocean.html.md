@@ -13,6 +13,13 @@ toc: false
 
 # Installer Cozy sur un VPS DigitalOcean
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">Cette documentation concerne l’installation de l’ancien prototype de Cozy, aujourd’hui déprécié et dont nous n’assurons plus le support. La documentation d’installation de la nouvelle version sera disponible très bientôt.**
+
+---
+
+
 **DigitalOcean est un hébergeur de serveurs privés virtuels (VPS) américain, qui vous**
 **permet de déployer des serveurs en une minute.**
 **Créez un compte DigitalOcean et créditez-le avant de continuer.**

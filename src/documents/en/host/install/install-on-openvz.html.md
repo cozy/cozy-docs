@@ -13,6 +13,13 @@ toc: false
 
 # Install Cozy on OpenVZ
 
+---
+
+** <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!**
+
+---
+
+
 We assume that you have already installed OpenVZ utilities.
 
 ---
