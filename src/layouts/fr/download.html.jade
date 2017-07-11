@@ -2,16 +2,16 @@ doctype html
 html(lang="fr")
     head
         meta(charset="UTF-8")
-        link(rel="shortcut icon", href="/assets/images/favicon.png")
+        link(rel="shortcut icon", href="/cozy-docs/assets/images/favicon.png")
         title="Cozy Documentation"
         meta(name="description", content="It is the place to find Apps from Cozy. Cozy brings is a personal cloud platform that allows you to store, sync and share data the way you want.")
         meta(name="viewport", content="width=device-width,initial-scale=1")
-        != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/icomoon.css', '/assets/css/home.css']).toHTML()
+        != getBlock('styles').add(['/cozy-docs/vendors/css/knacss.css', '/cozy-docs/vendors/css/icomoon.css', '/cozy-docs/assets/css/home.css']).toHTML()
 
     body.homepage
         .navbar.fixed(aria-expanded='false')
             a.nav-logo(href="/en/")
-                img(src='/assets/images/cozy-logo-docs.svg')
+                img(src='/cozy-docs/assets/images/cozy-logo-docs.svg')
             nav
                 ul
                     li: a(href="http://cozy.io/") Site de Cozy
@@ -27,27 +27,27 @@ html(lang="fr")
                 | Les applications Cozy Drive sur mobile
             section.main-actions.mt3
                 .w50
-                    img.os(src='/assets/images/icons/icon-48-apple.svg')
+                    img.os(src='/cozy-docs/assets/images/icons/icon-48-apple.svg')
                     h3 
                         | Cozy Drive pour iOS
                     div.version 
                         | Version minimum requise iOS 10
                     a.btn.mt1-5(href="https://itunes.apple.com/fr/app/cozy-drive/id1224102389?mt=8")
-                        img(src="/assets/images/icons/download-button_apple.svg", height="56", width="189")
+                        img(src="/cozy-docs/assets/images/icons/download-button_apple.svg", height="56", width="189")
                 .w50
-                    img.os(src='/assets/images/icons/icon-48-android.svg')
+                    img.os(src='/cozy-docs/assets/images/icons/icon-48-android.svg')
                     h3 
                         | Cozy Drive pour Android
                     div.version 
                         | Version minimum requise Android 5.0.0
                     a.btn.mt1-5(href="https://play.google.com/store/apps/details?id=io.cozy.drive.mobile")
-                        img(src="/assets/images/icons/download-button_android.png", height="56", width="189")      
+                        img(src="/cozy-docs/assets/images/icons/download-button_android.png", height="56", width="189")      
       
             h2.mt4
                 | Les applications Cozy Drive sur ordinateur
             section.main-actions.mt3
                 .w50
-                    img.os(src='/assets/images/icons/icon-48-apple.svg')
+                    img.os(src='/cozy-docs/assets/images/icons/icon-48-apple.svg')
                     h3 
                         | Cozy Drive pour macOS
                     div.version
@@ -55,7 +55,7 @@ html(lang="fr")
                     a.btn.txt.txt--mac.mt1-5(href="https://nuts.cozycloud.cc/download/channel/beta/osx")
                         | Télécharger pour MacOS
                 .w50
-                    img.os(src='/assets/images/icons/icon-48-windows.svg', class='wide')
+                    img.os(src='/cozy-docs/assets/images/icons/icon-48-windows.svg', class='wide')
                     h3 
                         | Cozy Drive pour Windows
                     div.version

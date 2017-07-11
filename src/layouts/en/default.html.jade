@@ -15,7 +15,7 @@ html(lang='en')
       title
         block title
           = document.title
-      != getBlock('styles').add(['/vendors/css/knacss.css', '/vendors/css/sunburst.css', '/assets/css/main.css']).toHTML()
+      != getBlock('styles').add(['/cozy-docs/vendors/css/knacss.css', '/cozy-docs/vendors/css/sunburst.css', '/assets/css/main.css']).toHTML()
 
   body
     .navbar.fixed
@@ -88,7 +88,7 @@ html(lang='en')
             img(src='/assets/images/icons/icon-cloud.svg')
             | Cozy's site
 
-    != getBlock('scripts').add(['/vendors/javascripts/jquery-2.0.3.min.js', '/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
+    != getBlock('scripts').add(['/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js', '/cozy-docs/vendors/javascripts/bootstrap.min.js', '/assets/javascripts/main.js']).toHTML()
 
     script(type='text/javascript').
         var _paq = _paq || [];
