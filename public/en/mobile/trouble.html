@@ -1,0 +1,108 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Troubleshooting
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/mobile/files.html">Mobile</a>
+        </li>
+        <li><a href="/en/mobile/desktop.html">Desktop</a>
+        </li>
+        <li><a href="/en/mobile/calendar.html">Calendar</a>
+        </li>
+        <li><a href="/en/mobile/contacts.html">Contacts</a>
+        </li>
+        <li><a href="/en/mobile/trouble.html" class="selected">Troubleshooting</a>
+        </li>
+        <li><a href="/en/mobile/import-google.html">Google import</a>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html" class="selected">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><h1 id="troubleshooting">Troubleshooting</h1>
+<h2 id="send-debug-informations">Send debug informations</h2>
+<p>When you hit a problem with the application, you can send us a message with the application logs, so we can try to understand and fix the problem.
+Here’s how to send the logs:</p>
+<ul>
+<li>click on the icon on top left corner and select Configuration inside the menu</li>
+</ul>
+<p><img src="/assets/images/mobile/logs_fr_01.png" alt="Screen browsing"></p>
+<ul>
+<li>Scroll to the bottom of the screen where you’ll find a button to send the logs. Click on it.</li>
+</ul>
+<p><img src="/assets/images/mobile/logs_fr_02.png" alt="Screen browsing"></p>
+<ul>
+<li>The application will create an email message with the logs. Please also describe your problem by adding as much details as you can. This will help us understand what’s happening.</li>
+</ul>
+<p><img src="/assets/images/mobile/logs_fr_03.png" alt="Screen browsing"></p>
+<ul>
+<li>Don’t forget to send the message!</li>
+</ul>
+<h2 id="note-about-self-signed-certificates">Note about self-signed certificates</h2>
+<p>About Self hosted instances, you probably have a self-signed certificate. You have to install it on your Android device, to allow Cozy Mobile to recognize it.</p>
+<ol>
+<li>Install on your Android device the application <a href="https://cadroid.bitfire.at/">CADroid</a>, which will help you in this task (from the <a href="https://play.google.com/store/apps/details?id=at.bitfire.cadroid">PlayStore</a> or <a href="https://f-droid.org/repository/browse/?fdfilter=cadroid&amp;fdid=at.bitfire.cadroid">FDroid</a>.</li>
+<li>Run the CADroid application, then touch <strong>Next</strong> (in the upper right corner).</li>
+<li>Type your cozy URL, then touch <strong>Fetch</strong>.</li>
+<li>Select your certificate, check it informations and that CADroid didn&#39;t find any issue with it, then touch <strong>Next</strong>.</li>
+<li>CADroid has just exported your certificate in the root of the SD card of your device. Note the filename ! CADroid converted the certificat in the format expected by Android. Touch Next to get some informations from CADroid.</li>
+<li>Then, still on your ANdroid device, go to Settings/Security/<strong>Install from device storage</strong> (in the <em>Credential storage</em> section).</li>
+<li>Browse to find your certificate, exported in step 5, and select it.</li>
+<li>Android will then ask you a certificate name (doesn&#39;t matter), and to chose the use of your certificate. Select <em>VPN and Applications</em>. Android may also ask you to upgrade the access sécurity level of your device (adding a unlocking  schema, ...).</li>
+</ol>
+<p>Now, your certificate will be accepted by any applications on your device !</p>
+<p>Complements:</p>
+<ul>
+<li>Android ask to upgrade the access security level. It looks strange, but apparently Android thinks there&#39;s a client certificate with a private key that must be protected.</li>
+<li>On Android 4.4+ devices, there&#39;ll be an annoying hint <em>Network may be monitored</em> on each device start. This an <a href="https://code.google.com/p/android/issues/detail?id=62076">Android bug</a>.</li>
+</ul>
+<p><em>Thanks to the DavDroid team, for CADroid and elements for this documentation !</em></p>
+<h2 id="i-don-t-have-an-android-phone">I don&#39;t have an Android Phone</h2>
+<p>Let us know on the <a href="https://forum.cozy.io/">forum</a> you would like to see the application for your system!</p>
+<h2 id="related-resources">Related resources</h2>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=io.cozy.files_client&amp;hl=">Playstore page</a></li>
+<li><a href="https://forum.cozy.io/t/i-tried-cozy-mobile/188">Forum discussion</a></li>
+<li><a href="https://files.cozycloud.cc/android/CozyMobile_latest.apk">Android APK</a> (latest version is v2.1.0, its sha1 is: 51b2f0b66c97937c7e6a3c3d8f4967264c7c071a)</li>
+</ul>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

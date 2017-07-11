@@ -1,0 +1,198 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Patch notes 2015/11/02
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/hack/getting-started/">Getting started</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/getting-started/setup-environment.html">Setting up the environment</a></li>
+            <li><a href="/en/hack/getting-started/first-app.html">Your first app in 30 minutes</a></li>
+            <li><a href="/en/hack/getting-started/architecture-overview.html">Understand the Cozy Architecture</a></li>
+            <li><a href="/en/hack/getting-started/play-with-data-system.html">Play with the Data System</a></li>
+            <li><a href="/en/hack/getting-started/discover-americano.html">Discover Americano</a></li>
+            <li><a href="/en/hack/getting-started/learn-single-page-app-way.html">Learn the Single Page App Way</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/cookbooks/">Cookbooks</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/cookbooks/data-system.html">The Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/data-system-odm.html">The ODM for Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/controller.html">The Controller API</a></li>
+            <li><a href="/en/hack/cookbooks/understanding-dev-environment.html">Understanding Cozy's development environment</a></li>
+            <li><a href="/en/hack/cookbooks/deploy.html">Deploy your application</a></li>
+            <li><a href="/en/hack/cookbooks/localization.html">Localize your applications</a></li>
+            <li><a href="/en/hack/cookbooks/debugging.html">Debug your application</a></li>
+            <li><a href="/en/hack/cookbooks/debugging-production.html">Debug in production environment</a></li>
+            <li><a href="/en/hack/cookbooks/nodemon-server-auto-refresh-on-change.html">Using nodemon to auto-refresh the server on code change</a></li>
+            <li><a href="/en/hack/cookbooks/connect-a-device.html">Connect a device to a Cozy</a></li>
+            <li><a href="/en/hack/cookbooks/components.html">Components</a></li>
+            <li><a href="/en/hack/cookbooks/authentication-authorization-workflows.html">Authentication and Authorization workflows</a></li>
+            <li><a href="/en/hack/cookbooks/encryption.html">Encryption management</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/application-skeletons/">Application Skeletons</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/application-skeletons/cozy-official.html">Official Cozy skeleton</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/contributing/">Contributing</a>
+        </li>
+        <li><a href="/en/hack/releases/" class="selected">Releases</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/releases/patch-notes-17.html">Patch notes 2015/12/02</a></li>
+            <li><a href="/en/hack/releases/patch-notes-18.html">Last release note</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io" class="selected">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam selected">
+<div id="patch-note" class="v2">
+  <h1>Patch note #16</h1>
+  <p>This relates development from 2015/10/19 to 2015/11/02.</p>
+  <h2>Highlights</h2>
+  <p>Here's another big release for Contacts, with better search, batch actions and the ability to merge two contacts;</p>
+  <p>We also did a lot of minor improvements and bug fixes in all our applications, the complete list is below.</p>
+  <h2>Applications</h2>
+  <h3>Calendar (1.0.28)</h3>
+  <ul>
+    <li>This version should work better with Node 4.x</li>
+    <li class="contributors">Contributors: aenario</li>
+  </ul>
+  <h3>Contacts (2.1.0)</h3>
+  <ul>
+    <li>Better search: you can now use advanced search parameters, and the results are sorted;</li>
+    <li>Display is updated on the fly when you add a contact from anoter application, like Emails;</li>
+    <li>You can now merge two contacts, for example if you imported them twice</li>
+    <li>You can select multiple contacts to perform actions on them: delete, export, merge…</li>
+    <li class="contributors">Contributors: aenario, jacquarg, kelukelu, m4dz</li>
+  </ul>
+  <h3>Import-from-google (0.1.5)</h3>
+  <ul>
+    <li>Lots of fixes and improvements on contact import</li>
+    <li>Log client errors on server side</li>
+    <li>Update icons</li>
+    <li class="contributors">Contributors: clochix, frankrousseau, jacquarg, kelukelu</li>
+  </ul>
+  <h3>Files (1.1.16)</h3>
+  <ul>
+    <li>This version should work better with Node 4.x</li>
+    <li>Remove all client tests</li>
+    <li>Fix english translation</li>
+    <li class="contributors">Contributors: aenario, clochix</li>
+  </ul>
+  <h3>Photos (1.0.17)</h3>
+  <ul>
+    <li>Fix server crash when extracting GPS data, refs <a href="https://github.com/cozy/Cozy-photos/issues/159" target="_blank">#159</a></li>
+    <li>Fix crash when deleting album, refs <a href="https://github.com/cozy/Cozy-photos/issues/163" target="_blank">#163</a></li>
+    <li class="contributors">Contributors: clochix</li>
+  </ul>
+  <h3>Sync</h3>
+  <ul>
+    <li>Fix server crash when exporting some addresses refs <a href="https://github.com/cozy/Cozy-vcard/issues/18" target="_blank">#18</a></li>
+    <li class="contributors">Contributors: clochix, parro-it</li>
+  </ul>
+  <h2>Cozy stack</h2>
+  <p>We added the <em>Import from Google</em> application to the market, so everybody can now install it.</p>
+  <h3>Home (2.0.12)</h3>
+  <ul>
+    <li>This version should work better with Node 4.x</li>
+    <li>Improve README</li>
+    <li class="contributors">Contributors: aenario, nono</li>
+  </ul>
+  <h3>Controller (2.0.34)</h3>
+  <ul>
+    <li>Add option to remove folder application during uninstallation</li>
+    <li>Improve configuration management</li>
+    <li>Add option to block monitor update</li>
+    <li>Update controller only if a new version is available</li>
+    <li class="contributors">Contributors: aenario, poupotte</li>
+  </ul>
+  <h3>Data-system (2.0.9)</h3>
+  <ul>
+    <li>This version should work better with Node 4.x</li>
+    <li class="contributors">Contributors: aenario</li>
+  </ul>
+  <h3>Proxy (2.1.7)</h3>
+  <ul>
+    <li>Update translations</li>
+    <li class="contributors">Contributors: aenario, clochix, lemelon</li>
+  </ul>
+  <h3>Desktop client (0.4.0)</h3>
+  <ul>
+    <li>Rewrite the read-only to prepare full sync</li>
+    <li>Add unit tests</li>
+    <li>GUI is currently broken</li>
+    <li class="contributors">Contributors: nono</li>
+  </ul>
+  <h2>Other tools</h2>
+  <h3>Website</h3>
+  <ul>
+    <li>Mention that Ubuntu package may also work on Linux Mint</li>
+    <li class="contributors">Contributors: clochix</li>
+  </ul>
+  <h3>CozyDB (0.1.3)</h3>
+  <ul>
+    <li>Bugfix with string reduce (_count)</li>
+    <li>Improve code clarity</li>
+    <li class="contributors">Contributors: aenario</li>
+  </ul>
+  <h3>Debian package</h3>
+  <ul>
+    <li>Fix <a href="https://github.com/cozy/Cozy-debian/issues/19" target="_blank">#19</a></li>
+    <li class="contributors">Contributors: nledez</li>
+  </ul>
+  <h3>Indexer (0.0.2)</h3>
+  <p>This is a new library to help indexing contents inside Cozy</p>
+  <ul>
+    <li class="contributors">Contributors: aenario</li>
+  </ul>
+  <h3>Printit (0.1.10)</h3>
+  <ul>
+    <li>Fix bad file from stack</li>
+    <li>Fix a typo</li>
+    <li>Display nicely Errors</li>
+    <li class="contributors">Contributors: nono</li>
+  </ul>
+</div>
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

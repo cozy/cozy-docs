@@ -1,0 +1,229 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Patch notes 2015/02/20
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/hack/getting-started/">Getting started</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/getting-started/setup-environment.html">Setting up the environment</a></li>
+            <li><a href="/en/hack/getting-started/first-app.html">Your first app in 30 minutes</a></li>
+            <li><a href="/en/hack/getting-started/architecture-overview.html">Understand the Cozy Architecture</a></li>
+            <li><a href="/en/hack/getting-started/play-with-data-system.html">Play with the Data System</a></li>
+            <li><a href="/en/hack/getting-started/discover-americano.html">Discover Americano</a></li>
+            <li><a href="/en/hack/getting-started/learn-single-page-app-way.html">Learn the Single Page App Way</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/cookbooks/">Cookbooks</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/cookbooks/data-system.html">The Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/data-system-odm.html">The ODM for Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/controller.html">The Controller API</a></li>
+            <li><a href="/en/hack/cookbooks/understanding-dev-environment.html">Understanding Cozy's development environment</a></li>
+            <li><a href="/en/hack/cookbooks/deploy.html">Deploy your application</a></li>
+            <li><a href="/en/hack/cookbooks/localization.html">Localize your applications</a></li>
+            <li><a href="/en/hack/cookbooks/debugging.html">Debug your application</a></li>
+            <li><a href="/en/hack/cookbooks/debugging-production.html">Debug in production environment</a></li>
+            <li><a href="/en/hack/cookbooks/nodemon-server-auto-refresh-on-change.html">Using nodemon to auto-refresh the server on code change</a></li>
+            <li><a href="/en/hack/cookbooks/connect-a-device.html">Connect a device to a Cozy</a></li>
+            <li><a href="/en/hack/cookbooks/components.html">Components</a></li>
+            <li><a href="/en/hack/cookbooks/authentication-authorization-workflows.html">Authentication and Authorization workflows</a></li>
+            <li><a href="/en/hack/cookbooks/encryption.html">Encryption management</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/application-skeletons/">Application Skeletons</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/application-skeletons/cozy-official.html">Official Cozy skeleton</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/contributing/">Contributing</a>
+        </li>
+        <li><a href="/en/hack/releases/" class="selected">Releases</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/releases/patch-notes-17.html">Patch notes 2015/12/02</a></li>
+            <li><a href="/en/hack/releases/patch-notes-18.html">Last release note</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io" class="selected">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam selected">
+<div id="patch-note">
+  <h1>Patch note #1</h1>
+  <p>This relates development from 2015/02/09 to 2015/02/20.</p>
+  <label for="toggle-feature">Feature</label>
+  <input id="toggle-feature" type="checkbox" checked="true"/>
+  <label for="toggle-bug">Bug</label>
+  <input id="toggle-bug" type="checkbox" checked="true"/>
+  <label for="toggle-security">Security</label>
+  <input id="toggle-security" type="checkbox" checked="true"/>
+  <label for="toggle-internal">Internal</label>
+  <input id="toggle-internal" type="checkbox" checked="true"/>
+  <h2>Applications</h2>
+  <h3>Calendar (v1.0.8)</h3>
+  <ul>
+    <li class="feature">better favicons.</li>
+    <li class="feature">better fonts declaration.</li>
+    <li class="feature">use the fonts from Proxy.</li>
+  </ul>
+  <h3>Contacts (v1.1.1)</h3>
+  <ul>
+    <li class="feature">add colors to tags</li>
+    <li class="feature">better responsive (for small screen).</li>
+    <li class="feature">better name edition</li>
+  </ul>
+  <h3>Emails (v0.6.8)</h3>
+  <ul>
+    <li class="feature">better responsive (for small sreen).</li>
+    <li class="feature">on mobile, you can only read emails, not write them.</li>
+    <li class="feature">show full message headers when clicking on attachment icon.</li>
+    <li class="feature">improve button styles.</li>
+    <li class="bug">opening a message should be faster (no more transitions effects).</li>
+    <li class="bug">remove browser auto-complete when composing an email.</li>
+    <li class="feature">only display contact tooltip in the email preview.</li>
+    <li class="bug">fix behaviour when email had no content.</li>
+    <li class="bug">fix closing a message could lead to another mailbox.</li>
+    <li class="bug">fix infinite scrolling.</li>
+    <li class="bug">add missing localization.</li>
+    <li class="bug">improve performances.</li>
+    <li class="feature">remove progressbar during refresh, it is only shown during initial import.</li>
+    <li class="feature">add keyboard shortcuts to navigate inside a conversation (left and right arrows).</li>
+    <li class="bug">message list toolbar is now fixed</li>
+    <li class="bug">message list height stays the same in selection mode</li>
+    <li class="internal">switch to cozydb [internal].</li>
+    <li class="internal">tests can now be run with SlimerJS [internal].</li>
+    <li class="internal">minor improvements in development tasks and readme [internal].</li>
+  </ul>
+  <h3>Files (v1.1.2)</h3>
+  <ul>
+    <li class="feature">better responsive (for small screen).</li>
+    <li class="feature">better favicons.</li>
+    <li class="feature">better fonts.</li>
+    <li class="feature">use the fonts from Proxy.</li>
+    <li class="bug">fix last modification date</li>
+    <li class="feature">add checksum support</li>
+  </ul>
+  <h3>Photos (v1.0.7)</h3>
+  <ul>
+    <li class="feature">better responsive (for small screen).</li>
+    <li class="feature">better favicons.</li>
+    <li class="feature">better fonts.</li>
+  </ul>
+  <h2>Mobile application (v0.1.2)</h2>
+  <ul>
+    <li class="feature">better navigation: new breadcrumb.</li>
+    <li class="feature">better navigation: fix touch interactions.</li>
+    <li class="feature">better navigation: physical button recovers navigation history.</li>
+    <li class="feature">better icons.</li>
+    <li class="feature">enable landscape view.</li>
+  </ul>
+  <h2>Platform</h2>
+  <h3>Proxy (v1.0.12)</h3>
+  <ul>
+    <li class="feature">better icons (Cozy's icon, favicon).</li>
+    <li class="feature">better fonts declaration.</li>
+    <li class="feature">better responsive (for small sreen).</li>
+    <li class="feature">provide official Cozy fonts as a CDN.</li>
+  </ul>
+  <h3>Home (v1.0.38)</h3>
+  <ul>
+    <li class="feature">better responsive (small screen)</li>
+    <li class="feature">better favicons.</li>
+    <li class="feature">better fonts declaration.</li>
+    <li class="feature">use the fonts from Proxy.</li>
+    <li class="bug">fix navigation in Firefox mobile.</li>
+    <li class="bug">fix application's icons for applications installed from Git.</li>
+  </ul>
+  <h3>Data System (v1.0.26)</h3>
+  <ul>
+    <li class="bug">fix: if there was no display name or no domain, "send mail from" bugged.</li>
+  </ul>
+  <h3>Controller (v2.0.16)</h3>
+  <ul>
+    <li class="bug">stop stack applications before updating them (partly fix issue of double-login during platform update).</li>
+    <li class="bug">update 'Proxy' before 'Home' during stack update (partly fix issue of double-login during platform update).</li>
+    <li class="feature">improve logs when application crashes.</li>
+    <li class="internal">code improvements.</li>
+    <li class="bug">check app's branch during update (fix <a href="https://github.com/cozy/cozy-home/issues/278">this issue</a></li>
+  </ul>
+  <h3>cozy-monitor (v1.2.15)</h3>
+  <ul>
+    <li class="feature">better error handling.</li>
+    <li class="bug">fix status command.</li>
+    <li class="feature">improve feedbacks and readme (thank you <a href="https://github.com/bnjbvr/">bnj</a>)</li>
+    <li class="bug">fix typo (thank you <a href="https://github.com/bnjbvr/">bnj</a>)</li>
+  </ul>
+  <h2>Development tools</h2>
+  <h3>Documentation</h3>
+  <ul>
+    <li class="feature">update 'getting started': links to vendors are fixed (<a href="http://cozy.io/en/hack/getting-started/setup-environment.html">link</a>).</li>
+    <li class="feature">update 'first app': use the new "deploy" command (<a href="http://cozy.io/en/hack/getting-started/first-app.html">link</a>).</li>
+    <li class="feature">update 'Cozy architecture': new diagrams, more explanations (<a href="http://cozy.io/en/hack/getting-started/architecture-overview.html">link</a>).</li>
+    <li class="feature">new cookbook: understanding Cozy's development environment (<a href="http://cozy.io/en/hack/cookbooks/understanding-dev-environment.html">link</a>).</li>
+    <li class="feature">remove install guide for Raspberry Pi.</li>
+    <li class="feature">add install guide for Raspberry Pi 2 (<a href="http://cozy.io/host/install.html#raspberry-pi-2-image">link</a>).</li>
+  </ul>
+  <h3>cozy-dev (v1.0.15)</h3>
+  <ul>
+    <li class="feature">new command: vm:update-image. Destroy and get the latest image version (<a href="http://cozy.io/en/hack/cookbooks/understanding-dev-environment.html#vm-update-image">link</a>).</li>
+    <li class="feature">new commands: deploy, undeploy. Make accessible through Cozy interface your local application (<a href="http://cozy.io/en/hack/cookbooks/understanding-dev-environment.html#deploy">link</a>).</li>
+    <li class="feature">new command: db:switch. Switch the database used by the Data System in the VM (useful for testing purposes) (<a href="http://cozy.io/en/hack/cookbooks/understanding-dev-environment.html#db-switch">link</a>).</li>
+    <li class="feature">new command: db:reset. Remove all data from a database (useful for testing purposes) (<a href="http://cozy.io/en/hack/cookbooks/understanding-dev-environment.html#db-reset">link</a>).</li>
+    <li class="feature">improve command: vm:start. VM's status is now displayed at start up.</li>
+    <li class="feature">improve command: vm:status. Now displays the port forwarded for each part.</li>
+  </ul>
+  <h3>Virtual machine</h3>
+  <ul>
+    <li class="feature">new version.</li>
+  </ul>
+  <h3>cozy-template (v1.0.0)</h3>
+  <ul>
+    <li class="feature">clean useless code.</li>
+    <li class="feature">use Cozy fonts.</li>
+  </ul>
+  <h2>Guidelines</h2>
+  <ul>
+    <li class="feature">add guildelines for stylus (<a href="https://github.com/cozy/cozy-guidelines#css--stylus">link</a>).</li>
+    <li class="feature">update localization guidelines (<a href="https://github.com/cozy/cozy-guidelines#localisation">link</a>).</li>
+  </ul>
+</div>
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Patch notes 2015/04/17
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/hack/getting-started/">Getting started</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/getting-started/setup-environment.html">Setting up the environment</a></li>
+            <li><a href="/en/hack/getting-started/first-app.html">Your first app in 30 minutes</a></li>
+            <li><a href="/en/hack/getting-started/architecture-overview.html">Understand the Cozy Architecture</a></li>
+            <li><a href="/en/hack/getting-started/play-with-data-system.html">Play with the Data System</a></li>
+            <li><a href="/en/hack/getting-started/discover-americano.html">Discover Americano</a></li>
+            <li><a href="/en/hack/getting-started/learn-single-page-app-way.html">Learn the Single Page App Way</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/cookbooks/">Cookbooks</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/cookbooks/data-system.html">The Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/data-system-odm.html">The ODM for Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/controller.html">The Controller API</a></li>
+            <li><a href="/en/hack/cookbooks/understanding-dev-environment.html">Understanding Cozy's development environment</a></li>
+            <li><a href="/en/hack/cookbooks/deploy.html">Deploy your application</a></li>
+            <li><a href="/en/hack/cookbooks/localization.html">Localize your applications</a></li>
+            <li><a href="/en/hack/cookbooks/debugging.html">Debug your application</a></li>
+            <li><a href="/en/hack/cookbooks/debugging-production.html">Debug in production environment</a></li>
+            <li><a href="/en/hack/cookbooks/nodemon-server-auto-refresh-on-change.html">Using nodemon to auto-refresh the server on code change</a></li>
+            <li><a href="/en/hack/cookbooks/connect-a-device.html">Connect a device to a Cozy</a></li>
+            <li><a href="/en/hack/cookbooks/components.html">Components</a></li>
+            <li><a href="/en/hack/cookbooks/authentication-authorization-workflows.html">Authentication and Authorization workflows</a></li>
+            <li><a href="/en/hack/cookbooks/encryption.html">Encryption management</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/application-skeletons/">Application Skeletons</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/application-skeletons/cozy-official.html">Official Cozy skeleton</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/contributing/">Contributing</a>
+        </li>
+        <li><a href="/en/hack/releases/" class="selected">Releases</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/releases/patch-notes-17.html">Patch notes 2015/12/02</a></li>
+            <li><a href="/en/hack/releases/patch-notes-18.html">Last release note</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io" class="selected">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam selected">
+<div id="patch-note">
+  <h1>Patch note #5</h1>
+  <p>This relates development from 2015/03/30 to 2015/04/17.</p>
+  <label for="toggle-feature">Feature</label>
+  <input id="toggle-feature" type="checkbox" checked="true"/>
+  <label for="toggle-bug">Bug</label>
+  <input id="toggle-bug" type="checkbox" checked="true"/>
+  <label for="toggle-security">Security</label>
+  <input id="toggle-security" type="checkbox" checked="true"/>
+  <label for="toggle-internal">Internal</label>
+  <input id="toggle-internal" type="checkbox" checked="true"/>
+  <h2>Applications</h2>
+  <h3>Emails (v0.7.1)</h3>
+  <ul>
+    <li class="feature">Add mail in header of forwarded messages.</li>
+    <li class="bug">Fix loss of in-reply-to header when replying to a message.</li>
+    <li class="bug">Fix count of unread messages.</li>
+    <li class="bug">Fix twice displaying prefix 'Re:' in reply subject.</li>
+    <li class="bug">Fix contact drag and drop.</li>
+    <li class="bug">Remove line breaks on the top of reply mail.</li>
+    <li class="feature">Remove toastr to indicate that draft is saved.</li>
+    <li class="feature">Improve information message style.</li>
+    <li class="feature">Spam folder emails aren't dsplayed as unread.</li>
+    <li class="bug">Use Reply-To when replying.</li>
+    <li class="bug">Fix errors in mail replying</li>
+    <li class="bug">Fix name when downloading attachment with spaces.</li>
+    <li class="feature">Display immediately reply in conversation.</li>
+    <li class="bug">Fix reply to a message without body.</li>
+    <li class="feature">Put focus on CC or Bcc when add it.</li>
+    <li class="feature">Don't display message action in list toolbar.</li>
+    <li class="feature">Add spinner on account check button.</li>
+  </ul>
+  <h3>Photos (v1.0.11)</h3>
+  <ul>
+    <li class="feature">Add german locale.</li>
+  </ul>
+  <h3>Sync (v1.0.7)</h3>
+  <ul>
+    <li class="feature">Add german locale.</li>
+  </ul>
+  <h3>Files (v1.1.5)</h3>
+  <ul>
+    <li class="feature">Add german locale.</li>
+  </ul>
+  <h3>Contacts (v.1.1.4)</h3>
+  <ul>
+    <li class="feature">Add german locale.</li>
+  </ul>
+  <h2>Platform</h2>
+  <h3>Monitor (v1.2.20)</h3>
+  <ul>
+    <li class="feature">Add function to reinstall missing applications, usefull for relocation.</li>
+  </ul>
+  <h3>Proxy (v1.0.14)</h3>
+  <ul>
+    <li class="bug">Fix locale initilization after stack restart.</li>
+    <li class="feature">Improve success alert style.</li>
+    <li class="feature">Add german locale.</li>
+  </ul>
+  <h3>Controller (v2.0.24)</h3>
+  <ul>
+    <li class="feature">Start home after proxy during autostart</li>
+  </ul>
+</div>
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

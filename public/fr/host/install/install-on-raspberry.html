@@ -1,0 +1,117 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/cozy-docs/assets/images/favicon.png">
+    <title>Installer Cozy sur Raspberry Pi
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/cozy-docs/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/fr/" class="nav-logo"><img src="/cozy-docs/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/fr/host/install/" class="selected">Installer</a>
+          <ul class="dropdown-menu">
+            <li><a href="/fr/host/install/install-on-ovh.html">Installer Cozy sur OVH</a></li>
+            <li><a href="/fr/host/install/install-on-scaleway.html">Installer Cozy sur Scaleway</a></li>
+            <li><a href="/fr/host/install/install-on-digitalocean.html">Installer Cozy sur DigitalOcean</a></li>
+            <li><a href="/fr/host/install/install-on-raspberry.html">Installer Cozy sur Raspberry Pi</a></li>
+            <li><a href="/fr/host/install/install-on-swhosting.html">Installer Cozy sur SWHosting</a></li>
+            <li><a href="/fr/host/install/install-on-pingfiles.html">Installer Cozy sur PingFiles</a></li>
+            <li><a href="/fr/host/install/install-on-ubuntu.html">Installer Cozy sur Ubuntu</a></li>
+            <li><a href="/fr/host/install/install-on-debian.html">Installer Cozy sur Debian</a></li>
+            <li><a href="/fr/host/install/install-on-archlinux.html">Installer Cozy sur Archlinux</a></li>
+            <li><a href="/fr/host/install/install-on-virtualbox.html">Installer Cozy sur VirtualBox</a></li>
+            <li><a href="/fr/host/install/install-on-docker.html">Installer Cozy sur Docker</a></li>
+            <li><a href="/fr/host/install/install-on-openvz.html">Installer Cozy sur OpenVZ</a></li>
+          </ul>
+        </li>
+        <li><a href="/fr/host/manage.html">Gérez votre instance</a>
+        </li>
+        <li><a href="/fr/host/trouble-shootings.html">En cas de soucis</a>
+        </li>
+        <li><a href="/fr/host/uninstall.html">Désinstaller</a>
+        </li>
+        <li><a href="/fr/host/diagnose.html">Diagnostiquer l’état d’un Cozy</a>
+        </li>
+      </ul>
+      <ul class="navigation right">
+        <li><a href="/fr/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/fr/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><div class="install-inner-logo">
+<img alt="Logo de Raspberry" src="/assets/images/host/raspberry-logo.svg">
+</div>
+
+<h1 id="installer-cozy-sur-un-raspberry-pi">Installer Cozy sur un Raspberry Pi</h1>
+<hr>
+<p><strong> <img src="/assets/images/warning.png" alt="warning" class="warn">Cette documentation concerne l’installation de l’ancien prototype de Cozy, aujourd’hui déprécié et dont nous n’assurons plus le support. La documentation d’installation de la nouvelle version sera disponible très bientôt.</strong></p>
+<hr>
+<p><strong>Vous aurez besoin du dernier <a href="http://fr.wikipedia.org/wiki/Raspberry_Pi">Raspberry Pi 2 ou Raspberry Pi 3</a>
+pour y faire tourner Cozy efficacement.</strong></p>
+<p><strong>L’utilisation d’une carte SD rapide (class10) est fortement recommandée.</strong></p>
+<p>Pour installer Cozy sur votre Raspberry Pi, vous devez :</p>
+<ul>
+<li>Télécharger notre <a href="https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz">image</a> et la décompresser (<code>xz -d cozy-raspberrypi_4.1.0.img.xz</code> sur Linux, utilisez votre logiciel de décompression préféré sur Windows et MacOs).</li>
+<li>Télécharger les signatures de l&#39;image <a href="https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512.asc">ici</a> et <a href="https://files.cozycloud.cc/raspberrypi/cozy-raspberrypi_latest.img.xz.sha512">ici</a>.</li>
+<li>Vérifier l&#39;intégrité de l&#39;image :</li>
+</ul>
+<pre class="highlight"><code class="hljs css"><span class="hljs-selector-tag">gpgv2</span> <span class="hljs-selector-tag">-v</span> <span class="hljs-selector-tag">cozy-raspberrypi_4</span><span class="hljs-selector-class">.1</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.img</span><span class="hljs-selector-class">.xz</span><span class="hljs-selector-class">.sha512</span><span class="hljs-selector-class">.asc</span>
+<span class="hljs-selector-tag">sha512sum</span> <span class="hljs-selector-tag">-c</span> <span class="hljs-selector-tag">cozy-raspberrypi_4</span><span class="hljs-selector-class">.1</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.img</span><span class="hljs-selector-class">.xz</span><span class="hljs-selector-class">.sha512</span>
+</code></pre><p>L’image est basée sur la distribution <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Jessie lite</a>.</p>
+<p><strong>ATTENTION :</strong> cette opération va irrémédiablement supprimer toutes les
+données présentes sur la carte.</p>
+<p>Suivez le guide officiel sur <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">Installing operating system images</a>.</p>
+<hr>
+<p>Insérez à présent la carte SD dans le lecteur de votre Raspberry Pi et démarrez
+le.</p>
+<p>Vous pouvez accéder à votre Cozy via <code>https://cozy.local/</code>.</p>
+<p>Pour vous connecter à la carte, utilisez les informations de connexion par
+défaut de Raspbian : <code>pi</code> and <code>raspberry</code> :</p>
+<pre class="highlight"><code class="hljs bash">$ ssh pi@cozy.local <span class="hljs-comment"># ou ssh pi@&lt;ip-du-raspberrypi&gt;</span>
+</code></pre>
+<p>Pour étendre la partition, suivez ces étapes :</p>
+<ul>
+<li>connectez vous au PI en SSH</li>
+<li>exécutez cette commande: <code>/usr/bin/raspi-config --expand-rootfs</code></li>
+</ul>
+<h1 id="en-cas-de-probl-mes-">En cas de problèmes…</h1>
+<h2 id="l-h-te-cozy-local-ne-fonctionne-pas">L&#39;hôte cozy.local ne fonctionne pas</h2>
+<p>Vous pourrez trouver l’adresse de votre Raspberry Pi via la console. Sinon vous pouvez
+utiliser <code>nmap</code> sur votre machine locale :</p>
+<pre class="highlight"><code class="hljs lsl">$ nmap -T4 -sP <span class="hljs-number">192.168</span>.x<span class="hljs-number">.0</span>/<span class="hljs-number">24</span> # Ou votre sous-réseau
+</code></pre><h2 id="syst-me-de-fichiers-corrompu">Système de fichiers corrompu</h2>
+<p>Après un arrêt brutal de votre Raspberry, il se peut que le serveur refuse de redémarrer. Branchez alors un écran pour afficher le message d’erreur. Si vous voyez « vfs unable to mount root fs on unknown-block », cela signifie que le système de fichiers de la carte est corrompu. Vous pouvez essayer de le réparer en connectant la carte à un autre ordinateur, utilisant <code>lsblk</code> pour identifier son point de montage, puis <code>e2fsck</code> pour tenter de corriger les erreurs.</p>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/cozy-docs/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/cozy-docs/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/cozy-docs/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/cozy-docs/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/cozy-docs/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/cozy-docs/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

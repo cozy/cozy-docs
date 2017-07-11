@@ -1,0 +1,204 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/cozy-docs/assets/images/favicon.png">
+    <title>En cas de soucis
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/cozy-docs/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/fr/" class="nav-logo"><img src="/cozy-docs/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/fr/host/install/">Installer</a>
+          <ul class="dropdown-menu">
+            <li><a href="/fr/host/install/install-on-ovh.html">Installer Cozy sur OVH</a></li>
+            <li><a href="/fr/host/install/install-on-scaleway.html">Installer Cozy sur Scaleway</a></li>
+            <li><a href="/fr/host/install/install-on-digitalocean.html">Installer Cozy sur DigitalOcean</a></li>
+            <li><a href="/fr/host/install/install-on-raspberry.html">Installer Cozy sur Raspberry Pi</a></li>
+            <li><a href="/fr/host/install/install-on-swhosting.html">Installer Cozy sur SWHosting</a></li>
+            <li><a href="/fr/host/install/install-on-pingfiles.html">Installer Cozy sur PingFiles</a></li>
+            <li><a href="/fr/host/install/install-on-ubuntu.html">Installer Cozy sur Ubuntu</a></li>
+            <li><a href="/fr/host/install/install-on-debian.html">Installer Cozy sur Debian</a></li>
+            <li><a href="/fr/host/install/install-on-archlinux.html">Installer Cozy sur Archlinux</a></li>
+            <li><a href="/fr/host/install/install-on-virtualbox.html">Installer Cozy sur VirtualBox</a></li>
+            <li><a href="/fr/host/install/install-on-docker.html">Installer Cozy sur Docker</a></li>
+            <li><a href="/fr/host/install/install-on-openvz.html">Installer Cozy sur OpenVZ</a></li>
+          </ul>
+        </li>
+        <li><a href="/fr/host/manage.html">Gérez votre instance</a>
+        </li>
+        <li><a href="/fr/host/trouble-shootings.html" class="selected">En cas de soucis</a>
+        </li>
+        <li><a href="/fr/host/uninstall.html">Désinstaller</a>
+        </li>
+        <li><a href="/fr/host/diagnose.html">Diagnostiquer l’état d’un Cozy</a>
+        </li>
+      </ul>
+      <ul class="navigation right">
+        <li><a href="/fr/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/fr/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><h1 id="que-faire-en-cas-de-soucis">Que faire en cas de soucis</h1>
+<p>Vous trouverez ici le moyen de résoudre la plupart des soucis qui peuvent survenir lors de l’installation de votre instance Cozy. Si vous rencontrez des problèmes qui ne sont pas listés ici, n’hésitez pas à nous les signaler, et nous enrichirons ce document dès que possible.</p>
+<h2 id="je-n-arrive-installer-qu-une-seule-application">Je n’arrive à installer qu’une seule application</h2>
+<p><em>Description :</em> Lorsque vous essayez d’installer une application, l’installation
+échoue et l’application est marquée comme cassée. Ce comportement se reproduit
+pour chaque application que vous essayez d’installer.</p>
+<p><em>Solution :</em> Vérifiez la quantité de mémoire disponible dans votre instance. Les
+informations sur votre instance sont disponibles sur la page de gestion des
+applications, à laquelle vous pouvez accéder depuis la page d’accueil. Si votre
+instance n’a plus assez de RAM, vous ne pourrez pas installer de nouvelles
+applications.</p>
+<h2 id="l-installation-ne-s-ach-ve-pas-jusqu-ce-que-je-rafraichisse-la-page-avec-f5">L’installation ne s’achève pas jusqu’à ce que je rafraichisse la page avec F5</h2>
+<p>C’est probablement dû à un problème de synchronisation entre le gestionnaire de
+données de Cozy et la base de données. Pour le résoudre, connectez-vous en
+console à votre instance et redémarrez le gestionnaire de données :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor restart data-system
+</code></pre>
+<h2 id="des-erreurs-apparaissent-sur-la-page-de-connexion">Des erreurs apparaissent sur la page de connexion</h2>
+<h3 id="probl-me-avec-la-page-d-accueil">Problème avec la page d’accueil</h3>
+<p>Vérifiez que l’application gérant la page d’accueil est bien installée.
+Pointez votre navigateur vers
+<a href="https://yourcozyurl/status">https://yourcozyurl/status</a>.  Vous devriez
+récupérer un fichier JSON contenant la liste des applications de la pile Cozy
+et leur statut.  Vérifiez qu’elles sont toutes installées (valeur à <code>true</code>).
+Si la page d’accueil (<code>home</code>) est à <code>false</code>, connectez-vous à la console de
+votre instance pour la réinstaller :</p>
+<pre class="highlight"><code class="hljs bash">cozy-monitor uninstall home
+cozy-monitor install home
+</code></pre>
+<h3 id="probl-mes-avec-le-syst-me-de-donn-es">Problèmes avec le système de données</h3>
+<p>Connectez-vous à la console de votre instance et vérifiez les fichiers journaux,
+notamment <code>/usr/local/cozy/apps/data-system/data-system/cozy-data-system/log/production.log</code>.
+Si ce fichier contient des lignes comme <code>Database cozy on localhost:5984
+doesn&#39;t exist.</code> et <code>The database could not be created, the file already exists.</code>,
+cela signifie que le système de données de l’instance n’arrive pas à se connecter
+à la base de données. Une réinstallation devrait régler l’affaire :</p>
+<pre class="highlight"><code class="hljs bash">cozy-monitor uninstall data-system
+cozy-monitor install data-system
+cozy-monitor restart home
+cozy-monitor restart proxy
+</code></pre>
+<h3 id="erreurs-npm">Erreurs Npm</h3>
+<p>Cozy est basé sur Node.js et le gestionnaire de paquets Npm. Les applications
+téléchargent les outils dont elles ont besoin depuis les dépôts de Npm. Il
+arrive que ceux-ci soient temporairement inaccessibles, générant des erreurs
+lors de l’installation d’application. Si vous rencontrez de telles erreurs,
+attendez un peu et essayez à nouveau d’exécuter l’application.</p>
+<h2 id="cozy-sur-des-processeurs-arm">Cozy sur des processeurs ARM</h2>
+<h3 id="node-js">Node.js</h3>
+<p>Node.js a besoin d’une configuration spécifique pour fonctionner sur un
+Raspberry Pi. Installez la version binaire de Node spécifique disponible
+sur leur site.</p>
+<p>Concernant les autres processeurs ARM, nous avons réussi à compiler Node pour
+l’A20 Allwinner.</p>
+<h3 id="nginx">Nginx</h3>
+<p>Voici un <a href="http://virtualitblog.blogspot.fr/2013/05/install-nginx-141-raspberry-pi.html">bon tutoriel</a>
+(en anglais et uniquement pour les distributions basées sur Debian) pour
+installer Nginx sur un Raspberry Pi.</p>
+<p>Vous pouvez le télécharger ici : <a href="http://nginx.org/packages/debian/pool/nginx/n/nginx/">http://nginx.org/packages/debian/pool/nginx/n/nginx/</a></p>
+<h2 id="le-contr-leur-ne-d-marre-pas">Le contrôleur ne démarre pas</h2>
+<p>Si, lorsque vous installez une application en ligne de commande avec <code>cozy-monitor</code>,
+vous faites face à des erreurs <code>ECONNRESET</code>, vérifiez que <code>cozy-controller</code> est
+bien démarré :</p>
+<pre class="highlight"><code class="hljs bash">sudo supervisorctl
+</code></pre>
+<p>Et vérifiez que <code>cozy-monitor</code> utilise le port 9002 :</p>
+<pre class="highlight"><code class="hljs bash">sudo netstat -plunt | grep 9002
+tcp     0     0 0.0.0.0:9002      0.0.0.0:*        LISTEN      997/node
+</code></pre>
+<h2 id="mot-de-passe-couchdb">Mot de passe CouchDB</h2>
+<p>Si vous ré-installez plusieurs fois votre instance Cozy, le mot de passe de la
+base CouchDB et celui utilisé par le système de données de Cozy peuvent devenir
+différents. Pour réinitialiser le mot de passe, éditez le fichier
+<code>/usr/local/etc/couch/local.ini</code> et mettez en commentaire la dernière ligne
+de la section <code>admin</code>, puis effacez le fichier <code>/etc/cozy/couchdb.login</code> et
+re-lancez l’installation, ou exécutez :</p>
+<pre class="highlight"><code class="hljs bash">fab config_couchdb
+</code></pre>
+<h2 id="processus-dupliqu-s">Processus dupliqués</h2>
+<p>Il arrive parfois qu’un processus Node.js soit dupliqué. Dans ce cas, le moyen
+le plus simple pour retourner à un état normal est d’exécuter :</p>
+<pre class="highlight"><code class="hljs bash">sudo supervisorctl stop cozy-controller
+sudo pkill -9 node
+sudo supervisorctl start cozy-controller
+</code></pre>
+<h2 id="j-ai-perdu-mon-mot-de-passe-cozy">J&#39;ai perdu mon mot de passe Cozy</h2>
+<p>Si vous avez perdu votre mot de passe, la première chose à faire est de cliquer sur le lien <code>Mot de passe oublié</code> afin de le recevoir par email.</p>
+<p>Si vous hébergez Cozy sur un serveur qui ne dispose pas de serveur email (comme Postfix par exemple), il vous faudra accéder à la page <code>Futon Web Admin</code> pour supprimer l&#39;utilisateur courant. Vous avez 2 options:</p>
+<h4 id="vous-pouvez-acc-der-127-0-0-1-via-un-navigateur">Vous pouvez accéder à 127.0.0.1 via un navigateur</h4>
+<p>Cela devrait être le cas si vous hébergez Cozy sur votre propre serveur.</p>
+<p>Naviguez sur <code>http://localhost:5984/_utils/</code></p>
+<h4 id="vous-utilisez-un-nom-de-domaine-pour-acc-der-cozy">Vous utilisez un nom de domaine pour accéder à Cozy</h4>
+<p>Cela devrait être le cas si vous hébergez Cozy sur un VPS par exemple.
+Pour éviter d&#39;ouvrir l&#39;accès à CouchDB à toutes les IP externes, nous utiliserons SSH.
+Sur le terminal de votre poste, tapez:</p>
+<pre class="highlight"><code class="hljs css"><span class="hljs-selector-tag">ssh</span> <span class="hljs-selector-tag">-L</span> 5984<span class="hljs-selector-pseudo">:127.0.0.1</span><span class="hljs-selector-pseudo">:5984</span> <span class="hljs-selector-tag">cozy</span><span class="hljs-selector-class">.mydomain</span><span class="hljs-selector-class">.com</span>
+</code></pre><p>Si vous avez déjà une instance CouchDB lancée sur votre serveur, vous devrez propablement changer le premier <code>5984</code>. Choisissez n&#39;importe quel port disponible.
+Vous avez maintenant accès à <code>http://127.0.0.1:5984/_utils/</code></p>
+<p>Une fois fait, vous devez vous connecter. Le lien de connexion est tout en bas à droite de la page. Vous trouverez vos identifiants CouchDB pour Cozy dans le fichier <code>/etc/cozy/couchdb.login</code>. La première ligne correspond au login, la seconde au mot de passe.</p>
+<p>Une fois connecté, utilisez le menu déroulant <code>View</code> et choisissez <code>User -&gt; all</code>. Vous devriez voir une ligne, que vous pouvez supprimer.
+En rafraîchissant la page de votre Cozy, celui-ci devrait vous proposer de vous enregistrer.</p>
+<h2 id="les-websockets-ne-fonctionnent-pas-avec-apache">Les websockets ne fonctionnent pas avec Apache</h2>
+<p>Si vous utilisez Apache et rencontrez des erreurs dans la console de votre navigateur comme celle ci-dessous, suivez la procédure suivante.</p>
+<blockquote>
+<p>WebSocket connection to &#39;wss://domain/public/files/socket.io/?EIO=3&amp;transport=websocket&amp;sid=DGvqewDGc_GvZX-3AAAB&#39; failed: Error during WebSocket handshake: Unexpected response code: 400</p>
+</blockquote>
+<p>D&#39;abord, activez les modules <em>proxy_wstunnel</em> et <em>mod_rewrite</em> :</p>
+<pre class="highlight"><code class="hljs bash">sudo a2enmod proxy_wstunnel
+sudo a2enmod mod_rewrite
+</code></pre>
+<p> Éditez ensuite votre fichier de configuration apache (<code>/etc/apache2/sites-available/cozy.conf</code> par défaut pour l&#39;installation Debian par exemple) et insérez les lignes suivantes :</p>
+<pre class="highlight"><code class="hljs apache"><span class="hljs-attribute"><span class="hljs-nomarkup">RewriteEngine</span></span>           <span class="hljs-literal">On</span>
+<span class="hljs-attribute"><span class="hljs-nomarkup">RewriteCond</span></span>             <span class="hljs-variable">%{REQUEST_URI}</span> ^/.*socket\.io<span class="hljs-meta"> [NC]</span>
+<span class="hljs-attribute"><span class="hljs-nomarkup">RewriteCond</span></span>             <span class="hljs-variable">%{THE_REQUEST}</span> websocket<span class="hljs-meta"> [NC]</span>
+<span class="hljs-attribute"><span class="hljs-nomarkup">RewriteRule</span></span>             /(.*)           ws://127.0.0.1:9104/<span class="hljs-number">$1</span><span class="hljs-meta"> [P,L]</span>
+</code></pre>
+<p> Enfin, relancez apache et c&#39;est tout !</p>
+<pre class="highlight"><code class="hljs bash">sudo service apache2 reload
+</code></pre>
+<h2 id="je-n-arrive-pas-envoyer-de-gros-fichiers-synchroniser-de-grosses-photos">Je n’arrive pas à envoyer de gros fichiers / à synchroniser de grosses photos</h2>
+<p>Si vous utilisez Nginx comme serveur proxy inverse, il vous sera impossible de téléverser de gros fichiers. Nginx limite par défaut la taille des requêtes envoyées par les clients à 1Mo. Pour augmenter cette limite, ajoutez simplement une instruction <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size">client_max_body_size</a> à votre configuration Nginx.</p>
+<h2 id="mon-serveur-n-arrive-pas-envoyer-de-courriels">Mon serveur n’arrive pas à envoyer de courriels</h2>
+<p>Cozy a besoin d’un serveur SMTP relai pour envoyer certains messages :</p>
+<ul>
+<li>des notifications, par exemple les rappels avant un évènement ;</li>
+<li>les liens lorsque vous partagez un fichier ou des photos ;</li>
+<li>le message de réinitialisation de votre mot de passe si vous l’avez oublié…</li>
+</ul>
+<p>Pour envoyer ces messages, Cozy essaie de se connecter à un serveur SMTP sur le port 25 du même serveur. Il est de votre responsabilité de configurer et de gérer ce serveur. Gardez à l’esprit que si vous ne le paramétrez pas correctement, de nombreux serveurs de messagerie risquent de considérer ces messages comme des pourriels. Garantir le bon acheminement de messages depuis un serveur personnel peut se révéler complexe.</p>
+<p>Pour vous aider à configurer un serveur relai, vous pouvez consulter cette documentation rédigée par un Cozynaute qui explique <a href="https://forum.cozy.io/t/tutorial-files-photos-how-to-be-able-to-send-mail-from-a-self-hosted-cozy-using-a-postfix-relayhost/1719">comment utiliser Postfix</a> avec Cozy.</p>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/cozy-docs/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/cozy-docs/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/cozy-docs/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/cozy-docs/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/cozy-docs/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/cozy-docs/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>How to diagnose problems
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/host/install/">Install</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/host/install/install-on-ovh.html">Install Cozy on OVH</a></li>
+            <li><a href="/en/host/install/install-on-scaleway.html">Install Cozy on Scaleway</a></li>
+            <li><a href="/en/host/install/install-on-digitalocean.html">Install Cozy on DigitalOcean</a></li>
+            <li><a href="/en/host/install/install-on-raspberry.html">Install Cozy on Raspberry Pi</a></li>
+            <li><a href="/en/host/install/install-on-swhosting.html">Install Cozy on SWHosting</a></li>
+            <li><a href="/en/host/install/install-on-ubuntu.html">Install Cozy on Ubuntu</a></li>
+            <li><a href="/en/host/install/install-on-debian.html">Install Cozy on Debian</a></li>
+            <li><a href="/en/host/install/install-on-archlinux.html">Install Cozy on Archlinux</a></li>
+            <li><a href="/en/host/install/install-on-virtualbox.html">Install Cozy on VirtualBox</a></li>
+            <li><a href="/en/host/install/install-on-docker.html">Install Cozy on Docker</a></li>
+            <li><a href="/en/host/install/install-on-openvz.html">Install Cozy on OpenVZ</a></li>
+            <li><a href="/en/host/install/install-step-by-step.html">Install Cozy step by step</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/host/manage.html">Manage</a>
+        </li>
+        <li><a href="/en/host/troubleshooting.html">Troubleshooting</a>
+        </li>
+        <li><a href="/en/host/uninstall.html">Uninstall</a>
+        </li>
+        <li><a href="/en/host/diagnose.html" class="selected">How to diagnose problems</a>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><h1 id="how-to-diagnose-a-cozy-problem">How to diagnose a Cozy problem</h1>
+<p>Here are some advises to help diagnose a problem with your server.</p>
+<p>We use a reverse proxy as a gateway between your requests and the cozy applications themselves. If you’re unable to connect to the URL of your server, the first step is to check if this proxy is up and running. The commands depend on your Web server and host system. For example, with Nginx, you can try one of this:</p>
+<pre class="highlight"><code class="hljs bash">sudo /etc/init.d/nginx start
+sudo service nginx start
+</code></pre>
+<p>If the proxy displays a 502 error page, it means that it’s unable to connect to the cozy server. So you need to check the state of the components of the cozy stack :</p>
+<pre class="highlight"><code class="hljs bash">sudo supervisorctl status
+sudo cozy-monitor status
+</code></pre>
+<p>If one of the applications monitored by <code>supervisorctl</code> is not running, restart it. For example:</p>
+<pre class="highlight"><code class="hljs bash">sudo supervisorctl restart cozy-controller
+</code></pre>
+<p>Cozy-monitor shows the status of all applications, the Cozy stack and the ones you installed. Every application of the Cozy stack must be started: postfix, couch, controller, data-system, home, proxy. If one of them is stopped, restart it:</p>
+<ul>
+<li><p>use supervisorctl if controller is down:</p>
+<pre class="highlight"><code class="hljs bash">sudo supervisorctl restart cozy-controller
+</code></pre>
+</li>
+<li><p>use cozy-monitor if data-system, home or proxy are down</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor start data-system
+</code></pre>
+</li>
+<li>use your system’s command for the MTA and CouchDB:</li>
+</ul>
+<pre class="highlight"><code class="hljs bash">sudo service couchdb restart
+sudo /etc/init.d/couchdb restart
+</code></pre>
+<p>If one of the components of the stack is not started, <code>cozy-monitor</code> won’t probably be able to check the state of your applications, and will display an error. Once every application of the stack will be started, the full status report should be available.</p>
+<h2 id="couchdb">CouchDB</h2>
+<p>Sometime, CouchDB is started but the cozy stack is unable to communicate with it. To check that everything works fine, try:</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor curlcouch /
+</code></pre>
+<p>You should get something like</p>
+<pre class="highlight"><code class="hljs json">{<span class="hljs-attr">"db_name"</span>:<span class="hljs-string">"cozy"</span>,<span class="hljs-attr">"doc_count"</span>:<span class="hljs-number">24</span>,<span class="hljs-attr">"doc_del_count"</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">"update_seq"</span>:<span class="hljs-number">105</span>,<span class="hljs-attr">"purge_seq"</span>:<span class="hljs-number">0</span>,<span class="hljs-attr">"compact_running"</span>:<span class="hljs-literal">false</span>,<span class="hljs-attr">"disk_size"</span>:<span class="hljs-number">233575</span>,<span class="hljs-attr">"data_size"</span>:<span class="hljs-number">15079</span>,<span class="hljs-attr">"instance_start_time"</span>:<span class="hljs-string">"1434965494928586"</span>,<span class="hljs-attr">"disk_format_version"</span>:<span class="hljs-number">6</span>,<span class="hljs-attr">"committed_update_seq"</span>:<span class="hljs-number">105</span>}
+</code></pre><p>Otherwise, the error message may help to find the origin of the problem.</p>
+<h2 id="if-everything-failed">If everything failed</h2>
+<p>If everything else failed, download this <a href="http://debian.cozycloud.cc/diag.sh">diagnosis script</a>, read it carefully and modify it to match your configuration, then execute it and send us the result, so we can help you diagnose the problem.</p>
+<h2 id="how-can-i-find-assistance-">How can I find assistance?</h2>
+<p>There are several ways to contact our friendly Support team:</p>
+<ul>
+<li>come and chat with us on IRC, chan #cozycloud on irc.freenode.net (also available <a href="https://webchat.freenode.net/?channels=cozycloud">on the Web</a>);</li>
+<li>ask questions on the forum <a href="https://forum.cozy.io/">forum.cozy.io</a> where the community is always ready to help;</li>
+<li>if you encouter issues on your server, describe them in the form inside the Help page (available at the bottom of the Home app). This form will send us some informations so we can debug the problem;</li>
+<li>and of course, you can send us emails at the following address: support@cozycloud.cc.</li>
+</ul>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>
