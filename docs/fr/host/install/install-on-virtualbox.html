@@ -1,0 +1,120 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Installer Cozy sur VirtualBox
+    </title><link  rel="stylesheet" href="/vendors/css/knacss.css" /><link  rel="stylesheet" href="/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/fr/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/fr/host/install/" class="selected">Installer</a>
+          <ul class="dropdown-menu">
+            <li><a href="/fr/host/install/install-on-ovh.html">Installer Cozy sur OVH</a></li>
+            <li><a href="/fr/host/install/install-on-scaleway.html">Installer Cozy sur Scaleway</a></li>
+            <li><a href="/fr/host/install/install-on-digitalocean.html">Installer Cozy sur DigitalOcean</a></li>
+            <li><a href="/fr/host/install/install-on-pingfiles.html">Installer Cozy sur PingFiles</a></li>
+            <li><a href="/fr/host/install/install-on-swhosting.html">Installer Cozy sur SWHosting</a></li>
+            <li><a href="/fr/host/install/install-on-raspberry.html">Installer Cozy sur Raspberry Pi</a></li>
+            <li><a href="/fr/host/install/install-on-ubuntu.html">Installer Cozy sur Ubuntu</a></li>
+            <li><a href="/fr/host/install/install-on-debian.html">Installer Cozy sur Debian</a></li>
+            <li><a href="/fr/host/install/install-on-archlinux.html">Installer Cozy sur Archlinux</a></li>
+            <li><a href="/fr/host/install/install-on-virtualbox.html">Installer Cozy sur VirtualBox</a></li>
+            <li><a href="/fr/host/install/install-on-docker.html">Installer Cozy sur Docker</a></li>
+            <li><a href="/fr/host/install/install-on-openvz.html">Installer Cozy sur OpenVZ</a></li>
+          </ul>
+        </li>
+        <li><a href="/fr/host/manage.html">Gérez votre instance</a>
+        </li>
+        <li><a href="/fr/host/trouble-shootings.html">En cas de soucis</a>
+        </li>
+        <li><a href="/fr/host/uninstall.html">Désinstaller</a>
+        </li>
+        <li><a href="/fr/host/diagnose.html">Diagnostiquer l’état d’un Cozy</a>
+        </li>
+      </ul>
+      <ul class="navigation right">
+        <li><a href="/fr/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/fr/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><div class="install-inner-logo">
+<img alt="Logo de VirtualBox" src="/assets/images/host/virtualbox-logo.svg">
+</div>
+
+<h1 id="installer-cozy-sur-virtualbox">Installer Cozy sur VirtualBox</h1>
+<hr>
+<p><strong> <img src="/assets/images/warning.png" alt="warning" class="warn">Cette documentation concerne l’installation de l’ancien prototype de Cozy, aujourd’hui déprécié et dont nous n’assurons plus le support. La documentation d’installation de la nouvelle version sera disponible très bientôt.</strong></p>
+<hr>
+<p><strong>L’utilisation de l&#39;image VirtualBox n’est pas recommandée en production.</strong>
+<strong>Référez-vous à l’<a href="install-on-debian.html">installation par paquet Debian</a> dans ce cas.</strong></p>
+<p><br></p>
+<hr>
+<h3>1. Téléchargez les prérequis</h3>
+
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">Téléchargez</a> et installez VirtualBox.</li>
+<li><a href="https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz">Téléchargez</a> et décompressez là (<code>xz -d cozy-virtualbox_4.0.1.tar.xz</code> sur Linux, utilisez votre logiciel de décompression préféré sur Windows et MacOs).</li>
+<li>Téléchargez les signatures de l&#39;image <a href="https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512.asc">ici</a> et <a href="https://files.cozycloud.cc/cozy/cozy-virtualbox_latest.tar.xz.sha512">ici</a></li>
+<li>Vérifiez l&#39;intégrité de l&#39;image :</li>
+</ul>
+<pre class="highlight"><code class="hljs css"><span class="hljs-selector-tag">gpgv2</span> <span class="hljs-selector-tag">-v</span> <span class="hljs-selector-tag">cozy-virtualbox-4</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span><span class="hljs-selector-class">.sha512</span><span class="hljs-selector-class">.asc</span>
+<span class="hljs-selector-tag">sha512sum</span> <span class="hljs-selector-tag">-c</span> <span class="hljs-selector-tag">cozy-virtualbox-4</span><span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.1</span><span class="hljs-selector-class">.tar</span><span class="hljs-selector-class">.xz</span><span class="hljs-selector-class">.sha512</span>
+</code></pre><h3>2. Importez et essayez</h3>
+
+<ul>
+<li>Importez l’image Cozy dans VirtualBox</li>
+<li>Éditez la configuration de la machine<ul>
+<li>Dans l’onglet « Réseau », changez le mode d’accès de « NAT » à « Accès par pont »</li>
+<li>Sélectionnez la carte réseau de votre machine physique dans « Nom »</li>
+</ul>
+</li>
+<li>Démarrez la machine virtuelle</li>
+<li>Ouvrez votre navigateur et rendez vous sur <code>https://cozy.local</code></li>
+</ul>
+<p>Alternatively, you can reach your Cozy with the VM&#39;s IP address:</p>
+<ul>
+<li>Connectez-vous à la console (identifiants <code>root</code>/<code>root</code>)</li>
+<li>Tapez <code>hostname -I</code></li>
+<li>Vous devriez avoir accès à votre Cozy via votre navigateur web sur <code>https://&lt;adresse-ip-machine-virtuelle&gt;/</code></li>
+</ul>
+<h3>3. Informations complémentaires</h3>
+
+<ul>
+<li>Pour accéder à un terminal sur votre machine virtuelle, utilisez comme identifiants <code>root</code>/<code>root</code>. (Attention : le clavier de la machine virtuelle utilise probablement la disposition qwerty.)</li>
+<li>Vous pouvez vous connecter en SSH via <code>ssh root@cozy.local</code> ou <code>ssh root@&lt;adresse-ip-machine-virtuelle&gt;</code>.</li>
+</ul>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

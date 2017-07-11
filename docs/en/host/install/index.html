@@ -1,0 +1,136 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Install
+    </title><link  rel="stylesheet" href="/vendors/css/knacss.css" /><link  rel="stylesheet" href="/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/host/install/" class="selected">Install</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/host/install/install-on-ovh.html">Install Cozy on OVH</a></li>
+            <li><a href="/en/host/install/install-on-scaleway.html">Install Cozy on Scaleway</a></li>
+            <li><a href="/en/host/install/install-on-digitalocean.html">Install Cozy on DigitalOcean</a></li>
+            <li><a href="/en/host/install/install-on-raspberry.html">Install Cozy on Raspberry Pi</a></li>
+            <li><a href="/en/host/install/install-on-swhosting.html">Install Cozy on SWHosting</a></li>
+            <li><a href="/en/host/install/install-on-ubuntu.html">Install Cozy on Ubuntu</a></li>
+            <li><a href="/en/host/install/install-on-debian.html">Install Cozy on Debian</a></li>
+            <li><a href="/en/host/install/install-on-archlinux.html">Install Cozy on Archlinux</a></li>
+            <li><a href="/en/host/install/install-on-virtualbox.html">Install Cozy on VirtualBox</a></li>
+            <li><a href="/en/host/install/install-on-docker.html">Install Cozy on Docker</a></li>
+            <li><a href="/en/host/install/install-on-openvz.html">Install Cozy on OpenVZ</a></li>
+            <li><a href="/en/host/install/install-step-by-step.html">Install Cozy step by step</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/host/manage.html">Manage</a>
+        </li>
+        <li><a href="/en/host/troubleshooting.html">Troubleshooting</a>
+        </li>
+        <li><a href="/en/host/uninstall.html">Uninstall</a>
+        </li>
+        <li><a href="/en/host/diagnose.html">How to diagnose problems</a>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><h1 id="install-cozy">Install Cozy</h1>
+<hr>
+<p><strong> <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!</strong></p>
+<hr>
+<p>You have several ways to install Cozy on your own. Cozy is architecture and platform agnostic, since it is basically composed of Node.JS daemons on top of CouchDB.</p>
+<p>A minimum amount of RAM is required though: <strong>1024MB</strong> is a good start for 6 Cozy applications running simultaneously.</p>
+<p><br></p>
+<p><em>Follow one of the guide below to get started:</em></p>
+<h2 id="on-a-dedicated-or-virtual-private-server">On a Dedicated or Virtual Private Server</h2>
+<div class="install-logo">
+
+  <a href="install-on-ovh.html">
+    <img src="/assets/images/host/ovh-logo.svg" alt="OVH"><div class="label">OVH</div>
+  </a>
+
+  <a href="install-on-scaleway.html">
+    <img src="/assets/images/host/scaleway-logo.svg" alt="Scaleway">
+    <div class="label">Scaleway</div>
+  </a>
+
+  <a href="install-on-digitalocean.html">
+    <img src="/assets/images/host/digitalocean-logo.svg" alt="DigitalOcean">
+    <div class="label">DigitalOcean</div>
+  </a>
+
+  <a href="install-on-swhosting.html">
+    <img src="/assets/images/host/swhosting-logo.svg" alt="SWHosting"><div class="label">SWHosting</div>
+  </a>
+</div>
+
+
+<h2 id="on-your-hardware">On your hardware</h2>
+<div class="install-logo">
+  <a href="install-on-raspberry.html">
+    <img src="/assets/images/host/raspberry-logo.svg" alt="RaspberryPi"><div class="label">Raspberry Pi 2 and 3</div>
+  </a>
+  <a href="install-on-ubuntu.html">
+    <img src="/assets/images/host/ubuntu-logo.svg" alt="Ubuntu"><div class="label">Ubuntu</div>
+  </a>
+  <a href="install-on-debian.html">
+    <img src="/assets/images/host/debian-logo.svg" alt="Debian"><div class="label">Debian (64 bits)</div>
+  </a>
+  <a href="install-on-archlinux.html">
+    <img src="/assets/images/host/archlinux-logo.svg" alt="Archlinux"><div class="label">Archlinux</div>
+  </a>
+  <a href="install-step-by-step.html">
+    <img src="/assets/images/host/cozy-logo.svg" alt="StepByStep"><div class="label">Step by step</div>
+  </a>
+</div>
+
+
+<h2 id="on-a-virtual-machine">On a Virtual Machine</h2>
+<div class="install-logo">
+  <a href="install-on-virtualbox.html">
+    <img src="/assets/images/host/virtualbox-logo.svg" alt="VirtualBox"><div class="label">VirtualBox</div>
+  </a>
+  <a href="install-on-docker.html">
+    <img src="/assets/images/host/docker-logo.svg" alt="Docker"><div class="label">Docker</div>
+  </a>
+</div>
+
+<p></form></p>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

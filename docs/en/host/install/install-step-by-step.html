@@ -1,0 +1,289 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Install Cozy step by step
+    </title><link  rel="stylesheet" href="/vendors/css/knacss.css" /><link  rel="stylesheet" href="/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/host/install/" class="selected">Install</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/host/install/install-on-ovh.html">Install Cozy on OVH</a></li>
+            <li><a href="/en/host/install/install-on-scaleway.html">Install Cozy on Scaleway</a></li>
+            <li><a href="/en/host/install/install-on-digitalocean.html">Install Cozy on DigitalOcean</a></li>
+            <li><a href="/en/host/install/install-on-raspberry.html">Install Cozy on Raspberry Pi</a></li>
+            <li><a href="/en/host/install/install-on-swhosting.html">Install Cozy on SWHosting</a></li>
+            <li><a href="/en/host/install/install-on-ubuntu.html">Install Cozy on Ubuntu</a></li>
+            <li><a href="/en/host/install/install-on-debian.html">Install Cozy on Debian</a></li>
+            <li><a href="/en/host/install/install-on-archlinux.html">Install Cozy on Archlinux</a></li>
+            <li><a href="/en/host/install/install-on-virtualbox.html">Install Cozy on VirtualBox</a></li>
+            <li><a href="/en/host/install/install-on-docker.html">Install Cozy on Docker</a></li>
+            <li><a href="/en/host/install/install-on-openvz.html">Install Cozy on OpenVZ</a></li>
+            <li><a href="/en/host/install/install-step-by-step.html">Install Cozy step by step</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/host/manage.html">Manage</a>
+        </li>
+        <li><a href="/en/host/troubleshooting.html">Troubleshooting</a>
+        </li>
+        <li><a href="/en/host/uninstall.html">Uninstall</a>
+        </li>
+        <li><a href="/en/host/diagnose.html">How to diagnose problems</a>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><div class="install-inner-logo">
+<img alt="Cozy logo" src="/assets/images/host/cozy-logo.svg">
+</div>
+
+<h1 id="install-cozy-step-by-step">Install Cozy step by step</h1>
+<hr>
+<p><strong> <img src="/assets/images/warning.png" alt="warning" class="warn">This document with instructions explains how to install the old Cozy prototype, but is now out of date. Instructions on how to install the new Cozy will be available soon. Stay tuned!</strong></p>
+<hr>
+<p>This documentation is a formal page aiming to summarize what components you
+need in order to run Cozy properly.
+You can reproduce those steps on any UNIX operating system (ArchLinux,
+FreeBSD, etc.) and on any architecture (armhf, i386, etc.), as long as all
+the components are available for it.</p>
+<p>Please bear in mind that this documentation is <strong>experimental</strong>, we assume
+here that you know what you are doing at each step (and that you are running
+them as <code>root</code>).</p>
+<hr>
+<p><strong>If you are looking for a automated install, you can rely on our other
+<a href="index.html">installation guides</a>.</strong></p>
+<hr>
+<h2 id="step-1-install-dependencies">Step 1: Install dependencies</h2>
+<p>You will need a few dependencies to run Cozy properly. Here are the Debian
+packages&#39; names, feel free to adapt the names regarding your OS.</p>
+<pre class="highlight"><code class="hljs autohotkey"><span class="hljs-built_in">python,</span> openssl, git, imagemagick, curl , wget, sqlite3, sudo
+</code></pre><p>(sudo is actually needed by controller and to install apps and cannot be replaced by using a root session)</p>
+<p>Some dependencies are required to <strong>build</strong> the Cozy components properly.</p>
+<pre class="highlight"><code class="hljs q">build-essential, python-<span class="hljs-built_in">dev</span>, python-setuptools, python-pip, libssl-<span class="hljs-built_in">dev</span>,
+libxml2-<span class="hljs-built_in">dev</span>, libxslt1-<span class="hljs-built_in">dev</span>
+</code></pre><p>Once again, those are Debian names. Do not copy/paste them as is, unless you
+know what you are doing.</p>
+<h2 id="step-2-install-nodejs-4-3-x">Step 2: Install NodeJS 4.3.x</h2>
+<p>Cozy is only tested and supported on Node LTS versions.
+Please check that this step will not interfere with any NodeJS version that
+you might have on your server already.</p>
+<p>Here we install NodeJS <code>4.3.</code>, if you have any other <code>4.x.y</code> version, you
+should update (there were some important security fixes).</p>
+<ol>
+<li><p>Find the sources or the binaries you need on <a href="http://nodejs.org/">http://nodejs.org/</a>
+(you may want to choose the <code>arm-pi</code> version on a RaspberryPi).</p>
+</li>
+<li><p>Download and extract it</p>
+</li>
+<li><p>Build the sources, or link the binaries to a place in your <code>$PATH</code></p>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># If you have untar in /opt/node</span>
+ln -s /opt/node/bin/node /usr/bin/node
+ln -s /opt/node/bin/npm /usr/bin/npm
+</code></pre>
+</li>
+<li><p>Test your node installation</p>
+<pre class="highlight"><code class="hljs bash">node -e <span class="hljs-string">'console.log("Hello, World!")'</span>
+</code></pre>
+</li>
+</ol>
+<h2 id="step-3-install-couchdb-1-3-0-or-greater">Step 3: Install CouchDB 1.3.0 or greater</h2>
+<p>The CouchDB version is not (yet) really important. Make sure that it is
+available on your OS/architecture.</p>
+<p>If you want to build it from the sources (<a href="http://apache.crihan.fr/dist/couchdb/source/">http://apache.crihan.fr/dist/couchdb/source/</a>)
+ensure that you have those build dependencies installed:</p>
+<pre class="highlight"><code class="hljs q">libicu-<span class="hljs-built_in">dev</span>, libcurl4-openssl-<span class="hljs-built_in">dev</span>, erlang
+</code></pre><p>Once installed, you should able to run the <code>couchdb</code> command.</p>
+<h2 id="step-4-install-postfix-recommended-">Step 4: Install Postfix (recommended)</h2>
+<p>Postfix is recommended in order to enable your Cozy to send you notification
+and password recovery emails.</p>
+<p>Just install the package regarding your OS. On Debian:</p>
+<pre class="highlight"><code class="hljs maxima">apt-<span class="hljs-built_in">get</span> install <span class="hljs-built_in">postfix</span>
+</code></pre><p>The mail domain parameter asked during the configuration is not important, put
+whatever you want (<code>mydomain.net</code> for example).</p>
+<h2 id="step-5-install-a-supervisor">Step 5: Install a supervisor</h2>
+<p>In order to ensure that your processes are running properly, it is recommended
+to use a supervisor: a program that checks background processes and enables
+you to manipulate (start/stop) them.</p>
+<p>On Cozy instances we typically use <code>supervisord</code> for that purpose.</p>
+<p>There are <a href="http://supervisord.org/installing.html">several ways of installing supervisor</a>, for example using <code>pip</code>:</p>
+<pre class="highlight"><code class="hljs cmake">pip <span class="hljs-keyword">install</span> supervisor
+</code></pre><p><strong>On the below steps we will use supervisord configuration files.</strong>
+You can find them at:</p>
+<p><a href="https://github.com/cozy-labs/cozy-docker/tree/master/supervisor">https://github.com/cozy-labs/cozy-docker/tree/master/supervisor</a></p>
+<p>The file <code>supervisord.conf</code> is the main file to put in <code>/etc/</code>, then you will
+have to create a <code>/etc/supervisor/conf.d/</code> directory to put the rest of the
+configuration files. One for each service, except <code>cozy-init</code> that you won&#39;t
+need here.</p>
+<p>⚠ In <code>cozy-controller.conf</code>, you should replace the line with
+<code>%(ENV_NODE_ENV)s</code> with the following:</p>
+<pre class="highlight"><code class="hljs ini"><span class="hljs-attr">environment</span>=NODE_ENV=<span class="hljs-string">"production"</span>
+</code></pre><p>Don’t forget to <a href="http://supervisord.org/running.html#running">start the supervisor daemon</a>, for example:</p>
+<pre class="highlight"><code class="hljs groovy"><span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/python /</span>usr<span class="hljs-regexp">/bin/</span>supervisord -c <span class="hljs-regexp">/etc/</span>supervisor/supervisord.conf
+</code></pre><h2 id="step-6-initialize-users-directories-and-tokens">Step 6: Initialize users, directories and tokens</h2>
+<ol>
+<li><p>3 UNIX users to create (without home directory)</p>
+<pre class="highlight"><code class="hljs haskell"><span class="hljs-title">useradd</span> -<span class="hljs-type">MU</span> cozy
+<span class="hljs-title">useradd</span> -<span class="hljs-type">MU</span> cozy-<span class="hljs-class"><span class="hljs-keyword">data</span>-system</span>
+<span class="hljs-title">useradd</span> -<span class="hljs-type">MU</span> cozy-home
+</code></pre></li>
+<li><p>Create the <code>/etc/cozy</code> directory with the proper permissions</p>
+<pre class="highlight"><code class="hljs awk">mkdir <span class="hljs-regexp">/etc/</span>cozy
+chown -hR cozy <span class="hljs-regexp">/etc/</span>cozy
+</code></pre></li>
+<li><p>Generate 3 tokens (you can use a tool like <code>pwgen</code> to do so) and <strong>replace the tokens below with them</strong></p>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># The CouchDB credentials</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"MY_TOKEN1"</span> &gt; /etc/cozy/couchdb.login
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"MY_TOKEN2"</span> &gt;&gt; /etc/cozy/couchdb.login
+chown cozy-data-system /etc/cozy/couchdb.login
+chmod 640 /etc/cozy/couchdb.login
+</code></pre>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># The Cozy Controller token</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">"MY_TOKEN3"</span> &gt; /etc/cozy/controller.token
+chown cozy-home /etc/cozy/controller.token
+chmod 700 /etc/cozy/controller.token
+</code></pre>
+</li>
+<li><p>Configure a new CouchDB admin</p>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># Ensure that a couchdb daemon is running, then</span>
+<span class="hljs-comment"># request the database via HTTP to add a new admin</span>
+service couchdb start
+curl -s -X PUT 127.0.0.1:5984/_config/admins/$(head -n1 /etc/cozy/couchdb.login) -d <span class="hljs-string">"\"<span class="hljs-variable">$(tail -n1 /etc/cozy/couchdb.login)</span>\""</span>
+</code></pre>
+</li>
+</ol>
+<h2 id="step-7-install-cozy-core-modules">Step 7: Install Cozy core modules</h2>
+<p>Now you should have everything you need to install the core NodeJS modules of
+Cozy.</p>
+<ol>
+<li><p>Install cozy-monitor and cozy-controller</p>
+<pre class="highlight"><code class="hljs bash">npm install -g coffee-script cozy-monitor cozy-controller
+</code></pre>
+</li>
+<li><p>Ensure that CouchDB, Cozy Indexer and Cozy Controller are running</p>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># If you are running supervisord with the proper configuration files, try</span>
+service couchdb start
+supervisorctl start cozy-controller
+</code></pre>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># Then check their status by requesting their port</span>
+<span class="hljs-comment"># (respectively 5984, 9102 and 9002)</span>
+curl -s 127.0.0.1:5984 \
+&amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">"CouchDB is running"</span> \
+|| <span class="hljs-built_in">echo</span> <span class="hljs-string">"CouchDB is NOT running"</span>
+curl -s 127.0.0.1:9002 \
+&amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">"Cozy Controller is running"</span> \
+|| <span class="hljs-built_in">echo</span> <span class="hljs-string">"Cozy Controller is NOT running"</span>
+</code></pre>
+</li>
+<li><p>Install the 3 core applications</p>
+<pre class="highlight"><code class="hljs bash">cozy-monitor install data-system
+cozy-monitor install home
+cozy-monitor install proxy
+</code></pre>
+</li>
+</ol>
+<h2 id="step-8-configure-the-instance">Step 8: Configure the instance</h2>
+<ol>
+<li><p>Configure Cozy with your domain name</p>
+<pre class="highlight"><code class="hljs bash">coffee /usr/<span class="hljs-built_in">local</span>/cozy/apps/home/commands.coffee setdomain &lt;your domain name&gt;
+</code></pre>
+<p>Replace <code>&lt;your domain name&gt;</code> with the domain (or subdomain) the user will access its Cozy with.</p>
+</li>
+<li><p>Configure Cozy&#39;s background</p>
+<pre class="highlight"><code class="hljs bash">curl -X POST http://localhost:9103/api/instance -H <span class="hljs-string">"Content-Type: application/json"</span> -d <span class="hljs-string">'{"background":"background-07"}'</span>
+</code></pre>
+<p>This can be change afterwards from the &quot;Settings&quot; page in your Cozy.</p>
+</li>
+</ol>
+<h2 id="step-9-configure-a-reverse-proxy">Step 9: Configure a reverse proxy</h2>
+<p>If you followed the previous steps carefully, you should have a working Cozy
+by now.</p>
+<p>The Cozy Proxy listens locally on the port <code>9104</code>.</p>
+<p>To protect your privacy, Cozy only accepts connections through https. Every
+request sent through http will be redirected to the login page. So if you want
+to check the installation, you can go to <a href="http://localhost:9104">http://localhost:9104</a> but you won’t
+be able to connect: you first need to setup TLS.</p>
+<p>The recommended way to expose your Cozy to the outside world is to use a
+reverse proxy (an alternative solution is documented below)</p>
+<p>Here is an example <code>location</code> directive for <strong>Nginx</strong>:</p>
+<pre class="highlight"><code class="hljs nginx"><span class="hljs-attribute">location</span> / {
+    <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;
+    <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$http_host</span>;
+    <span class="hljs-attribute">proxy_redirect</span> http:// https://;
+    <span class="hljs-attribute">proxy_pass</span> http://127.0.0.1:9104;
+    <span class="hljs-attribute">proxy_http_version</span> <span class="hljs-number">1</span>.<span class="hljs-number">1</span>;
+    <span class="hljs-attribute">proxy_set_header</span> Upgrade <span class="hljs-variable">$http_upgrade</span>;
+    <span class="hljs-attribute">proxy_set_header</span> Connection <span class="hljs-string">"upgrade"</span>;
+}
+</code></pre>
+<p>Note that a standard <strong>Apache</strong> reverse proxy will work too, there’s a
+<a href="https://github.com/cozy/cozy-debian/blob/master/apache-config">sample Apache configuration file</a>.</p>
+<hr>
+<p>If you seek for a complete Nginx configuration with SSL:</p>
+<pre class="highlight"><code class="hljs bash"><span class="hljs-comment"># Select your domain name</span>
+DOMAIN=example.com
+
+<span class="hljs-comment"># Create your SSL certificate and DH param</span>
+openssl dhparam -out /etc/cozy/dh2048.pem -outform PEM -2 2048
+openssl req -x509 -nodes -newkey rsa:2048 -keyout /etc/cozy/server.key -out /etc/cozy/server.crt -days 3650 -subj <span class="hljs-string">"/CN=<span class="hljs-variable">$DOMAIN</span>"</span>
+</code></pre>
+<p>Then, this configuration file should do the trick:</p>
+<p><a href="https://github.com/cozy-labs/cozy-docker/blob/master/nginx/cozy-ssl">https://github.com/cozy-labs/cozy-docker/blob/master/nginx/cozy-ssl</a></p>
+<p><strong>Do not forget to add a <code>server_name</code> directive if you have multiple virtualhosts.</strong></p>
+<h3 id="without-a-reverse-proxy">Without a reverse proxy</h3>
+<p>It is recommended to run Cozy Proxy behind a reverse proxy that does the
+SSL/TLS stuff. But if you don’t want to use a reverse proxy (low memory server
+for example), you can also <a href="https://github.com/cozy/cozy-proxy/#listen-on-https">configure the cozy-proxy itself to listen on
+https</a>. This will allow
+to connect on <a href="https://localhost">https://localhost</a>.</p>
+<h2 id="step-10-install-cozy_management">Step 10: Install cozy_management</h2>
+<p><a href="https://github.com/cozy/python_cozy_management">cozy_management</a> is an
+optional tool that provide useful commands that ease the management of
+a Cozy server. This tool has been designed to work on a standard Cozy
+install, and some commands may not work on custom installations. Just
+<a href="https://github.com/cozy/python_cozy_management#install">give it a try</a>.
+It is mostly a wrapper around shell commands, so if some commands doesn’t
+work, you can probably read the code and adapt the commands to your
+configuration.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Please refer to <a href="https://docs.cozy.io/en/host/troubleshooting.html">the dedicated section</a>.</p>
+<hr>
+<p><strong>If you encounter any problem during those steps, please leave a message on the <a href="https://forum.cozy.io">forum</a> or come say &quot;Hi!&quot; on our <a href="irc://irc.freenode.net/cozycloud">IRC channel</a>.</strong></p>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

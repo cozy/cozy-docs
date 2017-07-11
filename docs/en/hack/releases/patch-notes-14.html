@@ -1,0 +1,305 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Patch notes 2015/09/24
+    </title><link  rel="stylesheet" href="/vendors/css/knacss.css" /><link  rel="stylesheet" href="/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/hack/getting-started/">Getting started</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/getting-started/setup-environment.html">Setting up the environment</a></li>
+            <li><a href="/en/hack/getting-started/first-app.html">Your first app in 30 minutes</a></li>
+            <li><a href="/en/hack/getting-started/architecture-overview.html">Understand the Cozy Architecture</a></li>
+            <li><a href="/en/hack/getting-started/play-with-data-system.html">Play with the Data System</a></li>
+            <li><a href="/en/hack/getting-started/discover-americano.html">Discover Americano</a></li>
+            <li><a href="/en/hack/getting-started/learn-single-page-app-way.html">Learn the Single Page App Way</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/cookbooks/">Cookbooks</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/cookbooks/data-system.html">The Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/controller.html">The Controller API</a></li>
+            <li><a href="/en/hack/cookbooks/data-system-odm.html">The ODM for Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/understanding-dev-environment.html">Understanding Cozy's development environment</a></li>
+            <li><a href="/en/hack/cookbooks/deploy.html">Deploy your application</a></li>
+            <li><a href="/en/hack/cookbooks/localization.html">Localize your applications</a></li>
+            <li><a href="/en/hack/cookbooks/debugging.html">Debug your application</a></li>
+            <li><a href="/en/hack/cookbooks/debugging-production.html">Debug in production environment</a></li>
+            <li><a href="/en/hack/cookbooks/nodemon-server-auto-refresh-on-change.html">Using nodemon to auto-refresh the server on code change</a></li>
+            <li><a href="/en/hack/cookbooks/connect-a-device.html">Connect a device to a Cozy</a></li>
+            <li><a href="/en/hack/cookbooks/components.html">Components</a></li>
+            <li><a href="/en/hack/cookbooks/authentication-authorization-workflows.html">Authentication and Authorization workflows</a></li>
+            <li><a href="/en/hack/cookbooks/encryption.html">Encryption management</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/application-skeletons/">Application Skeletons</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/application-skeletons/cozy-official.html">Official Cozy skeleton</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/contributing/">Contributing</a>
+        </li>
+        <li><a href="/en/hack/releases/" class="selected">Releases</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/releases/patch-notes-17.html">Patch notes 2015/12/02</a></li>
+            <li><a href="/en/hack/releases/patch-notes-18.html">Last release note</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io" class="selected">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam selected">
+<div id="patch-note">
+  <h1>Patch note #14</h1>
+  <p>This relates development from 2015/08/10 to 2015/09/24.</p>
+  <label for="toggle-feature">Feature</label>
+  <input id="toggle-feature" type="checkbox" checked="true"/>
+  <label for="toggle-bug">Bug</label>
+  <input id="toggle-bug" type="checkbox" checked="true"/>
+  <label for="toggle-security">Security</label>
+  <input id="toggle-security" type="checkbox" checked="true"/>
+  <label for="toggle-internal">Internal</label>
+  <input id="toggle-internal" type="checkbox" checked="true"/>
+  <h2>Applications</h2>
+  <h3>Calendar (1.0.25)</h3>
+  <ul>
+    <li class="feature">add tooltips on popover's main screen's icons</li>
+    <li class="feature">add support for METHOD</li>
+    <li class="feature">add support for ORGANIZER</li>
+    <li class="feature">make synchronization button label shorter</li>
+    <li class="feature">do not display popover outside of the calendar</li>
+    <li class="feature">improve display on small screens</li>
+    <li class="feature">improve detection of mobile devices</li>
+    <li class="feature">make header lighter</li>
+    <li class="feature">display calendar headers on small screens refs <a href="https://github.com/cozy/cozy-calendar/issues/407">#407</a></li>
+    <li class="feature">improve keyboard navigation in event popover, refs <a href="https://github.com/cozy/cozy-calendar/issues/401">#401</a></li>
+    <li class="feature">use Transifex to manage localisation</li>
+    <li class="feature">display calendar headers on small screens refs <a href="https://github.com/cozy/cozy-calendar/issues/407">#407</a></li>
+    <li class="feature">improve keyboard navigation in event popover, refs <a href="https://github.com/cozy/cozy-calendar/issues/401">#401</a></li>
+    <li class="feature">improve style of weekly events, refs <a href="https://github.com/cozy/cozy-calendar/issues/400">#400</a></li>
+    <li class="bug">fix crash on invalid recurrence rules, refs <a href="https://github.com/cozy/cozy-calendar/issues/398">#398</a></li>
+    <li class="bug">hours were not automatically updated when they overlapped. Refs <a href="https://github.com/cozy/cozy-calendar/issues/376">#376</a></li>
+    <li class="bug">wrong pointer on icons in the popover</li>
+    <li class="bug">bugfix with first opening</li>
+    <li class="bug">invitation ICS are marked as request to prevent bugs  when reimported in other clients</li>
+    <li class="bug">fixed buttons' overflow in Gmail</li>
+    <li class="bug">automagically adjusted times were not properly set.</li>
+    <li class="bug">wrong title in week view <a href="https://github.com/cozy/cozy-calendar/issues/334">#334</a></li>
+    <li class="bug">fix import on wrong calendar</li>
+    <li class="bug">fix weird date changing when modifying full day events</li>
+    <li class="bug">fix responsive and header styles</li>
+    <li class="bug">fix previous commits + change settings position</li>
+    <li class="bug">fix modal position</li>
+    <li class="bug">Fix JS exception when closing an event, refs <a href="https://github.com/cozy/cozy-calendar/issues/405">#405</a></li>
+    <li class="bug">Fix url hash navigation, refs <a href="https://github.com/cozy/cozy-calendar/issues/410">#410</a></li>
+    <li class="bug">Fix bug on multi days events ending the last day of the month, refs <a href="https://github.com/cozy/cozy-calendar/issues/409">#409</a></li>
+    <li class="bug">Fix display of all day events in list, ref <a href="https://github.com/cozy/cozy-calendar/issues/391">#391</a></li>
+    <li class="internal">Contributors: aenario, clochix, frankrousseau, jsilvestre, kelukelu, lemelon, nono</li>
+  </ul>
+  <h3>Emails (0.9.13)</h3>
+  <ul>
+    <li class="feature">sort mailboxes by name before loading in index page</li>
+    <li class="feature">improve reindexing message style</li>
+    <li class="feature">fetch inbox first</li>
+    <li class="feature">Handle IMAP servers with STARTTLS and LOGINDISABLED refs <a href="https://github.com/cozy/cozy-emails/issues/625">#625</a></li>
+    <li class="feature">use Transifex to handle translations</li>
+    <li class="feature">put the active account at the top of left menu</li>
+    <li class="feature">Improve errors management in config page, refs <a href="https://github.com/cozy/cozy-emails/issues/388">#388</a></li>
+    <li class="bug">prevent enter in mailbox field from deleting account</li>
+    <li class="bug">prevent crash after account deletion</li>
+    <li class="bug">fix counters of messages inside each folder</li>
+    <li class="bug">trust server-side html sanitizing, prevent bug with forum.cozy.io links</li>
+    <li class="bug">dont use proxy cdn fonts, prevent flash of content in Firefox</li>
+    <li class="bug">fetch messages in proper order</li>
+    <li class="bug">fix mailbox renaming</li>
+    <li class="bug">fix rendering of mailchimp newsletter</li>
+    <li class="bug">sanitize: do not remove bgcolor property</li>
+    <li class="bug">catch error converting HTML to text, refs <a href="https://github.com/cozy/cozy-emails/issues/614">#614</a></li>
+    <li class="bug">fix message filtering</li>
+    <li class="bug">fix scroll</li>
+    <li class="bug">keep date picker active after a refresh if necessary</li>
+    <li class="bug">fix focus on autocomplete, refs <a href="https://github.com/cozy/cozy-emails/issues/631">#631</a></li>
+    <li class="bug">fix contact disappearance with autosave</li>
+    <li class="bug">fix height when composing message <a href="https://github.com/cozy/cozy-emails/issues/628">#628</a></li>
+    <li class="bug">redirect with correct mailbox id</li>
+    <li class="bug">fix search</li>
+    <li class="bug">display attachment icon even if message is collapsed</li>
+    <li class="bug">fix crash when html conversation fails</li>
+    <li class="bug">forget a box when its destroyed</li>
+    <li class="bug">fix box order and creation</li>
+    <li class="bug">fix menu icon, refs <a href="https://github.com/cozy/cozy-emails/issues/643">#643</a></li>
+    <li class="internal">Contributors: aenario, clochix, frankrousseau, kelukelu, lemelon, poupotte</li>
+  </ul>
+  <h3>Home (2.0.11)</h3>
+  <ul>
+    <li class="feature">manage beta application in market, refs <a href="https://github.com/cozy/cozy-home/issues/490">#490</a></li>
+    <li class="feature">improve red background for beta label</li>
+    <li class="feature">enhancement of the layout (flexbox everywhere)</li>
+    <li class="feature">remove app frame after app update/uninstall/broken</li>
+    <li class="feature">enhance version of the kresus app icon</li>
+    <li class="feature">use Transifex to manage localisation</li>
+    <li class="bug">fix iframe handling of force refresh</li>
+    <li class="bug">fix application installation with a '.' in his branch, refs <a href="https://github.com/cozy/cozy-home/issues/527">#527</a></li>
+    <li class="internal">Contributors: Kloadut, aenario, clochix, frankrousseau, goofy-bz, jsilvestre, kelukelu, lemelon, nicofrand, poupotte</li>
+  </ul>
+  <h3>Contacts (1.1.9)</h3>
+  <ul>
+    <li class="feature">improve closing of the modal window</li>
+    <li class="bug">Fix vcard import, refs <a href="https://github.com/cozy/cozy-contacts/issues/126">#126</a></li>
+    <li class="bug">fix views in dev/coffee mode</li>
+    <li class="bug">fix display of import modal window</li>
+    <li class="bug">prevent contacts imported from vcard from being created twice, refs <a href="https://github.com/cozy/cozy-contacts/issues/134">#134</a></li>
+    <li class="bug">fix JS exception when closing import window</li>
+    <li class="internal">Contributors: aenario, clochix, frankrousseau</li>
+  </ul>
+  <h3>Files (1.1.14)</h3>
+  <p>Joseph did a lot of work to improve display of folders with hundreds of files</p>
+  <ul>
+    <li class="feature">remove focus from the search input</li>
+    <li class="feature">update style and icons</li>
+    <li class="feature">removed the dropdown menu (top right) and added a 'upload a folder' button <a href="https://github.com/cozy/cozy-files/issues/330">#330</a></li>
+    <li class="feature">hide/show actions on the header on mobile device</li>
+    <li class="feature">improve sharing modal</li>
+    <li class="feature">improve display of folders with lot of files</li>
+    <li class="feature">improved: only fetch data if it's necessary when opening a folder</li>
+    <li class="bug">fix display of progressbar during upload</li>
+    <li class="bug">fix drag and drop of big folder</li>
+    <li class="bug">fix a problem preventing folder creation</li>
+    <li class="bug">fix sort</li>
+    <li class="feature">use Transifex to manage translations</li>
+    <li class="internal">Contributors: Benibur, aenario, frankrousseau, jsilvestre, kelukelu, lemelon, nicofrand, nono, notabene</li>
+  </ul>
+  <h2>Mobile application (0.1.10)</h2>
+  <ul>
+    <li class="feature">persist logs in localStorage</li>
+    <li class="feature">add on boarding screens</li>
+    <li class="feature">improve application look</li>
+    <li class="feature">breadcrumb's redesign</li>
+    <li class="bug">fix unexpected token on login. Add feedback during contact sync, and reset and sync buttons.</li>
+    <li class="internal">Contributors: jacquarg, kelukelu, nono</li>
+  </ul>
+  <h2>Platform</h2>
+  <h3>Controller (2.0.32)</h3>
+  <ul>
+    <li class="feature">restart controller if update stack fails</li>
+    <li class="feature">improve display of disk usage</li>
+    <li class="internal">Contributors: nicofrand, poupotte</li>
+  </ul>
+  <h3>Data-system (2.0.8)</h3>
+  <ul>
+    <li class="bug">manage encryption errors</li>
+    <li class="bug">code cleanup</li>
+    <li class="bug">fix some errors for node 0.12</li>
+    <li class="internal">Contributors: nono, poupotte</li>
+  </ul>
+  <h3>cozy-monitor (1.2.29)</h3>
+  <ul>
+    <li class="feature">block controller installation/update, refs <a href="https://github.com/cozy/cozy-monitor/issues/90">#90</a></li>
+    <li class="feature">display “mta” instead of “postfix”, refs <a href="https://github.com/cozy/cozy-monitor/issues/83">#83</a></li>
+    <li class="feature">improve feedback user for `update-all-cozy-stack`</li>
+    <li class="feature">Add an option to prettify output of curlcouch</li>
+    <li class="feature">Add command `view-list`</li>
+    <li class="bug">fix reinstall-missign-app with branch, refs <a href="https://github.com/cozy/cozy-monitor/issues/88">#88</a></li>
+    <li class="internal">Contributors: clochix, poupotte</li>
+  </ul>
+  <h3>Proxy (2.1.3)</h3>
+  <ul>
+    <li class="feature">convert credential from ascii to utf8 instead</li>
+    <li class="feature">improve server error when proxy can't retrieve user</li>
+    <li class="feature">always enable login button, refs <a href="https://github.com/cozy/cozy-home/issues/523">#523</a></li>
+    <li class="feature">improve password reset message, refs <a href="https://github.com/cozy/cozy-proxy/issues/158">#158</a></li>
+    <li class="feature">use Transifex to manage translations</li>
+    <li class="bug">fix redirection after login</li>
+    <li class="bug">fix password focus on login</li>
+    <li class="bug">display error if proxy doesn't access to user</li>
+    <li class="bug">fix import calendars and import contacts icons</li>
+    <li class="internal">Contributors: clochix, frankrousseau, lemelon, nono, poupotte</li>
+  </ul>
+  <h2>Hacking Cozy</h2>
+  <h3>Documentation</h3>
+  <ul>
+    <li class="feature">add angularjs tuto</li>
+    <li class="feature">add patch note <a href="https://github.com/cozy/cozy-docs/issues/13">#13</a></li>
+    <li class="feature">add diagnosis pages</li>
+    <li class="feature">disable tracking cookies</li>
+    <li class="feature">update android apk - v0.1.10</li>
+    <li class="feature">make Android APK more visible</li>
+    <li class="feature">add legal notice french page</li>
+    <li class="feature">add bitnami button</li>
+    <li class="feature">add more info on cozy-dev deploy</li>
+    <li class="feature">Add some missing alt attributes to images</li>
+    <li class="feature">add FAQ for beta testers</li>
+    <li class="feature">add screenshots for Github README</li>
+    <li class="feature">add thumbnails for screenshots</li>
+    <li class="bug">fix syntax errors in first app</li>
+    <li class="bug">fix OpenVZ template link</li>
+    <li class="bug">add sudo for cozy-monitor</li>
+    <li class="internal">Contributors: Aryess, Kloadut, clochix, frankrousseau, goofy-bz, lemelon, nicofrand, nono, poupotte</li>
+  </ul>
+  <h3>cozy-fixtures (1.1.3)</h3>
+  <ul>
+    <li class="feature">Use of Mockaroo for auto-generating fixtures</li>
+    <li class="feature">Update README doc for auto-generation</li>
+    <li class="bug">Misc fixes</li>
+    <li class="bug">Update Mockaroo to 1.6 that fix issue with Date format</li>
+    <li class="bug">Move auto-generation fixture test file to keep tests consistents</li>
+    <li class="bug">Fix formatting</li>
+    <li class="internal">Contributors: m4dz</li>
+  </ul>
+  <h3>cozy-tutorial</h3>
+  <ul>
+    <li class="feature">Félix did some improvements to our Getting started template app</li>
+  </ul>
+  <h3>Debian package</h3>
+  <ul>
+    <li class="feature">Improve install script</li>
+    <li class="feature">Check nodejs version, move certificate message</li>
+    <li class="feature">Purge ucf conf</li>
+    <li class="internal">Contributors: nledez</li>
+  </ul>
+  <h2>Misc news</h2>
+  <ul>
+    <li class="feature">we created a new repository <a href="https://github.com/cozy/cozy">Cozy</a> as an unique entry point to most of our repositiries;</li>
+    <li class="feature">we added Shout, an IRC client, to the available apps;.</li>
+    <li class="feature">we made more clear that Cozic is in Beta</li>
+  </ul>
+</div>
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

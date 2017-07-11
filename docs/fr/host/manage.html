@@ -1,0 +1,202 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Gérez votre instance
+    </title><link  rel="stylesheet" href="/vendors/css/knacss.css" /><link  rel="stylesheet" href="/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/fr/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/fr/host/install/">Installer</a>
+          <ul class="dropdown-menu">
+            <li><a href="/fr/host/install/install-on-ovh.html">Installer Cozy sur OVH</a></li>
+            <li><a href="/fr/host/install/install-on-scaleway.html">Installer Cozy sur Scaleway</a></li>
+            <li><a href="/fr/host/install/install-on-digitalocean.html">Installer Cozy sur DigitalOcean</a></li>
+            <li><a href="/fr/host/install/install-on-pingfiles.html">Installer Cozy sur PingFiles</a></li>
+            <li><a href="/fr/host/install/install-on-swhosting.html">Installer Cozy sur SWHosting</a></li>
+            <li><a href="/fr/host/install/install-on-raspberry.html">Installer Cozy sur Raspberry Pi</a></li>
+            <li><a href="/fr/host/install/install-on-ubuntu.html">Installer Cozy sur Ubuntu</a></li>
+            <li><a href="/fr/host/install/install-on-debian.html">Installer Cozy sur Debian</a></li>
+            <li><a href="/fr/host/install/install-on-archlinux.html">Installer Cozy sur Archlinux</a></li>
+            <li><a href="/fr/host/install/install-on-virtualbox.html">Installer Cozy sur VirtualBox</a></li>
+            <li><a href="/fr/host/install/install-on-docker.html">Installer Cozy sur Docker</a></li>
+            <li><a href="/fr/host/install/install-on-openvz.html">Installer Cozy sur OpenVZ</a></li>
+          </ul>
+        </li>
+        <li><a href="/fr/host/manage.html" class="selected">Gérez votre instance</a>
+        </li>
+        <li><a href="/fr/host/trouble-shootings.html">En cas de soucis</a>
+        </li>
+        <li><a href="/fr/host/uninstall.html">Désinstaller</a>
+        </li>
+        <li><a href="/fr/host/diagnose.html">Diagnostiquer l’état d’un Cozy</a>
+        </li>
+      </ul>
+      <ul class="navigation right">
+        <li><a href="/fr/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/fr/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><h1 id="g-rez-votre-instance-cozy">Gérez votre instance Cozy</h1>
+<h2 id="maintenance">Maintenance</h2>
+<h3 id="mise-jour">Mise à jour</h3>
+<h4 id="mise-jour-manuelle">Mise à jour manuelle</h4>
+<p>Pour mettre à jour la plateforme et toutes les applications installées,
+exécutez les commandes suivantes directement dans votre serveur :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor update-all-cozy-stack
+sudo cozy-monitor update-all
+sudo supervisorctl restart cozy-controller
+</code></pre>
+<h4 id="mise-jour-des-applications">Mise à jour des applications</h4>
+<p>Pour mettre à jour une application, lancez cette commande dans votre serveur :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor update &lt;app&gt;
+</code></pre>
+<h3 id="red-marrer-la-pile-cozy">Redémarrer la pile Cozy</h3>
+<p>La pile Cozy comprend les applications Home, Proxy et Data System, c’est à dire
+les applications qui permettent le fonctionnement de votre instance.</p>
+<pre class="highlight"><code class="hljs bash">cozy-monitor restart-cozy-stack
+</code></pre>
+<h3 id="obtenir-des-informations-sur-votre-instance">Obtenir des informations sur votre instance</h3>
+<p>Avoir la liste des applications et leur statut (allumée ou éteinte) :</p>
+<pre class="highlight"><code class="hljs bash">cozy-monitor status
+</code></pre>
+<p>Afficher la version des applications de la pile :</p>
+<pre class="highlight"><code class="hljs bash">cozy-monitor versions-stack
+</code></pre>
+<p>Afficher la version de toutes les applications installées :</p>
+<pre class="highlight"><code class="hljs bash">cozy-monitor versions
+</code></pre>
+<h2 id="gestion-des-applications">Gestion des applications</h2>
+<h3 id="installation">Installation</h3>
+<p>Pour installer une application depuis la ligne de commande, utilisez :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor install &lt;app&gt; [-r &lt;repo&gt;] [-d &lt;displayName&gt;] [-b &lt;branch&gt;]
+</code></pre>
+<p>Si l’application n’est pas maintenue par CozyCloud, il faut préciser l’adresse
+de son dépôt. Vous pouvez également préciser une branche du dépôt à utiliser,
+et le nom sous lequel l’application apparaitra sur la page d’accueil.</p>
+<h3 id="gestion">Gestion</h3>
+<p>Pour stopper une application :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor stop &lt;app&gt;
+</code></pre>
+<p>Pour stopper toutes les applications :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor stop-all &lt;app&gt;
+</code></pre>
+<p>Pour démarrer une application :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor start &lt;app&gt;
+</code></pre>
+<p>Pour redémarrer une application :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor restart &lt;app&gt;
+</code></pre>
+<p>Pour mettre à jour une application (cela implique de cloner le dépôt Git,
+exécuter <code>npm install</code> et re-démarrer l’application). Préciser l’adresse du
+dépôt n’est nécessaire que pour utiliser un dépôt spécifique :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor update &lt;app&gt; [repo]
+</code></pre>
+<p>Mettre à jour toutes les applications installées :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor update-all
+</code></pre>
+<h3 id="d-sinstallation">Désinstallation</h3>
+<p>Pour désinstaller une application, tapez simplement :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor uninstall &lt;app&gt;
+</code></pre>
+<h2 id="gestion-de-la-base-de-donn-es">Gestion de la base de données</h2>
+<p>Par défaut, le nom de la base de données utilisée par ces commandes est <code>cozy</code>.</p>
+<p>Pour compresser la base (en supprimant les versions non utilisées des documents) :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor compact [database]
+</code></pre>
+<p>Compresser une vue CouchDB spécifique :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor compact-views &lt;view&gt; [database]
+</code></pre>
+<p>Compresser toutes les vues :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor compact-all-views [database]
+</code></pre>
+<p>Faire une sauvegarde de la base en la répliquant sur une autre instance CouchDB :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor backup [target]
+</code></pre>
+<p>Nettoyer la base de données :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor cleanup [database]
+</code></pre>
+<h2 id="commandes-diverses">Commandes diverses</h2>
+<p>Recharger toutes les routes du Proxy applicatif à partir du système de données :</p>
+<pre class="highlight"><code class="hljs bash">sudo cozy-monitor reset-proxy
+</code></pre>
+<h2 id="augmenter-l-espace-disque">Augmenter l’espace disque</h2>
+<p>Toutes les données et les fichiers sont stockés dans CouchDB.  Le moyen le plus
+simple d’allouer plus d’espace disque à votre instance est de modifier la
+configuration de CouchDB.  Actuellement, les données sont enregistrées dans le
+dossier :</p>
+<pre class="highlight"><code class="hljs bash">/usr/<span class="hljs-built_in">local</span>/var/lib/couchdb/
+</code></pre>
+<p>Ce chemin peut aussi être <code>/var/lib/couchdb</code>, notamment si vous avez installé
+cozy sur une Debian ou une Ubuntu.</p>
+<p>Vous pouvez modifier ce chemin, par exemple pour le faire pointer vers un autre
+disque avec plus d’espace libre.  Pour cela, éditez le fichier :</p>
+<pre class="highlight"><code class="hljs bash">/usr/<span class="hljs-built_in">local</span>/etc/couchdb/local.ini
+</code></pre>
+<p>C&#39;est le fichier <code>/etc/couchdb/local.ini</code> sur Debian et Ubuntu.</p>
+<p>Ajoutez une section couchdb si elle n’es pas déjà présente. Vous pouvez alors
+modifier le paramètre spécifiant le dossier où est stocké la base de données :</p>
+<pre class="highlight"><code class="hljs bash">[couchdb]
+database_dir = /home/storage/cozy-data
+view_index_dir = /home/storage/cozy-data
+</code></pre>
+<p>Ceci fait, il faut couper CouchDB, déplacer le fichier contenant la base, puis
+la relancer (en tant que root) :</p>
+<pre class="highlight"><code class="hljs bash">service couchdb stop
+mkdir /home/storage/cozy-data/
+<span class="hljs-comment"># cp here, to have a copy of the data in case of problem.</span>
+cp /usr/<span class="hljs-built_in">local</span>/var/lib/couchdb/* /home/storage/cozy-data/
+chown -R couchdb:couchdb /home/storage/cozy-data/ <span class="hljs-comment"># Rights required.</span>
+service couchdb start
+</code></pre>
+<p>Pour Debian et Ubuntu, le redémarrage de Couchdb ne passe pas supervisord :</p>
+<pre class="highlight"><code class="hljs bash">service couchdb stop
+mkdir /home/storage/cozy-data/
+<span class="hljs-comment"># cp here, to have a copy of the data in case of problem.</span>
+cp /var/lib/couchdb/* /home/storage/cozy-data/
+chown -R couchdb:couchdb /home/storage/cozy-data/ <span class="hljs-comment"># Rights required.</span>
+service couchdb start
+</code></pre>
+<p><strong>Il est fortement recommandé de sauvegarder vos données avant une telle
+opération</strong> Vous pouvez soit faire une sauvegarde des fichiers contenant la
+base, soit répliquer la base sur une autre instance CouchDB.</p>
+<h2 id="utiliser-un-certificat-let-s-encrypt">Utiliser un certificat Let’s Encrypt</h2>
+<p>Vous pouvez vous référer à <a href="https://blog.cozycloud.cc/post/2016/01/06/Un-certificat-Let-s-Encrypt-pour-votre-Cozy">cet article</a> sur notre blog pour découvrir comment générer, installer et renouveler automatiquement un certificat gratuit sur votre serveur grâce à Let’s Encrypt.</p>
+<h2 id="divers">Divers</h2>
+<h3 id="augmenter-la-taille-maximale-des-fichiers-t-l-vers-s-">Augmenter la taille maximale des fichiers téléversés.</h3>
+<p>Si vous utilisez Nginx comme serveur proxy inverse, il vous sera impossible de téléverser de gros fichiers. Nginx limite par défaut la taille des requêtes envoyées par les clients à 1Mo. Pour augmenter cette limite, ajoutez simplement une instruction <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#client_max_body_size">client_max_body_size</a> à votre configuration Nginx.</p>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

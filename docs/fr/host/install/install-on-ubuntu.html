@@ -1,0 +1,120 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Installer Cozy sur Ubuntu
+    </title><link  rel="stylesheet" href="/vendors/css/knacss.css" /><link  rel="stylesheet" href="/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/fr/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/fr/host/install/" class="selected">Installer</a>
+          <ul class="dropdown-menu">
+            <li><a href="/fr/host/install/install-on-ovh.html">Installer Cozy sur OVH</a></li>
+            <li><a href="/fr/host/install/install-on-scaleway.html">Installer Cozy sur Scaleway</a></li>
+            <li><a href="/fr/host/install/install-on-digitalocean.html">Installer Cozy sur DigitalOcean</a></li>
+            <li><a href="/fr/host/install/install-on-pingfiles.html">Installer Cozy sur PingFiles</a></li>
+            <li><a href="/fr/host/install/install-on-swhosting.html">Installer Cozy sur SWHosting</a></li>
+            <li><a href="/fr/host/install/install-on-raspberry.html">Installer Cozy sur Raspberry Pi</a></li>
+            <li><a href="/fr/host/install/install-on-ubuntu.html">Installer Cozy sur Ubuntu</a></li>
+            <li><a href="/fr/host/install/install-on-debian.html">Installer Cozy sur Debian</a></li>
+            <li><a href="/fr/host/install/install-on-archlinux.html">Installer Cozy sur Archlinux</a></li>
+            <li><a href="/fr/host/install/install-on-virtualbox.html">Installer Cozy sur VirtualBox</a></li>
+            <li><a href="/fr/host/install/install-on-docker.html">Installer Cozy sur Docker</a></li>
+            <li><a href="/fr/host/install/install-on-openvz.html">Installer Cozy sur OpenVZ</a></li>
+          </ul>
+        </li>
+        <li><a href="/fr/host/manage.html">Gérez votre instance</a>
+        </li>
+        <li><a href="/fr/host/trouble-shootings.html">En cas de soucis</a>
+        </li>
+        <li><a href="/fr/host/uninstall.html">Désinstaller</a>
+        </li>
+        <li><a href="/fr/host/diagnose.html">Diagnostiquer l’état d’un Cozy</a>
+        </li>
+      </ul>
+      <ul class="navigation right">
+        <li><a href="/fr/host/install/" class="selected">Install</a>
+        </li>
+        <li><a href="/fr/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam"><div class="install-inner-logo">
+<img alt="Logo d’Ubuntu" src="/assets/images/host/ubuntu-logo.svg">
+</div>
+
+<h1 id="installer-cozy-sur-ubuntu">Installer Cozy sur Ubuntu</h1>
+<hr>
+<p><strong> <img src="/assets/images/warning.png" alt="warning" class="warn">Cette documentation concerne l’installation de l’ancien prototype de Cozy, aujourd’hui déprécié et dont nous n’assurons plus le support. La documentation d’installation de la nouvelle version sera disponible très bientôt.</strong></p>
+<hr>
+<p>Vous devez être sous <strong>Ubuntu 14.04 Trusty Tahr</strong> pour pouvoir suivre les étapes ci-dessous.</p>
+<p>(Des utilisateurs nous ont signalé que cette procédure pouvait également fonctionner pour GNU/linx Mint)</p>
+<pre class="highlight"><code class="hljs elixir">root<span class="hljs-variable">@ubuntu</span>-<span class="hljs-number">14</span>-<span class="hljs-number">04</span><span class="hljs-symbol">:~</span><span class="hljs-comment"># lsb_release -c</span>
+<span class="hljs-symbol">Codename:</span>     trusty
+</code></pre><p><br></p>
+<p>Cozy a besoin d’un serveur web. Par défaut, nous installons et configurons un serveur Nginx, mais si un serveur Web est déjà installé, vous pouvez l’utiliser en ajoutant un hôte virtuel pour Cozy.</p>
+<p><br></p>
+<ol>
+<li>Assurez-vous que les paquets <code>wget</code>, ca-certificates<code>et</code>apt-transport-https` sont bien installés<pre class="highlight"><code class="hljs livecodeserver"> sudo apt-<span class="hljs-built_in">get</span> install ca-certificates apt-transport-<span class="hljs-keyword">https</span>
+</code></pre></li>
+<li>Importez la clé publique du dépôt<pre class="highlight"><code class="hljs groovy"> wget <span class="hljs-string">https:</span><span class="hljs-comment">//debian.cozycloud.cc/cozy.gpg.key -O /etc/apt/trusted.gpg.d/cozy.gpg</span>
+</code></pre></li>
+<li>Ajoutez le dépôt Cozy à vos sources de logiciels.<pre class="highlight"><code class="hljs gradle"> echo <span class="hljs-string">'deb [arch=amd64] https://ubuntu.cozycloud.cc/debian trusty cozy'</span> \
+     | sudo tee <span class="hljs-regexp">/etc/</span>apt<span class="hljs-regexp">/sources.list.d/</span>cozy.list &gt; <span class="hljs-regexp">/dev/</span><span class="hljs-keyword">null</span>
+</code></pre></li>
+<li><p>Installez Cozy</p>
+<pre class="highlight"><code class="hljs sql"> sudo apt-get <span class="hljs-keyword">update</span> ;
+ sudo apt-get <span class="hljs-keyword">install</span> -y python-cozy-<span class="hljs-keyword">management</span> ;
+ sudo cozy_management install_cozy
+</code></pre><p> (lisez également le paragraphe ci-dessous à propos des dépendances)</p>
+</li>
+<li><p>Assurez vous que le service Nginx est bien démarré :</p>
+<pre class="highlight"><code class="hljs routeros"> sudo<span class="hljs-built_in"> service </span>nginx start
+</code></pre></li>
+<li><p>Paramétrez votre compte Cozy et profitez !</p>
+<pre class="highlight"><code class="hljs dts"><span class="hljs-symbol"> https:</span><span class="hljs-comment">//your-cozy-IP/</span>
+</code></pre></li>
+</ol>
+<h2 id="que-faire-en-cas-de-soucis">Que faire en cas de soucis</h2>
+<h3 id="-propos-des-d-pendances">À propos des dépendances</h3>
+<p>Pour fonctionner, Cozy a absolument besoin d’une base de données CouchDB, celle-ci sera donc installée automatiquement. Mais il a également besoin d’un serveur SMTP écoutant sur le port 25 de la machine, et d’un serveur Web agissant comme un proxy inversé. Le paquet Cozy n’impose pas l’installation de ces composants, car, selon votre configuration, vous pouvez vous en passer (le proxy peut par exemple être installé sur une autre machine). Cependant, pour une installation basique de Cozy, vous devriez installer les dépendances recommandées en utilisant la commande <code>apt-get install --install-recommends cozy</code>.</p>
+<p>Les paquets recommandés sont :</p>
+<ul>
+<li>un serveur Web, de préférence Nginx. Il va gérer les certificats SSL et rediriger les requêtes vers le serveur Cozy lui-même ;</li>
+<li>un serveur SMTP, pour envoyer des messages de la part de votre Cozy (par exemple pour réinitialiser votre mot de passe, vous rappeler un rendez-vous ou inviter des contacts à un évènement).</li>
+</ul>
+<h3 id="comment-re-g-n-rer-le-certificat-">Comment re-générer le certificat ?</h3>
+<pre class="highlight"><code class="hljs groovy">sudo openssl req -x509 -nodes -newkey <span class="hljs-string">rsa:</span><span class="hljs-number">2048</span> -keyout <span class="hljs-regexp">/etc/</span>cozy<span class="hljs-regexp">/server.key -out /</span>etc<span class="hljs-regexp">/cozy/</span>server.crt -days <span class="hljs-number">3650</span> -subj <span class="hljs-string">"/CN=URL.DE.VOTRE.INSTANCE"</span>
+</code></pre>
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>
