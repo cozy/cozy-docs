@@ -1,0 +1,408 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>Patch notes 2015/12/02
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/hack/getting-started/">Getting started</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/getting-started/setup-environment.html">Setting up the environment</a></li>
+            <li><a href="/en/hack/getting-started/first-app.html">Your first app in 30 minutes</a></li>
+            <li><a href="/en/hack/getting-started/architecture-overview.html">Understand the Cozy Architecture</a></li>
+            <li><a href="/en/hack/getting-started/play-with-data-system.html">Play with the Data System</a></li>
+            <li><a href="/en/hack/getting-started/discover-americano.html">Discover Americano</a></li>
+            <li><a href="/en/hack/getting-started/learn-single-page-app-way.html">Learn the Single Page App Way</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/cookbooks/">Cookbooks</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/cookbooks/data-system.html">The Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/controller.html">The Controller API</a></li>
+            <li><a href="/en/hack/cookbooks/data-system-odm.html">The ODM for Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/understanding-dev-environment.html">Understanding Cozy's development environment</a></li>
+            <li><a href="/en/hack/cookbooks/deploy.html">Deploy your application</a></li>
+            <li><a href="/en/hack/cookbooks/localization.html">Localize your applications</a></li>
+            <li><a href="/en/hack/cookbooks/debugging.html">Debug your application</a></li>
+            <li><a href="/en/hack/cookbooks/debugging-production.html">Debug in production environment</a></li>
+            <li><a href="/en/hack/cookbooks/nodemon-server-auto-refresh-on-change.html">Using nodemon to auto-refresh the server on code change</a></li>
+            <li><a href="/en/hack/cookbooks/connect-a-device.html">Connect a device to a Cozy</a></li>
+            <li><a href="/en/hack/cookbooks/components.html">Components</a></li>
+            <li><a href="/en/hack/cookbooks/authentication-authorization-workflows.html">Authentication and Authorization workflows</a></li>
+            <li><a href="/en/hack/cookbooks/encryption.html">Encryption management</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/application-skeletons/">Application Skeletons</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/application-skeletons/cozy-official.html">Official Cozy skeleton</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/contributing/">Contributing</a>
+        </li>
+        <li><a href="/en/hack/releases/" class="selected">Releases</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/releases/patch-notes-17.html">Patch notes 2015/12/02</a></li>
+            <li><a href="/en/hack/releases/patch-notes-18.html">Last release note</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io" class="selected">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam selected">
+<div id="patch-note" class="v2">
+  <h1>Patch note #17</h1>
+  <p>This relates development from 2015-11-02 to 2015-12-02</p>
+  <h2>Highlights</h2>
+  <p>We worked hard to improve stability of most of our applications;</p>
+  <p>Bruno is fully commited to the desktop sync client, a beta version should be available soon;</p>
+  <p>For now, the only way for applications to persist data was to save it into the Cozy database. Thanks to Zoé, each application can now also access a folder on the server file system. It will allow to easily port to Cozy third party applications that rely on file storage;</p>
+  <p>Brendan ported Cozy to Archlinux and documented it.</p>
+  <h2>Web Applications</h2>
+  <h3>Calendar (1.0.29)</h3>
+  <ul>
+    <li>Fix color format to always be in hexadecimal. Refs <a href="https://github.com/cozy/cozy-calendar/issues/435" target="_blank">#435</a></li>
+    <li>Fix recurring event issue with daylight saving. Refs <a href="https://github.com/cozy/cozy-calendar/issues/433" target="_blank">#433</a></li>
+    <li>Attach Cozy logo to notification emails</li>
+    <li>Fix typo in french locale</li>
+    <li>Fix cursor display in Chrome, refs <a href="https://github.com/cozy/cozy-calendar/issues/442" target="_blank">#442</a></li>
+    <li>Update german translation</li>
+    <li>Update translations</li>
+    <li class="contributors">Contributors: Clochix, Danny4927, Jsilvestre</li>
+  </ul>
+  <h3>Contacts (2.1.2)</h3>
+  <ul>
+    <li>Close modal if user cancel merge, refs <a href="https://github.com/cozy/cozy-contacts/issues/176" target="_blank">#176</a></li>
+    <li>Fix postal addresses display and save format</li>
+    <li>Display contacts without name at the end of contacts list</li>
+    <li>Add missing bower dependencies, fix import of quoted printable, refs <a href="https://github.com/cozy/cozy-contacts/issues/183" target="_blank">#183</a></li>
+    <li>Update server dependencies</li>
+    <li class="contributors">Contributors: Clochix, M4dz, Poupotte</li>
+  </ul>
+  <h3>Data-system (2.1.5)</h3>
+  <ul>
+    <li>Fix bulk_docs permissions</li>
+    <li>Add options to show rev in request result</li>
+    <li>Fix authentication in replication</li>
+    <li>Use APPLICATION_PERSISTENT_DIRECTORY</li>
+    <li>Remove now-useless comment</li>
+    <li>Fix syntax for decrypt condition</li>
+    <li>Fix decrypting passwords on requests</li>
+    <li>Add _passwordStillEncrypted for request results</li>
+    <li>Remove port number from domain when sending emails, refs <a href="https://github.com/cozy/cozy-data-system/issues/179" target="_blank">#179</a></li>
+    <li>Fix licence formating in package.json</li>
+    <li class="contributors">Contributors: Aenario, Bnjbvr, Clochix, Poupotte</li>
+  </ul>
+  <h3>Files (1.1.17)</h3>
+  <ul>
+    <li>Fix URL of logo in sharing emails</li>
+    <li>Fix server crash when locale email template is missing</li>
+    <li>Add link to file in sharing email</li>
+    <li>Fix Express deprecation warning</li>
+    <li>Embed Cozy logo into sharing email</li>
+    <li class="contributors">Contributors: Clochix</li>
+  </ul>
+  <h3>Import-from-google (0.1.5)</h3>
+  <ul>
+    <li>Fix exception because global variable request was redefined. Refs <a href="https://github.com/cozy-labs/import-from-google/issues/38" target="_blank">#38</a></li>
+    <li class="contributors">Contributors: Jsilvestre</li>
+  </ul>
+  <h3>Konnectors (0.4.6)</h3>
+  <ul>
+    <li>Fix error displaying</li>
+    <li>Improve error message when unencrytion failed</li>
+    <li>Up cozydb version</li>
+    <li>Improve error logging for passwords</li>
+    <li>Do not allow to run an import twice from the UI</li>
+    <li>Fix withings konnector. Do not crash all the konnector app when the password hashing fails.</li>
+    <li>Do not remove duplicated commits anymore</li>
+    <li>Quick and dirty support of sleep for withings</li>
+    <li>Add missing listed model to withings konnector</li>
+    <li>Update link_bank_operation.coffee</li>
+    <li class="contributors">Contributors: Frankrousseau, ZeHiro</li>
+  </ul>
+  <h3>Notes (1.0.3)</h3>
+  <ul>
+    <li>Update dependencies</li>
+    <li class="contributors">Contributors: Clochix</li>
+  </ul>
+  <h3>Photos (1.0.18)</h3>
+  <ul>
+    <li>Fix URL of OSM search engine (via @Miton)</li>
+    <li>Fix Express deprecation warning on res.sendfile</li>
+    <li>Server code lint</li>
+    <li>Embed Cozy logo into sharing email</li>
+    <li>Fix error when sending sharing email, refs <a href="https://github.com/cozy/cozy-photos/issues/168" target="_blank">#168</a></li>
+    <li>Update dependencies</li>
+    <li class="contributors">Contributors: Clochix, Nono</li>
+  </ul>
+  <h3>Self-hosting (1.0.1)</h3>
+  <p>Nicolas is working on a Web application to help self-hosted user manage their server.</p>
+  <ul>
+    <li class="contributors">Contributors: Aenario, Nledez</li>
+  </ul>
+  <h2>Other Apps</h2>
+  <h3>Desktop (0.5.0)</h3>
+  <p>Bruno worked to sync files from Cozy to the local filesystem, and from the local filesystem to Cozy.</p>
+  <ul>
+    <li class="contributors">Contributors: Greenkeeperio-bot, Nono</li>
+  </ul>
+  <h3>Mobile</h3>
+  <ul>
+    <li>Update PouchDB to 5.1.0 .</li>
+    <li>Migration script from sqlite to indexedDB.</li>
+    <li>Fixes in sqlite -> indexedDB migration.</li>
+    <li>Add defensive code against cozy address datapoint value type.</li>
+    <li>Fix i18n source with new UI keywords, and update translations : add korean.</li>
+    <li>Add message during migration.</li>
+    <li>Fix hang on initialisation with notification's requests missing.</li>
+    <li>In send logs, Fix + signs (thanks nicofrand) and i18n of the messages.</li>
+    <li>Move app config data to a _local pouch document. Delete unused DevicesByLocalId mapreduce query</li>
+    <li>Update some i18n in german.</li>
+    <li>Quit on error during initialisation (instead of blocking on splashscreen).</li>
+    <li>Dont migrate adapter on pre 4.4 androids.</li>
+    <li>Migrate config onpre 4.4 .</li>
+    <li>Avoid aliasing android version / pouchdb adapter choices.</li>
+    <li>Switch back to version check, as catching PouchDB initialisation error is a nightmare.</li>
+    <li>Fix missing error on install on pre 4.4 . Test for idb adapter compatibility trought PouchDB.</li>
+    <li>Remove compiled files</li>
+    <li>Remove unnecessary gitignore file</li>
+    <li>Update package for best compatibility</li>
+    <li>Add versioneye badge</li>
+    <li>Add continuous integration</li>
+    <li>Add cordova build in CI</li>
+    <li>Update dependency</li>
+    <li>Upgrade version from 0.1.13 to 0.1.14</li>
+    <li>Add codeclimate && codacy services</li>
+    <li>Add version number on some plugin, to allow safe upgrades and further devs.</li>
+    <li class="contributors">Contributors: Jacquarg, Kosssi, Poupotte</li>
+  </ul>
+  <h2>Cozy stack</h2>
+  <h3>Controller (2.0.37)</h3>
+  <ul>
+    <li>Use df -h instead of df -H</li>
+    <li>Transmit application directory through env variable APPLICATION_PERSISTENT_DIRECTORY, refs <a href="https://github.com/cozy/cozy-controller/issues/92" target="_blank">#92</a></li>
+    <li>Use folderDir</li>
+    <li>Allow to start JavaScript applications</li>
+    <li>Write error in usual logs file too</li>
+    <li>Add missing error logging in stderr management</li>
+    <li>Manage package.json corrupted, refs <a href="https://github.com/cozy/cozy-controller/issues/102" target="_blank">#102</a></li>
+    <li>Log process pid</li>
+    <li class="contributors">Contributors: Clochix, Frankrousseau, Poupotte</li>
+  </ul>
+  <h3>Monitor (1.2.32)</h3>
+  <ul>
+    <li>Allow to set branch at the end of the url when installing</li>
+    <li>Add a json option to versions subcommand</li>
+    <li>Add a json option to status subcommand</li>
+    <li>Upgrade cozy-clients from 1.0.4 to 1.0.5</li>
+    <li>Add `--json` option to module-status and views-list commands</li>
+    <li>Code cleanup</li>
+    <li>Improve JSON output of views-list</li>
+    <li>Add static</li>
+    <li>Retrieve git url in market, refs <a href="https://github.com/cozy/cozy-monitor/issues/109" target="_blank">#109</a></li>
+    <li>Add static exception + add status</li>
+    <li>Compact-all-views: wait until compaction ends</li>
+    <li>Remove notifications after application update, refs <a href="https://github.com/cozy/cozy-monitor/issues/113" target="_blank">#113</a></li>
+    <li>Update dependencies</li>
+    <li>Improve display of stack versions</li>
+    <li>Remove notifications after stack application update, refs <a href="https://github.com/cozy/cozy-monitor/issues/113" target="_blank">#113</a></li>
+    <li>Add couchdb auth even if it's necessary</li>
+    <li>Fix reinstall app with new permissions, refs <a href="https://github.com/cozy/cozy-monitor/issues/114" target="_blank">#114</a></li>
+    <li>Remove indexer</li>
+    <li class="contributors">Contributors: Clochix, Lemelon, Poupotte</li>
+  </ul>
+  <h3>Home (2.1.3)</h3>
+  <ul>
+    <li>Store: alert message for the community apps - changed from red to dark grey background</li>
+    <li>White background + design adjustments related to this</li>
+    <li>Status: add background to hardware's icons</li>
+    <li>Status - application: remove hover from action buttons</li>
+    <li>Store: changed spinner + block's hover</li>
+    <li>Status: layout + responsive</li>
+    <li>Fix favorite buttons titles</li>
+    <li>Make syntax of initialize.coffee more coffee styled</li>
+    <li>Fix application collection sorting</li>
+    <li>Fix window title display</li>
+    <li>Order app on display name instead of name</li>
+    <li>Capitalize app name in status page</li>
+    <li>Add missing comment to collection comparator</li>
+    <li>Fix sorting in status page</li>
+    <li>Modify user agent with NODE_ENV</li>
+    <li>Save icon prior running the full installation</li>
+    <li>Fix locales and labels</li>
+    <li>Add 'market install your app tutorial' locale</li>
+    <li>Fix log sending</li>
+    <li>Up printit version</li>
+    <li>Clean code for log management</li>
+    <li>Better ux for start / stop button</li>
+    <li>Update config application view after start/stop</li>
+    <li>Fix market update after installation</li>
+    <li>Add clean build</li>
+    <li>Fix application list on status page</li>
+    <li>Fix index for application list</li>
+    <li>Fix update stack</li>
+    <li>Fix application URL in state page, refs <a href="https://github.com/cozy/cozy-home/issues/593" target="_blank">#593</a></li>
+    <li>Update Clearance version</li>
+    <li>Home: removed overflow hidden to div's icons</li>
+    <li>Fix design issue with long application name, refs <a href="https://github.com/cozy/cozy-home/issues/586" target="_blank">#586</a></li>
+    <li>Fix <a href="https://github.com/cozy/cozy-home/issues/590" target="_blank">#590</a>: wrong layout for store</li>
+    <li>Fix <a href="https://github.com/cozy/cozy-home/issues/591" target="_blank">#591</a>: make consumption labels cleaner</li>
+    <li>Update Clearance version</li>
+    <li>Fix URL of Android Marketplace logo</li>
+    <li>Remove dead code</li>
+    <li>Fix client exception on stack update, refs <a href="https://github.com/cozy/cozy-home/issues/609" target="_blank">#609</a></li>
+    <li>Fix display of “update stack” button, refs <a href="https://github.com/cozy/cozy-home/issues/610" target="_blank">#610</a></li>
+    <li>Fix typo in english locale, refs <a href="https://github.com/cozy/cozy-home/issues/602" target="_blank">#602</a></li>
+    <li>Add korean language, refs <a href="https://github.com/cozy/cozy-home/issues/580" target="_blank">#580</a></li>
+    <li>Fix command getdomain</li>
+    <li>Update ru.json</li>
+    <li class="contributors">Contributors: Aenario, Clochix, Fairyfeller, Frankrousseau, Jsilvestre, Kelukelu, Poupotte</li>
+  </ul>
+  <h3>Proxy (2.1.11)</h3>
+  <ul>
+    <li>Get ENV server-side and expose it to env module</li>
+    <li>Skip import from google step if app isn't installed</li>
+    <li>Remove email preset from onboarding</li>
+    <li>Improve display for ECONNREFUSED errors</li>
+    <li>Fix redirect during registration, refs <a href="https://github.com/cozy/cozy-proxy/issues/202" target="_blank">#202</a></li>
+    <li>Make getEnv more simple and readable</li>
+    <li>Improve onboarding wording</li>
+    <li>Replace datalist with select in timezone selector</li>
+    <li>Improve congratulation wording</li>
+    <li>Fix english locale</li>
+    <li>Handle errors from import-from-google properly</li>
+    <li>Improve the way users are guided through the import google process</li>
+    <li>Make import from Google more consistent with standalone app</li>
+    <li>Update front locales from Tx</li>
+    <li>Do some CoffeeScript Cooking \o/</li>
+    <li>Suppress select label to prevent Ui overflows</li>
+    <li>Fix inputs scope in formviews</li>
+    <li>Fix erroneous build script</li>
+    <li>Add url for token documentation</li>
+    <li>Update translation</li>
+    <li>Fix domain in password reset link</li>
+    <li>Fix style</li>
+    <li>Fix device update</li>
+    <li class="contributors">Contributors: Aenario, Clochix, Frankrousseau, M4dz, Nono, Poupotte</li>
+  </ul>
+  <h2>Other tools</h2>
+  <h3>CozyDb (0.1.5)</h3>
+  <ul>
+    <li>Remove double depencie</li>
+    <li>Add index definition registering</li>
+    <li>Fix searching / deprecate indexing</li>
+    <li>Transfer additional search infos to app</li>
+    <li class="contributors">Contributors: Aenario</li>
+  </ul>
+  <h3>Dev-image-builder</h3>
+  <p>Nicolas created a script to help us keep the development VM up to date</p>
+  <h3>Localization-manager (0.1.0)</h3>
+  <p>Joseph created a new library to improve localization management inside our apps.</p>
+  <h3>Clearance (0.1.22)</h3>
+  <ul>
+    <li>Allow to add attachments to sharing email</li>
+    <li>Manage error when retrieving email template</li>
+    <li class="contributors">Contributors: Clochix</li>
+  </ul>
+  <h3>Debian package</h3>
+  <ul>
+    <li>Allow websockets proxying</li>
+    <li>Create README.md</li>
+    <li>Remove indexer</li>
+    <li>Add self-hosting app</li>
+    <li>Update path</li>
+    <li>Fix apache and debian-reconfigure-cozy-domain.sh rights</li>
+    <li class="contributors">Contributors: Frankrousseau, Nicofrand, Nledez</li>
+  </ul>
+  <h3>Docs</h3>
+  <ul>
+    <li>Update PNG version of Cozy logo</li>
+    <li>Patch note <a href="https://github.com/cozy/cozy-docs/issues/16" target="_blank">#16</a></li>
+    <li>Removing the space after the escaping backslash</li>
+    <li>Fix link display on home page</li>
+    <li>Add onboarding documentation</li>
+    <li>Improve onboarding documentation</li>
+    <li>Improve import documentation</li>
+    <li>Update dependencies</li>
+    <li>Improve import google docs</li>
+    <li>Add missing conclusion in import from google page</li>
+    <li>Fix french typo in the import google page</li>
+    <li>Update PGP key expiration date</li>
+    <li>Explain how to increase Nginx max upload size</li>
+    <li>Update install-on-virtualbox.html.md</li>
+    <li>How to enable ws proxying on apache</li>
+    <li>Upgrade mobile version</li>
+    <li>Clarify "64 bits" for Debian</li>
+    <li>Update install-step-by-step.html.md. Indexer and Controller ports were mixed.</li>
+    <li>Upgrade android version from 0.1.12 to 0.1.13</li>
+    <li>Add rm -rf /usr/local/var/cozy/</li>
+    <li>Upgrade android version from 0.1.13 to 0.1.14</li>
+    <li>Added documentation for installation on Archlinux, as well as Archlinux's logo</li>
+    <li>Changed english yaourt documentation link</li>
+    <li>Added the link to the index, and added a title to have a nice vertical offset</li>
+    <li class="contributors">Contributors: Babolivier, Clochix, Frankrousseau, Maxlath, Nicofrand, Poupotte, Simon0356</li>
+  </ul>
+  <h3>Printit (0.1.15)</h3>
+  <ul>
+    <li>Put back logs for production environment</li>
+    <li>Log error and warning in normal output too</li>
+    <li>Put back debugging in test environment</li>
+    <li>Fix for PouchError</li>
+    <li class="contributors">Contributors: Frankrousseau, Nono</li>
+  </ul>
+  <h3>Template-coffee (1.0.0)</h3>
+  <ul>
+    <li>Add build dirs to gitignore</li>
+    <li>Remove build dir from gitignore</li>
+    <li>Add brunch as dependency</li>
+    <li>Use root option to find config when using compiled JS</li>
+    <li class="contributors">Contributors: G07cha, Jsilvestre, Nono</li>
+  </ul>
+  <h3>Ui (0.1.4)</h3>
+  <ul>
+    <li>Fix build;</li>
+    <li>Fix the link to cozy-ui in the demo app</li>
+    <li>Added proper drawer handling in app-2panes-toolbar</li>
+    <li>Improve 2 panes layout in demo</li>
+    <li class="contributors">Contributors: Bnjbvr, Doubleface, M4dz</li>
+  </ul>
+</div>
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

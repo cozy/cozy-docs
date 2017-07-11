@@ -1,0 +1,375 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>The Controller API
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/hack/getting-started/">Getting started</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/getting-started/setup-environment.html">Setting up the environment</a></li>
+            <li><a href="/en/hack/getting-started/first-app.html">Your first app in 30 minutes</a></li>
+            <li><a href="/en/hack/getting-started/architecture-overview.html">Understand the Cozy Architecture</a></li>
+            <li><a href="/en/hack/getting-started/play-with-data-system.html">Play with the Data System</a></li>
+            <li><a href="/en/hack/getting-started/discover-americano.html">Discover Americano</a></li>
+            <li><a href="/en/hack/getting-started/learn-single-page-app-way.html">Learn the Single Page App Way</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/cookbooks/" class="selected">Cookbooks</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/cookbooks/data-system.html">The Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/controller.html">The Controller API</a></li>
+            <li><a href="/en/hack/cookbooks/data-system-odm.html">The ODM for Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/understanding-dev-environment.html">Understanding Cozy's development environment</a></li>
+            <li><a href="/en/hack/cookbooks/deploy.html">Deploy your application</a></li>
+            <li><a href="/en/hack/cookbooks/localization.html">Localize your applications</a></li>
+            <li><a href="/en/hack/cookbooks/debugging.html">Debug your application</a></li>
+            <li><a href="/en/hack/cookbooks/debugging-production.html">Debug in production environment</a></li>
+            <li><a href="/en/hack/cookbooks/nodemon-server-auto-refresh-on-change.html">Using nodemon to auto-refresh the server on code change</a></li>
+            <li><a href="/en/hack/cookbooks/connect-a-device.html">Connect a device to a Cozy</a></li>
+            <li><a href="/en/hack/cookbooks/components.html">Components</a></li>
+            <li><a href="/en/hack/cookbooks/authentication-authorization-workflows.html">Authentication and Authorization workflows</a></li>
+            <li><a href="/en/hack/cookbooks/encryption.html">Encryption management</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/application-skeletons/">Application Skeletons</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/application-skeletons/cozy-official.html">Official Cozy skeleton</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/contributing/">Contributing</a>
+        </li>
+        <li><a href="/en/hack/releases/">Releases</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/releases/patch-notes-17.html">Patch notes 2015/12/02</a></li>
+            <li><a href="/en/hack/releases/patch-notes-18.html">Last release note</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io" class="selected">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam selected"><h1 id="the-controller-api">The Controller API</h1>
+<p>The Controller API allows applications management</p>
+<h2 id="generic-notes">Generic notes</h2>
+<p>All the responses&#39; bodies are encoded in JSON and all the data you send along request should be encoded in JSON.</p>
+<p>You will find HTTP status code for the response, here is what they mean:</p>
+<ul>
+<li>200: success</li>
+<li>400: bad request</li>
+<li>401: not authenticated</li>
+<li>500: internal server error</li>
+</ul>
+<p>Application should be authenticated to request controller.</p>
+<p>Authentication is based on a token shared by all the Cozy stack.
+This token should be sent in &#39;x-auth-token&#39; request header. This token is stored in <strong>/etc/cozy/stack.token</strong> by default but this is configurable. Accessing it requires <code>sudo</code> privileges.</p>
+<h2 id="application-manifest">Application manifest</h2>
+<p>Application are declared in a manifest.</p>
+<p>Manifest example :</p>
+<pre class="highlight"><code class="hljs undefined">manifest =
+    user: "cozy",      # Required, user which start the application
+    name: "note",
+    domain: "localhost",
+    repository:
+        type: "git",
+        url: "https://github.com/cozy/notes.git",
+    scripts:
+        start: "server.js"
+</code></pre>
+<h2 id="new-application-api">New application API</h2>
+<p>This API lets you manage application with four common operations: install, start, stop, update and uninstall.</p>
+<h3 id="install-an-application">Install an application</h3>
+<pre class="highlight"><code class="hljs undefined">POST apps/:name/install
+Param:
+  name: the application name
+  Body {"start": application manifest}
+Response:
+  Status code: 200|400|500
+  Body
+    200: {drone: {port: "application port"}}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<h3 id="start-an-application">Start an application</h3>
+<pre class="highlight"><code class="hljs undefined">POST apps/:name/start
+Param:
+  name: the application name
+  Body {"start": application manifest}
+Response:
+  Status code: 200|400|500
+  Body
+    200: {drone: {port: "application port"}}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Return an 400 error if application is not installed.</p>
+<h3 id="stop-an-application">Stop an application</h3>
+<pre class="highlight"><code class="hljs undefined">POST apps/:name/stop
+Param:
+  name: the application name
+Response:
+  Status code: 200|400|500
+  Body
+    200: {app: "application name"}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Return an 400 error if application is not installed.</p>
+<h3 id="update-an-application">Update an application</h3>
+<pre class="highlight"><code class="hljs undefined">POST apps/:name/update
+Param:
+  name: the application name
+Response:
+  Status code: 200|400|500
+  Body
+    200: {app: "application name"}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Return an 400 error if application is not installed.</p>
+<h3 id="uninstall-an-application">Uninstall an application</h3>
+<pre class="highlight"><code class="hljs undefined">POST apps/:name/uninstall
+Param:
+  name: the application name
+Response:
+  Status code: 200|400|500
+  Body
+    200: {app: "application name"}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Return an 400 error if application is not installed.</p>
+<h3 id="get-all-applications">Get all applications</h3>
+<pre class="highlight"><code class="hljs undefined">GET apps/all
+Response:
+  Status code: 200|400|500
+  Body
+    200: {app: applications list}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<h3 id="get-all-started-applications">Get all started applications</h3>
+<pre class="highlight"><code class="hljs undefined">GET apps/started
+Response:
+  Status code: 200|400|500
+  Body
+    200: {app: applications list}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<h2 id="old-application-api">Old application API</h2>
+<p>For version 1.0.28 or older, controller doesn&#39;t support new API. This section describe API for old controller.
+Controller with more recent version supports old and new API.</p>
+<h3 id="install-application">Install application</h3>
+<pre class="highlight"><code class="hljs undefined">POST drones/:name/start
+Param:
+  name: the application name
+  Body {"start": application manifest}
+Response:
+  Status code: 200|400|500
+  Body
+    200: {drone: {port: "application port"}}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<h3 id="start-application">Start application</h3>
+<pre class="highlight"><code class="hljs undefined">POST drones/:name/start
+Param:
+  name: the application name
+  Body {"start": application manifest}
+Response:
+  Status code: 200|400|500
+  Body
+    200: {drone: {port: "application port"}}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<h3 id="stop-application">Stop application</h3>
+<pre class="highlight"><code class="hljs undefined">POST drones/:name/stop
+Param:
+  name: the application name
+  Body {"stop": { "name": "application manifest"}}
+Response:
+  Status code: 200|400|500
+  Body
+    200: {app: "application name"}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Return an 400 error if application is not installed.</p>
+<h3 id="update-application">Update application</h3>
+<pre class="highlight"><code class="hljs undefined">POST drones/:name/light-update
+Param:
+  name: the application name
+  Body {"update": { "name": "application manifest"}}
+Response:
+  Status code: 200|400|500
+  Body
+    200: {app: "application name"}
+    400: {error: "the error message"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Return an 400 error if application is not installed.</p>
+<h3 id="uninstall-application">Uninstall application</h3>
+<pre class="highlight"><code class="hljs undefined">POST drones/:name/clean
+Param:
+  name: the application name
+  Body { "name": "application manifest"}
+Response:
+  Status code: 200|500
+  Body
+    200: {app: "application name"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Return an 400 error if application is not installed.</p>
+<h3 id="get-all-running-applications">Get all running applications</h3>
+<pre class="highlight"><code class="hljs undefined">GET drones/running
+Response:
+  Status code: 200|500
+  Body
+    200: {app: applications list}
+    500: {error: "the error message"}
+</code></pre>
+<h2 id="disk-info-api">Disk info API</h2>
+<h3 id="get-information-about-disk-usage">Get information about disk usage</h3>
+<pre class="highlight"><code class="hljs undefined">GET diskinfo
+Response:
+  Status code: 200|500
+  Body
+    200: {"freeDiskSpace": free disk space,
+          "usedDiskSpace": used disk space,
+          "totalDiskSpace": total disk space}
+    500: {error: "the error message"}
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>Configuration are stored in file <strong>/etc/cozy/controller.json</strong>.
+Every configurations are optional.</p>
+<p>Configuration file is available only for new controller.</p>
+<h3 id="common-configuration">Common configuration</h3>
+<ul>
+<li><strong>npm_registry</strong>:<ul>
+<li>Specify a npm registry.</li>
+<li>Use common npm registry by default.</li>
+</ul>
+</li>
+<li><strong>npm_strict_ssl</strong>:<ul>
+<li>Specify if you want use strict ssl option with npm.</li>
+<li>By default : false.</li>
+</ul>
+</li>
+</ul>
+<!--
+* **dir_log**:
+  * Directory where application logs are stored
+  * By default: '/var/log/cozy'.
+* **dir_source**:
+  * Directory where application code source are stored
+  * By default: '/usr/local/cozy/apps'.
+-->
+<h3 id="environment-configuration">Environment configuration</h3>
+<p>You can transmit specific environment variables to cozy applications.
+For that, you should add them in controller file configuration.</p>
+<p>In field <code>env</code>, you can add <code>global</code> field. Environment variables  will transmit to all applications started by controller.
+If you want transmit environment variable to a specific application, you should add <code>&quot;&lt;application name&gt;&quot;: list of environment variables</code></p>
+<ul>
+<li>env :<ul>
+<li>global: Transmits environment variables to all applications started by controller</li>
+<li>data_system: Transmits environment variables to data system</li>
+<li>home: Transmits environment variables to home</li>
+<li>proxy: Transmits environment variables to proxy</li>
+</ul>
+</li>
+</ul>
+<h3 id="file-configuration-example">File configuration example</h3>
+<pre class="highlight"><code class="hljs json">{
+  <span class="hljs-attr">"npm_registry"</span>: https://my-registry.com,
+  <span class="hljs-attr">"npm_strict_ssl"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"env"</span>:
+    {
+      <span class="hljs-attr">"global"</span>: {<span class="hljs-attr">"STACK"</span>: <span class="hljs-string">"cozy"</span>, <span class="hljs-attr">"DEMO"</span>: <span class="hljs-string">"true"</span>},
+      <span class="hljs-attr">"data_system"</span>: {<span class="hljs-attr">"DB"</span>: <span class="hljs-string">"mydatabase"</span>},
+      <span class="hljs-attr">"home"</span>: {<span class="hljs-attr">"PORT"</span>: <span class="hljs-number">9103</span>},
+      <span class="hljs-attr">"proxy"</span>: {<span class="hljs-attr">"PORT"</span>: <span class="hljs-number">9104</span>}
+    }
+}
+</code></pre>
+<h2 id="files-used">Files used</h2>
+<p>Controller stores several files in <strong>/etc/cozy</strong>, <strong>/usr/local/cozy</strong> and <strong>/usr/local/var/log/cozy</strong>.</p>
+<p>In <strong>/etc/cozy</strong>, controller stores configurations:</p>
+<ul>
+<li><strong>controller.json</strong>: Contains controller configurations (see <a href="controller.html#configuration">Configuration section</a>)</li>
+<li><strong>stack.token</strong>: Contains token shared by cozy stack (Controller, Data system, Home and Proxy). This token is generated at each controller starting.</li>
+<li><strong>.controller.json-backup</strong>: Hidden file, used for configuration changes.</li>
+</ul>
+<p>In <strong>/usr/local/cozy</strong>, controller stores information about applications:</p>
+<ul>
+<li><strong>apps</strong>: Contains all application source code.</li>
+<li><strong>apps/stack.json</strong>: Contains information about stack cozy (git repository, branch, start script, ...).</li>
+</ul>
+<p>In <strong>/usr/local/var/log/cozy</strong>, controller stores all application logs:</p>
+<ul>
+<li><strong>app.log</strong>: Logs for application app.</li>
+</ul>
+<h2 id="autostart">Autostart</h2>
+<p>When controller is started, it starts all applications that were running before it stops.</p>
+<p>Autostart has several steps :</p>
+<ul>
+<li>Check if couchdb server is started<ul>
+<li>Controller try 5 times (with 5 seconds between two tests)</li>
+<li>If couchDB server doesn&#39;t respond, controller is stopped</li>
+</ul>
+</li>
+<li>Check if stack applications are installed<ul>
+<li>If Data System is not installed, controller starts without starts other applications</li>
+</ul>
+</li>
+<li>Start Data System application<ul>
+<li>If Data System cannot start, controller is stopped</li>
+</ul>
+</li>
+<li>Retrieve all application stored in database<ul>
+<li>Start all application which have &#39;installed&#39; as state</li>
+</ul>
+</li>
+<li>Start Home application</li>
+<li>Start Proxy application</li>
+</ul>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>

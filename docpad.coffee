@@ -4,7 +4,7 @@
 # Define the DocPad Configuration
 docpadConfig = {
 
-    outPath: 'public'
+    outPath: 'docs'
 
     templateData:
         site:

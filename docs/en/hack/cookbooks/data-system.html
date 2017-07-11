@@ -1,0 +1,431 @@
+<!DOCTYPE html><!--[if lte IE 7]> <html class="no-js ie67 ie678" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 ie678" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
+    <title>The Data System API
+    </title><link  rel="stylesheet" href="/cozy-docs/vendors/css/knacss.css" /><link  rel="stylesheet" href="/cozy-docs/vendors/css/sunburst.css" /><link  rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="navbar fixed"><a href="/en/" class="nav-logo"><img src="/assets/images/cozy-logo-docs.svg"></a>
+      <ul class="subtitle">
+        <li><a href="/en/hack/getting-started/">Getting started</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/getting-started/setup-environment.html">Setting up the environment</a></li>
+            <li><a href="/en/hack/getting-started/first-app.html">Your first app in 30 minutes</a></li>
+            <li><a href="/en/hack/getting-started/architecture-overview.html">Understand the Cozy Architecture</a></li>
+            <li><a href="/en/hack/getting-started/play-with-data-system.html">Play with the Data System</a></li>
+            <li><a href="/en/hack/getting-started/discover-americano.html">Discover Americano</a></li>
+            <li><a href="/en/hack/getting-started/learn-single-page-app-way.html">Learn the Single Page App Way</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/cookbooks/" class="selected">Cookbooks</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/cookbooks/data-system.html">The Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/controller.html">The Controller API</a></li>
+            <li><a href="/en/hack/cookbooks/data-system-odm.html">The ODM for Data System API</a></li>
+            <li><a href="/en/hack/cookbooks/understanding-dev-environment.html">Understanding Cozy's development environment</a></li>
+            <li><a href="/en/hack/cookbooks/deploy.html">Deploy your application</a></li>
+            <li><a href="/en/hack/cookbooks/localization.html">Localize your applications</a></li>
+            <li><a href="/en/hack/cookbooks/debugging.html">Debug your application</a></li>
+            <li><a href="/en/hack/cookbooks/debugging-production.html">Debug in production environment</a></li>
+            <li><a href="/en/hack/cookbooks/nodemon-server-auto-refresh-on-change.html">Using nodemon to auto-refresh the server on code change</a></li>
+            <li><a href="/en/hack/cookbooks/connect-a-device.html">Connect a device to a Cozy</a></li>
+            <li><a href="/en/hack/cookbooks/components.html">Components</a></li>
+            <li><a href="/en/hack/cookbooks/authentication-authorization-workflows.html">Authentication and Authorization workflows</a></li>
+            <li><a href="/en/hack/cookbooks/encryption.html">Encryption management</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/application-skeletons/">Application Skeletons</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/application-skeletons/cozy-official.html">Official Cozy skeleton</a></li>
+          </ul>
+        </li>
+        <li><a href="/en/hack/contributing/">Contributing</a>
+        </li>
+        <li><a href="/en/hack/releases/">Releases</a>
+          <ul class="dropdown-menu">
+            <li><a href="/en/hack/releases/patch-notes-17.html">Patch notes 2015/12/02</a></li>
+            <li><a href="/en/hack/releases/patch-notes-18.html">Last release note</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navigation">
+        <li><a href="/en/host/install/">Install</a>
+        </li>
+        <li><a href="/en/mobile/files.html">Sync</a>
+        </li>
+        <li><a href="https://dev.cozy.io" class="selected">Dev</a>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div id="main" role="main" class="mod pam selected"><h1 id="the-data-system-api">The Data System API</h1>
+<p>The Data System API allows the access of the following:</p>
+<ul>
+<li>the data itself</li>
+<li>the CouchDB views (through &quot;requests&quot;)</li>
+<li>the attachments (files)</li>
+<li>the indexer</li>
+</ul>
+<h2 id="generic-notes">Generic notes</h2>
+<p>All the responses&#39; bodies are encoded in JSON and all the data you send along request should be encoded in JSON.</p>
+<p>You will find HTTP status code for the response, here is what they mean:</p>
+<ul>
+<li>200: success</li>
+<li>201: success (and something has been created)</li>
+<li>204: success (and something has been deleted)</li>
+<li>400: bad request</li>
+<li>401: unauthorized (bad authentication)</li>
+<li>403: forbidden (authenticated but not enough permissions)</li>
+<li>404: document not found</li>
+<li>409: document already exists</li>
+<li>500: internal server error</li>
+</ul>
+<p>All the requests that mention &quot;Requires authentication and authorization&quot; are likely to send 401 and 403 if the conditions are not met.
+See <a href="#troubleshooting">troubleshooting</a> to understand what those error mean.</p>
+<h3 id="todo-for-this-cookbook">Todo for this cookbook</h3>
+<ul>
+<li>Adding documentation about authentication and authorization process</li>
+</ul>
+<h2 id="data-api">Data API</h2>
+<p>This API lets you manage data with four common operations: create, read, update and delete but utiliy functions like exist, find or merge can also help you.</p>
+<h3 id="check-the-existence-of-a-document">Check the existence of a document</h3>
+<pre class="highlight"><code class="hljs undefined">GET /data/exist/:id/
+Param:
+  id: the document ID
+Response:
+  Status code: 200|500
+  Body
+    200: {exist: true|false}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="retrieving-a-document-by-id">Retrieving a document by ID</h3>
+<pre class="highlight"><code class="hljs undefined">GET /data/:id/
+Param:
+  id: the document ID
+Response:
+  Status code: 200|404|500
+  Body
+    200: {the document}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="creating-generates-a-new-id-">Creating (generates a new ID)</h3>
+<pre class="highlight"><code class="hljs undefined">POST /data/
+Param:
+  Body {the document to add}
+Response:
+  Status code: 201|500
+  Body
+    201: {"_id": the document ID}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="creating-with-specified-id-">Creating (with specified ID)</h3>
+<pre class="highlight"><code class="hljs undefined">POST /data/:id/
+Param:
+  id: the document ID
+  Body {the document to add}
+Response:
+  Status code: 201|409|500
+  Body
+    201: {"_id": the document ID}
+    409: {error: "The document exists"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="update-overwrite-old-version-">Update (overwrite old version)</h3>
+<pre class="highlight"><code class="hljs undefined">PUT /data/:id/
+Param:
+  id: the document ID
+  Body {the document to update}
+Response
+  Status code: 200|404|500
+  Body
+    200: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="updating-or-creating-with-specified-id-">Updating or creating (with specified ID)</h3>
+<pre class="highlight"><code class="hljs undefined">PUT  /data/upsert/:id/
+Param:
+  id: the document ID
+  Body {the document to add or update}
+Response
+  Status code: 200|201|500
+  Body
+    200: {success: true}
+    201: {"_id": the document ID}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="deleting-a-document">Deleting a document</h3>
+<pre class="highlight"><code class="hljs undefined">DELETE /data/:id/
+Param:
+  id: the document ID
+Response
+  Status code: 204|404|500
+  Body
+    204: {success: true}
+    404: {error: "not found"}
+    500: {error: "the message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="updating-only-the-given-fields-">Updating (only the given fields)</h3>
+<pre class="highlight"><code class="hljs undefined">PUT /data/merge/:id
+Param:
+  Body {the fields of the document to update}
+Response
+  Status code: 200|500
+  Body
+    200: {success: true}
+    500: {error: "the message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h2 id="request-api">Request API</h2>
+<p>The Request API is used to create, update, delete and retrieve documents based on CouchDB views.</p>
+<h3 id="getting-documents-from-a-view">Getting documents from a view</h3>
+<pre class="highlight"><code class="hljs undefined">POST /request/:type/:req_name/
+Param:
+  type: the doctype name
+  req_name: the name of the request
+  Body {
+    key: only returns document for this key
+    keys: [only returns document for this array of keys]
+    limit: number of documents to return
+    skip: number of documents to skip
+    startKey: only returns document after this key
+    endKey: only returns document before this key
+  }
+  The body is fully optional.
+Response
+  Status code: 200|404|500
+  Body
+    200: [an array of documents]
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="create-or-update-a-view">Create or update a view</h3>
+<pre class="highlight"><code class="hljs undefined">PUT /request/:type/:req_name/
+Param:
+  type: the doctype name
+  req_name: the name of the request
+  Body {
+    map: the map function
+    reduce: the reduce function (optional)
+  }
+Response
+  Status code: 200|500
+  Body
+    200: {success: true}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="delete-all-the-docs-returned-by-the-specified-view">Delete all the docs returned by the specified view</h3>
+<pre class="highlight"><code class="hljs undefined">PUT /request/:type/:req_name/destroy/
+Param:
+  type: the doctype name
+  req_name: the name of the request
+  Body {
+    key: only returns document for this key
+    keys: [only returns document for this array of keys]
+    limit: number of documents to return
+    skip: number of documents to skip
+    startKey: only returns document after this key
+    endKey: only returns document before this key
+  }
+  The body is fully optional.
+Response
+  Status code: 204|404|500
+  Body
+    204: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="delete-the-view">Delete the view</h3>
+<pre class="highlight"><code class="hljs undefined">DELETE /request/:type/:req_name/
+Param:
+  type: the doctype name
+  req_name: the name of the request
+Response
+  Status code: 204|404|500
+  Body
+    204: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h2 id="files-api">Files API</h2>
+<p>The Data System offers an API to upload/download files to the database (e.g. for a music library application).</p>
+<p>How does it work? Using the API you will attach a file to a document and retrieve it when needed. But behind the scene, a document is created with the doctype &quot;Binary&quot;, so the same file can be reused by various applications in different context (e.g. music library application and files sync application). That&#39;s a technical detail you probably won&#39;t even have to deal with!</p>
+<h3 id="save-a-file">Save a file</h3>
+<pre class="highlight"><code class="hljs undefined">POST /data/:id/binaries/
+Param:
+  id: ID of the document the file will be attached to
+  Body {
+    a file send through multipart form
+    name: force the file name
+  }
+Response
+  Status code: 201|400|404|500
+  Body
+    201: {success: true}
+    400: {error: "no file sent"}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="download-an-attached-file">Download an attached file</h3>
+<pre class="highlight"><code class="hljs undefined">GET /data/:id/binaries/:name
+Param:
+  id: ID of the document the file is attached to
+  name: the file name
+Response
+  Status code: 404|500
+  Body
+    200: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h3 id="delete-an-attached-file">Delete an attached file</h3>
+<pre class="highlight"><code class="hljs undefined">DELETE /data/:id/binaries/:name
+Param:
+  id: ID of the document the file is attached to
+  name: the file name
+Response
+  Status code: 204|404|500
+  Body
+    204: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<p>Requires authentication and authorization.</p>
+<h2 id="indexer-api">Indexer API</h2>
+<p>We use <a href="https://pypi.python.org/pypi/Whoosh/">Whoosh</a> as an indexer but you can only access it through its API in the Data System.</p>
+<h3 id="indexing">Indexing</h3>
+<pre class="highlight"><code class="hljs undefined">POST /data/index/:id
+Param:
+  id: ID of the document to index
+  Body {
+    fields: [an array of text fields name that will be indexed]
+  }
+Response
+  Status code: 200|404|500
+  Body
+    200: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<h3 id="searching-10-documents-that-best-match-the-query">Searching 10 documents that best match the query</h3>
+<pre class="highlight"><code class="hljs undefined">POST /data/search/:type
+Param:
+  type: the doctype the searched documents belongs
+  Body {
+    query: "search query"
+    numPage: page result number (default is 1)
+    numByPage: number of results by page (default is 10)
+  }
+Response
+  Status code: 200|500
+  Body
+    200: {rows: [the documents]}
+    500: {error: "the error message"}
+</code></pre>
+<p>Both <code>numPage</code> and <code>numByPage</code> are optional.</p>
+<h3 id="removing-indexation-for-a-given-document">Removing indexation for a given document</h3>
+<pre class="highlight"><code class="hljs undefined">DELETE /data/index/:id
+Param:
+  id: the ID of the document that will be unindex
+Response
+  Status code: 200|404|500
+  Body
+    200: {success: true}
+    404: {error: "not found"}
+    500: {error: "the error message"}
+</code></pre>
+<h3 id="clearing-the-indexer">Clearing the indexer</h3>
+<pre class="highlight"><code class="hljs undefined">DELETE /data/index/clear-all/
+Response
+  Status code: 200|500
+  Body
+    200: {success: true}
+    500: {error: "the error message"}
+</code></pre>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="getting-the-doctype-list">Getting the doctype list</h3>
+<pre class="highlight"><code class="hljs undefined">GET /doctypes
+Response
+  Status code: 200|500
+  Body
+    200: ['list', 'of', 'doctype', 'names']
+</code></pre>
+<h1 id="example-of-use">Example of use</h1>
+<p>How to request the Data System from a NodeJS application ? You can use any HTTP client but we recommend (, use and maintain) request-json:</p>
+<pre class="highlight"><code class="hljs bash">npm install request-json --save
+</code></pre>
+<pre class="highlight"><code class="hljs javascript">Client = <span class="hljs-built_in">require</span>(<span class="hljs-string">'request-json'</span>).JsonClient;
+
+<span class="hljs-comment">// The data system listens to localhost:9101</span>
+dataSystem = <span class="hljs-keyword">new</span> Client(<span class="hljs-string">'http://localhost:9101'</span>);
+
+<span class="hljs-comment">// In production we must authenticate the application</span>
+<span class="hljs-keyword">if</span>(process.env.NODE_ENV === <span class="hljs-string">'production'</span>) {
+  user = process.env.NAME;
+  password = process.env.TOKEN;
+  dataSystem.setBasicAuth(user, password);
+}
+
+<span class="hljs-comment">// The request must be created first, let's say it is</span>
+dataSystem.post(<span class="hljs-string">'/request/alarm/all/'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, res, body</span>) </span>{
+  <span class="hljs-keyword">if</span>(err !== <span class="hljs-literal">null</span> || (res !== <span class="hljs-literal">null</span> &amp;&amp; res.statusCode != <span class="hljs-number">200</span>)) {
+    <span class="hljs-keyword">if</span>(res !== <span class="hljs-literal">null</span>) {code = res.statusCode;} <span class="hljs-keyword">else</span> { code = <span class="hljs-string">"no status code"</span>; }
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"An error occurred -- ["</span> + code + <span class="hljs-string">"] "</span> + err);
+  }
+  <span class="hljs-keyword">else</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"List of all the alarms"</span>);
+    <span class="hljs-built_in">console</span>.log(body);
+  }
+}
+});
+</code></pre>
+<p>For more examples and the complete documentation of request-json, please see the <a href="http://github.com/cozy/request-json/">github repository</a> of the module.</p>
+<p><a name="troubleshooting"></a></p>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<p>Coming soon...</p>
+<h2 id="authentication-and-authorization">authentication and authorization</h2>
+<p>Coming soon...</p>
+
+      </div>
+      <footer id="footer" role="contentinfo"><a href="https://github.com/cozy"><img src="/assets/images/icons/icon-github.svg">Github</a><a href="irc://irc.freenode.net/cozycloud"><img src="/assets/images/icons/icon-message.svg">IRC</a><a href="https://forum.cozy.io"><img src="/assets/images/icons/icon-smiley.svg">Forum</a><a href="mailto:contact@cozycloud.cc"><img src="/assets/images/icons/icon-mail.svg">Contact</a><a href="https://www.cozy.io"><img src="/assets/images/icons/icon-cloud.svg">Cozy's site</a></footer>
+    </div><script defer="defer"  src="/cozy-docs/vendors/javascripts/jquery-2.0.3.min.js"></script><script defer="defer"  src="/cozy-docs/vendors/javascripts/bootstrap.min.js"></script><script defer="defer"  src="/assets/javascripts/main.js"></script>
+    <script type="text/javascript">
+      var _paq = _paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+      var u="//piwik.cozycloud.cc/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 7]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <noscript>
+      <p><img src="https://piwik.cozycloud.cc/piwik.php?idsite=7" style="border:0" alt=""></p>
+    </noscript>
+  </body>
+</html>
