@@ -1,6 +1,7 @@
-# [Cozy](https://cozy.io) Docs
+# [Cozy](https://cozy.io) v2 Docs
 
-Cozy Docs is the source repository for the [cozy.io](https://cozy.io) website.
+This is the source code of the dccumentation for the old, now deprecated, Node based version of the Cozy server.
+The new documentation is available here: https://github.com/cozy/cozy-docs-v3
 
 ## Contribution
 
